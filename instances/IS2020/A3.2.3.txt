@@ -1,0 +1,420 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_1_IS2020
+:A3.2.3_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C1_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :SelfDirected ,
+                                     :Responsible ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C1 ,
+                                        :KS2_IS_A3.2.3_C1 ;
+                     :hasTitle :LS_IS_A3.2.3_C1_Title ;
+                     rdfs:label "A3.2.3 Competency 1 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C1
+:K1_IS_A3.2.3_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Human vision." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C1
+:K2_IS_A3.2.3_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Human perception." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C1
+:KS1_IS_A3.2.3_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C1 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C1
+:KS2_IS_A3.2.3_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C1 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C1
+:LIT_IS_A3.2.3_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 1" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C1_Title
+:LS_IS_A3.2.3_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Explain the fundamentals of human perception and vision" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C1_Description
+:LS_IS_A3.2.3_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Explain the fundamentals of human perception and vision by understanding human vision and human perception." .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_2_IS2020
+:A3.2.3_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C2_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :Inventive ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C2 ,
+                                        :KS2_IS_A3.2.3_C2 ;
+                     :hasTitle :LS_IS_A3.2.3_C2_Title ;
+                     rdfs:label "A3.2.3 Competency 2 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C2
+:K1_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of data." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C2
+:K2_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Numerical vs. Categorical." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C2
+:KS1_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C2 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C2
+:KS2_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C2 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C2
+:LIT_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 2" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C2_Title
+:LS_IS_A3.2.3_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Demonstrate effective ways of displaying numeric data, counts, and proportions" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C2_Description
+:LS_IS_A3.2.3_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Demonstrate effective ways of displaying numeric data, counts, and proportions by analyzing types of data and the differences between numerical and categorical data." .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_3_IS2020
+:A3.2.3_Competency_3_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C3_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :SelfDirected ,
+                                     :Responsible ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C3 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C3 ,
+                                        :KS2_IS_A3.2.3_C3 ;
+                     :hasTitle :LS_IS_A3.2.3_C3_Title ;
+                     rdfs:label "A3.2.3 Competency 3 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C3
+:K1_IS_A3.2.3_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Different types of plots." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C3
+:K2_IS_A3.2.3_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Mapping data to plot aesthetics." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C3
+:KS1_IS_A3.2.3_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C3 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C3
+:KS2_IS_A3.2.3_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C3 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C3
+:LIT_IS_A3.2.3_C3 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 3" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C3_Title
+:LS_IS_A3.2.3_C3_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C3_Description
+:LS_IS_A3.2.3_C3_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data by analyzing different types of plots and creating mappings of data to plot aesthetics." .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_4_IS2020
+:A3.2.3_Competency_4_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C4_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :PurposeDriven ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C4 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C4 ,
+                                        :KS2_IS_A3.2.3_C4 ;
+                     :hasTitle :LS_IS_A3.2.3_C4_Title ;
+                     rdfs:label "A3.2.3 Competency 4 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C4
+:K1_IS_A3.2.3_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Algorithmic processing of data." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C4
+:K2_IS_A3.2.3_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Relational operations on data sets." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C4
+:KS1_IS_A3.2.3_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C4 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C4
+:KS2_IS_A3.2.3_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C4 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C4
+:LIT_IS_A3.2.3_C4 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 4" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C4_Title
+:LS_IS_A3.2.3_C4_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C4_Description
+:LS_IS_A3.2.3_C4_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets by creating algorithmic processing of data and creating relational operations on data sets." .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_5_IS2020
+:A3.2.3_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C5_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :PurposeDriven ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C5 ,
+                                        :KS2_IS_A3.2.3_C5 ;
+                     :hasTitle :LS_IS_A3.2.3_C5_Title ;
+                     rdfs:label "A3.2.3 Competency 5 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C5
+:K1_IS_A3.2.3_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Using plotting libraries (ggplot or plotnine)." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C5
+:K2_IS_A3.2.3_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Basics of scales, geoms, coordinates." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C5
+:KS1_IS_A3.2.3_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C5 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C5
+:KS2_IS_A3.2.3_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C5 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C5
+:LIT_IS_A3.2.3_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 5" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C5_Title
+:LS_IS_A3.2.3_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Produce graphics using a visualization tool" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C5_Description
+:LS_IS_A3.2.3_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Produce graphics using a visualization tool by creating plots with libraries like ggplot or plotnine and understanding the basics of scales, geoms, and coordinates." .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_6_IS2020
+:A3.2.3_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C6_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :Inventive ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C6 ,
+                                        :KS2_IS_A3.2.3_C6 ;
+                     :hasTitle :LS_IS_A3.2.3_C6_Title ;
+                     rdfs:label "A3.2.3 Competency 6 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C6
+:K1_IS_A3.2.3_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Hypothesis generation." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C6
+:K2_IS_A3.2.3_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Interactive visualizations." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C6
+:KS1_IS_A3.2.3_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C6 ;
+           :hasSkillPart :Applying .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C6
+:KS2_IS_A3.2.3_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C6 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C6
+:LIT_IS_A3.2.3_C6 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 6" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C6_Title
+:LS_IS_A3.2.3_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop transformations and model to fit, explore and check assumptions about data" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C6_Description
+:LS_IS_A3.2.3_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop transformations and model to fit, explore and check assumptions about data by applying hypothesis generation and creating interactive visualizations." .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_7_IS2020
+:A3.2.3_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C7_Description ;
+                     :hasDisposition :Inventive ,
+                                     :PurposeDriven ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C7 ,
+                                        :KS2_IS_A3.2.3_C7 ;
+                     :hasTitle :LS_IS_A3.2.3_C7_Title ;
+                     rdfs:label "A3.2.3 Competency 7 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C7
+:K1_IS_A3.2.3_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "The art of the narrative." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C7
+:K2_IS_A3.2.3_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Exploratory vs. Explanatory expositions." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C7
+:KS1_IS_A3.2.3_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C7 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C7
+:KS2_IS_A3.2.3_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C7 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C7
+:LIT_IS_A3.2.3_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 7" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C7_Title
+:LS_IS_A3.2.3_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Express the story of the data in a compelling narrative" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C7_Description
+:LS_IS_A3.2.3_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Express the story of the data in a compelling narrative by analyzing the art of the narrative and creating exploratory and explanatory expositions." .

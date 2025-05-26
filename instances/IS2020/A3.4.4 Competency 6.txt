@@ -1,0 +1,49 @@
+### Competency 6: Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.)
+:A3.4.4_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Web_Development ;
+                     :hasDescription :LS_IS_A3.4.4_C6_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.4_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.4_C6 ,
+                                        :KS2_IS_A3.4.4_C6 ;
+                     :hasTitle :LS_IS_A3.4.4_C6_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.4_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Server-side (back-end)." .
+
+:K2_IS_A3.4.4_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Server-side language (i.e., Node/Express, Python/Django, etc.)." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.4_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.4_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.4_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.4_C6 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.4_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.)" .
+
+:LS_IS_A3.4.4_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.) by understanding server-side (back-end) concepts and creating applications using a server-side language." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.4_C6 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Web Development: Competence 6" .

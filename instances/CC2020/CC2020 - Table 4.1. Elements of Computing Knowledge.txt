@@ -1,0 +1,196 @@
+@prefix : <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:UsersAndOrganizations rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Users and Organizations" .
+
+:SocialIssuesAndProfessionalPractice rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Social Issues and Professional Practice" ;
+    skos:broader :UsersAndOrganizations .
+
+:SecurityPolicyAndManagement rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Security Policy and Management" ;
+    skos:broader :UsersAndOrganizations .
+
+:ISManagementAndLeadership rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "IS Management and Leadership" ;
+    skos:broader :UsersAndOrganizations .
+
+:EnterpriseArchitecture rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Enterprise Architecture" ;
+    skos:broader :UsersAndOrganizations .
+
+:ProjectManagement rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Project Management" ;
+    skos:broader :UsersAndOrganizations .
+
+:UserExperienceDesign rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "User Experience Design" ;
+    skos:broader :UsersAndOrganizations .
+
+:SystemsModeling rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Systems Modeling" .
+
+:SecurityIssuesAndPrinciples rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Security Issues and Principles" ;
+    skos:broader :SystemsModeling .
+
+:SystemsAnalysisAndDesign rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Systems Analysis & Design" ;
+    skos:broader :SystemsModeling .
+
+:RequirementsAnalysisAndSpecifications rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Requirements Analysis and Specifications" ;
+    skos:broader :SystemsModeling .
+
+:DataAndInformationManagement rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Data and Information Management" ;
+    skos:broader :SystemsModeling .
+
+:SystemsArchitectureAndInfrastructure rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Systems Architecture and Infrastructure" .
+
+:VirtualSystemsAndServices rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Virtual Systems and Services" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:IntelligentSystemsAI rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Intelligent Systems (AI)" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:InternetOfThings rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Internet of Things" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:ParallelAndDistributedComputing rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Parallel and Distributed Computing" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:ComputerNetworks rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Computer Networks" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:EmbeddedSystems rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Embedded Systems" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:IntegratedSystemsTechnology rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Integrated Systems Technology" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:PlatformTechnologies rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Platform Technologies" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:SecurityTechnologyAndImplementation rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Security Technology and Implementation" ;
+    skos:broader :SystemsArchitectureAndInfrastructure .
+
+:SoftwareDevelopment rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Software Development" .
+
+:SoftwareQualityVerificationAndValidation rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Software Quality, Verification and Validation" ;
+    skos:broader :SoftwareDevelopment .
+
+:SoftwareProcess rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Software Process" ;
+    skos:broader :SoftwareDevelopment .
+
+:SoftwareModelingAndAnalysis rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Software Modeling and Analysis" ;
+    skos:broader :SoftwareDevelopment .
+
+:SoftwareDesign rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Software Design" ;
+    skos:broader :SoftwareDevelopment .
+
+:PlatformBasedDevelopment rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Platform-Based Development" ;
+    skos:broader :SoftwareDevelopment .
+
+:SoftwareFundamentals rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Software Fundamentals" .
+
+:GraphicsAndVisualization rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Graphics and Visualization" ;
+    skos:broader :SoftwareFundamentals .
+
+:OperatingSystems rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Operating Systems" ;
+    skos:broader :SoftwareFundamentals .
+
+:DataStructuresAlgorithmsAndComplexity rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Data Structures, Algorithms and Complexity" ;
+    skos:broader :SoftwareFundamentals .
+
+:ProgrammingLanguages rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Programming Languages" ;
+    skos:broader :SoftwareFundamentals .
+
+:ProgrammingFundamentals rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Programming Fundamentals" ;
+    skos:broader :SoftwareFundamentals .
+
+:ComputingSystemsFundamentals rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Computing Systems Fundamentals" ;
+    skos:broader :SoftwareFundamentals .
+
+:Hardware rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Hardware" .
+
+:ArchitectureAndOrganization rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Architecture and Organization" ;
+    skos:broader :Hardware .
+
+:DigitalDesign rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Digital Design" ;
+    skos:broader :Hardware .
+
+:CircuitsAndElectronics rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Circuits and Electronics" ;
+    skos:broader :Hardware .
+
+:SignalProcessing rdf:type owl:NamedIndividual ,
+                          :ComputingKnowledge ;
+    rdfs:label "Signal Processing" ;
+    skos:broader :Hardware .

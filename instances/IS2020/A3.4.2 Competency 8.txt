@@ -1,0 +1,59 @@
+### Competency 8: Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal
+:A3.4.2_Competency_8_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C8_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C8 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C8 ,
+                                        :KS2_IS_A3.4.2_C8 ,
+                                        :KS3_IS_A3.4.2_C8 ;
+                     :hasTitle :LS_IS_A3.4.2_C8_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply principles of elicitation and process documentation." .
+
+:K2_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize tools to structural aspects of the problem." .
+
+:K3_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize tools to behavior aspects of the problem." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C8 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C8 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C8 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C8_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal" .
+
+:LS_IS_A3.4.2_C8_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Conduct a systematic requirements analysis by applying principles of elicitation and process documentation, utilizing tools for structural aspects of the problem, and utilizing tools for behavior aspects of the problem." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 8" .

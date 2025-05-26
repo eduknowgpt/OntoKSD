@@ -1,0 +1,69 @@
+### Competency 5: Evaluate the influence user centered design has on user experience (UX)
+:A3.4.6_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C5_Description ;
+                     :hasTitle :LS_IS_A3.4.6_C5_Title ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Professional ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C5 ,
+                                        :KS2_IS_A3.4.6_C5 ,
+                                        :KS3_IS_A3.4.6_C5 ,
+                                        :KS4_IS_A3.4.6_C5 ;
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Cooperative and Participatory design to align designer and users in a partnership." .
+
+:K2_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Establish UX purpose, audience, context, and history." .
+
+:K3_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes." .
+
+:K4_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Awareness of underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C5 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C5 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C5 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.6_C5_Title rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Evaluate the Influence of User-Centered Design on User Experience (UX)" .
+
+:LS_IS_A3.4.6_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Evaluate the influence user centered design has on user experience (UX) by applying cooperative and participatory design, understanding UX purpose, audience, context, and history, applying analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes, and understanding underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 5" .

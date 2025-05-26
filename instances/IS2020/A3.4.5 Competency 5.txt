@@ -1,0 +1,39 @@
+### Competency 5: Utilize a contemporary mobile application development framework
+:A3.4.5_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Mobile_Development ;
+                     :hasDescription :LS_IS_A3.4.5_C5_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.5_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.5_C5 ;
+                     :hasTitle :LS_IS_A3.4.5_C5_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.5_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Mobile development programming language." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.5_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.5_C5 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.5_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize a contemporary mobile application development framework" .
+
+:LS_IS_A3.4.5_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize a contemporary mobile application development framework by applying a mobile development programming language." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.5_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Mobile Development: Competence 5" .

@@ -1,0 +1,59 @@
+### Competency 9: Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system
+:A3.4.2_Competency_9_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C9_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C9 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C9 ,
+                                        :KS2_IS_A3.4.2_C9 ,
+                                        :KS3_IS_A3.4.2_C9 ;
+                     :hasTitle :LS_IS_A3.4.2_C9_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Work within a known design paradigm to express requirements." .
+
+:K2_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Iteratively maintain a specification." .
+
+:K3_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Develop increment goals for development and validation." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C9 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C9 ;
+           :hasSkillPart :Evaluating .
+
+:KS3_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C9 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.2_C9_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system" .
+
+:LS_IS_A3.4.2_C9_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Formalize and communicate requirements by working within a known design paradigm to express requirements, iteratively maintaining a specification, and developing increment goals for development and validation." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 9" .

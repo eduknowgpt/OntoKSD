@@ -1,0 +1,59 @@
+### Competency 7: Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management
+:A3.4.2_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C7_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C7 ,
+                                        :KS2_IS_A3.4.2_C7 ,
+                                        :KS3_IS_A3.4.2_C7 ;
+                     :hasTitle :LS_IS_A3.4.2_C7_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design objects and classes from domain descriptions." .
+
+:K2_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify opportunities for abstraction and specialization." .
+
+:K3_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design for dependency management using inheritance and composition." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C7 ;
+           :hasSkillPart :Creating .
+
+:KS2_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C7 ;
+           :hasSkillPart :Evaluating .
+
+:KS3_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C7 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.2_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management" .
+
+:LS_IS_A3.4.2_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize Object-Oriented concepts in the organization and structuring of programs by designing objects and classes from domain descriptions, identifying opportunities for abstraction and specialization, and designing for dependency management using inheritance and composition." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 7" .

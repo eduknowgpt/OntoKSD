@@ -1,0 +1,66 @@
+A3.2.1 Task 1 Competency 1
+
+Basic SQL Query Construction
+
+Description:
+You are provided with a sample database containing information about a small library. The database consists of a single table named Books with the following columns: BookID, Title, Author, PublicationYear, and Genre.
+
+Instructions:
+
+Write an SQL query to retrieve all the book titles and their authors from the Books table.
+Ensure that the results are sorted alphabetically by the book titles.
+Key Focus:
+
+Understand the basic structure of a relational table with rows and columns.
+Apply the SELECT and FROM clauses.
+Use the ORDER BY clause to sort results.
+Competency Elements:
+
+Knowledge-Skill Pair 1: Model data using tables, rows, columns.
+Knowledge-Skill Pair 2: Translate user stories to SQL statements using SELECT, FROM, ORDER BY.
+Dispositions: Meticulous (ensure accurate query syntax), Self-Directed (construct the query independently).
+Example Solution:
+
+sql
+Copiar código
+SELECT Title, Author
+FROM Books
+ORDER BY Title;
+
+
+A3.2.1 Task 2 Competency 1: 
+
+Filtering Data with Basic Conditions
+
+Description:
+Given the same Books table from the previous task, you need to find books that were published after the year 2000 and belong to the genre 'Science Fiction'.
+
+Instructions:
+
+Write an SQL query to retrieve the titles, authors, and publication years of books that meet the specified conditions.
+Make sure the results are distinct and sorted by the publication year in descending order.
+Key Focus:
+
+Apply the WHERE clause to filter data based on conditions.
+Use the DISTINCT keyword to avoid duplicate results.
+Combine filtering with sorting results.
+Competency Elements:
+
+Knowledge-Skill Pair 1: Model data using tables, rows, columns.
+Knowledge-Skill Pair 2: Translate user stories to SQL statements using SELECT, FROM, WHERE, DISTINCT, ORDER BY.
+Dispositions: Meticulous (ensure correct filtering criteria), Purpose-driven (focus on achieving the specific query goal).
+Example Solution:
+
+sql
+Copiar código
+SELECT DISTINCT Title, Author, PublicationYear
+FROM Books
+WHERE PublicationYear > 2000 AND Genre = 'Science Fiction'
+ORDER BY PublicationYear DESC;
+These tasks are designed to be simple and provide a hands-on approach to practicing SQL queries, focusing on understanding the relational model and basic querying techniques.
+
+
+
+
+
+

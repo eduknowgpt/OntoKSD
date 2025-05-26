@@ -1,0 +1,59 @@
+### Competency 11: Debug syntactical and logical errors
+:A3.4.4_Competency_11_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Web_Development ;
+                     :hasDescription :LS_IS_A3.4.4_C11_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :SelfDirected ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.4_C11 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.4_C11 ,
+                                        :KS2_IS_A3.4.4_C11 ,
+                                        :KS3_IS_A3.4.4_C11 ;
+                     :hasTitle :LS_IS_A3.4.4_C11_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Process of debugging a website application." .
+
+:K2_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Difference between syntax and logic error." .
+
+:K3_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Website debugging." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.4_C11 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.4_C11 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.4_C11 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.4_C11_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Debug syntactical and logical errors" .
+
+:LS_IS_A3.4.4_C11_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Debug syntactical and logical errors by understanding the process of debugging a website application, the difference between syntax and logic errors, and applying website debugging techniques." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.4_C11 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Web Development: Competence 11" .

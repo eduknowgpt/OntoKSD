@@ -1,0 +1,1042 @@
+### Competency 1: Develop data storage strategies using elemental data types in a computer’s volatile memory
+:A3.4.2_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C1_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C1 ,
+                                        :KS2_IS_A3.4.2_C1 ,
+                                        :KS3_IS_A3.4.2_C1 ,
+                                        :KS4_IS_A3.4.2_C1 ,
+                                        :KS5_IS_A3.4.2_C1 ,
+                                        :KS6_IS_A3.4.2_C1 ;
+                     :hasTitle :LS_IS_A3.4.2_C1_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data." .
+
+:K2_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define new derivative data types used to compose complex types from primitive types." .
+
+:K3_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from primitive data types according to the precision in the storage of fractional numeric information." .
+
+:K4_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from primitive data types according to the magnitude of the integral value relative to available volatile memory." .
+
+:K5_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define the relationship between binary, octal, decimal, and hexadecimal expressions of numeric values." .
+
+:K6_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Explain the importance of the binary nature of computer storage." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS5_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS6_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+### Descriptions
+:LS_IS_A3.4.2_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop data storage strategies using elemental data types in a computer’s volatile memory by selecting appropriate primitive data types, defining new derivative data types, selecting data types based on precision and magnitude, defining relationships between numeric value expressions, and explaining the importance of binary computer storage." .
+
+:LS_IS_A3.4.2_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop data storage strategies using elemental data types in a computer’s volatile memory" .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 1" .
+### Competency 10: Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction
+:A3.4.2_Competency_10_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C10_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C10 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C10 ,
+                                        :KS2_IS_A3.4.2_C10 ,
+                                        :KS3_IS_A3.4.2_C10 ;
+                     :hasTitle :LS_IS_A3.4.2_C10_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select and apply basic design patterns." .
+
+:K2_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select and apply architectural patterns." .
+
+:K3_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply SOLID Principles for complexity management." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C10 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C10 ;
+           :hasSkillPart :Analyzing .
+
+:KS3_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C10 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C10_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction" .
+
+:LS_IS_A3.4.2_C10_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Specify the software system architecture by selecting and applying basic design patterns, selecting and applying architectural patterns, and applying SOLID principles for complexity management." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 10" .
+### Competency 11: Identify the lateral components and libraries that the designed and developed system will depend on
+:A3.4.2_Competency_11_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C11_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C11 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C11 ,
+                                        :KS2_IS_A3.4.2_C11 ,
+                                        :KS3_IS_A3.4.2_C11 ;
+                     :hasTitle :LS_IS_A3.4.2_C11_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform." .
+
+:K2_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform." .
+
+:K3_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize semantic versioning for dependency specification." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C11 ;
+           :hasSkillPart :Evaluating .
+
+:KS2_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C11 ;
+           :hasSkillPart :Evaluating .
+
+:KS3_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C11 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C11_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Identify the lateral components and libraries that the designed and developed system will depend on" .
+
+:LS_IS_A3.4.2_C11_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Identify the lateral components and libraries that the designed and developed system will depend on by evaluating and implementing relevant aspects of both endogenous and exogenous libraries, and utilizing semantic versioning for dependency specification." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 11" .
+### Competency 12: Develop the programming code implementation that realizes the system architecture and design
+:A3.4.2_Competency_12_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C12_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C12 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C12 ,
+                                        :KS2_IS_A3.4.2_C12 ;
+                     :hasTitle :LS_IS_A3.4.2_C12_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select, develop, and utilize appropriate application programming interfaces." .
+
+:K2_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Maintain code integrity using source code management." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C12 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C12 ;
+           :hasSkillPart :Evaluating .
+
+### Language Strings
+:LS_IS_A3.4.2_C12_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop the programming code implementation that realizes the system architecture and design" .
+
+:LS_IS_A3.4.2_C12_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop the programming code implementation by selecting, developing, and utilizing appropriate application programming interfaces, and maintaining code integrity using source code management." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 12" .
+### Competency 13: Test all developed programming code components to ensure fidelity, consistency, and fit
+:A3.4.2_Competency_13_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C13_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C13 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C13 ,
+                                        :KS2_IS_A3.4.2_C13 ;
+                     :hasTitle :LS_IS_A3.4.2_C13_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from appropriate unit, acceptance, and integration testing strategies." .
+
+:K2_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Explain how technical debt is accrued and paid." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C13 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C13 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.2_C13_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Test all developed programming code components to ensure fidelity, consistency, and fit" .
+
+:LS_IS_A3.4.2_C13_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Test all developed programming code components by selecting from appropriate unit, acceptance, and integration testing strategies, and explaining how technical debt is accrued and paid." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 13" .
+### Competency 14: Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function
+:A3.4.2_Competency_14_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C14_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C14 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C14 ,
+                                        :KS2_IS_A3.4.2_C14 ;
+                     :hasTitle :LS_IS_A3.4.2_C14_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize continuous integration and deployment strategies." .
+
+:K2_IS_A3.4.2_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize a software process paradigm that is adaptive and iterative." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C14 ;
+           :hasSkillPart :Evaluating .
+
+:KS2_IS_A3.4.2_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C14 ;
+           :hasSkillPart :Evaluating .
+
+### Language Strings
+:LS_IS_A3.4.2_C14_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function" .
+
+:LS_IS_A3.4.2_C14_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Maintain software throughout deployment and utilization by utilizing continuous integration and deployment strategies, and utilizing a software process paradigm that is adaptive and iterative." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C14 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 14" .
+### Competency 15: Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility
+:A3.4.2_Competency_15_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C15_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C15 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C15 ,
+                                        :KS2_IS_A3.4.2_C15 ;
+                     :hasTitle :LS_IS_A3.4.2_C15_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C15 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from available software process methodologies as is appropriate to the problem domain and context." .
+
+:K2_IS_A3.4.2_C15 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Regularly review and adjust software process models in response to changing conditions." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C15 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C15 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C15 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C15 ;
+           :hasSkillPart :Analyzing .
+
+### Language Strings
+:LS_IS_A3.4.2_C15_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility" .
+
+:LS_IS_A3.4.2_C15_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Adopt, or adapt, an appropriate software systems process methodology by selecting from available methodologies as appropriate to the problem domain and context, and regularly reviewing and adjusting software process models in response to changing conditions." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C15 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 15" .
+### Competency 16: Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system
+:A3.4.2_Competency_16_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C16_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C16 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C16 ,
+                                        :KS2_IS_A3.4.2_C16 ;
+                     :hasTitle :LS_IS_A3.4.2_C16_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C16 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize structures for stakeholder interaction specified with a selected software process model." .
+
+:K2_IS_A3.4.2_C16 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Establish goals and acceptance criteria for each product increment." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C16 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C16 ;
+           :hasSkillPart :Evaluating .
+
+:KS2_IS_A3.4.2_C16 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C16 ;
+           :hasSkillPart :Analyzing .
+
+### Language Strings
+:LS_IS_A3.4.2_C16_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system" .
+
+:LS_IS_A3.4.2_C16_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Establish and maintain the appropriate dialog among stakeholders by utilizing structures for stakeholder interaction specified with a selected software process model, and establishing goals and acceptance criteria for each product increment." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C16 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 16" .
+### Competency 2: Apply data transformations using arithmetic, assignment, and transpositional operators
+:A3.4.2_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C2_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C2 ,
+                                        :KS2_IS_A3.4.2_C2 ,
+                                        :KS3_IS_A3.4.2_C2 ,
+                                        :KS4_IS_A3.4.2_C2 ,
+                                        :KS5_IS_A3.4.2_C2 ;
+                     :hasTitle :LS_IS_A3.4.2_C2_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply arithmetic operators for data transformation." .
+
+:K2_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize assignment operators to set the values to be stored in variables associated with volatile memory." .
+
+:K3_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Use operator precedence and its impact on the specification and validation of operations." .
+
+:K4_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply unary and transpositional operators that modify values stored in volatile memory." .
+
+:K5_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply any language-specific keywords that modify the availability or use of values stored in volatile memory." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C2 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C2 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C2 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C2 ;
+           :hasSkillPart :Applying .
+
+:KS5_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.2_C2 ;
+           :hasSkillPart :Applying .
+
+### Descriptions
+:LS_IS_A3.4.2_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply data transformations using arithmetic, assignment, and transpositional operators by applying arithmetic operators, utilizing assignment operators, understanding operator precedence, applying unary and transpositional operators, and using language-specific keywords." .
+
+:LS_IS_A3.4.2_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply data transformations using arithmetic, assignment, and transpositional operators" .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 2" .
+### Competency 3: Develop predicate expressions using relational and logical operators
+:A3.4.2_Competency_3_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C3_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C3 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C3 ,
+                                        :KS2_IS_A3.4.2_C3 ,
+                                        :KS3_IS_A3.4.2_C3 ,
+                                        :KS4_IS_A3.4.2_C3 ;
+                     :hasTitle :LS_IS_A3.4.2_C3_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Mathematical expressions resolve multiple operations to a single value." .
+
+:K2_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Develop Boolean predicates utilize relational operators." .
+
+:K3_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Develop compound predicate expressions using logical operators." .
+
+:K4_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "The relationship between logical operations and computer processor architectures." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C3 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C3 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C3 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C3 ;
+           :hasSkillPart :Understanding .
+
+### Descriptions
+:LS_IS_A3.4.2_C3_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop predicate expressions using relational and logical operators by understanding mathematical expressions, developing Boolean predicates, developing compound predicate expressions, and understanding the relationship between logical operations and computer processor architectures." .
+
+:LS_IS_A3.4.2_C3_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop predicate expressions using relational and logical operators" .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C3 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 3" .
+### Competency 4: Express algorithmic problem-solving using sequence, selection, and repetition structures
+:A3.4.2_Competency_4_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C4_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C4 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C4 ,
+                                        :KS2_IS_A3.4.2_C4 ,
+                                        :KS3_IS_A3.4.2_C4 ,
+                                        :KS4_IS_A3.4.2_C4 ;
+                     :hasTitle :LS_IS_A3.4.2_C4_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Statement as a unit of computing work." .
+
+:K2_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structure program progression using sequence structures." .
+
+:K3_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structure iterative program evaluation using repetition structures." .
+
+:K4_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structure decisive program evaluation using selection structures." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C4 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C4 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C4 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C4 ;
+           :hasSkillPart :Applying .
+
+### Descriptions
+:LS_IS_A3.4.2_C4_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Express algorithmic problem-solving using sequence, selection, and repetition structures by understanding statement as a unit of computing work, structuring program progression, structuring iterative program evaluation, and structuring decisive program evaluation." .
+
+:LS_IS_A3.4.2_C4_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Express algorithmic problem-solving using sequence, selection, and repetition structures" .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 4" .
+### Competency 5: Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures
+:A3.4.2_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C5_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C5 ,
+                                        :KS2_IS_A3.4.2_C5 ,
+                                        :KS3_IS_A3.4.2_C5 ,
+                                        :KS4_IS_A3.4.2_C5 ,
+                                        :KS5_IS_A3.4.2_C5 ,
+                                        :KS6_IS_A3.4.2_C5 ,
+                                        :KS7_IS_A3.4.2_C5 ,
+                                        :KS8_IS_A3.4.2_C5 ;
+                     :hasTitle :LS_IS_A3.4.2_C5_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Basic algebraic concept of a mathematical function." .
+
+:K2_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Modularity as a strategy for organization and complexity management." .
+
+:K3_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define a subroutine/method/function." .
+
+:K4_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define a subroutine/method/function that defines parameters to be passed as arguments." .
+
+:K5_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define a functional return value for a subroutine/method/function." .
+
+:K6_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize (call) a subroutine/method/function from elsewhere in code." .
+
+:K7_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply the benefits of well-named subroutines/methods/functions that express processes or outcomes as actions or behaviors (verb)." .
+
+:K8_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize any language-specific keywords that modify the availability, persistence, or visibility of a subroutine/method/function." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C5 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C5 ;
+           :hasSkillPart :Applying .
+
+:KS5_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.2_C5 ;
+           :hasSkillPart :Applying .
+
+:KS6_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.4.2_C5 ;
+           :hasSkillPart :Applying .
+
+:KS7_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.4.2_C5 ;
+           :hasSkillPart :Applying .
+
+:KS8_IS_A3.4.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K8_IS_A3.4.2_C5 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures" .
+
+:LS_IS_A3.4.2_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop a program by applying modular structures such as functions, methods, or subroutines, utilizing various language-specific capabilities to enhance organization and clarity." .
+### Competency 6: Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory
+:A3.4.2_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C6_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C6 ,
+                                        :KS2_IS_A3.4.2_C6 ,
+                                        :KS3_IS_A3.4.2_C6 ,
+                                        :KS4_IS_A3.4.2_C6 ,
+                                        :KS5_IS_A3.4.2_C6 ,
+                                        :KS6_IS_A3.4.2_C6 ,
+                                        :KS7_IS_A3.4.2_C6 ;
+                     :hasTitle :LS_IS_A3.4.2_C6_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Understand the necessity of storing and accessing a set of related values from a single logical or physical memory structure." .
+
+:K2_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Contiguous linear data structures." .
+
+:K3_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Appropriate use of dynamically sized and non-contiguous linear data structures." .
+
+:K4_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Understand the necessity of non-linear data structures." .
+
+:K5_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Understand basic elements of graphs." .
+
+:K6_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Understand the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory." .
+
+:K7_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify and utilize language-specific collections libraries as tested implementations of linear and non-linear data structures." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C6 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C6 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C6 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.2_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS6_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.4.2_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS7_IS_A3.4.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.4.2_C6 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory" .
+
+:LS_IS_A3.4.2_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop strategies to maintain and manage related data sets using both linear (contiguous, dynamically sized, non-contiguous) and non-linear data structures, and understand their practical applications in programming." .
+### Competency 7: Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management
+:A3.4.2_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C7_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C7 ,
+                                        :KS2_IS_A3.4.2_C7 ,
+                                        :KS3_IS_A3.4.2_C7 ;
+                     :hasTitle :LS_IS_A3.4.2_C7_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design objects and classes from domain descriptions." .
+
+:K2_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify opportunities for abstraction and specialization." .
+
+:K3_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design for dependency management using inheritance and composition." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C7 ;
+           :hasSkillPart :Creating .
+
+:KS2_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C7 ;
+           :hasSkillPart :Evaluating .
+
+:KS3_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C7 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.2_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management" .
+
+:LS_IS_A3.4.2_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize Object-Oriented concepts in the organization and structuring of programs by designing objects and classes from domain descriptions, identifying opportunities for abstraction and specialization, and designing for dependency management using inheritance and composition." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 7" .
+### Competency 8: Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal
+:A3.4.2_Competency_8_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C8_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C8 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C8 ,
+                                        :KS2_IS_A3.4.2_C8 ,
+                                        :KS3_IS_A3.4.2_C8 ;
+                     :hasTitle :LS_IS_A3.4.2_C8_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply principles of elicitation and process documentation." .
+
+:K2_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize tools to structural aspects of the problem." .
+
+:K3_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize tools to behavior aspects of the problem." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C8 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C8 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C8 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C8_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal" .
+
+:LS_IS_A3.4.2_C8_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Conduct a systematic requirements analysis by applying principles of elicitation and process documentation, utilizing tools for structural aspects of the problem, and utilizing tools for behavior aspects of the problem." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C8 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 8" .
+### Competency 9: Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system
+:A3.4.2_Competency_9_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C9_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C9 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C9 ,
+                                        :KS2_IS_A3.4.2_C9 ,
+                                        :KS3_IS_A3.4.2_C9 ;
+                     :hasTitle :LS_IS_A3.4.2_C9_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Work within a known design paradigm to express requirements." .
+
+:K2_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Iteratively maintain a specification." .
+
+:K3_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Develop increment goals for development and validation." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C9 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C9 ;
+           :hasSkillPart :Evaluating .
+
+:KS3_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C9 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.2_C9_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system" .
+
+:LS_IS_A3.4.2_C9_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Formalize and communicate requirements by working within a known design paradigm to express requirements, iteratively maintaining a specification, and developing increment goals for development and validation." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C9 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 9" .

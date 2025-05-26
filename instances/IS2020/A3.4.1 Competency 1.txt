@@ -1,0 +1,88 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.4.1_Competency_1_IS2020
+:A3.4.1_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Systems_Analysis_and_Design ;
+                     :hasDescription :LS_IS_A3.4.1_C1_Description ;
+                     :hasDisposition :Proactive ,
+                                     :Responsible ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.4.1_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.1_C1 ,
+                                        :KS2_IS_A3.4.1_C1 ,
+                                        :KS3_IS_A3.4.1_C1 ,
+                                        :KS4_IS_A3.4.1_C1 ;
+                     :hasTitle :LS_IS_A3.4.1_C1_Title ;
+                     rdfs:label "A3.4.1 Competency 1 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.4.1_C1
+:K1_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Purpose of systems analysis (what the system should do)." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.4.1_C1
+:K2_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Purpose of design (how to accomplish the objective of the system)." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.4.1_C1
+:K3_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "What is a system." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.4.1_C1
+:K4_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Need for and value of a formalized step-by-step approach to the analysis, design, and implementation of computer information systems." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.4.1_C1
+:KS1_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.1_C1 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.4.1_C1
+:KS2_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.1_C1 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.4.1_C1
+:KS3_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.1_C1 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.4.1_C1
+:KS4_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.1_C1 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.4.1_C1
+:LIT_IS_A3.4.1_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Systems Analysis and Design: Competence 1" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.4.1_C1_Title
+:LS_IS_A3.4.1_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Explain what systems are and how they are developed" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.4.1_C1_Description
+:LS_IS_A3.4.1_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Explain what systems are and how they are developed by understanding the purpose of systems analysis (what the system should do), the purpose of design (how to accomplish the objective of the system), what is a system, and the need for and value of a formalized step-by-step approach to the analysis, design, and implementation of computer information systems." .

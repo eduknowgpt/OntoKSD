@@ -1,0 +1,74 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.3.1_Competency_7_IS2020
+:A3.3.1_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IT_infrastructure ;
+                     :hasDescription :LS_IS_A3.3.1_C7_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Responsible ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.3.1_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.3.1_C7 ,
+                                        :KS2_IS_A3.3.1_C7 ,
+                                        :KS3_IS_A3.3.1_C7 ;
+                     :hasTitle :LS_IS_A3.3.1_C7_Title ;
+                     rdfs:label "A3.3.1 Competency 7 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.3.1_C7
+:K1_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Infrastructure components." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.3.1_C7
+:K2_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Infrastructure planning." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.3.1_C7
+:K3_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Continuity planning." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.3.1_C7
+:KS1_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.3.1_C7 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.3.1_C7
+:KS2_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.3.1_C7 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.3.1_C7
+:KS3_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.3.1_C7 ;
+           :hasSkillPart :Evaluating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.3.1_C7
+:LIT_IS_A3.3.1_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IT infrastructure: Competence 7" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.1_C7_Title
+:LS_IS_A3.3.1_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Examine and critique IT infrastructure for organizations" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.1_C7_Description
+:LS_IS_A3.3.1_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Examine and critique IT infrastructure for organizations by analyzing infrastructure components and planning, and evaluating continuity planning." .

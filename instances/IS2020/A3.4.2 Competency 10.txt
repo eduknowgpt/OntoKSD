@@ -1,0 +1,59 @@
+### Competency 10: Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction
+:A3.4.2_Competency_10_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C10_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C10 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C10 ,
+                                        :KS2_IS_A3.4.2_C10 ,
+                                        :KS3_IS_A3.4.2_C10 ;
+                     :hasTitle :LS_IS_A3.4.2_C10_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select and apply basic design patterns." .
+
+:K2_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select and apply architectural patterns." .
+
+:K3_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Apply SOLID Principles for complexity management." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C10 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C10 ;
+           :hasSkillPart :Analyzing .
+
+:KS3_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C10 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C10_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction" .
+
+:LS_IS_A3.4.2_C10_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Specify the software system architecture by selecting and applying basic design patterns, selecting and applying architectural patterns, and applying SOLID principles for complexity management." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C10 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 10" .

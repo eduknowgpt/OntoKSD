@@ -1,0 +1,39 @@
+### Competency 10: Explain memory allocation and management
+:A3.4.5_Competency_10_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Mobile_Development ;
+                     :hasDescription :LS_IS_A3.4.5_C10_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.5_C10 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.5_C10 ;
+                     :hasTitle :LS_IS_A3.4.5_C10_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.5_C10 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Memory management (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.)." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.5_C10 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.5_C10 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.5_C10_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Explain memory allocation and management" .
+
+:LS_IS_A3.4.5_C10_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Explain memory allocation and management by applying memory management techniques (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.)." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.5_C10 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Mobile Development: Competence 10" .

@@ -1,0 +1,264 @@
+### Competency Area A3.6.2 - IS Practicum ###
+
+### Competency 5: Utilize tools for team collaboration and communication
+:A3.6.2_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Practicum ;
+                     :hasDescription :LS_IS_A3.6.2_C5_Description ;
+                     :hasDisposition :Meticulous ,
+                                      :Collaborative ,
+                                      :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.6.2_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.2_C5 ,
+                                        :KS2_IS_A3.6.2_C5 ,
+                                        :KS3_IS_A3.6.2_C5 ;
+                     :hasTitle :LS_IS_A3.6.2_C5_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Real-time communication that is also linked to features management, code management, and defect tracking." .
+
+:K2_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Links to version control commits and collaborative code development." .
+
+:K3_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Exposure to at least one tool, such as Jira, Trello, TeamCity, BandCamp, etc." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.2_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.2_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.2_C5 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.6.2_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize tools for team collaboration and communication" .
+
+:LS_IS_A3.6.2_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize tools for team collaboration and communication by understanding real-time communication linked to features management, code management, and defect tracking, links to version control commits and collaborative code development, and applying exposure to at least one tool such as Jira, Trello, TeamCity, BandCamp, etc." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.2_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Practicum: Competence 5" .
+
+
+### Competency 6: Utilize tools for client collaboration and communication
+:A3.6.2_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Practicum ;
+                     :hasDescription :LS_IS_A3.6.2_C6_Description ;
+                     :hasDisposition :SelfDirected ,
+                                      :Professional ,
+                                      :Proactive ;
+                     :hasIdentifier :LIT_IS_A3.6.2_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.2_C6 ,
+                                        :KS2_IS_A3.6.2_C6 ,
+                                        :KS3_IS_A3.6.2_C6 ;
+                     :hasTitle :LS_IS_A3.6.2_C6_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define and track user-interactive acceptance testing." .
+
+:K2_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Manage features, personas, use cases, or user stories as they relate to system modules, information flows, and user experience flows." .
+
+:K3_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Provisions for test and validation deployments." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.2_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.2_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.2_C6 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.6.2_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize tools for client collaboration and communication" .
+
+:LS_IS_A3.6.2_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize tools for client collaboration and communication by understanding how to define and track user-interactive acceptance testing, manage features, personas, use cases, or user stories related to system modules, information flows, and user experience flows, and provisions for test and validation deployments." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.2_C6 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Practicum: Competence 6" .
+
+
+### Competency 7: Utilize tools for testing (unit, integration, acceptance)
+:A3.6.2_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Practicum ;
+                     :hasDescription :LS_IS_A3.6.2_C7_Description ;
+                     :hasDisposition :Meticulous ,
+                                      :SelfDirected ,
+                                      :PurposeDriven ;
+                     :hasIdentifier :LIT_IS_A3.6.2_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.2_C7 ,
+                                        :KS2_IS_A3.6.2_C7 ,
+                                        :KS3_IS_A3.6.2_C7 ,
+                                        :KS4_IS_A3.6.2_C7 ,
+                                        :KS5_IS_A3.6.2_C7 ,
+                                        :KS6_IS_A3.6.2_C7 ;
+                     :hasTitle :LS_IS_A3.6.2_C7_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "A system for developers and end users to identify software defects." .
+
+:K2_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "A system for developers and end users to track the status of defects." .
+
+:K3_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Integration with version control systems and features management." .
+
+:K4_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "A linked and integrative 'pyramid' of testing that cascades from manual testing to integration testing, to unit testing." .
+
+:K5_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Regression testing to safeguard against feature and function regression." .
+
+:K6_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Use and familiarity with at least one unit testing library or harness." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.2_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.2_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.2_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.6.2_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.6.2_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS6_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.6.2_C7 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.6.2_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize tools for testing (unit, integration, acceptance)" .
+
+:LS_IS_A3.6.2_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize tools for testing (unit, integration, acceptance) by understanding systems for identifying and tracking software defects, integration with version control systems and features management, linked and integrative testing, regression testing, and applying familiarity with at least one unit testing library or harness." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.2_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Practicum: Competence 7" .
+
+
+### Competency 8: Align and utilize UML, ERD, and Class/Object Design
+:A3.6.2_Competency_8_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Practicum ;
+                     :hasDescription :LS_IS_A3.6.2_C8_Description ;
+                     :hasDisposition :Meticulous ,
+                                      :SelfDirected ,
+                                      :PurposeDriven ;
+                     :hasIdentifier :LIT_IS_A3.6.2_C8 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.2_C8 ,
+                                        :KS2_IS_A3.6.2_C8 ;
+                     :hasTitle :LS_IS_A3.6.2_C8_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Use UML structural diagrams to realize and validate object-oriented module and library design." .
+
+:K2_IS_A3.6.2_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Use UML behavioral diagrams to realize and validate logical design." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.2_C8 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.6.2_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.2_C8 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.6.2_C8_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Align and utilize UML, ERD, and Class/Object Design" .
+
+:LS_IS_A3.6.2_C8_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Align and utilize UML, ERD, and Class/Object Design by applying the use of UML structural diagrams to realize and validate object-oriented module and library design, and UML behavioral diagrams to realize and validate logical design." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.2_C8 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Practicum: Competence 8" .

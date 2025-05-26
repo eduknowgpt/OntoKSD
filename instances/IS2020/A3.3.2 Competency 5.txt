@@ -1,0 +1,60 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.3.2_Competency_5_IS2020
+:A3.3.2_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Secure_Computing ;
+                     :hasDescription :LS_IS_A3.3.2_C5_Description ;
+                     :hasDisposition :Professional ,
+                                     :Responsible ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.3.2_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.3.2_C5 ,
+                                        :KS2_IS_A3.3.2_C5 ;
+                     :hasTitle :LS_IS_A3.3.2_C5_Title ;
+                     rdfs:label "A3.3.2 Competency 5 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.3.2_C5
+:K1_IS_A3.3.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Privacy trade-offs and risks in the social context." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.3.2_C5
+:K2_IS_A3.3.2_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Organizational context." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.3.2_C5
+:KS1_IS_A3.3.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.3.2_C5 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.3.2_C5
+:KS2_IS_A3.3.2_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.3.2_C5 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.3.2_C5
+:LIT_IS_A3.3.2_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Secure Computing: Competence 5" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.2_C5_Title
+:LS_IS_A3.3.2_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Analyze the importance of social media privacy and security" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.2_C5_Description
+:LS_IS_A3.3.2_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Analyze the importance of social media privacy and security by analyzing privacy trade-offs and risks in the social context, and the organizational context." .

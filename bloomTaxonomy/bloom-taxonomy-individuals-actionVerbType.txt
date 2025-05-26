@@ -1,0 +1,25 @@
+###  http://example.org/bloom#StandardVerb
+bloom:StandardVerb rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerbType ;
+    rdfs:label "Standard Bloom Verb"@en .
+
+###  http://example.org/bloom#ComputingVerb
+bloom:ComputingVerb rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerbType ;
+    rdfs:label "Computing-Enhanced Verb"@en .
+
+###  http://example.org/bloom#TechnicalVerb
+bloom::TechnicalVerb rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerbType ;
+    rdfs:label "Technical Verb"@en .
+
+###  http://example.org/bloom#DispositionalVerb
+bloom:DispositionalVerb rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerbType ;
+    rdfs:label "Dispositional Verb"@en .
+
+###  http://example.org/bloom#GeneralVerb
+bloom:GeneralVerb rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerbType ;
+    rdfs:label "General Verb"@en .
+

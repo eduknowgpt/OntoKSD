@@ -1,0 +1,305 @@
+### Competency Area A3.6.1 - IS Project Management ###
+
+### Competency 5: Develop estimates and cost tracking using appropriate tools, techniques, and processes
+:A3.6.1_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C5_Description ;
+                     :hasDisposition :Proactive ,
+                                      :Inventive ,
+                                      :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C5 ,
+                                        :KS2_IS_A3.6.1_C5 ,
+                                        :KS3_IS_A3.6.1_C5 ;
+                     :hasTitle :LS_IS_A3.6.1_C5_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Different types of estimation techniques (i.e. three point, analogous, bottom-up, etc.)." .
+
+:K2_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Earned value management." .
+
+:K3_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Plan cost management." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C5 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.1_C5 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.1_C5 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.6.1_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop estimates and cost tracking using appropriate tools, techniques, and processes" .
+
+:LS_IS_A3.6.1_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop estimates and cost tracking using appropriate tools, techniques, and processes by applying knowledge of different types of estimation techniques (i.e. three point, analogous, bottom-up, etc.), earned value management, and plan cost management." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 5" .
+
+
+### Competency 6: Utilize the change control process to maintain and control quality
+:A3.6.1_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C6_Description ;
+                     :hasDisposition :Professional ,
+                                      :Proactive ,
+                                      :Meticulous ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C6 ,
+                                        :KS2_IS_A3.6.1_C6 ,
+                                        :KS3_IS_A3.6.1_C6 ,
+                                        :KS4_IS_A3.6.1_C6 ,
+                                        :KS5_IS_A3.6.1_C6 ,
+                                        :KS6_IS_A3.6.1_C6 ,
+                                        :KS7_IS_A3.6.1_C6 ,
+                                        :KS8_IS_A3.6.1_C6 ;
+                     :hasTitle :LS_IS_A3.6.1_C6_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Quality tools." .
+
+:K2_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Continuous improvement." .
+
+:K3_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Quality management plan." .
+
+:K4_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Quality assurance." .
+
+:K5_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Controlling quality." .
+
+:K6_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Quality management terms." .
+
+:K7_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Cause and effect diagram." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.1_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.1_C6 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.6.1_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.6.1_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS6_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.6.1_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS7_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.6.1_C6 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.6.1_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize the change control process to maintain and control quality" .
+
+:LS_IS_A3.6.1_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize the change control process to maintain and control quality by understanding quality tools, continuous improvement, quality assurance, controlling quality, quality management terms, and by applying knowledge of quality management plan, and cause and effect diagram." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C6 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 6" .
+
+
+### Competency 7: Implement human resource management tools, techniques, and processes
+:A3.6.1_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C7_Description ;
+                     :hasDisposition :Proactive ,
+                                      :Inventive ,
+                                      :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C7 ,
+                                        :KS2_IS_A3.6.1_C7 ,
+                                        :KS3_IS_A3.6.1_C7 ;
+                     :hasTitle :LS_IS_A3.6.1_C7_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Human resource plan." .
+
+:K2_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Roles and responsibilities of team members." .
+
+:K3_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Acquiring the team." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.1_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.1_C7 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.6.1_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Implement human resource management tools, techniques, and processes" .
+
+:LS_IS_A3.6.1_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Implement human resource management tools, techniques, and processes by understanding the human resource plan, roles and responsibilities of team members, and acquiring the team." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 7" .
+
+
+### Competency 8: Define and implement a communication management plan
+:A3.6.1_Competency_8_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C8_Description ;
+                     :hasDisposition :Professional ,
+                                      :Collaborative ,
+                                      :Proactive ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C8 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C8 ,
+                                        :KS2_IS_A3.6.1_C8 ,
+                                        :KS3_IS_A3.6.1_C8 ,
+                                        :KS4_IS_A3.6.1_C8 ,
+                                        :KS5_IS_A3.6.1_C8 ;
+                     :hasTitle :LS_IS_A3.6.1_C8_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Communications plan." .
+
+:K2_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Different types of communication." .
+
+:K3_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Performance reporting." .
+
+:K4_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Communication models." .
+
+:K5_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of communication." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C8 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.1_C8 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.1_C8 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.6.1_C8 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.6.1_C8 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.6.1_C8_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Define and implement a communication management plan" .
+
+:LS_IS_A3.6.1_C8_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Define and implement a communication management plan by applying knowledge of communications plan, understanding different types of communication, performance reporting, communication models, and types of communication." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C8 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 8" .

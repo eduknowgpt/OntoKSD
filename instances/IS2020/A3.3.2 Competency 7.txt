@@ -1,0 +1,60 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.3.2_Competency_7_IS2020
+:A3.3.2_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Secure_Computing ;
+                     :hasDescription :LS_IS_A3.3.2_C7_Description ;
+                     :hasDisposition :Professional ,
+                                     :Responsible ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.3.2_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.3.2_C7 ,
+                                        :KS2_IS_A3.3.2_C7 ;
+                     :hasTitle :LS_IS_A3.3.2_C7_Title ;
+                     rdfs:label "A3.3.2 Competency 7 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.3.2_C7
+:K1_IS_A3.3.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify and Prioritize risk factors." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.3.2_C7
+:K2_IS_A3.3.2_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Risk management techniques." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.3.2_C7
+:KS1_IS_A3.3.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.3.2_C7 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.3.2_C7
+:KS2_IS_A3.3.2_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.3.2_C7 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.3.2_C7
+:LIT_IS_A3.3.2_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Secure Computing: Competence 7" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.2_C7_Title
+:LS_IS_A3.3.2_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Describe risk management techniques to identify and prioritize risk factors for information assets and how risk is assessed" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.2_C7_Description
+:LS_IS_A3.3.2_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Describe risk management techniques to identify and prioritize risk factors for information assets and how risk is assessed by understanding how to identify and prioritize risk factors, and risk management techniques." .

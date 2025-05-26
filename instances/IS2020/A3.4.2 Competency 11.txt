@@ -1,0 +1,59 @@
+### Competency 11: Identify the lateral components and libraries that the designed and developed system will depend on
+:A3.4.2_Competency_11_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C11_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C11 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C11 ,
+                                        :KS2_IS_A3.4.2_C11 ,
+                                        :KS3_IS_A3.4.2_C11 ;
+                     :hasTitle :LS_IS_A3.4.2_C11_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform." .
+
+:K2_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform." .
+
+:K3_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Utilize semantic versioning for dependency specification." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C11 ;
+           :hasSkillPart :Evaluating .
+
+:KS2_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C11 ;
+           :hasSkillPart :Evaluating .
+
+:KS3_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C11 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.2_C11_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Identify the lateral components and libraries that the designed and developed system will depend on" .
+
+:LS_IS_A3.4.2_C11_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Identify the lateral components and libraries that the designed and developed system will depend on by evaluating and implementing relevant aspects of both endogenous and exogenous libraries, and utilizing semantic versioning for dependency specification." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C11 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 11" .

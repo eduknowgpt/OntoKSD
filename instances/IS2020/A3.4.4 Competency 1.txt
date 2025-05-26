@@ -1,0 +1,58 @@
+### Competency 1: Demonstrate an operational understanding of the protocols that enable the Internet
+:A3.4.4_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Web_Development ;
+                     :hasDescription :LS_IS_A3.4.4_C1_Description ;
+                     :hasDisposition :SelfDirected ,
+                                     :PurposeDriven ;
+                     :hasIdentifier :LIT_IS_A3.4.4_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.4_C1 ,
+                                        :KS2_IS_A3.4.4_C1 ,
+                                        :KS3_IS_A3.4.4_C1 ;
+                     :hasTitle :LS_IS_A3.4.4_C1_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Purpose of the client (front-end)." .
+
+:K2_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Purpose of the server (backend)." .
+
+:K3_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "An Internet server interacting with a client." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.4_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.4_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.4_C1 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.4_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Demonstrate an operational understanding of the protocols that enable the Internet" .
+
+:LS_IS_A3.4.4_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Demonstrate an operational understanding of the protocols that enable the Internet by understanding the purpose of the client (front-end), the purpose of the server (backend), and how an Internet server interacts with a client." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.4_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Web Development: Competence 1" .

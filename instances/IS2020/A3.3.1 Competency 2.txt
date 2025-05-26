@@ -1,0 +1,102 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.3.1_Competency_2_IS2020
+:A3.3.1_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IT_infrastructure ;
+                     :hasDescription :LS_IS_A3.3.1_C2_Description ;
+                     :hasDisposition :Responsible ,
+                                     :SelfDirected ,
+                                     :Meticulous ;
+                     :hasIdentifier :LIT_IS_A3.3.1_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.3.1_C2 ,
+                                        :KS2_IS_A3.3.1_C2 ,
+                                        :KS3_IS_A3.3.1_C2 ,
+                                        :KS4_IS_A3.3.1_C2 ,
+                                        :KS5_IS_A3.3.1_C2 ;
+                     :hasTitle :LS_IS_A3.3.1_C2_Title ;
+                     rdfs:label "A3.3.1 Competency 2 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.3.1_C2
+:K1_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Layers of the TCP/IP protocol suite." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.3.1_C2
+:K2_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Layers of the OSI model." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.3.1_C2
+:K3_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Duties of each layer of TCP/IP protocol suite." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.3.1_C2
+:K4_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Duties of each layer of OSI model." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K5_IS_A3.3.1_C2
+:K5_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Network security." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.3.1_C2
+:KS1_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.3.1_C2 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.3.1_C2
+:KS2_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.3.1_C2 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.3.1_C2
+:KS3_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.3.1_C2 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.3.1_C2
+:KS4_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.3.1_C2 ;
+           :hasSkillPart :Understanding .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS5_IS_A3.3.1_C2
+:KS5_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.3.1_C2 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.3.1_C2
+:LIT_IS_A3.3.1_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IT infrastructure: Competence 2" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.1_C2_Title
+:LS_IS_A3.3.1_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Explain the principles of layered network architectures" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.1_C2_Description
+:LS_IS_A3.3.1_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Explain the principles of layered network architectures by understanding the layers and duties of the TCP/IP protocol suite and OSI model, and analyzing network security." .

@@ -1,0 +1,347 @@
+@prefix : <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:CognitiveActionVerbs rdf:type owl:Class ;
+    rdfs:label "Cognitive Action Verbs" ;
+    rdfs:comment "Verbs used to describe cognitive actions based on Bloom's Revised Taxonomy." .
+
+:verbName rdf:type owl:DatatypeProperty ;
+    rdfs:label "Verb Name" ;
+    rdfs:comment "The name of the cognitive action verb." .
+
+:verbDescription rdf:type owl:DatatypeProperty ;
+    rdfs:label "Verb Description" ;
+    rdfs:comment "A description of the cognitive action verb." .
+
+:BloomCognitiveSkill rdf:type owl:Class ;
+    rdfs:label "Bloom's Cognitive Skill" ;
+    rdfs:comment "Levels of cognitive skills according to Bloom's Revised Taxonomy." .
+
+:isActionVerbFor rdf:type owl:ObjectProperty ;
+    rdfs:label "has Cognitive Action Verb" ;
+    rdfs:comment "Associates a Bloom's Cognitive Skill with its corresponding cognitive action verbs." .
+
+:Remembering rdf:type :BloomCognitiveSkill ;
+    rdfs:label "Remembering" .
+
+:Understanding rdf:type :BloomCognitiveSkill ;
+    rdfs:label "Understanding" .
+
+:Applying rdf:type :BloomCognitiveSkill ;
+    rdfs:label "Applying" .
+
+:Analyzing rdf:type :BloomCognitiveSkill ;
+    rdfs:label "Analyzing" .
+
+:Evaluating rdf:type :BloomCognitiveSkill ;
+    rdfs:label "Evaluating" .
+
+:Creating rdf:type :BloomCognitiveSkill ;
+    rdfs:label "Creating" .
+
+# Remembering
+:Recognize rdf:type :CognitiveActionVerbs ;
+    :verbName "Recognize" ;
+    :verbDescription "Identifying something previously learned." ;
+    :isActionVerbFor :Remembering .
+
+:Recall rdf:type :CognitiveActionVerbs ;
+    :verbName "Recall" ;
+    :verbDescription "Retrieving relevant knowledge from long-term memory." ;
+    :isActionVerbFor :Remembering .
+
+:List rdf:type :CognitiveActionVerbs ;
+    :verbName "List" ;
+    :verbDescription "Providing a series of related items." ;
+    :isActionVerbFor :Remembering .
+
+:Define rdf:type :CognitiveActionVerbs ;
+    :verbName "Define" ;
+    :verbDescription "Stating the meaning of a term or concept." ;
+    :isActionVerbFor :Remembering .
+
+:Describe rdf:type :CognitiveActionVerbs ;
+    :verbName "Describe" ;
+    :verbDescription "Giving a detailed account of something." ;
+    :isActionVerbFor :Remembering .
+
+:Identify rdf:type :CognitiveActionVerbs ;
+    :verbName "Identify" ;
+    :verbDescription "Determining the identity of a subject or object." ;
+    :isActionVerbFor :Remembering .
+
+:Retrieve rdf:type :CognitiveActionVerbs ;
+    :verbName "Retrieve" ;
+    :verbDescription "Recalling information from memory." ;
+    :isActionVerbFor :Remembering .
+
+:Name rdf:type :CognitiveActionVerbs ;
+    :verbName "Name" ;
+    :verbDescription "Specifying the name of something." ;
+    :isActionVerbFor :Remembering .
+
+:Label rdf:type :CognitiveActionVerbs ;
+    :verbName "Label" ;
+    :verbDescription "Assigning a label to something." ;
+    :isActionVerbFor :Remembering .
+
+:Locate rdf:type :CognitiveActionVerbs ;
+    :verbName "Locate" ;
+    :verbDescription "Finding the position or place of something." ;
+    :isActionVerbFor :Remembering .
+
+# Understanding
+:Interpret rdf:type :CognitiveActionVerbs ;
+    :verbName "Interpret" ;
+    :verbDescription "Explaining the meaning of information." ;
+    :isActionVerbFor :Understanding .
+
+:Exemplify rdf:type :CognitiveActionVerbs ;
+    :verbName "Exemplify" ;
+    :verbDescription "Giving examples to illustrate a concept." ;
+    :isActionVerbFor :Understanding .
+
+:Classify rdf:type :CognitiveActionVerbs ;
+    :verbName "Classify" ;
+    :verbDescription "Grouping items into categories based on shared characteristics." ;
+    :isActionVerbFor :Understanding .
+
+:Summarize rdf:type :CognitiveActionVerbs ;
+    :verbName "Summarize" ;
+    :verbDescription "Giving a brief statement of the main points." ;
+    :isActionVerbFor :Understanding .
+
+:Infer rdf:type :CognitiveActionVerbs ;
+    :verbName "Infer" ;
+    :verbDescription "Drawing conclusions from evidence and reasoning." ;
+    :isActionVerbFor :Understanding .
+
+:Compare rdf:type :CognitiveActionVerbs ;
+    :verbName "Compare" ;
+    :verbDescription "Identifying similarities and differences." ;
+    :isActionVerbFor :Understanding .
+
+:Explain rdf:type :CognitiveActionVerbs ;
+    :verbName "Explain" ;
+    :verbDescription "Making something clear by describing it in detail." ;
+    :isActionVerbFor :Understanding .
+
+:Discuss rdf:type :CognitiveActionVerbs ;
+    :verbName "Discuss" ;
+    :verbDescription "Talking about a topic in detail." ;
+    :isActionVerbFor :Understanding .
+
+:Paraphrase rdf:type :CognitiveActionVerbs ;
+    :verbName "Paraphrase" ;
+    :verbDescription "Restating information in one's own words." ;
+    :isActionVerbFor :Understanding .
+
+:Predict rdf:type :CognitiveActionVerbs ;
+    :verbName "Predict" ;
+    :verbDescription "Stating what will happen in the future based on current information." ;
+    :isActionVerbFor :Understanding .
+
+# Applying
+:Execute rdf:type :CognitiveActionVerbs ;
+    :verbName "Execute" ;
+    :verbDescription "Carrying out a procedure." ;
+    :isActionVerbFor :Applying .
+
+:Implement rdf:type :CognitiveActionVerbs ;
+    :verbName "Implement" ;
+    :verbDescription "Using a procedure in a new situation." ;
+    :isActionVerbFor :Applying .
+
+:Solve rdf:type :CognitiveActionVerbs ;
+    :verbName "Solve" ;
+    :verbDescription "Finding a solution to a problem." ;
+    :isActionVerbFor :Applying .
+
+:Use rdf:type :CognitiveActionVerbs ;
+    :verbName "Use" ;
+    :verbDescription "Employing knowledge or skills in a practical situation." ;
+    :isActionVerbFor :Applying .
+
+:Demonstrate rdf:type :CognitiveActionVerbs ;
+    :verbName "Demonstrate" ;
+    :verbDescription "Showing how to do something." ;
+    :isActionVerbFor :Applying .
+
+:Apply rdf:type :CognitiveActionVerbs ;
+    :verbName "Apply" ;
+    :verbDescription "Making use of knowledge or skills." ;
+    :isActionVerbFor :Applying .
+
+:Operate rdf:type :CognitiveActionVerbs ;
+    :verbName "Operate" ;
+    :verbDescription "Performing a function or action." ;
+    :isActionVerbFor :Applying .
+
+:Perform rdf:type :CognitiveActionVerbs ;
+    :verbName "Perform" ;
+    :verbDescription "Carrying out an action or task." ;
+    :isActionVerbFor :Applying .
+
+:Calculate rdf:type :CognitiveActionVerbs ;
+    :verbName "Calculate" ;
+    :verbDescription "Determining a numerical result." ;
+    :isActionVerbFor :Applying .
+
+:Illustrate rdf:type :CognitiveActionVerbs ;
+    :verbName "Illustrate" ;
+    :verbDescription "Providing visual or concrete examples." ;
+    :isActionVerbFor :Applying .
+
+# Analyzing
+:Differentiate rdf:type :CognitiveActionVerbs ;
+    :verbName "Differentiate" ;
+    :verbDescription "Distinguishing relevant from irrelevant parts." ;
+    :isActionVerbFor :Analyzing .
+
+:Organize rdf:type :CognitiveActionVerbs ;
+    :verbName "Organize" ;
+    :verbDescription "Arranging elements in a logical structure." ;
+    :isActionVerbFor :Analyzing .
+
+:Attribute rdf:type :CognitiveActionVerbs ;
+    :verbName "Attribute" ;
+    :verbDescription "Determining the source or cause of something." ;
+    :isActionVerbFor :Analyzing .
+
+:Analyze rdf:type :CognitiveActionVerbs ;
+    :verbName "Analyze" ;
+    :verbDescription "Breaking down material into parts to understand its structure." ;
+    :isActionVerbFor :Analyzing .
+
+:Compare rdf:type :CognitiveActionVerbs ;
+    :verbName "Compare" ;
+    :verbDescription "Examining the similarities and differences." ;
+    :isActionVerbFor :Analyzing .
+
+:Contrast rdf:type :CognitiveActionVerbs ;
+    :verbName "Contrast" ;
+    :verbDescription "Highlighting the differences between things." ;
+    :isActionVerbFor :Analyzing .
+
+:Question rdf:type :CognitiveActionVerbs ;
+    :verbName "Question" ;
+    :verbDescription "Raising issues or doubts about something." ;
+    :isActionVerbFor :Analyzing .
+
+:Investigate rdf:type :CognitiveActionVerbs ;
+    :verbName "Investigate" ;
+    :verbDescription "Examining a subject in detail." ;
+    :isActionVerbFor :Analyzing .
+
+:Relate rdf:type :CognitiveActionVerbs ;
+    :verbName "Relate" ;
+    :verbDescription "Showing how things are connected." ;
+    :isActionVerbFor :Analyzing .
+
+:Examine rdf:type :CognitiveActionVerbs ;
+    :verbName "Examine" ;
+    :verbDescription "Inspecting something in detail." ;
+    :isActionVerbFor :Analyzing .
+
+# Evaluating
+:Check rdf:type :CognitiveActionVerbs ;
+    :verbName "Check" ;
+    :verbDescription "Assessing the validity of statements or arguments." ;
+    :isActionVerbFor :Evaluating .
+
+:Critique rdf:type :CognitiveActionVerbs ;
+    :verbName "Critique" ;
+    :verbDescription "Providing feedback based on criteria and standards." ;
+    :isActionVerbFor :Evaluating .
+
+:Judge rdf:type :CognitiveActionVerbs ;
+    :verbName "Judge" ;
+    :verbDescription "Forming an opinion based on criteria." ;
+    :isActionVerbFor :Evaluating .
+
+:Evaluate rdf:type :CognitiveActionVerbs ;
+    :verbName "Evaluate" ;
+    :verbDescription "Determining the value or significance of something." ;
+    :isActionVerbFor :Evaluating .
+
+:Justify rdf:type :CognitiveActionVerbs ;
+    :verbName "Justify" ;
+    :verbDescription "Providing reasons or evidence to support a conclusion." ;
+    :isActionVerbFor :Evaluating .
+
+:Defend rdf:type :CognitiveActionVerbs ;
+    :verbName "Defend" ;
+    :verbDescription "Supporting a position with evidence." ;
+    :isActionVerbFor :Evaluating .
+
+:Appraise rdf:type :CognitiveActionVerbs ;
+    :verbName "Appraise" ;
+    :verbDescription "Assessing the value or quality of something." ;
+    :isActionVerbFor :Evaluating .
+
+:Argue rdf:type :CognitiveActionVerbs ;
+    :verbName "Argue" ;
+    :verbDescription "Presenting reasons for or against something." ;
+    :isActionVerbFor :Evaluating .
+
+:Assess rdf:type :CognitiveActionVerbs ;
+    :verbName "Assess" ;
+    :verbDescription "Evaluating the nature or quality of something." ;
+    :isActionVerbFor :Evaluating .
+
+:Rate rdf:type :CognitiveActionVerbs ;
+    :verbName "Rate" ;
+    :verbDescription "Assigning a value or ranking to something." ;
+    :isActionVerbFor :Evaluating .
+
+# Creating
+:Generate rdf:type :CognitiveActionVerbs ;
+    :verbName "Generate" ;
+    :verbDescription "Producing new ideas or solutions." ;
+    :isActionVerbFor :Creating .
+
+:Plan rdf:type :CognitiveActionVerbs ;
+    :verbName "Plan" ;
+    :verbDescription "Designing a coherent approach to a task." ;
+    :isActionVerbFor :Creating .
+
+:Produce rdf:type :CognitiveActionVerbs ;
+    :verbName "Produce" ;
+    :verbDescription "Creating something new." ;
+    :isActionVerbFor :Creating .
+
+:Design rdf:type :CognitiveActionVerbs ;
+    :verbName "Design" ;
+    :verbDescription "Developing a detailed plan or concept." ;
+    :isActionVerbFor :Creating .
+
+:Construct rdf:type :CognitiveActionVerbs ;
+    :verbName "Construct" ;
+    :verbDescription "Building something." ;
+    :isActionVerbFor :Creating .
+
+:Develop rdf:type :CognitiveActionVerbs ;
+    :verbName "Develop" ;
+    :verbDescription "Elaborating on an idea or project." ;
+    :isActionVerbFor :Creating .
+
+:Formulate rdf:type :CognitiveActionVerbs ;
+    :verbName "Formulate" ;
+    :verbDescription "Creating a strategy or proposal." ;
+    :isActionVerbFor :Creating .
+
+:Assemble rdf:type :CognitiveActionVerbs ;
+    :verbName "Assemble" ;
+    :verbDescription "Putting together various elements." ;
+    :isActionVerbFor :Creating .
+
+:Compose rdf:type :CognitiveActionVerbs ;
+    :verbName "Compose" ;
+    :verbDescription "Creating a work of art or text." ;
+    :isActionVerbFor :Creating .
+
+:Invent rdf:type :CognitiveActionVerbs ;
+    :verbName "Invent" ;
+    :verbDescription "Developing a new method, idea, or product." ;
+    :isActionVerbFor :Creating .

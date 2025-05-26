@@ -1,0 +1,60 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.1_Competency_1_IS2020
+:A3.2.1_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_Information_Management ;
+                     :hasDescription :LS_IS_A3.2.1_C1_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :PurposeDriven ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.2.1_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.1_C1 ,
+                                        :KS2_IS_A3.2.1_C1 ;
+                     :hasTitle :LS_IS_A3.2.1_C1_Title ;
+                     rdfs:label "A3.2.1 Competency 1 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.1_C1
+:K1_IS_A3.2.1_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Relations, tuples, and fields. Model data using tables, rows, columns, keys." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.1_C1
+:K2_IS_A3.2.1_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "User stories and business requirements. Translate user stories to SQL statements using (SELECT, FROM, WHERE, ORDER BY, DISTINCT, LIKE, BETWEEN, IN, JOIN, GROUP BY, HAVING, sub-queries, ANY, ALL, UNION)." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.1_C1
+:KS1_IS_A3.2.1_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.1_C1 ;
+           :hasSkillPart :Applying .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.1_C1
+:KS2_IS_A3.2.1_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.1_C1 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.1_C1
+:LIT_IS_A3.2.1_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Management: Competence 1" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.1_C1_Title
+:LS_IS_A3.2.1_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Query the relational model" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.1_C1_Description
+:LS_IS_A3.2.1_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Query the relational model by understanding relations, tuples, and fields, and translating user stories and business requirements into SQL statements." .

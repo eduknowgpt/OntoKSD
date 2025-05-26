@@ -1,0 +1,102 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.3.3_Competency_8_IS2020
+:A3.3.3_Competency_8_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Emerging_Technologies ;
+                     :hasDescription :LS_IS_A3.3.3_C8_Description ;
+                     :hasDisposition :Inventive ,
+                                     :PurposeDriven ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.3.3_C8 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.3.3_C8 ,
+                                        :KS2_IS_A3.3.3_C8 ,
+                                        :KS3_IS_A3.3.3_C8 ,
+                                        :KS4_IS_A3.3.3_C8 ,
+                                        :KS5_IS_A3.3.3_C8 ;
+                     :hasTitle :LS_IS_A3.3.3_C8_Title ;
+                     rdfs:label "A3.3.3 Competency 8 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.3.3_C8
+:K1_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Communication." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.3.3_C8
+:K2_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Team working." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.3.3_C8
+:K3_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Timekeeping." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.3.3_C8
+:K4_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Note-taking." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K5_IS_A3.3.3_C8
+:K5_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Project management." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.3.3_C8
+:KS1_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.3.3_C8 ;
+           :hasSkillPart :Evaluating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.3.3_C8
+:KS2_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.3.3_C8 ;
+           :hasSkillPart :Evaluating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.3.3_C8
+:KS3_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.3.3_C8 ;
+           :hasSkillPart :Evaluating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.3.3_C8
+:KS4_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.3.3_C8 ;
+           :hasSkillPart :Applying .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS5_IS_A3.3.3_C8
+:KS5_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.3.3_C8 ;
+           :hasSkillPart :Applying .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.3.3_C8
+:LIT_IS_A3.3.3_C8 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Emerging Technologies: Competence 8" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.3_C8_Title
+:LS_IS_A3.3.3_C8_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply emerging technologies in a teamwork scenario" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.3_C8_Description
+:LS_IS_A3.3.3_C8_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply emerging technologies in a teamwork scenario by evaluating communication, team working, and timekeeping, and applying note-taking and project management." .

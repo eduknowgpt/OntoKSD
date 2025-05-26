@@ -1,0 +1,79 @@
+### Competency 3: Implement good documentation practices in programming
+:A3.4.4_Competency_3_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Web_Development ;
+                     :hasDescription :LS_IS_A3.4.4_C3_Description ;
+                     :hasDisposition :Inventive ,
+                                     :SelfDirected ,
+                                     :Responsible ;
+                     :hasIdentifier :LIT_IS_A3.4.4_C3 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.4_C3 ,
+                                        :KS2_IS_A3.4.4_C3 ,
+                                        :KS3_IS_A3.4.4_C3 ,
+                                        :KS4_IS_A3.4.4_C3 ,
+                                        :KS5_IS_A3.4.4_C3 ;
+                     :hasTitle :LS_IS_A3.4.4_C3_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Documentation of an application." .
+
+:K2_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Advantages and disadvantages of documenting an application." .
+
+:K3_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Purpose of readable source code." .
+
+:K4_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Best practices in writing source code." .
+
+:K5_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structured program." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.4_C3 ;
+           :hasSkillPart :Creating .
+
+:KS2_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.4_C3 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.4_C3 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.4_C3 ;
+           :hasSkillPart :Applying .
+
+:KS5_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.4_C3 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.4_C3_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Implement good documentation practices in programming" .
+
+:LS_IS_A3.4.4_C3_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Implement good documentation practices in programming by creating documentation of an application, understanding the advantages and disadvantages of documenting an application, understanding the purpose of readable source code, applying best practices in writing source code, and creating a structured program." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.4_C3 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Web Development: Competence 3" .

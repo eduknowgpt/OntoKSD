@@ -1,0 +1,89 @@
+### Competency 1: Develop data storage strategies using elemental data types in a computer’s volatile memory
+:A3.4.2_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C1_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C1 ,
+                                        :KS2_IS_A3.4.2_C1 ,
+                                        :KS3_IS_A3.4.2_C1 ,
+                                        :KS4_IS_A3.4.2_C1 ,
+                                        :KS5_IS_A3.4.2_C1 ,
+                                        :KS6_IS_A3.4.2_C1 ;
+                     :hasTitle :LS_IS_A3.4.2_C1_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data." .
+
+:K2_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define new derivative data types used to compose complex types from primitive types." .
+
+:K3_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from primitive data types according to the precision in the storage of fractional numeric information." .
+
+:K4_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from primitive data types according to the magnitude of the integral value relative to available volatile memory." .
+
+:K5_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Define the relationship between binary, octal, decimal, and hexadecimal expressions of numeric values." .
+
+:K6_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Explain the importance of the binary nature of computer storage." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS5_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+:KS6_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.4.2_C1 ;
+           :hasSkillPart :Applying .
+
+### Descriptions
+:LS_IS_A3.4.2_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop data storage strategies using elemental data types in a computer’s volatile memory by selecting appropriate primitive data types, defining new derivative data types, selecting data types based on precision and magnitude, defining relationships between numeric value expressions, and explaining the importance of binary computer storage." .
+
+:LS_IS_A3.4.2_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop data storage strategies using elemental data types in a computer’s volatile memory" .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 1" .

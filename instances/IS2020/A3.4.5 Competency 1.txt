@@ -1,0 +1,59 @@
+### Competency 1: Describe the Internet of Things (IoT) enabled devices and the mobile industry
+:A3.4.5_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Mobile_Development ;
+                     :hasDescription :LS_IS_A3.4.5_C1_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :SelfDirected ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.5_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.5_C1 ,
+                                        :KS2_IS_A3.4.5_C1 ,
+                                        :KS3_IS_A3.4.5_C1 ;
+                     :hasTitle :LS_IS_A3.4.5_C1_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "IoT is changing mobile development (i.e., Smart Home devices)." .
+
+:K2_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design of mobile application for the IoT experience." .
+
+:K3_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "IoT components and challenges." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.5_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.5_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.5_C1 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.5_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Describe the Internet of Things (IoT) enabled devices and the mobile industry" .
+
+:LS_IS_A3.4.5_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Describe the Internet of Things (IoT) enabled devices and the mobile industry by understanding how IoT is changing mobile development (i.e., Smart Home devices), the design of mobile applications for the IoT experience, and IoT components and challenges." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.5_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Mobile Development: Competence 1" .

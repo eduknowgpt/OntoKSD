@@ -1,0 +1,395 @@
+### Competency 1: Apply principles of user-Centered design (UCD)
+:A3.4.6_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C1_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Professional ,
+                                     :Collaborative ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C1 ,
+                                        :KS2_IS_A3.4.6_C1 ,
+                                        :KS3_IS_A3.4.6_C1 ,
+                                        :KS4_IS_A3.4.6_C1 ,
+                                        :KS5_IS_A3.4.6_C1 ,
+                                        :KS6_IS_A3.4.6_C1 ;
+                     :hasTitle :LS_IS_A3.4.6_C1_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Understanding of users, tasks, and environments." .
+
+:K2_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Gathering user feedback to define requirements and design." .
+
+:K3_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Involve user in the design process." .
+
+:K4_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Implement an iterative user design process." .
+
+:K5_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Essential elements of user centered design." .
+
+:K6_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Human capabilities that motivate them, including motor skills, attention, and human error." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS6_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.6_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply principles of user-Centered design (UCD)" .
+
+:LS_IS_A3.4.6_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply principles of user-Centered design (UCD) by understanding users, tasks, and environments, gathering user feedback to define requirements and design, involving users in the design process, implementing an iterative user design process, understanding essential elements of user centered design, and understanding human capabilities that motivate them, including motor skills, attention, and human error." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 1" .
+### Competency 2: Apply user-system interaction principles
+:A3.4.6_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C2_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Professional ,
+                                     :Collaborative ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C2 ,
+                                        :KS2_IS_A3.4.6_C2 ,
+                                        :KS3_IS_A3.4.6_C2 ,
+                                        :KS4_IS_A3.4.6_C2 ,
+                                        :KS5_IS_A3.4.6_C2 ;
+                     :hasTitle :LS_IS_A3.4.6_C2_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Direct manipulation objects of interest in the UI are visible and can be acted upon." .
+
+:K2_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Menu based systems where users work their way through a series of screens or menus." .
+
+:K3_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Form fill-in where a user needs to enter the necessary information in order to complete a specific task for requirement." .
+
+:K4_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Command line interaction with operating systems." .
+
+:K5_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Natural language allowing a user to interact with the computer using a human language." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C2 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C2 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C2 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C2 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.6_C2 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.6_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply user-system interaction principles" .
+
+:LS_IS_A3.4.6_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply user-system interaction principles by understanding direct manipulation objects of interest in the UI that are visible and can be acted upon, menu based systems where users work their way through a series of screens or menus, form fill-in where a user needs to enter the necessary information in order to complete a specific task for requirement, command line interaction with operating systems, and natural language allowing a user to interact with the computer using a human language." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 2" .
+### Competency 3: Design and create effective user-centered user interaction with an application
+:A3.4.6_Competency_3_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C3_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Inventive ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C3 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C3 ,
+                                        :KS2_IS_A3.4.6_C3 ,
+                                        :KS3_IS_A3.4.6_C3 ,
+                                        :KS4_IS_A3.4.6_C3 ,
+                                        :KS5_IS_A3.4.6_C3 ;
+                     :hasTitle :LS_IS_A3.4.6_C3_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Construct navigation enabling users to easily accomplish tasks." .
+
+:K2_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Create intuitive forms used for gathering required data." .
+
+:K3_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Create a working application or web page template appropriate for various devices using mobile-first design principles." .
+
+:K4_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Identify an application’s target audience and create an audience-appropriate design." .
+
+:K5_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Use critical thinking skills to revise application based on feedback." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C3 ;
+           :hasSkillPart :Creating .
+
+:KS2_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C3 ;
+           :hasSkillPart :Creating .
+
+:KS3_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C3 ;
+           :hasSkillPart :Creating .
+
+:KS4_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C3 ;
+           :hasSkillPart :Creating .
+
+:KS5_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.6_C3 ;
+           :hasSkillPart :Evaluating .
+
+### Language Strings
+:LS_IS_A3.4.6_C3_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Design and create effective user-centered user interaction with an application" .
+
+:LS_IS_A3.4.6_C3_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Design and create effective user-centered user interaction with an application by creating navigation enabling users to easily accomplish tasks, creating intuitive forms for gathering required data, creating a working application or web page template for various devices using mobile-first design principles, identifying an application’s target audience and creating an audience-appropriate design, and using critical thinking skills to revise the application based on feedback." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C3 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 3" .
+### Competency 4: Identify and evaluate attributes of effective UX
+:A3.4.6_Competency_4_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C4_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Inventive ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C4 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C4 ,
+                                        :KS2_IS_A3.4.6_C4 ,
+                                        :KS3_IS_A3.4.6_C4 ,
+                                        :KS4_IS_A3.4.6_C4 ,
+                                        :KS5_IS_A3.4.6_C4 ;
+                     :hasTitle :LS_IS_A3.4.6_C4_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Study perception, simplicity, clarity, consistency, hierarchy (visual and temporal)." .
+
+:K2_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Achieve a personalized experience." .
+
+:K3_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design and align the information architecture of the application environment to support usability, comprehensibility, and search." .
+
+:K4_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Familiarity with human-computer interface principles and issues." .
+
+:K5_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Design and implement user testing strategies to include usability testing, A/B testing, and user flow validation." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C4 ;
+           :hasSkillPart :Evaluating .
+
+:KS2_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C4 ;
+           :hasSkillPart :Creating .
+
+:KS3_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C4 ;
+           :hasSkillPart :Creating .
+
+:KS4_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C4 ;
+           :hasSkillPart :Applying .
+
+:KS5_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.6_C4 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.4.6_C4_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Identify and evaluate attributes of effective UX" .
+
+:LS_IS_A3.4.6_C4_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Identify and evaluate attributes of effective UX by evaluating perception, simplicity, clarity, consistency, hierarchy (visual and temporal), creating a personalized experience, creating and aligning the information architecture of the application environment to support usability, comprehensibility, and search, applying familiarity with human-computer interface principles and issues, and creating and implementing user testing strategies to include usability testing, A/B testing, and user flow validation." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C4 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 4" .
+### Competency 5: Evaluate the influence user centered design has on user experience (UX)
+:A3.4.6_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C5_Description ;
+                     :hasTitle :LS_IS_A3.4.6_C5_Title ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Professional ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C5 ,
+                                        :KS2_IS_A3.4.6_C5 ,
+                                        :KS3_IS_A3.4.6_C5 ,
+                                        :KS4_IS_A3.4.6_C5 ;
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Cooperative and Participatory design to align designer and users in a partnership." .
+
+:K2_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Establish UX purpose, audience, context, and history." .
+
+:K3_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes." .
+
+:K4_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Awareness of underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C5 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C5 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C5 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.6_C5_Title rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Evaluate the Influence of User-Centered Design on User Experience (UX)" .
+
+:LS_IS_A3.4.6_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Evaluate the influence user centered design has on user experience (UX) by applying cooperative and participatory design, understanding UX purpose, audience, context, and history, applying analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes, and understanding underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 5" .

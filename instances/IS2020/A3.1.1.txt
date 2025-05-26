@@ -1,0 +1,619 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_3_IS2020
+:A3.1.1_Competency_3_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C3_Description ;
+                     :hasDisposition :Self-directed ,
+                                     :Inventive ,
+                                     :Purpose-driven ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C3 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C3 ,
+                                        :KS2_IS_A3.1.1_C3 ;
+                     :hasTitle :LS_IS_A3.1.1_C3_Title ;
+                     rdfs:label "Competency 3 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C3
+:K1_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Roles and responsibilities of the IS professional." .
+		
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C3
+:K2_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Characteristics of the IS professional." .
+		  
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C3
+:KS1_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C3 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C3
+:KS2_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C3 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C3
+:LIT_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 3" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C3_Title
+:LS_IS_A3.1.1_C3_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Explain the roles, responsibilities, and characteristics of the IS professional" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C3_Description
+:LS_IS_A3.1.1_C3_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Explain the roles, responsibilities, and characteristics of the IS professional" .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_4_IS2020
+:A3.1.1_Competency_4_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C4_Description ;
+                     :hasDisposition :Self-directed ,
+                                     :Purpose-driven ,
+                                     :Professional ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C4 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C4 ,
+                                        :KS2_IS_A3.1.1_C4 ,
+                                        :KS3_IS_A3.1.1_C4 ,
+                                        :KS4_IS_A3.1.1_C4 ,
+                                        :KS5_IS_A3.1.1_C4 ,
+                                        :KS6_IS_A3.1.1_C4 ,
+                                        :KS7_IS_A3.1.1_C4 ,
+                                        :KS8_IS_A3.1.1_C4 ,
+                                        :KS9_IS_A3.1.1_C4 ;
+                     :hasTitle :LS_IS_A3.1.1_C4_Title ;
+                     rdfs:label "Competency 4 - IS2020" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C4
+:K1_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "IS and the value of information." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C4
+:K2_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Methods for storing and organizing information." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.1.1_C4
+:K3_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Role of information in decision making." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.1.1_C4
+:K4_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of decisions and techniques for decision making." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K5_IS_A3.1.1_C4
+:K5_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Stages of decision making and appropriate information system tools." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K6_IS_A3.1.1_C4
+:K6_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Key IT issues, trends, and alignment of IT with business." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K7_IS_A3.1.1_C4
+:K7_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "IS strategic planning process." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K8_IS_A3.1.1_C4
+:K8_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Information and knowledge for business decision making and strategic value." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K9_IS_A3.1.1_C4
+:K9_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Decision support systems." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C4
+:KS1_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C4 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C4
+:KS2_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C4 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.1.1_C4
+:KS3_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.1.1_C4 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.1.1_C4
+:KS4_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.1.1_C4 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS5_IS_A3.1.1_C4
+:KS5_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.1.1_C4 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS6_IS_A3.1.1_C4
+:KS6_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.1.1_C4 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS7_IS_A3.1.1_C4
+:KS7_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.1.1_C4 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS8_IS_A3.1.1_C4
+:KS8_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K8_IS_A3.1.1_C4 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS9_IS_A3.1.1_C4
+:KS9_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K9_IS_A3.1.1_C4 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C4
+:LIT_IS_A3.1.1_C4 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 4" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C4_Title
+:LS_IS_A3.1.1_C4_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Recommend techniques for using information and knowledge for business decision making and strategic value" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C4_Description
+:LS_IS_A3.1.1_C4_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Recommend techniques for using information and knowledge for business decision making and strategic value" .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_5_IS2020
+:A3.1.1_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C5_Description ;
+                     :hasDisposition :Self-directed ,
+                                     :Purpose-driven ,
+                                     :Professional ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C5 ,
+                                        :KS2_IS_A3.1.1_C5 ,
+                                        :KS3_IS_A3.1.1_C5 ,
+                                        :KS4_IS_A3.1.1_C5 ,
+                                        :KS5_IS_A3.1.1_C5 ;
+                     :hasTitle :LS_IS_A3.1.1_C5_Title ;
+                     rdfs:label "Competency 5 - IS2020" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C5
+:K1_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Components of IS." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C5
+:K2_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Operations of an IS or information processing cycle (input, processing, storage, output, control)." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.1.1_C5
+:K3_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Elements of IS (data, hardware, software, communication, and processes)." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.1.1_C5
+:K4_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types and utility of IS." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K5_IS_A3.1.1_C5
+:K5_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "IS solutions and tools for different business contexts and processes." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C5
+:KS1_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C5 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C5
+:KS2_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C5 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.1.1_C5
+:KS3_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.1.1_C5 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.1.1_C5
+:KS4_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.1.1_C5 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS5_IS_A3.1.1_C5
+:KS5_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.1.1_C5 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C5
+:LIT_IS_A3.1.1_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 5" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C5_Title
+:LS_IS_A3.1.1_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C5_Description
+:LS_IS_A3.1.1_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS" .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_6_IS2020
+:A3.1.1_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C6_Description ;
+                     :hasDisposition :Purpose-driven ,
+                                     :Professional ,
+                                     :Self-directed ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C6 ,
+                                        :KS2_IS_A3.1.1_C6 ,
+                                        :KS3_IS_A3.1.1_C6 ;
+                     :hasTitle :LS_IS_A3.1.1_C6_Title ;
+                     rdfs:label "Competency 6 - IS2020" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C6
+:K1_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Business processes modelling and optimization." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C6
+:K2_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Components of an enterprise system." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.1.1_C6
+:K3_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types and functions of Enterprise systems (including ERP and BI)." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C6
+:KS1_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C6 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C6
+:KS2_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C6 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.1.1_C6
+:KS3_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.1.1_C6 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C6
+:LIT_IS_A3.1.1_C6 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 6" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C6_Title
+:LS_IS_A3.1.1_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Critique and recommend Enterprise Systems for a given business problem and processes" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C6_Description
+:LS_IS_A3.1.1_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Critique and recommend Enterprise Systems for a given business problem and processes" .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_7_IS2020
+:A3.1.1_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C7_Description ;
+                     :hasDisposition :Purpose-driven ,
+                                     :Self-directed ,
+                                     :Professional ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C7 ,
+                                        :KS2_IS_A3.1.1_C7 ,
+                                        :KS3_IS_A3.1.1_C7 ,
+                                        :KS4_IS_A3.1.1_C7 ,
+                                        :KS5_IS_A3.1.1_C7 ,
+                                        :KS6_IS_A3.1.1_C7 ,
+                                        :KS7_IS_A3.1.1_C7 ,
+                                        :KS8_IS_A3.1.1_C7 ,
+                                        :KS9_IS_A3.1.1_C7 ,
+                                        :KS10_IS_A3.1.1_C7 ;
+                     :hasTitle :LS_IS_A3.1.1_C7_Title ;
+                     rdfs:label "Competency 7 - IS2020" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C7
+:K1_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Methods for transmitting information using networks (including communication, Web 2.0 and Web 3.0 applications, IoT, crowdsourcing)." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C7
+:K2_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Methods for transmitting information using networks (including communication, Web 2.0 and Web 3.0 applications, IoT, crowdsourcing)." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.1.1_C7
+:K3_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Key components of networks." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.1.1_C7
+:K4_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of information security threats." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K5_IS_A3.1.1_C7
+:K5_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Security technologies and solutions." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K6_IS_A3.1.1_C7
+:K6_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of information privacy threats." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K7_IS_A3.1.1_C7
+:K7_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Consequences of information privacy violations." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K8_IS_A3.1.1_C7
+:K8_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Technologies and solutions for information privacy." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K9_IS_A3.1.1_C7
+:K9_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Fair information practices and privacy policies." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K10_IS_A3.1.1_C7
+:K10_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :ComputingKnowledge ;
+           rdfs:label "Government information privacy regulations." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C7
+:KS1_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C7
+:KS2_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.1.1_C7
+:KS3_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.1.1_C7
+:KS4_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS5_IS_A3.1.1_C7
+:KS5_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS6_IS_A3.1.1_C7
+:KS6_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS7_IS_A3.1.1_C7
+:KS7_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS8_IS_A3.1.1_C7
+:KS8_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K8_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS9_IS_A3.1.1_C7
+:KS9_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K9_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS10_IS_A3.1.1_C7
+:KS10_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K10_IS_A3.1.1_C7 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C7
+:LIT_IS_A3.1.1_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 7" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C7_Title
+:LS_IS_A3.1.1_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Identify techniques for transmitting and securing information in an organization" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C7_Description
+:LS_IS_A3.1.1_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Identify techniques for transmitting and securing information in an organization" .
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_8_IS2020
+:A3.1.1_Competency_8_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C8_Description ;
+                     :hasDisposition :Self-directed ,
+                                     :Purpose-driven ,
+                                     :Professional ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C8 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C8 ,
+                                        :KS2_IS_A3.1.1_C8 ,
+                                        :KS3_IS_A3.1.1_C8 ,
+                                        :KS4_IS_A3.1.1_C8 ,
+                                        :KS5_IS_A3.1.1_C8 ,
+                                        :KS6_IS_A3.1.1_C8 ,
+                                        :KS7_IS_A3.1.1_C8 ,
+                                        :KS8_IS_A3.1.1_C8 ;
+                     :hasTitle :LS_IS_A3.1.1_C8_Title ;
+                     rdfs:label "Competency 8 - IS2020" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C8
+:K1_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Methods and tools for using information." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C8
+:K2_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Buy versus build decision." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.1.1_C8
+:K3_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Outsourcing possibilities and models for IS." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K4_IS_A3.1.1_C8
+:K4_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Computational methods." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K5_IS_A3.1.1_C8
+:K5_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Software tools and computational methods." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K6_IS_A3.1.1_C8
+:K6_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Software development methodologies." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K7_IS_A3.1.1_C8
+:K7_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Systems development lifecycle." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K8_IS_A3.1.1_C8
+:K8_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Innovation and design techniques." .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C8
+:KS1_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C8 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C8
+:KS2_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C8 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.1.1_C8
+:KS3_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.1.1_C8 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS4_IS_A3.1.1_C8
+:KS4_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.1.1_C8 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS5_IS_A3.1.1_C8
+:KS5_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.1.1_C8 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS6_IS_A3.1.1_C8
+:KS6_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.1.1_C8 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS7_IS_A3.1.1_C8
+:KS7_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.1.1_C8 ;
+           :hasSkillPart :Understanding .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS8_IS_A3.1.1_C8
+:KS8_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K8_IS_A3.1.1_C8 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C8
+:LIT_IS_A3.1.1_C8 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 8" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C8_Title
+:LS_IS_A3.1.1_C8_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C8_Description
+:LS_IS_A3.1.1_C8_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change" .

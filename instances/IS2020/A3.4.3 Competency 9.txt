@@ -1,0 +1,69 @@
+### Competency 9: Utilize objects and classes for entity modeling
+:A3.4.3_Competency_9_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Object_Oriented_Paradigm ;
+                     :hasDescription :LS_IS_A3.4.3_C9_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.3_C9 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.3_C9 ,
+                                        :KS2_IS_A3.4.3_C9 ,
+                                        :KS3_IS_A3.4.3_C9 ,
+                                        :KS4_IS_A3.4.3_C9 ;
+                     :hasTitle :LS_IS_A3.4.3_C9_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Relationship between OOP implementation and UML." .
+
+:K2_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Limitations in language implementation." .
+
+:K3_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Object-Relational Mapping and data persistence." .
+
+:K4_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Reuse and Libraries." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.3_C9 ;
+           :hasSkillPart :Applying .
+
+:KS2_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.3_C9 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.3_C9 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.3_C9 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.4.3_C9_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Utilize objects and classes for entity modeling" .
+
+:LS_IS_A3.4.3_C9_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Utilize objects and classes for entity modeling by understanding the relationship between OOP implementation and UML, recognizing limitations in language implementation, applying Object-Relational Mapping and data persistence, and promoting reuse through libraries." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.3_C9 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Object-Oriented Paradigm: Competence 9" .

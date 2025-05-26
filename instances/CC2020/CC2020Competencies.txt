@@ -1,0 +1,273 @@
+:Computer_Engineering rdf:type owl:NamedIndividual ,
+                                      :CCCompetenceArea ;
+                             :hasCompetenceAreaStatement :LS_Computer_Engineering ;
+                             rdfs:label "Computer Engineering" .
+							 
+:LS_Computer_Engineering rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :lsLanguage "en" ;
+                                          :lsString "Computer Engineering Competence Area" .							 
+		   
+:CC2020_Competency_A rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Computer_Engineering ;
+                     :hasDescription :LS_CC2020_CA_Description ;
+                     :hasDisposition :Meticulous ,
+                                      :Self-directed ,
+                                      :Inventive ;
+                     :hasIdentifier :LIT_CC2020_CA ;
+                     :hasKnowledgeSkill :KS1_CC2020_CA ,
+										:KS2_CC2020_CA ,
+										:KS3_CC2020_CA ,
+										:KS4_CC2020_CA ,
+										:KS5_CC2020_CA ,
+										:KS6_CC2020_CA ,
+										:KS7_CC2020_CA;
+                     :hasTitle :LS_CC2020_CA_Title ;
+					 :hasDefinition :CC2020_CA_Definition .					 
+					 
+					 
+:CC2020_CA_Definition rdf:type owl:NamedIndividual ,
+                    :Definition ;
+			:modelSource "ACM CC2020 Competency Model";
+			:hasStatement :CC2020_CA_Definition_Statement .
+			
+:CC2020_CA_Definition_Statement	rdf:type owl:NamedIndividual ,
+                    :Statement ;
+			:statementText :CC2020_CA_Definition_Statement_Text .
+			
+:CC2020_CA_Definition_Statement_Text rdf:type owl:NamedIndividual ,
+			  :LangString ;
+			  :language "en" ;
+			  :string """Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements.""" .
+										  
+
+### Knowledge-Skill Pairs
+:KS1_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :ArchitectureAndOrganization ;
+           :hasSkillPart :Creating .
+
+:KS2_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :DigitalDesign ;
+           :hasSkillPart :Creating .
+
+:KS3_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :CircuitsAndElectronics ;
+           :hasSkillPart :Creating .
+							 
+:KS4_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Analytical_and_Critical_Thinking ;
+           :hasSkillPart :Applying .
+	
+:KS5_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Mathematics_and_Statistics ;
+           :hasSkillPart :Applying .
+:KS6_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Problem_Solving_and_Trouble_Shooting ;
+           :hasSkillPart :Applying .
+:KS7_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Research_and_Self_Starter_Learner ;
+           :hasSkillPart :Applying .
+   
+							 
+### Language Strings
+:LS_CC2020_CA_Description rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements." .
+
+:LS_CC2020_CA_Title rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "CC2020 Example A: From Computer Engineering." .
+										  
+### Long Identifier Type
+:LIT_CC2020_CA rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :catalog "ACM CC2020 Report" ;
+           :entry "Example A: From Computer Engineering" .
+		   
+		   
+		   
+		   
+
+
+
+
+:Information_Technology rdf:type owl:NamedIndividual ,
+                                      :CCCompetenceArea ;
+                             :hasCompetenceAreaStatement :LS_Information_Technology ;
+                             rdfs:label "Information Technology" .
+							 
+:LS_Information_Technology rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :lsLanguage "en" ;
+                                          :lsString "Information Technology Competence Area" .							 
+		   
+:CC2020_Competency_B rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Information_Technology ;
+                     :hasDescription :LS_CC2020_CB_Description ;
+                     :hasDisposition :Self-directed ,
+                                      :Purpose-driven ,
+                                      :Responsible ;
+                     :hasIdentifier :LIT_CC2020_CB ;
+                     :hasKnowledgeSkill :KS1_CC2020_CB ,
+										:KS2_CC2020_CB ,
+										:KS3_CC2020_CB ,
+										:KS4_CC2020_CB ,
+										:KS5_CC2020_CB ;
+                     :hasTitle :LS_CC2020_CB_Title ;
+					 :hasDefinition :CC2020_CB_Definition .					 
+					 
+					 
+:CC2020_CB_Definition rdf:type owl:NamedIndividual ,
+                    :Definition ;
+			:modelSource "ACM CC2020 Competency Model";
+			:hasStatement :CC2020_CB_Definition_Statement .
+			
+:CC2020_CB_Definition_Statement	rdf:type owl:NamedIndividual ,
+                    :Statement ;
+			:statementText :CC2020_CB_Definition_Statement_Text .
+			
+:CC2020_CB_Definition_Statement_Text rdf:type owl:NamedIndividual ,
+			  :LangString ;
+			  :language "en" ;
+			  :string """Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise.""" .
+					 
+					 
+					 
+### Knowledge-Skill Pairs
+:KS1_CC2020_CB rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :ComputerNetworks ;
+           :hasSkillPart :Analyzing .
+
+:KS2_CC2020_CB rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :PlatformTechnologies ;
+           :hasSkillPart :Analyzing .
+
+:KS3_CC2020_CB rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Analytical_and_Critical_Thinking ;
+           :hasSkillPart :Applying .
+							 
+:KS4_CC2020_CB rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Mathematics_and_Statistics ;
+           :hasSkillPart :Applying .
+							 
+:KS5_CC2020_CB rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Quality_Assurance_Control ;
+           :hasSkillPart :Applying .
+							 
+### Language Strings
+:LS_CC2020_CB_Description rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise." .
+
+:LS_CC2020_CB_Title rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "CC2020 Example B: From Information Technology." .
+										  
+### Long Identifier Type
+:LIT_CC2020_CB rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :catalog "ACM CC2020 Report" ;
+           :entry "Example B: From Information Technology" .
+
+
+
+
+
+
+:Software_Engineering rdf:type owl:NamedIndividual ,
+                                      :CCCompetenceArea ;
+                             :hasCompetenceAreaStatement :LS_Software_Engineering ;
+                             rdfs:label "Software Engineering" .
+							 
+:LS_Software_Engineering rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "Software Engineering Competence Area" .							 
+		   
+:CC2020_Competency_C rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Software_Engineering ;
+                     :hasDescription :LS_CC2020_CC_Description ;
+                     :hasDisposition :Purpose-driven ,
+                                      :Responsible ,
+                                      :Collaborative ;
+                     :hasIdentifier :LIT_CC2020_CC ;
+                     :hasKnowledgeSkill :KS1_CC2020_CC ,
+                                        :KS2_CC2020_CC ,
+                                        :KS3_CC2020_CC ,
+                                        :KS4_CC2020_CC ;
+                     :hasTitle :LS_CC2020_CC_Title ;
+					 :hasDefinition :CC2020_CC_Definition .					 
+					 
+					 
+:CC2020_CC_Definition rdf:type owl:NamedIndividual ,
+                    :Definition ;
+			:modelSource "ACM CC2020 Competency Model";
+			:hasStatement :CC2020_CC_Definition_Statement .
+			
+:CC2020_CC_Definition_Statement	rdf:type owl:NamedIndividual ,
+                    :Statement ;
+			:statementText :CC2020_CC_Definition_Statement_Text .
+			
+:CC2020_CC_Definition_Statement_Text rdf:type owl:NamedIndividual ,
+			  :LangString ;
+			  :language "en" ;
+			  :string """Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team.""" .
+					 					 
+					 
+					 
+### Knowledge-Skill Pairs
+:KS1_CC2020_CC rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :RequirementsAnalysisAndSpecifications ;
+           :hasSkillPart :Evaluating .
+
+:KS2_CC2020_CC rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Oral_Communication_and_Presentation ;
+           :hasSkillPart :Applying .
+
+:KS3_CC2020_CC rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Written_Communication ;
+           :hasSkillPart :Applying .
+
+:KS4_CC2020_CC rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :Collaboration_and_Teamwork ;
+           :hasSkillPart :Applying .
+							 
+### Language Strings
+:LS_CC2020_CC_Description rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team." .
+
+:LS_CC2020_CC_Title rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                          :language "en" ;
+                                          :string "CC2020 Example C: From Software Engineering." .
+										  
+### Long Identifier Type
+:LIT_CC2020_CC rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :catalog "ACM CC2020 Report" ;
+           :entry "Example C: From Software Engineering" .

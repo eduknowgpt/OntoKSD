@@ -1,0 +1,89 @@
+### Competency 1: Apply principles of user-Centered design (UCD)
+:A3.4.6_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :User_Interface_Design ;
+                     :hasDescription :LS_IS_A3.4.6_C1_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Professional ,
+                                     :Collaborative ;
+                     :hasIdentifier :LIT_IS_A3.4.6_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.6_C1 ,
+                                        :KS2_IS_A3.4.6_C1 ,
+                                        :KS3_IS_A3.4.6_C1 ,
+                                        :KS4_IS_A3.4.6_C1 ,
+                                        :KS5_IS_A3.4.6_C1 ,
+                                        :KS6_IS_A3.4.6_C1 ;
+                     :hasTitle :LS_IS_A3.4.6_C1_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Understanding of users, tasks, and environments." .
+
+:K2_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Gathering user feedback to define requirements and design." .
+
+:K3_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Involve user in the design process." .
+
+:K4_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Implement an iterative user design process." .
+
+:K5_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Essential elements of user centered design." .
+
+:K6_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Human capabilities that motivate them, including motor skills, attention, and human error." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+:KS6_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.4.6_C1 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.6_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply principles of user-Centered design (UCD)" .
+
+:LS_IS_A3.4.6_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply principles of user-Centered design (UCD) by understanding users, tasks, and environments, gathering user feedback to define requirements and design, involving users in the design process, implementing an iterative user design process, understanding essential elements of user centered design, and understanding human capabilities that motivate them, including motor skills, attention, and human error." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.6_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "User Interface Design: Competence 1" .

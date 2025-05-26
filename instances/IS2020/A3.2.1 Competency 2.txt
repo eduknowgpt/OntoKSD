@@ -1,0 +1,74 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.1_Competency_2_IS2020
+:A3.2.1_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_Information_Management ;
+                     :hasDescription :LS_IS_A3.2.1_C2_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :PurposeDriven ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.2.1_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.1_C2 ,
+                                        :KS2_IS_A3.2.1_C2 ,
+                                        :KS3_IS_A3.2.1_C2 ;
+                     :hasTitle :LS_IS_A3.2.1_C2_Title ;
+                     rdfs:label "A3.2.1 Competency 2 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.1_C2
+:K1_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Integrity, entity, referential and check constraints." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.1_C2
+:K2_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K3_IS_A3.2.1_C2
+:K3_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Conceptual, logical models, and physical models; Transform a conceptual model to a logical model and a logical model to a physical model." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.1_C2
+:KS1_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.1_C2 ;
+           :hasSkillPart :Applying .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.1_C2
+:KS2_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.1_C2 ;
+           :hasSkillPart :Evaluating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS3_IS_A3.2.1_C2
+:KS3_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.2.1_C2 ;
+           :hasSkillPart :Creating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.1_C2
+:LIT_IS_A3.2.1_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Management: Competence 2" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.1_C2_Title
+:LS_IS_A3.2.1_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Design relational databases" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.1_C2_Description
+:LS_IS_A3.2.1_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Design relational databases by applying integrity, entity, referential and check constraints; evaluating anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF; and creating conceptual, logical, and physical models." .

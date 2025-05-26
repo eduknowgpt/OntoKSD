@@ -1,0 +1,60 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.2.3_Competency_2_IS2020
+:A3.2.3_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Data_/_Information_Visualization ;
+                     :hasDescription :LS_IS_A3.2.3_C2_Description ;
+                     :hasDisposition :Meticulous ,
+                                     :Inventive ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.2.3_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.2.3_C2 ,
+                                        :KS2_IS_A3.2.3_C2 ;
+                     :hasTitle :LS_IS_A3.2.3_C2_Title ;
+                     rdfs:label "A3.2.3 Competency 2 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.2.3_C2
+:K1_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of data." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.2.3_C2
+:K2_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Numerical vs. Categorical." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.2.3_C2
+:KS1_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.2.3_C2 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.2.3_C2
+:KS2_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.2.3_C2 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.2.3_C2
+:LIT_IS_A3.2.3_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Data / Information Visualization: Competence 2" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C2_Title
+:LS_IS_A3.2.3_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Demonstrate effective ways of displaying numeric data, counts, and proportions" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.2.3_C2_Description
+:LS_IS_A3.2.3_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Demonstrate effective ways of displaying numeric data, counts, and proportions by analyzing types of data and the differences between numerical and categorical data." .

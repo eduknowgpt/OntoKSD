@@ -1,0 +1,49 @@
+### Competency 13: Test all developed programming code components to ensure fidelity, consistency, and fit
+:A3.4.2_Competency_13_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C13_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C13 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C13 ,
+                                        :KS2_IS_A3.4.2_C13 ;
+                     :hasTitle :LS_IS_A3.4.2_C13_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select from appropriate unit, acceptance, and integration testing strategies." .
+
+:K2_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Explain how technical debt is accrued and paid." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C13 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C13 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.2_C13_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Test all developed programming code components to ensure fidelity, consistency, and fit" .
+
+:LS_IS_A3.4.2_C13_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Test all developed programming code components by selecting from appropriate unit, acceptance, and integration testing strategies, and explaining how technical debt is accrued and paid." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C13 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 13" .

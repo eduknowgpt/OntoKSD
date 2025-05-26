@@ -1,0 +1,462 @@
+@prefix : <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:AtomicCompetency rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "AtomicCompetency"@en;
+    rdfs:comment "A singular (atomic) competency specification might address the goals for a solitary job function or curricular element constructed from a suitable competency statement and K, S, and D components."@en.
+:CompositeCompetency rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "CompositeCompetency"@en;
+    rdfs:comment "Represents competencies that are composed of multiple sub-competencies. These are higher-level competencies specifications that  may combine (aggregate) both atomic (A) and other composite (C) competencies.\n\nComposite competency specifications unfold as tree structures with branch and leaf\nnodes. \n\n"@en.
+:Disposition rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Disposition"@en;
+    rdfs:comment "Dispositions, fundamental to the competency framework, encapsulate the \"know-why\" dimension, prescribing the character or quality requisite in task performance. They shape the discernment in skillful engagement of \"know-what\" (knowledge) and \"know-how\" (skills), acting as a filter through which decisions and actions are evaluated and chosen. Specific to the task context, dispositions exert a moderating or controlling influence on a practitioner's choices, suggesting or projecting a desirable quality onto outcomes, grounded in the professional values underlying the competency.\n\nFurthermore, dispositions not only reflect the professional values behind a competency but also characterize socio-emotional tendencies, predilections, and attitudes that define the inclination to carry out tasks and the sensitivity to know when and how to engage in those tasks. These characteristics include, but are not limited to, empathy, integrity, perseverance, openness to new ideas, commitment to excellence, ethical responsibility, and the ability to work effectively in collaborative and diverse environments.\n\nThe \"know-why\" component manifests as enacted values, and due to the challenge of directly assessing values and intentions, dispositions are typically evaluated indirectly. This is achieved through the observation of behavior patterns, reflective practice, and, in some cases, through self-reflective narratives that practitioners share about their experiences, decisions, and learnings. These assessments seek evidence of critical reflection, adaptability, moral and ethical judgment, and the ability to integrate personal and professional values in a cohesive manner.\n\nFor effective disposition assessment, it's crucial to foster environments that encourage critical reflection, questioning, and ethical debate, thereby facilitating the expression of dispositions in real and simulated contexts. Assessment methods may include case study analyses, simulations, reflective portfolios, peer and self-evaluations, providing valuable insights into how individuals internalize and demonstrate their professional values in action.\n\nIn summary, dispositions are crucial for the effective and ethical application of competencies in professional settings, acting as the glue that binds knowledge and skills with the fundamental values of a profession, ensuring that actions taken are not only efficient but also ethically sound and socially responsible."@en.
+:Skill rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Skill"@en;
+    rdfs:comment "Skills embody the capability and strategy for applying \"know-what\" knowledge effectively to perform tasks within specific contexts. The realization of competency hinges on the application of \"know-what\" through action�thereby, in practice, skills manifest as \"know-how\". This transformation from knowledge to action underscores the dynamic interplay between understanding and execution, where skills serve as the conduit for translating theoretical knowledge into practical outcomes.\n\nSkill acquisition is an iterative and often non-linear process, deeply rooted in practice and experiential learning. It extends beyond mere repetition or rote execution; it involves engaging with tasks at progressively higher levels of complexity and abstraction, thereby fostering a deeper understanding and mastery over time. This developmental journey aligns with the progressive hierarchy of cognitive processes, as articulated in Bloom�s Taxonomy, which ranges from basic recall of information to complex analytical, evaluative, and creative tasks. This progression underscores the evolution from novice to expert within a domain, characterized by an increasing sophistication in thought and application.\n\nSkills development is inherently linked to reflective practice�a deliberate process where individuals critically assess their actions and decisions to glean insights and improve future performance. This reflective cycle not only enhances skill proficiency but also fosters a mindset of continuous improvement and adaptability, crucial in rapidly evolving professional landscapes.\n\nThe assessment of skills often transcends direct observation of task execution, extending into the evaluation of the process and the quality of work produced. This involves a nuanced analysis of how effectively \"know-what\" is animated by \"know-how\", integrating both dimensions of competency. Therefore, the tangible impact of any knowledge element within a competency framework becomes fully appreciable only when it is manifested through a level of skillfulness. Such assessments frequently leverage Bloom�s Taxonomy to specify or observe competencies at various cognitive levels, facilitating a structured and comprehensive evaluation of skill proficiency.\n\nMoreover, the context in which skills are applied plays a pivotal role in defining their relevance and efficacy. Skills are not static capabilities but are deeply influenced by the situational nuances and challenges of the task at hand. This adaptability and contextual sensitivity are essential attributes of a skilled practitioner, highlighting the importance of not only mastering a skill but also understanding when, where, and how it is most effectively applied.\n\nIn essence, skills are the bridge between theoretical knowledge and practical execution, embodying the strategic application of \"know-what\" in real-world scenarios. They are cultivated through a deliberate practice and reflective learning process, evaluated through a combination of direct and indirect methods, and refined in response to the demands and complexities of specific contexts. Through this lens, skill development is seen as a cornerstone of competency, enabling individuals to navigate and excel in their professional and personal endeavors with agility and insight.\n\n"@en.
+:Knowledge rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Knowledge"@en;
+    rdfs:comment "Knowledge is the \"know-what\" dimension of competency that can be understood as factual. An element of knowledge designates a core concept essential to a competency.\n\nThis dimension reflects the enumerated subject matter that teachers catalog as topics in their syllabi, departments distribute and balance among the courses they develop in anacademic program, accreditation organizations stipulate in their accreditation criteria, and employers identify in job descriptions of their workers. \n\n"@en.
+:KnowledgeSkill rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "KnowledgeSkill"@en;
+    rdfs:comment "An element of knowledge and the level of skill with which it is applied are necessarily and naturally conjoined as paired in the specification of a competency."@en.
+:ActionVerb rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "ActionVerb"@en;
+    rdfs:comment "Verbs used to describe cognitive actions based on Bloom's Revised Taxonomy."@en.
+:BloomCognitiveSkill rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "BloomCognitiveSkill"@en;
+    rdfs:comment "Levels of cognitive skills according to Bloom's Revised Taxonomy."@en.
+:Applying rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Applying"@en;
+    rdfs:comment "Apply - carrying out or using a procedure in a given situation.\n\n- Executing, carrying out: applying a procedure to a familiar task. Executing is more frequently associated with the use of skills and algorithms than with techniques and methods.\n\n- Implementing, using: adjusting a process to a new situation. In the case of implementing, then, to understand conceptual knowledge is a prerequisite to being able to apply procedural knowledge.\n"@en.
+:Analyzing rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Analyzing"@en;
+    rdfs:comment "Analyze: breaking material into its constituent parts and determining how the parts are related to one another as well as to an overall structure or purpose.\n\n- Differentiating, discriminating, distinguishing, focusing, selecting: distinguishing relevant from irrelevant parts or important from unimportant parts of presented material.\n\n- Organizing, finding coherence, integrating, outlining, parsing, structuring: determining how elements fit or function within a structure\n\n- Attributing, deconstructing: determine a point of view, bias, values, or intent underlying presented material.\n"@en.
+:Understanding rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Understanding"@en;
+    rdfs:comment "Understand: constructing the meaning of instructional messages, including oral, written, and graphic communication. Build connections between the \"new\" knowledge to be gained and their prior knowledge.\n\n- Interpreting, clarifying, paraphrasing, representing, translating: changing from one form of representation to another.\n\n- Exemplifying, illustrating, instantiating: finding a specific example or illustration of a concept or principle.\n\n- Classifying, categorizing, subsuming: determining that something belongs to a category.\n\n- Summarizing, abstracting, generalizing.\n\n- Inferring, concluding, extrapolating, interpolating, predicting: recognize some pattern in the information given.\n\n- Comparing, contrasting, mapping, matching: detecting similarities and differences between two or more objects, events, ideas, problems, or situations.\n\n- Explaining, constructing models - search for causality in that pattern, construct and use a cause-and effect model of a system (Reasoning, troubleshooting, redesigning, and predicting).\n"@en.
+:Creating rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Creating"@en;
+    rdfs:comment "Create: putting elements together to form a novel, coherent whole or to make an original product.\n\n- Generating, hypothesizing: coming up with alternative hypotheses based on criteria.\n\n- Planning, designing.\n\n- Producing, constructing: inventing a product.\n"@en.
+:Remembering rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Remembering"@en;
+    rdfs:comment "Remember - retrieve relevant knowledge from long-term memory.\n\n- Recognizing, Identifying: e.g., recognize important dates, compare informations.\n\n- Recalling, Retrieving: e.g., recall important dates.\n"@en.
+:Evaluating rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Evaluating"@en;
+    rdfs:comment "Evaluate: making judgments based on criteria and/or standards. \n\n- Checking, coordinating, detecting, monitoring, testing: internal consistency, fallacies.\n\n- Critiquing, judging: consistency with external criteria; detecting the appropriateness of a procedure for a given problem.\n"@en.
+:Competency rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Competency"@en;
+    rdfs:comment "A competency specification enumerates knowledge, skills, and dispositions that are observable in the accomplishment of a task, a task that prescribes purpose within a work context.\n\nA competence is defined as the ability to mobilize and integrate knowledge, skills, attitudes, and values in real and varied contexts to perform activities or solve problems effectively and ethically. This definition encompasses several components:\n\nKnowledge: Theoretical and practical information that an individual possesses about a specific topic or area of study.\n\nSkills: Practical and technical abilities that enable an individual to apply their knowledge in concrete situations.\n\nAttitudes and Values: Emotional and behavioral dispositions that influence how an individual behaves and interacts with others, including aspects such as ethics, responsibility, empathy, and teamwork.\n\nContext: The specific environment or situation where the competence is applied, which can range from an academic setting to a professional or everyday environment.\n\nCompetency-based education focuses on the development and assessment of these competencies in an integrated and contextualized manner, ensuring that students not only acquire theoretical knowledge but also know how to apply it practically and relevantly in real situations. This approach promotes continuous and adaptive learning, preparing individuals to face constant challenges and changes in the modern world."@en.
+:Task rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Task"@en;
+    rdfs:comment "Task is the construct that frames the skilled application of knowledge and makes dispositions concrete.\n\nTask expressed as a colloquial prose statement provides the setting to manifest dispositions, where individuals moderate their choices, actions, and effort necessary to pursue and succeed in an efficient and effective manner. In this sense, task enfolds the\npurposeful context of competency, exposing the integral nature of knowledge, skills, and dispositions.\n\nTask is a fundamental element that is directly tied to the concept of Competence. A Task is an activity or set of activities that an individual needs to perform to demonstrate a specific competency. The successful completion of tasks provides evidence that an individual possesses the necessary knowledge, skills, and dispositions (KSD) outlined in a competency statement.\n\nDetailed Description\nDefinition:\n\nA Task is a specific activity or set of activities that must be carried out to achieve a particular goal or outcome associated with a competence.\nTasks are practical and measurable actions that individuals perform to demonstrate their competency in a given area.\nRole in Competency Framework:\n\nTasks are integral to competency frameworks as they translate abstract competencies into concrete, assessable actions.\nThey provide a means to evaluate whether an individual has successfully acquired the necessary KSD elements.\nComponents of a Task:\n\nAction: The specific actions or steps that need to be taken.\nContext: The setting or situation in which the task is performed.\nCriteria: The standards or benchmarks used to assess the performance of the task.\nOutcome: The expected result or product of completing the task.\nExamples:\n\nIn a programming competency, a task might be \"Write a program in Python to sort a list of numbers using the quicksort algorithm.\"\nIn a project management competency, a task might be \"Develop a project plan including a timeline, resource allocation, and risk management strategy.\"\nStructure of Task in CC2020\nTasks in the CC2020 model are designed to ensure that competencies are not just theoretical concepts but are grounded in practical, real-world activities. This structure ensures that learners can demonstrate their abilities in meaningful and applicable ways.\n\nProse Competency Statement: Describes the task in natural language to ensure it is understandable to a broad audience.\nComponent Structure: Breaks down the task into the necessary Knowledge, Skills, and Dispositions required to complete it. This helps in the detailed assessment and provides clear guidance on what is being evaluated."@en.
+:ComputingKnowledge rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ComputingKnowledge"@en.
+:Context rdf:type owl:Class, gufo:SituationType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Situation;
+    rdfs:label "Context"@en;
+    rdfs:comment "Context refers to the situational or environmental factors that influence the application and demonstration of a competency. Contexts provide the conditions and scenarios in which competencies are exercised, making them crucial for understanding the practical and relevant application of knowledge, skills, and dispositions in real-world settings.\n\nDetailed Description\nDefinition:\n\nContext encompasses the various external factors and conditions under which a competency is applied. This includes the physical environment, the social and cultural setting, the technological infrastructure, and any specific constraints or opportunities present in the situation.\nPurpose:\n\nThe concept of Context helps to ground competencies in realistic and specific scenarios, ensuring that the competencies are not only theoretically sound but also practically applicable. By considering Context, educators and curriculum developers can design learning experiences and assessments that better reflect real-world conditions and challenges.\nComponents of Context:\n\nEnvironmental Factors: Includes the physical setting (e.g., laboratory, office, fieldwork) and resources available.\nSocial Factors: Involves the interpersonal and cultural dynamics, such as team interactions, organizational culture, and societal norms.\nTechnological Factors: Considers the tools, systems, and technologies that are relevant and available in the context.\nConstraints and Opportunities: Identifies any limitations or specific opportunities that impact how the competency is demonstrated and developed.\nRole in Competency Development:\n\nRealism: Embedding Context in competency statements ensures that competencies are realistic and applicable to real-world scenarios.\nRelevance: Contextualizing competencies makes them more relevant to learners and practitioners by aligning them with the conditions they will face in their professional lives.\nAssessment: Considering Context in assessments allows for more accurate and meaningful evaluation of a learner's ability to apply competencies in practice.\nExample of Context in Competency\nIn the CC2020 competency model, a competency might be described as follows:\n\nCompetency: \"Ability to design and implement secure software systems.\"\nContext: \"In a collaborative team environment, using current industry-standard tools and practices, with consideration for compliance with legal and ethical standards.\"\nThis description specifies not only the competency but also the context in which it should be demonstrated, including the team setting, the use of industry tools, and the importance of legal and ethical considerations."@en.
+:FoundationalProfessionalKnowledge rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "FoundationalProfessionalKnowledge"@en.
+:Actor rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Actor"@en;
+    rdfs:comment "Actor represents individuals who are capable of performing specific skills or applying knowledge in practical situations. These individuals are the primary subjects who demonstrate competencies through various tasks and assessments. The Actor class can encompass a wide range of roles, including students, employees, professionals, and other individuals involved in competence-based education or work environments."@en.
+:ProficiencyLevel rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "ProficiencyLevel"@en.
+:Assessment rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Assessment"@en;
+    rdfs:comment "Performance Assessments:\n\nDescription: These are tasks or activities designed to directly measure an individual's ability to perform specific skills or apply knowledge in practical situations. For example, a programming assignment where a student writes code to solve a problem, or a project management task where a student creates a detailed project plan.\n\nPurpose: Performance assessments provide direct evidence of how well an individual can apply their learning in real-world scenarios."@en.
+:EducationalResource rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "EducationalResource"@en.
+:Activity rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Activity"@en.
+:Attitude rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Attitude"@en.
+:CompetenceEvidence rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "CompetenceEvidence"@en.
+:CompetencyArea rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "CompetencyArea"@en.
+:ISCompetenceArea rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "ISCompetenceArea"@en.
+:CSCompetenceArea rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "CSCompetenceArea"@en.
+:CS2023Skill rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "CS2023Skill"@en.
+:Explain rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Explain"@en.
+:Apply rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Apply"@en.
+:Evaluate rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Evaluate"@en.
+:Develop rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Develop"@en.
+:LongIdentifier rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "LongIdentifier"@en;
+    rdfs:comment "This data type is an identifier (a label) that is intended to be unique among all contexts in which the identifier may be used. \n\nThe Catalog element is the name or designator of the identification or cataloging\nscheme for this entry, in other words, a namespace-scheme. \n\nThe Entry element is the value of the identifier within the identification or cataloging scheme that designates or identifies this RCD, in other words, a namespace-specific string.\n\nThe catalog and entry values may be concatenated as a single character string in an\napplication profile or binding. If the catalog and entry values are concatenated, the resulting character string shall be a globally unique identifier in the form of a URI. The identifier shall be unique across all systems that store or process the RCD. The total length of a concatenated identifier shall be no longer than 4000 characters."@en.
+:LangString rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "LangString"@en;
+    rdfs:comment "This data type consists of a language specification for a localized string and the string itself.\n\nA LangString value may include multiple, semantically equivalent, character strings, such as translations or expressions of a description in different languages. (IEEE Std 1484.20.1-2007 )\n\nExamples of localized strings: \"Information Technology\" in French and\n\"localization\" in British English:\n\t\"fr\", \"Technologies de l'information\"\n\t\"en-GB\", \"localisation\""@en.
+:Vocabulary rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Vocabulary"@en.
+:Statement rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Statement"@en;
+    rdfs:comment "Each instance of this data element is a description of a single characteristic of a Definition element. At least one Statement element is mandatory if a Definition element exists. A record of type Statement shall contain one or more of the elements defined in Statement type. None of these elements is specifically required, but at least one shall be present.\n"@en.
+:Definition rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Definition"@en;
+    rdfs:comment "This data element provides a structure for including an arbitrary collection of statements that describe a competency. The author of an RCD is free to use this data element in any way that best describes the competency."@en.
+:Metadata rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Metadata"@en;
+    rdfs:comment "This optional data element consists of embedded metadata about the RCD. This data element does not preclude the use of external metadata about the RCD. Such external metadata are not defined by RCD Standard."@en.
+:BagOfLangString rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:VariableCollection;
+    rdfs:label "BagOfLangString"@en.
+:CompositeCompetency rdfs:subClassOf :Competency.
+:Remembering rdfs:subClassOf :BloomCognitiveSkill.
+:Understanding rdfs:subClassOf :Remembering.
+:Applying rdfs:subClassOf :Understanding.
+:Analyzing rdfs:subClassOf :Applying.
+:Evaluating rdfs:subClassOf :Analyzing.
+:Creating rdfs:subClassOf :Evaluating.
+:BloomCognitiveSkill rdfs:subClassOf :Skill.
+:FoundationalProfessionalKnowledge rdfs:subClassOf :Knowledge.
+:ComputingKnowledge rdfs:subClassOf :Knowledge.
+:EducationalResource rdfs:subClassOf :Task.
+:Activity rdfs:subClassOf :Task.
+:Attitude rdfs:subClassOf :Disposition.
+:Assessment rdfs:subClassOf :CompetenceEvidence.
+:ISCompetenceArea rdfs:subClassOf :CompetencyArea.
+:CSCompetenceArea rdfs:subClassOf :CompetencyArea.
+:CS2023Skill rdfs:subClassOf :Skill.
+:Apply rdfs:subClassOf :Explain.
+:Evaluate rdfs:subClassOf :Apply.
+:Develop rdfs:subClassOf :Evaluate.
+:Explain rdfs:subClassOf :CS2023Skill.
+:AtomicCompetency rdfs:subClassOf :Competency.
+:catalog rdfs:domain :LongIdentifier;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "catalog"@en.
+:entry rdfs:domain :LongIdentifier;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "entry"@en.
+:language rdfs:domain :LangString;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "language"@en;
+    rdfs:comment "This data element shall be a character string consisting of a required language code followed by multiple, optional, hyphen-prefixed subcodes.\n\nThe following constraints apply to the language code part of the character string:\n- Two-letter codes are defined by ISO 639-1.\n- Three-letter codes are defined by ISO 639-2.\n- The value prefix \"i\" is reserved for registrations defined by the Internet Assigned Numbers Authority (IANA).\n- The value prefix \"x\" is reserved for private use.\n\nThe following constraints apply to the first subcode part of the character string:\n- Two-letter subcodes are ISO 3166-1 alpha-2 country codes.\n- Subcodes of from three to eight letters are registered with IANA.\n\nConstraints for additional subcodes are unspecified.\nThe character string shall conform to the syntax defined for a valid language code by the XML Schema derived data type language (see W3C Recommendation XML Schema, Part 2 [28 October 2004]).\n\nISO 639-2 specifies two code sets, one for bibliographic applications (ISO 639-2/B) and one for terminology applications (ISO 639-2/T). Either code set may be used."@en.
+:string rdfs:domain :LangString;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "string"@en.
+:vocabularySource rdfs:domain :Vocabulary;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "vocabularySource"@en.
+:vocabularyValue rdfs:domain :Vocabulary;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "vocabularyValue"@en.
+:statementName rdfs:domain :Statement;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "statementName"@en;
+    rdfs:comment "This conditionally mandatory data element is a name for the statement. This name shall be unique at least within the scope of the definition. \n\nExamples: \"Condition\", \"Action\", \"Standard\", \"Outcome\", and \"Criteria\". The characters in the string shall belong to the repertoire of ISO/IEC 10646."@en.
+:modelSource rdfs:domain :Definition;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "modelSource"@en;
+    rdfs:comment "This optional data element is the source of the model used for the competency definition.\n\nThe value of this data element should be sufficiently specific to avoid conflict with other source names; therefore, the value should be a Uniform Resource Identifier (URI). If the value of this data element is a URI, it may point to an actual document that defines the source formally.\n\nTypically, the models that underlie this data element define competencies in terms of \"statement, conditions, criteria,\" \"proficiency, criteria, indicators,\" \"standards, performance indicators, outcomes,\" \"abilities, basic skills, content, process,\" and similar sets of statements."@en.
+:rcdSchema rdfs:domain :Metadata;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "rcdSchema"@en;
+    rdfs:comment "This optional data element is a label for the schema that defines and controls the RCD instance. If this data element is omitted from the RCD instance, then a value of  \"ieee.org/1484.20.1/2007\" shall be assumed."@en.
+:rcdSchemaVersion rdfs:domain :Metadata;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "rcdSchemaVersion"@en;
+    rdfs:comment "This optional data element describes the version of the schema described by the RCD schema element.\nIf this element is omitted, then a value of  \"1.0\" shall be assumed."@en.
+:additionalMetadata rdfs:domain :Metadata;
+    rdfs:range :void;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "additionalMetadata"@en;
+    rdfs:comment "Zero or more instances of additional, embedded metadata that describe the RCD instance may be included in the metadata element. If additional metadata are present, the actual type of each element shall be defined by an application profile. \nAn implementation shall accept any additional metadata record, but it is not required to interpret such additional metadata records."@en.
+:dispositionName rdfs:domain :Disposition;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "dispositionName"@en.
+:skillLevel rdfs:domain :Skill;
+    rdfs:range xsd:int;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "skillLevel"@en.
+:skillDescription rdfs:domain :Skill;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "skillDescription"@en;
+    rdfs:comment "Nome atribu�do a cada n�vel da Taxonomia."@en.
+:skillName rdfs:domain :Skill;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "skillName"@en.
+:knowledgeURI rdfs:domain :Knowledge;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "knowledgeURI"@en.
+:knowledgeName rdfs:domain :Knowledge;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "knowledgeName"@en.
+:verbName rdfs:domain :ActionVerb;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "verbName"@en;
+    rdfs:comment "The name of the cognitive action verb."@en.
+:verbDescription rdfs:domain :ActionVerb;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "verbDescription"@en;
+    rdfs:comment "A description of the cognitive action verb."@en.
+:taskDescription rdfs:domain :Task;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "taskDescription"@en.
+:taskTitle rdfs:domain :Task;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "taskTitle"@en.
+:taskStatement rdfs:domain :Task;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "taskStatement"@en.
+:contextDescription rdfs:domain :Context;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "contextDescription"@en.
+:levelValue rdfs:domain :ProficiencyLevel;
+    rdfs:range xsd:int;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "levelValue"@en.
+:assessmentDate rdfs:domain :Assessment;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "assessmentDate"@en.
+:competencyAreaStatement rdfs:domain :CompetencyArea;
+    rdfs:range xsd:string;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "competencyAreaStatement"@en.
+:hasKnowledgeSkill rdf:type owl:ObjectProperty;
+    rdfs:domain :AtomicCompetency;
+    rdfs:range :KnowledgeSkill.
+:isKnowledgeSkillFor rdf:type owl:ObjectProperty;
+    rdfs:range :AtomicCompetency;
+    rdfs:domain :KnowledgeSkill;
+    rdfs:label "isKnowledgeSkillFor"@en.
+:hasTargetCompetency rdf:type owl:ObjectProperty;
+    rdfs:domain :Task;
+    rdfs:range :Competency.
+:isTargetCompetencyFor rdf:type owl:ObjectProperty;
+    rdfs:range :Task;
+    rdfs:domain :Competency;
+    rdfs:label "isTargetCompetencyFor"@en.
+:hasContext rdf:type owl:ObjectProperty;
+    rdfs:domain :Task;
+    rdfs:range :Context.
+:isContextFor rdf:type owl:ObjectProperty;
+    rdfs:range :Task;
+    rdfs:domain :Context;
+    rdfs:label "isContextFor"@en.
+:hasDisposition rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :Disposition.
+:isDispositionFor rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :Disposition;
+    rdfs:label "isDispositionFor"@en.
+:hasPrerequisiteCompetency rdf:type owl:ObjectProperty;
+    rdfs:domain :Task;
+    rdfs:range :Competency.
+:isPrerequisiteCompetencyFor rdf:type owl:ObjectProperty;
+    rdfs:range :Task;
+    rdfs:domain :Competency;
+    rdfs:label "isPrerequisiteCompetencyFor"@en.
+:isCompetencyPartOf rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :CompositeCompetency;
+    rdfs:subPropertyOf gufo:isComponentOf.
+:hasCompetencyPart rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :CompositeCompetency;
+    rdfs:label "hasCompetencyPart"@en;
+    rdfs:subPropertyOf <gufoi:hasComponent>.
+:hasActor rdf:type owl:ObjectProperty;
+    rdfs:domain :Assessment;
+    rdfs:range :Actor.
+:isActorFor rdf:type owl:ObjectProperty;
+    rdfs:range :Assessment;
+    rdfs:domain :Actor;
+    rdfs:label "isActorFor"@en.
+:hasProficiencyLevel rdf:type owl:ObjectProperty;
+    rdfs:domain :Assessment;
+    rdfs:range :ProficiencyLevel.
+:isProficiencyLefelFor rdf:type owl:ObjectProperty;
+    rdfs:range :Assessment;
+    rdfs:domain :ProficiencyLevel;
+    rdfs:label "isProficiencyLefelFor"@en.
+:isKnowledgePartOf rdf:type owl:ObjectProperty;
+    rdfs:domain :Knowledge;
+    rdfs:range :KnowledgeSkill;
+    rdfs:subPropertyOf gufo:isComponentOf.
+:hasKnowledgePart rdf:type owl:ObjectProperty;
+    rdfs:range :Knowledge;
+    rdfs:domain :KnowledgeSkill;
+    rdfs:label "hasKnowledgePart"@en;
+    rdfs:subPropertyOf <gufoi:hasComponent>.
+:isSkillPartOf rdf:type owl:ObjectProperty;
+    rdfs:domain :Skill;
+    rdfs:range :KnowledgeSkill;
+    rdfs:subPropertyOf gufo:isComponentOf.
+:hasSkillPart rdf:type owl:ObjectProperty;
+    rdfs:range :Skill;
+    rdfs:domain :KnowledgeSkill;
+    rdfs:label "hasSkillPart"@en;
+    rdfs:subPropertyOf <gufoi:hasComponent>.
+:isTaskFor rdf:type owl:ObjectProperty;
+    rdfs:domain :Task;
+    rdfs:range :Assessment.
+:hasTask rdf:type owl:ObjectProperty;
+    rdfs:range :Task;
+    rdfs:domain :Assessment;
+    rdfs:label "hasTask"@en.
+:isCompetencyAreaFor rdf:type owl:ObjectProperty;
+    rdfs:domain :CompetencyArea;
+    rdfs:range :Competency.
+:hasCompetencyArea rdf:type owl:ObjectProperty;
+    rdfs:range :CompetencyArea;
+    rdfs:domain :Competency;
+    rdfs:label "hasCompetencyArea"@en.
+:hasActionVerb rdf:type owl:ObjectProperty;
+    rdfs:domain :Skill;
+    rdfs:range :ActionVerb.
+:isActionVerbFor rdf:type owl:ObjectProperty;
+    rdfs:range :Skill;
+    rdfs:domain :ActionVerb;
+    rdfs:label "isActionVerbFor"@en.
+:hasIdentifier rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :LongIdentifier.
+:isIdentifierFor rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :LongIdentifier;
+    rdfs:label "isIdentifierFor"@en.
+:hasTitle rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :BagOfLangString.
+:isTitleFor rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :BagOfLangString;
+    rdfs:label "isTitleFor"@en.
+:hasDescription rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :BagOfLangString.
+:isDescriptionFor rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :BagOfLangString;
+    rdfs:label "isDescriptionFor"@en.
+:hasDefinition rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :Definition.
+:isDefinitionFor rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :Definition;
+    rdfs:label "isDefinitionFor"@en.
+:hasMetadata rdf:type owl:ObjectProperty;
+    rdfs:domain :Competency;
+    rdfs:range :Metadata.
+:isMetadataFor rdf:type owl:ObjectProperty;
+    rdfs:range :Competency;
+    rdfs:domain :Metadata;
+    rdfs:label "isMetadataFor"@en.
+:hasStatement rdf:type owl:ObjectProperty;
+    rdfs:domain :Definition;
+    rdfs:range :Statement.
+:isStatementFor rdf:type owl:ObjectProperty;
+    rdfs:range :Definition;
+    rdfs:domain :Statement;
+    rdfs:label "isStatementFor"@en.
+:hasStatementID rdf:type owl:ObjectProperty;
+    rdfs:domain :Statement;
+    rdfs:range :LongIdentifier.
+:isStatementIDFor rdf:type owl:ObjectProperty;
+    rdfs:range :Statement;
+    rdfs:domain :LongIdentifier;
+    rdfs:label "isStatementIDFor"@en.
+:hasStatementText rdf:type owl:ObjectProperty;
+    rdfs:domain :Statement;
+    rdfs:range :BagOfLangString.
+:iStatementTextFor rdf:type owl:ObjectProperty;
+    rdfs:range :Statement;
+    rdfs:domain :BagOfLangString;
+    rdfs:label "iStatementTextFor"@en.
+:hasStatementToken rdf:type owl:ObjectProperty;
+    rdfs:domain :Statement;
+    rdfs:range :Vocabulary.
+:isStatementTokenFor rdf:type owl:ObjectProperty;
+    rdfs:range :Statement;
+    rdfs:domain :Vocabulary;
+    rdfs:label "isStatementTokenFor"@en.
+:isBagMemberOf rdf:type owl:ObjectProperty;
+    rdfs:domain :LangString;
+    rdfs:range :BagOfLangString;
+    rdfs:subPropertyOf gufo:isCollectionMemberOf.
+:hasBagMember rdf:type owl:ObjectProperty;
+    rdfs:range :LangString;
+    rdfs:domain :BagOfLangString;
+    rdfs:label "hasBagMember"@en;
+    rdfs:subPropertyOf <gufoi:hasCollectionMember>.

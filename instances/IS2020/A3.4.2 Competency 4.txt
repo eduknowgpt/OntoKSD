@@ -1,0 +1,69 @@
+### Competency 4: Express algorithmic problem-solving using sequence, selection, and repetition structures
+:A3.4.2_Competency_4_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C4_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C4 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C4 ,
+                                        :KS2_IS_A3.4.2_C4 ,
+                                        :KS3_IS_A3.4.2_C4 ,
+                                        :KS4_IS_A3.4.2_C4 ;
+                     :hasTitle :LS_IS_A3.4.2_C4_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Statement as a unit of computing work." .
+
+:K2_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structure program progression using sequence structures." .
+
+:K3_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structure iterative program evaluation using repetition structures." .
+
+:K4_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Structure decisive program evaluation using selection structures." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C4 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C4 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.2_C4 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.4.2_C4 ;
+           :hasSkillPart :Applying .
+
+### Descriptions
+:LS_IS_A3.4.2_C4_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Express algorithmic problem-solving using sequence, selection, and repetition structures by understanding statement as a unit of computing work, structuring program progression, structuring iterative program evaluation, and structuring decisive program evaluation." .
+
+:LS_IS_A3.4.2_C4_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Express algorithmic problem-solving using sequence, selection, and repetition structures" .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C4 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 4" .

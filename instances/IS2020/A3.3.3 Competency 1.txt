@@ -1,0 +1,60 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.3.3_Competency_1_IS2020
+:A3.3.3_Competency_1_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Emerging_Technologies ;
+                     :hasDescription :LS_IS_A3.3.3_C1_Description ;
+                     :hasDisposition :Inventive ,
+                                     :PurposeDriven ,
+                                     :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.3.3_C1 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.3.3_C1 ,
+                                        :KS2_IS_A3.3.3_C1 ;
+                     :hasTitle :LS_IS_A3.3.3_C1_Title ;
+                     rdfs:label "A3.3.3 Competency 1 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.3.3_C1
+:K1_IS_A3.3.3_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Research methods and theories." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.3.3_C1
+:K2_IS_A3.3.3_C1 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Emerging technology types, features, and impact." .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.3.3_C1
+:KS1_IS_A3.3.3_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.3.3_C1 ;
+           :hasSkillPart :Analyzing .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.3.3_C1
+:KS2_IS_A3.3.3_C1 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.3.3_C1 ;
+           :hasSkillPart :Evaluating .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.3.3_C1
+:LIT_IS_A3.3.3_C1 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Emerging Technologies: Competence 1" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.3_C1_Title
+:LS_IS_A3.3.3_C1_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Research and identify a selection of current and emerging technologies" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.3.3_C1_Description
+:LS_IS_A3.3.3_C1_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Research and identify a selection of current and emerging technologies by analyzing research methods and theories, and evaluating emerging technology types, features, and impact." .

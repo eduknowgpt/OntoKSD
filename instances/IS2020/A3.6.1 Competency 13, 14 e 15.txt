@@ -1,0 +1,244 @@
+### Competency Area A3.6.1 - IS Project Management ###
+
+### Competency 13: Apply agile project management principles and methods in practice
+:A3.6.1_Competency_13_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C13_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                      :Professional ,
+                                      :Proactive ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C13 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C13 ;
+                     :hasTitle :LS_IS_A3.6.1_C13_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C13 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Agile development principles." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C13 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C13 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.6.1_C13_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply agile project management principles and methods in practice" .
+
+:LS_IS_A3.6.1_C13_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply agile project management principles and methods in practice by understanding agile development principles." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C13 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 13" .
+
+
+### Competency 14: Apply the Scrum development process
+:A3.6.1_Competency_14_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C14_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                      :Professional ,
+                                      :Proactive ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C14 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C14 ,
+                                        :KS2_IS_A3.6.1_C14 ,
+                                        :KS3_IS_A3.6.1_C14 ,
+                                        :KS4_IS_A3.6.1_C14 ,
+                                        :KS5_IS_A3.6.1_C14 ,
+                                        :KS6_IS_A3.6.1_C14 ,
+                                        :KS7_IS_A3.6.1_C14 ,
+                                        :KS8_IS_A3.6.1_C14 ,
+                                        :KS9_IS_A3.6.1_C14 ,
+                                        :KS10_IS_A3.6.1_C14 ,
+                                        :KS11_IS_A3.6.1_C14 ,
+                                        :KS12_IS_A3.6.1_C14 ,
+                                        :KS13_IS_A3.6.1_C14 ;
+                     :hasTitle :LS_IS_A3.6.1_C14_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Sprint execution." .
+
+:K2_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Daily standup." .
+
+:K3_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Sprint planning." .
+
+:K4_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Product backlog grooming." .
+
+:K5_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Writing user stories." .
+
+:K6_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "User story estimation." .
+
+:K7_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Role and responsibilities of the product owner." .
+
+:K8_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Role and responsibilities of the scrum master." .
+
+:K9_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Role and responsibilities of developers." .
+
+:K10_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Sprint review." .
+
+:K11_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Sprint retrospective." .
+
+:K12_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Product release planning." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS4_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS5_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K5_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS6_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K6_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS7_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K7_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS8_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K8_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS9_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K9_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS10_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K10_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS11_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K11_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+:KS12_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K12_IS_A3.6.1_C14 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.6.1_C14_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Apply the Scrum development process" .
+
+:LS_IS_A3.6.1_C14_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Apply the Scrum development process by understanding sprint execution, daily standup, sprint planning, product backlog grooming, writing user stories, user story estimation, role and responsibilities of the product owner, role and responsibilities of the scrum master, role and responsibilities of developers, sprint review, sprint retrospective, and product release planning." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C14 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 14" .
+
+
+### Competency 15: Select an appropriate project management methodology based on project characteristics
+:A3.6.1_Competency_15_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :IS_Project_Management ;
+                     :hasDescription :LS_IS_A3.6.1_C15_Description ;
+                     :hasDisposition :Proactive ,
+                                      :Inventive ,
+                                      :SelfDirected ;
+                     :hasIdentifier :LIT_IS_A3.6.1_C15 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.6.1_C15 ,
+                                        :KS2_IS_A3.6.1_C15 ;
+                     :hasTitle :LS_IS_A3.6.1_C15_Title .
+
+### Knowledge Elements
+:K1_IS_A3.6.1_C15 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Software development project characteristics." .
+
+:K2_IS_A3.6.1_C15 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Project Management Methodologies." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.6.1_C15 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.6.1_C15 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.6.1_C15 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.6.1_C15 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.6.1_C15_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Select an appropriate project management methodology based on project characteristics" .
+
+:LS_IS_A3.6.1_C15_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Select an appropriate project management methodology based on project characteristics by understanding software development project characteristics and project management methodologies." .
+
+### Long Identifier Type
+:LIT_IS_A3.6.1_C15 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "IS Project Management: Competence 15" .

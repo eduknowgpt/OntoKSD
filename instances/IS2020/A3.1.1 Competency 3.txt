@@ -1,0 +1,54 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#A3.1.1_Competency_3_IS2020
+:A3.1.1_Competency_3_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Foundations_of_Information_Systems ;
+                     :hasDescription :LS_IS_A3.1.1_C3_Description ;
+                     :hasDisposition :Self-directed ,
+                                     :Inventive ,
+                                     :Purpose-driven ;
+                     :hasIdentifier :LIT_IS_A3.1.1_C3 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.1.1_C3 ,
+                                        :KS2_IS_A3.1.1_C3 ;
+                     :hasTitle :LS_IS_A3.1.1_C3_Title ;
+                     rdfs:label "Competency 3 - IS2020" .
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K1_IS_A3.1.1_C3
+:K1_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Roles and responsibilities of the IS professional." .
+		
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#K2_IS_A3.1.1_C3
+:K2_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Characteristics of the IS professional." .
+		  
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS1_IS_A3.1.1_C3
+:KS1_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.1.1_C3 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#KS2_IS_A3.1.1_C3
+:KS2_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.1.1_C3 ;
+           :hasSkillPart :Applying .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LIT_IS_A3.1.1_C3
+:LIT_IS_A3.1.1_C3 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Foundations of Information Systems: Competence 3" .
+		   
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C3_Title
+:LS_IS_A3.1.1_C3_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Explain the roles, responsibilities, and characteristics of the IS professional" .			   
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_A3.1.1_C3_Description
+:LS_IS_A3.1.1_C3_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Explain the roles, responsibilities, and characteristics of the IS professional" .

@@ -1,0 +1,244 @@
+### Competency Area A3.5.4 - Business Process Management ###
+
+### Competency 4: Design a Process Architecture
+:A3.5.4_Competency_4_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Business_Process_Management ;
+                     :hasDescription :LS_IS_A3.5.4_C4_Description ;
+                     :hasDisposition :SelfDirected ,
+                                      :PurposeDriven ,
+                                      :Meticulous ;
+                     :hasIdentifier :LIT_IS_A3.5.4_C4 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.5.4_C4 ,
+                                        :KS2_IS_A3.5.4_C4 ,
+                                        :KS3_IS_A3.5.4_C4 ;
+                     :hasTitle :LS_IS_A3.5.4_C4_Title .
+
+### Knowledge Elements
+:K1_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Process Architecture and process portfolios." .
+
+:K2_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Types of processes (management, core and supporting)." .
+
+:K3_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Relationships between processes: sequence, decomposition, and specialization." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.5.4_C4 ;
+           :hasSkillPart :Creating .
+
+:KS2_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.5.4_C4 ;
+           :hasSkillPart :Creating .
+
+:KS3_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.5.4_C4 ;
+           :hasSkillPart :Creating .
+
+### Language Strings
+:LS_IS_A3.5.4_C4_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Design a Process Architecture" .
+
+:LS_IS_A3.5.4_C4_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Design a Process Architecture by creating process architecture and process portfolios, creating types of processes (management, core and supporting), and creating relationships between processes: sequence, decomposition, and specialization." .
+
+### Long Identifier Type
+:LIT_IS_A3.5.4_C4 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Business Process Management: Competence 4" .
+
+
+### Competency 5: Analyze an AS-IS business process using appropriate techniques
+:A3.5.4_Competency_5_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Business_Process_Management ;
+                     :hasDescription :LS_IS_A3.5.4_C5_Description ;
+                     :hasDisposition :SelfDirected ,
+                                      :PurposeDriven ,
+                                      :Meticulous ;
+                     :hasIdentifier :LIT_IS_A3.5.4_C5 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.5.4_C5 ,
+                                        :KS2_IS_A3.5.4_C5 ;
+                     :hasTitle :LS_IS_A3.5.4_C5_Title .
+
+### Knowledge Elements
+:K1_IS_A3.5.4_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Techniques for collecting and analyzing issues in a process." .
+
+:K2_IS_A3.5.4_C5 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Issue root cause analysis (e.g., Pareto chart) and documentation." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.5.4_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.5.4_C5 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.5.4_C5 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.5.4_C5 ;
+           :hasSkillPart :Analyzing .
+
+### Language Strings
+:LS_IS_A3.5.4_C5_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Analyze an AS-IS business process using appropriate techniques" .
+
+:LS_IS_A3.5.4_C5_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Analyze an AS-IS business process using appropriate techniques by understanding techniques for collecting and analyzing issues in a process and analyzing issue root cause analysis (e.g., Pareto chart) and documentation." .
+
+### Long Identifier Type
+:LIT_IS_A3.5.4_C5 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Business Process Management: Competence 5" .
+
+
+### Competency 6: Use process improvement methods and implement TO-BE processes by eliminating the bottlenecks, enhancing, and innovating the AS-IS process
+:A3.5.4_Competency_6_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Business_Process_Management ;
+                     :hasDescription :LS_IS_A3.5.4_C6_Description ;
+                     :hasDisposition :SelfDirected ,
+                                      :PurposeDriven ,
+                                      :Meticulous ;
+                     :hasIdentifier :LIT_IS_A3.5.4_C6 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.5.4_C6 ,
+                                        :KS2_IS_A3.5.4_C6 ,
+                                        :KS3_IS_A3.5.4_C6 ,
+                                        :KS4_IS_A3.5.4_C6 ;
+                     :hasTitle :LS_IS_A3.5.4_C6_Title .
+
+### Knowledge Elements
+:K1_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Methods for process improvement redesign and reengineering." .
+
+:K2_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Technology solutions (AI, IOT, Blockchain, etc.)." .
+
+:K3_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Cost-benefits analysis and Return on investment." .
+
+:K4_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Change management and implementation." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.5.4_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.5.4_C6 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.5.4_C6 ;
+           :hasSkillPart :Applying .
+
+:KS4_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K4_IS_A3.5.4_C6 ;
+           :hasSkillPart :Applying .
+
+### Language Strings
+:LS_IS_A3.5.4_C6_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Use process improvement methods and implement TO-BE processes by eliminating the bottlenecks, enhancing, and innovating the AS-IS process" .
+
+:LS_IS_A3.5.4_C6_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Use process improvement methods and implement TO-BE processes by eliminating the bottlenecks, enhancing, and innovating the AS-IS process by understanding methods for process improvement redesign and reengineering, understanding technology solutions (AI, IOT, Blockchain, etc.), applying cost-benefits analysis and Return on investment, and applying change management and implementation." .
+
+### Long Identifier Type
+:LIT_IS_A3.5.4_C6 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Business Process Management: Competence 6" .
+
+
+### Competency 7: Evaluate techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes
+:A3.5.4_Competency_7_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Business_Process_Management ;
+                     :hasDescription :LS_IS_A3.5.4_C7_Description ;
+                     :hasDisposition :SelfDirected ,
+                                      :Meticulous ,
+                                      :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.5.4_C7 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.5.4_C7 ,
+                                        :KS2_IS_A3.5.4_C7 ,
+                                        :KS3_IS_A3.5.4_C7 ;
+                     :hasTitle :LS_IS_A3.5.4_C7_Title .
+
+### Knowledge Elements
+:K1_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes such as business process management systems; BPM suites; BPEL, XML, and XPDL standards; SOA and Web services." .
+
+:K2_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Robotic Process Automation and tools available (e.g., UIPath Developer)." .
+
+:K3_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Performance measures." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.5.4_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS2_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.5.4_C7 ;
+           :hasSkillPart :Understanding .
+
+:KS3_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.5.4_C7 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.5.4_C7_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Evaluate techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes" .
+
+:LS_IS_A3.5.4_C7_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Evaluate techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes by understanding techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes such as business process management systems; BPM suites; BPEL, XML, and XPDL standards; SOA and Web services, understanding robotic process automation and tools available (e.g., UIPath Developer), and understanding performance measures." .
+
+### Long Identifier Type
+:LIT_IS_A3.5.4_C7 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Business Process Management: Competence 7" .

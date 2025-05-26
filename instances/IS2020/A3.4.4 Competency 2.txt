@@ -1,0 +1,59 @@
+### Competency 2: Create and analyze an algorithm for effectiveness and efficiency
+:A3.4.4_Competency_2_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Web_Development ;
+                     :hasDescription :LS_IS_A3.4.4_C2_Description ;
+                     :hasDisposition :SelfDirected ,
+                                     :PurposeDriven ,
+                                     :Meticulous ;
+                     :hasIdentifier :LIT_IS_A3.4.4_C2 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.4_C2 ,
+                                        :KS2_IS_A3.4.4_C2 ,
+                                        :KS3_IS_A3.4.4_C2 ;
+                     :hasTitle :LS_IS_A3.4.4_C2_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Algorithms and the logic that drives them." .
+
+:K2_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Solving a problem using an algorithm." .
+
+:K3_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Efficiency of an algorithm." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.4_C2 ;
+           :hasSkillPart :Creating .
+
+:KS2_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.4_C2 ;
+           :hasSkillPart :Applying .
+
+:KS3_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K3_IS_A3.4.4_C2 ;
+           :hasSkillPart :Understanding .
+
+### Language Strings
+:LS_IS_A3.4.4_C2_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Create and analyze an algorithm for effectiveness and efficiency" .
+
+:LS_IS_A3.4.4_C2_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Create and analyze an algorithm for effectiveness and efficiency by understanding algorithms and the logic that drives them, applying algorithms to solve problems, and understanding the efficiency of an algorithm." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.4_C2 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Web Development: Competence 2" .

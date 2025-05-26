@@ -1,0 +1,602 @@
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Foundations_of_Information_Systems
+:Foundations_of_Information_Systems rdf:type owl:NamedIndividual ,
+                                             :ISCompetenceArea ;
+                                    :hasCompetenceAreaStatement :LS_Foundations_of_Information_Systems_Statement ;
+                                    rdfs:comment """Competencies: Graduates will be able to:
+1. Classify the components, elements, operations, and impact of IS
+2. Interpret the dimensions, characteristics, and value of quality information.
+3. Explain the roles, responsibilities, and characteristics of the IS professional
+4. Recommend techniques for using information and knowledge for business decision
+making and strategic value
+5. Analyze a business case and critique appropriate IS solutions to common business
+problems, based on the different components, elements, types, and levels of IS
+6. Critique and recommend Enterprise Systems for a given business problem and
+processes
+7. Identify techniques for transmitting and securing information in an organization
+8. Demonstrate an ability to solve basic computational and design problems using IS
+development with appropriate methodologies, software tools and innovative
+methods for improving processes and organizational change""" ;
+                                    rdfs:label "Foundations of Information Systems" .
+									
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Foundations_of_Information_Systems_Statement
+:LS_Foundations_of_Information_Systems_Statement rdf:type owl:NamedIndividual ,
+                                                          :LangString ;
+                                                 :lsLanguage "en" ;
+                                                 :lsString """Students who meet the competencies of IS Foundations can understand the fundamental concepts of IS (including hardware, software, and information acquisition) and the support that IS provides for transactional, decisional, and collaborative business processes. They will also be able to understand the collection, processing, storage, distribution, and value of information and
+be able to make recommendations regarding IS that support and enable individuals in their daily lives as well as the management, customers, and suppliers of the enterprise. This competency includes the abilities to conduct an organizational business analysis and to assess processes and systems.""" .									
+
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Data_/_Information_Management
+:Data_/_Information_Management rdf:type owl:NamedIndividual ,
+                                           :ISCompetenceArea ;
+                                  :hasCompetenceAreaStatement :LS_Data_Information_Management_Statement ;
+                                  rdfs:comment """Competencies: Graduates will be able to:
+1. Query the relational model
+2. Design relational databases
+3. Programming database systems using functions and triggers
+4. Secure a database
+5. Compare tradeoffs of different concurrency modes
+6. Develop non-relational models""" ;
+                                  rdfs:label "Data / Information Management" .
+									
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Data_Information_Management_Statement
+:LS_Data_Information_Management_Statement rdf:type owl:NamedIndividual ,
+                                                    :LangString ;
+                                           :lsLanguage "en" ;
+                                           :lsString """We currently live in a data driven age. Data has emerged as the new oil that drives an
+organization: The successful operation of modern organizations relies on the effective use of their operational data. Database management systems (DBMS) are the engines of this data driven world.
+Data collected and used by an organization is broadly divided into two types (1) line of business data and (2) customer behavior data. Traditionally data management has focused on online business data. For example, when a ride request is made to a ride sourcing company (Uber, Lyft, etc.), what data is needed to meet that request? When a purchase is made in a grocery store what is the flow of data during that transaction? Line of business data is used to support core business processes of the organization. Alternatively, based on the purchase patterns of a shopper or the volume or location of ride requests, how can a grocery store or a ride sourcing company make their operation more effective? The answer to this question is based on customer behavior data (who bought what, when etc.). Whatever type of data it may be, many fundamental
+questions are the same: how do you gather, organize, curate, and process data to help run an organization or extract actionable information to increase effectiveness?
+The use of data involves three aspects: (1) management (2) security and (3) analytics.
+We will study tools and techniques for managing data with database systems. At the highest level we will study two questions (1) how to use a database and (2) how to build a database. For more than three decades, the relational model has been the predominant model of data management. Most of this module will focus on the classic relational model. In the past several years, driven by evolving functional and non-functional (quality) needs of an organization, alternatives to the classic relational model have emerged. We will examine illustrative samples of these popular alternatives known as non-relational or NoSQL models.""" .
+
+
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Data_/_Business_Analytics
+:Data_/_Business_Analytics rdf:type owl:NamedIndividual ,
+                                      :ISCompetenceArea ;
+                             :hasCompetenceAreaStatement :LS_Data_Business_Analytics_Statement ;
+                             rdfs:comment """Competencies: Graduates will be able to:
+1. Apply the principles of computational thinking (CT) to learning data science
+2. Analyze data science problems with a CT framework
+3. Express a business problem as a data problem
+4. Perform exploratory data analysis from inception to the value proposition
+5. Explain the core principles behind various analytics tasks such as classification,
+clustering, optimization, recommendation
+6. Articulate the nature and potential of Big Data
+7. Demonstrate the use of big data tools on real world case-studies""" ;
+                             rdfs:label "Data / Business Analytics" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Data_Business_Analytics_Statement
+:LS_Data_Business_Analytics_Statement rdf:type owl:NamedIndividual ,
+                                               :LangString ;
+                                      :lsLanguage "en" ;
+                                      :lsString """Currently we are in the midst of the next disruptive age of Information Technology. In 1945
+electronic computers appeared ushering in what one could call the first disruptive age of hardware. Starting with the mainframes of the 60s to current cloud computing we have seen various hardware instances such as minicomputers, supercomputers, personal computers, handheld computers, and wearable computers. Paralleling advances in hardware, there have been many advances in software: programming paradigms (imperative, object-oriented, functional, concurrent), development methodologies (CMM, agile), and algorithms for solving a range of problems (e.g., systems, networking, AI, machine learning, analytics). Starting around the late 1960s to the explosion of the Web in the early 90s the third disruptive age was in communication – the ability for computer systems around the world to transmit and share data. The combined advances in hardware, software, and communication form the basis of our current disruptive age of Data. Massive amounts of data (Terabytes and beyond) are available in a range of domains: science, commerce, finance, healthcare, social media, real-time sensors, etc. At historically unprecedented levels we are able to collect, transmit, curate, and process huge amounts of data at enormous speeds resulting in our ability to do ongoing tasks better and to do tasks we could not do before.
+Since early 2000 the nature of data has morphed. Big Data is differentiated from traditional data in terms of the three ‘V’s: volume, velocity, and variety, each of which raise interesting questions.
+- Volume: When we process data at the Tera and Peta byte level, what fundamental shift inour approach to solving problems occurs?
+- Velocity: Given the fast transmission and computational speeds of current systems, what new capabilities are enabled by the processing of huge amounts of data in real time?
+- Variety: Estimates are that more than 90% of the world’s data is not structured (i.e., not in classical relational databases amenable to SQL queries). What type of new actionable insights are facilitated by the processing of semi-structured (e.g., csv, JSON) and unstructured (e.g., text, images, audio) data?
+Data Science and Machine Learning: Organizations and businesses need data driven actionable insights. For example, a casino may want to identify whether there is a certain group of customers from which more business occurs – a task known as customer segmentation. A cell phone company may want to know if there is a risk of customers leaving for another carrier – a business situation known as customer churn. Analytic tasks that facilitate such actionable insights include prediction, optimization, recommendation, classification, clustering, etc.""" .
+
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Data_/_Information_Visualization
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Data_/_Information_Visualization> rdf:type owl:NamedIndividual ,
+                                              :ISCompetenceArea ;
+                                     :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Data_Information_Visualization_Statement> ;
+                                     rdfs:comment """Competencies: Graduates will be able to:
+1. Explain the fundamentals of human perception and vision
+2. Demonstrate effective ways of displaying numeric data, counts, and proportions
+3. Present information in an understandable, efficient, effective, and aesthetic manner,
+for the purposes of explaining ideas and analyzing data
+4. Use a tool such as R (or Python) to perform basic data manipulation such as filtering,
+aggregating, and organizing data sets
+5. Produce graphics using a visualization tool
+6. Develop transformations and model to fit, explore, check assumptions about data
+7. Express the story of the data in a compelling narrative""" ;
+                                     rdfs:label "Data / Information Visualization" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Data_Information_Visualization_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Data_Information_Visualization_Statement> rdf:type owl:NamedIndividual ,
+                                                      :LangString ;
+                                             :lsLanguage "en" ;
+                                             :lsString """Turing award recipient Richard Hamming commented "The purpose of computing is insight, not
+numbers" (1962). The goal of information visualization is the unveiling of the underlying structure of large or abstract data sets using visual representations that utilize the powerful processing capabilities of the human visual perceptual system. The Data and Information Visualization competency area contains competencies pertaining to computational approaches for gaining insight via visualizations. Competencies in this area emphasize the fundamentals of statistical exploration of data, fitting models to produce specialized graphs to support the exploration of data in a detailed and statistics-oriented manner, and the use of data visualization tools such as Excel, Python, R, and Tableau.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IT_Infrastructure
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IT_Infrastructure> rdf:type owl:NamedIndividual ,
+                              :ISCompetenceArea ;
+                     :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IT_Infrastructure_Statement> ;
+                     rdfs:comment """Competencies: Graduates will be able to:
+1. Explain key infrastructure concepts, including how it functions, how to define critical
+functions, and how to plan and manage infrastructure
+2. Explain the principles of layered network architectures
+3. Explain the components of IT infrastructure solutions from client/server, network
+hardware, (including wireless and wired)
+4. Explain the principles of network software and configuration
+5. Explain network protocols and their configuration
+6. Illustrate a clear understanding of security principles as they pertain to networks
+7. Examine and critique IT infrastructure for organizations
+8. Examine and critique IT server architecture (both physical or cloud-based)
+9. Explain concepts of Enterprise Architecture""" ;
+                     rdfs:label "IT Infrastructure" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IT_Infrastructure_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IT_Infrastructure_Statement> rdf:type owl:NamedIndividual ,
+                                          :LangString ;
+                                 :lsLanguage "en" ;
+                                 :lsString """This area covers all aspects of information technology infrastructure, as it is used in the organization. IT infrastructure includes the design and development of suitable architectures or
+servers, physical and cloud services, capacity planning, and networking. The content covers the installation, configuration, maintenance, and management of all aspects of technology from the server through to the organization’s network.""" .
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Secure_Computing
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Secure_Computing> rdf:type owl:NamedIndividual ,
+                            :ISCompetenceArea ;
+                   :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Secure_Computing_Statement> ;
+                   rdfs:comment """Competencies: Graduates will be able to:
+1. Explain the purpose of cryptography and how it can be used in data communications
+2. Describe the concepts of authentication, authorization, access control, and data integrity
+and how it helps to enhance data security
+3. Explain the security requirements that are important during software design
+4. Analyze the concepts of identification, authentication, and access authorization in the
+context of protecting people and devices
+5. Analyze the importance of social media privacy and security
+6. Illustrate how cyberattacks work, how to avoid them and how to counteract their
+malicious consequences
+7. Describe risk management techniques to identify and prioritize risk factors for
+information assets and how risk is assessed
+8. Illustrate the types of security laws, regulations, and standards within which an
+organization operates""" ;
+                   rdfs:label "Secure Computing" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Secure_Computing_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Secure_Computing_Statement> rdf:type owl:NamedIndividual ,
+                                         :LangString ;
+                                :lsLanguage "en" ;
+                                :lsString """This competency area is concerned with practices associated with assuring secure business
+operations in the context of adversaries. Assuring secure operations involves the creation, operation, defense, analysis, and testing of secure computer systems. Hence secure computing is an interdisciplinary area including aspects of computing, law, policy, human factors, ethics, and risk management. The proposed competencies cover these areas, but with an IS discipline lens.
+This includes data security, software security, human security, societal security, and organization security.""" .
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Emerging_Technologies
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Emerging_Technologies> rdf:type owl:NamedIndividual ,
+                                :ISCompetenceArea ;
+                       :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Emerging_Technologies_Statement> ;
+                       rdfs:comment """Competencies: Graduates will be able to:
+1. Research and identify a selection of current and emerging technologies
+2. Evaluate technologies based on a range of business requirements
+3. Make recommendations about the usage of technologies
+4. Investigate technologies through a theoretical lens
+5. Evaluate technologies from an ethical and sustainability perspective
+6. Identify the impact of technologies on society and business
+7. Practically design and apply technologies to a business problem
+8. Apply emerging technologies in a teamwork scenario""" ;
+                       rdfs:label "Emerging Technologies" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Emerging_Technologies_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Emerging_Technologies_Statement> rdf:type owl:NamedIndividual ,
+                                             :LangString ;
+                                    :lsLanguage "en" ;
+                                    :lsString """Examines emerging technologies and explores their impact on
+business and societal issues through both a business and theoretical lens. Identifies and evaluates a range of technologies based on a range of business requirements that have a variety of ethical, environmental, and sustainability perspectives. Practically applies these technologies to enable suitable business opportunities.""" .
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Systems_Analysis_and_Design
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Systems_Analysis_and_Design> rdf:type owl:NamedIndividual ,
+                                      :ISCompetenceArea ;
+                             :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Systems_Analysis_and_Design_Statement> ;
+                             rdfs:comment """Competencies: Graduates will be able to:
+1. Explain what systems are and how they are developed
+2. Demonstrate the SDLC phases and activities
+3. Identify SDLC Models (Agile, Waterfall, V-shaped, iterative, spiral, etc.)
+4. Work effectively in a team environment
+5. Describe data modeling techniques
+6. Describe the role and responsibilities of the participants in the SDLC
+7. Explain the common ways projects fail and how to avoid these failures
+8. Identify Enterprise Architecture concepts related to SDLC phases""" ;
+                             rdfs:label "Systems Analysis and Design" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Systems_Analysis_and_Design_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Systems_Analysis_and_Design_Statement> rdf:type owl:NamedIndividual ,
+                                                   :LangString ;
+                                          :lsLanguage "en" ;
+                                          :lsString """Examines various systems development methodologies and modeling tools with an emphasis on
+object-oriented systems development methods, software development life cycle (SDLC), and agile software development while emphasizing analytical techniques to develop the correct definition of business problems and user requirements. Topics should also include design, project management standards, information gathering, effective communication and interpersonal skill development.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Application_Development_and_Programming
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Application_Development_and_Programming> rdf:type owl:NamedIndividual ,
+                                                     :ISCompetenceArea ;
+                                            :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Application_Development_and_Programming_Statement> ;
+                                            rdfs:comment """Competencies: Graduates will be able to:
+Programming-Related Competencies
+1. Develop data storage strategies using primitive data types in a computer’s volatile
+memory
+2. Apply data transformations using arithmetic, assignment, and transpositional
+operators
+3. Develop predicate expressions using relational and logical operators
+4. Express algorithmic problem-solving using sequence, selection, and repetition
+structures
+5. Modularize the algorithmic and operating capabilities of a program using functions,
+methods, subroutines, or similar organizing structures.
+6. Select and utilize appropriate linear and non-linear data structures to maintain and
+manage sets of related data in non-volatile memory.
+7. Utilize Object-Oriented concepts in the organization and structuring of programs for
+behavior and concept management
+Application Development Related Competencies
+8. Conduct a systematic requirements analysis to determine the basic facts used to
+organize the application of programming effort to solve a problem or reach a goal
+9. Formalize and communicate requirements in a manner that is comprehensible for all
+stakeholders that will determine the success of the software system
+10. Specify the software system architecture such that the principal components and
+dependencies of the system are visible and comprehensible for all involved in
+shaping the materials of design and construction
+11. Identify the lateral components and libraries that the designed and developed system
+will depend on
+12. Develop the programming code implementation that realizes the system architecture
+and design.
+13. Test all developed programming code components to ensure fidelity, consistency,
+and fit.
+14. Maintain software throughout deployment and utilization such that extant or new
+intentions and requirements are accommodated such that the intended purpose will
+function.
+15. Adopt, or adapt, an appropriate software systems process methodology such that
+people, resources, design requirements and other dynamic considerations allow for
+correctness and utility.
+16. Establish and maintain the appropriate dialog among stakeholders that ensure a
+degree of communication and information transparency to maintain the viability of the
+software system""" ;
+                                            rdfs:label "Application Development and Programming" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Application_Development_and_Programming_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Application_Development_and_Programming_Statement> rdf:type owl:NamedIndividual ,
+                                                                :LangString ;
+                                                       :lsLanguage "en" ;
+                                                       :lsString """A key function of any information system is an ability to transform data into information in support
+of organizational or personal goals. The software that developed in parallel to operate computer hardware has evolved to extend the utility of computation has evolved into myriad applications that are both pervasive and ubiquitous in everyday life. Thus, the principal importance of this facet of the IS curriculum is twofold.
+1. Programming is the language of computation and logic that sequences and orders
+instructions to computing hardware in a manner that realizes both correct results and
+discernable results. Logical structures, algorithms, arithmetic facilities, and the ability to input, store, transform, and output data that can be purposefully used to inform decisions and automated intentional processes are at the heart of learning to program. To program a computer is to meet the computer “in the middle” such that the growing capabilities of data and computing can be purposefully guided. Programming is meant to shape the mind and reasoning such that human requirements for data and computing outcomes can be expressed and perfected.
+2. Application Development is the purposeful application of programming fundamentals to craft usable and useful software artifacts and systems to solve actionable business and organizational problems where the power and automation of computing and data processing is warranted. Elements of design, to include reconciliation between human social systems and data and information systems, support a software/systems development life cycle where the industry and craft software realization extend capabilities of software and programming code elements and our understanding of fit and resonance with the human end-users of these systems. In this regard, an information systems perspective on application development, although akin to software engineering, includes the necessary elements of human-computer interaction, user experience, and other sociological and psychological components that constitute user and organizational acceptance and satisfaction.""" .
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Object_Oriented_Paradigm
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Object_Oriented_Paradigm> rdf:type owl:NamedIndividual ,
+                                    :ISCompetenceArea ;
+                           :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Object_Oriented_Paradigm_Statement> ;
+                           rdfs:comment """Competencies: Graduates will be able to:
+1. Apply fundamental elements of objects and classes
+2. Utilize instantiation modalities
+3. Utilize intra-entity communication and messaging
+4. Design for encapsulation
+5. Design for inheritance and dependency management
+6. Design for abstraction
+7. Apply polymorphism
+8. Utilize design patterns
+9. Utilize objects and classes for entity modeling""" ;
+                           rdfs:label "Object-Oriented Paradigm" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Object_Oriented_Paradigm_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Object_Oriented_Paradigm_Statement> rdf:type owl:NamedIndividual ,
+                                                 :LangString ;
+                                        :lsLanguage "en" ;
+                                        :lsString """Most software implementations extend beyond simple utilization of programming constructs and
+move toward the utilization of modular components often built against paradigmatic best practices for extensible and manageable construction. Programming paradigms are often idiomatic and construe epistemological values about the structuring of applications, reusable code libraries and patterns that lead to architectural decisions. Object-Orientation is a paradigmatic perspective on how to organize data and routines into libraries of reusable code centered on organization of data and routines into containers called classes (for specification) and objects (for instantiation). The set of behavioral provisions inherent in these structures that specify how groups and hierarchies of these entities interact forms the basis of Object-Orientation that pervades most accepted architectural patterns for software and systems development. Thus, Object-Orientation, although intrinsic to contemporary programming languages, also serves as a foundation for problem domain modeling that extends beyond applications in programming. Thus, much of this material will also be contained in most systems analysis and design courses. As such, the focus here is on manifested applications that extend from design to implementation whereas systems analysis and design stops short, in most cases, of implementation.""" .
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Web_Development
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Web_Development> rdf:type owl:NamedIndividual ,
+                          :ISCompetenceArea ;
+                 :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Web_Development_Statement> ;
+                 rdfs:comment """Competencies: Graduates will be able to:
+1. Demonstrate an operational understanding of the protocols that enable the Internet
+2. Create and analyze an algorithm for effectiveness and efficiency.
+3. Implement good documentation practices in programming
+4. Demonstrate teamwork, interpersonal group skills, and team software development
+5. Demonstrate skills in client-side (Front-end) web application development
+technologies including HTML, CSS, JavaScript, and JavaScript libraries
+6. Demonstrate skills in server-side (back-end) web application development
+technologies using a back-end programming language (i.e., Node/Express,
+Python/Django, etc.)
+7. Create a functioning web application suitable for portfolio presentation including
+but not limited to skills shown using front-end, back-end, SQL, and current web
+development tools
+8. Explain the different internet design patterns (i.e., MVC, MVVM, etc.) and ability to
+know advantages and disadvantages of each
+9. Analyze and explain the different design layouts and pros and cons of each
+10. Implement security measures for a website
+11. Debug syntactical and logical errors
+12. Explain the Internet Copyright laws
+13. Deploy a website to a host server""" ;
+                 rdfs:label "Web Development" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Web_Development_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Web_Development_Statement> rdf:type owl:NamedIndividual ,
+                                        :LangString ;
+                               :lsLanguage "en" ;
+                               :lsString """Students will understand the concepts of web application design and programming by learning
+the tools used to create client-side and server-side programs. A web site will be designed and
+implemented using current standards and best practices.""" .
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Mobile_Development
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Mobile_Development> rdf:type owl:NamedIndividual ,
+                             :ISCompetenceArea ;
+                    :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Mobile_Development_Statement> ;
+                    rdfs:comment """Competencies: Graduates will be able to:
+1. Describe the Internet of Things (IoT) enabled devices and the mobile industry
+2. Create and analyze an algorithm for effectiveness and efficiency
+3. Implement good documentation practices in programming
+4. Demonstrate teamwork, interpersonal group skills, and team software development
+5. Utilize a contemporary mobile application development framework
+6. Create a functioning mobile application suitable for portfolio presentation including
+but not limited to skills shown using database management, hardware interaction,
+APIs, cross platform development and current mobile development tools
+7. Describe and distinguish different mobile development platforms
+8. Demonstrate mobile user interface design and the user experience
+9. Implement cyber security measures for a mobile application
+10. Explain memory allocation and management
+11. Debug syntactical and logical errors
+12. Explain the importance of Copyright laws
+13. Market and publish a mobile application""" ;
+                    rdfs:label "Mobile Development" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Mobile_Development_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Mobile_Development_Statement> rdf:type owl:NamedIndividual ,
+                                         :LangString ;
+                                :lsLanguage "en" ;
+                                :lsString """Understand the features and upcoming trends of the common mobile platforms to develop a
+mobile application that uses a web services backend to synchronize and centrally store user data.
+Topics include but not limited to human interface guidelines for mobile development, tools required for mobile application development, different mobile platforms.""" .
+
+
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#User_Interface_Design
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#User_Interface_Design> rdf:type owl:NamedIndividual ,
+                                 :ISCompetenceArea ;
+                        :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_User_Interface_Design_Statement> ;
+                        rdfs:comment """Competencies: Graduates will be able to:
+1. Apply principles of user-centered design (UCD)
+2. Apply user-system interaction principles
+3. Design and create effective user-centered user interaction with an application
+4. Identify and evaluate attributes of effective UX
+5. Evaluate the influence user centered design has on user experience (UX)""" ;
+                        rdfs:label "User Interface Design" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_User_Interface_Design_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_User_Interface_Design_Statement> rdf:type owl:NamedIndividual ,
+                                            :LangString ;
+                                   :lsLanguage "en" ;
+                                   :lsString """Students will understand the concepts of user interface design principles by examining user
+experience (UX) and usability. Topics include design considerations such as: psychological and interaction principles, requirements analysis, designing for different screens, typography, symbols, color, graphics, and other visual language components. Students will learn to identify needs, experience, and capabilities of the system users along with understanding physical and mental limitations.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Ethics_Sustainability_Use_and_Implications_for_Society
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Ethics_Sustainability_Use_and_Implications_for_Society> rdf:type owl:NamedIndividual ,
+                                                             :ISCompetenceArea ;
+                                                    :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Ethics_Sustainability_Use_and_Implications_for_Society_Statement> ;
+                                                    rdfs:comment """Competencies: Graduates will be able to:
+1. Demonstrate ethical behavior during data collection
+2. Identify the moral issues that surround the storage and usage of data
+3. Examine ethical philosophies and their practical application
+4. Evaluate ethical codes of practice and their implications for society
+5. Identify aspects of sustainability and adaptive systems and data
+6. Categorize ethical stakeholders and their importance to Information Systems
+7. Investigate sustainable processes, actions, and performance to support organizations
+8. Investigate sustainable processes, actions, and performance to support the individual
+9. Investigate sustainable processes, actions, and performance to support society at large""" ;
+                                                    rdfs:label "IS Ethics, Sustainability, Use and Implications for Society" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Ethics_Sustainability_Use_and_Implications_for_Society_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Ethics_Sustainability_Use_and_Implications_for_Society_Statement> rdf:type owl:NamedIndividual ,
+                                                                         :LangString ;
+                                                                :lsLanguage "en" ;
+                                                                :lsString """The IS ethics, sustainability, use, and implications for society competency area is concerned with
+practices associated with the ethical use of information systems and the ethical use of the information and data captured by such systems; designing, implementing, and using computing resources in a sustainable environmentally conscious manner; and competencies associated with how information systems may be used and created for the benefit of society.
+1. Ethics, within the IS ecosystem, reflects agreed moral codes of practices and control associated with the use of information systems through the: collection of data, the creation and storage of data, and the sharing of data’s information. As such ethical codes that govern both the use or dissemination of data must apply to both the information systems and the society in which it exists. The information system practitioner must be cognizant of these ethical codes and its implications for society. Students will explore and understand the societal implications of disseminating information.
+2. IS sustainability reflects an imperative that such systems and their data sources must be adaptable, relevant to all stakeholders, and support the maintenance of data captured by such systems – through its design, implementation, and use of computing resources. Such data is constantly transformed through sustainable process, actions, and performance to support the organization, individual, and society at large.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Management_and_Strategy
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Management_and_Strategy> rdf:type owl:NamedIndividual ,
+                                      :ISCompetenceArea ;
+                             :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Management_and_Strategy_Statement> ;
+                             rdfs:comment """Competencies: Graduates will be able to:
+1. Apply professional managerial skills to design and manage an effective IS
+organization
+2. Ensure operational efficiency and effectiveness in service delivery of organizational
+information
+3. Manage the information resources in coordination with line management
+4. Create and manage the oversight mechanisms by which an organization
+evaluates, directs, and monitors organizational information technology - managing
+decision rights and organizational information technology decision-making
+practices
+5. Implement strategic plans that have been created for the delivery and use of
+organizational information systems
+6. Ensure organizational information systems comply with policies, applicable laws
+and regulations
+7. Manage organizational risk and develop risk mitigation plans
+8. Create IT procurement policies and understand and negotiate IT contracts
+9. Develop plans for workforce development, training, talent acquisition, and
+employee retention
+10. Apply leading service management frameworks, such as ITIL and CMMI
+11. Identify commonly used governance frameworks, such as COBIT and TOGAF, to
+align information systems with organizational requirements""" ;
+                             rdfs:label "IS Management and Strategy" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Management_and_Strategy_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Management_and_Strategy_Statement> rdf:type owl:NamedIndividual ,
+                                                   :LangString ;
+                                          :lsLanguage "en" ;
+                                          :lsString """IS Management competencies cover the capability to develop, maintain, and consistently improve
+the systems necessary to deliver the information necessary for an organization. The capability focuses on creating value for an organization and on the IS staff motivation, performance, and accountability. IS Strategy emphasizes the competency to create long-term plans for implementing and using organizational information systems to achieve strategic organizational goals and objectives. This area also covers monitoring and controlling organizational IS resources to ensure alignment with and achievement of strategies, goals, and objectives. [MSIS2016]""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Digital_Innovation
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Digital_Innovation> rdf:type owl:NamedIndividual ,
+                            :ISCompetenceArea ;
+                   :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Digital_Innovation_Statement> ;
+                   rdfs:comment """Competencies: Graduates will be able to:
+1. Articulate and critically reflect on the unique features that an application of
+emerging technology may offer
+2. Demonstrate knowledge of the role of digital business technologies in social and
+mobile domains
+3. Identify and critique characteristics necessary for digital innovation
+4. Identify and validate an opportunity to develop a new digital business model
+5. Identify and evaluate key issues related to implementation and infrastructure
+issues
+6. Identify and assemble the required resources, processes, and partners to bring a
+digital business model to fruition
+7. Practically demonstrate the investigation and application of a new innovation""" ;
+                   rdfs:label "Digital Innovation" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Digital_Innovation_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Digital_Innovation_Statement> rdf:type owl:NamedIndividual ,
+                                         :LangString ;
+                                :lsLanguage "en" ;
+                                :lsString """Digital Innovation area focuses on competences needed in the deployment of information
+technologies to innovate and transform organizational processes and value offerings (products and services). To participate in such innovation processes, graduates need competences related to how digital innovations are being created, distributed, and commercialized. This requires understanding of both theoretical and practical aspects of emerging and existing digital innovation, their potential impact, disruption, and transformation on business and society. It is advised that for building such competences, practical hands-on application and theoretical business modeling is used. The practical implications of digital innovation and entrepreneurship focus on the practices for digital innovation creation, distribution, and commercialization as well as the necessary digital strategies for management.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Business_Process_Management
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#Business_Process_Management> rdf:type owl:NamedIndividual ,
+                                      :ISCompetenceArea ;
+                             :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Business_Process_Management_Statement> ;
+                             rdfs:comment """Competencies: Graduates will be able to:
+1. Explain the characteristics of a process and the different perspectives of a process
+model
+2. Use a BPM tool to design and implement business process models
+3. Choose appropriate process discovery techniques for different business scenarios
+4. Design a Process Architecture
+5. Analyze an AS-IS business process using appropriate techniques
+6. Use process improvement methods and implement TO-BE processes by
+eliminating the bottlenecks, enhancing, and innovating the AS-IS process
+7. Evaluate techniques and tools that support the planning, design, analysis,
+operation, and monitoring of business processes""" ;
+                             rdfs:label "Business Process Management" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Business_Process_Management_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_Business_Process_Management_Statement> rdf:type owl:NamedIndividual ,
+                                                   :LangString ;
+                                          :lsLanguage "en" ;
+                                          :lsString """Process modelling is a foundational skill required to be able to implement a complete Business
+Process Management capability in an organization. The competencies include being able to establish a sound theoretical basis of state-of-the-art theories in the field of Business Process Modelling (BPM) and to discover and practice the techniques and best practices in the field of BPM.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Project_Management
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Project_Management> rdf:type owl:NamedIndividual ,
+                                :ISCompetenceArea ;
+                       :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Project_Management_Statement> ;
+                       rdfs:comment """Competencies: Graduates will be able to:
+1. Explain basic project management concepts and terms
+2. Use integration management tools, techniques, and processes
+3. Use scope management tools, techniques, and processes
+4. Develop estimates and time tracking using appropriate tools, techniques, and
+processes
+5. Develop estimates and cost tracking using appropriate tools, techniques, and
+processes
+6. Utilize the change control process to maintain and control quality
+7. Implement human resource management tools, techniques, and processes
+8. Define and implement a communication management plan
+9. Predict and manage project risk through the use of tools, techniques, and
+processes
+10. Define and explain procurement management
+11. Identify and manage stakeholders within the phases of a project
+12. Utilize tools, techniques, and processes to manage project performance
+13. Apply agile project management principles and methods in practice
+14. Apply the Scrum development process
+15. Select an appropriate project management methodology based on project
+characteristics""" ;
+                       rdfs:label "IS Project Management" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Project_Management_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Project_Management_Statement> rdf:type owl:NamedIndividual ,
+                                            :LangString ;
+                                   :lsLanguage "en" ;
+                                   :lsString """Provide an understanding of the concepts of project management
+and appropriate project management techniques in dealing with IS management. Topics include principles of project management; project management functions, project management processes, selecting an appropriate project management methodology, agile software development principles, and scrum. Emphasis is placed on understanding and gaining practical knowledge of key project management skills: integration management, scope management, time management, cost management, quality management, human resource management, communications management, and risk management. Emphasis is also placed on understanding the scrum process and decision criteria for choosing between planned and agile project management approaches.
+Students should also learn the tools, techniques, and processes to manage project performance along with moving from one phase to another until the closure of the project.""" .
+
+
+
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Practicum
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#IS_Practicum> rdf:type owl:NamedIndividual ,
+                       :ISCompetenceArea ;
+              :hasCompetenceAreaStatement <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Practicum_Statement> ;
+              rdfs:comment """Competencies: Graduates will be able to:
+1. Apply the SDLC
+2. Utilize a systems/software development methodology
+3. Utilize tools for software process management
+4. Utilize tools for code and resource version control
+5. Utilize tools for team collaboration and communication
+6. Utilize tools for client collaboration and communication
+7. Utilize tools for testing (unit, integration, acceptance)
+8. Align and utilize UML, ERD, and Class/Object Design
+9. Apply Object-Oriented principles in system/software design and implementation
+10. Utilize Object-Relational Mapping tools
+11. Apply principles of systems delivery and maintenance
+12. Utilize upfront design for system security""" ;
+              rdfs:label "IS Practicum" .
+
+###  http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Practicum_Statement
+<http://www.semanticweb.org/edeyson/ontologies/2024/CCO#LS_IS_Practicum_Statement> rdf:type owl:NamedIndividual ,
+                                   :LangString ;
+                          :lsLanguage "en" ;
+                          :lsString """An applied synthesis of foundational courses related to
+exercising design and applying one or more media of construction to effect and implement an Information Systems artifact to suit client or organizational needs. Emphasis on the application of data management, application development, IT infrastructure, and IT Project Management.
+Students work in teams and apply a software/systems development paradigm toward the
+development of a system prototype to satisfy the intentions and needs of an organizational client. Client interaction, often best facilitated via the use of Agile software methods, must be sustained and ongoing such that emergence in design and development can be experienced.""" .
+
+
+
+
+

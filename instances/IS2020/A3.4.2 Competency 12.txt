@@ -1,0 +1,49 @@
+### Competency 12: Develop the programming code implementation that realizes the system architecture and design
+:A3.4.2_Competency_12_IS2020 rdf:type owl:NamedIndividual ,
+                              :AtomicCompetence ;
+                     :hasCompetenceArea :Application_Development_and_Programming ;
+                     :hasDescription :LS_IS_A3.4.2_C12_Description ;
+                     :hasDisposition :PurposeDriven ,
+                                     :Meticulous ,
+                                     :Inventive ;
+                     :hasIdentifier :LIT_IS_A3.4.2_C12 ;
+                     :hasKnowledgeSkill :KS1_IS_A3.4.2_C12 ,
+                                        :KS2_IS_A3.4.2_C12 ;
+                     :hasTitle :LS_IS_A3.4.2_C12_Title .
+
+### Knowledge Elements
+:K1_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Select, develop, and utilize appropriate application programming interfaces." .
+
+:K2_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                   :ComputingKnowledge ;
+          rdfs:label "Maintain code integrity using source code management." .
+
+### Knowledge-Skill Pairs
+:KS1_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K1_IS_A3.4.2_C12 ;
+           :hasSkillPart :Analyzing .
+
+:KS2_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                    :KnowledgeSkill ;
+           :hasKnowledgePart :K2_IS_A3.4.2_C12 ;
+           :hasSkillPart :Evaluating .
+
+### Language Strings
+:LS_IS_A3.4.2_C12_Title rdf:type owl:NamedIndividual ,
+                         :LangString ;
+                :lsLanguage "en" ;
+                :lsString "Develop the programming code implementation that realizes the system architecture and design" .
+
+:LS_IS_A3.4.2_C12_Description rdf:type owl:NamedIndividual ,
+                               :LangString ;
+                      :lsLanguage "en" ;
+                      :lsString "Develop the programming code implementation by selecting, developing, and utilizing appropriate application programming interfaces, and maintaining code integrity using source code management." .
+
+### Long Identifier Type
+:LIT_IS_A3.4.2_C12 rdf:type owl:NamedIndividual ,
+                    :LongIdentifierType ;
+           :litCatalog "ACM IS2020 Report" ;
+           :litEntry "Application Development and Programming: Competence 12" .
