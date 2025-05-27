@@ -1,0 +1,18 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix onto: <http://example.org/ontoksd#> .
+@prefix : <http://example.org/ontoksd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+:technical  rdf:type :KnowledgeType ;
+    rdfs:label "Technical Knowledge"@en .
+
+:foundationalAndProfessional rdf:type :KnowledgeType ;
+    rdfs:label "Foundational and Professional Knowledge"@en ;
+	rdfs:comment "Computing professionals are commonly expected to demonstrate high levels of skill in applying this knowledge which deserves explicit attention in baccalaureate programs." @en.
+
+
+:domain rdf:type :KnowledgeType ;
+    rdfs:label "Domais Knowledge"@en .
+

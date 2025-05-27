@@ -1,0 +1,85 @@
+@prefix cc2020: <http://purl.org/cc2020/foundational#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+cc2020:AnalyticalThinking a skos:Concept ;
+    skos:definition "A mental process of simplifying complex information into basic parts and evaluating results to make proper decisions"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "AnalyticalThinking" ;
+    skos:prefLabel "Analytical and Critical Thinking"@en .
+
+cc2020:Collaboration a skos:Concept ;
+    skos:definition "Apportion challenging tasks into simpler ones and then work together to complete them efficiently"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "Collaboration" ;
+    skos:prefLabel "Collaboration and Teamwork"@en .
+
+cc2020:EthicalPerspectives a skos:Concept ;
+    skos:definition "Ethical perspectives of the different viewpoints someone uses to view a problem in the context of individual human values"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "EthicalPerspectives" ;
+    skos:prefLabel "Ethical and Intercultural Perspectives"@en .
+
+cc2020:MathAndStatistics a skos:Concept ;
+    skos:definition "Use of numbers and theories abstractly especially in the collection and analysis of numerical data"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "MathAndStatistics" ;
+    skos:prefLabel "Mathematics and Statistics"@en .
+
+cc2020:Multitasking a skos:Concept ;
+    skos:definition "Processing several issues or tasks at once while arranging them according to importance to do specific one first"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "Multitasking" ;
+    skos:prefLabel "Multi-Task Prioritization and Management"@en .
+
+cc2020:OralCommunication a skos:Concept ;
+    skos:definition "Conveying a message orally using real-time presentations with visual aids related audience interests and goals"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "OralCommunication" ;
+    skos:prefLabel "Oral Communication and Presentation"@en .
+
+cc2020:ProblemSolving a skos:Concept ;
+    skos:definition "A logical and orderly search for the source of a unit problem and making the unit operational again"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "ProblemSolving" ;
+    skos:prefLabel "Problem Solving and Trouble Shooting"@en .
+
+cc2020:ProjectOrganization a skos:Concept ;
+    skos:definition "A process to provide decisions about a project concerning organization and planning to achieve a successful result"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "ProjectOrganization" ;
+    skos:prefLabel "Project and Task Organization and Planning"@en .
+
+cc2020:QualityControl a skos:Concept ;
+    skos:definition "Use of techniques, methods, and processes to identify and prevent defects according to defined quality standards"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "QualityControl" ;
+    skos:prefLabel "Quality Assurance / Control"@en .
+
+cc2020:RelationshipManagement a skos:Concept ;
+    skos:definition "A strategy to maintain an ongoing level of engagement usually between a business and its customers or other businesses"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "RelationshipManagement" ;
+    skos:prefLabel "Relationship Management"@en .
+
+cc2020:SelfLearning a skos:Concept ;
+    skos:definition "Someone who begins or undertakes work or a project without needing direction or encouragement to do so"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "SelfLearning" ;
+    skos:prefLabel "Research and Self-Starter/Learner"@en .
+
+cc2020:TimeManagement a skos:Concept ;
+    skos:definition "An ability to use a person’s time in an effective or productive manner to work efficiently"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "TimeManagement" ;
+    skos:prefLabel "Time Management"@en .
+
+cc2020:WrittenCommunication a skos:Concept ;
+    skos:definition "Use of a written form of interaction between people and organizations that provides an effective way of messaging"@en ;
+    skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;
+    skos:notation "WrittenCommunication" ;
+    skos:prefLabel "Written Communication"@en .
+
+cc2020:FoundationalAndProfessionalKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "Foundational and Professional Knowledge Areas"@en .
+

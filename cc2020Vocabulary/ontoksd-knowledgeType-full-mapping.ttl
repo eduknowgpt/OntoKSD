@@ -1,0 +1,106 @@
+@prefix cc2020found: <http://purl.org/cc2020/foundational#> .
+@prefix cc2020tech: <http://purl.org/cc2020/knowledge#> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ontoksd:usedAsTypeOfKnowledge a rdf:Property ;
+    rdfs:label "used as type of knowledge"@en ;
+    rdfs:domain skos:Concept ;
+    rdfs:range ontoksd:KnowledgeType .
+
+cc2020found:AnalyticalThinking ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:Collaboration ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:EthicalPerspectives ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:MathAndStatistics ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:Multitasking ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:OralCommunication ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:ProblemSolving ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:ProjectOrganization ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:QualityControl ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:RelationshipManagement ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:SelfLearning ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:TimeManagement ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020found:WrittenCommunication ontoksd:usedAsTypeOfKnowledge ontoksd:foundationalAndProfessional .
+
+cc2020tech:ArchitectureAndOrganization ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:CircuitsAndElectronics ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ComputerNetworks ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ComputingSystemsFundamentals ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:DataAndInformationManagement ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:DataStructuresAlgorithmsAndComplexity ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:DigitalDesign ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:EmbeddedSystems ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:EnterpriseArchitecture ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:GraphicsAndVisualization ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ISManagementAndLeadership ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:IntegratedSystemsTechnology ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:IntelligentSystemsAI ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:InternetOfThings ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:OperatingSystems ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ParallelAndDistributedComputing ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:PlatformBasedDevelopment ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:PlatformTechnologies ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ProgrammingFundamentals ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ProgrammingLanguages ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:ProjectManagement ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:RequirementsAnalysisAndSpecifications ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SecurityIssuesAndPrinciples ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SecurityPolicyAndManagement ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SecurityTechnologyAndImplementation ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SignalProcessing ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SocialIssuesAndProfessionalPractice ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SoftwareDesign ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SoftwareModelingAndAnalysis ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SoftwareProcess ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SoftwareQualityVerificationAndValidation ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:SystemsAnalysisAndDesign ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:UserExperienceDesign ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+
+cc2020tech:VirtualSystemsAndServices ontoksd:usedAsTypeOfKnowledge ontoksd:computing .
+

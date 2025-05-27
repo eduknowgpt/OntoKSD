@@ -1,5 +1,11 @@
-@prefix : <http://www.semanticweb.org/edeyson/ontologies/2024/CCO#> .
+### Table 4.1. Elements of Computing Knowledge
+### CC2020Report - Page 49
+
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix onto: <http://example.org/ontoksd#> .
+@prefix : <http://example.org/ontoksd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 :UsersAndOrganizations rdf:type owl:NamedIndividual ,
                           :ComputingKnowledge ;

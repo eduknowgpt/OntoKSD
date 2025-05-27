@@ -1,0 +1,22 @@
+Verificar Active Ontology
+
+Em OntoKSD\ontoKSDOntology:
+	OntoKSD.ttl é a ontologia sem instâncias (TBox)
+	Importar SKOS (arquivo local)
+
+1. Importar de OntoKSD\
+	ontoKSD-KnowledgeType.ttl
+
+2. Importar do OntoKSD\cc2020Vocabulary:
+	cc2020-knowledge.ttl
+	cc2020-foundational-knowledge.ttl
+	cc2020-dispositions.ttl
+	ontoksd-knowledgeType-full-mapping.ttl
+
+4. Importar de OntoKSD\bloomTaxonomy
+	bloom-taxonomy-punning-POPULADA.ttl
+		==> verificar se a carga foi feita
+
+5. Importar o mapeamento OntoKSD-Bloom de OntoKSD\:
+	ontoKSD-Bloom-mapping.ttl
+

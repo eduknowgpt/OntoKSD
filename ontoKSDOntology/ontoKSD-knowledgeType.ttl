@@ -1,0 +1,16 @@
+### KnowledgeType Instances for OntoKSD
+
+@prefix onto: <http://purl.org/ontoksd#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+onto:computing a onto:KnowledgeType ;
+    rdfs:label "Computing Knowledge"@en ;
+    rdfs:comment "Knowledge areas related to core technical concepts in computing, as defined by the CC2020 report (Table 4.1)."@en .
+
+onto:foundationalAndProfessional a onto:KnowledgeType ;
+    rdfs:label "Foundational and Professional Knowledge"@en ;
+    rdfs:comment "Computing professionals are commonly expected to demonstrate high levels of skill in applying this knowledge, which deserves explicit attention in baccalaureate programs. This category includes general capabilities such as communication, collaboration, ethics, and time management."@en .
+
+onto:domain a onto:KnowledgeType ;
+    rdfs:label "Domain Knowledge"@en ;
+    rdfs:comment "Knowledge related to the context or discipline in which computing is applied. This includes fields such as business, medicine, and engineering, or more specific domains like radiographic imaging or international currency exchange."@en .
