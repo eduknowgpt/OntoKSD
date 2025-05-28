@@ -1,0 +1,44 @@
+@prefix bloom: <http://purl.org/edu/bloom#> .
+@prefix onto:  <http://purl.org/ontoksd#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+<http://purl.org/ontoksd/abox/skill>
+    a owl:Ontology ;
+    rdfs:label "OntoKSD Skills ABox"@en ;
+    rdfs:comment "Assertional individuals for OntoKSD:Skill, mapped to Bloom's CognitiveProcessLevel concepts."@en .
+
+#################################################################
+# Skills mapped to Bloom's Taxonomy Levels
+#################################################################
+
+onto:rememberingSkill
+    a onto:Skill ;
+    rdfs:label "Remembering"@en ;
+    onto:hasCognitiveLevel bloom:Remembering .
+
+onto:understandingSkill
+    a onto:Skill ;
+    rdfs:label "Understanding"@en ;
+    onto:hasCognitiveLevel bloom:Understanding .
+
+onto:applyingSkill
+    a onto:Skill ;
+    rdfs:label "Applying"@en ;
+    onto:hasCognitiveLevel bloom:Applying .
+
+onto:analyzingSkill
+    a onto:Skill ;
+    rdfs:label "Analyzing"@en ;
+    onto:hasCognitiveLevel bloom:Analyzing .
+
+onto:evaluatingSkill
+    a onto:Skill ;
+    rdfs:label "Evaluating"@en ;
+    onto:hasCognitiveLevel bloom:Evaluating .
+
+onto:creatingSkill
+    a onto:Skill ;
+    rdfs:label "Creating"@en ;
+    onto:hasCognitiveLevel bloom:Creating .

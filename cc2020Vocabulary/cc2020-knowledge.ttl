@@ -1,7 +1,14 @@
 @prefix cc2020: <http://purl.org/cc2020/knowledge#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+<http://purl.org/cc2020/knowledge>
+    a owl:Ontology ;
+    rdfs:label "CC2020 Knowledge ABox"@en ;
+    rdfs:comment "Assertional knowledge (instances) for CC2020 in the OntoKSD ontology."@en .
+	
+	
 cc2020:ArchitectureandOrganization a skos:Concept ;
     skos:inScheme cc2020:Hardware ;
     skos:notation "ArchitectureandOrganization" ;

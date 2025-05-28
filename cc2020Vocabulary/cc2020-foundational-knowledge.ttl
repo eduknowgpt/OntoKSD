@@ -1,7 +1,15 @@
 @prefix cc2020: <http://purl.org/cc2020/foundational#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.org/cc2020/foundational>
+    a owl:Ontology ;
+    rdfs:label "CC2020 Foundational Knowledge Vocabulary"@en ;
+    rdfs:comment "This file contains foundational and professional knowledge concepts based on the CC2020 report (Table 4.2), modeled as SKOS concepts for use with the OntoKSD ontology."@en .
+	
+	
 cc2020:AnalyticalThinking a skos:Concept ;
     skos:definition "A mental process of simplifying complex information into basic parts and evaluating results to make proper decisions"@en ;
     skos:inScheme cc2020:FoundationalAndProfessionalKnowledgeScheme ;

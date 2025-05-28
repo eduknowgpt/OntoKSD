@@ -1,48 +1,54 @@
-@prefix : <http://purl.org/ontoksd#> .
+@prefix disp: <http://purl.org/cc2020/disposition#> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+<http://purl.org/cc2020/disposition>
+    a owl:Ontology ;
+    rdfs:label "CC2020 Dispositions ABox"@en ;
+    rdfs:comment "Assertional knowledge (instances) for dispositions proposed in the CC2020 report, linked to OntoKSD ontology."@en .
 
-:Adaptable rdf:type :Disposition ;
-    rdfs:label "Adaptable" ;
-    rdfs:comment "The ability to adjust effectively to new situations and changes." .
+ontoksd:Adaptable a ontoksd:Disposition ;
+    rdfs:label "Adaptable"@en ;
+    rdfs:comment "The ability to adjust effectively to new situations and changes."@en .
 
-:Collaborative rdf:type :Disposition ;
-    rdfs:label "Collaborative" ;
-    rdfs:comment "The capability to work effectively within a team environment." .
+ontoksd:Collaborative a ontoksd:Disposition ;
+    rdfs:label "Collaborative"@en ;
+    rdfs:comment "The capability to work effectively within a team environment."@en .
 
-:Communicative rdf:type :Disposition ;
-    rdfs:label "Communicative" ;
-    rdfs:comment "Proficiency in clearly conveying information and ideas." .
+ontoksd:Communicative a ontoksd:Disposition ;
+    rdfs:label "Communicative"@en ;
+    rdfs:comment "Proficiency in clearly conveying information and ideas."@en .
 
-:Creative rdf:type :Disposition ;
-    rdfs:label "Creative" ;
-    rdfs:comment "The talent for generating innovative ideas and solutions." .
+ontoksd:Creative a ontoksd:Disposition ;
+    rdfs:label "Creative"@en ;
+    rdfs:comment "The talent for generating innovative ideas and solutions."@en .
 
-:Ethical rdf:type :Disposition ;
-    rdfs:label "Ethical" ;
-    rdfs:comment "A commitment to ethical principles and conduct." .
+ontoksd:Ethical a ontoksd:Disposition ;
+    rdfs:label "Ethical"@en ;
+    rdfs:comment "A commitment to ethical principles and conduct."@en .
 
-:Inclusive rdf:type :Disposition ;
-    rdfs:label "Inclusive" ;
-    rdfs:comment "Promoting diversity and inclusiveness in all activities." .
+ontoksd:Inclusive a ontoksd:Disposition ;
+    rdfs:label "Inclusive"@en ;
+    rdfs:comment "Promoting diversity and inclusiveness in all activities."@en .
 
-:LifelongLearner rdf:type :Disposition ;
-    rdfs:label "Lifelong Learner" ;
-    rdfs:comment "A dedication to continuous learning and self-improvement." .
+ontoksd:LifelongLearner a ontoksd:Disposition ;
+    rdfs:label "Lifelong Learner"@en ;
+    rdfs:comment "A dedication to continuous learning and self-improvement."@en .
 
-:Professional rdf:type :Disposition ;
-    rdfs:label "Professional" ;
-    rdfs:comment "Demonstrating professional behavior and work ethics." .
+ontoksd:Professional a ontoksd:Disposition ;
+    rdfs:label "Professional"@en ;
+    rdfs:comment "Demonstrating professional behavior and work ethics."@en .
 
-:Resilient rdf:type :Disposition ;
-    rdfs:label "Resilient" ;
-    rdfs:comment "The ability to recover quickly from setbacks and persist in the face of challenges." .
+ontoksd:Resilient a ontoksd:Disposition ;
+    rdfs:label "Resilient"@en ;
+    rdfs:comment "The ability to recover quickly from setbacks and persist in the face of challenges."@en .
 
-:Responsible rdf:type :Disposition ;
-    rdfs:label "Responsible" ;
-    rdfs:comment "Taking ownership of one's actions and their consequences." .
+ontoksd:Responsible a ontoksd:Disposition ;
+    rdfs:label "Responsible"@en ;
+    rdfs:comment "Taking ownership of one's actions and their consequences."@en .
 
-:SelfDirected rdf:type :Disposition ;
-    rdfs:label "Self-directed" ;
-    rdfs:comment "The ability to set goals, manage time effectively, and independently drive one's own learning and work." .
+ontoksd:SelfDirected a ontoksd:Disposition ;
+    rdfs:label "Self-directed"@en ;
+    rdfs:comment "The ability to set goals, manage time effectively, and independently drive one's own learning and work."@en .
