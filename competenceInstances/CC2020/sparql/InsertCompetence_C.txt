@@ -1,0 +1,58 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+###############################
+# Inserção de KnowledgeSkill #
+###############################
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (ontoksd:RequirementsAnalysisandSpecifications ontoksd:evaluatingSkill)
+    (ontoksd:OralCommunication ontoksd:applyingSkill)
+    (ontoksd:WrittenCommunication ontoksd:applyingSkill)
+    (ontoksd:Collaboration ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+#####################################
+# Inserção da competência e relações
+#####################################
+INSERT {
+  ontoksd:competence_C a ontoksd:Competence ;
+    rdfs:label "Competence C"@en ;
+    rdfs:comment "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en .
+
+  # Dispositions associadas
+  ontoksd:competence_C ontoksd:hasCompetenceElement ontoksd:PurposeDriven .
+  ontoksd:competence_C ontoksd:hasCompetenceElement ontoksd:Responsible .
+  ontoksd:competence_C ontoksd:hasCompetenceElement ontoksd:Collaborative .
+
+  # Associação com os pares KnowledgeSkill correspondentes
+  ontoksd:competence_C ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (ontoksd:RequirementsAnalysisandSpecifications ontoksd:evaluatingSkill)
+    (ontoksd:OralCommunication ontoksd:applyingSkill)
+    (ontoksd:WrittenCommunication ontoksd:applyingSkill)
+    (ontoksd:Collaboration ontoksd:applyingSkill)
+  }
+}

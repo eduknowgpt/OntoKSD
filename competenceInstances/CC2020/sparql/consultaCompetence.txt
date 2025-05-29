@@ -1,0 +1,19 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?competence ?disposition ?knowledge ?skill 
+WHERE {
+  ?competence a ontoksd:Competence ;
+                       rdfs:label ?competenceLabel .
+
+  OPTIONAL {
+    ?competence ontoksd:hasCompetenceElement ?disposition .
+  }
+
+  OPTIONAL {
+    ?competence ontoksd:hasKnowledgeSkill ?knowledgeSkill .
+    ?knowledgeSkill ontoksd:hasKnowledgeComponent ?knowledge .
+
+    ?knowledgeSkill ontoksd:hasSkillComponent ?skill .
+  }
+}

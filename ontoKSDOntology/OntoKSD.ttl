@@ -80,7 +80,6 @@ ontoksd:consistsOfLevels rdf:type owl:ObjectProperty ;
 ###  http://purl.org/ontoksd#equivalentClass
 ontoksd:equivalentClass rdf:type owl:ObjectProperty ;
                         rdfs:domain ontoksd:Competence ;
-                        rdfs:range ontoksd:RCD ;
                         rdfs:comment "Equivalence relation to another class such as RCD."@en .
 
 
@@ -818,10 +817,6 @@ ontoksd:ProficiencyLevel rdf:type owl:Class ;
                          rdfs:comment """A classification indicating the depth or complexity of a Competence or Competence Element.
 
 (Proficiency Level) is a set of levels for classifying competences in doing actions."""@en .
-
-
-###  http://purl.org/ontoksd#RCD
-ontoksd:RCD rdf:type owl:Class .
 
 
 ###  http://purl.org/ontoksd#RoleDetail

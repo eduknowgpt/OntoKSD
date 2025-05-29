@@ -1,0 +1,61 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Inserção dos pares KnowledgeSkill (condicional)
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (ontoksd:ArchitectureAndOrganization ontoksd:creatingSkill)
+    (ontoksd:DigitalDesign ontoksd:creatingSkill)
+    (ontoksd:CircuitsAndElectronics ontoksd:creatingSkill)
+    (ontoksd:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
+    (ontoksd:MathematicsAndStatistics ontoksd:applyingSkill)
+    (ontoksd:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
+    (ontoksd:ResearchAndSelfStarterLearner ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+# Inserção da competência e relacionamentos
+INSERT {
+  ontoksd:competence_A a ontoksd:Competence ;
+    rdfs:label "Competence A"@en ;
+    rdfs:comment "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en .
+
+  # Disposições associadas
+  ontoksd:competence_A ontoksd:hasCompetenceElement ontoksd:SelfDirected .
+  ontoksd:competence_A ontoksd:hasCompetenceElement ontoksd:Meticulous .
+  ontoksd:competence_A ontoksd:hasCompetenceElement ontoksd:Inventive .
+
+  # Relacionar com todos os pares KnowledgeSkill existentes
+  ?ks a ontoksd:KnowledgeSkill .
+  ontoksd:competence_A ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (ontoksd:ArchitectureAndOrganization ontoksd:creatingSkill)
+    (ontoksd:DigitalDesign ontoksd:creatingSkill)
+    (ontoksd:CircuitsAndElectronics ontoksd:creatingSkill)
+    (ontoksd:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
+    (ontoksd:MathematicsAndStatistics ontoksd:applyingSkill)
+    (ontoksd:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
+    (ontoksd:ResearchAndSelfStarterLearner ontoksd:applyingSkill)
+  }
+}
