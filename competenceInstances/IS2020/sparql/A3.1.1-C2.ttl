@@ -1,0 +1,66 @@
+PREFIX is2020: <http://example.org/is2020#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+
+############# INSERÇÃO DOS CONHECIMENTOS ################
+
+INSERT DATA {
+  is2020:InformationQualityDimensions a ontoksd:Knowledge ;
+    rdfs:label "Dimensions of Information Quality"@en ;
+    dcterms:description "Dimensions of information quality and information evaluation methods."@en .
+
+  is2020:VirtualValueChain a ontoksd:Knowledge ;
+    rdfs:label "Virtual Value Chain"@en ;
+    dcterms:description "The virtual value chain and its role in transforming data into value."@en .
+}
+
+;
+
+############# INSERÇÃO DOS PARES KNOWLEDGE-SKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (is2020:InformationQualityDimensions ontoksd:applyingSkill)
+    (is2020:VirtualValueChain ontoksd:understandingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://example.org/is2020#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA 2 ################
+
+INSERT {
+  is2020:competence_2 a ontoksd:Competence ;
+    dcterms:title "Competency 2: Interpret the dimensions, characteristics, and value of quality information"@en ;
+    dcterms:description "Students should be able to interpret the dimensions, characteristics, and value of quality information."@en ;
+    skos:notation "A3.1.1-C2" ;
+    ontoksd:hasCompetenceElement ontoksd:PurposeDriven , ontoksd:SelfDirected , ontoksd:Responsive ;
+    ontoksd:hasKnowledgeSkill ?ks ;
+    skos:broader is2020:FoundationsOfIS ;
+    skos:inScheme is2020:IS2020Scheme .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (is2020:InformationQualityDimensions ontoksd:applyingSkill)
+    (is2020:VirtualValueChain ontoksd:understandingSkill)
+  }
+}

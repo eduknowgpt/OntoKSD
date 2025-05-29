@@ -1,0 +1,103 @@
+PREFIX is2020: <http://example.org/is2020#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+############# INSERÇÃO DOS CONHECIMENTOS ################
+
+INSERT DATA {
+  is2020:ComponentsOfIS a ontoksd:Knowledge ;
+    rdfs:label "Components of IS"@en ;
+    dcterms:description "Technology (hardware, software, communication media), data, people, and procedures/processes."@en .
+
+  is2020:OperationsOfIS a ontoksd:Knowledge ;
+    rdfs:label "Operations of IS"@en ;
+    dcterms:description "The processing cycle of input, processing, storage, output, control."@en .
+
+  is2020:ISHelpsInformation a ontoksd:Knowledge ;
+    rdfs:label "How IS helps with information"@en ;
+    dcterms:description "The ways in which IS helps us deal with information."@en .
+
+  is2020:ISFunctionsChange a ontoksd:Knowledge ;
+    rdfs:label "Functions of IS and organizational change"@en ;
+    dcterms:description "Functions (and operations) of IS and their impact on facilitating organizational change."@en .
+
+  is2020:CommonTypesOfIS a ontoksd:Knowledge ;
+    rdfs:label "Common types of IS"@en ;
+    dcterms:description "Common types of IS such as Transaction Processing Systems, Enterprise Systems."@en .
+}
+
+;
+
+############# INSERÇÃO DOS PARES KNOWLEDGE-SKILL (condicional) ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (is2020:ComponentsOfIS ontoksd:understandingSkill)
+    (is2020:OperationsOfIS ontoksd:applyingSkill)
+    (is2020:ISHelpsInformation ontoksd:applyingSkill)
+    (is2020:ISFunctionsChange ontoksd:applyingSkill)
+    (is2020:CommonTypesOfIS ontoksd:understandingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://example.org/is2020#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA 1 ################
+
+INSERT {
+  is2020:competence_1 a ontoksd:Competence ;
+    dcterms:title "Competency 1: Classify the components, elements, operations, and impact of IS"@en ;
+    dcterms:description "Students should be able to classify the components, elements, operations, and impact of Information Systems."@en ;
+    skos:notation "A3.1.1-C1" ;
+    ontoksd:hasCompetenceElement ontoksd:SelfDirected , ontoksd:Inventive , ontoksd:PurposeDriven ;
+    ontoksd:hasKnowledgeSkill ?ks ;
+    skos:broader is2020:FoundationsOfIS ;
+    skos:inScheme is2020:FoundationsRealm .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (is2020:ComponentsOfIS ontoksd:understandingSkill)
+    (is2020:OperationsOfIS ontoksd:applyingSkill)
+    (is2020:ISHelpsInformation ontoksd:applyingSkill)
+    (is2020:ISFunctionsChange ontoksd:applyingSkill)
+    (is2020:CommonTypesOfIS ontoksd:understandingSkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DO CONTEXTO DE ÁREA E REINO ################
+
+INSERT DATA {
+  is2020:FoundationsRealm a skos:Concept ;
+    skos:prefLabel "A3.1 Foundations Competency Realm"@en ;
+    skos:topConceptOf is2020:IS2020Scheme .
+
+  is2020:FoundationsOfIS a skos:Concept ;
+    skos:prefLabel "A3.1.1 Competency Area – Foundations of Information Systems"@en ;
+    skos:broader is2020:FoundationsRealm ;
+    skos:inScheme is2020:IS2020Scheme .
+
+  is2020:IS2020Scheme a skos:ConceptScheme ;
+    dcterms:title "Information Systems 2020 Competency Framework"@en .
+}

@@ -28,14 +28,20 @@ WHERE {
 
 ;
 
+
+
+
 #####################################
 # Inserção da competência e relações
 #####################################
 INSERT {
   ontoksd:competence_C a ontoksd:Competence ;
-    rdfs:label "Competence C"@en ;
-    rdfs:comment "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en .
-
+  
+    dcterms:title "CC2020 Competence C"@en ;
+    dcterms:description "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en ;
+    dcterms:source "CC2020 Curriculum Guidelines"@en ;
+    skos:notation "CC2020 Competence C"@en .
+	
   # Dispositions associadas
   ontoksd:competence_C ontoksd:hasCompetenceElement ontoksd:PurposeDriven .
   ontoksd:competence_C ontoksd:hasCompetenceElement ontoksd:Responsible .

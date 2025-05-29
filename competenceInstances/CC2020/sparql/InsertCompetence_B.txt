@@ -30,9 +30,12 @@ WHERE {
 # Inserção da competência e relacionamentos
 INSERT {
   ontoksd:competence_B a ontoksd:Competence ;
-    rdfs:label "Competence B"@en ;
-    rdfs:comment "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."@en .
-
+    dcterms:title "CC2020 Competence B"@en ;
+    dcterms:description "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."@en ;
+    dcterms:source "CC2020 Curriculum Guidelines"@en ;
+    skos:notation "CC2020 Competence B"@en .
+	
+ 
   # Disposições associadas
   ontoksd:competence_B ontoksd:hasCompetenceElement ontoksd:SelfDirected .
   ontoksd:competence_B ontoksd:hasCompetenceElement ontoksd:PurposeDriven .

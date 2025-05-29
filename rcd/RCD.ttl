@@ -5,7 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://purl.org/ontoksd/rcd> .
+@base <http://purl.org/ontoksd/rcd#> .
 
 <http://purl.org/ontoksd/rcd> rdf:type owl:Ontology .
 
@@ -65,6 +65,12 @@ rcd:catalog rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string .
 
 
+###  http://purl.org/ontoksd/rcd#description
+rcd:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain rcd:RCD ;
+                rdfs:range rdf:langString .
+
+
 ###  http://purl.org/ontoksd/rcd#entry
 rcd:entry rdf:type owl:DatatypeProperty ;
           rdfs:domain rcd:LongIdentifier ;
@@ -99,6 +105,12 @@ rcd:statementName rdf:type owl:DatatypeProperty ;
 rcd:statementText rdf:type owl:DatatypeProperty ;
                   rdfs:domain rcd:Statement ;
                   rdfs:range xsd:string .
+
+
+###  http://purl.org/ontoksd/rcd#title
+rcd:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain rcd:RCD ;
+          rdfs:range rdf:langString .
 
 
 ###  http://purl.org/ontoksd/rcd#vocabularySource

@@ -1,7 +1,9 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-# Inserção dos pares KnowledgeSkill (condicional)
+# Inserção condicional dos pares KnowledgeSkill
 INSERT {
   ?ks a ontoksd:KnowledgeSkill ;
       ontoksd:hasKnowledgeComponent ?k ;
@@ -29,11 +31,18 @@ WHERE {
 
 ;
 
-# Inserção da competência e relacionamentos
+
+
+
+# Inserção da Competência A com metadados padronizados
+
 INSERT {
   ontoksd:competence_A a ontoksd:Competence ;
-    rdfs:label "Competence A"@en ;
-    rdfs:comment "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en .
+    dcterms:title "CC2020 Competence A"@en ;
+    dcterms:description "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en ;
+    dcterms:source "CC2020 Curriculum Guidelines"@en ;
+    skos:notation "CC2020 Competence A"@en .
+	
 
   # Disposições associadas
   ontoksd:competence_A ontoksd:hasCompetenceElement ontoksd:SelfDirected .

@@ -1,0 +1,66 @@
+############# INSERÇÃO DOS CONHECIMENTOS ################
+
+INSERT DATA {
+  is2020:ISRolesResponsibilities a ontoksd:Knowledge ;
+    rdfs:label "Roles and Responsibilities of the IS Professional"@en ;
+    dcterms:description "Roles and responsibilities of the IS professional."@en .
+
+  is2020:ISProfessionalCharacteristics a ontoksd:Knowledge ;
+    rdfs:label "Characteristics of the IS Professional"@en ;
+    dcterms:description "Personal and professional characteristics expected of IS professionals."@en .
+
+  is2020:ISEthicalStandards a ontoksd:Knowledge ;
+    rdfs:label "Ethical Standards for IS Professionals"@en ;
+    dcterms:description "Ethical standards that guide professional behavior in IS practice."@en .
+}
+
+;
+
+############# INSERÇÃO DOS PARES KNOWLEDGE-SKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (is2020:ISRolesResponsibilities ontoksd:applyingSkill)
+    (is2020:ISProfessionalCharacteristics ontoksd:applyingSkill)
+    (is2020:ISEthicalStandards ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://example.org/is2020#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA 3 ################
+
+INSERT {
+  is2020:competence_3 a ontoksd:Competence ;
+    dcterms:title "Competency 3: Explain the roles, responsibilities, and characteristics of the IS professional"@en ;
+    dcterms:description "Students should be able to explain the roles, responsibilities, and characteristics of the IS professional."@en ;
+    skos:notation "A3.1.1-C3" ;
+    ontoksd:hasCompetenceElement ontoksd:SelfDirected , ontoksd:Inventive , ontoksd:PurposeDriven ;
+    ontoksd:hasKnowledgeSkill ?ks ;
+    skos:broader is2020:FoundationsOfIS ;
+    skos:inScheme is2020:IS2020Scheme .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (is2020:ISRolesResponsibilities ontoksd:applyingSkill)
+    (is2020:ISProfessionalCharacteristics ontoksd:applyingSkill)
+    (is2020:ISEthicalStandards ontoksd:applyingSkill)
+  }
+}
