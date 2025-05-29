@@ -1,4 +1,4 @@
-@prefix : <http://purl.org/edu/bloom#> .
+@prefix bloom: <http://purl.org/edu/bloom#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -6,12 +6,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix bloom: <http://purl.org/edu/bloom#> .
-@base <http://example.org/bloom> .
+@base <http://purl.org/edu/bloom#> .
 
-<http://example.org/bloom> rdf:type owl:Ontology ;
-                            rdfs:comment "This ontology uses OWL 2 punning to represent cognitive levels as both classes and individuals."@en ;
-                            rdfs:label "Bloom's Revised Taxonomy Ontology (with Punning)"@en .
+<http://purl.org/edu/bloom> rdf:type owl:Ontology ;
+    rdfs:label "Bloom's Revised Taxonomy Ontology (with Punning)"@en ;
+    rdfs:comment "This ontology uses OWL 2 punning to represent cognitive levels as both classes and individuals."@en .
+
 
 #################################################################
 #    Annotation properties
@@ -53,14 +53,14 @@ skos:related rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://example.org/bloom#follows
+###  http://purl.org/edu/bloom#follows
 bloom:follows rdf:type owl:ObjectProperty ;
               owl:inverseOf bloom:precedes ;
               rdfs:comment "The inverse of precedes."@en ;
               rdfs:label "follows"@en .
 
 
-###  http://example.org/bloom#hasActionVerb
+###  http://purl.org/edu/bloom#hasActionVerb
 bloom:hasActionVerb rdf:type owl:ObjectProperty ;
                     owl:inverseOf bloom:isActionVerbFor ;
                     rdfs:domain bloom:CognitiveProcessLevel ;
@@ -69,28 +69,28 @@ bloom:hasActionVerb rdf:type owl:ObjectProperty ;
                     rdfs:label "hasActionVerb"@en .
 
 
-###  http://example.org/bloom#hasActionVerbType
+###  http://purl.org/edu/bloom#hasActionVerbType
 bloom:hasActionVerbType rdf:type owl:ObjectProperty ;
                         owl:inverseOf bloom:isActionVerbTypeFor ;
                         rdfs:domain bloom:ActionVerb ;
                         rdfs:range bloom:ActionVerbType .
 
 
-###  http://example.org/bloom#isActionVerbFor
+###  http://purl.org/edu/bloom#isActionVerbFor
 bloom:isActionVerbFor rdf:type owl:ObjectProperty ;
                       rdfs:domain bloom:ActionVerb ;
                       rdfs:range bloom:CognitiveProcessLevel ;
                       rdfs:comment "isActionVerbFor" .
 
 
-###  http://example.org/bloom#isActionVerbTypeFor
+###  http://purl.org/edu/bloom#isActionVerbTypeFor
 bloom:isActionVerbTypeFor rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf owl:topObjectProperty ;
                           rdfs:domain bloom:ActionVerbType ;
                           rdfs:range bloom:ActionVerb .
 
 
-###  http://example.org/bloom#precedes
+###  http://purl.org/edu/bloom#precedes
 bloom:precedes rdf:type owl:ObjectProperty ;
                rdfs:domain bloom:CognitiveProcessLevel ;
                rdfs:range bloom:CognitiveProcessLevel ;
@@ -102,7 +102,7 @@ bloom:precedes rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://example.org/bloom#hasComplexityLevel
+###  http://purl.org/edu/bloom#hasComplexityLevel
 bloom:hasComplexityLevel rdf:type owl:DatatypeProperty ;
                          rdfs:domain bloom:CognitiveProcessLevel ;
                          rdfs:range xsd:int ;
@@ -115,7 +115,7 @@ Numeric indicator of complexity (1 to 6)."""@en ;
 #    Classes
 #################################################################
 
-###  http://example.org/bloom#ActionVerb
+###  http://purl.org/edu/bloom#ActionVerb
 bloom:ActionVerb rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty bloom:hasActionVerbType ;
@@ -129,22 +129,22 @@ bloom:ActionVerb rdf:type owl:Class ;
                  rdfs:label "ActionVerb"@en .
 
 
-###  http://example.org/bloom#ActionVerbType
+###  http://purl.org/edu/bloom#ActionVerbType
 bloom:ActionVerbType rdf:type owl:Class ;
                      rdfs:comment "Classifies verbs as standard, computing-enhanced, technical, dispositional, or general-purpose." .
 
 
-###  http://example.org/bloom#Analyzing
+###  http://purl.org/edu/bloom#Analyzing
 bloom:Analyzing rdf:type owl:Class ;
                 rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
-###  http://example.org/bloom#Applying
+###  http://purl.org/edu/bloom#Applying
 bloom:Applying rdf:type owl:Class ;
                rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
-###  http://example.org/bloom#CognitiveProcessLevel
+###  http://purl.org/edu/bloom#CognitiveProcessLevel
 bloom:CognitiveProcessLevel rdf:type owl:Class ;
                             owl:equivalentClass [ rdf:type owl:Restriction ;
                                                   owl:onProperty bloom:hasComplexityLevel ;
@@ -198,22 +198,22 @@ Justifications:
                             rdfs:label "CognitiveProcessLevel"@en .
 
 
-###  http://example.org/bloom#Creating
+###  http://purl.org/edu/bloom#Creating
 bloom:Creating rdf:type owl:Class ;
                rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
-###  http://example.org/bloom#Evaluating
+###  http://purl.org/edu/bloom#Evaluating
 bloom:Evaluating rdf:type owl:Class ;
                  rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
-###  http://example.org/bloom#Remembering
+###  http://purl.org/edu/bloom#Remembering
 bloom:Remembering rdf:type owl:Class ;
                   rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
-###  http://example.org/bloom#Understanding
+###  http://purl.org/edu/bloom#Understanding
 bloom:Understanding rdf:type owl:Class ;
                     rdfs:subClassOf bloom:CognitiveProcessLevel .
 
@@ -222,41 +222,41 @@ bloom:Understanding rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://example.org/bloom#Analyzing
+###  http://purl.org/edu/bloom#Analyzing
 bloom:Analyzing rdf:type owl:NamedIndividual ,
                          bloom:CognitiveProcessLevel ;
                 bloom:precedes bloom:Evaluating ;
                 bloom:hasComplexityLevel 4 .
 
 
-###  http://example.org/bloom#Applying
+###  http://purl.org/edu/bloom#Applying
 bloom:Applying rdf:type owl:NamedIndividual ,
                         bloom:CognitiveProcessLevel ;
                bloom:precedes bloom:Analyzing ;
                bloom:hasComplexityLevel 3 .
 
 
-###  http://example.org/bloom#Creating
+###  http://purl.org/edu/bloom#Creating
 bloom:Creating rdf:type owl:NamedIndividual ,
                         bloom:CognitiveProcessLevel ;
                bloom:hasComplexityLevel 6 .
 
 
-###  http://example.org/bloom#Evaluating
+###  http://purl.org/edu/bloom#Evaluating
 bloom:Evaluating rdf:type owl:NamedIndividual ,
                           bloom:CognitiveProcessLevel ;
                  bloom:precedes bloom:Creating ;
                  bloom:hasComplexityLevel 5 .
 
 
-###  http://example.org/bloom#Remembering
+###  http://purl.org/edu/bloom#Remembering
 bloom:Remembering rdf:type owl:NamedIndividual ,
                            bloom:CognitiveProcessLevel ;
                   bloom:precedes bloom:Understanding ;
                   bloom:hasComplexityLevel 1 .
 
 
-###  http://example.org/bloom#Understanding
+###  http://purl.org/edu/bloom#Understanding
 bloom:Understanding rdf:type owl:NamedIndividual ,
                              bloom:CognitiveProcessLevel ;
                     bloom:precedes bloom:Applying ;

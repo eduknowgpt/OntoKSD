@@ -1,5 +1,5 @@
 @prefix bloom: <http://purl.org/edu/bloom#> .
-@prefix onto:  <http://purl.org/ontoksd#> .
+@prefix ontoksd:  <http://purl.org/ontoksd#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
@@ -8,37 +8,40 @@
     a owl:Ontology ;
     rdfs:label "OntoKSD Skills ABox"@en ;
     rdfs:comment "Assertional individuals for OntoKSD:Skill, mapped to Bloom's CognitiveProcessLevel concepts."@en .
+	
+	
+
 
 #################################################################
 # Skills mapped to Bloom's Taxonomy Levels
 #################################################################
 
-onto:rememberingSkill
-    a onto:Skill ;
+ontoksd:rememberingSkill
+    a ontoksd:Skill ;
     rdfs:label "Remembering"@en ;
-    onto:hasCognitiveLevel bloom:Remembering .
+    ontoksd:hasCognitiveLevel bloom:Remembering .
 
-onto:understandingSkill
-    a onto:Skill ;
+ontoksd:understandingSkill
+    a ontoksd:Skill ;
     rdfs:label "Understanding"@en ;
-    onto:hasCognitiveLevel bloom:Understanding .
+    ontoksd:hasCognitiveLevel bloom:Understanding .
 
-onto:applyingSkill
-    a onto:Skill ;
+ontoksd:applyingSkill
+    a ontoksd:Skill ;
     rdfs:label "Applying"@en ;
-    onto:hasCognitiveLevel bloom:Applying .
+    ontoksd:hasCognitiveLevel bloom:Applying .
 
-onto:analyzingSkill
-    a onto:Skill ;
+ontoksd:analyzingSkill
+    a ontoksd:Skill ;
     rdfs:label "Analyzing"@en ;
-    onto:hasCognitiveLevel bloom:Analyzing .
+    ontoksd:hasCognitiveLevel bloom:Analyzing .
 
-onto:evaluatingSkill
-    a onto:Skill ;
+ontoksd:evaluatingSkill
+    a ontoksd:Skill ;
     rdfs:label "Evaluating"@en ;
-    onto:hasCognitiveLevel bloom:Evaluating .
+    ontoksd:hasCognitiveLevel bloom:Evaluating .
 
-onto:creatingSkill
-    a onto:Skill ;
+ontoksd:creatingSkill
+    a ontoksd:Skill ;
     rdfs:label "Creating"@en ;
-    onto:hasCognitiveLevel bloom:Creating .
+    ontoksd:hasCognitiveLevel bloom:Creating .
