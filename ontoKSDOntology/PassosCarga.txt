@@ -8,9 +8,9 @@ Em OntoKSD\ontoKSDOntology:
 	ontoKSD-KnowledgeType.ttl
 
 2. Importar do OntoKSD\cc2020Vocabulary:
+	cc2020-dispositions.ttl
 	cc2020-knowledge.ttl
 	cc2020-foundational-knowledge.ttl
-	cc2020-dispositions.ttl
 	ontoksd-knowledgeType-full-mapping.ttl
 
 4. Importar de OntoKSD\bloomTaxonomy
@@ -19,4 +19,17 @@ Em OntoKSD\ontoKSDOntology:
 
 5. Importar o mapeamento OntoKSD-Bloom de OntoKSD\ontoKSDOntology\skill
 	ontoKSD-Bloom-mapping.ttl
+	
+6. Carragar instâncias do CC2020
+	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\CC2020\sparql
+	
+7. Carregar instâncias do IS2020
+	Dados brutos em: 
+		I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\IS2020CompetenciesClear.txt
+	Git: 
+		https://github.com/EdeysonUFBA/EduKnow/tree/main/GraphDB
+	Carga via Java:
+		C:\Projetos\EduKnow\GraphDBSparqlApp
+	
+		
 
