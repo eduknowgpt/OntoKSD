@@ -1,0 +1,17 @@
+PREFIX ontoksd: <http://example.org/ontoksd#>
+
+INSERT DATA {
+  # Meta-competence C05 has components C12, C14, and C09
+  ontoksd:EdukNow_C05 ontoksd:hasComponent ontoksd:EdukNow_C12 ,
+                                           ontoksd:EdukNow_C14 ,
+                                           ontoksd:EdukNow_C09 .
+
+  # C12, C14, and C09 are specializations of C05
+  ontoksd:EdukNow_C12 ontoksd:isSpecializationOf ontoksd:EdukNow_C05 .
+  ontoksd:EdukNow_C14 ontoksd:isSpecializationOf ontoksd:EdukNow_C05 .
+  ontoksd:EdukNow_C09 ontoksd:isSpecializationOf ontoksd:EdukNow_C05 .
+
+  # C14 and C09 require C12 as a prerequisite
+  ontoksd:EdukNow_C14 ontoksd:requiresCompetence ontoksd:EdukNow_C12 .
+  ontoksd:EdukNow_C09 ontoksd:requiresCompetence ontoksd:EdukNow_C12 .
+}

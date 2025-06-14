@@ -2,6 +2,8 @@ PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cc2020k: <http://purl.org/cc2020/knowledge#> 
+PREFIX cc2020fpk: <http://purl.org/cc2020/foundational#> 
 
 # Inserção condicional dos pares KnowledgeSkill
 INSERT {
@@ -11,13 +13,13 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s) {
-    (ontoksd:ArchitectureAndOrganization ontoksd:creatingSkill)
-    (ontoksd:DigitalDesign ontoksd:creatingSkill)
-    (ontoksd:CircuitsAndElectronics ontoksd:creatingSkill)
-    (ontoksd:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
-    (ontoksd:MathematicsAndStatistics ontoksd:applyingSkill)
-    (ontoksd:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
-    (ontoksd:ResearchAndSelfStarterLearner ontoksd:applyingSkill)
+    (cc2020k:ArchitectureAndOrganization ontoksd:creatingSkill)
+    (cc2020k:DigitalDesign ontoksd:creatingSkill)
+    (cc2020k:CircuitsAndElectronics ontoksd:creatingSkill)
+    (cc2020fpk:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
+    (cc2020fpk:MathematicsAndStatistics ontoksd:applyingSkill)
+    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
+    (cc2020fpk:SelfLearning ontoksd:applyingSkill)
   }
 
   FILTER NOT EXISTS {
@@ -59,12 +61,12 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (ontoksd:ArchitectureAndOrganization ontoksd:creatingSkill)
-    (ontoksd:DigitalDesign ontoksd:creatingSkill)
-    (ontoksd:CircuitsAndElectronics ontoksd:creatingSkill)
-    (ontoksd:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
-    (ontoksd:MathematicsAndStatistics ontoksd:applyingSkill)
-    (ontoksd:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
-    (ontoksd:ResearchAndSelfStarterLearner ontoksd:applyingSkill)
+    (cc2020k:ArchitectureAndOrganization ontoksd:creatingSkill)
+    (cc2020k:DigitalDesign ontoksd:creatingSkill)
+    (cc2020k:CircuitsAndElectronics ontoksd:creatingSkill)
+    (cc2020fpk:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
+    (cc2020fpk:MathematicsAndStatistics ontoksd:applyingSkill)
+    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
+    (cc2020fpk:SelfLearning ontoksd:applyingSkill)
   }
 }

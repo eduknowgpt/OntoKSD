@@ -1,5 +1,7 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX cc2020k: <http://purl.org/cc2020/knowledge#> 
+PREFIX cc2020fpk: <http://purl.org/cc2020/foundational#> 
 
 # Inserção dos pares KnowledgeSkill (caso ainda não existam)
 INSERT {
@@ -9,11 +11,11 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s) {
-    (ontoksd:ComputerNetworks ontoksd:analyzingSkill)
-    (ontoksd:PlatformTechnologies ontoksd:analyzingSkill)
-    (ontoksd:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
-    (ontoksd:MathematicsAndStatistics ontoksd:applyingSkill)
-    (ontoksd:QualityControl ontoksd:applyingSkill)
+    (cc2020k:ComputerNetworks ontoksd:analyzingSkill)
+    (cc2020k:PlatformTechnologies ontoksd:analyzingSkill)
+    (cc2020fpk:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
+    (cc2020fpk:MathematicsAndStatistics ontoksd:applyingSkill)
+    (cc2020fpk:QualityControl ontoksd:applyingSkill)
   }
 
   FILTER NOT EXISTS {
@@ -51,10 +53,10 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (ontoksd:ComputerNetworks ontoksd:analyzingSkill)
-    (ontoksd:PlatformTechnologies ontoksd:analyzingSkill)
-    (ontoksd:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
-    (ontoksd:MathematicsAndStatistics ontoksd:applyingSkill)
-    (ontoksd:QualityControl ontoksd:applyingSkill)
+    (cc2020k:ComputerNetworks ontoksd:analyzingSkill)
+    (cc2020k:PlatformTechnologies ontoksd:analyzingSkill)
+    (cc2020fpk:AnalyticalAndCriticalThinking ontoksd:applyingSkill)
+    (cc2020fpk:MathematicsAndStatistics ontoksd:applyingSkill)
+    (cc2020fpk:QualityControl ontoksd:applyingSkill)
   }
 }

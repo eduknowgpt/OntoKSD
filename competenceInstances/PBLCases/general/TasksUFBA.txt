@@ -1,0 +1,95 @@
+### Context
+
+contextEduknow a AcquisitionContext
+Description: The Competency Specification Process (CSP) was applied in a multiple-case study involving five PBL-based educational tasks in a Computer Science course. Four domain experts in Educational Informatics collaboratively analyzed the tasks, identified learning requirements, and derived formal competency statements. This context allowed for the empirical evaluation and iterative refinement of the CSP in real instructional settings.
+
+
+### Evidence
+evidenceEduknow a Evidence
+evidenceEduknow hasEvidenceContext contextEduknow
+
+
+
+##### TASK01
+
+TASK01 a LearningTask
+TASK01 hasAcquitionContext contextEduknow
+
+Title: The Vending Machine for Sodas and Snacks
+Description: The task presents a problem related to **change calculation in vending machine transactions**, where payments are made using coins and banknotes. The task requires students to design a solution that enables the vending machine to accept payments, dispense change accurately, and operate according to predefined functional requirements.
+Authors: Luiz Gavaza,  Lais Salvador,  David Moises,  Roberta Oliveira
+Contributors: Edeyson Gomes, Jéssica Santana
+
+
+Task01 hasTargetCompetence EdukNow_C04
+Task01 hasTargetCompetence EdukNow_C05
+Task01 hasTargetCompetence EdukNow_C06
+Task01 hasTargetCompetence EdukNow_C07
+Task01 hasTargetCompetence EdukNow_C08
+
+
+
+##### TASK02
+
+TASK02 a LearningTask
+
+Title: Traffic Control
+Description: The task **"Traffic Control"**, which engages students in designing a computational solution using **Turing Machines** to address vehicle monitoring and classification on highways. The task integrates formal methods and systems thinking to model a real-world problem posed by the Bahia Department of Transport Infrastructure (DERBA).
+Authors: Luiz Gavaza,  Lais Salvador,  David Moises
+Contributors: Edeyson Gomes, Jéssica Santana
+
+TASK02 hasAcquitionContext contextEduknow
+Task02 hasTargetCompetence EdukNow_C04
+Task02 hasTargetCompetence EdukNow_C09
+Task02 hasTargetCompetence EdukNow_C10
+Task02 hasTargetCompetence EdukNow_C11
+Task02 hasTargetCompetence EdukNow_C17
+
+
+##### TASK03
+
+TASK03 a LearningTask
+TASK03 hasAcquitionContext contextEduknow
+
+Title: The Farmer Robot
+Description: This task which engages students in developing a prototype system for **herd identification** in extensive livestock farming environments. The scenario is based on a real-world challenge proposed by the company *Farmer Robot*, which seeks a low-cost solution to automate the classification of animals—bovines, caprines, and swine—using a robotic system equipped with a visual identification module.
+Authors: Luiz Gavaza,  Lais Salvador,  Daniel Cason,  Roberta Oliveira
+Contributors: Edeyson Gomes, Jéssica Santana
+
+Task03 hasTargetCompetence EdukNow_C04
+Task03 hasTargetCompetence EdukNow_C07
+Task03 hasTargetCompetence EdukNow_C08
+Task03 hasTargetCompetence EdukNow_C12
+Task03 hasTargetCompetence EdukNow_C13
+
+
+
+##### TASK04
+
+TASK04 a LearningTask
+TASK04 hasAcquitionContext contextEduknow
+Title: The Return of the Farmer Robot
+Description: The task challenges students to design a navigation module that allows the robot to autonomously return to its initial location after issuing food delivery alerts. The module must be implemented using computational models and validated through simulation. This scenario is rooted in a real-world agricultural context and emphasizes the application of **formal methods**, including **automata theory** and **context-free grammars**, to address autonomous navigation problems.
+Authors: Luiz Gavaza,  Lais Salvador,  Daniel Cason,  Roberta Oliveira, Jéssica Santana, Otávio Neto
+Contributors: Edeyson Gomes
+
+
+Task04 hasTargetCompetence EdukNow_C04
+Task04 hasTargetCompetence EdukNow_C14
+Task04 hasTargetCompetence EdukNow_C15
+Task04 hasTargetCompetence EdukNow_C16
+
+
+##### TASK05
+
+TASK05 a LearningTask
+TASK05 hasAcquitionContext contextEduknow
+
+
+TASK05:
+Competence EdukNow_C04
+Competence EdukNow_C09
+Competence EdukNow_C10
+Competence EdukNow_C11
+Competence EdukNow_C17
+

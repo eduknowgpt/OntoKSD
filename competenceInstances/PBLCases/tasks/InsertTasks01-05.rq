@@ -1,0 +1,200 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+############# INSERÇÃO DO CONTEXTO DE AQUISIÇÃO ################
+
+INSERT DATA {
+  ontoksd:contextEduknow a ontoksd:AcquisitionContext ;
+    dcterms:description "The Competency Specification Process (CSP) was applied in a multiple-case study involving five PBL-based educational tasks in a Computer Science course. Four domain experts in Educational Informatics collaboratively analyzed the tasks, identified learning requirements, and derived formal competency statements. This context allowed for the empirical evaluation and iterative refinement of the CSP in real instructional settings."@en .
+}
+
+;
+
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+############# INSERÇÃO DA EVIDÊNCIA ################
+
+INSERT DATA {
+  ontoksd:evidenceEduknow a ontoksd:Evidence ;
+    ontoksd:hasEvidenceContext ontoksd:contextEduknow .
+}
+
+;
+
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+############# TASK01 #############
+INSERT DATA {
+  ontoksd:TASK01 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    dcterms:title "The Vending Machine for Sodas and Snacks"@en ;
+    dcterms:description "The task presents a problem related to change calculation in vending machine transactions, where payments are made using coins and banknotes. The task requires students to design a solution that enables the vending machine to accept payments, dispense change accurately, and operate according to predefined functional requirements."@en ;
+    dcterms:creator "Luiz Gavaza"@en , "Lais Salvador"@en , "David Moises"@en , "Roberta Oliveira"@en ;
+    dcterms:contributor "Edeyson Gomes"@en , "Jéssica Santana"@en .
+
+  ontoksd:TASK01_C04 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 .
+
+  ontoksd:TASK01_C05 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C05 .
+
+  ontoksd:TASK01_C06 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C06 .
+
+  ontoksd:TASK01_C07 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C07 .
+
+  ontoksd:TASK01_C08 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C08 .
+}
+;
+
+############# TASK02 #############
+INSERT DATA {
+  ontoksd:TASK02 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    dcterms:title "Traffic Control"@en ;
+    dcterms:description "This task engages students in designing a computational model using Turing Machines to monitor and classify vehicle types on highways. Inspired by a real-world problem posed by the Bahia Department of Transport Infrastructure (DERBA), the task emphasizes the application of formal modeling, state-based computation, and systems thinking to develop a reliable and efficient monitoring solution aligned with public infrastructure needs."@en ;
+    dcterms:creator "Luiz Gavaza"@en , "Lais Salvador"@en , "David Moises"@en ;
+    dcterms:contributor "Edeyson Gomes"@en , "Jéssica Santana"@en .
+
+  ontoksd:TASK02_C04 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK02 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 .
+
+  ontoksd:TASK02_C09 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK02 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C09 .
+
+  ontoksd:TASK02_C10 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK02 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C10 .
+
+  ontoksd:TASK02_C11 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK02 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C11 .
+
+  ontoksd:TASK02_C17 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK02 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C17 .
+}
+;
+
+############# TASK03 #############
+INSERT DATA {
+  ontoksd:TASK03 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    dcterms:title "The Farmer Robot"@en ;
+    dcterms:description "This task engages students in developing a prototype system for herd identification in extensive livestock farming environments. The scenario is based on a real-world challenge proposed by the company Farmer Robot, which seeks a low-cost solution to automate the classification of animals—bovines, caprines, and swine—using a robotic system equipped with a visual identification module. The task integrates concepts from robotics, pattern recognition, and automaton-based modeling."@en ;
+    dcterms:creator "Luiz Gavaza"@en , "Lais Salvador"@en , "Daniel Cason"@en , "Roberta Oliveira"@en ;
+    dcterms:contributor "Edeyson Gomes"@en , "Jéssica Santana"@en .
+
+  ontoksd:TASK03_C04 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK03 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 .
+
+  ontoksd:TASK03_C07 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK03 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C07 .
+
+  ontoksd:TASK03_C08 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK03 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C08 .
+
+  ontoksd:TASK03_C12 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK03 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C12 .
+
+  ontoksd:TASK03_C13 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK03 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C13 .
+}
+;
+
+############# TASK04 #############
+INSERT DATA {
+  ontoksd:TASK04 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    dcterms:title "The Return of the Farmer Robot"@en ;
+    dcterms:description "This task challenges students to design a navigation module that enables a robot to autonomously return to its base location after issuing food delivery alerts. Grounded in a real agricultural scenario, the solution must be modeled using computational techniques and validated through simulation. The task emphasizes the integration of formal methods—especially automata theory and context-free grammars—to solve autonomous navigation problems in dynamic environments."@en ;
+    dcterms:creator "Luiz Gavaza"@en , "Lais Salvador"@en , "Daniel Cason"@en , "Roberta Oliveira"@en , "Jéssica Santana"@en , "Otávio Neto"@en ;
+    dcterms:contributor "Edeyson Gomes"@en .
+
+  ontoksd:TASK04_C04 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK04 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 .
+
+  ontoksd:TASK04_C14 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK04 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C14 .
+
+  ontoksd:TASK04_C15 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK04 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C15 .
+
+  ontoksd:TASK04_C16 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK04 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C16 .
+}
+;
+
+############# TASK05 #############
+INSERT DATA {
+  ontoksd:TASK05 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    dcterms:title "The Farmer Robot and the Feeder Robot"@en ;
+    dcterms:description "This task extends prior challenges by introducing a second robotic agent and new system functionalities. Students are required to design computational solutions using Turing Machines to coordinate the behavior of the Farmer Robot and the newly added Feeder Robot. A core requirement is that the Farmer Robot, while performing herd traversal and food delivery signaling, must also communicate the navigation path for the Feeder Robot. Both systems must share a unified abstract machine model capable of sequential read/write operations over unbounded memory, promoting code reuse and maintenance training."@en ;
+    dcterms:creator "Luiz Gavaza"@en , "Lais Salvador"@en , "Daniel Cason"@en , "Roberta Oliveira"@en ;
+    dcterms:contributor "Edeyson Gomes"@en .
+
+  ontoksd:TASK05_C04 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK05 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 .
+
+  ontoksd:TASK05_C09 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK05 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C09 .
+
+  ontoksd:TASK05_C10 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK05 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C10 .
+
+  ontoksd:TASK05_C11 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK05 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C11 .
+
+  ontoksd:TASK05_C17 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK05 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C17 .
+}
+;
+
+
+
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX gufo: <http://purl.org/nemo/gufo#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+INSERT DATA {
+  # Nova associação com C12
+  ontoksd:TASK01_C12 a ontoksd:CompetenceAssociation, gufo:Relator ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C12 ;
+    dcterms:description "Updated association: C12 was introduced to replace C05, refining the scope of the task to focus specifically on FSM modeling instead of general automata (vide Task01-CSP-Report-rev1)."@en .
+
+  # Marcação da associação anterior como substituída (manutenção do histórico)
+  ontoksd:TASK01_C05 dcterms:description "Deprecated: C05 was replaced by C12 to reflect a more specific modeling requirement using Finite State Machines (FSM)."@en .
+}

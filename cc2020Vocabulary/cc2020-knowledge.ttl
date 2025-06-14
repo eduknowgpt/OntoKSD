@@ -3,179 +3,179 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
 
 <http://purl.org/cc2020/knowledge>
     a owl:Ontology ;
     rdfs:label "CC2020 Knowledge ABox"@en ;
     rdfs:comment "Assertional knowledge (instances) for CC2020 in the OntoKSD ontology."@en .
 	
-	
-cc2020:ArchitectureandOrganization a skos:Concept ;
+cc2020:ArchitectureandOrganization a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:Hardware ;
     skos:notation "ArchitectureandOrganization" ;
     skos:prefLabel "Architecture and Organization"@en .
 
-cc2020:CircuitsandElectronics a	skos:Concept ;
+cc2020:CircuitsandElectronics a	skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:Hardware ;
     skos:notation "CircuitsandElectronics" ;
     skos:prefLabel "Circuits and Electronics"@en .
 
-cc2020:ComputerNetworks a skos:Concept ;
+cc2020:ComputerNetworks a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "ComputerNetworks" ;
     skos:prefLabel "Computer Networks"@en .
 
-cc2020:ComputingSystemsFundamentals a skos:Concept ;
+cc2020:ComputingSystemsFundamentals a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareFundamentals ;
     skos:notation "ComputingSystemsFundamentals" ;
     skos:prefLabel "Computing Systems Fundamentals"@en .
 
-cc2020:DataStructuresAlgorithmsandComplexity a skos:Concept ;
+cc2020:DataStructuresAlgorithmsandComplexity a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareFundamentals ;
     skos:notation "DataStructuresAlgorithmsandComplexity" ;
     skos:prefLabel "Data Structures, Algorithms and Complexity"@en .
 
-cc2020:DataandInformationManagement a skos:Concept ;
+cc2020:DataandInformationManagement a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsModeling ;
     skos:notation "DataandInformationManagement" ;
     skos:prefLabel "Data and Information Management"@en .
 
-cc2020:DigitalDesign a skos:Concept ;
+cc2020:DigitalDesign a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:Hardware ;
     skos:notation "DigitalDesign" ;
     skos:prefLabel "Digital Design"@en .
 
-cc2020:EmbeddedSystems a skos:Concept ;
+cc2020:EmbeddedSystems a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "EmbeddedSystems" ;
     skos:prefLabel "Embedded Systems"@en .
 
-cc2020:EnterpriseArchitecture a skos:Concept ;
+cc2020:EnterpriseArchitecture a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:UsersAndOrganizations ;
     skos:notation "EnterpriseArchitecture" ;
     skos:prefLabel "Enterprise Architecture"@en .
 
-cc2020:GraphicsandVisualization a skos:Concept ;
+cc2020:GraphicsandVisualization a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareFundamentals ;
     skos:notation "GraphicsandVisualization" ;
     skos:prefLabel "Graphics and Visualization"@en .
 
-cc2020:ISManagementandLeadership a skos:Concept ;
+cc2020:ISManagementandLeadership a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:UsersAndOrganizations ;
     skos:notation "ISManagementandLeadership" ;
     skos:prefLabel "IS Management and Leadership"@en .
 
-cc2020:IntegratedSystemsTechnology a skos:Concept ;
+cc2020:IntegratedSystemsTechnology a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "IntegratedSystemsTechnology" ;
     skos:prefLabel "Integrated Systems Technology"@en .
 
-cc2020:IntelligentSystemsAI a skos:Concept ;
+cc2020:IntelligentSystemsAI a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "IntelligentSystemsAI" ;
     skos:prefLabel "Intelligent Systems (AI)"@en .
 
-cc2020:InternetofThings a skos:Concept ;
+cc2020:InternetofThings a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "InternetofThings" ;
     skos:prefLabel "Internet of Things"@en .
 
-cc2020:OperatingSystems a skos:Concept ;
+cc2020:OperatingSystems a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareFundamentals ;
     skos:notation "OperatingSystems" ;
     skos:prefLabel "Operating Systems"@en .
 
-cc2020:ParallelandDistributedComputing a skos:Concept ;
+cc2020:ParallelandDistributedComputing a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "ParallelandDistributedComputing" ;
     skos:prefLabel "Parallel and Distributed Computing"@en .
 
-cc2020:Platform-BasedDevelopment a skos:Concept ;
+cc2020:Platform-BasedDevelopment a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareDevelopment ;
     skos:notation "Platform-BasedDevelopment" ;
     skos:prefLabel "Platform-Based Development"@en .
 
-cc2020:PlatformTechnologies a skos:Concept ;
+cc2020:PlatformTechnologies a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "PlatformTechnologies" ;
     skos:prefLabel "Platform Technologies"@en .
 
-cc2020:ProgrammingFundamentals a skos:Concept ;
+cc2020:ProgrammingFundamentals a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareFundamentals ;
     skos:notation "ProgrammingFundamentals" ;
     skos:prefLabel "Programming Fundamentals"@en .
 
-cc2020:ProgrammingLanguages a skos:Concept ;
+cc2020:ProgrammingLanguages a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareFundamentals ;
     skos:notation "ProgrammingLanguages" ;
     skos:prefLabel "Programming Languages"@en .
 
-cc2020:ProjectManagement a skos:Concept ;
+cc2020:ProjectManagement a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:UsersAndOrganizations ;
     skos:notation "ProjectManagement" ;
     skos:prefLabel "Project Management"@en .
 
-cc2020:RequirementsAnalysisandSpecifications a skos:Concept ;
+cc2020:RequirementsAnalysisandSpecifications a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsModeling ;
     skos:notation "RequirementsAnalysisandSpecifications" ;
     skos:prefLabel "Requirements Analysis and Specifications"@en .
 
-cc2020:SecurityIssuesandPrinciples a skos:Concept ;
+cc2020:SecurityIssuesandPrinciples a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsModeling ;
     skos:notation "SecurityIssuesandPrinciples" ;
     skos:prefLabel "Security Issues and Principles"@en .
 
-cc2020:SecurityPolicyandManagement a skos:Concept ;
+cc2020:SecurityPolicyandManagement a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:UsersAndOrganizations ;
     skos:notation "SecurityPolicyandManagement" ;
     skos:prefLabel "Security Policy and Management"@en .
 
-cc2020:SecurityTechnologyandImplementation a skos:Concept ;
+cc2020:SecurityTechnologyandImplementation a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "SecurityTechnologyandImplementation" ;
     skos:prefLabel "Security Technology and Implementation"@en .
 
-cc2020:SignalProcessing a skos:Concept ;
+cc2020:SignalProcessing a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:Hardware ;
     skos:notation "SignalProcessing" ;
     skos:prefLabel "Signal Processing"@en .
 
-cc2020:SocialIssuesandProfessionalPractice a skos:Concept ;
+cc2020:SocialIssuesandProfessionalPractice a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:UsersAndOrganizations ;
     skos:notation "SocialIssuesandProfessionalPractice" ;
     skos:prefLabel "Social Issues and Professional Practice"@en .
 
-cc2020:SoftwareDesign a skos:Concept ;
+cc2020:SoftwareDesign a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareDevelopment ;
     skos:notation "SoftwareDesign" ;
     skos:prefLabel "Software Design"@en .
 
-cc2020:SoftwareModelingandAnalysis a skos:Concept ;
+cc2020:SoftwareModelingandAnalysis a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareDevelopment ;
     skos:notation "SoftwareModelingandAnalysis" ;
     skos:prefLabel "Software Modeling and Analysis"@en .
 
-cc2020:SoftwareProcess a skos:Concept ;
+cc2020:SoftwareProcess a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareDevelopment ;
     skos:notation "SoftwareProcess" ;
     skos:prefLabel "Software Process"@en .
 
-cc2020:SoftwareQualityVerificationandValidation a skos:Concept ;
+cc2020:SoftwareQualityVerificationandValidation a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SoftwareDevelopment ;
     skos:notation "SoftwareQualityVerificationandValidation" ;
     skos:prefLabel "Software Quality, Verification and Validation"@en .
 
-cc2020:SystemsAnalysisandDesign a skos:Concept ;
+cc2020:SystemsAnalysisandDesign a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsModeling ;
     skos:notation "SystemsAnalysisandDesign" ;
     skos:prefLabel "Systems Analysis and Design"@en .
 
-cc2020:UserExperienceDesign a skos:Concept ;
+cc2020:UserExperienceDesign a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:UsersAndOrganizations ;
     skos:notation "UserExperienceDesign" ;
     skos:prefLabel "User Experience Design"@en .
 
-cc2020:VirtualSystemsandServices a skos:Concept ;
+cc2020:VirtualSystemsandServices a skos:Concept, ontoksd:Knowledge ;
     skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
     skos:notation "VirtualSystemsandServices" ;
     skos:prefLabel "Virtual Systems and Services"@en .

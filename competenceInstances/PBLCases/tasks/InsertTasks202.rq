@@ -1,0 +1,42 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+############# INSERÇÃO DA TAREFA TASK202 ################
+
+INSERT DATA {
+  ontoksd:Task202 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    dcterms:title "Team Control"@en ;
+    dcterms:description "This task extends the system designed in Task201 by introducing new behavioral rules: volunteers must outnumber non-volunteers in each monitored zone. Students are required to revise the automaton to support this logic, which cannot be expressed by a finite-state machine. This requires the use of memory-based automata (e.g., pushdown automata), validation via JFLAP, and the production of a technical report describing the problem, the solution, and the evaluation criteria."@en ;
+    dcterms:creator "Luiz Gavaza"@en, "Daniel Cason"@en, "Lais Salvador"@en, "Roberta Oliveira"@en ;
+    dcterms:contributor "Jéssica Santana"@en, "Otávio Neto"@en, "Edeyson Gomes"@en .
+}
+
+############# ASSOCIAÇÃO DE COMPETÊNCIAS ################
+
+INSERT DATA {
+  :assoc_T202_14 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:Task202 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C14 ;
+    dcterms:description "The core requirement of Task202 is to model a system that ensures the volunteer-to-non-volunteer ratio complies with institutional rules. This behavior cannot be represented by a simple Finite State Machine (FSM), as it requires stack-based memory to track dynamic input sequences. The use of Pushdown Automata (PDA) is essential to handle this logic, and this competence directly supports the design and implementation of memory-based computational models tailored to real-world control problems."@en .
+
+  :assoc_T202_07 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:Task202 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C07 ;
+    dcterms:description "Task202 mandates the use of simulation tools, specifically JFLAP, to validate the behavior of automata models under realistic conditions. This competence addresses the ability to systematically test and refine automaton implementations, ensuring that the modeled PDA meets operational requirements, including the enforcement of team composition rules and the correct issuance of alerts."@en .
+
+  :assoc_T202_15 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:Task202 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C15 ;
+    dcterms:description "The task includes a request from the company SOS Florestal for a formal and structured representation of the rules that govern team formation. This competence focuses on understanding and interpreting rule-based formal notations, such as context-free grammars, which are well-suited to defining the symbolic structure and constraints associated with stack-based automata behavior."@en .
+
+  :assoc_T202_04 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:Task202 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 ;
+    dcterms:description "One of the required deliverables is a technical report formatted according to SBC guidelines. This competence supports the collaborative writing of structured technical documentation that clearly communicates system design decisions, implementation strategies, simulation results, and compliance with regulatory specifications—an essential component of the project’s final assessment."@en .
+
+  :assoc_T202_16 a ontoksd:CompetenceAssociation ;
+    ontoksd:hasInstructionalEntity ontoksd:Task202 ;
+    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C16 ;
+    dcterms:description "A critical aspect of the task is to justify the inadequacy of FSMs and the necessity of PDAs based on the expressive power of different formal language classes. This competence develops the ability to distinguish between regular and context-free languages and supports theoretical justification grounded in the Chomsky hierarchy. It enables students to make informed decisions about which computational models best suit the problem context."@en .
+}

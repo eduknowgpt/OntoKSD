@@ -1,5 +1,7 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX cc2020k: <http://purl.org/cc2020/knowledge#> 
+PREFIX cc2020fpk: <http://purl.org/cc2020/foundational#> 
 
 ###############################
 # Inserção de KnowledgeSkill #
@@ -11,10 +13,10 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s) {
-    (ontoksd:RequirementsAnalysisandSpecifications ontoksd:evaluatingSkill)
-    (ontoksd:OralCommunication ontoksd:applyingSkill)
-    (ontoksd:WrittenCommunication ontoksd:applyingSkill)
-    (ontoksd:Collaboration ontoksd:applyingSkill)
+    (cc2020k:RequirementsAnalysisandSpecifications ontoksd:evaluatingSkill)
+    (cc2020fpk:OralCommunication ontoksd:applyingSkill)
+    (cc2020fpk:WrittenCommunication ontoksd:applyingSkill)
+    (cc2020fpk:Collaboration ontoksd:applyingSkill)
   }
 
   FILTER NOT EXISTS {
@@ -56,9 +58,9 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (ontoksd:RequirementsAnalysisandSpecifications ontoksd:evaluatingSkill)
-    (ontoksd:OralCommunication ontoksd:applyingSkill)
-    (ontoksd:WrittenCommunication ontoksd:applyingSkill)
-    (ontoksd:Collaboration ontoksd:applyingSkill)
+    (cc2020k:RequirementsAnalysisandSpecifications ontoksd:evaluatingSkill)
+    (cc2020fpk:OralCommunication ontoksd:applyingSkill)
+    (cc2020fpk:WrittenCommunication ontoksd:applyingSkill)
+    (cc2020fpk:Collaboration ontoksd:applyingSkill)
   }
 }

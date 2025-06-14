@@ -20,16 +20,26 @@ Em OntoKSD\ontoKSDOntology:
 5. Importar o mapeamento OntoKSD-Bloom de OntoKSD\ontoKSDOntology\skill
 	ontoKSD-Bloom-mapping.ttl
 	
-6. Carragar instâncias do CC2020
+6. Carragar instâncias do CC2020 no GraphDB
 	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\CC2020\sparql
 	
-7. Carregar instâncias do IS2020
+7. Carregar instâncias do IS2020 no GraphDB
 	Dados brutos em: 
 		I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\IS2020CompetenciesClear.txt
+	Cláusulas Sparql em:
+		I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\is2020Competencies.sparql
 	Git: 
 		https://github.com/EdeysonUFBA/EduKnow/tree/main/GraphDB
 	Carga via Java:
 		C:\Projetos\EduKnow\GraphDBSparqlApp
 	
-		
-
+8. Carregar instâncias do Body of Knowledge 2013 - cs2013Vocabulary
+	OntoKSD\cs2013Vocabulary\BoK2013Ontology.ttl
+	
+	
+9. Carregar TASKS EdukNow
+	Inserir Competências Eduknow e Tasks
+		Eclipse GraphDB->OntoKSD->SparqlBatchInserter.java
+			Executa todos arquivos .rq em I:\Meu Drive\OntoKSD\competenceInstances\...\
+	
+	

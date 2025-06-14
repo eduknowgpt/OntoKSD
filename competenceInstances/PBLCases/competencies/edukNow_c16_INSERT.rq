@@ -1,0 +1,81 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cs2013: <http://purl.org/cs2013/>
+PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
+PREFIX bloom: <http://example.org/bloom#>
+
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2013:RegularLanguages ontoksd:understandingSkill)
+    (cs2013:ContextFreeLanguages ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA EdukNow_C16 ################
+
+INSERT {
+  ontoksd:competence_EdukNow_C16 a ontoksd:Competence ;
+    dcterms:title "Differentiate classifications of formal grammars"@en ;
+    dcterms:description "This competency focuses on the ability to understand and differentiate between formal grammar classes, such as regular and context-free grammars, along with their respective computational models (e.g., finite automata and pushdown automata). Learners are expected to analyze the structural characteristics and expressive power of each grammar type and to evaluate their suitability for modeling different types of symbolic control systems or language-based behaviors. The competency supports critical understanding of the Chomsky hierarchy, enabling students to classify problems according to their grammatical complexity and to make informed decisions when selecting formal representations for system design or analysis."@en ;
+    dcterms:source "EdukNow Competence Project"@en ;
+    skos:notation "EdukNow Competence - C16"@en ;
+    ontoksd:hasCompetenceElement ontoksd:Inventive ,
+                                 ontoksd:Collaborative ,
+                                 ontoksd:Responsible ,
+                                 ontoksd:Proactive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (cs2013:RegularLanguages ontoksd:understandingSkill)
+    (cs2013:ContextFreeLanguages ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2013:RegularLanguages ontoksd:understandingSkill bloom:Identify)
+    (cs2013:RegularLanguages ontoksd:understandingSkill bloom:Classify)
+    (cs2013:RegularLanguages ontoksd:understandingSkill bloom:Compare)
+
+    (cs2013:ContextFreeLanguages ontoksd:understandingSkill bloom:Recognize)
+    (cs2013:ContextFreeLanguages ontoksd:understandingSkill bloom:Describe)
+    (cs2013:ContextFreeLanguages ontoksd:understandingSkill bloom:Differentiate)
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
