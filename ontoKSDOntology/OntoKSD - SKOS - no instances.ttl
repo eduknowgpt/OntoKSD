@@ -41,7 +41,6 @@ ontoksd:hasSuggestedVerb rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/ontoksd#acquiredIn
 ontoksd:acquiredIn rdf:type owl:ObjectProperty ;
-                   rdfs:range ontoksd:InstructionalEntity ;
                    rdfs:comment "Indicates where a learning goal was acquired."@en .
 
 
@@ -117,7 +116,7 @@ ontoksd:forCompetenceElement rdf:type owl:ObjectProperty ;
 ontoksd:hasAcquisitionContext rdf:type owl:ObjectProperty ;
                               rdfs:domain ontoksd:InstructionalEntity ;
                               rdfs:range ontoksd:AcquisitionContext ;
-                              rdfs:comment "Specifies the context of acquisition for an instructional entity."@en .
+                              rdfs:comment "Indicates the context (course offering, session, institution, etc.) in which the instructional entity is executed and competence evidence may be observed."@en .
 
 
 ###  http://purl.org/ontoksd#hasAgencyType
@@ -305,6 +304,13 @@ ontoksd:hasGoal rdf:type owl:ObjectProperty ;
                 rdfs:comment "Associates a learning goal with an instructional entity."@en .
 
 
+###  http://purl.org/ontoksd#hasInstructionalEntity
+ontoksd:hasInstructionalEntity rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
+                               rdfs:domain ontoksd:CompetenceAssociation ;
+                               rdfs:range ontoksd:InstructionalEntity .
+
+
 ###  http://purl.org/ontoksd#hasKnowledge
 ontoksd:hasKnowledge rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
@@ -435,6 +441,12 @@ ontoksd:isAttitudeFor rdf:type owl:ObjectProperty ;
                       rdfs:range ontoksd:Competence .
 
 
+###  http://purl.org/ontoksd#isBroaderThan
+ontoksd:isBroaderThan rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:Competence ;
+                      rdfs:range ontoksd:Competence .
+
+
 ###  http://purl.org/ontoksd#isCompetenceElementFor
 ontoksd:isCompetenceElementFor rdf:type owl:ObjectProperty ;
                                rdfs:domain ontoksd:CompetenceElement ;
@@ -484,17 +496,23 @@ ontoksd:isSkillFor rdf:type owl:ObjectProperty ;
                    rdfs:range ontoksd:Competence .
 
 
+###  http://purl.org/ontoksd#isSpecializationOf
+ontoksd:isSpecializationOf rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Competence .
+
+
 ###  http://purl.org/ontoksd#mediatesPrerequisiteCompetence
 ontoksd:mediatesPrerequisiteCompetence rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                                       rdfs:domain :CompetenceAssociation ;
+                                       rdfs:domain ontoksd:CompetenceAssociation ;
                                        rdfs:range ontoksd:Competence .
 
 
 ###  http://purl.org/ontoksd#mediatesTargetCompetence
 ontoksd:mediatesTargetCompetence rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                                 rdfs:domain :CompetenceAssociation ;
+                                 rdfs:domain ontoksd:CompetenceAssociation ;
                                  rdfs:range ontoksd:Competence .
 
 
@@ -585,6 +603,12 @@ ontoksd:representsKnowledgeArea rdf:type owl:ObjectProperty ;
                                 rdfs:range skos:Concept .
 
 
+###  http://purl.org/ontoksd#requiresCompetence
+ontoksd:requiresCompetence rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Competence .
+
+
 ###  http://purl.org/ontoksd#requiresCompetenceElement
 ontoksd:requiresCompetenceElement rdf:type owl:ObjectProperty ;
                                   rdfs:domain ontoksd:LearningRole ;
@@ -619,29 +643,28 @@ ontoksd:usedAsTypeOfKnowledge rdf:type owl:ObjectProperty ;
                               rdfs:range ontoksd:KnowledgeType .
 
 
-###  urn:absolute:(profissionais#hasInstructionalEntity
-:hasInstructionalEntity rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                        rdfs:domain :CompetenceAssociation ;
-                        rdfs:range ontoksd:InstructionalEntity .
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain ontoksd:InstructionalEntity .
 
 
-###  urn:absolute:(profissionais#isBroaderThan
-:isBroaderThan rdf:type owl:ObjectProperty ;
-               rdfs:domain ontoksd:Competence ;
-               rdfs:range ontoksd:Competence .
+###  urn:absolute:(profissionais#hasSupportDocument
+:hasSupportDocument rdf:type owl:ObjectProperty ;
+                    rdfs:domain ontoksd:Evidence ;
+                    rdfs:range ontoksd:Document .
 
 
-###  urn:absolute:(profissionais#isSpecializationOf
-:isSpecializationOf rdf:type owl:ObjectProperty ;
-                    rdfs:domain ontoksd:Competence ;
-                    rdfs:range ontoksd:Competence .
+###  urn:absolute:(profissionais#isLinkedToCompetenceVia
+:isLinkedToCompetenceVia rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain ontoksd:InstructionalEntity ;
+                         rdfs:range ontoksd:CompetenceAssociation ;
+                         rdfs:comment "Shortcut property linking an instructional entity to a CompetenceAssociation that specifies its target or prerequisite competencies."@en .
 
 
-###  urn:absolute:(profissionais#requiresCompetence
-:requiresCompetence rdf:type owl:ObjectProperty ;
-                    rdfs:domain ontoksd:Competence ;
-                    rdfs:range ontoksd:Competence .
+###  urn:absolute:(profissionais#selectedIn
+:selectedIn rdf:type owl:ObjectProperty ;
+            rdfs:domain ontoksd:ProficiencyLevel ;
+            rdfs:range ontoksd:Scale .
 
 
 #################################################################
@@ -654,7 +677,10 @@ ontoksd:usedAsTypeOfKnowledge rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/ontoksd#AcquisitionContext
 ontoksd:AcquisitionContext rdf:type owl:Class ;
-                           rdfs:subClassOf ontoksd:Context .
+                           rdfs:subClassOf ontoksd:Context ;
+                           rdfs:label "Acquisition Context"@en ;
+                           skos:definition "A contextual setting in which an instructional entity is implemented and competence acquisition can be observed or evaluated.\""@en ;
+                           skos:example "Course offering, semester, institution, delivery mode, target learner group."@en .
 
 
 ###  http://purl.org/ontoksd#Agency
@@ -702,6 +728,22 @@ A broader construct combining multiple personal features (knowledge, skill and d
 
 Different people may have the same competence but different context and evidences for it."""@en ;
                    rdfs:label "Competence"@en .
+
+
+###  http://purl.org/ontoksd#CompetenceAssociation
+ontoksd:CompetenceAssociation rdf:type owl:Class ;
+                              rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://purl.org/nemo/gufo#mediates> ;
+                                                owl:someValuesFrom ontoksd:Competence
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://purl.org/nemo/gufo#mediates> ;
+                                                owl:someValuesFrom ontoksd:InstructionalEntity
+                                              ] ;
+                              rdfs:comment "Reifies the relationship between a instructional entity and a competence, with support for annotations."@en ;
+                              skos:definition "A reified relation that associates an instructional entity with a competence, specifying whether it is targeted or required as a prerequisite."@en ;
+                              skos:scopeNote "Allows the same instructional entity to be linked to multiple competencies with distinct roles (e.g., prerequisite vs. learning outcome)."@en .
 
 
 ###  http://purl.org/ontoksd#CompetenceDetail
@@ -793,20 +835,23 @@ ontoksd:FormativeCredit rdf:type owl:Class .
 
 ###  http://purl.org/ontoksd#InstructionalEntity
 ontoksd:InstructionalEntity rdf:type owl:Class ;
-                            rdfs:comment """Representa a entidade concreta (atividade, tarefa, recurso, avaliação etc.) que pode gerar evidência de competência.
+                            rdfs:comment """An InstructionalEntity represents a concrete educational artifact—such as an activity, task, resource, or assessment—that may produce evidence of competence in a given context.
+		 
+It plays a key role in bridging the competency ontology and the educational domain by serving as the articulation point between competencies (both expected and evidenced) and the instructional artifacts that support their acquisition or validation.
 
-Representa um componente-chave para conectar a ontologia de competências ao domínio educacional. 
-Serve como ponto de articulação entre competências (estáticas e dinâmicas) e os artefatos instrucionais que suportam sua aquisição ou validação.
+Definition:
+An InstructionalEntity is any designed object, educational activity, or learning unit created with the intent to teach, reinforce, or assess one or more competencies.
 
-Definição:
-Uma InstructionalEntity é qualquer objeto, atividade ou unidade educacional projetada com o propósito de ensinar, reforçar ou avaliar uma ou mais competências.
+Examples include:
+– Courses, modules, and training sessions (Course, Module)
+– Assessments, projects, and simulations (Assessment, Scenario)
+– Digital educational resources (Learning Object, Content Item)
 
-Exemplos:
-Cursos, módulos, treinamentos presenciais ou online (Course, Module)
-Avaliações, projetos, simuladores (Assessment, Scenario)
-Recursos educacionais digitais (LearningObject, ContentItem)
-
-Ela é uma abstração, podendo ser especializada conforme o domínio (educação formal, corporativa, informal etc.)."""@en .
+This is an abstract concept that can be specialized according to different domains, such as formal education, corporate training, or informal learning environments."""@en ;
+                            rdfs:label "Instructional Entity"@en ;
+                            skos:definition "An InstructionalEntity is an educational artifact—such as a course, activity, resource, or assessment—designed to support the acquisition, reinforcement, or evaluation of one or more competencies within a specific context."@en ;
+                            skos:example "Examples include: academic courses, learning tasks, training modules, assessments, simulations, and digital educational resources."@en ;
+                            skos:scopeNote "This class acts as a bridge between competency models and educational interventions. It connects to competencies (as goals or prerequisites) through instances of CompetenceAssociation and is anchored in an AcquisitionContext where the instructional process and evidence collection occur."@en .
 
 
 ###  http://purl.org/ontoksd#Knowledge
@@ -917,12 +962,6 @@ ontoksd:Validation rdf:type owl:Class ;
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class .
-
-
-###  urn:absolute:(profissionais#CompetenceAssociation
-:CompetenceAssociation rdf:type owl:Class ;
-                       rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ;
-                       rdfs:comment "Reifies the relationship between a task and a competence, with support for annotations."@en .
 
 
 #################################################################
