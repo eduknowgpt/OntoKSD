@@ -1,0 +1,88 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cs2013: <http://purl.org/cs2013/>
+PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
+PREFIX bloom: <http://example.org/bloom#>
+
+#### Apply Turing Machine Concepts to Analyze Computational System Capabilities
+
+
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2013:Turing_machines ontoksd:applyingSkill)
+    (cs2013:Computability ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA EdukNow_C16 ################
+
+INSERT {
+  ontoksd:competence_EdukNow_C16 a ontoksd:Competence ;
+    dcterms:title "Apply Turing Machine Concepts to Analyze Computational System Capabilities"@en ;
+    dcterms:description "This competency involves the ability to apply the formal model of Turing Machines*to analyze and evaluate the capabilities and limitations of computational systems. Students are expected to model abstract machines, reason about their behavior, and use this understanding to classify problems as computable, semi-decidable, or undecidable. In particular, learners should be able to explore how Turing Machines provide a universal framework for algorithmic computation, and how this relates to practical systems like Online Judges (OJ), compilers, and program analyzers. This includes the ability to simulate system functionality using Turing Machine constructs and to articulate the boundaries of algorithmic problem solving."@en ;
+    dcterms:source "EdukNow Competence Project"@en ;
+    skos:notation "EdukNow Competence - C16"@en ;
+    ontoksd:hasCompetenceElement ontoksd:Inventive ,
+                                 ontoksd:Collaborative ,
+                                 ontoksd:Responsible ,
+                                 ontoksd:Proactive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (cs2013:Turing_machines ontoksd:applyingSkill)
+    (cs2013:Computability ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2013:Turing_machines ontoksd:applyingSkill bloom:Model)
+    (cs2013:Turing_machines ontoksd:applyingSkill bloom:Use)
+    (cs2013:Turing_machines ontoksd:applyingSkill bloom:Explain)	
+
+    (cs2013:Computability ontoksd:understandingSkill bloom:Classify)
+    (cs2013:Computability ontoksd:understandingSkill bloom:Distinguish)
+	(cs2013:Computability ontoksd:understandingSkill bloom:Describe)
+
+    (cs2013:AnalyticalThinking ontoksd:applyingSkill bloom:Analyze)
+    (cs2013:AnalyticalThinking ontoksd:applyingSkill bloom:Structure)
+	(cs2013:AnalyticalThinking ontoksd:applyingSkill bloom:Justify)
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}

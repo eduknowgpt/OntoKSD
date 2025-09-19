@@ -2,28 +2,23 @@ PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX cs2013: <http://purl.org/cs2013/>
 PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
-PREFIX bloom: <http://example.org/bloom#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
 
-############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+#### "Write a Technical Report"
+
+############# INSERÇÃO CONDICIONAL DO PAR KNOWLEDGESKILL ################
 
 INSERT {
   ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+      ontoksd:hasKnowledgeComponent cc2020fpk:WrittenCommunication ;
+      ontoksd:hasSkillComponent ontoksd:applyingSkill .
 }
 WHERE {
-  VALUES (?k ?s) {
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill)
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
-  }
-
   FILTER NOT EXISTS {
     ?existing a ontoksd:KnowledgeSkill ;
-              ontoksd:hasKnowledgeComponent ?k ;
-              ontoksd:hasSkillComponent ?s .
+              ontoksd:hasKnowledgeComponent cc2020fpk:WrittenCommunication ;
+              ontoksd:hasSkillComponent ontoksd:applyingSkill .
   }
 
   BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
@@ -35,26 +30,21 @@ WHERE {
 
 INSERT {
   ontoksd:competence_EdukNow_C05 a ontoksd:Competence ;
-    dcterms:title "Develop problem solutions using Automata"@en ;
-    dcterms:description "This competency refers to the ability to design, construct, and validate automaton-based solutions that address well-defined computational problems. Students are expected to interpret system requirements and model behavior using finite state machines, applying formal methods to ensure logical consistency and operational correctness."@en ;
+   	ontoksd:hasStructureType	ontoksd:Atomic ;
+	ontoksd:hasCompetenceType	ontoksd:ComputingDomain ;
+    dcterms:title "Write a Technical Report"@en ;
+    dcterms:description "This competency involves the collaborative production of a well-organized technical report that effectively communicates the design, implementation, and evaluation of automaton-based solutions."@en ;
     dcterms:source "EdukNow Competence Project"@en ;
     skos:notation "EdukNow Competence - C05"@en ;
-    ontoksd:hasCompetenceElement ontoksd:Collaborative ,
-                                 ontoksd:Responsible ,
-                                 ontoksd:Proactive ,
-                                 ontoksd:Creative ;
+    ontoksd:hasDisposition ontoksd:collaborative ,
+                                 ontoksd:Meticulous ,
+                                 ontoksd:responsible ;
     ontoksd:hasKnowledgeSkill ?ks .
 }
 WHERE {
   ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-
-  VALUES (?k ?s) {
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill)
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
-  }
+      ontoksd:hasKnowledgeComponent cc2020fpk:WrittenCommunication ;
+      ontoksd:hasSkillComponent ontoksd:applyingSkill .
 }
 
 ;
@@ -66,17 +56,9 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s ?verb) {
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill bloom:Construct)
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill bloom:Develop)
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill bloom:Design)
-
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill bloom:Interpret)
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill bloom:Implement)
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill bloom:Organize)
-
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Analyze)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Justify)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Evaluate)
+    (cc2020fpk:WrittenCommunication ontoksd:applyingSkill bloom:document)
+    (cc2020fpk:WrittenCommunication ontoksd:applyingSkill bloom:structure)
+    (cc2020fpk:WrittenCommunication ontoksd:applyingSkill bloom:explain)
   }
 
   ?ks a ontoksd:KnowledgeSkill ;

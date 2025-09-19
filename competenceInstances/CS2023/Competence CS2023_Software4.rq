@@ -1,0 +1,78 @@
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:FPL-OOP          ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-OOP          ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Functional   ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Functional   ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Logic        ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Logic        ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Event-Driven ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Event-Driven ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Types        ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Types        ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Translation  ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Translation  ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Pragmatics   ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Pragmatics   ontoksd:cs2023EvaluateSkill)
+    (cs2023:SPD-Embedded     ontoksd:cs2023ExplainSkill)
+    (cs2023:SPD-Embedded     ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Constructs   ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Constructs   ontoksd:cs2023EvaluateSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA CS2023_Software4 ################
+
+INSERT {
+  ontoksd:competence_CS2023_Software4 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+    dcterms:title "Make an informed decision regarding which programming language/paradigm to select and use for a specific application"@en ;
+    dcterms:description "Apply knowledge of multiple programming paradigms, including their strengths and weaknesses relative to the application to be developed, and select an appropriate paradigm and programming language."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Software4"@en ;
+    ontoksd:hasDisposition ontoksd:inventive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+  VALUES (?k ?s) {
+    (cs2023:FPL-OOP          ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-OOP          ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Functional   ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Functional   ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Logic        ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Logic        ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Event-Driven ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Event-Driven ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Types        ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Types        ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Translation  ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Translation  ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Pragmatics   ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Pragmatics   ontoksd:cs2023EvaluateSkill)
+    (cs2023:SPD-Embedded     ontoksd:cs2023ExplainSkill)
+    (cs2023:SPD-Embedded     ontoksd:cs2023EvaluateSkill)
+    (cs2023:FPL-Constructs   ontoksd:cs2023ExplainSkill)
+    (cs2023:FPL-Constructs   ontoksd:cs2023EvaluateSkill)
+  }
+}

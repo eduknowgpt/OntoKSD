@@ -4,7 +4,10 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cs2013: <http://purl.org/cs2013/>
 PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
-PREFIX bloom: <http://example.org/bloom#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+#### Differentiate classifications of formal grammars
+
 
 ############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
 
@@ -15,8 +18,8 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s) {
-    (cs2013:PushDownAutomata ontoksd:applyingSkill)
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill)
+    (cs2013:Regular_languages ontoksd:understandingSkill)
+    (cs2013:Context_free_languages ontoksd:understandingSkill)
     (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
   }
 
@@ -35,15 +38,16 @@ WHERE {
 
 INSERT {
   ontoksd:competence_EdukNow_C14 a ontoksd:Competence ;
-    dcterms:title "Develop problem-solving solutions using Pushdown Automata"@en ;
-    dcterms:description "This competency involves the ability to design and implement computational models using Pushdown Automata (PDAs) to represent behaviors that require memory-based decision-making. Learners are expected to model and simulate systems in which stack-based memory is essential for tasks such as backtracking, nested structure recognition, or sequential navigation. The application of PDAs may span domains such as robotic control, language parsing, or symbolic computation, and requires understanding how transitions, inputs, and stack operations interact to produce context-aware responses. Students should demonstrate the ability to apply formal concepts to construct models that are both theoretically sound and practically effective for solving problems involving structured or hierarchical processes."@en ;
+   	ontoksd:hasStructureType	ontoksd:Atomic ;
+	ontoksd:hasCompetenceType	ontoksd:ComputingDomain ;
+    dcterms:title "Differentiate classifications of formal grammars"@en ;
+    dcterms:description "This competency focuses on the ability to understand and differentiate between formal grammar classes, such as regular and context-free grammars, along with their respective computational models (e.g., finite automata and pushdown automata). Learners are expected to analyze the structural characteristics and expressive power of each grammar type and to evaluate their suitability for modeling different types of symbolic control systems or language-based behaviors. The competency supports critical understanding of the Chomsky hierarchy, enabling students to classify problems according to their grammatical complexity and to make informed decisions when selecting formal representations for system design or analysis."@en ;
     dcterms:source "EdukNow Competence Project"@en ;
     skos:notation "EdukNow Competence - C14"@en ;
-    ontoksd:hasCompetenceElement ontoksd:Inventive ,
-                                 ontoksd:Collaborative ,
-                                 ontoksd:Responsible ,
-                                 ontoksd:Proactive ,
-                                 ontoksd:Creative ;
+    ontoksd:hasDisposition ontoksd:inventive ,
+                                 ontoksd:collaborative ,
+                                 ontoksd:responsible ,
+                                 ontoksd:proactive ;
     ontoksd:hasKnowledgeSkill ?ks .
 }
 WHERE {
@@ -52,8 +56,8 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (cs2013:PushDownAutomata ontoksd:applyingSkill)
-    (cs2013:RequirementsEngineering ontoksd:applyingSkill)
+    (cs2013:Regular_languages ontoksd:understandingSkill)
+    (cs2013:Context_free_languages ontoksd:understandingSkill)
     (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
   }
 }
@@ -67,8 +71,13 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s ?verb) {
-    (cs2013:PushDownAutomata ontoksd:applyingSkill bloom:Develop)
-    (cs2013:PushDownAutomata ontoksd:applyingSkill bloom:Model)
+    (cs2013:Regular_languages ontoksd:understandingSkill bloom:identify)
+    (cs2013:Regular_languages ontoksd:understandingSkill bloom:classify)
+    (cs2013:Regular_languages ontoksd:understandingSkill bloom:compare)
+
+    (cs2013:Context_free_languages ontoksd:understandingSkill bloom:recognize)
+    (cs2013:Context_free_languages ontoksd:understandingSkill bloom:describe)
+    (cs2013:Context_free_languages ontoksd:understandingSkill bloom:differentiate)
   }
 
   ?ks a ontoksd:KnowledgeSkill ;

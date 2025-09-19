@@ -1,0 +1,56 @@
+@prefix ontoksd:   <https://example.org/ontoksd#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:      <http://www.w3.org/2006/time#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix dcat:      <http://www.w3.org/ns/dcat#> .
+@prefix schema:    <https://schema.org/> .
+
+#############################
+# ASSESSMENTS (group-based)
+#############################
+
+INSERT DATA {
+ontoksd:assessment_PBL_01 a ontoksd:Assessment ;
+  dcterms:title "Technical Report – Design and Process"@en ;
+  dcterms:description "Written report documenting the solution, formal justification, simulation evidence, and development process."@en ;
+  ontoksd:producesEvidence ontoksd:evidence_competence_C05 ;
+  ontoksd:hasDigitalArtifact ontoksd:artifact_report_guidelines , ontoksd:artifact_report_rubric ;
+  ontoksd:maxScore "10"^^xsd:decimal ;
+  ontoksd:weight "1.00"^^xsd:decimal .
+
+ontoksd:artifact_report_guidelines a ontoksd:DigitalArtifact ;
+  dcterms:title "Technical Report – Guidelines"@en ;
+  dcterms:format "application/pdf" ;
+  dcat:downloadURL <https://example.edu/assessments/report_guidelines.pdf> .
+
+ontoksd:artifact_report_rubric a ontoksd:DigitalArtifact ;
+  dcterms:title "Technical Report – Rubric"@en ;
+  dcterms:format "application/pdf" ;
+  dcat:downloadURL <https://example.edu/assessments/report_rubric.pdf> .
+  
+}
+
+
+
+
+INSERT DATA {
+ontoksd:assessment_tech_report a ontoksd:Assessment ;
+  dcterms:title "Technical Report – Design and Process"@en ;
+  dcterms:description "Written report documenting the solution, formal justification, simulation evidence, and development process."@en ;
+  ontoksd:producesEvidence ontoksd:evidence_competence_C05 ;
+  ontoksd:hasDigitalArtifact ontoksd:artifact_report_guidelines , ontoksd:artifact_report_rubric ;
+  ontoksd:maxScore "10"^^xsd:decimal ;
+  ontoksd:weight "1.00"^^xsd:decimal .
+
+ontoksd:artifact_report_guidelines a ontoksd:DigitalArtifact ;
+  dcterms:title "Technical Report – Guidelines"@en ;
+  dcterms:format "application/pdf" ;
+  dcat:downloadURL <https://example.edu/assessments/report_guidelines.pdf> .
+
+ontoksd:artifact_report_rubric a ontoksd:DigitalArtifact ;
+  dcterms:title "Technical Report – Rubric"@en ;
+  dcterms:format "application/pdf" ;
+  dcat:downloadURL <https://example.edu/assessments/report_rubric.pdf> .
+  
+}

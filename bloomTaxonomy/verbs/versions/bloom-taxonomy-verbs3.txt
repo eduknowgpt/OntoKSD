@@ -1,0 +1,2678 @@
+@prefix cs2023:  <http://purl.org/edu/cs2023#> .
+@prefix bloom: <http://purl.org/edu/bloom#> .
+@prefix cs2023:  <http://purl.org/edu/cs2023#> .
+@prefix ontoksd:  <http://purl.org/ontoksd#> .
+
+### ### ###   http://purl.org/edu/bloom### Analyze
+bloom:Analyze rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Analyzing, cs2023:Evaluate ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;
+              <http://purl.org/dc/terms/references> <https://dl.acm.org/doi/10.1145/3573260> ;
+              rdfs:comment "Breaking down a system or idea into constituent parts to understand it better."@en ;
+              rdfs:label "analyze"@en ;
+              skos:definition "Break down a system, process, or dataset into its components to understand structure, function, or behavior."@en ;
+              skos:example "Analyze a sorting algorithm to determine its time complexity."@en ;
+              skos:note "Core cognitive action in computing tasks such as algorithm analysis, systems evaluation, and data inspection."@en ;
+              skos:prefLabel "analyze"@en .
+
+### ### ###   http://purl.org/edu/bloom### Appraise
+bloom:Appraise rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Evaluating ;
+			   bloom:hasActionVerbType bloom:StandardVerb;
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Assessing the value or quality of something."@en ;
+               rdfs:label "appraise"@en ;
+               skos:definition "Assess the value, significance, or quality of something."@en ;
+               skos:example "Appraise the effectiveness of a marketing strategy."@en ;
+               skos:note "Common in evaluations of performance or proposals."@en ;
+               skos:prefLabel "appraise"@en ;
+               skos:related bloom:Assess ,
+                            bloom:Rate .
+
+### ### ###   http://purl.org/edu/bloom### Argue
+bloom:Argue rdf:type owl:NamedIndividual ,
+                     bloom:ActionVerb ;
+            bloom:isActionVerbFor bloom:Evaluating ;
+            <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+            rdfs:comment "Presenting reasons for or against something."@en ;
+            rdfs:label "argue"@en ;
+            skos:definition "Present reasons or evidence to support or oppose a point of view."@en ;
+            skos:example "Argue for the adoption of open-source software in government."@en ;
+            skos:note "Develops logical structure and persuasive writing skills."@en ;
+            skos:prefLabel "argue"@en ;
+            skos:related bloom:Defend ,
+                         bloom:Justify .
+
+### ### ###   http://purl.org/edu/bloom### Assemble
+bloom:Assemble rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Creating ;
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Putting together various elements."@en ;
+               rdfs:label "assemble"@en ;
+               skos:definition "Put together separate components or elements into a functional whole."@en ;
+               skos:example "Assemble a presentation from multiple sources."@en ;
+               skos:note "Frequently used in prototyping, documentation, and synthesis tasks."@en ;
+               skos:prefLabel "assemble"@en ;
+               skos:related bloom:Build ,
+                            bloom:Construct .
+
+### ### ###   http://purl.org/edu/bloom### Assess
+bloom:Assess rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Evaluating, bloom:Evaluate  ;
+			 			  bloom:hasActionVerbType bloom:CS2023Verb ;
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Evaluating the nature or quality of something."@en ;
+             rdfs:label "assess"@en ;
+             skos:definition "Evaluate the nature, ability, or quality of something."@en ;
+             skos:example "Assess the clarity of a student's explanation."@en ;
+             skos:note "Widely used in educational, technical, and clinical assessments."@en ;
+             skos:prefLabel "assess"@en ;
+             skos:related bloom:Appraise ,
+                          bloom:Judge .
+
+### ### ###   http://purl.org/edu/bloom### Attribute
+bloom:Attribute rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Analyzing ;
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Determining the source or cause of something."@en ;
+                rdfs:label "attribute"@en ;
+                skos:definition "Identify the source, cause, or origin of something."@en ;
+                skos:example "Attribute a bug to a misconfigured variable."@en ;
+                skos:note "Essential in tracing causality or authorship in academic and technical contexts."@en ;
+                skos:prefLabel "attribute"@en ;
+                skos:related bloom:Determine ,
+                             bloom:Infer .
+
+
+###  ----- Backup verb -----
+bloom:Backup
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "backup"@en ;
+    skos:prefLabel "backup"@en ;
+    rdfs:comment 
+        "Create redundant copies of files, folders, or systems to ensure recoverability and continuity."@en ;
+    skos:definition 
+        "Create copies of data or systems for the purpose of preventing loss and enabling recovery."@en ;
+    skos:example 
+        "Backup multiple local or remote directories to a secure backup volume."@en ;
+    skos:example 
+        "Backup marked data automatically to a remote location using a scheduled script."@en ;
+    skos:note 
+        "Essential task for data integrity, system administration, and business continuity."@en ;
+    skos:related bloom:Restore, bloom:Recover .
+
+
+### ### ###   http://purl.org/edu/bloom### Calculate
+bloom:Calculate rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+				bloom:hasActionVerbType bloom:CS2023Verb ;				
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Determining a numerical result."@en ;
+                rdfs:label "calculate"@en ;
+                skos:definition "Determine a numerical result using mathematical procedures or formulas."@en ;
+                skos:example "Calculate the area of a circle with radius 5."@en ;
+                skos:note "Common in STEM disciplines where quantitative reasoning is applied."@en ;
+                skos:prefLabel "calculate"@en ;
+                skos:related bloom:Compute ,
+                             bloom:Solve .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Check
+bloom:Check rdf:type owl:NamedIndividual ,
+                     bloom:ActionVerb ;
+            bloom:isActionVerbFor bloom:Evaluating ;
+            <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+            rdfs:comment "Assessing the validity of statements or arguments."@en ;
+            rdfs:label "check"@en ;
+            skos:definition "Examine something to determine its accuracy, validity, or condition."@en ;
+            skos:example "Check the correctness of the calculated result."@en ;
+            skos:note "Common in troubleshooting, debugging, and validation."@en ;
+            skos:prefLabel "check"@en ;
+            skos:related bloom:Inspect ,
+                         bloom:Verify .
+
+
+### ### ###   http://purl.org/edu/bloom### Classify
+bloom:Classify rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Understanding, cs2023:Evaluate ;
+				bloom:hasActionVerbType bloom:CS2023Verb ;				   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Grouping items into categories based on shared characteristics."@en ;
+               rdfs:label "classify"@en ;
+               skos:definition "Arrange or organize items into groups based on shared properties or criteria."@en ;
+               skos:example "Classify programming languages according to paradigm."@en ;
+               skos:note "Supports logical organization and taxonomy development."@en ;
+               skos:prefLabel "classify"@en ;
+               skos:related bloom:Categorize ,
+                            bloom:Group .
+
+
+###  ----- Code verb -----
+bloom:Code
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3453538> ;
+    rdfs:label "code"@en ;
+    skos:prefLabel "code"@en ;
+    rdfs:comment "Write computer programs or scripts in a programming language."@en ;
+    skos:definition "Translate computational logic or flowcharts into syntactically correct program code."@en ;
+    skos:example "Code a Python program from a provided flowchart."@en ;
+    skos:example "Code a Java function to calculate Fibonacci sequence"@en ;	
+    skos:example "Code cloud infrastructure orchestration using a script."@en ;
+    skos:note "Distinct from higher-level 'design'."@en ;
+    skos:related bloom:Script, bloom:Program .
+	
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Compare
+bloom:Compare rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Analyzing ,
+                                    bloom:Understanding, boom:Evaluate ;
+			bloom:hasActionVerbType bloom:CS2023Verb ;									
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Examining the similarities and differences."@en ,
+                           "Identifying similarities and differences."@en ;
+              rdfs:label "compare"@en ;
+              skos:definition "Examine two or more elements to identify similarities and differences."@en ,
+                              "Identify similarities and/or differences between two or more elements."@en ;
+              skos:example "Compare bubble sort and merge sort algorithms."@en ,
+                           "Compare two sorting algorithms in terms of time complexity."@en ;
+              skos:note "Promotes analytical thinking and evaluation."@en ,
+                        "Widely used in contrastive analysis and decision making."@en ;
+              skos:prefLabel "compare"@en ;
+              skos:related bloom:Analyzing ,
+                           bloom:Contrast ,
+                           bloom:Differentiate .
+
+
+###  ----- Compile verb -----
+bloom:Compile
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Develop ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "compile"@en ;
+    skos:prefLabel "compile"@en ;
+    rdfs:comment "Transform source code into executable form via compilation."@en ;
+    skos:definition "Use a compiler to translate high-level code into machine or intermediate code."@en ;
+    skos:example "Compile a C program using a command-line interface."@en ;
+    skos:example "Compile low-level code for a specific operating system target."@en ;
+    skos:note "Essential in development workflows involving compiled languages."@en ;
+    skos:related bloom:Build, bloom:Link .
+
+
+### ### ###   http://purl.org/edu/bloom### Compose
+bloom:Compose rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Creating, cs2023:Develop ;
+			bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Creating a work of art or text."@en ;
+              rdfs:label "compose"@en ;
+              skos:definition "Create a written, musical, or visual work by combining elements into a structured whole."@en ;
+              skos:example "Compose a poem about technology and society."@en ;
+              skos:note "Emphasizes artistic or linguistic creation."@en ;
+              skos:prefLabel "compose"@en ;
+              skos:related bloom:Creating ,
+                           bloom:Develop .
+
+
+### ### ###   http://purl.org/edu/bloom### Construct
+bloom:Construct rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Creating, cs2023:Develop ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;				
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Building something."@en ;
+                rdfs:label "construct"@en ;
+                skos:definition "Build or assemble a tangible or conceptual object using components or ideas."@en ;
+                skos:example "Construct a mind map to represent research findings."@en ;
+                skos:note "Can apply to physical, digital, or abstract domains."@en ;
+                skos:prefLabel "construct"@en ;
+                skos:related bloom:Assemble ,
+                             bloom:Develop .
+
+
+
+
+
+### ### ###   http://purl.org/edu/bloom### Contrast
+bloom:Contrast rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Analyzing, cs2023:Evaluate ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Highlighting the differences between things."@en ;
+               rdfs:label "contrast"@en ;
+               skos:definition "Emphasize the differences between two or more elements."@en ;
+               skos:example "Contrast imperative and declarative programming paradigms."@en ;
+               skos:note "Supports analytical judgment and model evaluation."@en ;
+               skos:prefLabel "contrast"@en ;
+               skos:related bloom:CompareAnalyze ,
+                            bloom:Differentiate .
+
+
+
+
+
+### ### ###   http://purl.org/edu/bloom### Critique
+bloom:Critique rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Evaluating ;
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Providing feedback based on criteria and standards."@en ;
+               rdfs:label "critique"@en ;
+               skos:definition "Evaluate something in detail by identifying strengths, weaknesses, and areas for improvement."@en ;
+               skos:example "Critique a peer’s essay using the assessment rubric."@en ;
+               skos:note "Fosters analytical thinking and constructive feedback."@en ;
+               skos:prefLabel "critique"@en ;
+               skos:related bloom:Evaluating ,
+                            bloom:Review .
+
+
+###  ----- Decrypt verb -----
+bloom:Decrypt
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://www.connectwise.com/cybersecurity-center/glossary/decryption-definition> ;
+    rdfs:label "decrypt"@en ;
+    skos:prefLabel "decrypt"@en ;
+    rdfs:comment "Restore encrypted information to its original, readable form using the appropriate decryption method."@en ;
+    skos:definition "Transform encrypted data back into its original, readable format."@en ;
+    skos:example "Decrypt a ciphertext using the appropriate cryptographic key and algorithm."@en ;
+    skos:example "Decrypt a received email using a private key."@en ;
+    skos:note "Complements encryption workflows in secure communications and data handling."@en ;
+    skos:related bloom:Encrypt, bloom:Restore 
+
+
+### ### ###   http://purl.org/edu/bloom### Defend
+bloom:Defend rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Evaluating, bloom:Evaluate  ;
+			bloom:hasActionVerbType bloom:CS2023Verb ;			 
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Supporting a position with evidence."@en ;
+             rdfs:label "defend"@en ;
+             skos:definition "Support a claim or position with logical reasoning and evidence."@en ;
+             skos:example "Defend your choice of algorithm in terms of efficiency."@en ;
+             skos:note "Often appears in debates, essays, and oral defenses."@en ;
+             skos:prefLabel "defend"@en ;
+             skos:related bloom:Argue ,
+                          bloom:Justify .
+
+
+### ### ###   http://purl.org/edu/bloom### Define
+bloom:Define rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			 
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Stating the meaning of a term or concept." ;
+             rdfs:label "define"@en ;
+             skos:definition "State or identify the precise meaning of a term or concept"@en ;
+             skos:example "Define the term 'object-oriented programming'"@en ;
+             skos:note "Fundamental verb for establishing shared vocabulary"@en ;
+             skos:prefLabel "define"@en ;
+             skos:related bloom:Identify ,
+                          bloom:State .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Demonstrate
+bloom:Demonstrate rdf:type owl:NamedIndividual ,
+                           bloom:ActionVerb ;
+                  bloom:isActionVerbFor bloom:Applying ;
+                  <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                  rdfs:comment "Showing how to do something."@en ;
+                  rdfs:label "demonstrate"@en ;
+                  skos:definition "Show clearly and deliberately how something works or is done."@en ;
+                  skos:example "Demonstrate how to solve a quadratic equation."@en ;
+                  skos:note "Useful in lab, training, and skill-based learning environments."@en ;
+                  skos:prefLabel "demonstrate"@en ;
+                  skos:related bloom:Illustrate ,
+                               bloom:Perform .
+
+
+###  ----- Deploy verb -----
+bloom:Deploy
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "deploy"@en ;
+    skos:prefLabel "deploy"@en ;
+    rdfs:comment "Make software systems or services available in an operational environment."@en ;
+    skos:definition "Release and configure software or virtual systems for production use."@en ;
+    skos:example "Deploy a web application to a cloud platform."@en ;
+    skos:example "Deploy a machine learning inference pipeline to production."@en ;
+    skos:example "Deploy multiple virtual machine instances from a template."@en ;
+    skos:note "Central to DevOps workflows and lifecycle management."@en ;
+    skos:related bloom:Build, bloom:Configure .
+
+
+### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Describe
+bloom:Describe rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Giving a detailed account of something."@en ;
+               rdfs:label "describe"@en ;
+               skos:definition "Give a detailed account or representation of something, including its properties or actions."@en ;
+               skos:example "Describe the process of compiling a Java program."@en ;
+               skos:note "Frequently used in introductory contexts and procedural descriptions."@en ;
+               skos:prefLabel "describe"@en ;
+               skos:related bloom:Identify ,
+                            bloom:Label .
+
+
+### ### ###   http://purl.org/edu/bloom### Design
+bloom:Design rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Creating, cs2023:Develop ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			 
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Developing a detailed plan or concept."@en ;
+             rdfs:label "design"@en ;
+             skos:definition "Create a detailed plan or blueprint for something to be constructed or executed."@en ;
+             skos:example "Design a database schema for an online store."@en ;
+             skos:note "Core activity in engineering, computing, and instructional development."@en ;
+             skos:prefLabel "design"@en ;
+             skos:related bloom:Develop ,
+                          bloom:Plan .
+
+
+###  ----- Detect verb -----
+bloom:Detect
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "detect"@en ;
+    skos:prefLabel "detect"@en ;
+    rdfs:comment "Identify specific events, anomalies, or signals in systems or data."@en ;
+    skos:definition "Identify the presence of a specific condition, event, or anomaly within a system."@en ;
+    skos:example "Detect a potential vulnerability in given source code."@en ;
+    skos:example "Detect an instance of unauthorized file sharing."@en ;
+    skos:note "Widely used in cybersecurity, diagnostics, and anomaly detection tasks."@en ;
+    skos:related bloom:Monitor, bloom:Analyze .
+
+
+### ### ###   http://purl.org/edu/bloom### Develop
+bloom:Develop rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Creating, cs2023:Develop ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			  
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Elaborating on an idea or project."@en ;
+              rdfs:label "develop"@en ;
+              skos:definition "Advance or expand an idea, product, or process from conception to implementation."@en ;
+              skos:example "Develop a software prototype based on user requirements."@en ;
+              skos:note "Often represents the full lifecycle from design to testable version."@en ;
+              skos:prefLabel "develop"@en ;
+              skos:related bloom:Design ,
+                           bloom:Produce .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Differentiate
+bloom:Differentiate rdf:type owl:NamedIndividual ,
+                             bloom:ActionVerb ;
+                    bloom:isActionVerbFor bloom:Analyzing, cs2023:Evaluate ;
+					   bloom:hasActionVerbType bloom:CS2023Verb ;
+                    <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                    rdfs:comment "Distinguishing relevant from irrelevant parts."@en ;
+                    rdfs:label "differentiate"@en ;
+                    skos:definition "Distinguish between elements based on characteristics, relevance, or importance."@en ;
+                    skos:example "Differentiate critical from non-critical errors in a log file."@en ;
+                    skos:note "Key to prioritization and evidence-based decision making."@en ;
+                    skos:prefLabel "differentiate"@en ;
+                    skos:related bloom:CompareAnalyze ,
+                                 bloom:Discriminate .
+
+
+### ### ###   http://purl.org/edu/bloom### Discuss
+bloom:Discuss rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Understanding, cs2023:Explain ;
+   bloom:hasActionVerbType  bloom:CS2023Verb ;			  
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Talking about a topic in detail."@en ;
+              rdfs:label "discuss"@en ;
+              skos:definition "Talk about a topic in detail, considering various points of view or aspects."@en ;
+              skos:example "Discuss the advantages and disadvantages of open source software."@en ;
+              skos:note "Promotes deeper engagement and articulation of ideas in dialogue or writing."@en ;
+              skos:prefLabel "discuss"@en ;
+              skos:related bloom:Compare ,
+                           bloom:Explain .
+
+
+###  ----- Encrypt verb -----
+bloom:Encrypt
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "encrypt"@en ;
+    skos:prefLabel "encrypt"@en ;
+    rdfs:comment "Protect data by converting it into a coded form to prevent unauthorized access."@en ;
+    skos:definition "Transform data into an encrypted format using cryptographic methods."@en ;
+    skos:example "Encrypt files or folders using RSA or AES encryption tools."@en ;
+    skos:example "Encrypt user data on a computer using a public key."@en ;
+    skos:note "Essential for data confidentiality in cybersecurity."@en ;
+    skos:related bloom:Decrypt, bloom:Secure .
+
+
+### ### ###  Definition of the verb "enumerate" as an ActionVerb individual
+bloom:Enumerate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "enumerate"@en ;
+    rdfs:comment 
+        "To list or count distinct items in a clear and structured manner, useful for recalling sets in technical domains."@en ;
+    skos:prefLabel "enumerate"@en ;
+    skos:definition 
+        "List or count distinct items, often in a specific order."@en ;
+    skos:example 
+        "Enumerate the essential steps in the cybersecurity threat elimination chain."@en ;
+    skos:example 
+        "Enumerate the stages of the software development life cycle (SDLC)."@en ;
+    skos:example 
+        "Enumerate the values contained in a dataset’s collection."@en ;
+    skos:note 
+        "Often parallels the non-computing 'list', but emphasizes computing contexts."@en ;
+    skos:related bloom:List .
+
+
+
+### ### ###   http://purl.org/edu/bloom### Examine
+bloom:Examine rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Analyzing ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Inspecting something in detail."@en ;
+              rdfs:label "examine"@en ;
+              skos:definition "Inspect something carefully to determine its nature or condition."@en ;
+              skos:example "Examine the structure of a linked list implementation."@en ;
+              skos:note "Important in exploratory and observational learning."@en ;
+              skos:prefLabel "examine"@en ;
+              skos:related bloom:Analyzing ,
+                           bloom:Investigate .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Execute
+bloom:Execute rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Applying ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Carrying out a procedure."@en ;
+              rdfs:label "execute"@en ;
+              skos:definition "Carry out a pre-defined procedure or plan of action."@en ;
+              skos:example "Execute the instructions in a programming script."@en ;
+              skos:note "Often associated with automation, procedures, and algorithms."@en ;
+              skos:prefLabel "execute"@en ;
+              skos:related bloom:Implement ,
+                           bloom:Perform .
+
+
+### ### ###   http://purl.org/edu/bloom### Exemplify
+bloom:Exemplify rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Understanding ;
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Giving examples to illustrate a concept."@en ;
+                rdfs:label "exemplify"@en ;
+                skos:definition "Provide one or more examples to clarify or support a concept or statement."@en ;
+                skos:example "Exemplify the use of recursion with the factorial function."@en ;
+                skos:note "Helps bridge abstract concepts to concrete understanding."@en ;
+                skos:prefLabel "exemplify"@en ;
+                skos:related bloom:Explain ,
+                             bloom:Illustrate .
+
+
+### ### ###   http://purl.org/edu/bloom### Explain
+bloom:Explain rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Understanding ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Making something clear by describing it in detail."@en ;
+              rdfs:label "explain"@en ;
+              skos:definition "Make something clear by describing it in detail, including relevant facts or ideas."@en ;
+              skos:example "Explain how a neural network functions."@en ;
+              skos:note "Often used in knowledge checks and explanatory writing."@en ;
+              skos:prefLabel "explain"@en ;
+              skos:related bloom:Describe ,
+                           bloom:Discuss .
+
+
+### ### ###   http://purl.org/edu/bloom### Formulate
+bloom:Formulate rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Creating ;
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Creating a strategy or proposal."@en ;
+                rdfs:label "formulate"@en ;
+                skos:definition "Devise a strategy, plan, or expression in a clear and organized manner."@en ;
+                skos:example "Formulate a set of usability principles for mobile apps."@en ;
+                skos:note "Supports abstraction and structured design."@en ;
+                skos:prefLabel "formulate"@en ;
+                skos:related bloom:Plan ,
+                             bloom:Propose .
+
+
+### ### ###   http://purl.org/edu/bloom### Generate
+bloom:Generate rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Creating ;
+     		bloom:hasActionVerbType bloom:ComputingVerb ;			   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Producing new ideas or solutions."@en ;
+               rdfs:label "generate"@en ;
+               skos:definition "Produce ideas, options, or possibilities based on given input or criteria."@en ;
+               skos:example "Generate hypotheses for a science experiment."@en ;
+               skos:note "Often the first step in divergent thinking and ideation."@en ;
+               skos:prefLabel "generate"@en ;
+               skos:related bloom:Creating ,
+                            bloom:Invent .
+
+
+### ### ###   http://purl.org/edu/bloom### Identify
+bloom:Identify rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Determining the identity of a subject or object."@en ;
+               rdfs:label "identify"@en ;
+               skos:definition "Determine or establish the identity of someone or something."@en ;
+               skos:example "Identify the main components of a CPU."@en ;
+               skos:note "Fundamental in classification and diagnostic tasks."@en ;
+               skos:prefLabel "identify"@en ;
+               skos:related bloom:Define ,
+                            bloom:Recognize .
+
+
+### ### ###   http://purl.org/edu/bloom### Illustrate
+bloom:Illustrate rdf:type owl:NamedIndividual ,
+                          bloom:ActionVerb ;
+                 bloom:isActionVerbFor bloom:Applying ;
+                 <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                 rdfs:comment "Providing visual or concrete examples."@en ;
+                 rdfs:label "illustrate"@en ;
+                 skos:definition "Use examples, diagrams, or other visual elements to clarify a concept."@en ;
+                 skos:example "Illustrate the flow of control in a for loop with a diagram."@en ;
+                 skos:note "Supports visual learning and concept reinforcement."@en ;
+                 skos:prefLabel "illustrate"@en ;
+                 skos:related bloom:Demonstrate ,
+                              bloom:Exemplify .
+
+
+### ### ###   http://purl.org/edu/bloom### Implement
+bloom:Implement rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Applying ;
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Using a procedure in a new situation."@en ;
+                rdfs:label "implement"@en ;
+                skos:definition "Put a plan, method, or idea into effect in a new context."@en ;
+                skos:example "Implement a sorting algorithm in Python."@en ;
+                skos:note "Bridges theoretical knowledge with practical application."@en ;
+                skos:prefLabel "implement"@en ;
+                skos:related bloom:Applying ,
+                             bloom:Execute .
+
+
+### ### ###   http://purl.org/edu/bloom### Infer
+bloom:Infer rdf:type owl:NamedIndividual ,
+                     bloom:ActionVerb ;
+            bloom:isActionVerbFor bloom:Understanding ;
+            <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+            rdfs:comment "Drawing conclusions from evidence and reasoning."@en ;
+            rdfs:label "infer"@en ;
+            skos:definition "Draw conclusions or make assumptions based on available evidence and reasoning."@en ;
+            skos:example "Infer the user’s intent based on their search behavior."@en ;
+            skos:note "Important for developing reasoning and critical thinking skills."@en ;
+            skos:prefLabel "infer"@en ;
+            skos:related bloom:Interpret ,
+                         bloom:Predict .
+
+
+###  ----- Install verb -----
+bloom:Install
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "install"@en ;
+    skos:prefLabel "install"@en ;
+    rdfs:comment "Set up software or hardware components ready for use in a computing environment."@en ;
+    skos:definition "Place and configure software, services, or devices within a system so they are operational."@en ;
+    skos:example "Install a Linux distribution on a virtual machine."@en ;
+    skos:example "Install a Docker engine on a target host."@en ;
+    skos:example "Install a hardware firewall in a network infrastructure."@en ;
+    skos:note "Crucial for establishing and preparing computing environments."@en ;
+    skos:related bloom:Deploy, bloom:Configure .
+
+
+### ### ###   http://purl.org/edu/bloom### Interpret
+bloom:Interpret rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Understanding, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;				
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Explaining the meaning of information."@en ;
+                rdfs:label "interpret"@en ;
+                skos:definition "Explain or make sense of information, often translating it from one form to another."@en ;
+                skos:example "Interpret the meaning of a metaphor in a poem."@en ;
+                skos:note "Useful for making content accessible across different media or forms."@en ;
+                skos:prefLabel "interpret"@en ;
+                skos:related bloom:Paraphrase ,
+                             bloom:Translate .
+
+
+### ### ###   http://purl.org/edu/bloom### Invent
+bloom:Invent rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Creating ;
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Developing a new method, idea, or product."@en ;
+             rdfs:label "invent"@en ;
+             skos:definition "Devise or originate a new idea, method, or device."@en ;
+             skos:example "Invent a new board game to teach programming logic."@en ;
+             skos:note "Emphasizes originality and creativity beyond recombination."@en ;
+             skos:prefLabel "invent"@en ;
+             skos:related bloom:Formulate ,
+                          bloom:Generate .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Investigate
+bloom:Investigate rdf:type owl:NamedIndividual ,
+                           bloom:ActionVerb ;
+                  bloom:isActionVerbFor bloom:Analyzing ;
+                  <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                  rdfs:comment "Examining a subject in detail."@en ;
+                  rdfs:label "investigate"@en ;
+                  skos:definition "Examine a matter systematically and in detail."@en ;
+                  skos:example "Investigate the root cause of a system crash."@en ;
+                  skos:note "Encourages exploration and problem framing."@en ;
+                  skos:prefLabel "investigate"@en ;
+                  skos:related bloom:Explore ,
+                               bloom:Question .
+
+
+### ### ###   http://purl.org/edu/bloom### Judge
+bloom:Judge rdf:type owl:NamedIndividual ,
+                     bloom:ActionVerb ;
+            bloom:isActionVerbFor bloom:Evaluating ;
+            <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+            rdfs:comment "Forming an opinion based on criteria."@en ;
+            rdfs:label "judge"@en ;
+            skos:definition "Form an opinion or conclusion based on analysis and standards."@en ;
+            skos:example "Judge the relevance of a cited source in a research paper."@en ;
+            skos:note "Encourages critical evaluation and ethical reasoning."@en ;
+            skos:prefLabel "judge"@en ;
+            skos:related bloom:Assess ,
+                         bloom:Evaluating .
+
+
+### ### ###   http://purl.org/edu/bloom### Justify
+bloom:Justify rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Evaluating ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Providing reasons or evidence to support a conclusion."@en ;
+              rdfs:label "justify"@en ;
+              skos:definition "Provide reasons, evidence, or rationale to support a decision, action, or viewpoint."@en ;
+              skos:example "Justify the selection of a user interface layout based on usability heuristics."@en ;
+              skos:note "Develops structured argumentation and reasoning abilities."@en ;
+              skos:prefLabel "justify"@en ;
+              skos:related bloom:Argue ,
+                           bloom:Defend .
+
+
+### ### ###   http://purl.org/edu/bloom### Label
+bloom:Label rdf:type owl:NamedIndividual ,
+                     bloom:ActionVerb ;
+            bloom:isActionVerbFor bloom:Remembering ;
+            <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+            rdfs:comment "Assigning a label to something."@en ;
+            rdfs:label "label"@en ;
+            skos:definition "Assign a descriptive or identifying name or symbol to something."@en ;
+            skos:example "Label the parts of a neuron."@en ;
+            skos:note "Common in anatomy, diagrams, and classification activities."@en ;
+            skos:prefLabel "label"@en ;
+            skos:related bloom:Identify ,
+                         bloom:Name .
+
+
+### ### ###   http://purl.org/edu/bloom### List
+bloom:List rdf:type owl:NamedIndividual ,
+                    bloom:ActionVerb ;
+           bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;		   
+           <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+           rdfs:comment "Providing a series of related items."@en ;
+           rdfs:label "list"@en ;
+           skos:definition "Provide a series of items, facts, or elements in order."@en ;
+           skos:example "List the steps of the software development lifecycle."@en ;
+           skos:note "Often used in enumerations, outlines, and structured recall."@en ;
+           skos:prefLabel "list"@en ;
+           skos:related bloom:Label ,
+                        bloom:Name .
+
+
+### ### ###   http://purl.org/edu/bloom### Locate
+bloom:Locate rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Remembering ;
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Finding the position or place of something."@en ;
+             rdfs:label "locate"@en ;
+             skos:definition "Find or identify the position or location of an item or concept."@en ;
+             skos:example "Locate the function definition in the source code."@en ;
+             skos:note "Often used in navigation, search, or retrieval tasks."@en ;
+             skos:prefLabel "locate"@en ;
+             skos:related bloom:Identify ,
+                          bloom:Retrieve .
+
+
+###  ----- Model verb -----
+bloom:Model
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "model"@en ;
+    skos:prefLabel "model"@en ;
+    rdfs:comment "Create abstract representations of systems to support understanding or reasoning."@en ;
+    skos:definition "Represent systems, problems, or environments using abstract or mathematical constructs."@en ;
+    skos:example "Model a business problem mathematically or algorithmically."@en ;
+    skos:example "Model a network topology or file system hierarchy using graphs."@en ;
+    skos:note "Enables abstraction for simulation, analysis, and system design."@en ;
+    skos:related bloom:Simulate, bloom:Analyze .
+
+
+### ### ###   http://purl.org/edu/bloom### Name
+bloom:Name rdf:type owl:NamedIndividual ,
+                    bloom:ActionVerb ;
+           bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;		   
+           <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+           rdfs:comment "Specifying the name of something."@en ;
+           rdfs:label "name"@en ;
+           skos:definition "State or specify the name of a person, object, concept, or phenomenon."@en ;
+           skos:example "Name the primary data types in Python."@en ;
+           skos:note "Used frequently in taxonomy, nomenclature, and listings."@en ;
+           skos:prefLabel "name"@en ;
+           skos:related bloom:Label ,
+                        bloom:List .
+
+
+### ### ###   http://purl.org/edu/bloom### Operate
+bloom:Operate rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Applying ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Performing a function or action."@en ;
+              rdfs:label "operate"@en ;
+              skos:definition "Control or manage the functioning of a system, machine, or process."@en ;
+              skos:example "Operate a CNC machine to manufacture a component."@en ;
+              skos:note "Used in mechanical, technical, and systems contexts."@en ;
+              skos:prefLabel "operate"@en ;
+              skos:related bloom:Perform ,
+                           bloom:Use .
+
+
+### ### ###   http://purl.org/edu/bloom### Organize
+bloom:Organize rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Analyzing, bloom:Develop  ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Arranging elements in a logical structure."@en ;
+               rdfs:label "organize"@en ;
+               skos:definition "Arrange elements in a logical or structured format."@en ;
+               skos:example "Organize research findings into categories."@en ;
+               skos:note "Frequently used in writing, planning, and categorization tasks."@en ;
+               skos:prefLabel "organize"@en ;
+               skos:related bloom:Outline ,
+                            bloom:Structure .
+
+
+### ### ###   http://purl.org/edu/bloom### Paraphrase
+bloom:Paraphrase rdf:type owl:NamedIndividual ,
+                          bloom:ActionVerb ;
+                 bloom:isActionVerbFor bloom:Understanding ;
+                 <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                 rdfs:comment "Restating information in one's own words."@en ;
+                 rdfs:label "paraphrase"@en ;
+                 skos:definition "Restate information in one’s own words while preserving meaning."@en ;
+                 skos:example "Paraphrase the thesis statement of an essay."@en ;
+                 skos:note "Develops comprehension and ability to reformulate ideas."@en ;
+                 skos:prefLabel "paraphrase"@en ;
+                 skos:related bloom:Interpret ,
+                              bloom:Summarize .
+
+
+### ### ###   http://purl.org/edu/bloom### Perform
+bloom:Perform rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Applying ;
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Carrying out an action or task."@en ;
+              rdfs:label "perform"@en ;
+              skos:definition "Carry out an action, task, or function, especially one involving skill."@en ;
+              skos:example "Perform a security audit of a web application."@en ;
+              skos:note "Common in vocational, medical, and technical training."@en ;
+              skos:prefLabel "perform"@en ;
+              skos:related bloom:Demonstrate ,
+                           bloom:Execute .
+
+
+### ### ###   http://purl.org/edu/bloom### Plan
+bloom:Plan rdf:type owl:NamedIndividual ,
+                    bloom:ActionVerb ;
+           bloom:isActionVerbFor bloom:Creating, bloom:Develop  ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;		   
+           <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+           rdfs:comment "Designing a coherent approach to a task."@en ;
+           rdfs:label "plan"@en ;
+           skos:definition "Design a coherent set of steps or strategies to achieve a goal."@en ;
+           skos:example "Plan a campaign to raise awareness about digital security."@en ;
+           skos:note "A key stage in project-based learning and design thinking."@en ;
+           skos:prefLabel "plan"@en ;
+           skos:related bloom:Design ,
+                        bloom:Organize .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Predict
+bloom:Predict rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Understanding, bloom:Evaluate  ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			  
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Stating what will happen in the future based on current information."@en ;
+              rdfs:label "predict"@en ;
+              skos:definition "State or estimate what will happen in the future based on current knowledge or evidence."@en ;
+              skos:example "Predict the output of an algorithm for a given input."@en ;
+              skos:note "Encourages anticipation and forward-thinking strategies."@en ;
+              skos:prefLabel "predict"@en ;
+              skos:related bloom:Hypothesize ,
+                           bloom:Infer .
+
+
+### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Produce
+bloom:Produce rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor bloom:Creating, bloom:Develop  ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			  
+              <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+              rdfs:comment "Creating something new."@en ;
+              rdfs:label "produce"@en ;
+              skos:definition "Create or deliver a tangible or intangible output as a result of effort or processing."@en ;
+              skos:example "Produce a podcast episode for an educational series."@en ;
+              skos:note "Emphasizes completion and deliverables."@en ;
+              skos:prefLabel "produce"@en ;
+              skos:related bloom:Develop ,
+                           bloom:Generate .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Question
+bloom:Question rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Analyzing ;
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Raising issues or doubts about something."@en ;
+               rdfs:label "question"@en ;
+               skos:definition "Raise issues or doubts to probe deeper understanding or identify assumptions."@en ;
+               skos:example "Question the assumptions behind an economic model."@en ;
+               skos:note "Promotes critical thinking and inquiry-based learning."@en ;
+               skos:prefLabel "question"@en ;
+               skos:related bloom:Analyzing ,
+                            bloom:Investigate .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Rate
+bloom:Rate rdf:type owl:NamedIndividual ,
+                    bloom:ActionVerb ;
+           bloom:isActionVerbFor bloom:Evaluating ;
+           <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+           rdfs:comment "Assigning a value or ranking to something."@en ;
+           rdfs:label "rate"@en ;
+           skos:definition "Assign a score or level to something based on criteria."@en ;
+           skos:example "Rate the usability of a software interface."@en ;
+           skos:note "Used in grading rubrics and quality evaluations."@en ;
+           skos:prefLabel "rate"@en ;
+           skos:related bloom:Appraise ,
+                        bloom:Score .
+
+
+### ### ###   http://purl.org/edu/bloom### Recall
+bloom:Recall rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Remembering ;
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Retrieving relevant knowledge from long-term memory."@en ;
+             rdfs:label "recall"@en ;
+             skos:definition "Retrieve relevant knowledge from memory without a cue."@en ;
+             skos:example "Recall the syntax for declaring a variable in JavaScript."@en ;
+             skos:note "Common in open-ended questions and oral assessments."@en ;
+             skos:prefLabel "recall"@en ;
+             skos:related bloom:Recognize ,
+                          bloom:Retrieve .
+
+
+### ### ###   http://purl.org/edu/bloom### Recognize
+bloom:Recognize rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Remembering ;
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Identifying something previously learned."@en ;
+                rdfs:label "recognize"@en ;
+                skos:definition "Identify something previously learned when it is presented again."@en ;
+                skos:example "Recognize the structure of a for loop."@en ;
+                skos:note "Essential in pattern recognition and memorization tasks."@en ;
+                skos:prefLabel "recognize"@en ;
+                skos:related bloom:Identify ,
+                             bloom:Recall .
+
+
+### ### ###  Definition of the verb "reference" as an ActionVerb individual
+bloom:Reference
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Remembering ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "reference"@en ;
+    rdfs:comment "To point to or cite known information sources, encouraging documentation practices."@en ;
+    skos:prefLabel "reference"@en ;
+    skos:definition "Point to or cite external documentation or standards, often for clarity or compliance."@en ;
+    skos:example "Reference multiple NIST Special Publications in a cybersecurity risk analysis report."@en ;
+    skos:example "Reference source code libraries as comments within a software program."@en ;
+    skos:note "Encourages habits of consulting official documentation and standards in computing."@en ;
+    skos:related bloom:Cite .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Relate
+bloom:Relate rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor bloom:Analyzing ;
+             <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+             rdfs:comment "Showing how things are connected."@en ;
+             rdfs:label "relate"@en ;
+             skos:definition "Show or explain how two or more elements are connected."@en ;
+             skos:example "Relate data privacy concepts to ethical computing."@en ;
+             skos:note "Useful in systems thinking and contextual analysis."@en ;
+             skos:prefLabel "relate"@en ;
+             skos:related bloom:Associate ,
+                          bloom:Link .
+
+
+
+### ### ###   http://purl.org/edu/bloom### Retrieve
+bloom:Retrieve rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Remembering ;
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+               rdfs:comment "Recalling information from memory."@en ;
+               rdfs:label "retrieve"@en ;
+               skos:definition "Access or recover information from memory or storage."@en ;
+               skos:example "Retrieve the formula for calculating standard deviation."@en ;
+               skos:note "Used in both human memory and information systems."@en ;
+               skos:prefLabel "retrieve"@en ;
+               skos:related bloom:Recall ,
+                            bloom:Recognize .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Run
+bloom:Run rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Applying ;
+          <http://purl.org/dc/terms/references> <https://dl.acm.org/doi/10.1145/3573260> ;
+          rdfs:comment "Executing code or commands."@en ;
+          rdfs:label "run"@en ;
+          skos:definition "Execute a program, script, or command in a computing environment."@en ;
+          skos:example "Run a simulation script in Python."@en ;
+          skos:note "Typically used to test or observe system behavior in real time."@en ;
+          skos:prefLabel "run"@en .
+
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ###   http://purl.org/edu/bloom### Scan
+bloom:Scan rdf:type owl:NamedIndividual ,
+                    bloom:ActionVerb ;
+           bloom:isActionVerbFor bloom:Applying ;
+           <http://purl.org/dc/terms/references> <https://dl.acm.org/doi/10.1145/3573260> ;
+           rdfs:comment "Detecting system vulnerabilities or states."@en ;
+           rdfs:label "scan"@en ;
+           skos:definition "Systematically examine files, systems, or networks to detect threats or anomalies."@en ;
+           skos:example "Scan a network for open ports using a security tool."@en ;
+           skos:note "Widely used in cybersecurity and diagnostic operations."@en ;
+           skos:prefLabel "scan"@en .
+
+
+###  ----- Simulate verb -----
+bloom:Simulate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "simulate"@en ;
+    skos:prefLabel "simulate"@en ;
+    rdfs:comment "Model and observe system behavior under controlled conditions."@en ;
+    skos:definition "Create a controlled virtual representation of a system to observe its behavior."@en ;
+    skos:example "Simulate a disaster recovery response."@en ;
+    skos:example "Simulate staff roles in an enterprise work environment."@en ;
+    skos:example "Simulate mobile device usage during web app prototyping."@en ;
+    skos:note "Key in planning, testing, and experimentation."@en ;
+    skos:related bloom:Model, bloom:Test .
+
+
+### ### ###   http://purl.org/edu/bloom### Solve
+bloom:Solve rdf:type owl:NamedIndividual ,
+                     bloom:ActionVerb ;
+            bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;			
+            <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+            rdfs:comment "Finding a solution to a problem."@en ;
+            rdfs:label "solve"@en ;
+            skos:definition "Find an answer or explanation for a problem or question."@en ;
+            skos:example "Solve a system of linear equations."@en ;
+            skos:note "Central to problem-based learning activities."@en ;
+            skos:prefLabel "solve"@en ;
+            skos:related bloom:Calculate ,
+                         bloom:Execute .
+
+
+### ### ###   http://purl.org/edu/bloom### Summarize
+bloom:Summarize rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor bloom:Understanding, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:CS2023Verb ;				
+                <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+                rdfs:comment "Giving a brief statement of the main points."@en ;
+                rdfs:label "summarize"@en ;
+                skos:definition "Give a brief statement of the main points of a concept, text, or discussion."@en ;
+                skos:example "Summarize the main ideas of a research paper."@en ;
+                skos:note "Develops the ability to focus on key information."@en ;
+                skos:prefLabel "summarize"@en ;
+                skos:related bloom:Abstract ,
+                             bloom:Paraphrase .
+
+
+###  ----- Trace verb -----
+bloom:Trace
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260>, <https://doi.org/10.1145/3184594> ;
+    rdfs:label "trace"@en ;
+    skos:prefLabel "trace"@en ;
+    rdfs:comment "Follow the execution path or data flow to diagnose system behavior."@en ;
+    skos:definition "Track the sequence of execution or data propagation within a system."@en ;
+    skos:example "Trace a variable's value across code module execution."@en ;
+    skos:example "Trace a linked list of unauthorized users in the system."@en ;
+    skos:example "Trace activity to detect a deadlock condition."@en ;
+    skos:note "Vital for debugging, security analysis, and system understanding."@en ;
+    skos:related bloom:Debug, bloom:Monitor, bloom:Investigate .
+
+
+###  ----- Train verb -----
+bloom:Train
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3573260> ;
+    rdfs:label "train"@en ;
+    skos:prefLabel "train"@en ;
+    rdfs:comment "Use data to adjust and optimize models or systems for improved output."@en ;
+    skos:definition "Iteratively improve a model or system by feeding it data for performance tuning."@en ;
+    skos:example "Train a neural network to recognize handwritten digits."@en ;
+    skos:example "Train an ML model on stored datasets to enhance accuracy."@en ;
+    skos:example "Train users to identify phishing emails."@en ;
+    skos:note "Common in machine learning, AI, and user education processes."@en ;
+    skos:related bloom:Evaluate, bloom:Teach .
+
+
+###  ----- Translate verb -----
+bloom:Translate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, cs2023:Explain ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "translate"@en ;
+    skos:prefLabel "translate"@en ;
+    rdfs:comment "Convert data or designs between representations or abstraction levels."@en ;
+    skos:definition "Convert information from one form or notation to another such that the meaning is preserved."@en ;
+    skos:example "Translate a business problem into a data science solution."@en ;
+    skos:example "Translate system design specifications into implementation code."@en ;
+    skos:example "Translate written communication into effective oral delivery."@en ;
+    skos:note "Crucial for abstraction, interoperability, and cross-domain implementation."@en ;
+    skos:related bloom:Model, bloom:Implement .
+
+
+
+
+### ### ###   http://purl.org/edu/bloom### Use
+bloom:Use rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Applying ;
+		  bloom:hasActionVerbType bloom:StandardVerb;
+          <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3467967> ;
+          rdfs:comment "Employing knowledge or skills in a practical situation."@en ;
+          rdfs:label "use"@en ;
+          skos:definition "Employ knowledge, tools, or methods to complete a task or solve a problem."@en ;
+          skos:example "Use a debugger to identify syntax errors."@en ;
+          skos:note "Foundational to task-oriented and experiential learning."@en ;
+          skos:prefLabel "use"@en ;
+          skos:related bloom:Applying ,
+                       bloom:Operate .
+
+
+### ### ###   http://purl.org/edu/bloom### Validate
+bloom:Validate rdf:type owl:NamedIndividual ,
+                        bloom:ActionVerb ;
+               bloom:isActionVerbFor bloom:Evaluating ;
+				bloom:hasActionVerbType bloom:ComputingVerb;			   
+               <http://purl.org/dc/terms/references> <https://doi.org/10.1145/3453538> ;
+               rdfs:comment "Assessing correctness and effectiveness." ;
+               rdfs:label "validate"@en ;
+               skos:definition "Check or prove the accuracy, quality, or effectiveness of a system or model"@en ;
+               skos:example "Validate a machine learning model using test datasets"@en ;
+               skos:note "Critical phase in software development and data science"@en ;
+               skos:prefLabel "validate"@en ;
+               skos:related bloom:Debug ,
+                            bloom:Test ,
+                            bloom:Verify .
+
+
+###  ----- Virtualize verb -----
+bloom:Virtualize
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Creating, cs2023:Apply ;
+   bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3173161> ;
+    rdfs:label "virtualize"@en ;
+    skos:prefLabel "virtualize"@en ;
+    rdfs:comment "Create software-based simulations of hardware resources or environments."@en ;
+    skos:definition "Set up virtual servers, storage, or networks software-based to host applications."@en ;
+    skos:example "Virtualize server and client components using containers for a scenario."@en ;
+    skos:example "Virtualize an application deployment environment for testing purposes."@en ;
+    skos:note "Core practice in cloud computing, DevOps, and CI/CD pipelines."@en ;
+    skos:related bloom:Deploy, bloom:Configure, bloom:Simulate .
+
+
+### ### ###   http://purl.org/edu/bloom### Duplicate
+bloom:Duplicate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "duplicate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Remembering ;
+    rdfs:comment "Reproducing information exactly as it was originally presented."@en ;
+    skos:definition "Copy or reproduce information verbatim from memory."@en ;
+    skos:example "Duplicate a definition from a textbook."@en ;
+    skos:note "Useful for recall-based assessments."@en ;
+    skos:prefLabel "duplicate"@en ;
+    skos:related bloom:Remembering .
+
+
+### ### ###   http://purl.org/edu/bloom### Find
+bloom:Find rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "find"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Remembering ;
+    rdfs:comment "Locating information previously learned."@en ;
+    skos:definition "Identify and retrieve relevant information or data."@en ;
+    skos:example "Find the function of a loop variable in code."@en ;
+    skos:note "Common in information retrieval tasks."@en ;
+    skos:prefLabel "find"@en ;
+    skos:related bloom:Remembering .
+
+
+### ### ###   http://purl.org/edu/bloom### Memorize
+bloom:Memorize rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "memorize"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Remembering ;
+    rdfs:comment "Committing facts to memory."@en ;
+    skos:definition "Store and retain information in memory for future recall."@en ;
+    skos:example "Memorize a list of programming keywords."@en ;
+    skos:note "Critical for foundational knowledge."@en ;
+    skos:prefLabel "memorize"@en ;
+    skos:related bloom:Remembering .
+
+
+### ### ###   http://purl.org/edu/bloom### Select
+bloom:Select rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "select"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb, bloom:CS2023Verb  ;
+    bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+    rdfs:comment "Choosing information from memory based on relevance."@en ;
+    skos:definition "Choose relevant information from memory."@en ;
+    skos:example "Select the correct syntax for a for-loop."@en ;
+    skos:note "Applies in multiple-choice or decision-making contexts."@en ;
+    skos:prefLabel "select"@en ;
+    skos:related bloom:Remembering .
+
+
+### ### ###   http://purl.org/edu/bloom### State
+bloom:State rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "state"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb, bloom:CS2023Verb ;
+    bloom:isActionVerbFor bloom:Remembering, cs2023:Explain ;
+    rdfs:comment "Expressing known information clearly."@en ;
+    skos:definition "Provide a fact or concept verbally or in writing."@en ;
+    skos:example "State the definition of a variable."@en ;
+    skos:note "Used in oral or written recall assessments."@en ;
+    skos:prefLabel "state"@en ;
+    skos:related bloom:Remembering .
+
+
+### ### ###   http://purl.org/edu/bloom### Convert
+bloom:Convert rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "convert"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    rdfs:comment "Translating or transforming ideas or formats."@en ;
+    skos:definition "Transform information from one form to another."@en ;
+    skos:example "Convert pseudocode into a flowchart."@en ;
+    skos:note "Useful for interpreting data or formats."@en ;
+    skos:prefLabel "convert"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Demonstrate
+bloom:Demonstrate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "demonstrate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    rdfs:comment "Illustrating understanding via performance."@en ;
+    skos:definition "Show evidence or understanding through action or explanation."@en ;
+    skos:example "Demonstrate how a sorting algorithm works."@en ;
+    skos:note "Often used in instructional and assessment scenarios."@en ;
+    skos:prefLabel "demonstrate"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Describe
+bloom:Describe rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "describe"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    rdfs:comment "Explaining or narrating understanding."@en ;
+    skos:definition "Provide a detailed account of a concept or process."@en ;
+    skos:example "Describe the steps in compiling source code."@en ;
+    skos:note "Common in assessments to gauge conceptual clarity."@en ;
+    skos:prefLabel "describe"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Differentiate
+bloom:Differentiate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "differentiate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    rdfs:comment "Recognizing or outlining distinctions."@en ;
+    skos:definition "Identify differences between similar concepts or items."@en ;
+    skos:example "Differentiate between stack and queue data structures."@en ;
+    skos:note "Key in classification and analytical skills."@en ;
+    skos:prefLabel "differentiate"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Report
+bloom:Report rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "report"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    rdfs:comment "Presenting gathered information."@en ;
+    skos:definition "Communicate findings or summaries from a task or activity."@en ;
+    skos:example "Report the results of a usability test."@en ;
+    skos:note "Supports synthesis and articulation."@en ;
+    skos:prefLabel "report"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Translate
+bloom:Translate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "translate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    rdfs:comment "Rephrasing across forms or contexts."@en ;
+    skos:definition "Convert expressions from one format to another."@en ;
+    skos:example "Translate mathematical expressions into code."@en ;
+    skos:note "Fundamental for cross-domain understanding."@en ;
+    skos:prefLabel "translate"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Apply
+bloom:Apply rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "apply"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Use knowledge in new situations or contexts."@en ;
+    skos:definition "Use knowledge in new situations or contexts."@en ;
+    skos:example "Apply a solution in a real-world scenario."@en ;
+    skos:prefLabel "apply"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### CarryoutCarryout
+bloom:Carryout rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "carry out"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Execute instructions or procedures to achieve a goal."@en ;
+    skos:definition "Execute instructions or procedures to achieve a goal."@en ;
+    skos:example "Carry out a solution in a real-world scenario."@en ;
+    skos:prefLabel "carry out"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Diagram
+bloom:Diagram rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "diagram"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Represent information or processes visually."@en ;
+    skos:definition "Represent information or processes visually."@en ;
+    skos:example "Diagram a solution in a real-world scenario."@en ;
+    skos:prefLabel "diagram"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Edit
+bloom:Edit rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "edit"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Modify existing content for clarity, correctness, or appropriateness."@en ;
+    skos:definition "Modify existing content for clarity, correctness, or appropriateness."@en ;
+    skos:example "Edit a solution in a real-world scenario."@en ;
+    skos:prefLabel "edit"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Execute
+bloom:Execute rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "execute"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Run a plan, algorithm, or process to accomplish a task."@en ;
+    skos:definition "Run a plan, algorithm, or process to accomplish a task."@en ;
+    skos:example "Execute a solution in a real-world scenario."@en ;
+    skos:prefLabel "execute"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Investigate
+bloom:Investigate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "investigate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Explore and examine in detail to discover facts or information."@en ;
+    skos:definition "Explore and examine in detail to discover facts or information."@en ;
+    skos:example "Investigate a solution in a real-world scenario."@en ;
+    skos:prefLabel "investigate"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Manipulate
+bloom:Manipulate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "manipulate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Handle or control tools or data with skill."@en ;
+    skos:definition "Handle or control tools or data with skill."@en ;
+    skos:example "Manipulate a solution in a real-world scenario."@en ;
+    skos:prefLabel "manipulate"@en .
+
+### ### ###   http://purl.org/edu/bloom### Modify
+bloom:Modify rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "modify"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying, bloom:Develop  ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Change an existing design or system for improvement."@en ;
+    skos:definition "Change an existing design or system for improvement."@en ;
+    skos:example "Modify a solution in a real-world scenario."@en ;
+    skos:prefLabel "modify"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Produce
+bloom:Produce rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "produce"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Generate or bring into existence an output or product."@en ;
+    skos:definition "Generate or bring into existence an output or product."@en ;
+    skos:example "Produce a solution in a real-world scenario."@en ;
+    skos:prefLabel "produce"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Write
+bloom:Write rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "write"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:ApplyingRefactor ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Compose textual content to communicate ideas or information."@en ;
+    skos:definition "Compose textual content to communicate ideas or information."@en ;
+    skos:example "Write a solution in a real-world scenario."@en ;
+    skos:prefLabel "write"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Categorize
+bloom:Categorize rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "categorize"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, bloom:Evaluate  ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Classify or arrange concepts into groups or categories."@en ;
+    skos:example "Categorize the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "categorize"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Decompose
+bloom:Decompose rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "decompose"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Break down complex information into simpler parts."@en ;
+    skos:example "Decompose the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "decompose"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Deconstruct
+bloom:Deconstruct rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "deconstruct"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Analyze and break down the structure of a concept or argument."@en ;
+    skos:example "Deconstruct the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "deconstruct"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Deduce
+bloom:Deduce rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "deduce"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Draw logical conclusions based on evidence or reasoning."@en ;
+    skos:example "Deduce the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "deduce"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Discriminate
+bloom:Discriminate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "discriminate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, bloom:Evaluate  ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Recognize or identify differences or distinctions."@en ;
+    skos:example "Discriminate the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "discriminate"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Distinguish
+bloom:Distinguish rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "distinguish"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, cs2023:Evaluate ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Perceive or point out differences between similar items."@en ;
+    skos:example "Distinguish the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "distinguish"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Integrate
+bloom:Integrate rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "integrate"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, bloom:Develop  ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Combine parts to form a coherent whole."@en ;
+    skos:example "Integrate the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "integrate"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Outline
+bloom:Outline rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "outline"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Provide a general description or summary of the main points."@en ;
+    skos:example "Outline the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "outline"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Structure
+bloom:Structure rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "structure"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    dcterms:references <https://doi.org/10.1145/3467967> ;
+    rdfs:comment "Standard Bloom's verb associated with the Analyzing level."@en ;
+    skos:definition "Organize components into a defined arrangement."@en ;
+    skos:example "Structure the key functions in a software architecture."@en ;
+    skos:note "This verb supports analytical thinking and reasoning in learning tasks."@en ;
+    skos:prefLabel "structure"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Choose
+bloom:Choose rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating, bloom:Evaluate  ;
+          bloom:hasActionVerbType bloom:StandardVerb ;
+          rdfs:label "choose"@en ;
+          skos:prefLabel "choose"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Select among alternatives based on reasoned judgment."@en ;
+          skos:example "Choose the best algorithm for a given problem scenario."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Debate
+bloom:Debate rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating ;
+          bloom:hasActionVerbType bloom:StandardVerb ;
+          rdfs:label "debate"@en ;
+          skos:prefLabel "debate"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Engage in a structured discussion to weigh evidence and present arguments."@en ;
+          skos:example "Debate the ethical implications of AI in hiring processes."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Estimate
+bloom:Estimate rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating ;
+          bloom:hasActionVerbType bloom:StandardVerb ;
+          rdfs:label "estimate"@en ;
+          skos:prefLabel "estimate"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Make an approximate judgment or calculation based on limited information."@en ;
+          skos:example "Estimate the time complexity of a recursive function."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Evaluate
+bloom:Evaluate rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating ;
+          bloom:hasActionVerbType bloom:StandardVerb ;
+          rdfs:label "evaluate"@en ;
+          skos:prefLabel "evaluate"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Judge or determine the significance, worth, or quality using criteria."@en ;
+          skos:example "Evaluate the quality of a user interface using usability heuristics."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Support
+bloom:Support rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating, bloom:Evaluate  ;
+          bloom:hasActionVerbType bloom:StandardVerb, bloom:CS2023Verb ;
+          rdfs:label "support"@en ;
+          skos:prefLabel "support"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Defend or uphold a position using evidence or logical reasoning."@en ;
+          skos:example "Support your software design choice with empirical evidence."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Test
+bloom:Test rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating, cs2023:Apply ;
+          bloom:hasActionVerbType bloom:StandardVerb, bloom:CS2023Verb ;
+          rdfs:label "test"@en ;
+          skos:prefLabel "test"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Assess or examine against criteria to determine validity or reliability."@en ;
+          skos:example "Test the effectiveness of a machine learning model."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Value
+bloom:Value rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating ;
+          bloom:hasActionVerbType bloom:StandardVerb ;
+          rdfs:label "value"@en ;
+          skos:prefLabel "value"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Assign worth or importance based on values or beliefs."@en ;
+          skos:example "Value the benefits of code readability in collaborative projects."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Verify
+bloom:Verify rdf:type owl:NamedIndividual ,
+                   bloom:ActionVerb ;
+          bloom:isActionVerbFor bloom:Evaluating ;
+          bloom:hasActionVerbType bloom:StandardVerb ;
+          rdfs:label "verify"@en ;
+          skos:prefLabel "verify"@en ;
+          rdfs:comment "A verb categorized under 'Evaluating' in Bloom's Revised Taxonomy."@en ;
+          skos:definition "Confirm accuracy or truth through evidence or experimentation."@en ;
+          skos:example "Verify the correctness of a proof using formal logic."@en ;
+          skos:note "Part of the standard cognitive process level: Evaluate."@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Create
+bloom:Create rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "create"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb, bloom:CS2023Verb ;
+    bloom:isActionVerbFor bloom:Creating, bloom:Develop  ;
+    rdfs:comment "Bring something into existence through imaginative skill or experimentation."@en ;
+    skos:definition "Bring something into existence through imaginative skill or experimentation."@en ;
+    skos:example "Create a multimedia presentation to explain a scientific concept."@en ;
+    skos:note "Demonstrates synthesis of knowledge to produce original work."@en ;
+    skos:prefLabel "create"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Devise
+bloom:Devise rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "devise"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Creating ;
+    rdfs:comment "Formulate a plan or solution using creative thinking."@en ;
+    skos:definition "Formulate a plan or solution using creative thinking."@en ;
+    skos:example "Devise a plan to improve network security."@en ;
+    skos:note "Emphasizes creative problem-solving in complex scenarios."@en ;
+    skos:prefLabel "devise"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Hypothesize
+bloom:Hypothesize rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "hypothesize"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Creating ;
+    rdfs:comment "Generate a tentative explanation or prediction based on limited evidence."@en ;
+    skos:definition "Generate a tentative explanation or prediction based on limited evidence."@en ;
+    skos:example "Hypothesize the outcome of a proposed algorithm before implementation."@en ;
+    skos:note "Supports scientific thinking and inferential reasoning."@en ;
+    skos:prefLabel "hypothesize"@en .
+
+
+### ### ###   http://purl.org/edu/bloom### Make
+bloom:Make rdf:type bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "make"@en ;
+    bloom:hasActionVerbType bloom:StandardVerb ;
+    bloom:isActionVerbFor bloom:Creating ;
+    rdfs:comment "Construct or assemble something by combining various parts or materials."@en ;
+    skos:definition "Construct or assemble something by combining various parts or materials."@en ;
+    skos:example "Make a prototype of a robotic arm using available components."@en ;
+    skos:note "Focuses on practical application and innovation."@en ;
+    skos:prefLabel "make"@en .
+
+
+###  ===== Annotate verb =====
+bloom:Annotate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "annotate"@en ;
+    skos:prefLabel "annotate"@en ;
+    rdfs:comment 
+        "To clearly label or mark elements in diagrams, graphs, or system schematics, enhancing clarity in computing tasks."@en ;
+    skos:definition 
+        "Add explanatory labels or notes to visual or technical artifacts to improve communication and understanding."@en ;
+    skos:example 
+        "Annotate an attack graph to identify threat vectors in a cyber‑security model."@en ;
+    skos:example 
+        "Annotate a network diagram with component names and interfaces."@en ;
+    skos:note 
+        "Essential for effective system design, threat modeling, and technical documentation."@en ;
+    skos:related bloom:Diagram, bloom:Label .
+
+
+###  ===== Comment verb =====
+bloom:Comment
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Understanding ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "comment"@en ;
+    skos:prefLabel "comment"@en ;
+    rdfs:comment 
+        "To insert explanatory remarks into code or diagrams to clarify structure and intent."@en ;
+    skos:definition 
+        "Add comments to source code, scripts, or technical diagrams to explain purpose or logic."@en ;
+    skos:example 
+        "Comment a code segment to describe its functionality and purpose."@en ;
+    skos:example
+        "Comment on a network design diagram to explain routing decisions."@en ;
+    skos:note 
+        "Vital for collaboration, maintainability, and clarity in software development and system design."@en ;
+    skos:related bloom:Explain, bloom:Document .
+
+
+###  ----- Build verb -----
+bloom:Build
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "build"@en ;
+    skos:prefLabel "build"@en ;
+    rdfs:comment 
+        "Construct a computing artifact or system by applying knowledge and technical skills."@en ;
+    skos:definition 
+        "Assemble and configure software, hardware, or systems in a computing context to achieve functional outcomes."@en ;
+    skos:example 
+        "Build a machine learning model to detect network intrusions."@en ;
+    skos:example 
+        "Build a multi-router network using an automation script."@en ;
+    skos:example 
+        "Build and deploy a containerized application for web service."@en ;
+    skos:note 
+        "Core activity in software development, system configuration, and deployment workflows."@en ;
+    skos:related bloom:Compile, bloom:Deploy .
+
+
+###  ----- Compute verb -----
+bloom:Compute
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "compute"@en ;
+    skos:prefLabel "compute"@en ;
+    rdfs:comment "Execute computational procedures or algorithms to generate results."@en ;
+    skos:definition "Perform numerical, logical, or algorithmic operations on data."@en ;
+    skos:example "Compute conditional probabilities based on dataset attributes."@en ;
+    skos:example "Compute message digests of files using multiple hash algorithms."@en ;
+    skos:note "Common in data processing, analytics, and algorithmic problem-solving tasks."@en ;
+    skos:related bloom:Calculate, bloom:Process .
+
+
+###  ----- Configure verb -----
+bloom:Configure
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "configure"@en ;
+    skos:prefLabel "configure"@en ;
+    rdfs:comment 
+        "Set up and customize system or network configurations to meet specified requirements."@en ;
+    skos:definition 
+        "Perform configuration tasks on operating systems, networks, or tools to achieve desired states."@en ;
+    skos:example 
+        "Configure a UNIX-based operating system to harden its security settings."@en ;
+    skos:example 
+        "Configure a firewall to block or allow traffic based on IP addresses and port numbers."@en ;
+    skos:note 
+        "A core operational task in system administration, networking, and cybersecurity."@en ;
+    skos:related bloom:Install, bloom:Deploy .
+
+
+###  ----- Connect verb -----
+bloom:Connect
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "connect"@en ;
+    skos:prefLabel "connect"@en ;
+    rdfs:comment 
+        "Establish connections between computing devices or network endpoints."@en ;
+    skos:definition 
+        "Perform operations to link systems, networks, or components for communication or configuration."@en ;
+    skos:example 
+        "Connect two remote sites using tunneling technology."@en ;
+    skos:example 
+        "Connect several branch routers to a central router via VPN."@en ;
+    skos:example 
+        "Connect a workstation to a router to initiate configuration."@en ;
+    skos:note 
+        "Fundamental activity in networking, infrastructure setup, and system integration."@en ;
+    skos:related bloom:Tunnel, bloom:Configure .
+
+
+###  ----- Document verb -----
+bloom:Document
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "document"@en ;
+    skos:prefLabel "document"@en ;
+    rdfs:comment 
+        "Record detailed information about code, systems, or processes to support understanding and maintenance."@en ;
+    skos:definition 
+        "Create documentation that describes software artifacts, system designs, or workflows."@en ;
+    skos:example 
+        "Document information-system processes at multiple levels of detail."@en ;
+    skos:example 
+        "Document a software project's version-control environment and dependencies."@en ;
+    skos:note 
+        "Essential for collaboration, knowledge transfer, and lifecycle management in computing."@en ;
+    skos:related bloom:Annotate, bloom:Comment .
+
+
+###  ----- Graph verb -----
+bloom:Graph
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "graph"@en ;
+    skos:prefLabel "graph"@en ;
+    rdfs:comment "Represent data or problem structures visually using appropriate graph types or traversal techniques."@en ;
+    skos:definition 
+        "Create visual or structural representations such as charts or algorithmic graphs in computational contexts."@en ;
+    skos:example "Graph a dataset using a bar or line chart to display trends."@en ;
+    skos:example "Graph a combinatorial problem using depth-first and breadth-first search to visualize traversal paths."@en ;
+    skos:note "Common in data analysis, algorithm visualization, and graph theory tasks."@en ;
+    skos:related bloom:Chart, bloom:Visualize .
+
+
+###  ----- Iterate verb -----
+bloom:Iterate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "iterate"@en ;
+    skos:prefLabel "iterate"@en ;
+    rdfs:comment "Execute repeated passes over data structures or processes to refine results."@en ;
+    skos:definition "Perform repetition over elements, structures, or processes to process or refine outcomes."@en ;
+    skos:example "Iterate through a list in a programming language to compute a result."@en ;
+    skos:example "Iterate a machine learning model across multiple epochs and track parameter updates."@en ;
+    skos:note "Fundamental in algorithm design, data processing, and automated workflows."@en ;
+    skos:related bloom:Loop, bloom:Process .
+
+
+###  ----- Map verb -----
+bloom:Map
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "map"@en ;
+    skos:prefLabel "map"@en ;
+    rdfs:comment "Translate conceptual or logical models into structured representations suitable for computing environments."@en ;
+    skos:definition 
+        "Associate entities or data structures with concrete implementations, resources, or addresses."@en ;
+    skos:example "Map an entity‑relationship diagram to relational database tables."@en ;
+    skos:example "Map a shared network folder by assigning it a drive letter."@en ;
+    skos:note "Fundamental in database design, system configuration, and data modeling tasks."@en ;
+    skos:related bloom:Assign, bloom:Relate .
+
+###  ----- Measure verb -----
+bloom:Measure
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "measure"@en ;
+    skos:prefLabel "measure"@en ;
+    rdfs:comment "Quantify performance metrics or system characteristics to inform analysis or decision‑making."@en ;
+    skos:definition "Assess quantitative aspects such as performance, latency, capacity, or resource usage."@en ;
+    skos:example "Measure algorithm performance in terms of time and memory usage."@en ;
+    skos:example "Measure the round‑trip time (RTT) between two servers."@en ;
+    skos:note "Widely used in benchmarking, performance testing, and network diagnostics."@en ;
+    skos:related bloom:Test, bloom:Evaluate .
+
+###  ----- Provision verb -----
+bloom:Provision
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "provision"@en ;
+    skos:prefLabel "provision"@en ;
+    rdfs:comment "Allocate and configure computing resources or services to support user or system requirements."@en ;
+    skos:definition "Set up virtual or physical environments with necessary software and configurations."@en ;
+    skos:example "Provision resources in a virtual environment for development testing."@en ;
+    skos:example "Provision cloud infrastructure with required services for customer applications."@en ;
+    skos:note "Key activity in cloud computing, DevOps, and infrastructure management."@en ;
+    skos:related bloom:Deploy, bloom:Configure .
+
+
+###  ----- Randomize verb -----
+bloom:Randomize
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "randomize"@en ;
+    skos:prefLabel "randomize"@en ;
+    rdfs:comment "Introduce randomness into data, algorithms, or system configurations."@en ;
+    skos:definition "Apply stochastic elements or procedures to generate random behavior or outputs."@en ;
+    skos:example "Randomize numbers in an algorithm to simulate probabilistic behavior."@en ;
+    skos:example "Randomize an encryption algorithm’s key or initialization vector."@en ;
+    skos:example "Randomize strong initial passwords for new user accounts."@en ;
+    skos:note "Common in simulation, testing, security, and cryptographic applications."@en ;
+    skos:related bloom:Shuffle, bloom:Seed .
+
+###  ----- Recover verb -----
+bloom:Recover
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "recover"@en ;
+    skos:prefLabel "recover"@en ;
+    rdfs:comment "Retrieve lost or deleted data or system artifacts for diagnostic or restoration tasks."@en ;
+    skos:definition "Perform recovery operations to restore data or system state from artifacts or forensic sources."@en ;
+    skos:example "Recover deleted files from an operating system in a forensic context."@en ;
+    skos:example "Recover data matching a search term from a disk image."@en ;
+    skos:note "Fundamental in data forensics, backup validation, and incident response."@en ;
+    skos:related bloom:Restore, bloom:Retrieve .
+
+###  ----- Restore verb -----
+bloom:Restore
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "restore"@en ;
+    skos:prefLabel "restore"@en ;
+    rdfs:comment "Bring back data, code, or system configurations to a previous operational state."@en ;
+    skos:definition "Execute restore operations to reinstate resources from backups or previous versions."@en ;
+    skos:example "Restore files and folders from a backup to their original or alternative location."@en ;
+    skos:example "Restore application code from version control to a prior commit."@en ;
+    skos:note "Critical for disaster recovery, system rollback, and version management."@en ;
+    skos:related bloom:Recover, bloom:RollBack .
+
+
+###  ----- Schedule verb -----
+bloom:Schedule
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "schedule"@en ;
+    skos:prefLabel "schedule"@en ;
+    rdfs:comment "Arrange computational tasks or events to occur at specific times or sequences."@en ;
+    skos:definition "Set times or sequence orders for operations such as backups or security assessments."@en ;
+    skos:example "Schedule backups to meet organizational data management policies."@en ;
+    skos:example "Schedule steps in a cybersecurity assessment for a specific scenario."@en ;
+    skos:note "Used extensively in systems administration, automation, and task orchestration."@en ;
+    skos:related bloom:Automate, bloom:Configure .
+
+###  ----- Store verb -----
+bloom:Store
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Applying ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://doi.org/10.1145/3587276> ;
+    rdfs:label "store"@en ;
+    skos:prefLabel "store"@en ;
+    rdfs:comment "Save data, artifacts, or configurations in a persistent environment."@en ;
+    skos:definition "Securely place data or software in a storage medium or service."@en ;
+    skos:example "Store data securely in cloud storage."@en ;
+    skos:example "Store software and data in a remote secure location."@en ;
+    skos:note "Essential for data management, backup, and archival workflows."@en ;
+    skos:related bloom:Save, bloom:Archive .
+	
+
+###  ----- Articulate verb -----
+bloom:Articulate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3587276> ;
+    rdfs:label "articulate"@en ;
+    skos:prefLabel "articulate"@en ;
+    rdfs:comment "Clearly express a coherent technical rationale or strategy."@en ;
+    skos:definition "Express clearly and coherently a strategy or rationale for a technical scenario."@en ;
+    skos:example "Articulate a testing strategy for a specific function."@en ;
+    skos:example "Articulate legal issues, authorities, and processes related to digital evidence."@en ;
+    skos:note "Supports deep analysis through structured verbalization and reasoning."@en ;
+    skos:related bloom:Explain, bloom:Describe .
+
+###  ----- Automate verb -----
+bloom:Automate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3587276> ;
+    rdfs:label "automate"@en ;
+    skos:prefLabel "automate"@en ;
+    rdfs:comment "Implement routines that perform tasks autonomously after analysis."@en ;
+    skos:definition "Develop a routine to perform a task without manual intervention."@en ;
+    skos:example "Automate generating an electronic invoice function."@en ;
+    skos:example "Automate an initial security incident response procedure."@en ;
+    skos:note "Requires analytical design before implementation."@en ;
+    skos:related bloom:Script, bloom:Schedule .
+
+###  ----- Contextualize verb -----
+bloom:Contextualize
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "contextualize"@en ;
+    skos:prefLabel "contextualize"@en ;
+    rdfs:comment "Relate technical concepts to broader contexts."@en ;
+    skos:definition "Place an element, process, or result in its broader technical, social, or ethical context."@en ;
+    skos:example "Contextualize security vulnerabilities of a specific software."@en ;
+    skos:example "Contextualize ethical and social aspects of computing."@en ;
+    skos:note "Important for responsible computing and systems analysis."@en ;
+    skos:related bloom:Analyze, bloom:Evaluate .
+
+###  ----- Correlate verb -----
+bloom:Correlate
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3587276> ;
+    rdfs:label "correlate"@en ;
+    skos:prefLabel "correlate"@en ;
+    rdfs:comment "Analyze how technical factors influence each other."@en ;
+    skos:definition "Analyze relationships between computing concepts and assess their mutual impact."@en ;
+    skos:example "Correlate resource cost with security improvements."@en ;
+    skos:example "Correlate privacy, security, and trust in a specific scenario."@en ;
+    skos:note "Highlights interdependencies within complex systems."@en ;
+    skos:related bloom:Analyze, bloom:Evaluate .
+
+
+###  ----- Generalize verb -----
+bloom:Generalize
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, bloom:Develop  ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    rdfs:label "generalize"@en ;
+    skos:prefLabel "generalize"@en ;
+    rdfs:comment "Abstract broader patterns or rules from specific cases."@en ;
+    skos:definition "Abstract and consolidate concepts from specific instances to derive generalized principles."@en ;
+    skos:example "Generalize tasks performed by a point-of-sale system."@en ;
+    skos:example "Generalize security vulnerabilities across different data structures."@en ;
+    skos:note "Goes beyond summarizing to capture underlying patterns and abstractions."@en ;
+    skos:related bloom:Summarize, bloom:Analyze .
+
+
+###  ----- Monitor verb -----
+bloom:Monitor
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    rdfs:label "monitor"@en ;
+    skos:prefLabel "monitor"@en ;
+    rdfs:comment "Continuously observe system states to detect issues or anomalies."@en ;
+    skos:definition "Continuously observe system activity, data flows, or controls to detect anomalies or errors."@en ;
+    skos:example "Monitor network traffic for security vulnerabilities."@en ;
+    skos:example "Monitor input validation to prevent invalid data entries."@en ;
+    skos:example "Monitor user identity requests for access to sensitive resources."@en ;
+    skos:note "Essential for real-time oversight and proactive security or quality control."@en ;
+    skos:related bloom:Detect, bloom:Evaluate .
+
+
+###  ----- Predict verb -----
+bloom:Predict
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing, cs2023:Apply ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    rdfs:label "predict"@en ;
+    skos:prefLabel "predict"@en ;
+    rdfs:comment "Forecast outcomes based on historical data or models."@en ;
+    skos:definition "Use past data and models to forecast system or project outcomes."@en ;
+    skos:example "Predict algorithm output based on historical training data."@en ;
+    skos:example "Predict cost-benefit of a system recovery plan."@en ;
+    skos:example "Predict management, organizational, and technical factors affecting health-record systems."@en ;
+    skos:note "Supports evidence-based planning, risk assessment, and decision-making."@en ;
+    skos:related bloom:Analyze, bloom:Evaluate .
+
+
+###  ----- Update verb -----
+bloom:Update
+    rdf:type owl:NamedIndividual,
+             bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    rdfs:label "update"@en ;
+    skos:prefLabel "update"@en ;
+    rdfs:comment "Modify system components in response to new requirements or data."@en ;
+    skos:definition "Alter or enhance parts of a system based on evolving information or objectives."@en ;
+    skos:example "Update a data-driven model for a given scenario."@en ;
+    skos:example "Update website resources to meet evolving organizational needs."@en ;
+    skos:example "Update software to include additional features."@en ;
+    skos:note "Reflects iterative design and maintenance in computing workflows."@en ;
+    skos:related bloom:Maintain, bloom:Refactor .
+
+
+###  ----- Adapt verb -----
+bloom:Adapt
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "adapt"@en ;
+    skos:prefLabel "adapt"@en ;
+    rdfs:comment "Modify systems, scripts, or strategies to meet evolving requirements or contexts."@en ;
+    skos:definition "Modify an existing solution or system to suit a new context or requirements."@en ;
+    skos:example "Adapt a network defense strategy to a new network configuration."@en ;
+    skos:example "Adapt a script functionality to meet a specific task requirement."@en ;
+    skos:example "Adapt software to comply with changing industry standards."@en ;
+    skos:note "Reflects flexible evaluation and application in dynamic environments."@en ;
+    skos:related bloom:Configure, bloom:Customize .
+
+###  ----- Administer verb -----
+bloom:Administer
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "administer"@en ;
+    skos:prefLabel "administer"@en ;
+    rdfs:comment "Manage and oversee computing infrastructure, systems, or services."@en ;
+    skos:definition "Manage and oversee computing systems, services, or infrastructure effectively."@en ;
+    skos:example "Administer virtual machines serving a large user base."@en ;
+    skos:example "Administer an information system for a local business."@en ;
+    skos:example "Administer a web server environment."@en ;
+    skos:example "Administer tools to design and implement a technical solution."@en ;
+    skos:note "Involves evaluative oversight and operational decision-making."@en ;
+    skos:related bloom:Monitor, bloom:Configure .
+
+###  ----- Debug verb -----
+bloom:Debug
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "debug"@en ;
+    skos:prefLabel "debug"@en ;
+    rdfs:comment "Identify and resolve faults or anomalies in code or system designs."@en ;
+    skos:definition "Identify and correct errors or issues in software or system designs."@en ;
+    skos:example "Debug a specific code segment to resolve issues."@en ;
+    skos:example "Debug a printing subsystem issue."@en ;
+    skos:example "Debug a database ER diagram to identify anomalies."@en ;
+    skos:example "Debug software using techniques like breakpoints or logs."@en ;
+    skos:note "Central to verification, validation, and quality assurance."@en ;
+    skos:related bloom:Trace, bloom:Test .
+
+###  ----- Decide verb -----
+bloom:Decide
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating, bloom:Evaluate  ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "decide"@en ;
+    skos:prefLabel "decide"@en ;
+    rdfs:comment "Choose the most appropriate technical option based on evaluation."@en ;
+    skos:definition "Make informed choices among alternatives in tech or organizational contexts."@en ;
+    skos:example "Decide between methods for securing a wireless network."@en ;
+    skos:example "Decide on the best data structure for a scenario."@en ;
+    skos:example "Decide proper resolution for a technical support request."@en ;
+    skos:example "Decide on best security practices for network endpoints."@en ;
+    skos:note "Involves weighing trade-offs and applying judgment."@en ;
+    skos:related bloom:Evaluate, bloom:Select .
+
+
+###  ----- Optimize verb -----
+bloom:Optimize
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "optimize"@en ;
+    skos:prefLabel "optimize"@en ;
+    rdfs:comment "Improve efficiency or performance of system components."@en ;
+    skos:definition "Enhance the performance or resource usage of code, networks, or configurations."@en ;
+    skos:example "Optimize code by replacing functions with more efficient implementations."@en ;
+    skos:example "Optimize network flow using ACLs on firewall ports."@en ;
+    skos:note "Crucial for performance tuning and resource-sensitive computing tasks."@en ;
+    skos:related bloom:Tune, bloom:Evaluate .
+
+###  ----- Prioritize verb -----
+bloom:Prioritize
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating, bloom:Evaluate  ;
+    bloom:hasActionVerbType bloom:ComputingVerb, bloom:CS2023Verb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "prioritize"@en ;
+    skos:prefLabel "prioritize"@en ;
+    rdfs:comment "Order tasks or processes based on importance or urgency."@en ;
+    skos:definition "Rank or sequence tasks, functions, or traffic flows to meet objectives."@en ;
+    skos:example "Prioritize a search algorithm using a binary heap structure."@en ;
+    skos:example "Prioritize network traffic using QoS configurations."@en ;
+    skos:example "Prioritize daily tasks to meet critical deadlines."@en ;
+    skos:note "Applies in systems orchestration as well as project and resource management."@en ;
+    skos:related bloom:Schedule, bloom:Manage .
+
+###  ----- Prove verb -----
+bloom:Prove
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "prove"@en ;
+    skos:prefLabel "prove"@en ;
+    rdfs:comment "Demonstrate the validity of a property or attack through logic or evidence."@en ;
+    skos:definition "Establish through logical argument or empirical evidence that a condition holds."@en ;
+    skos:example "Prove basic probability theorems."@en ;
+    skos:example "Prove a security vulnerability exists in endpoint software."@en ;
+    skos:note "Essential in theoretical validation, formal methods, and cybersecurity proofs."@en ;
+    skos:related bloom:Validate, bloom:Verify .
+
+###  ----- Validate verb -----
+bloom:Validate
+    rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+    bloom:isActionVerbFor bloom:Evaluating ;
+    bloom:hasActionVerbType bloom:ComputingVerb ;
+    dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+    rdfs:label "validate"@en ;
+    skos:prefLabel "validate"@en ;
+    rdfs:comment "Confirm that systems or components meet required criteria."@en ;
+    skos:definition "Verify that a component or system behaves as expected under specified conditions."@en ;
+    skos:example "Validate server cluster functionality using appropriate tools."@en ;
+    skos:example "Validate security of software using a defined test plan."@en ;
+    skos:note "Critical for acceptance testing, compliance, and system assurance."@en ;
+    skos:related bloom:Test, bloom:Prove .
+
+
+###  ----- Collaborate -----
+bloom:Collaborate
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "collaborate"@en ;
+  skos:prefLabel "collaborate"@en ;
+  skos:definition "Work jointly with others to produce a computational artifact or solution."@en ;
+  skos:example "Collaborate with team members and users to conduct a needs analysis for a point-of-sale system."@en ;
+  skos:example "Collaborate to co-develop a software module."@en ;
+  skos:note "Essential interpersonal skill in team-based development environments."@en ;
+  skos:related bloom:Communicate, bloom:Plan .
+
+###  ----- Compose -----
+bloom:Compose
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "compose"@en ;
+  skos:prefLabel "compose"@en ;
+  skos:definition "Assemble reusable components to develop integrative code structures or systems."@en ;
+  skos:example "Compose a new class using OOP principles to support new software functionality."@en ;
+  skos:example "Compose automation scripts that run independently."@en ;
+  skos:note "Promotes modular and maintainable software design."@en ;
+  skos:related bloom:Program, bloom:Create .
+
+###  ----- Generate -----
+bloom:Generate
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "generate"@en ;
+  skos:prefLabel "generate"@en ;
+  skos:definition "Produce content, data, or insights using computational tools."@en ;
+  skos:example "Generate meaningful reports from multiple datasets."@en ;
+  skos:example "Generate statistics using Excel formulas."@en ;
+  skos:note "Common in data science and automation pipelines."@en ;
+  skos:related bloom:Report, bloom:Analyze .
+
+###  ----- Program -----
+bloom:Program
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "program"@en ;
+  skos:prefLabel "program"@en ;
+  skos:definition "Write routines or software to perform specific automated tasks."@en ;
+  skos:example "Program a routine that launches code segments on devices under conditions."@en ;
+  skos:example "Program a smart controller to pause irrigation when raining."@en ;
+  skos:note "Fundamental in software and embedded systems development."@en ;
+  skos:related bloom:Script, bloom:Compose .
+
+###  ----- Script -----
+bloom:Script
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "script"@en ;
+  skos:prefLabel "script"@en ;
+  skos:definition "Write command sequences in scripting languages to automate tasks."@en ;
+  skos:example "Script form validation using regex patterns."@en ;
+  skos:example "Script commands to instantiate virtual resources."@en ;
+  skos:note "Key for rapid automation in IT operations."@en ;
+  skos:related bloom:Program, bloom:Automate .
+
+###  ----- Secure -----
+bloom:Secure
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "secure"@en ;
+  skos:prefLabel "secure"@en ;
+  skos:definition "Implement measures to protect systems or data from unauthorized access."@en ;
+  skos:example "Secure a transaction between a browser and a server."@en ;
+  skos:example "Secure a local network against DoS attacks."@en ;
+  skos:note "Fundamental to cybersecurity and infrastructure protection."@en ;
+  skos:related bloom:Encrypt, bloom:Authenticate .
+
+###  ----- Visualize -----
+bloom:Visualize
+  rdf:type owl:NamedIndividual, bloom:ActionVerb ;
+  bloom:isActionVerbFor bloom:Creating ;
+  bloom:hasActionVerbType bloom:ComputingVerb ;
+  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+  rdfs:label "visualize"@en ;
+  skos:prefLabel "visualize"@en ;
+  skos:definition "Create visual representations for data, models, or system behaviors."@en ;
+  skos:example "Visualize a data model using libraries for analysis."@en ;
+  skos:example "Visualize system access patterns to track intruders."@en ;
+  skos:note "Enhances insight into abstract structures and behaviors."@en ;
+  skos:related bloom:Generate, bloom:Analyze .
+
+
+
+### ### ###  =====================
+### ### ###  EXPLAIN
+### ### ###  =====================
+
+cs2023:Express rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor cs2023:Explain ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;
+              dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+              rdfs:comment "Communicating an idea, fact, or process clearly."@en ;
+              rdfs:label "express"@en ;
+              skos:definition "Convey a concept, idea, or process in spoken, written, or symbolic form."@en ;
+              skos:example "Express the logic of an algorithm using pseudocode."@en ;
+              skos:note "Often used to test clarity and understanding of knowledge representation."@en ;
+              skos:prefLabel "express"@en .
+
+cs2023:Indicate rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor cs2023:Explain ;
+			    bloom:hasActionVerbType bloom:CS2023Verb ;				
+                dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                rdfs:comment "Pointing out or showing evidence of something."@en ;
+                rdfs:label "indicate"@en ;
+                skos:definition "Identify or signal specific aspects, features, or results."@en ;
+                skos:example "Indicate which data structures are most efficient for a given problem."@en ;
+                skos:note "Supports explanation by highlighting or signaling key features."@en ;
+                skos:prefLabel "indicate"@en .
+
+cs2023:Tabulate rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor cs2023:Explain ;
+			    bloom:hasActionVerbType bloom:CS2023Verb ;				
+                dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                rdfs:comment "Presenting information in a systematic table or chart."@en ;
+                rdfs:label "tabulate"@en ;
+                skos:definition "Organize and present data or results in tabular form for clarity and comparison."@en ;
+                skos:example "Tabulate the performance metrics of different algorithms."@en ;
+                skos:note "Enhances explanation with structured and comparable formats."@en ;
+                skos:prefLabel "tabulate"@en .
+
+### ### ###  =====================
+### ### ###  APPLY
+### ### ###  =====================
+
+cs2023:Experiment rdf:type owl:NamedIndividual ,
+                           bloom:ActionVerb ;
+                  bloom:isActionVerbFor cs2023:Apply ;
+			    bloom:hasActionVerbType bloom:CS2023Verb ;				
+				  dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                  rdfs:comment "Testing or trying out something to observe results."@en ;
+                  rdfs:label "experiment"@en ;
+                  skos:definition "Apply knowledge or techniques in controlled scenarios to test hypotheses or observe behavior."@en ;
+                  skos:example "Experiment with different sorting algorithms to measure efficiency."@en ;
+                  skos:note "Supports applied learning and hands-on validation."@en ;
+                  skos:prefLabel "experiment"@en .
+
+cs2023:Patch rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor cs2023:Apply ;
+			 bloom:hasActionVerbType bloom:CS2023Verb ;							  
+              dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+              rdfs:comment "Applying a fix or update to resolve a specific issue."@en ;
+              rdfs:label "patch"@en ;
+              skos:definition "Apply a modification or fix to correct errors, improve performance, or enhance security."@en ;
+              skos:example "Patch a software system to fix a security vulnerability."@en ;
+              skos:note "Common in applied computing and maintenance practices."@en ;
+              skos:prefLabel "patch"@en .
+
+### ### ###  =====================
+### ### ###  EVALUATE
+### ### ###  =====================
+
+cs2023:Order rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+              bloom:isActionVerbFor cs2023:Evaluate ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;
+              dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+              rdfs:comment "Arrange elements according to criteria or priority."@en ;
+              rdfs:label "order"@en ;
+              skos:definition "Arrange items, processes, or solutions in a logical or prioritized sequence."@en ;
+              skos:example "Order machine learning models based on accuracy and efficiency."@en ;
+              skos:note "Supports evaluative tasks that involve ranking or prioritizing."@en ;
+              skos:prefLabel "order"@en .
+
+cs2023:Criticize rdf:type owl:NamedIndividual ,
+                           bloom:ActionVerb ;
+                 bloom:isActionVerbFor cs2023:Evaluate ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				 
+                 dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                 rdfs:comment "Pointing out strengths and weaknesses of something."@en ;
+                 rdfs:label "criticize"@en ;
+                 skos:definition "Assess the merits and flaws of an idea, process, or product."@en ;
+                 skos:example "Criticize the design of a user interface for usability issues."@en ;
+                 skos:note "Essential for constructive evaluation and quality assurance."@en ;
+                 skos:prefLabel "criticize"@en .
+
+cs2023:Recommend rdf:type owl:NamedIndividual ,
+                           bloom:ActionVerb ;
+                 bloom:isActionVerbFor cs2023:Evaluate ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				 
+                 dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                 rdfs:comment "Suggesting the most suitable option based on evaluation."@en ;
+                 rdfs:label "recommend"@en ;
+                 skos:definition "Propose a course of action, tool, or method after considering alternatives."@en ;
+                 skos:example "Recommend the most appropriate database system for a web application."@en ;
+                 skos:note "Combines evaluation with decision-making."@en ;
+                 skos:prefLabel "recommend"@en .
+
+cs2023:Ranking rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor cs2023:Evaluate ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				
+                dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                rdfs:comment "Arranging items based on evaluative criteria."@en ;
+                rdfs:label "ranking"@en ;
+                skos:definition "Establish an order of preference or performance among alternatives."@en ;
+                skos:example "Ranking search engine results based on relevance."@en ;
+                skos:note "Widely used in computing tasks like retrieval and recommendation."@en ;
+                skos:prefLabel "ranking"@en .
+
+### ### ###  =====================
+### ### ###  DEVELOP
+### ### ###  =====================
+
+cs2023:Combine rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor cs2023:Develop ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				
+                dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                rdfs:comment "Merging elements into a coherent whole."@en ;
+                rdfs:label "combine"@en ;
+                skos:definition "Integrate different parts, ideas, or methods to form a unified result."@en ;
+                skos:example "Combine algorithms to create a hybrid solution."@en ;
+                skos:note "Fundamental in development and design."@en ;
+                skos:prefLabel "combine"@en .
+
+cs2023:Plan rdf:type owl:NamedIndividual ,
+                      bloom:ActionVerb ;
+             bloom:isActionVerbFor cs2023:Develop ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;			 
+             dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+             rdfs:comment "Designing steps or actions for achieving a goal."@en ;
+             rdfs:label "plan"@en ;
+             skos:definition "Devise a structured sequence of actions to accomplish a task or objective."@en ;
+             skos:example "Plan the architecture of a software project."@en ;
+             skos:note "Crucial in development and project management."@en ;
+             skos:prefLabel "plan"@en .
+
+cs2023:Produce rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor cs2023:Develop ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				
+                dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                rdfs:comment "Creating or generating an output."@en ;
+                rdfs:label "produce"@en ;
+                skos:definition "Generate or create a tangible or intangible result."@en ;
+                skos:example "Produce a working prototype of a web service."@en ;
+                skos:note "Focuses on the outcome of development processes."@en ;
+                skos:prefLabel "produce"@en .
+
+cs2023:Rearrange rdf:type owl:NamedIndividual ,
+                           bloom:ActionVerb ;
+                 bloom:isActionVerbFor cs2023:Develop ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				 
+                 dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                 rdfs:comment "Changing the organization or order of elements."@en ;
+                 rdfs:label "rearrange"@en ;
+                 skos:definition "Alter the sequence or structure of elements to improve or adapt results."@en ;
+                 skos:example "Rearrange code modules to enhance readability and performance."@en ;
+                 skos:note "Supports iterative development and refactoring."@en ;
+                 skos:prefLabel "rearrange"@en .
+
+cs2023:Rewrite rdf:type owl:NamedIndividual ,
+                         bloom:ActionVerb ;
+                bloom:isActionVerbFor cs2023:Develop ;
+			  bloom:hasActionVerbType bloom:CS2023Verb ;				
+                dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+                rdfs:comment "Writing something again, often with improvements or changes."@en ;
+                rdfs:label "rewrite"@en ;
+                skos:definition "Recompose text, code, or design to improve clarity, accuracy, or efficiency."@en ;
+                skos:example "Rewrite a function to optimize performance."@en ;
+                skos:note "Key to iterative refinement and improvement in computing."@en ;
+                skos:prefLabel "rewrite"@en .
+
+cs2023:Write rdf:type owl:NamedIndividual ,
+                       bloom:ActionVerb ;
+             bloom:isActionVerbFor cs2023:Develop ;
+			 bloom:hasActionVerbType bloom:CS2023Verb ;			 
+             dcterms:references <https://dl.acm.org/doi/10.1145/3573260> ;
+             rdfs:comment "Creating written or coded artifacts."@en ;
+             rdfs:label "write"@en ;
+             skos:definition "Compose text, code, or documentation to express ideas or create functional outputs."@en ;
+             skos:example "Write a program in Python that solves a scheduling problem."@en ;
+             skos:note "Central in both technical documentation and coding tasks."@en ;
+             skos:prefLabel "write"@en .
+
+
+
+
+
+
+
+
+
+

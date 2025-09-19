@@ -1,24 +1,25 @@
-@prefix bloom: <http://purl.org/edu/bloom#> .
+@prefix : <http://purl.org/edu/bloom#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bloom: <http://purl.org/edu/bloom#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix cs2023:  <http://purl.org/edu/cs2023#> .
 @base <http://purl.org/edu/bloom#> .
 
 <http://purl.org/edu/bloom> rdf:type owl:Ontology ;
-    rdfs:label "Bloom's Revised Taxonomy Ontology (with Punning)"@en ;
-    rdfs:comment "This ontology uses OWL 2 punning to represent cognitive levels as both classes and individuals."@en .
-
+                             rdfs:comment "This ontology uses OWL 2 punning to represent cognitive levels as both classes and individuals."@en ;
+                             rdfs:label "Bloom's Revised Taxonomy Ontology (with Punning)"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/terms/references
-<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty .
+dcterms:references rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -53,17 +54,39 @@ skos:related rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/edu/bloom#directFollows
+bloom:directFollows rdf:type owl:ObjectProperty ;
+                    owl:inverseOf bloom:directPrecedes ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain bloom:CognitiveProcessLevel ;
+                    rdfs:range bloom:CognitiveProcessLevel .
+
+
+###  http://purl.org/edu/bloom#directPrecedes
+bloom:directPrecedes rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain bloom:CognitiveProcessLevel ;
+                     rdfs:range bloom:CognitiveProcessLevel .
+
+
 ###  http://purl.org/edu/bloom#follows
 bloom:follows rdf:type owl:ObjectProperty ;
               owl:inverseOf bloom:precedes ;
-              rdfs:comment "The inverse of precedes."@en ;
+              rdf:type owl:TransitiveProperty ;
+              rdfs:domain bloom:CognitiveProcessLevel ;
+              rdfs:range bloom:CognitiveProcessLevel ;
+              owl:propertyChainAxiom ( bloom:directFollows
+                                       bloom:follows
+                                     ) ;
+              rdfs:comment """The inverse of precedes.
+Transitive closure of directFollows. The inverse of precedes."""@en ;
               rdfs:label "follows"@en .
 
 
 ###  http://purl.org/edu/bloom#hasActionVerb
 bloom:hasActionVerb rdf:type owl:ObjectProperty ;
                     owl:inverseOf bloom:isActionVerbFor ;
-                    rdfs:domain bloom:CognitiveProcessLevel ;
+                    rdfs:domain bloom:SkillLevel ;
                     rdfs:range bloom:ActionVerb ;
                     rdfs:comment "Associates a cognitive process level with one or more verbs."@en ;
                     rdfs:label "hasActionVerb"@en .
@@ -79,7 +102,7 @@ bloom:hasActionVerbType rdf:type owl:ObjectProperty ;
 ###  http://purl.org/edu/bloom#isActionVerbFor
 bloom:isActionVerbFor rdf:type owl:ObjectProperty ;
                       rdfs:domain bloom:ActionVerb ;
-                      rdfs:range bloom:CognitiveProcessLevel ;
+                      rdfs:range bloom:SkillLevel ;
                       rdfs:comment "isActionVerbFor" .
 
 
@@ -91,10 +114,15 @@ bloom:isActionVerbTypeFor rdf:type owl:ObjectProperty ;
 
 
 ###  http://purl.org/edu/bloom#precedes
-bloom:precedes rdf:type owl:ObjectProperty ;
+bloom:precedes rdf:type owl:ObjectProperty ,
+                        owl:TransitiveProperty ;
                rdfs:domain bloom:CognitiveProcessLevel ;
                rdfs:range bloom:CognitiveProcessLevel ;
-               rdfs:comment "Indicates that one cognitive level precedes another."@en ;
+               owl:propertyChainAxiom ( bloom:directPrecedes
+                                        bloom:precedes
+                                      ) ;
+               rdfs:comment """Indicates that one cognitive level precedes another.
+Transitive closure of directPrecedes. Indicates that one cognitive level precedes another."""@en ;
                rdfs:label "precedes"@en .
 
 
@@ -104,7 +132,7 @@ bloom:precedes rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/edu/bloom#hasComplexityLevel
 bloom:hasComplexityLevel rdf:type owl:DatatypeProperty ;
-                         rdfs:domain bloom:CognitiveProcessLevel ;
+                         rdfs:domain bloom:SkillLevel ;
                          rdfs:range xsd:int ;
                          rdfs:comment """\"Indicates the ascending cognitive complexity of this level.\"@en .
 Numeric indicator of complexity (1 to 6)."""@en ;
@@ -139,9 +167,42 @@ bloom:Analyzing rdf:type owl:Class ;
                 rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
+###  http://purl.org/edu/bloom#Apply
+cs2023:Apply rdf:type owl:Class ;
+            rdfs:subClassOf cs2023:CS2023SkillLevel .
+
+
 ###  http://purl.org/edu/bloom#Applying
 bloom:Applying rdf:type owl:Class ;
                rdfs:subClassOf bloom:CognitiveProcessLevel .
+
+
+###  http://purl.org/edu/bloom#CS2023SkillLevel
+cs2023:CS2023SkillLevel rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                             owl:onProperty bloom:hasComplexityLevel ;
+                                             owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                 owl:oneOf [ rdf:type rdf:List ;
+                                                                             rdf:first 1 ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first 2 ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 3 ;
+                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                              rdf:first 4 ;
+                                                                                                              rdf:rest rdf:nil
+                                                                                                            ]
+                                                                                                 ]
+                                                                                      ]
+                                                                           ]
+                                                               ]
+                                           ] ;
+                       rdfs:subClassOf bloom:SkillLevel ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty bloom:hasComplexityLevel ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:int
+                                       ] .
 
 
 ###  http://purl.org/edu/bloom#CognitiveProcessLevel
@@ -170,16 +231,7 @@ bloom:CognitiveProcessLevel rdf:type owl:Class ;
                                                                                 ]
                                                                     ]
                                                 ] ;
-                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                              owl:onProperty bloom:follows ;
-                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                              owl:onClass bloom:CognitiveProcessLevel
-                                            ] ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty bloom:precedes ;
-                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                              owl:onClass bloom:CognitiveProcessLevel
-                                            ] ,
+                            rdfs:subClassOf bloom:SkillLevel ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty bloom:hasComplexityLevel ;
                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -203,14 +255,34 @@ bloom:Creating rdf:type owl:Class ;
                rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
+###  http://purl.org/edu/bloom#Develop
+cs2023:Develop rdf:type owl:Class ;
+              rdfs:subClassOf cs2023:CS2023SkillLevel .
+
+
+###  http://purl.org/edu/bloom#Evaluate
+cs2023:Evaluate rdf:type owl:Class ;
+               rdfs:subClassOf cs2023:CS2023SkillLevel .
+
+
 ###  http://purl.org/edu/bloom#Evaluating
 bloom:Evaluating rdf:type owl:Class ;
                  rdfs:subClassOf bloom:CognitiveProcessLevel .
 
 
+###  http://purl.org/edu/bloom#Explain
+cs2023:Explain rdf:type owl:Class ;
+              rdfs:subClassOf cs2023:CS2023SkillLevel .
+
+
 ###  http://purl.org/edu/bloom#Remembering
 bloom:Remembering rdf:type owl:Class ;
                   rdfs:subClassOf bloom:CognitiveProcessLevel .
+
+
+###  http://purl.org/edu/bloom#SkillLevel
+bloom:SkillLevel rdf:type owl:Class ;
+                 rdfs:comment "Abstract superclass for different taxonomies of skill levels (e.g., Bloom, CS2023)." .
 
 
 ###  http://purl.org/edu/bloom#Understanding
@@ -225,14 +297,21 @@ bloom:Understanding rdf:type owl:Class ;
 ###  http://purl.org/edu/bloom#Analyzing
 bloom:Analyzing rdf:type owl:NamedIndividual ,
                          bloom:CognitiveProcessLevel ;
-                bloom:precedes bloom:Evaluating ;
+                bloom:directPrecedes bloom:Evaluating ;
                 bloom:hasComplexityLevel 4 .
+
+
+###  http://purl.org/edu/bloom#Apply
+cs2023:Apply rdf:type owl:NamedIndividual ,
+                     cs2023:CS2023SkillLevel ;
+            bloom:directPrecedes cs2023:Evaluate ;
+            bloom:hasComplexityLevel 2 .
 
 
 ###  http://purl.org/edu/bloom#Applying
 bloom:Applying rdf:type owl:NamedIndividual ,
                         bloom:CognitiveProcessLevel ;
-               bloom:precedes bloom:Analyzing ;
+               bloom:directPrecedes bloom:Analyzing ;
                bloom:hasComplexityLevel 3 .
 
 
@@ -242,24 +321,44 @@ bloom:Creating rdf:type owl:NamedIndividual ,
                bloom:hasComplexityLevel 6 .
 
 
+###  http://purl.org/edu/bloom#Develop
+cs2023:Develop rdf:type owl:NamedIndividual ,
+                       cs2023:CS2023SkillLevel ;
+              bloom:hasComplexityLevel 4 .
+
+
+###  http://purl.org/edu/bloom#Evaluate
+cs2023:Evaluate rdf:type owl:NamedIndividual ,
+                        cs2023:CS2023SkillLevel ;
+               bloom:directPrecedes bloom:Develop ;
+               bloom:hasComplexityLevel 3 .
+
+
 ###  http://purl.org/edu/bloom#Evaluating
 bloom:Evaluating rdf:type owl:NamedIndividual ,
                           bloom:CognitiveProcessLevel ;
-                 bloom:precedes bloom:Creating ;
+                 bloom:directPrecedes bloom:Creating ;
                  bloom:hasComplexityLevel 5 .
+
+
+###  http://purl.org/edu/bloom#Explain
+cs2023:Explain rdf:type owl:NamedIndividual ,
+                       cs2023:CS2023SkillLevel ;
+              bloom:directPrecedes bloom:Apply ;
+              bloom:hasComplexityLevel 1 .
 
 
 ###  http://purl.org/edu/bloom#Remembering
 bloom:Remembering rdf:type owl:NamedIndividual ,
                            bloom:CognitiveProcessLevel ;
-                  bloom:precedes bloom:Understanding ;
+                  bloom:directPrecedes bloom:Understanding ;
                   bloom:hasComplexityLevel 1 .
 
 
 ###  http://purl.org/edu/bloom#Understanding
 bloom:Understanding rdf:type owl:NamedIndividual ,
                              bloom:CognitiveProcessLevel ;
-                    bloom:precedes bloom:Applying ;
+                    bloom:directPrecedes bloom:Applying ;
                     bloom:hasComplexityLevel 2 .
 
 
@@ -278,6 +377,9 @@ Subskills include:
 - Attributing, deconstructing: Deconstructing material to identify underlying assumptions, motives, perspectives, or bias; recognizing the values and intentions embedded in the content. 
 
 Typical activities: outlining the argument of a text, comparing different points of view, dissecting logical structures, identifying fallacies, or analyzing the role of each component in a system or model."""@en .
+
+
+bloom:Apply rdfs:comment "Ability to use and manipulate knowledge in concrete contexts." .
 
 
 bloom:Applying rdfs:comment """Apply: the ability to use learned knowledge and procedures in concrete situations. This level involves carrying out or adapting a known method to solve problems, complete tasks, or respond to situations that may be familiar or slightly new.
@@ -304,6 +406,12 @@ Subskills include:
 Typical activities: writing an essay or story, designing an experiment, creating a prototype, composing music, developing a new process or model."""@en .
 
 
+bloom:Develop rdfs:comment "Ability to design, integrate, and create new artifacts or solutions." .
+
+
+bloom:Evaluate rdfs:comment "Ability to critique, justify, and compare alternatives." .
+
+
 bloom:Evaluating rdfs:comment """
 Evaluate: the ability to make judgments based on criteria and standards. This level involves assessing the quality, credibility, or effectiveness of materials, processes, or solutions.
 
@@ -314,6 +422,9 @@ Subskills include:
 - Critiquing: Judging materials or actions based on external standards, such as quality benchmarks, ethical principles, or disciplinary norms. This includes evaluating the appropriateness or effectiveness of a method for a specific context.
 
 Typical activities: reviewing a peer’s essay using a rubric, evaluating the reliability of a source, comparing solutions to a problem, critiquing artistic or scientific work based on established criteria."""@en .
+
+
+bloom:Explain rdfs:comment "Ability to define, describe, identify, and discuss concepts clearly." .
 
 
 bloom:Remembering rdfs:comment """
@@ -350,4 +461,4 @@ Subskills include:
 Typical activities: paraphrasing a paragraph, summarizing a lesson, identifying types of ecosystems, comparing theories, interpreting diagrams, explaining a process in one's own words."""@en .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

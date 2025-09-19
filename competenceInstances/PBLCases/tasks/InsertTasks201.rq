@@ -5,7 +5,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 
 INSERT DATA {
   ontoksd:Task201 a ontoksd:LearningTask ;
-    ontoksd:hasAcquisitionContext ontoksd:contextEduknow ;
+    ontoksd:hasAcquisitionContext ontoksd:contextMATC94_02 ;
     dcterms:title "Surveillance Drone Prototype"@en ;
     dcterms:description "The problem scenario presented by SOS Florestal involves the development of a prototype surveillance module for a drone used in forest monitoring. The module must be capable of detecting and reporting deforestation, river siltation, and forest fires using optical, thermal, and positional data. The real-time transmission of photos and videos, enriched with GPS coordinates and sensor readings, enables the system to identify critical events and respond accordingly."@en ;
     dcterms:creator "Edeyson Gomes"@en, "Luiz Gavaza"@en, "Lais Salvador"@en .
@@ -15,34 +15,34 @@ INSERT DATA {
 ############# INSERÇÃO DAS ASSOCIAÇÕES DE COMPETÊNCIA ################
 
 INSERT DATA {
-  :assoc_T201_12 a ontoksd:CompetenceAssociation ;
-    ontoksd:hasInstructionalEntity ontoksd:Task201 ;
-    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C12 ;
-    dcterms:description "Task201 requires the development of a real-world prototype that models the surveillance behavior of a drone using Finite State Machines (FSMs). Students must analyze system requirements and construct a formal FSM that represents event detection, control actions, and data transmission. This competence directly supports the ability to design, implement, and validate FSM-based computational solutions that are logically consistent and verifiable. Its specific focus on FSMs makes it highly aligned with the learning objectives and deliverables of the task, including simulation, rule derivation, and formal justification of state minimization strategies."@en .
-
-  :assoc_T201_06 a ontoksd:CompetenceAssociation ;
-    ontoksd:hasInstructionalEntity ontoksd:Task201 ;
-    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C06 ;
+  ontoksd:assoc_T201_02 a ontoksd:CompetenceAssociation ;
+    ontoksd:mediatesInstructionalEntity ontoksd:Task201 ;
+    ontoksd:mediatesTargetCompetence ontoksd:competence_EdukNow_C02 ;
     dcterms:description "The task challenges students to evaluate and justify the suitability of FSMs in representing drone behavior. This involves comparing different automaton models (DFA vs. NFA), understanding trade-offs, and selecting the most appropriate model for a real-world application—core aspects of this competency."@en .
 
-  :assoc_T201_07 a ontoksd:CompetenceAssociation ;
-    ontoksd:hasInstructionalEntity ontoksd:Task201 ;
-    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C07 ;
+  :assoc_T201_03 a ontoksd:CompetenceAssociation ;
+    ontoksd:mediatesInstructionalEntity ontoksd:Task201 ;
+    ontoksd:mediatesTargetCompetence ontoksd:competence_EdukNow_C03 ;
     dcterms:description "One of the deliverables includes simulated executions of the automaton model using JFLAP. This aligns perfectly with the competency, which emphasizes systematic testing, verification, and iterative refinement of FSMs through simulation tools."@en .
 
-  :assoc_T201_08 a ontoksd:CompetenceAssociation ;
-    ontoksd:hasInstructionalEntity ontoksd:Task201 ;
-    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C08 ;
+  :assoc_T201_04 a ontoksd:CompetenceAssociation ;
+    ontoksd:mediatesInstructionalEntity ontoksd:Task201 ;
+    ontoksd:mediatesTargetCompetence ontoksd:competence_EdukNow_C04 ;
     dcterms:description "The task includes the design of a mathematical expression or formula to estimate states and transitions, which supports abstraction and reasoning about FSM structure. Though not directly requesting a regular expression, this activity aligns with the analytical dimension of mapping behavior to symbolic representations."@en .
 
-  :assoc_T201_04 a ontoksd:CompetenceAssociation ;
-    ontoksd:hasInstructionalEntity ontoksd:Task201 ;
-    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C04 ;
+  :assoc_T201_05 a ontoksd:CompetenceAssociation ;
+    ontoksd:mediatesInstructionalEntity ontoksd:Task201 ;
+    ontoksd:mediatesTargetCompetence ontoksd:competence_EdukNow_C05 ;
     dcterms:description "Students are required to produce a structured technical report in SBC format that documents system modeling, simulation, and analysis. This aligns with the competency’s focus on effective written communication of technical artifacts."@en .
 
-  :assoc_T201_13 a ontoksd:CompetenceAssociation ;
-    ontoksd:hasInstructionalEntity ontoksd:Task201 ;
-    ontoksd:hasTargetCompetence ontoksd:competence_EdukNow_C13 ;
+  :assoc_T201_06 a ontoksd:CompetenceAssociation ;
+    ontoksd:mediatesInstructionalEntity ontoksd:Task201 ;
+    ontoksd:mediatesTargetCompetence ontoksd:competence_EdukNow_C06 ;
+    dcterms:description "Task201 requires the development of a real-world prototype that models the surveillance behavior of a drone using Finite State Machines (FSMs). Students must analyze system requirements and construct a formal FSM that represents event detection, control actions, and data transmission. This competence directly supports the ability to design, implement, and validate FSM-based computational solutions that are logically consistent and verifiable. Its specific focus on FSMs makes it highly aligned with the learning objectives and deliverables of the task, including simulation, rule derivation, and formal justification of state minimization strategies."@en .
+	
+  :assoc_T201_11 a ontoksd:CompetenceAssociation ;
+    ontoksd:mediatesInstructionalEntity ontoksd:Task201 ;
+    ontoksd:mediatesTargetCompetence ontoksd:competence_EdukNow_C11 ;
     dcterms:description "The estimation of minimal states and transitions requires identifying patterns or regularities in FSM behavior. This competency supports structural analysis to simplify or optimize models, which is a key step in abstracting general rules from specific models."@en .
 }
 

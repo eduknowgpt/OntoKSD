@@ -14,19 +14,22 @@
 #################################################################
 
 ###  http://purl.org/ontoksd/rcd#hasDefinition
-rcd:hasDefinition rdf:type owl:ObjectProperty ;
+rcd:hasDefinition rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
                   rdfs:domain rcd:RCD ;
                   rdfs:range rcd:Definition .
 
 
 ###  http://purl.org/ontoksd/rcd#hasIdentifier
-rcd:hasIdentifier rdf:type owl:ObjectProperty ;
+rcd:hasIdentifier rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
                   rdfs:domain rcd:RCD ;
                   rdfs:range rcd:LongIdentifier .
 
 
 ###  http://purl.org/ontoksd/rcd#hasMetadata
-rcd:hasMetadata rdf:type owl:ObjectProperty ;
+rcd:hasMetadata rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:domain rcd:RCD ;
                 rdfs:range rcd:Metadata .
 
@@ -104,7 +107,7 @@ rcd:statementName rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/ontoksd/rcd#statementText
 rcd:statementText rdf:type owl:DatatypeProperty ;
                   rdfs:domain rcd:Statement ;
-                  rdfs:range xsd:string .
+                  rdfs:range rdf:langString .
 
 
 ###  http://purl.org/ontoksd/rcd#title
@@ -130,7 +133,12 @@ rcd:vocabularyValue rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.org/ontoksd/rcd#Definition
-rcd:Definition rdf:type owl:Class .
+rcd:Definition rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty rcd:hasStatement ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass rcd:Statement
+                               ] .
 
 
 ###  http://purl.org/ontoksd/rcd#LongIdentifier

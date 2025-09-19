@@ -5,7 +5,9 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cs2013: <http://purl.org/cs2013/>
 PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
-PREFIX bloom: <http://example.org/bloom#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+####  Test Turing Machines Using Simulators
 
 ############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
 
@@ -16,8 +18,9 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s) {
-    (cs2013:TuringMachines ontoksd:understandingSkill)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+    (cs2013:Turing_machines ontoksd:applyingSkill)
+    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
+    (cs2013:Foundational_approaches_to_validating_models ontoksd:applyingSkill)
   }
 
   FILTER NOT EXISTS {
@@ -35,14 +38,17 @@ WHERE {
 
 INSERT {
   ontoksd:competence_EdukNow_C10 a ontoksd:Competence ;
-    dcterms:title "Identify Turing Machines Variants"@en ;
-    dcterms:description "Demonstrate conceptual understanding of the foundational and extended models of Turing Machines by identifying and comparing different variants—such as multi-tape, non-deterministic, or oracle-based machines—and evaluating their respective computational capabilities, limitations, and use cases. This competency includes the ability to analyze formal definitions, interpret the implications of the Church-Turing Thesis, and determine the adequacy of standard versus extended models for solving complex computational problems. Learners must apply critical and analytical thinking to justify their selections and articulate how different Turing Machine variants impact the expressiveness and efficiency of problem-solving strategies in theoretical computer science."@en ;
+   	ontoksd:hasStructureType	ontoksd:Atomic ;
+	ontoksd:hasCompetenceType	ontoksd:ComputingDomain ;
+    dcterms:title "Test Turing Machines Using Simulators"@en ;
+    dcterms:description "This competency involves the ability to simulate and assess the behavior of Turing Machines using dedicated computational tools such as JFLAP or equivalent simulators. It ensures that students can validate Turing Machine models by checking their correctness, completeness, and adherence to formal problem specifications."@en ;
     dcterms:source "EdukNow Competence Project"@en ;
     skos:notation "EdukNow Competence - C10"@en ;
-    ontoksd:hasCompetenceElement ontoksd:Investigative ,
-                                 ontoksd:Collaborative ,
-                                 ontoksd:Responsible ,
-                                 ontoksd:Proactive ;
+    ontoksd:hasDisposition ontoksd:inventive ,
+                                 ontoksd:responsible ,
+                                 ontoksd:proactive ,
+                                 ontoksd:collaborative ,
+                                 ontoksd:creative ;
     ontoksd:hasKnowledgeSkill ?ks .
 }
 WHERE {
@@ -51,8 +57,9 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (cs2013:TuringMachines ontoksd:understandingSkill)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+    (cs2013:Turing_machines ontoksd:applyingSkill)
+    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
+    (cs2013:Foundational_approaches_to_validating_models ontoksd:applyingSkill)
   }
 }
 
@@ -65,13 +72,9 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s ?verb) {
-    (cs2013:TuringMachines ontoksd:understandingSkill bloom:Differentiate)
-    (cs2013:TuringMachines ontoksd:understandingSkill bloom:Recognize)
-    (cs2013:TuringMachines ontoksd:understandingSkill bloom:Explain)
-
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Analyze)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Justify)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Evaluate)
+    (cs2013:Turing_machines ontoksd:applyingSkill bloom:use)
+    (cs2013:Turing_machines ontoksd:applyingSkill bloom:adapt)
+    (cs2013:Turing_machines ontoksd:applyingSkill bloom:implement)
   }
 
   ?ks a ontoksd:KnowledgeSkill ;

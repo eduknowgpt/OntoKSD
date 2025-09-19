@@ -1,0 +1,80 @@
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cs2013: <http://purl.org/cs2013/>
+PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
+PREFIX bloom: <http://example.org/bloom#>
+
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2013:TuringMachines ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA EdukNow_C10 ################
+
+INSERT {
+  ontoksd:competence_EdukNow_C10 a ontoksd:Competence ;
+    dcterms:title "Identify Turing Machines Variants"@en ;
+    dcterms:description "Demonstrate conceptual understanding of the foundational and extended models of Turing Machines by identifying and comparing different variants—such as multi-tape, non-deterministic, or oracle-based machines—and evaluating their respective computational capabilities, limitations, and use cases. This competency includes the ability to analyze formal definitions, interpret the implications of the Church-Turing Thesis, and determine the adequacy of standard versus extended models for solving complex computational problems. Learners must apply critical and analytical thinking to justify their selections and articulate how different Turing Machine variants impact the expressiveness and efficiency of problem-solving strategies in theoretical computer science."@en ;
+    dcterms:source "EdukNow Competence Project"@en ;
+    skos:notation "EdukNow Competence - C10"@en ;
+    ontoksd:hasCompetenceElement ontoksd:Investigative ,
+                                 ontoksd:Collaborative ,
+                                 ontoksd:Responsible ,
+                                 ontoksd:Proactive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (cs2013:TuringMachines ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2013:TuringMachines ontoksd:understandingSkill bloom:Differentiate)
+    (cs2013:TuringMachines ontoksd:understandingSkill bloom:Recognize)
+    (cs2013:TuringMachines ontoksd:understandingSkill bloom:Explain)
+
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Analyze)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Justify)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Evaluate)
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}

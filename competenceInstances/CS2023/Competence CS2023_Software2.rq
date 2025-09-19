@@ -1,0 +1,76 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:SDF-Practices ontoksd:cs2023ApplySkill)
+    (cs2023:SE-Teamwork    ontoksd:cs2023ApplySkill)
+    (cs2023:SE-Validation  ontoksd:cs2023ApplySkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA CS2023_Software2 ################
+
+INSERT {
+  ontoksd:competence_CS2023_Software2 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+    dcterms:title "Perform code review for a teammate"@en ;
+    dcterms:description "Communicate clearly and collaboratively to provide feedback to a teammate about a piece of code."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Software2"@en ;
+    ontoksd:hasDisposition ontoksd:collaborative ,
+                           ontoksd:communicative ,
+                           ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+  VALUES (?k ?s) {
+    (cs2023:SDF-Practices ontoksd:cs2023ApplySkill)
+    (cs2023:SE-Teamwork    ontoksd:cs2023ApplySkill)
+    (cs2023:SE-Validation  ontoksd:cs2023ApplySkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:SDF-Practices ontoksd:cs2023ApplySkill bloom:apply)
+    (cs2023:SE-Teamwork    ontoksd:cs2023ApplySkill bloom:communicate)
+    (cs2023:SE-Validation  ontoksd:cs2023ApplySkill bloom:review)
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}

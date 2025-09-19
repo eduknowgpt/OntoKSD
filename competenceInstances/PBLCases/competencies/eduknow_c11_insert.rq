@@ -1,31 +1,40 @@
+
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cs2013: <http://purl.org/cs2013/>
 PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
-PREFIX bloom: <http://example.org/bloom#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+####  Identify Patterns in Finite State Machines
 
 ############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
 
 INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+  ?ks1 a ontoksd:KnowledgeSkill ;
+       ontoksd:hasKnowledgeComponent cs2013:Finite_state_machines ;
+       ontoksd:hasSkillComponent ontoksd:analyzingSkill .
+
+  ?ks2 a ontoksd:KnowledgeSkill ;
+       ontoksd:hasKnowledgeComponent cc2020fpk:AnalyticalThinking ;
+       ontoksd:hasSkillComponent ontoksd:applyingSkill .
 }
 WHERE {
-  VALUES (?k ?s) {
-    (cs2013:TuringMachines ontoksd:applyingSkill)
-    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  FILTER NOT EXISTS {
+    ?ks1 a ontoksd:KnowledgeSkill ;
+         ontoksd:hasKnowledgeComponent cs2013:Finite_state_machines ;
+         ontoksd:hasSkillComponent ontoksd:analyzingSkill .
   }
 
   FILTER NOT EXISTS {
-    ?existing a ontoksd:KnowledgeSkill ;
-              ontoksd:hasKnowledgeComponent ?k ;
-              ontoksd:hasSkillComponent ?s .
+    ?ks2 a ontoksd:KnowledgeSkill ;
+         ontoksd:hasKnowledgeComponent cc2020fpk:AnalyticalThinking ;
+         ontoksd:hasSkillComponent ontoksd:applyingSkill .
   }
 
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks1)
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks2)
 }
 
 ;
@@ -34,15 +43,15 @@ WHERE {
 
 INSERT {
   ontoksd:competence_EdukNow_C11 a ontoksd:Competence ;
-    dcterms:title "Apply Turing Machine Variants"@en ;
-    dcterms:description "Demonstrate the ability to select and apply appropriate variants of Turing Machines, such as multi-tape, non-deterministic, or extended models, to design computational solutions tailored to specific problem characteristics. This competency requires learners to analyze the demands of a computational task and assess whether a standard Turing Machine suffices or if an extended variant offers greater efficiency or expressiveness. It also involves articulating the connection between formal computational models and the intuitive notion of algorithmic solvability, as outlined by the Church-Turing Thesis. Through the use of critical reasoning and modeling skills, students are expected to justify the use of specific Turing Machine variants and effectively implement them to represent or simulate solutions to formal problems in computer science."@en ;
+   	ontoksd:hasStructureType	ontoksd:Atomic ;
+	ontoksd:hasCompetenceType	ontoksd:ComputingDomain ;
+    dcterms:title "Identify Patterns in Finite State Machines"@en ;
+    dcterms:description "This competency focuses on the ability to analyze the structure and behavior of Finite State Machines (FSMs) to identify recurring patterns, regularities, or redundancies that influence model complexity, efficiency, and expressiveness."@en ;
     dcterms:source "EdukNow Competence Project"@en ;
     skos:notation "EdukNow Competence - C11"@en ;
-    ontoksd:hasCompetenceElement ontoksd:Inventive ,
-                                 ontoksd:Responsible ,
-                                 ontoksd:Proactive ,
-                                 ontoksd:Collaborative ,
-                                 ontoksd:Creative ;
+    ontoksd:hasDisposition ontoksd:inventive ,
+                                 ontoksd:creative ,
+                                 ontoksd:Meticulous ;
     ontoksd:hasKnowledgeSkill ?ks .
 }
 WHERE {
@@ -51,7 +60,7 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (cs2013:TuringMachines ontoksd:applyingSkill)
+    (cs2013:Finite_state_machines ontoksd:analyzingSkill)
     (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
   }
 }
@@ -65,9 +74,9 @@ INSERT {
 }
 WHERE {
   VALUES (?k ?s ?verb) {
-    (cs2013:TuringMachines ontoksd:applyingSkill bloom:Use)
-    (cs2013:TuringMachines ontoksd:applyingSkill bloom:Adapt)
-    (cs2013:TuringMachines ontoksd:applyingSkill bloom:Implement)
+    (cs2013:Finite_state_machines ontoksd:analyzingSkill bloom:examine)
+    (cs2013:Finite_state_machines ontoksd:analyzingSkill bloom:evaluate)
+    (cs2013:Finite_state_machines ontoksd:analyzingSkill bloom:compare)
   }
 
   ?ks a ontoksd:KnowledgeSkill ;

@@ -1,0 +1,66 @@
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:SE-Teamwork ontoksd:cs2023ApplySkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA CS2023_Software3 ################
+
+INSERT {
+  ontoksd:competence_CS2023_Software3 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ProfessionalDomain ;
+    dcterms:title "Work on a team effectively"@en ;
+    dcterms:description "Focus on long-term team dynamics and communicate effectively."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Software3"@en ;
+    ontoksd:hasDisposition ontoksd:collaborative ,
+                           ontoksd:communicative ,
+                           ontoksd:proactive ,
+                           ontoksd:responsive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+  VALUES (?k ?s) {
+    (cs2023:SE-Teamwork ontoksd:cs2023ApplySkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:SE-Teamwork ontoksd:cs2023ApplySkill bloom:collaborate)
+    (cs2023:SE-Teamwork ontoksd:cs2023ApplySkill bloom:communicate)
+    (cs2023:SE-Teamwork ontoksd:cs2023ApplySkill bloom:apply)	
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}

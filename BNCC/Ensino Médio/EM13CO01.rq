@@ -1,0 +1,129 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
+PREFIX bloom:     <http://example.org/bloom#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+
+#############################
+# 1) Upsert de KnowledgeSkill (KS)
+#############################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent     ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cc2020fpk:ProblemSolving     ontoksd:applyingSkill)   # Explorar/reutilizar soluções existentes
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)  # Selecionar/comparar alternativas
+    (cc2020fpk:Collaboration      ontoksd:applyingSkill)   # Construção colaborativa (p.ex., GitHub)
+	(CS2013:Programming_using_library_components_and_their_APIs  ontoksd:applyingSkill)
+	(cs2013:Software_reuse		  ontoksd:applyingSkill)		
+  }
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent     ?s .
+  }
+  BIND( IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks )
+}.
+
+#############################
+# 2) Inserção da Competência BNCC EM13CO01
+#############################
+
+INSERT {
+  ontoksd:competence_BNCC_EM13CO01 a ontoksd:Competence ;
+    ontoksd:hasStructureType   ontoksd:Atomic ;            
+    ontoksd:hasCompetenceType  ontoksd:ComputingDomain ; # Foco em prática/composição/reuso
+    dcterms:title       "Explorar e construir a solução de problemas por meio da reutilização de partes de soluções existentes (EM13CO01)"@pt ;
+    dcterms:description "Esta competência envolve reutilizar soluções computacionais previamente desenvolvidas para resolver novos problemas, enfatizando o uso de bibliotecas e repositórios de código (e.g., GitHub) e a transformação por analogia entre problemas. Abrange explorar, selecionar e adaptar componentes existentes, comparar alternativas e construir soluções colaborativamente, com responsabilidade quanto a licenças e boas práticas."@pt ;
+    dcterms:source      "BNCC — Competência EM13CO01 (Ensino Médio), com complementos para Computação"@pt ;
+    skos:notation       "BNCC EM13CO01"@pt ;
+    # Disposições (ajuste para o seu vocabulário interno)
+    ontoksd:hasCompetenceElement ontoksd:collaborative ,
+                                 ontoksd:responsible ,
+                                 ontoksd:creative ,
+                                 ontoksd:proactive .
+}
+WHERE {
+  # Vincula todos os KS definidos acima à competência
+  # (fazemos um segundo INSERT logo abaixo para isso)
+}.
+
+#############################
+# 3) Vincular os KS criados à competência
+#############################
+
+INSERT {
+  ontoksd:competence_BNCC_EM13CO01 ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cc2020fpk:ProblemSolving     ontoksd:applyingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+    (cc2020fpk:Collaboration      ontoksd:applyingSkill)
+	(CS2013:Programming_using_library_components_and_their_APIs  ontoksd:applyingSkill)
+	(cs2013:Software_reuse		  ontoksd:applyingSkill)	
+  }
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent     ?s .
+}.
+
+#############################
+# 4) Verbos sugeridos (leve, opcional)
+#############################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cc2020fpk:ProblemSolving     ontoksd:applyingSkill   bloom:Use)
+    (cc2020fpk:ProblemSolving     ontoksd:applyingSkill   bloom:Integrate)
+
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill  bloom:Compare)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill  bloom:Transform)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill  bloom:Adapt)
+
+    (cc2020fpk:Collaboration      ontoksd:applyingSkill   bloom:Collaborate)
+    (cc2020fpk:Collaboration      ontoksd:applyingSkill   bloom:Document)
+    (cc2020fpk:Collaboration      ontoksd:applyingSkill   bloom:Refactor)
+  }
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent     ?s .
+}.
+
+
+
+
+
+
+
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX gufo:    <http://purl.org/nemo/gufo#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+  # ----------------- Tarefa (LearningTask) -----------------
+  ontoksd:TASK_EM13CO01_REUSE_HS_01 a ontoksd:LearningTask ;
+    ontoksd:hasAcquisitionContext ontoksd:contextBNCC_EM ;
+    dcterms:title "Reaproveitar para criar: bibliotecas + analogia"@pt ;
+    dcterms:description "Desenvolver uma pequena aplicação reaproveitando partes de soluções existentes em duas frentes: (1) reuso prático por meio da integração de bibliotecas/APIs; (2) reuso por analogia, adaptando um exemplo ou tutorial semelhante ao novo problema, com mapeamento do antes→depois. A tarefa exige citar licenças/links, registrar 3–5 testes (esperado vs. obtido) e documentar em README com changelog (v0.1 biblioteca integrada; v0.2 adaptação por analogia). Sugestões: Python+Colab (pandas/matplotlib) ou JavaScript (Chart.js, Day.js)."@pt ;
+    dcterms:creator "Equipe docente"@pt ;
+    dcterms:contributor "Turma do Ensino Médio"@pt .
+
+  # -------- Associação de Competência (Relator gUFO opcional) --------
+  ontoksd:TASK_EM13CO01_REUSE_HS_01_C a ontoksd:CompetenceAssociation, gufo:Relator ;
+    ontoksd:mediatesInstructionalEntity ontoksd:TASK_EM13CO01_REUSE_HS_01 ;
+    ontoksd:mediatesTargetCompetence   ontoksd:competence_BNCC_EM13CO01 ;
+    dcterms:description "The task requires students to reuse existing solutions in two integrated ways—practical reuse via libraries/APIs and analogy-based reuse by adapting similar examples—while documenting licenses/links, mapping adaptations, providing 3–5 tests (expected vs. obtained), and maintaining a README with a simple changelog."@en .
+}
+
+}

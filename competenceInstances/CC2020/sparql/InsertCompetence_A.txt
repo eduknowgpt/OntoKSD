@@ -40,6 +40,8 @@ WHERE {
 
 INSERT {
   ontoksd:competence_A a ontoksd:Competence ;
+	ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+	ontoksd:hasStructureType ontoksd:Atomic ;
     dcterms:title "CC2020 Competence A"@en ;
     dcterms:description "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en ;
     dcterms:source "CC2020 Curriculum Guidelines"@en ;
@@ -61,7 +63,7 @@ WHERE {
       ontoksd:hasSkillComponent ?s .
 
   VALUES (?k ?s) {
-    (cc2020k:ArchitectureAndOrganization ontoksd:creatingSkill)
+    (cc2020k:ArchitectureandOrganization ontoksd:creatingSkill)
     (cc2020k:DigitalDesign ontoksd:creatingSkill)
     (cc2020k:CircuitsAndElectronics ontoksd:creatingSkill)
     (cc2020fpk:AnalyticalAndCriticalThinking ontoksd:applyingSkill)

@@ -1,0 +1,324 @@
+
+###  http://purl.org/ontoksd#alignsWithPerformanceClass
+ontoksd:alignsWithPerformanceClass rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ontoksd:ProficiencyValue ;
+                                   rdfs:range skos:Concept .
+
+###  http://purl.org/ontoksd#determinesPerformanceClass
+ontoksd:determinesPerformanceClass rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ontoksd:ProficiencyLevel ;
+                                   rdfs:range skos:Concept ;
+                                   rdfs:comment "Maps a ProficiencyLevel to a performance class concept within the collection of its Scale.\""@en .
+
+###  http://purl.org/ontoksd#hasProficiencyValue
+ontoksd:hasProficiencyValue rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://purl.org/nemo/gufo#hasReifiedQualityValue> ;
+                            rdfs:domain ontoksd:ProficiencyLevel ;
+                            rdfs:range ontoksd:ProficiencyValue .
+
+###  http://purl.org/ontoksd#proficiencyOfCompetenceDetail
+ontoksd:proficiencyOfCompetenceDetail rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/nemo/gufo#inheresIn> ;
+                                      rdfs:domain ontoksd:ProficiencyLevel ;
+                                      rdfs:range ontoksd:CompetenceDetail .
+
+###  http://purl.org/ontoksd#proficiencyOfElementDetail
+ontoksd:proficiencyOfElementDetail rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/nemo/gufo#inheresIn> ;
+                                   rdfs:domain ontoksd:ProficiencyLevel ;
+                                   rdfs:range ontoksd:CompetenceElementDetail .
+
+###  http://purl.org/ontoksd#proficiencyOfEvidence
+ontoksd:proficiencyOfEvidence rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://purl.org/nemo/gufo#inheresIn> ;
+                              rdfs:domain ontoksd:ProficiencyLevel ;
+                              rdfs:range ontoksd:Evidence .
+
+###  http://purl.org/ontoksd#selectedInScale
+ontoksd:selectedInScale rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain ontoksd:ProficiencyLevel ;
+                        rdfs:range ontoksd:Scale ;
+                        rdfs:comment "Each ProficiencyLevel belongs to exactly one Scale"@en .
+
+###  http://purl.org/ontoksd#hasNumericProficiencyValue
+ontoksd:hasNumericProficiencyValue rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/nemo/gufo#hasQualityValue> ;
+                                   rdfs:domain ontoksd:ProficiencyLevel ;
+                                   rdfs:range xsd:decimal ;
+                                   rdfs:comment "Numeric score on a scale (e.g., 0–100) associated with the proficiency level.\""@en .
+
+###  http://purl.org/ontoksd#ProficiencyLevel
+ontoksd:ProficiencyLevel rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> ;
+                         rdfs:comment """A classification indicating the depth or complexity of a Competence or Competence Element.
+
+(Proficiency Level) is a set of levels for classifying competences in doing actions.
+
+A quality that inheres in Evidence or (Competence/CompetenceElement)Detail indicating the attained proficiency."""@en .
+
+
+###  http://purl.org/ontoksd#ProficiencyValue
+ontoksd:ProficiencyValue rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/nemo/gufo#QualityValue> ;
+                         rdfs:comment "A reified value for proficiency (e.g., Beginner/Intermediate/Advanced/Expert or A–D)."@en .
+
+
+###  http://purl.org/ontoksd#hasPerformanceClassCollection
+ontoksd:hasPerformanceClassCollection rdf:type owl:ObjectProperty ;
+                                      rdfs:domain ontoksd:Scale ;
+                                      rdfs:range ontoksd:PerformanceClassScheme .
+
+###  http://purl.org/ontoksd#PerformanceClassScheme
+ontoksd:PerformanceClassScheme rdf:type owl:Class ;
+                               rdfs:subClassOf skos:OrderedCollection .
+
+###  http://purl.org/ontoksd#hasPerformanceClassCollection
+ontoksd:hasPerformanceClassCollection rdf:type owl:ObjectProperty ;
+                                      rdfs:domain ontoksd:Scale ;
+                                      rdfs:range ontoksd:PerformanceClassScheme .
+
+###  http://purl.org/ontoksd#PerformanceClassScheme
+ontoksd:PerformanceClassScheme rdf:type owl:Class ;
+                               rdfs:subClassOf skos:OrderedCollection .
+
+###  http://purl.org/ontoksd#hasInterval
+ontoksd:hasInterval rdf:type owl:ObjectProperty ;
+                    rdfs:domain ontoksd:Scale ;
+                    rdfs:range ontoksd:Interval .
+
+###  http://purl.org/ontoksd#hasLevel
+ontoksd:hasLevel rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ontoksd:selectedInScale ;
+                 rdfs:domain ontoksd:Scale ;
+                 rdfs:range ontoksd:ProficiencyLevel .
+
+###  http://purl.org/ontoksd#hasPerformanceClassCollection
+ontoksd:hasPerformanceClassCollection rdf:type owl:ObjectProperty ;
+                                      rdfs:domain ontoksd:Scale ;
+                                      rdfs:range ontoksd:PerformanceClassScheme .
+
+###  http://purl.org/ontoksd#maxValue
+ontoksd:maxValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ontoksd:Scale ;
+                 rdfs:range xsd:decimal .
+
+###  http://purl.org/ontoksd#minValue
+ontoksd:minValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ontoksd:Scale ;
+                 rdfs:range xsd:decimal .
+
+###  http://purl.org/ontoksd#step
+ontoksd:step rdf:type owl:DatatypeProperty ;
+             rdfs:domain ontoksd:Scale ;
+             rdfs:range xsd:decimal .
+
+###  http://purl.org/ontoksd#Scale
+ontoksd:Scale rdf:type owl:Class ;
+              rdfs:comment "A measurement scale (numeric, Likert, etc.) used to interpret observed performance into proficiency levels.\""@en ;
+              rdfs:label "Scale"@en .
+
+###  http://purl.org/ontoksd#mapsToProficiencyValue
+ontoksd:mapsToProficiencyValue rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:Interval ;
+                               rdfs:range ontoksd:ProficiencyValue .
+
+###  http://purl.org/ontoksd#includesLower
+ontoksd:includesLower rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ontoksd:Interval ;
+                      rdfs:range xsd:boolean .
+
+###  http://purl.org/ontoksd#includesUpper
+ontoksd:includesUpper rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain ontoksd:Interval ;
+                      rdfs:range xsd:boolean .
+
+###  http://purl.org/ontoksd#lowerBound
+ontoksd:lowerBound rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ontoksd:Interval ;
+                   rdfs:range xsd:decimal .
+
+###  http://purl.org/ontoksd#upperBound
+ontoksd:upperBound rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain ontoksd:Interval ;
+                   rdfs:range xsd:decimal .
+
+###  http://purl.org/ontoksd#Interval
+ontoksd:Interval rdf:type owl:Class ;
+                 rdfs:comment "A bounded range on a Scale used to define a ProficiencyLevel."@en .
+
+				 
+							
+
+								  
+								
+
+
+
+
+
+
+
+
+
+
+###  http://purl.org/ontoksd#Certificate
+ontoksd:Certificate rdf:type owl:Class ;
+                    rdfs:subClassOf ontoksd:Document ;
+                    owl:disjointWith ontoksd:Validation ;
+                    rdfs:comment "A document confirming the successful completion of an educational or competence process."@en ;
+                    rdfs:label "Certificate"@en .
+					
+###  http://purl.org/ontoksd#Document
+ontoksd:Document rdf:type owl:Class ;
+                 rdfs:comment "A record that may certify competences, competencies, or education."@en ;
+                 rdfs:label "Document"@en .
+
+###  http://purl.org/ontoksd#Validation
+ontoksd:Validation rdf:type owl:Class ;
+                   rdfs:subClassOf ontoksd:Document ;
+                   rdfs:comment "A type of document certifying the achievement or recognition of a competence."@en ;
+                   rdfs:label "Validation"@en .
+
+###  http://purl.org/ontoksd#forCompetence
+ontoksd:forCompetence rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:DocumentDetail ;
+                      rdfs:range ontoksd:CompetenceDetail ;
+                      rdfs:comment "Indicates the competence detail supported by the document."@en .
+
+###  http://purl.org/ontoksd#forCompetenceElement
+ontoksd:forCompetenceElement rdf:type owl:ObjectProperty ;
+                             rdfs:domain ontoksd:DocumentDetail ;
+                             rdfs:range ontoksd:CompetenceElementDetail ;
+                             rdfs:comment "Indicates the competency detail supported by the document."@en .
+
+###  http://purl.org/ontoksd#hasFormativeCredit
+ontoksd:hasFormativeCredit rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:DocumentDetail ;
+                           rdfs:range ontoksd:FormativeCredit ;
+                           rdfs:comment "Specifies the credit gained from a document detail."@en .
+
+###  http://purl.org/ontoksd#refersToDocument
+ontoksd:refersToDocument rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:DocumentDetail ;
+                         rdfs:range ontoksd:Document ;
+                         rdfs:comment "Links document detail to a document."@en .
+
+###  http://purl.org/ontoksd#DocumentDetail
+ontoksd:DocumentDetail rdf:type owl:Class .
+
+						 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###  http://purl.org/ontoksd#assessesCompetenceElement
+ontoksd:assessesCompetenceElement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:Evidence ;
+                                  rdfs:range ontoksd:CompetenceElement .
+								  
+###  http://purl.org/ontoksd#evidenceBasedOn
+ontoksd:evidenceBasedOn rdf:type owl:ObjectProperty ;
+                        owl:inverseOf ontoksd:producesEvidence ;
+                        rdfs:domain ontoksd:Evidence ;
+                        rdfs:range ontoksd:InstructionalEntity ;
+                        rdfs:comment "Links the evidence to the Instructional Entity it is derived from."@en .
+
+###  http://purl.org/ontoksd#evidencesCompetence
+ontoksd:evidencesCompetence rdf:type owl:ObjectProperty ;
+                            rdfs:domain ontoksd:Evidence ;
+                            rdfs:range ontoksd:Competence ;
+                            rdfs:comment "Specifies the Competence being evidenced by a given evidence."@en .
+
+###  http://purl.org/ontoksd#hasEvidenceContext
+ontoksd:hasEvidenceContext rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Evidence ;
+                           rdfs:range ontoksd:Context ;
+                           rdfs:comment "Provides the context in which the evidence is observed."@en .
+
+###  http://purl.org/ontoksd#hasEvidenceLevel
+ontoksd:hasEvidenceLevel rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Evidence ;
+                         rdfs:range ontoksd:ProficiencyLevel ;
+                         rdfs:comment "Specifies the assessment level attributed to the evidence."@en .
+
+###  http://purl.org/ontoksd#hasEvidenceType
+ontoksd:hasEvidenceType rdf:type owl:ObjectProperty ;
+                        rdfs:domain ontoksd:Evidence ;
+                        rdfs:range ontoksd:EvidenceType ;
+                        rdfs:comment "Defines the classification of the evidence."@en .
+
+###  http://purl.org/ontoksd#hasSupportDocument
+ontoksd:hasSupportDocument rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Evidence ;
+                           rdfs:range ontoksd:Document ;
+                           rdfs:comment "Evidence can be supported by a Document"@en .
+
+###  http://purl.org/ontoksd#isEvidenceOfProfile
+ontoksd:isEvidenceOfProfile rdf:type owl:ObjectProperty ;
+                            rdfs:domain ontoksd:Evidence ;
+                            rdfs:range ontoksd:Profile .
+
+###  http://purl.org/ontoksd#isObservedBy
+ontoksd:isObservedBy rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:Evidence ;
+                     rdfs:range ontoksd:Profile ;
+                     rdfs:comment "Specifies the Profile who observed the evidence."@en .
+
+
+###  http://purl.org/ontoksd#Evidence
+ontoksd:Evidence rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty ontoksd:hasEvidenceType ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass ontoksd:DigitalArtifact
+                                 ] ;
+                 rdfs:comment """A verifiable and contextualized record that demonstrates the possession or application of a specific competence or competence element by an individual in a given context.
+
+In OntoKSD, Evidence serves as the bridge between competence descriptions and real-world performance, capturing measurable manifestations of knowledge, skills, and dispositions.
+
+Each piece of evidence is temporally bound (associated with a date or period), may be linked to a specific EvidenceType, and is collected in connection with an instructional activity, professional task, or other relevant context.
+
+Evidence can originate from both formal and informal settings and is essential for supporting assessment, certification, and learning analytics."""@en ;
+                 rdfs:label "Evidence"@en .
+
+
+###  http://purl.org/ontoksd#EvidenceType
+ontoksd:EvidenceType rdf:type owl:Class ;
+                     rdfs:comment """A classification of evidence based on its method of collection or the nature of the activity that produced it.
+In OntoKSD, EvidenceType enables semantic differentiation between various forms of proof, supporting more precise competency evaluation and reasoning.
+Typical examples include:
+
+SelfAssessment – Evidence produced by an individual’s own evaluation of their competence.
+
+PeerAssessment – Evidence based on evaluation by peers or colleagues.
+
+TeacherAssessment – Evidence provided by an instructor or mentor.
+
+ProjectArtifact – Deliverables or products generated as part of a project or task.
+
+PerformanceObservation – Direct observation of task performance in real or simulated environments.
+
+WrittenExam – Performance on a written test assessing specific competencies.
+
+Presentation – Oral or multimedia presentation demonstrating competence.
+
+PortfolioEvidence – A curated collection of works or artifacts demonstrating sustained competence over time."""@en .
+
+
+
+							

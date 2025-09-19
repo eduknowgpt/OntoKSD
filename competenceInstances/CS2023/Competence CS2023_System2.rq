@@ -1,0 +1,78 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+
+############# PARES KS ################
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:SEP-Context            ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEP-Context            ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-Privacy            ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEP-Privacy            ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-Security           ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEP-Security           ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-DEIA               ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEP-DEIA               ontoksd:cs2023ExplainSkill)
+    (cs2023:DM-Data                ontoksd:cs2023EvaluateSkill)
+    (cs2023:DM-Data                ontoksd:cs2023ExplainSkill)
+    (cs2023:SEC-Foundations        ontoksd:cs2023EvaluateSkill)
+    (cs2023:SEC-Foundations        ontoksd:cs2023ExplainSkill)
+  }
+  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+;
+
+############# COMPETÊNCIA ################
+INSERT {
+  ontoksd:competence_CS2023_Systems2 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ProfessionalDomain ;
+    dcterms:title "Produce a white paper assessing the social and ethical implications of data collection and storage"@en ;
+    dcterms:description "Identify the stakeholders and evaluate the potential long-term consequences of data collection and retention, including unintended uses and data breaches."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Systems2"@en ;
+    ontoksd:hasDisposition ontoksd:collaborative ,
+                           ontoksd:communicative ,
+                           ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE { ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+
+
+############# VERBOS ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:SEP-Context            ontoksd:cs2023ExplainSkill  bloom:explain)
+    (cs2023:SEP-Context            ontoksd:cs2023EvaluateSkill bloom:evaluate)
+    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023ExplainSkill  bloom:analyze)
+    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023EvaluateSkill bloom:assess)
+    (cs2023:SEP-Privacy            ontoksd:cs2023ExplainSkill  bloom:describe)
+    (cs2023:SEP-Privacy            ontoksd:cs2023EvaluateSkill bloom:judge)
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023ExplainSkill bloom:interpret)
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023EvaluateSkill bloom:justify)
+    (cs2023:SEP-Security           ontoksd:cs2023ExplainSkill  bloom:explain)
+    (cs2023:SEP-Security           ontoksd:cs2023EvaluateSkill bloom:assess)
+    (cs2023:SEP-DEIA               ontoksd:cs2023ExplainSkill  bloom:explain)
+    (cs2023:SEP-DEIA               ontoksd:cs2023EvaluateSkill bloom:evaluate)
+    (cs2023:DM-Data                ontoksd:cs2023ExplainSkill  bloom:identify)
+    (cs2023:DM-Data                ontoksd:cs2023EvaluateSkill bloom:assess)
+    (cs2023:SEC-Foundations        ontoksd:cs2023ExplainSkill  bloom:explain)
+    (cs2023:SEC-Foundations        ontoksd:cs2023EvaluateSkill bloom:evaluate)
+  }
+  ?ks a ontoksd:KnowledgeSkill .
+}

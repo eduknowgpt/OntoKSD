@@ -1,0 +1,103 @@
+PREFIX ontoksd:   <https://example.org/ontoksd#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX time:      <http://www.w3.org/2006/time#>
+PREFIX foaf:      <http://xmlns.com/foaf/0.1/>
+PREFIX dcat:      <http://www.w3.org/ns/dcat#>
+PREFIX schema:    <https://schema.org/>
+
+INSERT DATA {
+
+  ############# CURSOS #############
+
+  ontoksd:MATC94_2021 a ontoksd:Course ;
+    dcterms:title "Introduction to Formal Languages and Theory of Computation"@en ;
+    dcterms:identifier "MATC94-2021" ;
+    dcterms:description "Remote, PBL-driven course connecting formal languages and automata theory to authentic problem-solving."@en ;
+    ontoksd:hasSyllabus ontoksd:MATC94_Syllabus .
+
+  ontoksd:MATC94_2022 a ontoksd:Course ;
+    dcterms:title "Introduction to Formal Languages and Theory of Computation"@en ;
+    dcterms:identifier "MATC94-2022" ;
+    dcterms:description "Remote, PBL-driven course connecting formal languages and automata theory to authentic problem-solving."@en ;
+    ontoksd:hasSyllabus ontoksd:MATC94_Syllabus .
+
+  ontoksd:MATC94_Syllabus a ontoksd:DigitalArtifact ;
+    dcterms:title "MATC94 Official Syllabus"@en ;
+    dcterms:format "text/markdown" ;
+    dcterms:identifier "syllabus-MATC94" ;
+    dcterms:source <https://github.com/EduKnowUFBA/OCSP/blob/main/CSP.v2/Syllabus_Theory_Computation.md> .
+
+  ############# CONTEXTOS DE AQUISIÇÃO #############
+
+  ontoksd:contextMATC94_01 a ontoksd:AcquisitionContext ;
+    dcterms:description "Remote PBL environment integrating Colab, Moodle, Meet/Discord/WhatsApp, and Email for collaboration, tutorials, distribution, and submission."@en ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK01 ,
+                                   ontoksd:TASK02 ,
+                                   ontoksd:TASK03 ,
+                                   ontoksd:TASK04 ,
+                                   ontoksd:TASK05 ,
+                                   ontoksd:res_google_colab ,
+                                   ontoksd:res_moodle ,
+                                   ontoksd:res_meet ,
+                                   ontoksd:res_discord ,
+                                   ontoksd:res_whatsapp ,
+                                   ontoksd:res_email .
+
+  ontoksd:contextMATC94_02 a ontoksd:AcquisitionContext ;
+    dcterms:description "Remote PBL environment integrating Colab, Moodle, Meet/Discord/WhatsApp, and Email for collaboration, tutorials, distribution, and submission."@en ;
+    ontoksd:hasInstructionalEntity ontoksd:TASK201 ,
+                                   ontoksd:TASK202 ,
+                                   ontoksd:TASK203 ,
+                                   ontoksd:TASK204 ,
+                                   ontoksd:res_google_colab ,
+                                   ontoksd:res_moodle ,
+                                   ontoksd:res_meet ,
+                                   ontoksd:res_discord ,
+                                   ontoksd:res_whatsapp ,
+                                   ontoksd:res_email .
+
+  ############# EDUCATIONAL RESOURCES (tools) #############
+
+  ontoksd:res_google_colab a ontoksd:EducationalResource ;
+    dcterms:title "Google Colab Notebooks"@en ;
+    dcterms:description "Interactive notebooks for materials and hands-on exercises."@en ;
+    ontoksd:resourceType "Software" ;
+    ontoksd:hasDigitalArtifact ontoksd:artifact_colab_landing .
+
+  ontoksd:artifact_colab_landing a ontoksd:DigitalArtifact ;
+    dcterms:title "Colab Landing Page"@en ;
+    dcterms:format "text/html" ;
+    dcat:accessURL <https://colab.research.google.com/drive/1Jpx_ZJJZQBNPKGftKVJRp5ptyxoi56d5?usp=sharing> .
+
+  ontoksd:res_moodle a ontoksd:EducationalResource ;
+    dcterms:title "Moodle Course Space"@en ;
+    dcterms:description "Distribution of content, assignment submission, and asynchronous discussions."@en ;
+    ontoksd:resourceType "Platform" ;
+    ontoksd:hasDigitalArtifact ontoksd:artifact_moodle_space .
+
+  ontoksd:artifact_moodle_space a ontoksd:DigitalArtifact ;
+    dcterms:title "Moodle Space (IFLTC-2025)"@en ;
+    dcterms:format "text/html" ;
+    dcat:accessURL <https://ava.ufba.br/course/view.php?id=34396> .
+
+  ontoksd:res_meet a ontoksd:EducationalResource ;
+    dcterms:title "Google Meet"@en ;
+    dcterms:description "Real-time tutorials and Q&A sessions."@en ;
+    ontoksd:resourceType "CommunicationTool" .
+
+  ontoksd:res_discord a ontoksd:EducationalResource ;
+    dcterms:title "Discord Server"@en ;
+    dcterms:description "Real-time Q&A forum and collaboration."@en ;
+    ontoksd:resourceType "CommunicationTool" .
+
+  ontoksd:res_whatsapp a ontoksd:EducationalResource ;
+    dcterms:title "WhatsApp Group"@en ;
+    dcterms:description "Backchannel communication for quick coordination."@en ;
+    ontoksd:resourceType "CommunicationTool" .
+
+  ontoksd:res_email a ontoksd:EducationalResource ;
+    dcterms:title "Email"@en ;
+    dcterms:description "Individual support and formal communications."@en ;
+    ontoksd:resourceType "CommunicationChannel" .
+}

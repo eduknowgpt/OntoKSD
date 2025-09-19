@@ -1,4 +1,5 @@
 @prefix bloom: <http://purl.org/edu/bloom#> .
+@prefix cs2023:  <http://purl.org/edu/cs2023#> .
 @prefix ontoksd:  <http://purl.org/ontoksd#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,41 +8,67 @@
 <http://purl.org/ontoksd/abox/skill>
     a owl:Ontology ;
     rdfs:label "OntoKSD Skills ABox"@en ;
-    rdfs:comment "Assertional individuals for OntoKSD:Skill, mapped to Bloom's CognitiveProcessLevel concepts."@en .
+    rdfs:comment "Assertional individuals for OntoKSD:Skill, mapped to Bloom's CognitiveProcessLevel and CS2023 Skill concepts."@en .
 	
 	
-
-
 #################################################################
 # Skills mapped to Bloom's Taxonomy Levels
 #################################################################
 
 ontoksd:rememberingSkill
     a ontoksd:Skill ;
-    rdfs:label "Remembering"@en ;
-    ontoksd:hasCognitiveLevel bloom:Remembering .
+    rdfs:label "Bloom Cognitive Level — Remembering"@en ;
+    ontoksd:hasSkillLevel bloom:Remembering .
 
 ontoksd:understandingSkill
     a ontoksd:Skill ;
-    rdfs:label "Understanding"@en ;
-    ontoksd:hasCognitiveLevel bloom:Understanding .
+    rdfs:label "Bloom Cognitive Level — Understanding"@en ;
+    ontoksd:hasSkillLevel bloom:Understanding .
 
 ontoksd:applyingSkill
     a ontoksd:Skill ;
-    rdfs:label "Applying"@en ;
-    ontoksd:hasCognitiveLevel bloom:Applying .
+    rdfs:label "Bloom Cognitive Level — Applying"@en ;
+    ontoksd:hasSkillLevel bloom:Applying .
 
 ontoksd:analyzingSkill
     a ontoksd:Skill ;
-    rdfs:label "Analyzing"@en ;
-    ontoksd:hasCognitiveLevel bloom:Analyzing .
+    rdfs:label "Bloom Cognitive Level — Analyzing"@en ;
+    ontoksd:hasSkillLevel bloom:Analyzing .
 
 ontoksd:evaluatingSkill
     a ontoksd:Skill ;
-    rdfs:label "Evaluating"@en ;
-    ontoksd:hasCognitiveLevel bloom:Evaluating .
+    rdfs:label "Bloom Cognitive Level — Evaluating"@en ;
+    ontoksd:hasSkillLevel bloom:Evaluating .
 
 ontoksd:creatingSkill
     a ontoksd:Skill ;
-    rdfs:label "Creating"@en ;
-    ontoksd:hasCognitiveLevel bloom:Creating .
+    rdfs:label "Bloom Cognitive Level — Creating"@en ;
+    ontoksd:hasSkillLevel bloom:Creating .
+
+
+#################################################################
+# Skills mapped to CS2023 Taxonomy Levels
+#################################################################
+
+ontoksd:cs2023ApplySkill
+    a ontoksd:Skill ;
+    rdfs:label "CS2023 Skill Level — Apply"@en ;
+    ontoksd:hasSkillLevel cs2023:Apply .
+	
+ontoksd:cs2023DevelopSkill
+    a ontoksd:Skill ;
+    rdfs:label "CS2023 Skill Level — Develop"@en ;
+    ontoksd:hasSkillLevel cs2023:Develop .
+	
+ontoksd:cs2023EvaluateSkill
+    a ontoksd:Skill ;
+    rdfs:label "CS2023 Skill Level — Evaluate"@en ;
+    ontoksd:hasSkillLevel cs2023:Evaluate .
+
+ontoksd:cs2023ExplainSkill
+    a ontoksd:Skill ;
+    rdfs:label "CS2023 Skill Level — Explain"@en ;
+    ontoksd:hasSkillLevel cs2023:Explain .
+	
+
+

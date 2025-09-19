@@ -1,0 +1,1505 @@
+@prefix : <http://purl.org/ontoksd#> .
+@prefix dc: <http://purl.org/dc/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
+@base <http://purl.org/ontoksd#> .
+
+<http://purl.org/ontoksd#> rdf:type owl:Ontology ;
+                            owl:versionIRI <http://purl.org/ontoksd#1.1.0> ;
+                            owl:imports <http://purl.org/nemo/gufo#/1.0.0> ,
+                                        <http://purl.org/ontoksd/rcd> ,
+                                        <http://www.w3.org/2004/02/skos/core.rdf> ;
+                            rdfs:comment "Ontology for Knowledge, Skill, and Disposition representation."@en ;
+                            rdfs:label "OntoKSD Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontoksd#hasSuggestedVerb
+ontoksd:hasSuggestedVerb rdf:type owl:AnnotationProperty ;
+                         rdfs:comment "Propriedade leve para anotar semanticamente uma KnowledgeSkill, informando verbos acidionais, mas sem alterar a estrutura ontológica." ;
+                         rdfs:domain ontoksd:KnowledgeSkill .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/nemo/gufo#mediates
+<http://purl.org/nemo/gufo#mediates> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/ontoksd#acquiredIn
+ontoksd:acquiredIn rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Indicates where a learning goal was acquired."@en .
+
+
+###  http://purl.org/ontoksd#alignsWithPerformanceClass
+ontoksd:alignsWithPerformanceClass rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ontoksd:ProficiencyValue ;
+                                   rdfs:range skos:Concept .
+
+
+###  http://purl.org/ontoksd#aplliesTo
+ontoksd:aplliesTo rdf:type owl:ObjectProperty ;
+                  rdfs:domain ontoksd:Profile ;
+                  rdfs:range ontoksd:LearningRole ;
+                  rdfs:comment "Specifies the role a person is applying for."@en .
+
+
+###  http://purl.org/ontoksd#appliesKnowledge
+ontoksd:appliesKnowledge rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Skill ;
+                         rdfs:range ontoksd:Knowledge ;
+                         rdfs:comment "Indicates that a Skill requires certain Knowledge."@en .
+
+
+###  http://purl.org/ontoksd#assessesCompetenceElement
+ontoksd:assessesCompetenceElement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:Evidence ;
+                                  rdfs:range ontoksd:CompetenceElement .
+
+
+###  http://purl.org/ontoksd#determinesPerformanceClass
+ontoksd:determinesPerformanceClass rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ontoksd:ProficiencyLevel ;
+                                   rdfs:range skos:Concept ;
+                                   rdfs:comment "Maps a ProficiencyLevel to a performance class concept within the collection of its Scale.\""@en .
+
+
+###  http://purl.org/ontoksd#evidenceBasedOn
+ontoksd:evidenceBasedOn rdf:type owl:ObjectProperty ;
+                        owl:inverseOf ontoksd:producesEvidence ;
+                        rdfs:domain ontoksd:Evidence ;
+                        rdfs:range ontoksd:InstructionalEntity ;
+                        rdfs:comment "Links the evidence to the Instructional Entity it is derived from."@en .
+
+
+###  http://purl.org/ontoksd#evidencesCompetence
+ontoksd:evidencesCompetence rdf:type owl:ObjectProperty ;
+                            rdfs:domain ontoksd:Evidence ;
+                            rdfs:range ontoksd:Competence ;
+                            rdfs:comment "Specifies the Competence being evidenced by a given evidence."@en .
+
+
+###  http://purl.org/ontoksd#forCompetence
+ontoksd:forCompetence rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:DocumentDetail ;
+                      rdfs:range ontoksd:CompetenceDetail ;
+                      rdfs:comment "Indicates the competence detail supported by the document."@en .
+
+
+###  http://purl.org/ontoksd#forCompetenceElement
+ontoksd:forCompetenceElement rdf:type owl:ObjectProperty ;
+                             rdfs:domain ontoksd:DocumentDetail ;
+                             rdfs:range ontoksd:CompetenceElementDetail ;
+                             rdfs:comment "Indicates the competency detail supported by the document."@en .
+
+
+###  http://purl.org/ontoksd#hasAcquisitionContext
+ontoksd:hasAcquisitionContext rdf:type owl:ObjectProperty ;
+                              owl:inverseOf ontoksd:isAcquisitionContextOf ;
+                              rdfs:domain ontoksd:InstructionalEntity ;
+                              rdfs:range ontoksd:AcquisitionContext ;
+                              rdfs:comment "Indicates the context (course offering, session, institution, etc.) in which the instructional entity is executed and competence evidence may be observed."@en .
+
+
+###  http://purl.org/ontoksd#hasAgencyType
+ontoksd:hasAgencyType rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Specifies the type of the agency."@en .
+
+
+###  http://purl.org/ontoksd#hasAssessmentType
+ontoksd:hasAssessmentType rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Assessment ;
+                          rdfs:range ontoksd:AssessmentType .
+
+
+###  http://purl.org/ontoksd#hasAttitude
+ontoksd:hasAttitude rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontoksd:hasDisposition ;
+                    owl:inverseOf ontoksd:isAttitudeOf ;
+                    rdfs:domain ontoksd:Competence ;
+                    rdfs:range ontoksd:Attitude .
+
+
+###  http://purl.org/ontoksd#hasAttitudeType
+ontoksd:hasAttitudeType rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf ontoksd:hasDispositionType ;
+                        rdfs:domain ontoksd:Attitude ;
+                        rdfs:range ontoksd:AttitudeType ;
+                        rdfs:comment "Relates an Attitude to its categorized type."@en .
+
+
+###  http://purl.org/ontoksd#hasCognitiveLevel
+ontoksd:hasCognitiveLevel rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Skill .
+
+
+###  http://purl.org/ontoksd#hasCompetenceContext
+ontoksd:hasCompetenceContext rdf:type owl:ObjectProperty ;
+                             rdfs:domain ontoksd:Competence ;
+                             rdfs:range ontoksd:Context ;
+                             rdfs:comment "Specifies the context in which a Competence is applied."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceDetailContext
+ontoksd:hasCompetenceDetailContext rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ontoksd:CompetenceDetail ;
+                                   rdfs:range ontoksd:Context ;
+                                   rdfs:comment "Contextual information about the Competence Detail."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceElement
+ontoksd:hasCompetenceElement rdf:type owl:ObjectProperty ;
+                             owl:inverseOf ontoksd:isCompetenceElementOf ;
+                             rdfs:domain ontoksd:Competence ;
+                             rdfs:range ontoksd:CompetenceElement ;
+                             rdfs:comment "As propriedades hasSkill, hasKnowledge e hasAttitude foram criadas como subpropriedades de hasCompetenceElement."@en ,
+                                          "Indicates the competency detail of a person."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceElementContext
+ontoksd:hasCompetenceElementContext rdf:type owl:ObjectProperty ;
+                                    rdfs:domain ontoksd:CompetenceElement ;
+                                    rdfs:range ontoksd:Context ;
+                                    rdfs:comment "Context in which the Competency is expressed or observed."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceElementDetailContext
+ontoksd:hasCompetenceElementDetailContext rdf:type owl:ObjectProperty ;
+                                          rdfs:domain ontoksd:CompetenceElementDetail ;
+                                          rdfs:range ontoksd:Context ;
+                                          rdfs:comment "Contextualizes a Competency Detail."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceElementLevel
+ontoksd:hasCompetenceElementLevel rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:CompetenceElementDetail ;
+                                  rdfs:range ontoksd:ProficiencyLevel ;
+                                  rdfs:comment "Assigns a Level to a Competency Detail."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceElementScale
+ontoksd:hasCompetenceElementScale rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:CompetenceElement ;
+                                  rdfs:range ontoksd:Scale ;
+                                  rdfs:comment "Specifies the measurement scale for a Competency."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceScale
+ontoksd:hasCompetenceScale rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Scale ;
+                           rdfs:comment "Defines the scale used to measure a Competence."@en .
+
+
+###  http://purl.org/ontoksd#hasCompetenceType
+ontoksd:hasCompetenceType rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Competence ;
+                          rdfs:range ontoksd:CompetenceType ;
+                          rdfs:comment "Specifies whether a competence is educational, profissional, or another type."@en .
+
+
+###  http://purl.org/ontoksd#hasComponent
+ontoksd:hasComponent rdf:type owl:ObjectProperty ;
+                     owl:inverseOf ontoksd:isComponentOf ;
+                     rdfs:domain ontoksd:Competence ;
+                     rdfs:range ontoksd:Competence ;
+                     rdfs:comment """Indicates a compositional relationship, where a meta-competence (composite competence) is composed of several component competencies. The meta-competence is considered fully demonstrated only if all of its components are evidenced.
+
+Use case: Supports logical aggregation and progressive demonstration of more general abilities."""@en .
+
+
+###  http://purl.org/ontoksd#hasDigitalArtifact
+ontoksd:hasDigitalArtifact rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:InstructionalEntity ;
+                           rdfs:range ontoksd:DigitalArtifact .
+
+
+###  http://purl.org/ontoksd#hasDisposition
+ontoksd:hasDisposition rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
+                       owl:inverseOf ontoksd:isDispositionOf ;
+                       rdfs:domain ontoksd:Competence ;
+                       rdfs:range ontoksd:Disposition .
+
+
+###  http://purl.org/ontoksd#hasDispositionType
+ontoksd:hasDispositionType rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Disposition ;
+                           rdfs:range ontoksd:DispositionType .
+
+
+###  http://purl.org/ontoksd#hasEducation
+ontoksd:hasEducation rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:Profile ;
+                     rdfs:comment "Links a person model to their educational background."@en .
+
+
+###  http://purl.org/ontoksd#hasEducationLevel
+ontoksd:hasEducationLevel rdf:type owl:ObjectProperty ;
+                          rdfs:range ontoksd:ProficiencyLevel ;
+                          rdfs:comment "Associates an educational detail with a level."@en .
+
+
+###  http://purl.org/ontoksd#hasEducationScale
+ontoksd:hasEducationScale rdf:type owl:ObjectProperty ;
+                          rdfs:range ontoksd:Scale ;
+                          rdfs:comment "Specifies the scale used in educational evaluation."@en .
+
+
+###  http://purl.org/ontoksd#hasEvidence
+ontoksd:hasEvidence rdf:type owl:ObjectProperty ;
+                    rdfs:domain ontoksd:Profile ;
+                    rdfs:range ontoksd:Evidence ;
+                    rdfs:comment "Indicates the evidence collected for the person."@en .
+
+
+###  http://purl.org/ontoksd#hasEvidenceContext
+ontoksd:hasEvidenceContext rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Evidence ;
+                           rdfs:range ontoksd:Context ;
+                           rdfs:comment "Provides the context in which the evidence is observed."@en .
+
+
+###  http://purl.org/ontoksd#hasEvidenceLevel
+ontoksd:hasEvidenceLevel rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Evidence ;
+                         rdfs:range ontoksd:ProficiencyLevel ;
+                         rdfs:comment "Specifies the assessment level attributed to the evidence."@en .
+
+
+###  http://purl.org/ontoksd#hasEvidenceType
+ontoksd:hasEvidenceType rdf:type owl:ObjectProperty ;
+                        rdfs:domain ontoksd:Evidence ;
+                        rdfs:range ontoksd:EvidenceType ;
+                        rdfs:comment "Defines the classification of the evidence."@en .
+
+
+###  http://purl.org/ontoksd#hasFormativeCredit
+ontoksd:hasFormativeCredit rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:DocumentDetail ;
+                           rdfs:range ontoksd:FormativeCredit ;
+                           rdfs:comment "Specifies the credit gained from a document detail."@en .
+
+
+###  http://purl.org/ontoksd#hasInstructionalEntity
+ontoksd:hasInstructionalEntity rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:Course ;
+                               rdfs:range ontoksd:InstructionalEntity .
+
+
+###  http://purl.org/ontoksd#hasInterval
+ontoksd:hasInterval rdf:type owl:ObjectProperty ;
+                    rdfs:domain ontoksd:Scale ;
+                    rdfs:range ontoksd:Interval .
+
+
+###  http://purl.org/ontoksd#hasKnowledge
+ontoksd:hasKnowledge rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
+                     owl:inverseOf ontoksd:isKnowledgeOf ;
+                     rdfs:domain ontoksd:Competence ;
+                     rdfs:range ontoksd:Knowledge .
+
+
+###  http://purl.org/ontoksd#hasKnowledgeComponent
+ontoksd:hasKnowledgeComponent rdf:type owl:ObjectProperty ;
+                              rdfs:domain ontoksd:KnowledgeSkill ;
+                              rdfs:range ontoksd:Knowledge ;
+                              rdfs:comment "Associates a KnowledgeSkill with the knowledge component involved."@en .
+
+
+###  http://purl.org/ontoksd#hasKnowledgeSkill
+ontoksd:hasKnowledgeSkill rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Competence ;
+                          rdfs:range ontoksd:KnowledgeSkill .
+
+
+###  http://purl.org/ontoksd#hasKnowledgeType
+ontoksd:hasKnowledgeType rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Knowledge ;
+                         rdfs:range ontoksd:KnowledgeType ;
+                         rdfs:comment "Relates a Knowledge to its specific knowledge type."@en .
+
+
+###  http://purl.org/ontoksd#hasLearningNeeds
+ontoksd:hasLearningNeeds rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Profile ;
+                         rdfs:range ontoksd:LearningNeed ;
+                         rdfs:comment "Lists the learning needs of a person."@en .
+
+
+###  http://purl.org/ontoksd#hasLevel
+ontoksd:hasLevel rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ontoksd:selectedInScale ;
+                 rdfs:domain ontoksd:Scale ;
+                 rdfs:range ontoksd:ProficiencyLevel .
+
+
+###  http://purl.org/ontoksd#hasPerformanceClass
+ontoksd:hasPerformanceClass rdf:type owl:ObjectProperty ;
+                            rdfs:domain ontoksd:CompetenceDetail ;
+                            rdfs:range skos:Concept ;
+                            owl:propertyChainAxiom ( ontoksd:hasProficiencyLevel
+                                                     ontoksd:determinesPerformanceClass
+                                                   ) ;
+                            rdfs:comment "Can be inferred from hasProficiencyLevel ∘ determinesPerformanceClass.\""@en .
+
+
+###  http://purl.org/ontoksd#hasPerformanceClassCollection
+ontoksd:hasPerformanceClassCollection rdf:type owl:ObjectProperty ;
+                                      rdfs:domain ontoksd:Scale ;
+                                      rdfs:range ontoksd:PerformanceClassScheme .
+
+
+###  http://purl.org/ontoksd#hasPerformedRole
+ontoksd:hasPerformedRole rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Profile ;
+                         rdfs:range ontoksd:RoleDetail ;
+                         rdfs:comment "Indicates the role detail already performed by a person."@en .
+
+
+###  http://purl.org/ontoksd#hasPersonality
+ontoksd:hasPersonality rdf:type owl:ObjectProperty ;
+                       rdfs:domain ontoksd:Profile ;
+                       rdfs:comment "Associates a person with a personality profile."@en .
+
+
+###  http://purl.org/ontoksd#hasPersonalitySourceType
+ontoksd:hasPersonalitySourceType rdf:type owl:ObjectProperty ;
+                                 rdfs:comment "Defines the source type of the personality description."@en .
+
+
+###  http://purl.org/ontoksd#hasProficiencyLevel
+ontoksd:hasProficiencyLevel rdf:type owl:ObjectProperty ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( ontoksd:CompetenceDetail
+                                                        ontoksd:CompetenceElementDetail
+                                                        ontoksd:Evidence
+                                                      )
+                                        ] ;
+                            rdfs:range ontoksd:ProficiencyLevel ;
+                            owl:propertyChainAxiom ( [ owl:inverseOf ontoksd:proficiencyOfCompetenceDetail
+                                                     ]
+                                                   ) ,
+                                                   ( [ owl:inverseOf ontoksd:proficiencyOfElementDetail
+                                                     ]
+                                                   ) ,
+                                                   ( [ owl:inverseOf ontoksd:proficiencyOfEvidence
+                                                     ]
+                                                   ) ;
+                            rdfs:comment "Convenience link from bearer to its proficiency-level quality instance(s)."@en .
+
+
+###  http://purl.org/ontoksd#hasProficiencyValue
+ontoksd:hasProficiencyValue rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://purl.org/nemo/gufo#hasReifiedQualityValue> ;
+                            rdfs:domain ontoksd:ProficiencyLevel ;
+                            rdfs:range ontoksd:ProficiencyValue .
+
+
+###  http://purl.org/ontoksd#hasProfile
+ontoksd:hasProfile rdf:type owl:ObjectProperty ;
+                   owl:inverseOf ontoksd:isProfileOf ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain ontoksd:Person ;
+                   rdfs:range ontoksd:Profile .
+
+
+###  http://purl.org/ontoksd#hasProfileCompetence
+ontoksd:hasProfileCompetence rdf:type owl:ObjectProperty ;
+                             owl:inverseOf ontoksd:isCompetenceDetailOfProfile ;
+                             rdfs:domain ontoksd:Profile ;
+                             rdfs:range ontoksd:CompetenceDetail ;
+                             rdfs:comment "Indicates the competence detail of a person."@en .
+
+
+###  http://purl.org/ontoksd#hasProfileCompetenceElement
+ontoksd:hasProfileCompetenceElement rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    rdfs:domain ontoksd:Profile ;
+                                    rdfs:range ontoksd:CompetenceElementDetail .
+
+
+###  http://purl.org/ontoksd#hasRCD
+ontoksd:hasRCD rdf:type owl:ObjectProperty ;
+               owl:inverseOf ontoksd:representsCompetence ;
+               rdfs:domain ontoksd:Competence ;
+               rdfs:range rcd:RCD .
+
+
+###  http://purl.org/ontoksd#hasResourceType
+ontoksd:hasResourceType rdf:type owl:ObjectProperty ;
+                        rdfs:domain ontoksd:EducationalResource ;
+                        rdfs:range ontoksd:ResourceType .
+
+
+###  http://purl.org/ontoksd#hasSkill
+ontoksd:hasSkill rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
+                 owl:inverseOf ontoksd:isSkillOf ;
+                 rdfs:domain ontoksd:Competence ;
+                 rdfs:range ontoksd:Skill ;
+                 rdfs:comment "Indicates a skill that composes the competence."@en .
+
+
+###  http://purl.org/ontoksd#hasSkillComponent
+ontoksd:hasSkillComponent rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain ontoksd:KnowledgeSkill ;
+                          rdfs:range ontoksd:Skill ;
+                          rdfs:comment "Associates a KnowledgeSkill with the skill component that operates on the knowledge."@en .
+
+
+###  http://purl.org/ontoksd#hasSkillType
+ontoksd:hasSkillType rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:Skill ;
+                     rdfs:range ontoksd:SkillType ;
+                     rdfs:comment "Associates a Skill with its classified type."@en .
+
+
+###  http://purl.org/ontoksd#hasSpecialization
+ontoksd:hasSpecialization rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Competence ;
+                          rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#hasStructureType
+ontoksd:hasStructureType rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Competence ;
+                         rdfs:range ontoksd:StructureType ;
+                         rdfs:comment "Specifies whether a competence is atomic, composite, or another type."@en .
+
+
+###  http://purl.org/ontoksd#hasSupportDocument
+ontoksd:hasSupportDocument rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Evidence ;
+                           rdfs:range ontoksd:Document ;
+                           rdfs:comment "Evidence can be supported by a Document"@en .
+
+
+###  http://purl.org/ontoksd#hasSyllabus
+ontoksd:hasSyllabus rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain ontoksd:Course ;
+                    rdfs:range ontoksd:DigitalArtifact ;
+                    rdfs:comment "The property hasSyllabus links a Course to a DigitalArtifact representing its official syllabus. The syllabus contains structured information such as objectives, competencies, topics, evaluation methods, and references. This property is functional, ensuring that a course cannot be associated with more than one syllabus simultaneously."@en ;
+                    skos:example """If a course has a syllabus, it should be instantiated as a DigitalArtifact and connected via hasSyllabus.
+
+Examples of digital artifacts include:
+
+- Markdown or PDF syllabus files
+
+- URLs linking to institutional repositories
+
+- Structured syllabus metadata in digital repositories
+
+A course without a syllabus remains valid in the ontology, supporting lifecycle states (e.g., planned or provisional courses)."""@en .
+
+
+###  http://purl.org/ontoksd#includesResponsibility
+ontoksd:includesResponsibility rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:LearningRole ;
+                               rdfs:comment "Lists responsibilities included in a role."@en .
+
+
+###  http://purl.org/ontoksd#isAcquisitionContextOf
+ontoksd:isAcquisitionContextOf rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:AcquisitionContext ;
+                               rdfs:range ontoksd:InstructionalEntity .
+
+
+###  http://purl.org/ontoksd#isAttitudeOf
+ontoksd:isAttitudeOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ontoksd:isDispositionOf ;
+                     rdfs:domain ontoksd:Attitude ;
+                     rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#isBroaderThan
+ontoksd:isBroaderThan rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:Competence ;
+                      rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#isCompetenceDetailOfProfile
+ontoksd:isCompetenceDetailOfProfile rdf:type owl:ObjectProperty ;
+                                    rdfs:domain ontoksd:CompetenceDetail ;
+                                    rdfs:range ontoksd:Profile .
+
+
+###  http://purl.org/ontoksd#isCompetenceElementOf
+ontoksd:isCompetenceElementOf rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://purl.org/nemo/gufo#isComponentOf> ;
+                              rdfs:domain ontoksd:CompetenceElement ;
+                              rdfs:range ontoksd:Competence ;
+                              rdfs:comment "Indicates that a Competency is mandatory for a given Competence."@en .
+
+
+###  http://purl.org/ontoksd#isComponentOf
+ontoksd:isComponentOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:Competence ;
+                      rdfs:range ontoksd:Competence ;
+                      rdfs:comment "Competences may be an aggregation of other competences" .
+
+
+###  http://purl.org/ontoksd#isDispositionOf
+ontoksd:isDispositionOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf ontoksd:isCompetenceElementOf ;
+                        rdfs:domain ontoksd:Disposition ;
+                        rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#isEvidenceOfProfile
+ontoksd:isEvidenceOfProfile rdf:type owl:ObjectProperty ;
+                            rdfs:domain ontoksd:Evidence ;
+                            rdfs:range ontoksd:Profile .
+
+
+###  http://purl.org/ontoksd#isKnowledgeOf
+ontoksd:isKnowledgeOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf ontoksd:isCompetenceElementOf ;
+                      rdfs:domain ontoksd:Knowledge ;
+                      rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#isLinkedToCompetenceVia
+ontoksd:isLinkedToCompetenceVia rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdfs:domain ontoksd:InstructionalEntity ;
+                                rdfs:range ontoksd:CompetenceAssociation ;
+                                rdfs:comment "Shortcut property linking an instructional entity to a CompetenceAssociation that specifies its target or prerequisite competencies."@en .
+
+
+###  http://purl.org/ontoksd#isObservedBy
+ontoksd:isObservedBy rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:Evidence ;
+                     rdfs:range ontoksd:Profile ;
+                     rdfs:comment "Specifies the Profile who observed the evidence."@en .
+
+
+###  http://purl.org/ontoksd#isProfileOf
+ontoksd:isProfileOf rdf:type owl:ObjectProperty ;
+                    rdfs:domain ontoksd:Profile ;
+                    rdfs:range ontoksd:Person .
+
+
+###  http://purl.org/ontoksd#isSkillOf
+ontoksd:isSkillOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf ontoksd:isCompetenceElementOf ;
+                  rdfs:domain ontoksd:Skill ;
+                  rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#isSpecializationOf
+ontoksd:isSpecializationOf rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#mapsToProficiencyValue
+ontoksd:mapsToProficiencyValue rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:Interval ;
+                               rdfs:range ontoksd:ProficiencyValue .
+
+
+###  http://purl.org/ontoksd#mediatesInstructionalEntity
+ontoksd:mediatesInstructionalEntity rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
+                                    rdfs:domain ontoksd:CompetenceAssociation ;
+                                    rdfs:range ontoksd:InstructionalEntity .
+
+
+###  http://purl.org/ontoksd#mediatesPrerequisiteCompetence
+ontoksd:mediatesPrerequisiteCompetence rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
+                                       rdfs:domain ontoksd:CompetenceAssociation ;
+                                       rdfs:range ontoksd:Competence ;
+                                       rdfs:comment """A relation between an InstructionalEntity and a Competence indicating that the competence is a prerequisite for meaningful engagement or successful completion of the instructional activity.
+This property specifies that certain competences must already be possessed or evidenced before participation in the InstructionalEntity.
+
+Intended semantics: If an InstructionalEntity requires a competence, learners without that competence may struggle to engage fully with the activity or achieve its intended outcomes.
+
+Examples:
+
+An “Advanced Machine Learning” course requiring competence in “Linear Algebra” and “Programming in Python”.
+
+A “Capstone Project” requiring “Research Methodology” competence.
+
+A “Professional Ethics Seminar” requiring “Critical Reading and Writing” competence.
+
+Ontological notes:
+
+requiresCompetence enables curriculum sequencing and prerequisite mapping in both formal and informal learning contexts.
+
+This property supports curriculum traceability by clarifying the dependency structure between competences.""" .
+
+
+###  http://purl.org/ontoksd#mediatesTargetCompetence
+ontoksd:mediatesTargetCompetence rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
+                                 rdfs:domain ontoksd:CompetenceAssociation ;
+                                 rdfs:range ontoksd:Competence ;
+                                 rdfs:comment """A relation between an InstructionalEntity and a Competence indicating that the competence is an intended learning outcome of the instructional design.
+This property specifies that the InstructionalEntity is deliberately planned to develop or reinforce the target competence through its activities, resources, and assessments.
+
+Intended semantics: If an InstructionalEntity targets a competence, successful completion or participation should provide the learner with the opportunity to acquire, improve, or demonstrate that competence.
+
+Examples:
+
+A “Software Engineering Project” course targeting “Collaborative Software Development” competence.
+
+A “Data Structures” module targeting “Algorithmic Problem-Solving” competence.
+
+A “Public Speaking Workshop” targeting “Oral Communication” competence.
+
+Ontological notes:
+
+targetsCompetence links the instructional domain to the competence model in the planning stage (competence as intended outcome).
+
+Assessment artifacts within the InstructionalEntity may generate Evidence linked back to the targeted competence for validation.""" .
+
+
+###  http://purl.org/ontoksd#needsCompetence
+ontoksd:needsCompetence rdf:type owl:ObjectProperty ;
+                        rdfs:domain ontoksd:LearningNeed ;
+                        rdfs:range ontoksd:CompetenceDetail ;
+                        rdfs:comment "Defines the competence needed by a learning need."@en .
+
+
+###  http://purl.org/ontoksd#needsCompetenceElement
+ontoksd:needsCompetenceElement rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:LearningNeed ;
+                               rdfs:range ontoksd:CompetenceElementDetail ;
+                               rdfs:comment "Defines the competency required by a learning need."@en .
+
+
+###  http://purl.org/ontoksd#producesEvidence
+ontoksd:producesEvidence rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:InstructionalEntity ;
+                         rdfs:range ontoksd:Evidence .
+
+
+###  http://purl.org/ontoksd#proficiencyOfCompetenceDetail
+ontoksd:proficiencyOfCompetenceDetail rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/nemo/gufo#inheresIn> ;
+                                      rdfs:domain ontoksd:ProficiencyLevel ;
+                                      rdfs:range ontoksd:CompetenceDetail .
+
+
+###  http://purl.org/ontoksd#proficiencyOfElementDetail
+ontoksd:proficiencyOfElementDetail rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/nemo/gufo#inheresIn> ;
+                                   rdfs:domain ontoksd:ProficiencyLevel ;
+                                   rdfs:range ontoksd:CompetenceElementDetail .
+
+
+###  http://purl.org/ontoksd#proficiencyOfEvidence
+ontoksd:proficiencyOfEvidence rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://purl.org/nemo/gufo#inheresIn> ;
+                              rdfs:domain ontoksd:ProficiencyLevel ;
+                              rdfs:range ontoksd:Evidence .
+
+
+###  http://purl.org/ontoksd#providesEvidence
+ontoksd:providesEvidence rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:RoleDetail ;
+                         rdfs:range ontoksd:Evidence ;
+                         rdfs:comment "Specifies the evidence provided in a role detail."@en .
+
+
+###  http://purl.org/ontoksd#providesSelfAssessment
+ontoksd:providesSelfAssessment rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:Profile ;
+                               rdfs:range ontoksd:Evidence ;
+                               rdfs:comment "Links a person to a self-assessment evidence."@en .
+
+
+###  http://purl.org/ontoksd#refersToClassification
+ontoksd:refersToClassification rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:LearningRole ;
+                               rdfs:comment "Links the role to its classification."@en .
+
+
+###  http://purl.org/ontoksd#refersToCompetence
+ontoksd:refersToCompetence rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:CompetenceDetail ;
+                           rdfs:range ontoksd:Competence ;
+                           rdfs:comment "Links a detailed record to a high-level Competence."@en .
+
+
+###  http://purl.org/ontoksd#refersToCompetenceElement
+ontoksd:refersToCompetenceElement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:CompetenceElementDetail ;
+                                  rdfs:range ontoksd:CompetenceElement ;
+                                  rdfs:comment "Associates a Competency Detail to a Competency."@en .
+
+
+###  http://purl.org/ontoksd#refersToDocument
+ontoksd:refersToDocument rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:DocumentDetail ;
+                         rdfs:range ontoksd:Document ;
+                         rdfs:comment "Links document detail to a document."@en .
+
+
+###  http://purl.org/ontoksd#refersToRole
+ontoksd:refersToRole rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:RoleDetail ;
+                     rdfs:range ontoksd:LearningRole ;
+                     rdfs:comment "Links a role detail to a specific role."@en .
+
+
+###  http://purl.org/ontoksd#releases
+ontoksd:releases rdf:type owl:ObjectProperty ;
+                 rdfs:range ontoksd:DocumentDetail ;
+                 rdfs:comment "Indicates the document detail issued by the agency."@en .
+
+
+###  http://purl.org/ontoksd#representsCompetence
+ontoksd:representsCompetence rdf:type owl:ObjectProperty ;
+                             rdfs:domain rcd:RCD ;
+                             rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#representsKnowledgeArea
+ontoksd:representsKnowledgeArea rdf:type owl:ObjectProperty ;
+                                rdfs:domain ontoksd:Knowledge ;
+                                rdfs:range skos:Concept .
+
+
+###  http://purl.org/ontoksd#requiresCompetence
+ontoksd:requiresCompetence rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Competence .
+
+
+###  http://purl.org/ontoksd#requiresCompetenceElement
+ontoksd:requiresCompetenceElement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:LearningRole ;
+                                  rdfs:range ontoksd:CompetenceElementDetail ;
+                                  rdfs:comment "Defines a competency needed to fulfill the role."@en .
+
+
+###  http://purl.org/ontoksd#requiresRoleCompetence
+ontoksd:requiresRoleCompetence rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:LearningRole ;
+                               rdfs:range ontoksd:CompetenceDetail ;
+                               rdfs:comment "Specifies the required competence for a role."@en .
+
+
+###  http://purl.org/ontoksd#selectedInScale
+ontoksd:selectedInScale rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain ontoksd:ProficiencyLevel ;
+                        rdfs:range ontoksd:Scale ;
+                        rdfs:comment "Each ProficiencyLevel belongs to exactly one Scale"@en .
+
+
+###  http://purl.org/ontoksd#suggestsCompetenceElement
+ontoksd:suggestsCompetenceElement rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:LearningRole ;
+                                  rdfs:range ontoksd:CompetenceElementDetail ;
+                                  rdfs:comment "Recommends a competency as helpful for the role."@en .
+
+
+###  http://purl.org/ontoksd#suggestsRoleCompetence
+ontoksd:suggestsRoleCompetence rdf:type owl:ObjectProperty ;
+                               rdfs:domain ontoksd:LearningRole ;
+                               rdfs:range ontoksd:CompetenceDetail ;
+                               rdfs:comment "Suggests a competence as beneficial for the role."@en .
+
+
+###  http://purl.org/ontoksd#usedAsTypeOfKnowledge
+ontoksd:usedAsTypeOfKnowledge rdf:type owl:ObjectProperty ;
+                              rdfs:domain skos:Concept ;
+                              rdfs:range ontoksd:KnowledgeType .
+
+
+###  http://purl.org/ontoksd#usesResource
+ontoksd:usesResource rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:InstructionalEntity ;
+                     rdfs:range ontoksd:EducationalResource .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/ontoksd#courseEndDate
+ontoksd:courseEndDate rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ontoksd:Course ;
+                      rdfs:range xsd:date .
+
+
+###  http://purl.org/ontoksd#courseStartDate
+ontoksd:courseStartDate rdf:type owl:DatatypeProperty ;
+                        rdfs:domain ontoksd:Course ;
+                        rdfs:range xsd:date .
+
+
+###  http://purl.org/ontoksd#hasBeginning
+ontoksd:hasBeginning rdf:type owl:DatatypeProperty ;
+                     rdfs:domain ontoksd:RoleDetail ;
+                     rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/ontoksd#hasEnd
+ontoksd:hasEnd rdf:type owl:DatatypeProperty ;
+               rdfs:domain ontoksd:RoleDetail ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://purl.org/ontoksd#hasNumericProficiencyValue
+ontoksd:hasNumericProficiencyValue rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/nemo/gufo#hasQualityValue> ;
+                                   rdfs:domain ontoksd:ProficiencyLevel ;
+                                   rdfs:range xsd:decimal ;
+                                   rdfs:comment "Numeric score on a scale (e.g., 0–100) associated with the proficiency level.\""@en .
+
+
+###  http://purl.org/ontoksd#includesLower
+ontoksd:includesLower rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ontoksd:Interval ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://purl.org/ontoksd#includesUpper
+ontoksd:includesUpper rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain ontoksd:Interval ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://purl.org/ontoksd#intendedUse
+ontoksd:intendedUse rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ontoksd:EducationalResource ;
+                    rdfs:range xsd:string .
+
+
+###  http://purl.org/ontoksd#isTeamBased
+ontoksd:isTeamBased rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ontoksd:LearningActivity ;
+                    rdfs:range xsd:boolean .
+
+
+###  http://purl.org/ontoksd#lowerBound
+ontoksd:lowerBound rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ontoksd:Interval ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#maxScore
+ontoksd:maxScore rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ontoksd:Assessment ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#maxValue
+ontoksd:maxValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ontoksd:Scale ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#minValue
+ontoksd:minValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ontoksd:Scale ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#passingScore
+ontoksd:passingScore rdf:type owl:DatatypeProperty ;
+                     rdfs:domain ontoksd:Assessment ;
+                     rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#step
+ontoksd:step rdf:type owl:DatatypeProperty ;
+             rdfs:domain ontoksd:Scale ;
+             rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#upperBound
+ontoksd:upperBound rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain ontoksd:Interval ;
+                   rdfs:range xsd:decimal .
+
+
+###  http://purl.org/ontoksd#weight
+ontoksd:weight rdf:type owl:DatatypeProperty ;
+               rdfs:domain ontoksd:Assessment ;
+               rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/nemo/gufo#Kind
+<http://purl.org/nemo/gufo#Kind> rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Quality
+<http://purl.org/nemo/gufo#Quality> rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Relator
+<http://purl.org/nemo/gufo#Relator> rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Situation
+<http://purl.org/nemo/gufo#Situation> rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#AcquisitionContext
+ontoksd:AcquisitionContext rdf:type owl:Class ;
+                           rdfs:subClassOf ontoksd:Context ;
+                           rdfs:label "Acquisition Context"@en ;
+                           skos:definition """A specific contextual setting in which an instructional entity (e.g., course, learning task, training module) is delivered and within which competence acquisition can be observed, facilitated, or evaluated.
+In OntoKSD, AcquisitionContext represents the instructional and environmental conditions under which learners engage in activities designed to develop specific competencies. It combines situational factors (e.g., learning environment, resources, constraints) with pedagogical arrangements (e.g., teaching methods, collaborative structures) that influence the learning process and the demonstration of competence.
+
+Unlike the broader Context, which may describe any situation in which a competence is applied or demonstrated, AcquisitionContext is specifically tied to learning and assessment processes. It situates instructional entities in time and space, providing the background against which evidence of competence acquisition can be generated.
+
+Examples:
+
+A laboratory session in a computer science course where students collaboratively design and test algorithms.
+
+An online simulation platform used for training project management skills under time-constrained scenarios.
+
+A capstone project in an engineering program involving interdisciplinary teamwork and industry mentorship.
+
+Ontologically, AcquisitionContext can be modeled as a specialized form of Context focused on the instructional phase of competence development, typically associated with agents (learners, instructors), tasks, and specific temporal boundaries."""@en .
+
+
+###  http://purl.org/ontoksd#Assessment
+ontoksd:Assessment rdf:type owl:Class ;
+                   rdfs:subClassOf ontoksd:InstructionalEntity ;
+                   rdfs:comment "An Assessment is an instructional entity designed to measure competence acquisition by producing evidence (scores, artifacts, observations) under defined criteria."@en .
+
+
+###  http://purl.org/ontoksd#AssessmentType
+ontoksd:AssessmentType rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#Attitude
+ontoksd:Attitude rdf:type owl:Class ;
+                 rdfs:subClassOf ontoksd:Disposition ;
+                 rdfs:comment """A specific, learned predisposition to respond consistently in a favorable or unfavorable manner toward a person, object, idea, or situation.
+
+In OntoKSD, Attitude is modeled as a subtype of Disposition, focusing on evaluative orientations that affect behavior and decision-making.
+
+Examples include openness to feedback, ethical commitment, and proactivity. Attitudes influence how competencies are demonstrated and sustained in practice."""@en ;
+                 rdfs:label "Attitude"@en .
+
+
+###  http://purl.org/ontoksd#AttitudeType
+ontoksd:AttitudeType rdf:type owl:Class ;
+                     rdfs:subClassOf ontoksd:DispositionType .
+
+
+###  http://purl.org/ontoksd#Certificate
+ontoksd:Certificate rdf:type owl:Class ;
+                    rdfs:subClassOf ontoksd:Document ;
+                    owl:disjointWith ontoksd:Validation ;
+                    rdfs:comment "A document confirming the successful completion of an educational or competence process."@en ;
+                    rdfs:label "Certificate"@en .
+
+
+###  http://purl.org/ontoksd#Competence
+ontoksd:Competence rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty ontoksd:hasCompetenceElement ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass ontoksd:CompetenceElement
+                                   ] ;
+                   rdfs:comment """A formal, ontological description of an integrated set of knowledge, skills, and dispositions that enables an individual to perform a task or fulfill a role effectively in a given domain.
+
+In OntoKSD, a Competence is a static, reusable conceptual entity that defines what is expected for successful performance, independently of any specific individual or assessment event. It serves as a reference model for competency-based curriculum design, instructional alignment, and performance evaluation."""@en ;
+                   rdfs:label "Competence"@en .
+
+
+###  http://purl.org/ontoksd#CompetenceAssociation
+ontoksd:CompetenceAssociation rdf:type owl:Class ;
+                              rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://purl.org/nemo/gufo#mediates> ;
+                                                owl:someValuesFrom ontoksd:Competence
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty <http://purl.org/nemo/gufo#mediates> ;
+                                                owl:someValuesFrom ontoksd:InstructionalEntity
+                                              ] ;
+                              rdfs:comment "Reifies the relationship between a instructional entity and a competence, with support for annotations."@en ;
+                              skos:definition "A reified relation that associates an instructional entity with a competence, specifying whether it is targeted or required as a prerequisite."@en ;
+                              skos:scopeNote "Allows the same instructional entity to be linked to multiple competencies with distinct roles (e.g., prerequisite vs. learning outcome)."@en .
+
+
+###  http://purl.org/ontoksd#CompetenceDetail
+ontoksd:CompetenceDetail rdf:type owl:Class ;
+                         rdfs:comment """A contextualized, individual-specific record that links a Competence to concrete proof of its acquisition or demonstration.
+
+In OntoKSD, CompetenceDetail captures measurable data derived from assessment activities, performance records, or verifiable artifacts.
+It includes contextual metadata such as acquisition date, assessment method, and environment in which the competence was demonstrated.
+
+Unlike Competence, which is a static reference model, CompetenceDetail is dynamic and time-dependent, reflecting the actual performance of an individual at a given moment.
+
+An evidential record of a person’s demonstrated competence in a context; bearer of ProficiencyLevel qualities.\"@en ."""@en .
+
+
+###  http://purl.org/ontoksd#CompetenceElement
+ontoksd:CompetenceElement rdf:type owl:Class ;
+                          owl:disjointWith ontoksd:KnowledgeSkill ;
+                          <http://purl.org/dc/elements/1.1/description> "Competence elements correspond to personal characteristics that constitute the underlying structure of a competence, as described by Miranda et al. (2018)."@en ;
+                          dcterms:bibliographicCitation "Cited as Competency in Miranda, S. et al. (2018). An Ontology-Based Model for Competence Management. Journal of Intelligent Manufacturing."@en ;
+                          rdfs:comment """A core constituent of a Competence, representing a single conceptual component that contributes to the overall ability to perform a task.
+
+In OntoKSD, CompetenceElement is an abstract class specialized into three mutually exclusive categories:
+
+Knowledge: Conceptual and factual information relevant to the competence domain.
+
+Skill: The ability to apply knowledge to perform actions or solve problems.
+
+Disposition: Attitudes, values, and behavioral tendencies that influence the performance of the competence.
+
+CompetenceElements are static entities and form the structural building blocks for defining Competences."""@en ;
+                          rdfs:label "CompetenceElement"@en .
+
+
+###  http://purl.org/ontoksd#CompetenceElementDetail
+ontoksd:CompetenceElementDetail rdf:type owl:Class ;
+                                rdfs:comment """An observed, measurable instantiation of a CompetenceElement (Knowledge, Skill, or Disposition) demonstrated by a specific individual.
+
+In OntoKSD, CompetenceElementDetail specifies how a particular element of a competence has been evidenced, including the performance indicators, measurement scales, and contextual factors used for assessment.
+
+This class enables fine-grained tracking of individual capabilities over time, supporting both formative and summative evaluation practices."""@en .
+
+
+###  http://purl.org/ontoksd#CompetenceType
+ontoksd:CompetenceType rdf:type owl:Class ;
+                       rdfs:comment "Categoria funcional ou pedagógica da competência (e.g., cognitive, technical, interpersonal)" .
+
+
+###  http://purl.org/ontoksd#Context
+ontoksd:Context rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/nemo/gufo#Situation> ;
+                rdfs:comment """A situational setting in which a competence or a competence element is demonstrated, applied, or developed.
+
+In OntoKSD, Context captures the environmental, situational, and task-specific conditions that frame the performance of a competence. It may refer to a professional domain, an instructional scenario (e.g., a Problem-Based Learning task), or a typical situation where the competence is relevant.
+
+A context may involve multiple entities such as tasks, agents (e.g., learners, instructors), and competencies, and it exists as a temporary and situational configuration rather than as a permanent, standalone object.
+Ontologically, a Context is not treated as a mediating object (relator) with its own relational ontological commitment, but rather as a descriptive construct representing the situational circumstances of competence demonstration."""@en ;
+                rdfs:label "Context"@en .
+
+
+###  http://purl.org/ontoksd#Course
+ontoksd:Course rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.org/nemo/gufo#Kind> ;
+               rdfs:comment "A Course is a curricular unit that aggregates instructional entities (resources, activities, assessments) over a defined time frame and acquisition context, with explicit competency alignment."@en .
+
+
+###  http://purl.org/ontoksd#DigitalArtifact
+ontoksd:DigitalArtifact rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.org/nemo/gufo#Kind> ;
+                        rdfs:comment "A DigitalArtifact is a concrete digital item (e.g., PDF, HTML page, dataset, code repository, video) that embodies or delivers instructional content or assessment materials. It is referenced by instructional entities and courses for access, distribution, preservation, and provenance."@en .
+
+
+###  http://purl.org/ontoksd#Disposition
+ontoksd:Disposition rdf:type owl:Class ;
+                    rdfs:subClassOf ontoksd:CompetenceElement ;
+                    rdfs:comment """A relatively stable tendency or inclination to act or respond in certain ways in specific contexts, reflecting values, motivations, and personal attributes that influence the application of knowledge and skills.
+
+In OntoKSD, Disposition captures the affective and behavioral dimension of competence, which shapes how an individual approaches tasks and interacts with others.
+
+Dispositions are not merely internal attitudes but have observable manifestations that can be linked to professional and social effectiveness."""@en .
+
+
+###  http://purl.org/ontoksd#DispositionType
+ontoksd:DispositionType rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#Document
+ontoksd:Document rdf:type owl:Class ;
+                 rdfs:comment "A record that may certify competences, competencies, or education."@en ;
+                 rdfs:label "Document"@en .
+
+
+###  http://purl.org/ontoksd#DocumentDetail
+ontoksd:DocumentDetail rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#EducationalResource
+ontoksd:EducationalResource rdf:type owl:Class ;
+                            rdfs:subClassOf ontoksd:InstructionalEntity ;
+                            rdfs:comment "An EducationalResource is an instructional entity primarily intended for content delivery and study (as opposed to evaluation). It can be reused across courses and contexts."@en .
+
+
+###  http://purl.org/ontoksd#Evidence
+ontoksd:Evidence rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty ontoksd:hasEvidenceType ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass ontoksd:DigitalArtifact
+                                 ] ;
+                 rdfs:comment """A verifiable and contextualized record that demonstrates the possession or application of a specific competence or competence element by an individual in a given context.
+
+In OntoKSD, Evidence serves as the bridge between competence descriptions and real-world performance, capturing measurable manifestations of knowledge, skills, and dispositions.
+
+Each piece of evidence is temporally bound (associated with a date or period), may be linked to a specific EvidenceType, and is collected in connection with an instructional activity, professional task, or other relevant context.
+
+Evidence can originate from both formal and informal settings and is essential for supporting assessment, certification, and learning analytics."""@en ;
+                 rdfs:label "Evidence"@en .
+
+
+###  http://purl.org/ontoksd#EvidenceType
+ontoksd:EvidenceType rdf:type owl:Class ;
+                     rdfs:comment """A classification of evidence based on its method of collection or the nature of the activity that produced it.
+In OntoKSD, EvidenceType enables semantic differentiation between various forms of proof, supporting more precise competency evaluation and reasoning.
+Typical examples include:
+
+SelfAssessment – Evidence produced by an individual’s own evaluation of their competence.
+
+PeerAssessment – Evidence based on evaluation by peers or colleagues.
+
+TeacherAssessment – Evidence provided by an instructor or mentor.
+
+ProjectArtifact – Deliverables or products generated as part of a project or task.
+
+PerformanceObservation – Direct observation of task performance in real or simulated environments.
+
+WrittenExam – Performance on a written test assessing specific competencies.
+
+Presentation – Oral or multimedia presentation demonstrating competence.
+
+PortfolioEvidence – A curated collection of works or artifacts demonstrating sustained competence over time."""@en .
+
+
+###  http://purl.org/ontoksd#FormativeCredit
+ontoksd:FormativeCredit rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#InstructionalEntity
+ontoksd:InstructionalEntity rdf:type owl:Class ;
+                            rdfs:comment """An InstructionalEntity is an abstract educational artifact—such as a course component, learning activity, resource, or assessment—designed to enable the acquisition, reinforcement, or evaluation of competencies in a specific context.
+
+InstructionalEntity encompasses any deliberately created learning experience or educational object, regardless of format, that is linked to targeted competencies either as learning goals or prerequisite requirements. It also serves as a source of competence evidence, as the performance of learners within the entity’s scope can be evaluated to determine the extent of competence acquisition.
+
+Definition:
+An InstructionalEntity is any structured educational activity, resource, or assessment designed with the explicit purpose of supporting, validating, or evidencing one or more competencies in a specific instructional and contextual setting.
+
+Examples include:
+– Formal learning units: courses, modules, workshops, seminars.
+– Practical or performance-based activities: projects, simulations, problem-based learning scenarios, internships.
+– Assessments and evaluation tools: written exams, presentations, portfolios, skill demonstrations.
+– Digital learning resources: e-learning modules, interactive simulations, multimedia learning objects.
+
+Ontological notes:
+
+InstructionalEntity is an abstract class that can be specialized according to different educational domains, such as formal education, corporate training, or informal learning.
+
+It connects to Competence instances via explicit relations such as targetsCompetence (competencies intended for development) and requiresCompetence (prerequisite competencies).
+
+It is anchored to an AcquisitionContext, which defines the environmental and pedagogical conditions under which it is implemented.
+
+Evidence generated from learner engagement in an InstructionalEntity is represented through Evidence and EvidenceType, supporting competency assessment and learner profiling."""@en ;
+                            rdfs:label "Instructional Entity"@en .
+
+
+###  http://purl.org/ontoksd#Interval
+ontoksd:Interval rdf:type owl:Class ;
+                 rdfs:comment "A bounded range on a Scale used to define a ProficiencyLevel."@en .
+
+
+###  http://purl.org/ontoksd#Knowledge
+ontoksd:Knowledge rdf:type owl:Class ;
+                  rdfs:subClassOf ontoksd:CompetenceElement ;
+                  rdfs:comment """A theoretical or practical understanding of facts, concepts, principles, and procedures relevant to a specific domain.
+
+In OntoKSD, Knowledge represents the cognitive dimension of a competence — what an individual knows and can recall, explain, or apply.
+
+It may include both declarative knowledge (factual information) and procedural knowledge (knowing how to perform tasks), and is typically acquired through study, instruction, or experience."""@en ;
+                  rdfs:label "Knowledge"@en .
+
+
+###  http://purl.org/ontoksd#KnowledgeSkill
+ontoksd:KnowledgeSkill rdf:type owl:Class ;
+                       rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ;
+                       rdfs:comment "A relator that semantically links a knowledge element and a skill to represent how a specific skill is applied to a specific knowledge domain. It is not itself a CompetenceElement."@en ,
+                                    """KnowledgeSkill representa a combinação específica entre um conhecimento e uma habilidade (por exemplo, \"aplicar autômatos finitos\").
+
+Essa combinação relacional pode ser instanciada como um gufo:Relator, pois:
+  - Depende de Knowledge e Skill;
+  - Pode ter propriedades próprias (ex: verbo de ação, nível de Bloom, evidência).""" .
+
+
+###  http://purl.org/ontoksd#KnowledgeType
+ontoksd:KnowledgeType rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#LearningActivity
+ontoksd:LearningActivity rdf:type owl:Class ;
+                         rdfs:subClassOf ontoksd:InstructionalEntity ;
+                         rdfs:comment "A LearningActivity is an instructional entity that specifies an educational action to be performed by learners (individually or in teams) to develop or demonstrate competencies." .
+
+
+###  http://purl.org/ontoksd#LearningNeed
+ontoksd:LearningNeed rdf:type owl:Class ;
+                     rdfs:comment "A gap between current and desired competence levels requiring educational intervention."@en .
+
+
+###  http://purl.org/ontoksd#LearningRole
+ontoksd:LearningRole rdf:type owl:Class ;
+                     rdfs:comment """A LearningRole is an educational role assumed by a learner within a course, discipline, or instructional activity. It contextualizes the learner’s participation by specifying the responsibilities, expected behaviors, and competencies associated with that role.
+
+Core Idea
+
+It represents how a learner is positioned within a specific instructional context (e.g., student in Algorithms, group leader in a project, teaching assistant in a course).
+
+It provides semantic links between roles and competencies, enabling the specification of which competencies are required, expected, or likely to be developed when acting in a given role.
+
+It allows for the contextual interpretation of performance evaluations, since competence evidence is relative to the role played by the learner at the time."""@en .
+
+
+###  http://purl.org/ontoksd#LearningTask
+ontoksd:LearningTask rdf:type owl:Class ;
+                     rdfs:subClassOf ontoksd:LearningActivity ;
+                     rdfs:comment "A LearningTask is a concrete, often assessable learning activity (e.g., a PBL case task) that can target competencies and produce evidence through performance and deliverables."@en .
+
+
+###  http://purl.org/ontoksd#PerformanceClassScheme
+ontoksd:PerformanceClassScheme rdf:type owl:Class ;
+                               rdfs:subClassOf skos:OrderedCollection .
+
+
+###  http://purl.org/ontoksd#Person
+ontoksd:Person rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#ProficiencyLevel
+ontoksd:ProficiencyLevel rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/nemo/gufo#Quality> ;
+                         rdfs:comment """A classification indicating the depth or complexity of a Competence or Competence Element.
+
+(Proficiency Level) is a set of levels for classifying competences in doing actions.
+
+A quality that inheres in Evidence or (Competence/CompetenceElement)Detail indicating the attained proficiency."""@en .
+
+
+###  http://purl.org/ontoksd#ProficiencyValue
+ontoksd:ProficiencyValue rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/nemo/gufo#QualityValue> ;
+                         rdfs:comment "A reified value for proficiency (e.g., Beginner/Intermediate/Advanced/Expert or A–D)."@en .
+
+
+###  http://purl.org/ontoksd#Profile
+ontoksd:Profile rdf:type owl:Class ;
+                rdfs:comment """A representation of an individual's competences, learning, education, and roles.
+
+Representa o perfil educacional do aluno: competências evidenciadas, papéis, evidências, lacunas, etc.
+É a entidade central da visão educacional — é a partir dela que se derivam análises como “lacuna de competência”, “progresso”, “evidências” etc."""@en .
+
+
+###  http://purl.org/ontoksd#ResourceType
+ontoksd:ResourceType rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#RoleDetail
+ontoksd:RoleDetail rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#Scale
+ontoksd:Scale rdf:type owl:Class ;
+              rdfs:comment "A measurement scale (numeric, Likert, etc.) used to interpret observed performance into proficiency levels.\""@en ;
+              rdfs:label "Scale"@en .
+
+
+###  http://purl.org/ontoksd#Skill
+ontoksd:Skill rdf:type owl:Class ;
+              rdfs:subClassOf ontoksd:CompetenceElement ;
+              rdfs:comment """The ability to apply knowledge effectively to perform tasks, solve problems, or produce desired outcomes in a given context.
+
+In OntoKSD, Skill captures the functional and operational dimension of competence, encompassing cognitive skills (e.g., reasoning, problem-solving), technical skills (e.g., programming, instrument operation), and interpersonal skills (e.g., teamwork, negotiation).
+
+Skills are observable through performance and are often assessed via demonstrations, simulations, or task completion."""@en ;
+              rdfs:label "Skill"@en .
+
+
+###  http://purl.org/ontoksd#SkillType
+ontoksd:SkillType rdf:type owl:Class .
+
+
+###  http://purl.org/ontoksd#StructureType
+ontoksd:StructureType rdf:type owl:Class ;
+                      rdfs:comment "Forma como a competência está estruturalmente organizada (e.g., atomic, pair-based, composite)" .
+
+
+###  http://purl.org/ontoksd#Validation
+ontoksd:Validation rdf:type owl:Class ;
+                   rdfs:subClassOf ontoksd:Document ;
+                   rdfs:comment "A type of document certifying the achievement or recognition of a competence."@en ;
+                   rdfs:label "Validation"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/ontoksd#Abstract
+ontoksd:Abstract rdf:type owl:NamedIndividual ,
+                          ontoksd:StructureType .
+
+
+###  http://purl.org/ontoksd#AcessmentProject
+ontoksd:AcessmentProject rdf:type owl:NamedIndividual ,
+                                  ontoksd:AssessmentType ;
+                         rdfs:label "Acessment Project" .
+
+
+###  http://purl.org/ontoksd#AssessmentPresentation
+ontoksd:AssessmentPresentation rdf:type owl:NamedIndividual ,
+                                        ontoksd:AssessmentType ;
+                               rdfs:label "Presentation" .
+
+
+###  http://purl.org/ontoksd#Atomic
+ontoksd:Atomic rdf:type owl:NamedIndividual ,
+                        ontoksd:StructureType .
+
+
+###  http://purl.org/ontoksd#Composite
+ontoksd:Composite rdf:type owl:NamedIndividual ,
+                           ontoksd:StructureType .
+
+
+###  http://purl.org/ontoksd#ComputingDomain
+ontoksd:ComputingDomain rdf:type owl:NamedIndividual ,
+                                 ontoksd:CompetenceType .
+
+
+###  http://purl.org/ontoksd#Exam
+ontoksd:Exam rdf:type owl:NamedIndividual ,
+                      ontoksd:EvidenceType .
+
+
+###  http://purl.org/ontoksd#Foundational
+ontoksd:Foundational rdf:type owl:NamedIndividual ,
+                              ontoksd:CompetenceType .
+
+
+###  http://purl.org/ontoksd#Instructional
+ontoksd:Instructional rdf:type owl:NamedIndividual ,
+                               ontoksd:EvidenceType .
+
+
+###  http://purl.org/ontoksd#Observed
+ontoksd:Observed rdf:type owl:NamedIndividual ,
+                          ontoksd:EvidenceType .
+
+
+###  http://purl.org/ontoksd#Peer_Assessment
+ontoksd:Peer_Assessment rdf:type owl:NamedIndividual ,
+                                 ontoksd:EvidenceType ;
+                        rdfs:label "Peer Assessment" .
+
+
+###  http://purl.org/ontoksd#Portfolio
+ontoksd:Portfolio rdf:type owl:NamedIndividual ,
+                           ontoksd:EvidenceType .
+
+
+###  http://purl.org/ontoksd#Presentation
+ontoksd:Presentation rdf:type owl:NamedIndividual ,
+                              ontoksd:EvidenceType .
+
+
+###  http://purl.org/ontoksd#Professional
+ontoksd:Professional rdf:type owl:NamedIndividual ,
+                              ontoksd:CompetenceType .
+
+
+###  http://purl.org/ontoksd#Project_Artifact
+ontoksd:Project_Artifact rdf:type owl:NamedIndividual ,
+                                  ontoksd:EvidenceType ;
+                         rdfs:label "Project Artifact" .
+
+
+###  http://purl.org/ontoksd#SelfReported
+ontoksd:SelfReported rdf:type owl:NamedIndividual ,
+                              ontoksd:EvidenceType ;
+                     rdfs:label "Self Reported" .
+
+
+###  http://purl.org/ontoksd#Self_Assessment
+ontoksd:Self_Assessment rdf:type owl:NamedIndividual ,
+                                 ontoksd:EvidenceType ;
+                        rdfs:label "Self Assessment" .
+
+
+###  http://purl.org/ontoksd#Transversal
+ontoksd:Transversal rdf:type owl:NamedIndividual ,
+                             ontoksd:CompetenceType .
+
+
+###  http://purl.org/ontoksd#WrittenExam
+ontoksd:WrittenExam rdf:type owl:NamedIndividual ,
+                             ontoksd:AssessmentType ;
+                    rdfs:label "Written Exam" .
+
+
+###  http://purl.org/ontoksd#lecture_notes
+ontoksd:lecture_notes rdf:type owl:NamedIndividual ,
+                               ontoksd:ResourceType .
+
+
+###  http://purl.org/ontoksd#tutorial
+ontoksd:tutorial rdf:type owl:NamedIndividual ,
+                          ontoksd:ResourceType .
+
+
+###  http://purl.org/ontoksd#worksheet
+ontoksd:worksheet rdf:type owl:NamedIndividual ,
+                           ontoksd:ResourceType .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ontoksd:Disposition
+                ontoksd:Knowledge
+                ontoksd:Skill
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( ontoksd:DispositionType
+                ontoksd:KnowledgeType
+                ontoksd:SkillType
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

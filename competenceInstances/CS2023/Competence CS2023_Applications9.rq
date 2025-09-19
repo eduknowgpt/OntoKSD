@@ -1,0 +1,65 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+############# PARES KS ################
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:AR-Performance-Energy ontoksd:cs2023DevelopSkill)
+    (cs2023:NC-Security           ontoksd:cs2023DevelopSkill)
+    (cs2023:OS-Protection         ontoksd:cs2023DevelopSkill)
+    (cs2023:SF-Security           ontoksd:cs2023DevelopSkill)
+    (cs2023:SE-Design             ontoksd:cs2023DevelopSkill)
+    (cs2023:SE-Tools              ontoksd:cs2023DevelopSkill)
+    (cs2023:SPD-Common            ontoksd:cs2023DevelopSkill)
+    (cs2023:SPD-Mobile            ontoksd:cs2023DevelopSkill)
+    (cs2023:SEP-Privacy           ontoksd:cs2023DevelopSkill)
+  }
+  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+;
+
+############# COMPETÊNCIA ################
+INSERT {
+  ontoksd:competence_CS2023_Applications9 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+    dcterms:title "Build and optimize a secure web page for evolving business needs using a variety of appropriate programming languages."@en ;
+    dcterms:description "Evaluate potential security hazards and apply optimization techniques to meet evolving business needs."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Applications9"@en ;
+    ontoksd:hasDisposition ontoksd:adaptable ,
+                           ontoksd:meticulous ,
+                           ontoksd:proactive ,
+                           ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE { ?ks a ontoksd:KnowledgeSkill . }
+;
+
+############# VERBOS ################
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:AR-Performance-Energy ontoksd:cs2023DevelopSkill bloom:optimize)
+    (cs2023:NC-Security           ontoksd:cs2023DevelopSkill bloom:secure)
+    (cs2023:OS-Protection         ontoksd:cs2023DevelopSkill bloom:apply)
+    (cs2023:SF-Security           ontoksd:cs2023DevelopSkill bloom:implement)
+    (cs2023:SE-Design             ontoksd:cs2023DevelopSkill bloom:design)
+    (cs2023:SE-Tools              ontoksd:cs2023DevelopSkill bloom:use)
+    (cs2023:SPD-Common            ontoksd:cs2023DevelopSkill bloom:develop)
+    (cs2023:SPD-Mobile            ontoksd:cs2023DevelopSkill bloom:develop)
+    (cs2023:SEP-Privacy           ontoksd:cs2023DevelopSkill bloom:ensure)
+  }
+  ?ks a ontoksd:KnowledgeSkill .
+}

@@ -1,0 +1,64 @@
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA CS2023_Software5 ################
+
+INSERT {
+  ontoksd:competence_CS2023_Software5 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+    dcterms:title "Effectively use a programming language’s type system to develop safe and secure software"@en ;
+    dcterms:description "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Software5"@en ;
+    ontoksd:hasDisposition ontoksd:inventive ,
+                           ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+  VALUES (?k ?s) {
+    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill)
+  }
+}
+
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:develop)
+    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:design)
+    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:implement)
+    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:ensure)
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}

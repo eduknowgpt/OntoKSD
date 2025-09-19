@@ -1,0 +1,58 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+############# PARES KS ################
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:DM-Data              ontoksd:cs2023DevelopSkill)
+    (cs2023:DM-Relational        ontoksd:cs2023DevelopSkill)
+    (cs2023:DM-Processing        ontoksd:cs2023DevelopSkill)
+    (cs2023:SEP-Security         ontoksd:cs2023DevelopSkill)
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023DevelopSkill)
+    (cs2023:SEP-Privacy          ontoksd:cs2023DevelopSkill)
+    (cs2023:SEC-Foundations      ontoksd:cs2023DevelopSkill)
+  }
+  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+;
+
+############# COMPETÊNCIA ################
+INSERT {
+  ontoksd:competence_CS2023_Systems3 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+    dcterms:title "Secure data from unauthorized access"@en ;
+    dcterms:description "Create database views to ensure data access is appropriately limited."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Systems3"@en ;
+    ontoksd:hasDisposition ontoksd:meticulous ,
+                           ontoksd:proactive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE { ?ks a ontoksd:KnowledgeSkill . }
+
+
+############# VERBOS ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:DM-Data              ontoksd:cs2023DevelopSkill bloom:create)
+    (cs2023:DM-Relational        ontoksd:cs2023DevelopSkill bloom:construct)
+    (cs2023:DM-Processing        ontoksd:cs2023DevelopSkill bloom:implement)
+    (cs2023:SEP-Security         ontoksd:cs2023DevelopSkill bloom:apply)
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023DevelopSkill bloom:consider)
+    (cs2023:SEP-Privacy          ontoksd:cs2023DevelopSkill bloom:ensure)
+    (cs2023:SEC-Foundations      ontoksd:cs2023DevelopSkill bloom:apply)
+  }
+  ?ks a ontoksd:KnowledgeSkill .
+}

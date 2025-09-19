@@ -1,0 +1,56 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+############# PARES KS ################
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-IP                  ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-Privacy             ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-Communication       ontoksd:cs2023ExplainSkill)
+    (cs2023:SEP-DEIA                ontoksd:cs2023ExplainSkill)
+  }
+  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+;
+
+############# COMPETÊNCIA ################
+INSERT {
+  ontoksd:competence_CS2023_Applications7 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ProfessionalDomain ;
+    dcterms:title "Document professional implications of a product or service"@en ;
+    dcterms:description "Gather information regarding accountability, responsibility and liability assumed by a company when releasing a service/software/product and present it in a coherent and actionable manner."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Applications7"@en ;
+    ontoksd:hasDisposition ontoksd:meticulous ,
+                           ontoksd:proactive ,
+                           ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE { ?ks a ontoksd:KnowledgeSkill . }
+;
+
+############# VERBOS ################
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:SEP-Professional-Ethics ontoksd:cs2023ExplainSkill bloom:explain)
+    (cs2023:SEP-IP                  ontoksd:cs2023ExplainSkill bloom:describe)
+    (cs2023:SEP-Privacy             ontoksd:cs2023ExplainSkill bloom:interpret)
+    (cs2023:SEP-Communication       ontoksd:cs2023ExplainSkill bloom:communicate)
+    (cs2023:SEP-DEIA                ontoksd:cs2023ExplainSkill bloom:consider)
+  }
+  ?ks a ontoksd:KnowledgeSkill .
+}

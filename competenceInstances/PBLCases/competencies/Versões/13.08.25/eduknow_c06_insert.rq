@@ -1,0 +1,85 @@
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cs2013: <http://purl.org/cs2013/>
+PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
+PREFIX bloom: <http://example.org/bloom#>
+
+####  Develop Problem-Solving Solutions Using Finite State Machines
+
+############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2013:Finite_state_machines ontoksd:applyingSkill)
+    (cs2013:Requirements_specification ontoksd:applyingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent ?s .
+  }
+
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+
+;
+
+############# INSERÇÃO DA COMPETÊNCIA EdukNow_C06 ################
+
+INSERT {
+  ontoksd:competence_EdukNow_C06 a ontoksd:Competence ;
+    dcterms:title "Develop Problem-Solving Solutions Using Finite State Machines"@en ;
+    dcterms:description "Design and implement computational solutions using Finite State Machines (FSMs) to model systems characterized by states and transitions, in both real-world and instructional contexts. This competency emphasizes the ability to translate system requirements into formal models that are logically consistent, verifiable, and aligned with the principles of automata theory."@en ;
+    dcterms:source "EdukNow Competence Project"@en ;
+    skos:notation "EdukNow Competence - C06"@en ;
+    ontoksd:hasCompetenceElement ontoksd:Inventive ,
+                                 ontoksd:Collaborative ,
+                                 ontoksd:Responsible ,
+                                 ontoksd:Proactive ,
+                                 ontoksd:Creative ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+
+  VALUES (?k ?s) {
+    (cs2013:Finite_state_machines ontoksd:applyingSkill)
+    (cs2013:Requirements_specification ontoksd:applyingSkill)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill)
+  }
+}
+
+;
+
+############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2013:Finite_state_machines ontoksd:applyingSkill bloom:Use)
+    (cs2013:Finite_state_machines ontoksd:applyingSkill bloom:Implement)
+    (cs2013:Finite_state_machines ontoksd:applyingSkill bloom:Create)
+	
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Analyze)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Justify)
+    (cc2020fpk:AnalyticalThinking ontoksd:applyingSkill bloom:Evaluate)
+  }
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent ?s .
+}

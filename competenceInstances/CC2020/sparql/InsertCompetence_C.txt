@@ -38,7 +38,8 @@ WHERE {
 #####################################
 INSERT {
   ontoksd:competence_C a ontoksd:Competence ;
-  
+ 	ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+	ontoksd:hasStructureType ontoksd:Atomic ; 
     dcterms:title "CC2020 Competence C"@en ;
     dcterms:description "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en ;
     dcterms:source "CC2020 Curriculum Guidelines"@en ;

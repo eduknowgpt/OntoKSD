@@ -1,0 +1,316 @@
+
+###  http://purl.org/ontoksd#hasCompetenceElementContext
+ontoksd:hasCompetenceElementContext rdf:type owl:ObjectProperty ;
+                                    rdfs:domain ontoksd:CompetenceElement ;
+                                    rdfs:range ontoksd:Context ;
+                                    rdfs:comment "Context in which the Competency is expressed or observed."@en .
+
+###  http://purl.org/ontoksd#hasCompetenceElementScale
+ontoksd:hasCompetenceElementScale rdf:type owl:ObjectProperty ;
+                                  rdfs:domain ontoksd:CompetenceElement ;
+                                  rdfs:range ontoksd:Scale ;
+                                  rdfs:comment "Specifies the measurement scale for a Competency."@en .
+
+###  http://purl.org/ontoksd#isCompetenceElementOf
+ontoksd:isCompetenceElementOf rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf <http://purl.org/nemo/gufo#isComponentOf> ;
+                              rdfs:domain ontoksd:CompetenceElement ;
+                              rdfs:range ontoksd:Competence ;
+                              rdfs:comment "Indicates that a Competency is mandatory for a given Competence."@en .
+
+###  http://purl.org/ontoksd#CompetenceElement
+ontoksd:CompetenceElement rdf:type owl:Class ;
+                          owl:disjointWith ontoksd:KnowledgeSkill ;
+                          <http://purl.org/dc/elements/1.1/description> "Competence elements correspond to personal characteristics that constitute the underlying structure of a competence, as described by Miranda et al. (2018)."@en ;
+                          dcterms:bibliographicCitation "Cited as Competency in Miranda, S. et al. (2018). An Ontology-Based Model for Competence Management. Journal of Intelligent Manufacturing."@en ;
+                          rdfs:comment """A core constituent of a Competence, representing a single conceptual component that contributes to the overall ability to perform a task.
+
+In OntoKSD, CompetenceElement is an abstract class specialized into three mutually exclusive categories:
+
+Knowledge: Conceptual and factual information relevant to the competence domain.
+
+Skill: The ability to apply knowledge to perform actions or solve problems.
+
+Disposition: Attitudes, values, and behavioral tendencies that influence the performance of the competence.
+
+CompetenceElements are static entities and form the structural building blocks for defining Competences."""@en ;
+                          rdfs:label "CompetenceElement"@en .
+
+
+
+
+
+
+
+
+###  http://purl.org/ontoksd#hasDispositionType
+ontoksd:hasDispositionType rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Disposition ;
+                           rdfs:range ontoksd:DispositionType .
+
+###  http://purl.org/ontoksd#isDispositionOf
+ontoksd:isDispositionOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf ontoksd:isCompetenceElementOf ;
+                        rdfs:domain ontoksd:Disposition ;
+                        rdfs:range ontoksd:Competence .
+
+				
+###  http://purl.org/ontoksd#DispositionType
+ontoksd:DispositionType rdf:type owl:Class .					
+						
+###  http://purl.org/ontoksd#Disposition
+ontoksd:Disposition rdf:type owl:Class ;
+                    rdfs:subClassOf ontoksd:CompetenceElement ;
+                    rdfs:comment """A relatively stable tendency or inclination to act or respond in certain ways in specific contexts, reflecting values, motivations, and personal attributes that influence the application of knowledge and skills.
+
+In OntoKSD, Disposition captures the affective and behavioral dimension of competence, which shapes how an individual approaches tasks and interacts with others.
+
+Dispositions are not merely internal attitudes but have observable manifestations that can be linked to professional and social effectiveness."""@en .
+
+
+
+
+
+		
+###  http://purl.org/ontoksd#Attitude
+ontoksd:Attitude rdf:type owl:Class ;
+                 rdfs:subClassOf ontoksd:Disposition ;
+                 rdfs:comment """A specific, learned predisposition to respond consistently in a favorable or unfavorable manner toward a person, object, idea, or situation.
+
+In OntoKSD, Attitude is modeled as a subtype of Disposition, focusing on evaluative orientations that affect behavior and decision-making.
+
+Examples include openness to feedback, ethical commitment, and proactivity. Attitudes influence how competencies are demonstrated and sustained in practice."""@en ;
+                 rdfs:label "Attitude"@en .
+
+
+###  http://purl.org/ontoksd#AttitudeType
+ontoksd:AttitudeType rdf:type owl:Class ;
+                     rdfs:subClassOf ontoksd:DispositionType .
+
+					 
+###  http://purl.org/ontoksd#hasAttitudeType
+ontoksd:hasAttitudeType rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf ontoksd:hasDispositionType ;
+                        rdfs:domain ontoksd:Attitude ;
+                        rdfs:range ontoksd:AttitudeType ;
+                        rdfs:comment "Relates an Attitude to its categorized type."@en .
+
+###  http://purl.org/ontoksd#isAttitudeOf
+ontoksd:isAttitudeOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ontoksd:isDispositionOf ;
+                     rdfs:domain ontoksd:Attitude ;
+                     rdfs:range ontoksd:Competence .						
+									
+
+
+
+
+###  http://purl.org/ontoksd#hasCognitiveLevel
+ontoksd:hasCognitiveLevel rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Skill ;
+                          rdfs:range <http://purl.org/edu/bloom#CognitiveProcessLevel> .
+						  
+						  
+###  http://purl.org/ontoksd#appliesKnowledge
+ontoksd:appliesKnowledge rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Skill ;
+                         rdfs:range ontoksd:Knowledge ;
+                         rdfs:comment "Indicates that a Skill requires certain Knowledge."@en .
+
+###  http://purl.org/ontoksd#hasSkillType
+ontoksd:hasSkillType rdf:type owl:ObjectProperty ;
+                     rdfs:domain ontoksd:Skill ;
+                     rdfs:range ontoksd:SkillType ;
+                     rdfs:comment "Associates a Skill with its classified type."@en .
+
+###  http://purl.org/ontoksd#isSkillOf
+ontoksd:isSkillOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf ontoksd:isCompetenceElementOf ;
+                  rdfs:domain ontoksd:Skill ;
+                  rdfs:range ontoksd:Competence .
+
+###  http://purl.org/ontoksd#Skill
+ontoksd:Skill rdf:type owl:Class ;
+              rdfs:subClassOf ontoksd:CompetenceElement ;
+              rdfs:comment """The ability to apply knowledge effectively to perform tasks, solve problems, or produce desired outcomes in a given context.
+
+In OntoKSD, Skill captures the functional and operational dimension of competence, encompassing cognitive skills (e.g., reasoning, problem-solving), technical skills (e.g., programming, instrument operation), and interpersonal skills (e.g., teamwork, negotiation).
+
+Skills are observable through performance and are often assessed via demonstrations, simulations, or task completion."""@en ;
+              rdfs:label "Skill"@en .
+
+
+###  http://purl.org/ontoksd#SkillType
+ontoksd:SkillType rdf:type owl:Class .
+
+
+
+
+
+
+
+###  http://purl.org/ontoksd#hasKnowledgeType
+ontoksd:hasKnowledgeType rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Knowledge ;
+                         rdfs:range ontoksd:KnowledgeType ;
+                         rdfs:comment "Relates a Knowledge to its specific knowledge type."@en .
+
+###  http://purl.org/ontoksd#isKnowledgeOf
+ontoksd:isKnowledgeOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf ontoksd:isCompetenceElementOf ;
+                      rdfs:domain ontoksd:Knowledge ;
+                      rdfs:range ontoksd:Competence .
+
+###  http://purl.org/ontoksd#representsKnowledgeArea
+ontoksd:representsKnowledgeArea rdf:type owl:ObjectProperty ;
+                                rdfs:domain ontoksd:Knowledge ;
+                                rdfs:range skos:Concept .
+
+								
+###  http://purl.org/ontoksd#Knowledge
+ontoksd:Knowledge rdf:type owl:Class ;
+                  rdfs:subClassOf ontoksd:CompetenceElement ;
+                  rdfs:comment """A theoretical or practical understanding of facts, concepts, principles, and procedures relevant to a specific domain.
+
+In OntoKSD, Knowledge represents the cognitive dimension of a competence — what an individual knows and can recall, explain, or apply.
+
+It may include both declarative knowledge (factual information) and procedural knowledge (knowing how to perform tasks), and is typically acquired through study, instruction, or experience."""@en ;
+                  rdfs:label "Knowledge"@en .
+				  
+				  
+###  http://purl.org/ontoksd#KnowledgeType
+ontoksd:KnowledgeType rdf:type owl:Class .
+
+
+
+			  
+
+
+
+
+
+
+
+
+
+
+
+
+			   
+###  http://purl.org/ontoksd#hasAttitude
+ontoksd:hasAttitude rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf ontoksd:hasDisposition ;
+                    owl:inverseOf ontoksd:isAttitudeFor ;
+                    rdfs:domain ontoksd:Competence ;
+                    rdfs:range ontoksd:Attitude .
+
+###  http://purl.org/ontoksd#hasCompetenceContext
+ontoksd:hasCompetenceContext rdf:type owl:ObjectProperty ;
+                             rdfs:domain ontoksd:Competence ;
+                             rdfs:range ontoksd:Context ;
+                             rdfs:comment "Specifies the context in which a Competence is applied."@en .
+
+###  http://purl.org/ontoksd#hasCompetenceElement
+ontoksd:hasCompetenceElement rdf:type owl:ObjectProperty ;
+                             owl:inverseOf ontoksd:isCompetenceElementFor ;
+                             rdfs:domain ontoksd:Competence ;
+                             rdfs:range ontoksd:CompetenceElement ;
+                             rdfs:comment "As propriedades hasSkill, hasKnowledge e hasAttitude foram criadas como subpropriedades de hasCompetenceElement."@en ,
+                                          "Indicates the competency detail of a person."@en .
+
+###  http://purl.org/ontoksd#hasCompetenceScale
+ontoksd:hasCompetenceScale rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Scale ;
+                           rdfs:comment "Defines the scale used to measure a Competence."@en .
+
+###  http://purl.org/ontoksd#hasCompetenceType
+ontoksd:hasCompetenceType rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Competence ;
+                          rdfs:range ontoksd:CompetenceType ;
+                          rdfs:comment "Specifies whether a competence is educational, profissional, or another type."@en .
+
+						  
+###  http://purl.org/ontoksd#hasComponent
+ontoksd:hasComponent rdf:type owl:ObjectProperty ;
+                     owl:inverseOf ontoksd:isComponentOf ;
+                     rdfs:domain ontoksd:Competence ;
+                     rdfs:range ontoksd:Competence ;
+                     rdfs:comment """Indicates a compositional relationship, where a meta-competence (composite competence) is composed of several component competencies. The meta-competence is considered fully demonstrated only if all of its components are evidenced.
+
+Use case: Supports logical aggregation and progressive demonstration of more general abilities."""@en .
+
+###  http://purl.org/ontoksd#hasDisposition
+ontoksd:hasDisposition rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
+                       owl:inverseOf ontoksd:isDispositionFor ;
+                       rdfs:domain ontoksd:Competence ;
+                       rdfs:range ontoksd:Disposition .
+
+###  http://purl.org/ontoksd#hasKnowledge
+ontoksd:hasKnowledge rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
+                     owl:inverseOf ontoksd:isKnowledgeFor ;
+                     rdfs:domain ontoksd:Competence ;
+                     rdfs:range ontoksd:Knowledge .
+
+###  http://purl.org/ontoksd#hasKnowledgeSkill
+ontoksd:hasKnowledgeSkill rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Competence ;
+                          rdfs:range ontoksd:KnowledgeSkill .
+
+###  http://purl.org/ontoksd#hasRCD
+ontoksd:hasRCD rdf:type owl:ObjectProperty ;
+               owl:inverseOf ontoksd:representsCompetence ;
+               rdfs:domain ontoksd:Competence ;
+               rdfs:range rcd:RCD .
+
+###  http://purl.org/ontoksd#hasSkill
+ontoksd:hasSkill rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf ontoksd:hasCompetenceElement ;
+                 owl:inverseOf ontoksd:isSkillFor ;
+                 rdfs:domain ontoksd:Competence ;
+                 rdfs:range ontoksd:Skill ;
+                 rdfs:comment "Indicates a skill that composes the competence."@en .
+
+###  http://purl.org/ontoksd#hasSpecialization
+ontoksd:hasSpecialization rdf:type owl:ObjectProperty ;
+                          rdfs:domain ontoksd:Competence ;
+                          rdfs:range ontoksd:Competence .
+
+###  http://purl.org/ontoksd#hasStructureType
+ontoksd:hasStructureType rdf:type owl:ObjectProperty ;
+                         rdfs:domain ontoksd:Competence ;
+                         rdfs:range ontoksd:StructureType ;
+                         rdfs:comment "Specifies whether a competence is atomic, composite, or another type."@en .
+
+###  http://purl.org/ontoksd#isBroaderThan
+ontoksd:isBroaderThan rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:Competence ;
+                      rdfs:range ontoksd:Competence .
+
+					  
+###  http://purl.org/ontoksd#isComponentOf
+ontoksd:isComponentOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain ontoksd:Competence ;
+                      rdfs:range ontoksd:Competence ;
+                      rdfs:comment "Competences may be an aggregation of other competences" .
+
+###  http://purl.org/ontoksd#isSpecializationOf
+ontoksd:isSpecializationOf rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Competence .
+
+###  http://purl.org/ontoksd#requiresCompetence
+ontoksd:requiresCompetence rdf:type owl:ObjectProperty ;
+                           rdfs:domain ontoksd:Competence ;
+                           rdfs:range ontoksd:Competence .
+
+###  http://purl.org/ontoksd#Competence
+ontoksd:Competence rdf:type owl:Class ;
+                   rdfs:comment """A formal, ontological description of an integrated set of knowledge, skills, and dispositions that enables an individual to perform a task or fulfill a role effectively in a given domain.
+
+In OntoKSD, a Competence is a static, reusable conceptual entity that defines what is expected for successful performance, independently of any specific individual or assessment event. It serves as a reference model for competency-based curriculum design, instructional alignment, and performance evaluation."""@en ;
+                   rdfs:label "Competence"@en .						   
+						 
+					  

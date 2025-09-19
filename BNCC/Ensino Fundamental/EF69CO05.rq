@@ -1,0 +1,98 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX bloom:     <http://example.org/bloom#>
+PREFIX cs2013:    <http://purl.org/cs2013#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
+
+#############################
+# 1) Upsert de KnowledgeSkill (KS)
+#############################
+
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent     ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2013:Basic_Cryptography_Terminology        ontoksd:understandingSkill)
+    (cs2013:Foundational_Concepts_in_Security     ontoksd:understandingSkill)
+    (cs2013:Use_of_cryptography_for_data_and_network_security       ontoksd:applyingSkill)
+    (cs2013:Machine_Level_Representation_of_Data  ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking  			   	  ontoksd:applyingSkill)	
+  }
+  FILTER NOT EXISTS {
+    ?existing a ontoksd:KnowledgeSkill ;
+              ontoksd:hasKnowledgeComponent ?k ;
+              ontoksd:hasSkillComponent     ?s .
+  }
+  BIND( IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks )
+}.
+
+#############################
+# 2) Inserção da Competência EF09CO05
+#############################
+
+INSERT {
+  ontoksd:competence_BNCC_EF09CO05 a ontoksd:Competence ;
+    ontoksd:hasStructureType   ontoksd:Atomic ;
+    ontoksd:hasCompetenceType  ontoksd:ComputingDomain ;
+    dcterms:title        "Analisar técnicas de criptografia para armazenamento e transmissão de dados"@pt ;
+    dcterms:description  "Esta competência envolve a compreensão e a análise de técnicas de criptografia, suas aplicações históricas e contemporâneas, e sua importância para a segurança cibernética e privacidade de dados. O aluno deve ser capaz de identificar como a criptografia protege dados em trânsito e em repouso, compreender os fundamentos da codificação de mensagens, e refletir criticamente sobre seu uso em contextos digitais e históricos."@pt ;
+    dcterms:source       "BNCC — Competência EF09CO05 (Ensino Fundamental, Anos Finais), com complementos para Computação"@pt ;
+    skos:notation        "BNCC EF09CO05"@pt ;
+    ontoksd:hasCompetenceElement ontoksd:creative ,
+                                 ontoksd:responsible ,
+                                 ontoksd:analytical ,
+                                 ontoksd:communicative .
+}
+WHERE {
+}.
+
+#############################
+# 3) Vincular os KS criados à competência
+#############################
+
+INSERT {
+  ontoksd:competence_BNCC_EF09CO05 ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2013:Basic_Cryptography_Terminology        ontoksd:understandingSkill)
+    (cs2013:Foundational_Concepts_in_Security     ontoksd:understandingSkill)
+    (cs2013:Use_of_cryptography_for_data_and_network_security       ontoksd:applyingSkill)
+    (cs2013:Machine_Level_Representation_of_Data  ontoksd:understandingSkill)
+    (cc2020fpk:AnalyticalThinking  			   	  ontoksd:applyingSkill)	
+  }
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent     ?s .
+}.
+
+#############################
+# 4) Verbos Bloom sugeridos para os pares KS
+#############################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2013:Basic_Cryptography_Terminology          ontoksd:understandingSkill       bloom:Compare)
+    (cs2013:Basic_Cryptography_Terminology          ontoksd:understandingSkill       bloom:Differentiate)
+
+    (cs2013:Foundational_Concepts_in_Security     	ontoksd:understandingSkill   bloom:Explain)
+    (cs2013:Foundational_Concepts_in_Security     	ontoksd:understandingSkill   bloom:Interpret)
+
+    (cs2013:Use_of_cryptography_for_data_and_network_security      ontoksd:applyingSkill   bloom:Describe)
+    (cs2013:Use_of_cryptography_for_data_and_network_security      ontoksd:applyingSkill   bloom:Summarize)
+
+    (cs2013:Machine_Level_Representation_of_Data    ontoksd:understandingSkill        bloom:Encode)
+    (cs2013:Machine_Level_Representation_of_Data    ontoksd:understandingSkill        bloom:Implement)
+  }
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?k ;
+      ontoksd:hasSkillComponent     ?s .
+}.

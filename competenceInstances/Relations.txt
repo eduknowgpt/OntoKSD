@@ -1,0 +1,24 @@
+Um Course tem 1..* InstructionalEntity
+
+Cada InstructionalEntity tem targetCompetencies via mediador CompetenceAssociation:
+CompetenceAssociation mediatesInstructionalEntity 1 InstructionalEntity   
+CompetenceAssociation mediatesTargetCompetence 1 Competence
+
+Uma AcquisitionContext  hasInstructionalEntity 1..* InstructionalEntity
+                                 
+								 
+Um Student pertence a um Course
+
+Um Assesment é uma descrição de uma avaliação
+Um Assesment tem 1..* InstructionalEntity
+
+
+
+Um AssesmentDetail é o resultado da aplicação de um Assesment a um Student
+Um AssesmentDetail evidencia competências associadas ao seus InstructionalEntity
+
+Um Perfil descreve um Student e todas as suas Competências Evidenciadas
+
+Um Student, para um Asssessment, (AssessmentDetail) Mobiliza competências, produzindo CompetenceDetail
+
+Um Perfil descreve o estudante com todas as competências evidenciadas

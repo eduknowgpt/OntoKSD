@@ -4,26 +4,28 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cs2013: <http://purl.org/cs2013/>
 PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
-PREFIX bloom: <http://example.org/bloom#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+####  Develop Problem-Solving Solutions Using Turing Machines
 
 ############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
 
 INSERT {
   ?ks a ontoksd:KnowledgeSkill ;
       ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+      ontoksd:hasSkillComponent ontoksd:applyingSkill .
 }
 WHERE {
-  VALUES (?k ?s) {
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill)
-    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
-    (cs2013:ModelingAndSimulation ontoksd:applyingSkill)
+  VALUES ?k {
+    cs2013:Turing_machines
+    cs2013:Requirements_specification
+    cc2020fpk:AnalyticalThinking
   }
 
   FILTER NOT EXISTS {
     ?existing a ontoksd:KnowledgeSkill ;
               ontoksd:hasKnowledgeComponent ?k ;
-              ontoksd:hasSkillComponent ?s .
+              ontoksd:hasSkillComponent ontoksd:applyingSkill .
   }
 
   BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
@@ -35,26 +37,28 @@ WHERE {
 
 INSERT {
   ontoksd:competence_EdukNow_C07 a ontoksd:Competence ;
-    dcterms:title "Test Automata Using Simulators"@en ;
-    dcterms:description "This competency relates to the use of simulation tools (e.g., JFLAP) to verify the correctness and behavior of automata implementations. It emphasizes systematic testing and iterative refinement of state-machine models."@en ;
+   	ontoksd:hasStructureType	ontoksd:Atomic ;
+	ontoksd:hasCompetenceType	ontoksd:ComputingDomain ;
+    dcterms:title "Develop Problem-Solving Solutions Using Turing Machines"@en ;
+    dcterms:description "Design and implement computational solutions using Turing Machines as a formal model of computation. This competency involves analyzing system requirements, translating them into abstract machine representations, and constructing Turing Machines capable of solving well-defined problems. Learners must be able to define states, transitions, and input/output behaviors consistent with the problem specification, ensuring logical correctness and completeness. This competency emphasizes the application of formal reasoning and computational modeling to address complex problems, preparing students to leverage Turing Machines as a foundational tool in theoretical computer science and algorithmic analysis."@en ;
     dcterms:source "EdukNow Competence Project"@en ;
     skos:notation "EdukNow Competence - C07"@en ;
-    ontoksd:hasCompetenceElement ontoksd:Investigative ,
-                                 ontoksd:Collaborative ,
-                                 ontoksd:Responsible ,
-                                 ontoksd:Proactive ,
-                                 ontoksd:Creative ;
+    ontoksd:hasDisposition ontoksd:collaborative ,
+                                 ontoksd:responsible ,
+                                 ontoksd:proactive ,
+                                 ontoksd:creative ,
+                                 ontoksd:inventive ;
     ontoksd:hasKnowledgeSkill ?ks .
 }
 WHERE {
   ?ks a ontoksd:KnowledgeSkill ;
       ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+      ontoksd:hasSkillComponent ontoksd:applyingSkill .
 
-  VALUES (?k ?s) {
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill)
-    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill)
-    (cs2013:ModelingAndSimulation ontoksd:applyingSkill)
+  VALUES ?k {
+    cs2013:Turing_machines
+    cs2013:Requirements_specification
+    cc2020fpk:AnalyticalThinking
   }
 }
 
@@ -66,21 +70,20 @@ INSERT {
   ?ks ontoksd:hasSuggestedVerb ?verb .
 }
 WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill bloom:Experiment)
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill bloom:Relate)
-    (cs2013:FiniteStateMachines ontoksd:applyingSkill bloom:Simulate)
+  VALUES (?k ?verb) {
+    (cs2013:Turing_machines bloom:use)
+    (cs2013:Turing_machines bloom:Implement)
+    (cs2013:Turing_machines bloom:execute)
 
-    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill bloom:Diagnose)
-    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill bloom:Debug)
-    (cc2020fpk:ProblemSolvingAndTroubleShooting ontoksd:applyingSkill bloom:Refine)
+    (cs2013:Requirements_specification bloom:interpret)
+    (cs2013:Requirements_specification bloom:organize)
 
-    (cs2013:ModelingAndSimulation ontoksd:applyingSkill bloom:Model)
-    (cs2013:ModelingAndSimulation ontoksd:applyingSkill bloom:Simulate)
-    (cs2013:ModelingAndSimulation ontoksd:applyingSkill bloom:Verify)
+    (cc2020fpk:AnalyticalThinking bloom:analyze)
+    (cc2020fpk:AnalyticalThinking bloom:justify)
+    (cc2020fpk:AnalyticalThinking bloom:evaluate)
   }
 
   ?ks a ontoksd:KnowledgeSkill ;
       ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+      ontoksd:hasSkillComponent ontoksd:applyingSkill .
 }

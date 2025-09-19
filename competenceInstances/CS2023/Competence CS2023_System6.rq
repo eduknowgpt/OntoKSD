@@ -1,0 +1,64 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+
+############# PARES KS ################
+INSERT {
+  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
+}
+WHERE {
+  VALUES (?k ?s) {
+    (cs2023:OS-Purpose     ontoksd:cs2023ApplySkill)
+    (cs2023:OS-Principles  ontoksd:cs2023ApplySkill)
+    (cs2023:OS-Concurrency ontoksd:cs2023ApplySkill)
+    (cs2023:OS-Scheduling  ontoksd:cs2023ApplySkill)
+    (cs2023:OS-Process     ontoksd:cs2023ApplySkill)
+    (cs2023:OS-Memory      ontoksd:cs2023ApplySkill)
+    (cs2023:OS-Protection  ontoksd:cs2023ApplySkill)
+    (cs2023:AR-Assembly    ontoksd:cs2023ApplySkill)
+    (cs2023:FPL-Scripting  ontoksd:cs2023ApplySkill)
+  }
+  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
+}
+;
+
+############# COMPETÊNCIA ################
+INSERT {
+  ontoksd:competence_CS2023_Systems6 a ontoksd:Competence ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+    dcterms:title "Deploy an application component"@en ;
+    dcterms:description "Identify and mitigate deployment problems, automate setup, and monitor component execution."@en ;
+    dcterms:source "CS2023 Competence Report"@en ;
+    skos:notation "CS2023 Competence - Systems6"@en ;
+    ontoksd:hasDisposition ontoksd:meticulous ,
+                           ontoksd:persistent ,
+                           ontoksd:proactive ;
+    ontoksd:hasKnowledgeSkill ?ks .
+}
+WHERE { ?ks a ontoksd:KnowledgeSkill . }
+
+
+############# VERBOS ################
+
+INSERT {
+  ?ks ontoksd:hasSuggestedVerb ?verb .
+}
+WHERE {
+  VALUES (?k ?s ?verb) {
+    (cs2023:OS-Purpose     ontoksd:cs2023ApplySkill bloom:apply)
+    (cs2023:OS-Principles  ontoksd:cs2023ApplySkill bloom:implement)
+    (cs2023:OS-Concurrency ontoksd:cs2023ApplySkill bloom:configure)
+    (cs2023:OS-Scheduling  ontoksd:cs2023ApplySkill bloom:manage)
+    (cs2023:OS-Process     ontoksd:cs2023ApplySkill bloom:monitor)
+    (cs2023:OS-Memory      ontoksd:cs2023ApplySkill bloom:allocate)
+    (cs2023:OS-Protection  ontoksd:cs2023ApplySkill bloom:ensure)
+    (cs2023:AR-Assembly    ontoksd:cs2023ApplySkill bloom:automate)
+    (cs2023:FPL-Scripting  ontoksd:cs2023ApplySkill bloom:script)
+  }
+  ?ks a ontoksd:KnowledgeSkill .
+}
+

@@ -1,27 +1,48 @@
 Verificar Active Ontology
+Verificar IRI OntoKSD: http://purl.org/ontoksd#
 
-Em OntoKSD\ontoKSDOntology:
-	OntoKSD.ttl é a ontologia sem instâncias (TBox)
-	Importar SKOS (arquivo local)
 
-1. Importar de OntoKSD\ontoKSDOntology\knowledge
+No GraphDB:
+
+Upload de OntoKSD\ontoKSDOntology:
+	"OntoKSD - SKOS - no instances v?.ttl" é a ontologia sem instâncias (TBox)
+		==> SKOS já importado (arquivo local)
+		==> RCD já importado
+
+	Importar RCD no Protegé (se não foi importado)
+		I:\Meu Drive\OntoKSD\rcd\rcd.ttl
+		
+	Importar bloom-taxonomy-punning-no-individuals.ttl no Protegé (se não foi importado)
+
+1. Upload de OntoKSD\ontoKSDOntology\knowledge
 	ontoKSD-KnowledgeType.ttl
 
-2. Importar do OntoKSD\cc2020Vocabulary:
+2. Upload de OntoKSD\cc2020Vocabulary e OntoKSD\CS2023Vocabulary:
 	cc2020-dispositions.ttl
 	cc2020-knowledge.ttl
 	cc2020-foundational-knowledge.ttl
 	ontoksd-knowledgeType-full-mapping.ttl
+	
+	KnowledgeAreas.ttl
+	BoKCS2023.ttl
+	
 
-4. Importar de OntoKSD\bloomTaxonomy
-	bloom-taxonomy-punning-POPULADA.ttl
-		==> verificar se a carga foi feita
+4. Upload de OntoKSD\bloomTaxonomy
+	Em Java, no projeto OntoKSDAPP: 
+	****** AJUSTAR O REPOSITÓRIO *******
+		1. Executar InsertActionVerbTypes
+		2. Executar InsertBloomVerbs
+		3. Executar InsertDBPediaVerbs		
 
-5. Importar o mapeamento OntoKSD-Bloom de OntoKSD\ontoKSDOntology\skill
+
+5. Importar o mapeamento OntoKSD-Bloom de 		OntoKSD\ontoKSDOntology\skill
 	ontoKSD-Bloom-mapping.ttl
 	
+
+
 6. Carragar instâncias do CC2020 no GraphDB
 	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\CC2020\sparql
+	==> InsertCompetence_A, InsertCompetence_B e InsertCompetence_C
 	
 7. Carregar instâncias do IS2020 no GraphDB
 	Dados brutos em: 
@@ -30,10 +51,13 @@ Em OntoKSD\ontoKSDOntology:
 		I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\is2020Competencies.sparql
 	Git: 
 		https://github.com/EdeysonUFBA/EduKnow/tree/main/GraphDB
+	
 	Carga via Java:
 		C:\Projetos\EduKnow\GraphDBSparqlApp
 	
-8. Carregar instâncias do Body of Knowledge 2013 - cs2013Vocabulary
+	Execução do .sparql no GraphDB
+	
+8. Upload instâncias do Body of Knowledge 2013 - cs2013Vocabulary
 	OntoKSD\cs2013Vocabulary\BoK2013Ontology.ttl
 	
 	

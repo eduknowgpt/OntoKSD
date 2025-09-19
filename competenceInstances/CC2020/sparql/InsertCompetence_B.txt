@@ -32,6 +32,8 @@ WHERE {
 # Inserção da competência e relacionamentos
 INSERT {
   ontoksd:competence_B a ontoksd:Competence ;
+  	ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
+	ontoksd:hasStructureType ontoksd:Atomic ;
     dcterms:title "CC2020 Competence B"@en ;
     dcterms:description "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."@en ;
     dcterms:source "CC2020 Curriculum Guidelines"@en ;
