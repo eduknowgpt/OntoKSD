@@ -1,0 +1,23 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?participation ?score ?scheme ?interval ?lower ?upper ?level
+WHERE {
+  ?participation a ontoksd:AssessmentParticipation ;
+                 ontoksd:hasScore ?score ;
+                 ontoksd:occursInAssessmentOccurrence ?occurrence .
+
+  ?occurrence ontoksd:usesProficiencyScheme ?scheme .
+
+  ?scheme ontoksd:definesInterval ?interval .
+
+  ?interval ontoksd:lowerBound ?lower ;
+            ontoksd:upperBound ?upper ;
+            ontoksd:includesLower ?incLower ;
+            ontoksd:includesUpper ?incUpper ;
+            ontoksd:correspondsToLevel ?level .
+
+  FILTER(
+    (?incLower = true && ?score >= ?lower || ?incLower = false && ?score > ?lower) &&
+    (?incUpper = true && ?score <= ?upper || ?incUpper = false && ?score < ?upper)
+  )
+}

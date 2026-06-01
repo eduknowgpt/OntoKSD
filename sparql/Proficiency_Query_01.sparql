@@ -1,0 +1,14 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?learner ?score ?competence ?level
+WHERE {
+  ?participation a ontoksd:AssessmentParticipation ;
+                 ontoksd:hasLearner ?learner ;
+                 ontoksd:hasScore ?score .
+
+  ?ec a ontoksd:EvidencedCompetence ;
+      ontoksd:derivedFromParticipation ?participation ;
+      ontoksd:refersToCompetence ?competence ;
+      ontoksd:hasProficiencyLevel ?level .
+}

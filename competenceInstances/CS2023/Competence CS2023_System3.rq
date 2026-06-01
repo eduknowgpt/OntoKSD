@@ -1,58 +1,169 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:DM-Data              ontoksd:cs2023DevelopSkill)
-    (cs2023:DM-Relational        ontoksd:cs2023DevelopSkill)
-    (cs2023:DM-Processing        ontoksd:cs2023DevelopSkill)
-    (cs2023:SEP-Security         ontoksd:cs2023DevelopSkill)
-    (cs2023:SEP-Professional-Ethics ontoksd:cs2023DevelopSkill)
-    (cs2023:SEP-Privacy          ontoksd:cs2023DevelopSkill)
-    (cs2023:SEC-Foundations      ontoksd:cs2023DevelopSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Systems3 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Secure data from unauthorized access"@en ;
-    dcterms:description "Create database views to ensure data access is appropriately limited."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Systems3"@en ;
-    ontoksd:hasDisposition ontoksd:meticulous ,
-                           ontoksd:proactive ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
+  #################################################################
+  # Competence
+  #################################################################
 
+  cs2023c:Competence_Systems3
+      a ontoksd:Competence ;
+      rdfs:label "Create database views to ensure data access is appropriately limited"@en ;
+      skos:prefLabel "Create database views to ensure data access is appropriately limited"@en ;
+      skos:definition "Create database views to ensure data access is appropriately limited."@en ;
+      rdfs:comment "Competence derived from the CS2023 Systems Competency Area, Task Systems3. The competence is specified through explicit KnowledgeSkill pairs and the desirable professional dispositions associated with the task."@en ;
+      dcterms:identifier "Systems3"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Systems3 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Systems3_DM_Data_1_Develop ,
+          cs2023c:KS_Systems3_DM_Relational_1_Develop ,
+          cs2023c:KS_Systems3_DM_Processing_1_Develop ,
+          cs2023c:KS_Systems3_SEP_Security_1_Develop ,
+          cs2023c:KS_Systems3_SEP_Professional_Ethics_1_Develop ,
+          cs2023c:KS_Systems3_SEP_Privacy_1_Develop ,
+          cs2023c:KS_Systems3_SEC_Foundations_1_Develop ;
+      ontoksd:hasDisposition
+          ontoksd:meticulous ,
+          ontoksd:proactive ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
 
-############# VERBOS ################
+  #################################################################
+  # Specification-level Task
+  #################################################################
 
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:DM-Data              ontoksd:cs2023DevelopSkill bloom:create)
-    (cs2023:DM-Relational        ontoksd:cs2023DevelopSkill bloom:construct)
-    (cs2023:DM-Processing        ontoksd:cs2023DevelopSkill bloom:implement)
-    (cs2023:SEP-Security         ontoksd:cs2023DevelopSkill bloom:apply)
-    (cs2023:SEP-Professional-Ethics ontoksd:cs2023DevelopSkill bloom:consider)
-    (cs2023:SEP-Privacy          ontoksd:cs2023DevelopSkill bloom:ensure)
-    (cs2023:SEC-Foundations      ontoksd:cs2023DevelopSkill bloom:apply)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  cs2023c:Task_Systems3
+      a ontoksd:Task ;
+      rdfs:label "Systems3 task"@en ;
+      skos:prefLabel "Systems3 task"@en ;
+      ontoksd:hasTaskStatement "Secure data from unauthorized access."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Systems3. The task concerns designing and implementing database views so that access to data is restricted according to authorization requirements, privacy expectations, and security constraints."@en ;
+      dcterms:identifier "Task_Systems3"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Systems3_Data ,
+          cs2023c:TaskComponent_Systems3_DatabaseViews ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Systems3_Create ,
+          cs2023c:TaskActivity_Systems3_Restrict ,
+          cs2023c:TaskActivity_Systems3_Secure ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Systems3_UnauthorizedAccess ,
+          cs2023c:TaskConstraint_Systems3_AppropriateLimitation .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Systems3_Data
+      a ontoksd:TaskComponent ;
+      rdfs:label "data"@en ;
+      skos:prefLabel "data"@en ;
+      rdfs:comment "Task component corresponding to the data objects whose access must be protected and appropriately limited."@en .
+
+  cs2023c:TaskComponent_Systems3_DatabaseViews
+      a ontoksd:TaskComponent ;
+      rdfs:label "database views"@en ;
+      skos:prefLabel "database views"@en ;
+      rdfs:comment "Task component corresponding to the database views created as a mechanism for restricting and structuring access to data."@en .
+
+  cs2023c:TaskActivity_Systems3_Create
+      a ontoksd:TaskActivity ;
+      rdfs:label "create"@en ;
+      skos:prefLabel "create"@en ;
+      rdfs:comment "Task activity capturing the creation of database views for controlled data access."@en .
+
+  cs2023c:TaskActivity_Systems3_Restrict
+      a ontoksd:TaskActivity ;
+      rdfs:label "restrict"@en ;
+      skos:prefLabel "restrict"@en ;
+      rdfs:comment "Task activity capturing the limitation of data access according to authorization and access-control requirements."@en .
+
+  cs2023c:TaskActivity_Systems3_Secure
+      a ontoksd:TaskActivity ;
+      rdfs:label "secure"@en ;
+      skos:prefLabel "secure"@en ;
+      rdfs:comment "Task activity capturing the protection of data from unauthorized access through database design choices."@en .
+
+  cs2023c:TaskConstraint_Systems3_UnauthorizedAccess
+      a ontoksd:TaskConstraint ;
+      rdfs:label "from unauthorized access"@en ;
+      skos:prefLabel "from unauthorized access"@en ;
+      rdfs:comment "Task constraint stating that the task must prevent access to data by unauthorized actors."@en .
+
+  cs2023c:TaskConstraint_Systems3_AppropriateLimitation
+      a ontoksd:TaskConstraint ;
+      rdfs:label "to ensure data access is appropriately limited"@en ;
+      skos:prefLabel "to ensure data access is appropriately limited"@en ;
+      rdfs:comment "Task constraint stating that access to data must be limited in a justified and appropriate manner rather than merely blocked."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Systems3_DM_Data_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "DM-Data × Develop"@en ;
+      skos:prefLabel "DM-Data × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates DM-Data knowledge with the CS2023 skill level Develop in the context of protecting and controlling access to data objects."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_DM_Data_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Systems3_DM_Relational_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "DM-Relational × Develop"@en ;
+      skos:prefLabel "DM-Relational × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates DM-Relational knowledge with the CS2023 skill level Develop in the creation of database views and structured access-control mechanisms."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_DM_Relational_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Systems3_DM_Processing_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "DM-Processing × Develop"@en ;
+      skos:prefLabel "DM-Processing × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates DM-Processing knowledge with the CS2023 skill level Develop in the processing and controlled exposure of data through database views."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_DM_Processing_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Systems3_SEP_Security_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Security × Develop"@en ;
+      skos:prefLabel "SEP-Security × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates SEP-Security knowledge with the CS2023 skill level Develop in the design of measures to protect data from unauthorized access."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Security_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Systems3_SEP_Professional_Ethics_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Professional-Ethics × Develop"@en ;
+      skos:prefLabel "SEP-Professional-Ethics × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates SEP-Professional-Ethics knowledge with the CS2023 skill level Develop in the responsible limitation of access to sensitive data."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Professional_Ethics_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Systems3_SEP_Privacy_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Privacy × Develop"@en ;
+      skos:prefLabel "SEP-Privacy × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates SEP-Privacy knowledge with the CS2023 skill level Develop in implementing data-access limitations that preserve privacy."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Privacy_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Systems3_SEC_Foundations_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEC-Foundations × Develop"@en ;
+      skos:prefLabel "SEC-Foundations × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems3. It associates SEC-Foundations knowledge with the CS2023 skill level Develop in the implementation of foundational access-control protections for data."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEC_Foundations_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
 }

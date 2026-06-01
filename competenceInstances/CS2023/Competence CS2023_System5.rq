@@ -1,48 +1,110 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:NC-Applications ontoksd:cs2023EvaluateSkill)
-    (cs2023:NC-Routing      ontoksd:cs2023EvaluateSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Systems5 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Evaluate the performance of a network"@en ;
-    dcterms:description "Evaluate the latency, throughput, congestion, and service levels of a network."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Systems5"@en ;
-    ontoksd:hasDisposition ontoksd:meticulous ,
-                           ontoksd:proactive ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
+  #################################################################
+  # Competence
+  #################################################################
 
+  cs2023c:Competence_Systems5
+      a ontoksd:Competence ;
+      rdfs:label "Evaluate the latency, throughput, congestion, and various service levels of a network"@en ;
+      skos:prefLabel "Evaluate the latency, throughput, congestion, and various service levels of a network"@en ;
+      skos:definition "Evaluate the latency, throughput, congestion, and various service levels of a network."@en ;
+      rdfs:comment "Competence derived from the CS2023 Systems Competency Area, Task Systems5. The competence is specified through explicit KnowledgeSkill pairs and the desirable professional dispositions associated with the task."@en ;
+      dcterms:identifier "Systems5"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Systems5 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Systems5_NC_Applications_1_Evaluate ,
+          cs2023c:KS_Systems5_NC_Routing_1_Evaluate ;
+      ontoksd:hasDisposition
+          ontoksd:meticulous ,
+          ontoksd:proactive ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
 
-############# VERBOS ################
+  #################################################################
+  # Specification-level Task
+  #################################################################
 
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:NC-Applications ontoksd:cs2023EvaluateSkill bloom:evaluate)
-    (cs2023:NC-Routing      ontoksd:cs2023EvaluateSkill bloom:analyze)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  cs2023c:Task_Systems5
+      a ontoksd:Task ;
+      rdfs:label "Systems5 task"@en ;
+      skos:prefLabel "Systems5 task"@en ;
+      ontoksd:hasTaskStatement "Evaluate the performance of a network."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Systems5. The task concerns evaluating network performance in terms of latency, throughput, congestion, and service levels."@en ;
+      dcterms:identifier "Task_Systems5"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Systems5_Network ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Systems5_Evaluate ,
+          cs2023c:TaskActivity_Systems5_Measure ,
+          cs2023c:TaskActivity_Systems5_Analyze ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Systems5_PerformanceDimensions .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Systems5_Network
+      a ontoksd:TaskComponent ;
+      rdfs:label "network"@en ;
+      skos:prefLabel "network"@en ;
+      rdfs:comment "Task component corresponding to the network whose performance characteristics are to be assessed."@en .
+
+  cs2023c:TaskActivity_Systems5_Evaluate
+      a ontoksd:TaskActivity ;
+      rdfs:label "evaluate"@en ;
+      skos:prefLabel "evaluate"@en ;
+      rdfs:comment "Task activity capturing the evaluative judgment of network performance."@en .
+
+  cs2023c:TaskActivity_Systems5_Measure
+      a ontoksd:TaskActivity ;
+      rdfs:label "measure"@en ;
+      skos:prefLabel "measure"@en ;
+      rdfs:comment "Task activity capturing the measurement of latency, throughput, congestion, and service levels."@en .
+
+  cs2023c:TaskActivity_Systems5_Analyze
+      a ontoksd:TaskActivity ;
+      rdfs:label "analyze"@en ;
+      skos:prefLabel "analyze"@en ;
+      rdfs:comment "Task activity capturing the analysis of observed network performance indicators."@en .
+
+  cs2023c:TaskConstraint_Systems5_PerformanceDimensions
+      a ontoksd:TaskConstraint ;
+      rdfs:label "with respect to latency, throughput, congestion, and service levels"@en ;
+      skos:prefLabel "with respect to latency, throughput, congestion, and service levels"@en ;
+      rdfs:comment "Task constraint stating that the performance evaluation must consider latency, throughput, congestion, and various service levels of the network."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Systems5_NC_Applications_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "NC-Applications × Evaluate"@en ;
+      skos:prefLabel "NC-Applications × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems5. It associates NC-Applications knowledge with the CS2023 skill level Evaluate in the assessment of network performance from the perspective of application-level behavior and service demands."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_NC_Applications_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems5_NC_Routing_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "NC-Routing × Evaluate"@en ;
+      skos:prefLabel "NC-Routing × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems5. It associates NC-Routing knowledge with the CS2023 skill level Evaluate in the assessment of network performance in relation to routing behavior, congestion, and service levels."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_NC_Routing_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
 }

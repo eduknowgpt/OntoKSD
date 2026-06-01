@@ -1,0 +1,31 @@
+# This query retrieves explicit learning needs or competence gaps already associated with learner profiles. It follows the materialized LearningNeed records linked to learner profiles through isLearningNeedOf and retrieves the competence, required proficiency level, and current evidenced proficiency level when available. Thus, the query demonstrates that OntoKSD can represent learner-profile-level analytical records when such needs or gaps are explicitly asserted or materialized.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?profile
+  ?profileLabel
+  ?learningNeed
+  ?learningNeedLabel
+  ?competence
+  ?competenceLabel
+  ?currentLevel
+  ?currentLevelLabel
+  ?requiredLevel
+  ?requiredLevelLabel
+WHERE {
+  ?learningNeed a ontoksd:LearningNeed ;
+                ontoksd:isLearningNeedOf ?profile ;
+                ontoksd:refersToCompetence ?competence .
+
+  OPTIONAL { ?learningNeed ontoksd:hasCurrentProficiencyLevel ?currentLevel . }
+  OPTIONAL { ?learningNeed ontoksd:requiresProficiencyLevel ?requiredLevel . }
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?learningNeed rdfs:label ?learningNeedLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?currentLevel rdfs:label ?currentLevelLabel . }
+  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+}
+ORDER BY ?profileLabel ?competenceLabel

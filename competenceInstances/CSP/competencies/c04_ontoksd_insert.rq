@@ -1,0 +1,70 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <http://purl.org/cs2023#>
+PREFIX cs2023k:   <http://purl.org/cs2023/knowledge#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C04 a ontoksd:Competence ;
+      rdfs:label "Define Regular Expressions for Finite Automata"@en ;
+      dcterms:identifier "C04"^^xsd:string ;
+      rdfs:comment "Atomic competence concerned with defining and applying regular expressions that accurately represent the languages recognized by finite automata, including analysis of accepted patterns, construction of equivalent expressions, and validation of representational equivalence through testing or formal reasoning."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C04_FiniteStateMachines_Analyzing ,
+                                ontoksd:KS_C04_RegularExpressions_Applying ,
+                                ontoksd:KS_C04_AnalyticalThinking_Applying ;
+      ontoksd:hasDisposition ontoksd:investigative ,
+                             ontoksd:collaborative ,
+                             ontoksd:responsible ,
+                             ontoksd:proactive ,
+                             ontoksd:creative .
+
+  ontoksd:KS_C04_FiniteStateMachines_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C04 KS Pair — Finite State Machines × Analyzing"@en ;
+      dcterms:identifier "C04-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing finite automata in order to identify accepted patterns, characterize recognized languages, and support translation into equivalent regular expressions."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SF_Foundations_5 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_SF_Foundations_5 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:identify ,
+                                             bloom:analyze ,
+                                             bloom:model .
+
+  ontoksd:KS_C04_RegularExpressions_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C04 KS Pair — Regular Expressions × Applying"@en ;
+      dcterms:identifier "C04-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying knowledge of regular expressions to construct, translate, and express representations equivalent to the languages recognized by finite automata."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_2_a_i ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2_a_i ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:construct ,
+                                             bloom:translate ,
+                                             cs2023:express .
+
+  ontoksd:KS_C04_AnalyticalThinking_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C04 KS Pair — Analytical and Critical Thinking × Applying"@en ;
+      dcterms:identifier "C04-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying analytical and critical thinking to reason about equivalence, validate correctness, and justify representations when translating between finite automata and regular expressions."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:validate ,
+                                             bloom:justify ,
+                                             bloom:prove .
+
+  cs2023k:Knowledge_SF_Foundations_5
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  cs2023k:Knowledge_AL_Models_2_a_i
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+}

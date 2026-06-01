@@ -1,0 +1,38 @@
+# This query classifies competence-related records according to whether they are abstract competence specifications or evidenced competence records associated with learner-specific demonstrations. It returns Competence individuals as abstract specifications and EvidencedCompetence individuals as contextualized records linked to a learner profile, assessment participation, and referenced competence. Thus, the query demonstrates that OntoKSD can distinguish competence specifications from evidenced manifestations grounded in learner-specific assessment contexts.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?record
+  ?recordLabel
+  ?recordType
+  ?referencedCompetence
+  ?referencedCompetenceLabel
+  ?profile
+  ?participation
+WHERE {
+  {
+    ?record a ontoksd:Competence .
+    BIND("Abstract competence specification" AS ?recordType)
+  }
+  UNION
+  {
+    ?record a ontoksd:EvidencedCompetence ;
+            ontoksd:refersToCompetence ?referencedCompetence ;
+            ontoksd:isEvidencedCompetenceOf ?profile ;
+            ontoksd:derivedFromParticipation ?participation .
+
+    BIND("Evidenced learner-specific competence" AS ?recordType)
+
+    OPTIONAL { ?referencedCompetence rdfs:label ?referencedCompetenceRdfsLabel . }
+    OPTIONAL { ?referencedCompetence skos:prefLabel ?referencedCompetenceSkosLabel . }
+    BIND(COALESCE(?referencedCompetenceRdfsLabel, ?referencedCompetenceSkosLabel, STR(?referencedCompetence)) AS ?referencedCompetenceLabel)
+  }
+
+  OPTIONAL { ?record rdfs:label ?recordRdfsLabel . }
+  OPTIONAL { ?record skos:prefLabel ?recordSkosLabel . }
+  BIND(COALESCE(?recordRdfsLabel, ?recordSkosLabel, STR(?record)) AS ?recordLabel)
+}
+ORDER BY ?recordType ?recordLabel

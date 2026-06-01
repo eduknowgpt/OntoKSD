@@ -1,0 +1,897 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 IS Project Management competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.6.1 Competency Area – IS Project Management."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020ISProjectManagementKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 IS Project Management Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 IS Project Management Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IS Project Management competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementTerms
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project management terms"@en ;
+      skos:prefLabel "Project management terms"@en ;
+      skos:definition "Knowledge of basic project management terms."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectLifeCycle
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project life cycle"@en ;
+      skos:prefLabel "Project life cycle"@en ;
+      skos:definition "Knowledge of the project life cycle."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:OrganizationalStructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Organizational Structure"@en ;
+      skos:prefLabel "Organizational Structure"@en ;
+      skos:definition "Knowledge of organizational structure in project environments."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementProcesses
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project management processes"@en ;
+      skos:prefLabel "Project management processes"@en ;
+      skos:definition "Knowledge of project management processes."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementFramework
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project management framework"@en ;
+      skos:prefLabel "Project management framework"@en ;
+      skos:definition "Knowledge of project management frameworks."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectCharter
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project charter"@en ;
+      skos:prefLabel "Project charter"@en ;
+      skos:definition "Knowledge of project charters."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project management plan"@en ;
+      skos:prefLabel "Project management plan"@en ;
+      skos:definition "Knowledge of project management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StatementOfWork
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Statement of work (SOW)"@en ;
+      skos:prefLabel "Statement of work (SOW)"@en ;
+      skos:definition "Knowledge of statements of work."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessOfMakingChanges
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Process of making changes"@en ;
+      skos:prefLabel "Process of making changes"@en ;
+      skos:definition "Knowledge of the process of making changes in a project."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ScopeManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Scope management plan"@en ;
+      skos:prefLabel "Scope management plan"@en ;
+      skos:definition "Knowledge of scope management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RequirementsManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Requirements management plan"@en ;
+      skos:prefLabel "Requirements management plan"@en ;
+      skos:definition "Knowledge of requirements management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WorkBreakdownStructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Work breakdown structure"@en ;
+      skos:prefLabel "Work breakdown structure"@en ;
+      skos:definition "Knowledge of work breakdown structures."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ScheduleManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Schedule management plan"@en ;
+      skos:prefLabel "Schedule management plan"@en ;
+      skos:definition "Knowledge of schedule management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SequenceActivities
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Sequence activities"@en ;
+      skos:prefLabel "Sequence activities"@en ;
+      skos:definition "Knowledge of sequencing project activities."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:NetworkDiagrams
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Network diagrams"@en ;
+      skos:prefLabel "Network diagrams"@en ;
+      skos:definition "Knowledge of project network diagrams."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CriticalPath
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Critical path"@en ;
+      skos:prefLabel "Critical path"@en ;
+      skos:definition "Knowledge of the critical path method."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ScheduleCompression
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Schedule compression"@en ;
+      skos:prefLabel "Schedule compression"@en ;
+      skos:definition "Knowledge of schedule compression techniques."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CriticalChainMethod
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Critical chain method"@en ;
+      skos:prefLabel "Critical chain method"@en ;
+      skos:definition "Knowledge of the critical chain method."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DifferentModelingTechniques
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Different modeling techniques (i.e. Monte Carlo, etc.)"@en ;
+      skos:prefLabel "Different modeling techniques (i.e. Monte Carlo, etc.)"@en ;
+      skos:definition "Knowledge of different modeling techniques such as Monte Carlo simulation."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DifferentEstimationTechniques
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Different types of estimation techniques (i.e. three point, analogous, bottom-up, etc.)"@en ;
+      skos:prefLabel "Different types of estimation techniques (i.e. three point, analogous, bottom-up, etc.)"@en ;
+      skos:definition "Knowledge of different estimation techniques such as three-point, analogous, and bottom-up estimation."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:EarnedValueManagement
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Earned value management"@en ;
+      skos:prefLabel "Earned value management"@en ;
+      skos:definition "Knowledge of earned value management."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PlanCostManagement
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Plan cost management"@en ;
+      skos:prefLabel "Plan cost management"@en ;
+      skos:definition "Knowledge of cost management planning."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:QualityTools
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Quality tools"@en ;
+      skos:prefLabel "Quality tools"@en ;
+      skos:definition "Knowledge of quality tools used in project management."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ContinuousImprovement
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Continuous improvement"@en ;
+      skos:prefLabel "Continuous improvement"@en ;
+      skos:definition "Knowledge of continuous improvement in project quality management."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:QualityManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Quality management plan"@en ;
+      skos:prefLabel "Quality management plan"@en ;
+      skos:definition "Knowledge of quality management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:QualityAssurance
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Quality assurance"@en ;
+      skos:prefLabel "Quality assurance"@en ;
+      skos:definition "Knowledge of quality assurance."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ControllingQuality
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Controlling quality"@en ;
+      skos:prefLabel "Controlling quality"@en ;
+      skos:definition "Knowledge of controlling quality in project management."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:QualityManagementTerms
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Quality management terms"@en ;
+      skos:prefLabel "Quality management terms"@en ;
+      skos:definition "Knowledge of quality management terminology."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CauseAndEffectDiagram
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Cause and effect diagram"@en ;
+      skos:prefLabel "Cause and effect diagram"@en ;
+      skos:definition "Knowledge of cause and effect diagrams."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:HumanResourcePlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Human resource plan"@en ;
+      skos:prefLabel "Human resource plan"@en ;
+      skos:definition "Knowledge of human resource planning."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RolesAndResponsibilitiesOfTeamMembers
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Roles and responsibilities of team members"@en ;
+      skos:prefLabel "Roles and responsibilities of team members"@en ;
+      skos:definition "Knowledge of the roles and responsibilities of team members."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AcquiringTheTeam
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Acquiring the team"@en ;
+      skos:prefLabel "Acquiring the team"@en ;
+      skos:definition "Knowledge of acquiring the project team."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CommunicationsPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Communications plan"@en ;
+      skos:prefLabel "Communications plan"@en ;
+      skos:definition "Knowledge of communications planning."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DifferentTypesOfCommunication
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Different types of communication"@en ;
+      skos:prefLabel "Different types of communication"@en ;
+      skos:definition "Knowledge of different types of communication in projects."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PerformanceReporting
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Performance reporting"@en ;
+      skos:prefLabel "Performance reporting"@en ;
+      skos:definition "Knowledge of performance reporting."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CommunicationModels
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Communication models"@en ;
+      skos:prefLabel "Communication models"@en ;
+      skos:definition "Knowledge of communication models."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TypesOfCommunication
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Types of communication"@en ;
+      skos:prefLabel "Types of communication"@en ;
+      skos:definition "Knowledge of communication types relevant to project management."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RiskManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Risk management plan"@en ;
+      skos:prefLabel "Risk management plan"@en ;
+      skos:definition "Knowledge of risk management planning."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TypesOfRisks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Types of risks"@en ;
+      skos:prefLabel "Types of risks"@en ;
+      skos:definition "Knowledge of types of project risks."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RiskResponseStrategies
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Risk response strategies"@en ;
+      skos:prefLabel "Risk response strategies"@en ;
+      skos:definition "Knowledge of risk response strategies."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SWOTAnalysis
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "SWOT analysis"@en ;
+      skos:prefLabel "SWOT analysis"@en ;
+      skos:definition "Knowledge of SWOT analysis."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DifferentTypesOfContracts
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Different types of contracts"@en ;
+      skos:prefLabel "Different types of contracts"@en ;
+      skos:definition "Knowledge of different types of contracts in procurement."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcurementManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Procurement management plan"@en ;
+      skos:prefLabel "Procurement management plan"@en ;
+      skos:definition "Knowledge of procurement management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ContractChangeControlSystems
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Contract change control systems"@en ;
+      skos:prefLabel "Contract change control systems"@en ;
+      skos:definition "Knowledge of contract change control systems."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcurementPerformanceReview
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Procurement performance review"@en ;
+      skos:prefLabel "Procurement performance review"@en ;
+      skos:definition "Knowledge of procurement performance review."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcurementNegotiation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Procurement negotiation"@en ;
+      skos:prefLabel "Procurement negotiation"@en ;
+      skos:definition "Knowledge of procurement negotiation."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcurementDocuments
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Procurement documents"@en ;
+      skos:prefLabel "Procurement documents"@en ;
+      skos:definition "Knowledge of procurement documents."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StakeholderManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Stakeholder management plan"@en ;
+      skos:prefLabel "Stakeholder management plan"@en ;
+      skos:definition "Knowledge of stakeholder management plans."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StakeholderAnalysis
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Stakeholder analysis"@en ;
+      skos:prefLabel "Stakeholder analysis"@en ;
+      skos:definition "Knowledge of stakeholder analysis."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StakeholderEngagementAndAssessmentMatrix
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Stakeholder engagement and assessment matrix"@en ;
+      skos:prefLabel "Stakeholder engagement and assessment matrix"@en ;
+      skos:definition "Knowledge of stakeholder engagement and assessment matrices."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementTools
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project management tools (i.e., MS Project, Hive, Wrike, etc.)"@en ;
+      skos:prefLabel "Project management tools (i.e., MS Project, Hive, Wrike, etc.)"@en ;
+      skos:definition "Knowledge of project management tools such as MS Project, Hive, and Wrike."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AgileDevelopmentPrinciples
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Agile development principles"@en ;
+      skos:prefLabel "Agile development principles"@en ;
+      skos:definition "Knowledge of agile development principles."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SprintExecution
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Sprint execution"@en ;
+      skos:prefLabel "Sprint execution"@en ;
+      skos:definition "Knowledge of sprint execution."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DailyStandup
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Daily standup"@en ;
+      skos:prefLabel "Daily standup"@en ;
+      skos:definition "Knowledge of daily standup meetings."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SprintPlanning
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Sprint planning"@en ;
+      skos:prefLabel "Sprint planning"@en ;
+      skos:definition "Knowledge of sprint planning."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProductBacklogGrooming
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Product backlog grooming"@en ;
+      skos:prefLabel "Product backlog grooming"@en ;
+      skos:definition "Knowledge of product backlog grooming."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WritingUserStories
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Writing user stories"@en ;
+      skos:prefLabel "Writing user stories"@en ;
+      skos:definition "Knowledge of writing user stories."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:UserStoryEstimation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "User story estimation"@en ;
+      skos:prefLabel "User story estimation"@en ;
+      skos:definition "Knowledge of user story estimation."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RoleOfProductOwner
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Role and responsibilities of the product owner"@en ;
+      skos:prefLabel "Role and responsibilities of the product owner"@en ;
+      skos:definition "Knowledge of the role and responsibilities of the product owner."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RoleOfScrumMaster
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Role and responsibilities of the scrum Master"@en ;
+      skos:prefLabel "Role and responsibilities of the scrum Master"@en ;
+      skos:definition "Knowledge of the role and responsibilities of the Scrum Master."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RoleOfDevelopers
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Role and responsibilities of developers"@en ;
+      skos:prefLabel "Role and responsibilities of developers"@en ;
+      skos:definition "Knowledge of the role and responsibilities of developers in Scrum."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SprintReview
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Sprint review"@en ;
+      skos:prefLabel "Sprint review"@en ;
+      skos:definition "Knowledge of sprint reviews."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SprintRetrospective
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Sprint retrospective"@en ;
+      skos:prefLabel "Sprint retrospective"@en ;
+      skos:definition "Knowledge of sprint retrospectives."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProductReleasePlanning
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Product release planning"@en ;
+      skos:prefLabel "Product release planning"@en ;
+      skos:definition "Knowledge of product release planning."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SoftwareDevelopmentProjectCharacteristics
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Software development project characteristics"@en ;
+      skos:prefLabel "Software development project characteristics"@en ;
+      skos:definition "Knowledge of software development project characteristics."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementMethodologies
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project Management Methodologies"@en ;
+      skos:prefLabel "Project Management Methodologies"@en ;
+      skos:definition "Knowledge of project management methodologies."@en ;
+      skos:inScheme is2020k:IS2020ISProjectManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020c:Competence_ISPM_1
+      a ontoksd:Competence ;
+      rdfs:label "Explain basic project management concepts and terms"@en ;
+      skos:prefLabel "IS Project Management Competency 1"@en ;
+      skos:definition "Explain basic project management concepts and terms."@en ;
+      dcterms:identifier "ISPM-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:ProjectManagementTerms , is2020k:ProjectLifeCycle , is2020k:OrganizationalStructure , is2020k:ProjectManagementProcesses , is2020k:ProjectManagementFramework ;
+      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_1_01 , is2020c:KS_ISPM_1_02 , is2020c:KS_ISPM_1_03 , is2020c:KS_ISPM_1_04 , is2020c:KS_ISPM_1_05 .
+
+  is2020c:Competence_ISPM_2
+      a ontoksd:Competence ;
+      rdfs:label "Use integration management tools, techniques, and processes"@en ;
+      skos:prefLabel "IS Project Management Competency 2"@en ;
+      skos:definition "Use integration management tools, techniques, and processes."@en ;
+      dcterms:identifier "ISPM-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:ProjectCharter , is2020k:ProjectManagementPlan , is2020k:StatementOfWork , is2020k:ProcessOfMakingChanges ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:inventive , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_2_01 , is2020c:KS_ISPM_2_02 , is2020c:KS_ISPM_2_03 , is2020c:KS_ISPM_2_04 .
+
+  is2020c:Competence_ISPM_3
+      a ontoksd:Competence ;
+      rdfs:label "Use scope management tools, techniques, and processes"@en ;
+      skos:prefLabel "IS Project Management Competency 3"@en ;
+      skos:definition "Use scope management tools, techniques, and processes."@en ;
+      dcterms:identifier "ISPM-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:ScopeManagementPlan , is2020k:RequirementsManagementPlan , is2020k:WorkBreakdownStructure ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:purposeDriven , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_3_01 , is2020c:KS_ISPM_3_02 , is2020c:KS_ISPM_3_03 .
+
+  is2020c:Competence_ISPM_4
+      a ontoksd:Competence ;
+      rdfs:label "Develop estimates and time tracking using appropriate tools, techniques, and processes"@en ;
+      skos:prefLabel "IS Project Management Competency 4"@en ;
+      skos:definition "Develop estimates and time tracking using appropriate tools, techniques, and processes."@en ;
+      dcterms:identifier "ISPM-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:ScheduleManagementPlan , is2020k:SequenceActivities , is2020k:NetworkDiagrams , is2020k:CriticalPath , is2020k:ScheduleCompression , is2020k:CriticalChainMethod , is2020k:DifferentModelingTechniques ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:inventive , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_4_01 , is2020c:KS_ISPM_4_02 , is2020c:KS_ISPM_4_03 , is2020c:KS_ISPM_4_04 , is2020c:KS_ISPM_4_05 , is2020c:KS_ISPM_4_06 , is2020c:KS_ISPM_4_07 .
+
+  is2020c:Competence_ISPM_5
+      a ontoksd:Competence ;
+      rdfs:label "Develop estimates and cost tracking using appropriate tools, techniques, and processes"@en ;
+      skos:prefLabel "IS Project Management Competency 5"@en ;
+      skos:definition "Develop estimates and cost tracking using appropriate tools, techniques, and processes."@en ;
+      dcterms:identifier "ISPM-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:DifferentEstimationTechniques , is2020k:EarnedValueManagement , is2020k:PlanCostManagement ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:inventive , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_5_01 , is2020c:KS_ISPM_5_02 , is2020c:KS_ISPM_5_03 .
+
+  is2020c:Competence_ISPM_6
+      a ontoksd:Competence ;
+      rdfs:label "Utilize the change control process to maintain and control quality"@en ;
+      skos:prefLabel "IS Project Management Competency 6"@en ;
+      skos:definition "Utilize the change control process to maintain and control quality."@en ;
+      dcterms:identifier "ISPM-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:QualityTools , is2020k:ContinuousImprovement , is2020k:QualityManagementPlan , is2020k:QualityAssurance , is2020k:ControllingQuality , is2020k:QualityManagementTerms , is2020k:CauseAndEffectDiagram ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:proactive , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_6_01 , is2020c:KS_ISPM_6_02 , is2020c:KS_ISPM_6_03 , is2020c:KS_ISPM_6_04 , is2020c:KS_ISPM_6_05 , is2020c:KS_ISPM_6_06 , is2020c:KS_ISPM_6_07 .
+
+  is2020c:Competence_ISPM_7
+      a ontoksd:Competence ;
+      rdfs:label "Implement human resource management tools, techniques, and processes"@en ;
+      skos:prefLabel "IS Project Management Competency 7"@en ;
+      skos:definition "Implement human resource management tools, techniques, and processes."@en ;
+      dcterms:identifier "ISPM-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:HumanResourcePlan , is2020k:RolesAndResponsibilitiesOfTeamMembers , is2020k:AcquiringTheTeam ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:inventive , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_7_01 , is2020c:KS_ISPM_7_02 , is2020c:KS_ISPM_7_03 .
+
+  is2020c:Competence_ISPM_8
+      a ontoksd:Competence ;
+      rdfs:label "Define and implement a communication management plan"@en ;
+      skos:prefLabel "IS Project Management Competency 8"@en ;
+      skos:definition "Define and implement a communication management plan."@en ;
+      dcterms:identifier "ISPM-8"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:CommunicationsPlan , is2020k:DifferentTypesOfCommunication , is2020k:PerformanceReporting , is2020k:CommunicationModels , is2020k:TypesOfCommunication ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_8_01 , is2020c:KS_ISPM_8_02 , is2020c:KS_ISPM_8_03 , is2020c:KS_ISPM_8_04 , is2020c:KS_ISPM_8_05 .
+
+  is2020c:Competence_ISPM_9
+      a ontoksd:Competence ;
+      rdfs:label "Predict and manage project risk through the use of tools, techniques, and processes"@en ;
+      skos:prefLabel "IS Project Management Competency 9"@en ;
+      skos:definition "Predict and manage project risk through the use of tools, techniques, and processes."@en ;
+      dcterms:identifier "ISPM-9"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:RiskManagementPlan , is2020k:TypesOfRisks , is2020k:RiskResponseStrategies , is2020k:SWOTAnalysis ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:purposeDriven , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_9_01 , is2020c:KS_ISPM_9_02 , is2020c:KS_ISPM_9_03 , is2020c:KS_ISPM_9_04 .
+
+  is2020c:Competence_ISPM_10
+      a ontoksd:Competence ;
+      rdfs:label "Define and explain procurement management"@en ;
+      skos:prefLabel "IS Project Management Competency 10"@en ;
+      skos:definition "Define and explain procurement management."@en ;
+      dcterms:identifier "ISPM-10"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:DifferentTypesOfContracts , is2020k:ProcurementManagementPlan , is2020k:ContractChangeControlSystems , is2020k:ProcurementPerformanceReview , is2020k:ProcurementNegotiation , is2020k:ProcurementDocuments ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:purposeDriven , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_10_01 , is2020c:KS_ISPM_10_02 , is2020c:KS_ISPM_10_03 , is2020c:KS_ISPM_10_04 , is2020c:KS_ISPM_10_05 , is2020c:KS_ISPM_10_06 .
+
+  is2020c:Competence_ISPM_11
+      a ontoksd:Competence ;
+      rdfs:label "Identify and manage stakeholders within the phases of a project"@en ;
+      skos:prefLabel "IS Project Management Competency 11"@en ;
+      skos:definition "Identify and manage stakeholders within the phases of a project."@en ;
+      dcterms:identifier "ISPM-11"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:StakeholderManagementPlan , is2020k:StakeholderAnalysis , is2020k:StakeholderEngagementAndAssessmentMatrix ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:proactive , ontoksd:collaborative ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_11_01 , is2020c:KS_ISPM_11_02 , is2020c:KS_ISPM_11_03 .
+
+  is2020c:Competence_ISPM_12
+      a ontoksd:Competence ;
+      rdfs:label "Utilize tools, techniques, and processes to manage project performance"@en ;
+      skos:prefLabel "IS Project Management Competency 12"@en ;
+      skos:definition "Utilize tools, techniques, and processes to manage project performance."@en ;
+      dcterms:identifier "ISPM-12"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:ProjectManagementTools ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:purposeDriven , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_12_01 .
+
+  is2020c:Competence_ISPM_13
+      a ontoksd:Competence ;
+      rdfs:label "Apply agile project management principles and methods in practice"@en ;
+      skos:prefLabel "IS Project Management Competency 13"@en ;
+      skos:definition "Apply agile project management principles and methods in practice."@en ;
+      dcterms:identifier "ISPM-13"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:AgileDevelopmentPrinciples ;
+      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_13_01 .
+
+  is2020c:Competence_ISPM_14
+      a ontoksd:Competence ;
+      rdfs:label "Apply the Scrum development process"@en ;
+      skos:prefLabel "IS Project Management Competency 14"@en ;
+      skos:definition "Apply the Scrum development process."@en ;
+      dcterms:identifier "ISPM-14"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:SprintExecution ,
+          is2020k:DailyStandup ,
+          is2020k:SprintPlanning ,
+          is2020k:ProductBacklogGrooming ,
+          is2020k:WritingUserStories ,
+          is2020k:UserStoryEstimation ,
+          is2020k:RoleOfProductOwner ,
+          is2020k:RoleOfScrumMaster ,
+          is2020k:RoleOfDevelopers ,
+          is2020k:SprintReview ,
+          is2020k:SprintRetrospective ,
+          is2020k:ProductReleasePlanning ;
+      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISPM_14_01 ,
+          is2020c:KS_ISPM_14_02 ,
+          is2020c:KS_ISPM_14_03 ,
+          is2020c:KS_ISPM_14_04 ,
+          is2020c:KS_ISPM_14_05 ,
+          is2020c:KS_ISPM_14_06 ,
+          is2020c:KS_ISPM_14_07 ,
+          is2020c:KS_ISPM_14_08 ,
+          is2020c:KS_ISPM_14_09 ,
+          is2020c:KS_ISPM_14_10 ,
+          is2020c:KS_ISPM_14_11 ,
+          is2020c:KS_ISPM_14_12 .
+
+  is2020c:Competence_ISPM_15
+      a ontoksd:Competence ;
+      rdfs:label "Select an appropriate project management methodology based on project characteristics"@en ;
+      skos:prefLabel "IS Project Management Competency 15"@en ;
+      skos:definition "Select an appropriate project management methodology based on project characteristics."@en ;
+      dcterms:identifier "ISPM-15"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-project-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:SoftwareDevelopmentProjectCharacteristics , is2020k:ProjectManagementMethodologies ;
+      ontoksd:hasDisposition ontoksd:proactive , ontoksd:inventive , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISPM_15_01 , is2020c:KS_ISPM_15_02 .
+
+  is2020c:KS_ISPM_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Project management terms × Understanding"@en ; skos:prefLabel "Project management terms × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectManagementTerms ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_1 .
+  is2020c:KS_ISPM_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Project life cycle × Understanding"@en ; skos:prefLabel "Project life cycle × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectLifeCycle ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_1 .
+  is2020c:KS_ISPM_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Organizational structure × Understanding"@en ; skos:prefLabel "Organizational structure × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:OrganizationalStructure ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_1 .
+  is2020c:KS_ISPM_1_04 a ontoksd:KnowledgeSkill ; rdfs:label "Project management processes × Understanding"@en ; skos:prefLabel "Project management processes × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectManagementProcesses ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_1 .
+  is2020c:KS_ISPM_1_05 a ontoksd:KnowledgeSkill ; rdfs:label "Project management framework × Understanding"@en ; skos:prefLabel "Project management framework × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectManagementFramework ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_1 .
+
+  is2020c:KS_ISPM_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Project charter × Applying"@en ; skos:prefLabel "Project charter × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectCharter ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_2 .
+  is2020c:KS_ISPM_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Project management plan × Applying"@en ; skos:prefLabel "Project management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_2 .
+  is2020c:KS_ISPM_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Statement of work × Applying"@en ; skos:prefLabel "Statement of work × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:StatementOfWork ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_2 .
+  is2020c:KS_ISPM_2_04 a ontoksd:KnowledgeSkill ; rdfs:label "Process of making changes × Applying"@en ; skos:prefLabel "Process of making changes × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessOfMakingChanges ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_2 .
+
+  is2020c:KS_ISPM_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Scope management plan × Applying"@en ; skos:prefLabel "Scope management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ScopeManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_3 .
+  is2020c:KS_ISPM_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Requirements management plan × Applying"@en ; skos:prefLabel "Requirements management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:RequirementsManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_3 .
+  is2020c:KS_ISPM_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Work breakdown structure × Applying"@en ; skos:prefLabel "Work breakdown structure × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:WorkBreakdownStructure ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_3 .
+
+  is2020c:KS_ISPM_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Schedule management plan × Applying"@en ; skos:prefLabel "Schedule management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ScheduleManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+  is2020c:KS_ISPM_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Sequence activities × Applying"@en ; skos:prefLabel "Sequence activities × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SequenceActivities ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+  is2020c:KS_ISPM_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Network diagrams × Applying"@en ; skos:prefLabel "Network diagrams × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:NetworkDiagrams ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+  is2020c:KS_ISPM_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Critical path × Applying"@en ; skos:prefLabel "Critical path × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CriticalPath ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+  is2020c:KS_ISPM_4_05 a ontoksd:KnowledgeSkill ; rdfs:label "Schedule compression × Applying"@en ; skos:prefLabel "Schedule compression × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ScheduleCompression ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+  is2020c:KS_ISPM_4_06 a ontoksd:KnowledgeSkill ; rdfs:label "Critical chain method × Applying"@en ; skos:prefLabel "Critical chain method × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CriticalChainMethod ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+  is2020c:KS_ISPM_4_07 a ontoksd:KnowledgeSkill ; rdfs:label "Different modeling techniques × Applying"@en ; skos:prefLabel "Different modeling techniques × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentModelingTechniques ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_4 .
+
+  is2020c:KS_ISPM_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Different estimation techniques × Applying"@en ; skos:prefLabel "Different estimation techniques × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentEstimationTechniques ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_5 .
+  is2020c:KS_ISPM_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Earned value management × Applying"@en ; skos:prefLabel "Earned value management × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:EarnedValueManagement ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_5 .
+  is2020c:KS_ISPM_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Plan cost management × Applying"@en ; skos:prefLabel "Plan cost management × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PlanCostManagement ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_5 .
+
+  is2020c:KS_ISPM_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Quality tools × Understanding"@en ; skos:prefLabel "Quality tools × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:QualityTools ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+  is2020c:KS_ISPM_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Continuous improvement × Understanding"@en ; skos:prefLabel "Continuous improvement × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ContinuousImprovement ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+  is2020c:KS_ISPM_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Quality management plan × Applying"@en ; skos:prefLabel "Quality management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:QualityManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+  is2020c:KS_ISPM_6_04 a ontoksd:KnowledgeSkill ; rdfs:label "Quality assurance × Understanding"@en ; skos:prefLabel "Quality assurance × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:QualityAssurance ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+  is2020c:KS_ISPM_6_05 a ontoksd:KnowledgeSkill ; rdfs:label "Controlling quality × Understanding"@en ; skos:prefLabel "Controlling quality × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ControllingQuality ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+  is2020c:KS_ISPM_6_06 a ontoksd:KnowledgeSkill ; rdfs:label "Quality management terms × Understanding"@en ; skos:prefLabel "Quality management terms × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:QualityManagementTerms ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+  is2020c:KS_ISPM_6_07 a ontoksd:KnowledgeSkill ; rdfs:label "Cause and effect diagram × Applying"@en ; skos:prefLabel "Cause and effect diagram × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CauseAndEffectDiagram ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_6 .
+
+  is2020c:KS_ISPM_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Human resource plan × Understanding"@en ; skos:prefLabel "Human resource plan × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:HumanResourcePlan ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_7 .
+  is2020c:KS_ISPM_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Roles and responsibilities of team members × Understanding"@en ; skos:prefLabel "Roles and responsibilities of team members × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RolesAndResponsibilitiesOfTeamMembers ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_7 .
+  is2020c:KS_ISPM_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Acquiring the team × Understanding"@en ; skos:prefLabel "Acquiring the team × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AcquiringTheTeam ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_7 .
+
+  is2020c:KS_ISPM_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Communications plan × Applying"@en ; skos:prefLabel "Communications plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CommunicationsPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_8 .
+  is2020c:KS_ISPM_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "Different types of communication × Understanding"@en ; skos:prefLabel "Different types of communication × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentTypesOfCommunication ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_8 .
+  is2020c:KS_ISPM_8_03 a ontoksd:KnowledgeSkill ; rdfs:label "Performance reporting × Understanding"@en ; skos:prefLabel "Performance reporting × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PerformanceReporting ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_8 .
+  is2020c:KS_ISPM_8_04 a ontoksd:KnowledgeSkill ; rdfs:label "Communication models × Understanding"@en ; skos:prefLabel "Communication models × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CommunicationModels ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_8 .
+  is2020c:KS_ISPM_8_05 a ontoksd:KnowledgeSkill ; rdfs:label "Types of communication × Understanding"@en ; skos:prefLabel "Types of communication × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TypesOfCommunication ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_8 .
+
+  is2020c:KS_ISPM_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Risk management plan × Applying"@en ; skos:prefLabel "Risk management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:RiskManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_9 .
+  is2020c:KS_ISPM_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Types of risks × Understanding"@en ; skos:prefLabel "Types of risks × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TypesOfRisks ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_9 .
+  is2020c:KS_ISPM_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "Risk response strategies × Understanding"@en ; skos:prefLabel "Risk response strategies × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RiskResponseStrategies ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_9 .
+  is2020c:KS_ISPM_9_04 a ontoksd:KnowledgeSkill ; rdfs:label "SWOT analysis × Understanding"@en ; skos:prefLabel "SWOT analysis × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SWOTAnalysis ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_9 .
+
+  is2020c:KS_ISPM_10_01 a ontoksd:KnowledgeSkill ; rdfs:label "Different types of contracts × Understanding"@en ; skos:prefLabel "Different types of contracts × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentTypesOfContracts ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_10 .
+  is2020c:KS_ISPM_10_02 a ontoksd:KnowledgeSkill ; rdfs:label "Procurement management plan × Applying"@en ; skos:prefLabel "Procurement management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcurementManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_10 .
+  is2020c:KS_ISPM_10_03 a ontoksd:KnowledgeSkill ; rdfs:label "Contract change control systems × Understanding"@en ; skos:prefLabel "Contract change control systems × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ContractChangeControlSystems ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_10 .
+  is2020c:KS_ISPM_10_04 a ontoksd:KnowledgeSkill ; rdfs:label "Procurement performance review × Understanding"@en ; skos:prefLabel "Procurement performance review × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcurementPerformanceReview ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_10 .
+  is2020c:KS_ISPM_10_05 a ontoksd:KnowledgeSkill ; rdfs:label "Procurement negotiation × Understanding"@en ; skos:prefLabel "Procurement negotiation × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcurementNegotiation ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_10 .
+  is2020c:KS_ISPM_10_06 a ontoksd:KnowledgeSkill ; rdfs:label "Procurement documents × Understanding"@en ; skos:prefLabel "Procurement documents × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcurementDocuments ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_10 .
+
+  is2020c:KS_ISPM_11_01 a ontoksd:KnowledgeSkill ; rdfs:label "Stakeholder management plan × Applying"@en ; skos:prefLabel "Stakeholder management plan × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:StakeholderManagementPlan ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_11 .
+  is2020c:KS_ISPM_11_02 a ontoksd:KnowledgeSkill ; rdfs:label "Stakeholder analysis × Applying"@en ; skos:prefLabel "Stakeholder analysis × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:StakeholderAnalysis ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_11 .
+  is2020c:KS_ISPM_11_03 a ontoksd:KnowledgeSkill ; rdfs:label "Stakeholder engagement and assessment matrix × Understanding"@en ; skos:prefLabel "Stakeholder engagement and assessment matrix × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:StakeholderEngagementAndAssessmentMatrix ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_11 .
+
+  is2020c:KS_ISPM_12_01 a ontoksd:KnowledgeSkill ; rdfs:label "Project management tools × Applying"@en ; skos:prefLabel "Project management tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectManagementTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_12 .
+
+  is2020c:KS_ISPM_13_01 a ontoksd:KnowledgeSkill ; rdfs:label "Agile development principles × Understanding"@en ; skos:prefLabel "Agile development principles × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AgileDevelopmentPrinciples ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_13 .
+
+  is2020c:KS_ISPM_14_01 a ontoksd:KnowledgeSkill ; rdfs:label "Sprint execution × Understanding"@en ; skos:prefLabel "Sprint execution × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SprintExecution ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_02 a ontoksd:KnowledgeSkill ; rdfs:label "Daily standup × Understanding"@en ; skos:prefLabel "Daily standup × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DailyStandup ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_03 a ontoksd:KnowledgeSkill ; rdfs:label "Sprint planning × Understanding"@en ; skos:prefLabel "Sprint planning × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SprintPlanning ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_04 a ontoksd:KnowledgeSkill ; rdfs:label "Product backlog grooming × Understanding"@en ; skos:prefLabel "Product backlog grooming × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProductBacklogGrooming ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_05 a ontoksd:KnowledgeSkill ; rdfs:label "Writing user stories × Understanding"@en ; skos:prefLabel "Writing user stories × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:WritingUserStories ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_06 a ontoksd:KnowledgeSkill ; rdfs:label "User story estimation × Understanding"@en ; skos:prefLabel "User story estimation × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:UserStoryEstimation ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_07 a ontoksd:KnowledgeSkill ; rdfs:label "Role of product owner × Understanding"@en ; skos:prefLabel "Role of product owner × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RoleOfProductOwner ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_08 a ontoksd:KnowledgeSkill ; rdfs:label "Role of scrum master × Understanding"@en ; skos:prefLabel "Role of scrum master × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RoleOfScrumMaster ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_09 a ontoksd:KnowledgeSkill ; rdfs:label "Role of developers × Understanding"@en ; skos:prefLabel "Role of developers × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RoleOfDevelopers ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_10 a ontoksd:KnowledgeSkill ; rdfs:label "Sprint review × Understanding"@en ; skos:prefLabel "Sprint review × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SprintReview ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_11 a ontoksd:KnowledgeSkill ; rdfs:label "Sprint retrospective × Understanding"@en ; skos:prefLabel "Sprint retrospective × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SprintRetrospective ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+  is2020c:KS_ISPM_14_12 a ontoksd:KnowledgeSkill ; rdfs:label "Product release planning × Understanding"@en ; skos:prefLabel "Product release planning × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProductReleasePlanning ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_14 .
+
+  is2020c:KS_ISPM_15_01 a ontoksd:KnowledgeSkill ; rdfs:label "Software development project characteristics × Understanding"@en ; skos:prefLabel "Software development project characteristics × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SoftwareDevelopmentProjectCharacteristics ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_15 .
+  is2020c:KS_ISPM_15_02 a ontoksd:KnowledgeSkill ; rdfs:label "Project management methodologies × Understanding"@en ; skos:prefLabel "Project management methodologies × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectManagementMethodologies ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPM_15 .
+
+}

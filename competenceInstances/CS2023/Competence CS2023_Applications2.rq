@@ -1,54 +1,146 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:AI-ML  ontoksd:cs2023ApplySkill)
-    (cs2023:AI-ML  ontoksd:cs2023DevelopSkill)
-    (cs2023:AI-SEP ontoksd:cs2023ApplySkill)
-    (cs2023:AI-SEP ontoksd:cs2023DevelopSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Applications2 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Analyze tabular data (e.g., customer purchases) to identify trends and predict variables of interest."@en ;
-    dcterms:description "Use machine learning libraries, data preprocessing, training infrastructures, and evaluation methodologies to create a basic supervised learning pipeline."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Applications2"@en ;
-    ontoksd:hasDisposition ontoksd:meticulous ,
-                           ontoksd:persistent ,
-                           ontoksd:responsible ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
-;
+  #################################################################
+  # Competence
+  #################################################################
 
-############# VERBOS ################
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:AI-ML  ontoksd:cs2023ApplySkill   bloom:apply)
-    (cs2023:AI-ML  ontoksd:cs2023DevelopSkill bloom:implement)
-    (cs2023:AI-SEP ontoksd:cs2023ApplySkill   bloom:analyze)
-    (cs2023:AI-SEP ontoksd:cs2023DevelopSkill bloom:develop)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  cs2023c:Competence_Applications2
+      a ontoksd:Competence ;
+      rdfs:label "Use machine learning libraries, data preprocessing, training infrastructures, and evaluation methodologies to create a basic supervised learning pipeline"@en ;
+      skos:prefLabel "Use machine learning libraries, data preprocessing, training infrastructures, and evaluation methodologies to create a basic supervised learning pipeline"@en ;
+      skos:definition "Use machine learning libraries, data preprocessing, training infrastructures, and evaluation methodologies to create a basic supervised learning pipeline."@en ;
+      rdfs:comment "Competence derived from the CS2023 Applications Competency Area, Task Applications2. Since the competence combines the application of machine learning concepts and socio-ethical considerations with the development of an end-to-end supervised learning pipeline, this formalization distributes the required CS2023 skill levels across the selected knowledge elements: Develop for building the supervised learning pipeline itself, and Apply for mobilizing socio-ethical and application-oriented machine learning knowledge in the analysis context."@en ;
+      dcterms:identifier "Applications2"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Applications2 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Applications2_AI_ML_1_Develop ,
+          cs2023c:KS_Applications2_AI_SEP_1_Apply ;
+      ontoksd:hasDisposition
+          ontoksd:meticulous ,
+          ontoksd:persistent ,
+          ontoksd:responsible ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
+
+  #################################################################
+  # Specification-level Task
+  #################################################################
+
+  cs2023c:Task_Applications2
+      a ontoksd:Task ;
+      rdfs:label "Applications2 task"@en ;
+      skos:prefLabel "Applications2 task"@en ;
+      ontoksd:hasTaskStatement "Analyze tabular data to identify trends and predict variables of interest."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Applications2. The task concerns analyzing tabular data, such as customer purchases, in order to identify trends and predict variables of interest through the creation of a basic supervised learning pipeline."@en ;
+      dcterms:identifier "Task_Applications2"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Applications2_TabularData ,
+          cs2023c:TaskComponent_Applications2_SupervisedLearningPipeline ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Applications2_Analyze ,
+          cs2023c:TaskActivity_Applications2_Preprocess ,
+          cs2023c:TaskActivity_Applications2_Train ,
+          cs2023c:TaskActivity_Applications2_Evaluate ,
+          cs2023c:TaskActivity_Applications2_Predict ,
+          cs2023c:TaskActivity_Applications2_Create ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Applications2_TabularData ,
+          cs2023c:TaskConstraint_Applications2_TrendsAndPrediction .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Applications2_TabularData
+      a ontoksd:TaskComponent ;
+      rdfs:label "tabular data"@en ;
+      skos:prefLabel "tabular data"@en ;
+      rdfs:comment "Task component corresponding to the structured dataset, such as customer purchases, to be analyzed for trend identification and prediction."@en .
+
+  cs2023c:TaskComponent_Applications2_SupervisedLearningPipeline
+      a ontoksd:TaskComponent ;
+      rdfs:label "basic supervised learning pipeline"@en ;
+      skos:prefLabel "basic supervised learning pipeline"@en ;
+      rdfs:comment "Task component corresponding to the machine learning pipeline created to preprocess data, train a model, evaluate results, and predict variables of interest."@en .
+
+  cs2023c:TaskActivity_Applications2_Analyze
+      a ontoksd:TaskActivity ;
+      rdfs:label "analyze"@en ;
+      skos:prefLabel "analyze"@en ;
+      rdfs:comment "Task activity capturing the analysis of tabular data to identify patterns and relevant predictive targets."@en .
+
+  cs2023c:TaskActivity_Applications2_Preprocess
+      a ontoksd:TaskActivity ;
+      rdfs:label "preprocess"@en ;
+      skos:prefLabel "preprocess"@en ;
+      rdfs:comment "Task activity capturing the preprocessing of data for supervised learning."@en .
+
+  cs2023c:TaskActivity_Applications2_Train
+      a ontoksd:TaskActivity ;
+      rdfs:label "train"@en ;
+      skos:prefLabel "train"@en ;
+      rdfs:comment "Task activity capturing the training of models within the supervised learning pipeline."@en .
+
+  cs2023c:TaskActivity_Applications2_Evaluate
+      a ontoksd:TaskActivity ;
+      rdfs:label "evaluate"@en ;
+      skos:prefLabel "evaluate"@en ;
+      rdfs:comment "Task activity capturing the evaluation of model performance using appropriate methodologies."@en .
+
+  cs2023c:TaskActivity_Applications2_Predict
+      a ontoksd:TaskActivity ;
+      rdfs:label "predict"@en ;
+      skos:prefLabel "predict"@en ;
+      rdfs:comment "Task activity capturing the prediction of variables of interest from the analyzed data."@en .
+
+  cs2023c:TaskActivity_Applications2_Create
+      a ontoksd:TaskActivity ;
+      rdfs:label "create"@en ;
+      skos:prefLabel "create"@en ;
+      rdfs:comment "Task activity capturing the creation of the supervised learning pipeline."@en .
+
+  cs2023c:TaskConstraint_Applications2_TabularData
+      a ontoksd:TaskConstraint ;
+      rdfs:label "using tabular data"@en ;
+      skos:prefLabel "using tabular data"@en ;
+      rdfs:comment "Task constraint stating that the analysis and prediction pipeline must be built over tabular data."@en .
+
+  cs2023c:TaskConstraint_Applications2_TrendsAndPrediction
+      a ontoksd:TaskConstraint ;
+      rdfs:label "to identify trends and predict variables of interest"@en ;
+      skos:prefLabel "to identify trends and predict variables of interest"@en ;
+      rdfs:comment "Task constraint stating that the pipeline must support both trend identification and prediction of variables of interest."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Applications2_AI_ML_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AI-ML × Develop"@en ;
+      skos:prefLabel "AI-ML × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications2. It associates AI-ML knowledge with the CS2023 skill level Develop in creating a basic supervised learning pipeline using machine learning libraries, preprocessing procedures, training infrastructures, and evaluation methodologies."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AI_ML_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications2_AI_SEP_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AI-SEP × Apply"@en ;
+      skos:prefLabel "AI-SEP × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications2. It associates AI-SEP knowledge with the CS2023 skill level Apply in responsibly applying supervised learning to tabular data analysis and prediction tasks."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AI_SEP_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
 }

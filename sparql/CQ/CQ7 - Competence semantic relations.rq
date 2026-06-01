@@ -1,0 +1,36 @@
+# This query retrieves semantic relations involving competences. It identifies competence-to-competence relations such as specialization and inverse specialization, and it can be extended with other direct semantic relation properties when dependency, prerequisite, equivalence, or overlap relations are explicitly represented as competence-level relations. Thus, the query demonstrates that OntoKSD can retrieve inter-competence semantic relations involving each competence.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?relation
+  ?relatedCompetence
+  ?relatedCompetenceLabel
+WHERE {
+  {
+    ?competence a ontoksd:Competence ;
+                ontoksd:specializes ?relatedCompetence .
+
+    BIND("specializes" AS ?relation)
+  }
+  UNION
+  {
+    ?competence a ontoksd:Competence ;
+                ontoksd:isSpecializationOf ?relatedCompetence .
+
+    BIND("isSpecializationOf" AS ?relation)
+  }
+
+  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
+  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
+  BIND(COALESCE(?competenceRdfsLabel, ?competenceSkosLabel, STR(?competence)) AS ?competenceLabel)
+
+  OPTIONAL { ?relatedCompetence rdfs:label ?relatedCompetenceRdfsLabel . }
+  OPTIONAL { ?relatedCompetence skos:prefLabel ?relatedCompetenceSkosLabel . }
+  BIND(COALESCE(?relatedCompetenceRdfsLabel, ?relatedCompetenceSkosLabel, STR(?relatedCompetence)) AS ?relatedCompetenceLabel)
+}
+ORDER BY ?competenceLabel ?relation ?relatedCompetenceLabel

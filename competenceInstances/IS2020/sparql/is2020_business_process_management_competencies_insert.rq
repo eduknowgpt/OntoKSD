@@ -1,0 +1,363 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Business Process Management competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.5.4 Competency Area – Business Process Management."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020BusinessProcessManagementKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 Business Process Management Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 Business Process Management Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Business Process Management competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CharacteristicsOfProcess
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Characteristics of process (e.g., actions, events/tasks, decision points, outcomes, and value)"@en ;
+      skos:prefLabel "Characteristics of process (e.g., actions, events/tasks, decision points, outcomes, and value)"@en ;
+      skos:definition "Knowledge of process characteristics such as actions, events or tasks, decision points, outcomes, and value."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PerspectivesOfModelling
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Perspectives of modelling (control flow, functional, data, organization perspective)"@en ;
+      skos:prefLabel "Perspectives of modelling (control flow, functional, data, organization perspective)"@en ;
+      skos:definition "Knowledge of modelling perspectives including control flow, functional, data, and organizational perspectives."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ElementsOfBPMNModel
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Elements of a BPMN model (branching and merging, rework and repetition, information artifacts and resources)"@en ;
+      skos:prefLabel "Elements of a BPMN model (branching and merging, rework and repetition, information artifacts and resources)"@en ;
+      skos:definition "Knowledge of BPMN model elements including branching and merging, rework and repetition, and information artifacts and resources."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:OrganizationalElementsInBPMN
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Organizational (or resource) elements in BPMN (Pools and Lanes)"@en ;
+      skos:prefLabel "Organizational (or resource) elements in BPMN (Pools and Lanes)"@en ;
+      skos:definition "Knowledge of organizational or resource elements in BPMN such as pools and lanes."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TypesOfResources
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Types of resources (process participant, software system, equipment)"@en ;
+      skos:prefLabel "Types of resources (process participant, software system, equipment)"@en ;
+      skos:definition "Knowledge of process resources such as process participants, software systems, and equipment."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ExampleBPMTools
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Example BPM tools - ARIS, Visio or System Architect"@en ;
+      skos:prefLabel "Example BPM tools - ARIS, Visio or System Architect"@en ;
+      skos:definition "Knowledge of example BPM tools such as ARIS, Visio, and System Architect."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BusinessScenarios
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Business Scenarios"@en ;
+      skos:prefLabel "Business Scenarios"@en ;
+      skos:definition "Knowledge of business scenarios relevant to process discovery."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessDiscoveryTechniques
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Process Discovery techniques (evidence-based, interview-based, workshop based)"@en ;
+      skos:prefLabel "Process Discovery techniques (evidence-based, interview-based, workshop based)"@en ;
+      skos:definition "Knowledge of process discovery techniques including evidence-based, interview-based, and workshop-based approaches."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessArchitectureAndPortfolios
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Process Architecture and process portfolios"@en ;
+      skos:prefLabel "Process Architecture and process portfolios"@en ;
+      skos:definition "Knowledge of process architecture and process portfolios."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TypesOfProcesses
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Types of processes (management, core and supporting)"@en ;
+      skos:prefLabel "Types of processes (management, core and supporting)"@en ;
+      skos:definition "Knowledge of process types such as management, core, and supporting processes."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RelationshipsBetweenProcesses
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Relationships between processes: sequence, decomposition, and specialization"@en ;
+      skos:prefLabel "Relationships between processes: sequence, decomposition, and specialization"@en ;
+      skos:definition "Knowledge of relationships between processes including sequence, decomposition, and specialization."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechniquesForCollectingAndAnalyzingIssues
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Techniques for collecting and analyzing issues in a process"@en ;
+      skos:prefLabel "Techniques for collecting and analyzing issues in a process"@en ;
+      skos:definition "Knowledge of techniques for collecting and analyzing issues in a process."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:IssueRootCauseAnalysisAndDocumentation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Issue root cause analysis (e.g., Pareto chart) and documentation"@en ;
+      skos:prefLabel "Issue root cause analysis (e.g., Pareto chart) and documentation"@en ;
+      skos:definition "Knowledge of issue root cause analysis, such as Pareto charts, and related documentation."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:MethodsForProcessImprovement
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Methods for process improvement redesign and reengineering"@en ;
+      skos:prefLabel "Methods for process improvement redesign and reengineering"@en ;
+      skos:definition "Knowledge of methods for process improvement, redesign, and reengineering."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechnologySolutions
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Technology solutions (AI, IoT, Blockchain, etc.)"@en ;
+      skos:prefLabel "Technology solutions (AI, IoT, Blockchain, etc.)"@en ;
+      skos:definition "Knowledge of technology solutions such as AI, IoT, Blockchain, and related technologies for process improvement."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CostBenefitsAnalysisAndROI
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Cost-benefits analysis and Return on investment"@en ;
+      skos:prefLabel "Cost-benefits analysis and Return on investment"@en ;
+      skos:definition "Knowledge of cost-benefit analysis and return on investment."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ChangeManagementAndImplementation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Change management and implementation"@en ;
+      skos:prefLabel "Change management and implementation"@en ;
+      skos:definition "Knowledge of change management and implementation in process improvement."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechniquesAndToolsForBPM
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes"@en ;
+      skos:prefLabel "Techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes"@en ;
+      skos:definition "Knowledge of techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes, such as BPMS, BPM suites, BPEL, XML, XPDL, SOA, and web services."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RoboticProcessAutomationAndTools
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Robotic Process Automation and tools available (e.g., UIPath Developer)"@en ;
+      skos:prefLabel "Robotic Process Automation and tools available (e.g., UIPath Developer)"@en ;
+      skos:definition "Knowledge of robotic process automation and available tools such as UIPath Developer."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PerformanceMeasures
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Performance measures"@en ;
+      skos:prefLabel "Performance measures"@en ;
+      skos:definition "Knowledge of performance measures for business processes."@en ;
+      skos:inScheme is2020k:IS2020BusinessProcessManagementKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020c:Competence_ISBPM_1
+      a ontoksd:Competence ;
+      rdfs:label "Explain the characteristics of a process and the different perspectives of a process model"@en ;
+      skos:prefLabel "IS Business Process Management Competency 1"@en ;
+      skos:definition "Explain the characteristics of a process and the different perspectives of a process model."@en ;
+      dcterms:identifier "ISBPM-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:CharacteristicsOfProcess , is2020k:PerspectivesOfModelling ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISBPM_1_01 , is2020c:KS_ISBPM_1_02 .
+
+  is2020c:Competence_ISBPM_2
+      a ontoksd:Competence ;
+      rdfs:label "Use a BPM tool to design and implement business process models"@en ;
+      skos:prefLabel "IS Business Process Management Competency 2"@en ;
+      skos:definition "Use a BPM tool to design and implement business process models."@en ;
+      dcterms:identifier "ISBPM-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ElementsOfBPMNModel ,
+          is2020k:OrganizationalElementsInBPMN ,
+          is2020k:TypesOfResources ,
+          is2020k:ExampleBPMTools ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISBPM_2_01 ,
+          is2020c:KS_ISBPM_2_02 ,
+          is2020c:KS_ISBPM_2_03 ,
+          is2020c:KS_ISBPM_2_04 .
+
+  is2020c:Competence_ISBPM_3
+      a ontoksd:Competence ;
+      rdfs:label "Choose appropriate process discovery techniques for different business scenarios"@en ;
+      skos:prefLabel "IS Business Process Management Competency 3"@en ;
+      skos:definition "Choose appropriate process discovery techniques for different business scenarios."@en ;
+      dcterms:identifier "ISBPM-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge is2020k:BusinessScenarios , is2020k:ProcessDiscoveryTechniques ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill is2020c:KS_ISBPM_3_01 , is2020c:KS_ISBPM_3_02 .
+
+  is2020c:Competence_ISBPM_4
+      a ontoksd:Competence ;
+      rdfs:label "Design a Process Architecture"@en ;
+      skos:prefLabel "IS Business Process Management Competency 4"@en ;
+      skos:definition "Design a Process Architecture."@en ;
+      dcterms:identifier "ISBPM-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ProcessArchitectureAndPortfolios ,
+          is2020k:TypesOfProcesses ,
+          is2020k:RelationshipsBetweenProcesses ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISBPM_4_01 ,
+          is2020c:KS_ISBPM_4_02 ,
+          is2020c:KS_ISBPM_4_03 .
+
+  is2020c:Competence_ISBPM_5
+      a ontoksd:Competence ;
+      rdfs:label "Analyze an AS-IS business process using appropriate techniques"@en ;
+      skos:prefLabel "IS Business Process Management Competency 5"@en ;
+      skos:definition "Analyze an AS-IS business process using appropriate techniques."@en ;
+      dcterms:identifier "ISBPM-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:TechniquesForCollectingAndAnalyzingIssues ,
+          is2020k:IssueRootCauseAnalysisAndDocumentation ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISBPM_5_01 ,
+          is2020c:KS_ISBPM_5_02 .
+
+  is2020c:Competence_ISBPM_6
+      a ontoksd:Competence ;
+      rdfs:label "Use process improvement methods and implement TO-BE processes by eliminating the bottlenecks, enhancing, and innovating the AS-IS process"@en ;
+      skos:prefLabel "IS Business Process Management Competency 6"@en ;
+      skos:definition "Use process improvement methods and implement TO-BE processes by eliminating bottlenecks and innovating the AS-IS process."@en ;
+      dcterms:identifier "ISBPM-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:MethodsForProcessImprovement ,
+          is2020k:TechnologySolutions ,
+          is2020k:CostBenefitsAnalysisAndROI ,
+          is2020k:ChangeManagementAndImplementation ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISBPM_6_01 ,
+          is2020c:KS_ISBPM_6_02 ,
+          is2020c:KS_ISBPM_6_03 ,
+          is2020c:KS_ISBPM_6_04 .
+
+  is2020c:Competence_ISBPM_7
+      a ontoksd:Competence ;
+      rdfs:label "Evaluate techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes"@en ;
+      skos:prefLabel "IS Business Process Management Competency 7"@en ;
+      skos:definition "Evaluate techniques and tools that support the planning, design, analysis, operation, and monitoring of business processes."@en ;
+      dcterms:identifier "ISBPM-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-business-process-management-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:TechniquesAndToolsForBPM ,
+          is2020k:RoboticProcessAutomationAndTools ,
+          is2020k:PerformanceMeasures ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:meticulous , ontoksd:inventive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISBPM_7_01 ,
+          is2020c:KS_ISBPM_7_02 ,
+          is2020c:KS_ISBPM_7_03 .
+
+  is2020c:KS_ISBPM_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Characteristics of process × Understanding"@en ; skos:prefLabel "Characteristics of process × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CharacteristicsOfProcess ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_1 .
+  is2020c:KS_ISBPM_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Perspectives of modelling × Understanding"@en ; skos:prefLabel "Perspectives of modelling × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PerspectivesOfModelling ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_1 .
+
+  is2020c:KS_ISBPM_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Elements of BPMN model × Applying"@en ; skos:prefLabel "Elements of BPMN model × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ElementsOfBPMNModel ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_2 .
+  is2020c:KS_ISBPM_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Organizational elements in BPMN × Applying"@en ; skos:prefLabel "Organizational elements in BPMN × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:OrganizationalElementsInBPMN ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_2 .
+  is2020c:KS_ISBPM_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Types of resources × Applying"@en ; skos:prefLabel "Types of resources × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:TypesOfResources ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_2 .
+  is2020c:KS_ISBPM_2_04 a ontoksd:KnowledgeSkill ; rdfs:label "Example BPM tools × Applying"@en ; skos:prefLabel "Example BPM tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ExampleBPMTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_2 .
+
+  is2020c:KS_ISBPM_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Business scenarios × Applying"@en ; skos:prefLabel "Business scenarios × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BusinessScenarios ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_3 .
+  is2020c:KS_ISBPM_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Process discovery techniques × Evaluating"@en ; skos:prefLabel "Process discovery techniques × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessDiscoveryTechniques ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_3 .
+
+  is2020c:KS_ISBPM_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Process architecture and portfolios × Creating"@en ; skos:prefLabel "Process architecture and portfolios × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessArchitectureAndPortfolios ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_4 .
+  is2020c:KS_ISBPM_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Types of processes × Creating"@en ; skos:prefLabel "Types of processes × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:TypesOfProcesses ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_4 .
+  is2020c:KS_ISBPM_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Relationships between processes × Creating"@en ; skos:prefLabel "Relationships between processes × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:RelationshipsBetweenProcesses ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_4 .
+
+  is2020c:KS_ISBPM_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Techniques for collecting and analyzing issues × Understanding"@en ; skos:prefLabel "Techniques for collecting and analyzing issues × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TechniquesForCollectingAndAnalyzingIssues ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_5 .
+  is2020c:KS_ISBPM_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Issue root cause analysis and documentation × Analyzing"@en ; skos:prefLabel "Issue root cause analysis and documentation × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:IssueRootCauseAnalysisAndDocumentation ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_5 .
+
+  is2020c:KS_ISBPM_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Methods for process improvement × Understanding"@en ; skos:prefLabel "Methods for process improvement × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MethodsForProcessImprovement ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_6 .
+  is2020c:KS_ISBPM_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Technology solutions × Understanding"@en ; skos:prefLabel "Technology solutions × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TechnologySolutions ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_6 .
+  is2020c:KS_ISBPM_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Cost-benefits analysis and ROI × Applying"@en ; skos:prefLabel "Cost-benefits analysis and ROI × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CostBenefitsAnalysisAndROI ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_6 .
+  is2020c:KS_ISBPM_6_04 a ontoksd:KnowledgeSkill ; rdfs:label "Change management and implementation × Applying"@en ; skos:prefLabel "Change management and implementation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ChangeManagementAndImplementation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_6 .
+
+  is2020c:KS_ISBPM_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Techniques and tools for BPM × Understanding"@en ; skos:prefLabel "Techniques and tools for BPM × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TechniquesAndToolsForBPM ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_7 .
+  is2020c:KS_ISBPM_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Robotic Process Automation × Understanding"@en ; skos:prefLabel "Robotic Process Automation × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RoboticProcessAutomationAndTools ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_7 .
+  is2020c:KS_ISBPM_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Performance measures × Understanding"@en ; skos:prefLabel "Performance measures × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PerformanceMeasures ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISBPM_7 .
+
+}

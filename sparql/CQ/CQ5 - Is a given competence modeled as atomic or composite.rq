@@ -1,0 +1,29 @@
+
+# This query retrieves the structural type assigned to a selected competence. It indicates whether the competence is modeled as atomic or composite, according to the StructureType associated with the competence. Thus, the query demonstrates that OntoKSD can explicitly distinguish indivisible competence specifications from competences composed of other competence elements.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?structureType
+  ?structureTypeLabel
+WHERE {
+  ?competence a ontoksd:Competence ;
+              rdfs:label ?competenceLabel ;
+              ontoksd:hasStructureType ?structureType .
+
+  OPTIONAL { ?structureType rdfs:label ?structureTypeRdfsLabel . }
+  OPTIONAL { ?structureType skos:prefLabel ?structureTypeSkosLabel . }
+
+  BIND(
+    COALESCE(
+      ?structureTypeRdfsLabel,
+      ?structureTypeSkosLabel,
+      STR(?structureType)
+    ) AS ?structureTypeLabel
+  )
+}
+ORDER BY ?structureTypeLabel

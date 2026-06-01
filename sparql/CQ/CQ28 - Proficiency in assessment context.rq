@@ -1,0 +1,32 @@
+# This query retrieves the proficiency level attributed to evidenced competence records or evidenced competence constituent records within an assessment context. It returns each evidenced record, its attributed ProficiencyLevel, and the AssessmentOccurrence in which the record was evidenced. Thus, the query demonstrates that OntoKSD can contextualize proficiency attribution in concrete assessment situations.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidencedRecord
+  ?evidencedRecordLabel
+  ?recordType
+  ?proficiencyLevel
+  ?proficiencyLevelLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+WHERE {
+  {
+    ?evidencedRecord a ontoksd:EvidencedCompetence .
+    BIND("EvidencedCompetence" AS ?recordType)
+  }
+  UNION
+  {
+    ?evidencedRecord a ontoksd:EvidencedCompetenceConstituent .
+    BIND("EvidencedCompetenceConstituent" AS ?recordType)
+  }
+
+  ?evidencedRecord ontoksd:hasProficiencyLevel ?proficiencyLevel ;
+                   ontoksd:isEvidencedInAssessmentOccurrence ?assessmentOccurrence .
+
+  OPTIONAL { ?evidencedRecord rdfs:label ?evidencedRecordLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?assessmentOccurrenceLabel ?recordType ?evidencedRecordLabel

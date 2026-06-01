@@ -1,0 +1,19 @@
+# This query retrieves the provenance of evidence instances by identifying the assessment occurrence from which each evidence instance was produced or on which it is based. Thus, the query demonstrates that OntoKSD can trace evidence back to the concrete assessment occurrence that grounds its production.
+
+# OntoKSD supports traceability queries over evidence provenance through explicit relations connecting evidence instances and assessment occurrences, enabling retrieval of the evaluative situations from which evidence was produced.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidence
+  ?evidenceLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+WHERE {
+  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
+
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?evidenceLabel ?assessmentOccurrenceLabel

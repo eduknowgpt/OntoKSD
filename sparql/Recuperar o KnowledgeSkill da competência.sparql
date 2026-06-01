@@ -1,0 +1,11 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?competence ?ks ?knowledge ?skill
+WHERE {
+  ?competence a ontoksd:Competence ;
+              ontoksd:hasKnowledgeSkill ?ks .
+
+  ?ks a ontoksd:KnowledgeSkill ;
+      ontoksd:hasKnowledgeComponent ?knowledge ;
+      ontoksd:hasSkillComponent ?skill .
+}

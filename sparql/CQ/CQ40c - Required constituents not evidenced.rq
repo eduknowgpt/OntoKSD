@@ -1,0 +1,31 @@
+# This query retrieves constituents of course-required competences that are not evidenced in learner profiles.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?competence ?competenceLabel ?constituent ?constituentLabel
+WHERE {
+  ?profile a ontoksd:LearnerProfile .
+
+  ?courseSpec ontoksd:mediatesCourse ?course ;
+              ontoksd:mediatesCourseCompetence ?competence .
+
+  {
+    ?competence ontoksd:hasKnowledgeSkill ?constituent .
+  }
+  UNION
+  {
+    ?competence ontoksd:hasDisposition ?constituent .
+  }
+
+  FILTER NOT EXISTS {
+    ?evidencedConstituent ontoksd:isEvidencedCompetenceConstituentOf ?profile ;
+                          ontoksd:refersToCompetenceConstituent ?constituent .
+  }
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?course rdfs:label ?courseLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?constituent rdfs:label ?constituentLabel . }
+}
+ORDER BY ?profileLabel ?courseLabel ?competenceLabel ?constituentLabel

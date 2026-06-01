@@ -1,0 +1,23 @@
+# This query retrieves evidence and assessment occurrences associated with evidenced competences. It starts from EvidencedCompetence records, follows the evidence supporting them, and identifies the AssessmentOccurrence that produced the evidence. Thus, the query demonstrates that OntoKSD can trace evidenced competence records to evidence and occurrence-level assessment provenance.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidencedCompetence
+  ?evidencedCompetenceLabel
+  ?evidence
+  ?evidenceLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:supportedByEvidence ?evidence .
+
+  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
+
+  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?evidencedCompetenceLabel ?evidenceLabel ?assessmentOccurrenceLabel

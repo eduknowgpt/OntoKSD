@@ -1,0 +1,601 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 IS Ethics, Sustainability, Use and Implications for Society competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.5.1 Competency Area – IS Ethics, Sustainability, Use and Implications for Society."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 IS Ethics, Sustainability, Use and Implications for Society Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 IS Ethics, Sustainability, Use and Implications for Society Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IS Ethics, Sustainability, Use and Implications for Society competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:InternationalLawsForDataCollection
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "International laws and regulations governing the collection of data"@en ;
+      skos:prefLabel "International laws and regulations governing the collection of data"@en ;
+      skos:definition "Knowledge of international laws and regulations governing the collection of data."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CountrySpecificLawsForDataCollection
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Country specific laws and regulations governing the collection of data"@en ;
+      skos:prefLabel "Country specific laws and regulations governing the collection of data"@en ;
+      skos:definition "Knowledge of country-specific laws and regulations governing the collection of data."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StateAndLocalLawsForDataCollection
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "State and local laws governing the collection of data"@en ;
+      skos:prefLabel "State and local laws governing the collection of data"@en ;
+      skos:definition "Knowledge of state and local laws governing the collection of data."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataCollectedViaMobileDevices
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "How data is collected via mobile devices"@en ;
+      skos:prefLabel "How data is collected via mobile devices"@en ;
+      skos:definition "Knowledge of how data is collected via mobile devices."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataCollectedViaWebsites
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "How data is collected via websites"@en ;
+      skos:prefLabel "How data is collected via websites"@en ;
+      skos:definition "Knowledge of how data is collected via websites."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataCollectedViaSocialMedia
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "How data is collected via social media"@en ;
+      skos:prefLabel "How data is collected via social media"@en ;
+      skos:definition "Knowledge of how data is collected via social media."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataCollectedViaEmail
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "How data is collected via email"@en ;
+      skos:prefLabel "How data is collected via email"@en ;
+      skos:definition "Knowledge of how data is collected via email."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataCollectedViaWearableDevices
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "How data is collected via wearable devices"@en ;
+      skos:prefLabel "How data is collected via wearable devices"@en ;
+      skos:definition "Knowledge of how data is collected via wearable devices."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CommonEthicalPhilosophicalFrameworks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Common ethical philosophical frameworks"@en ;
+      skos:prefLabel "Common ethical philosophical frameworks"@en ;
+      skos:definition "Knowledge of common ethical philosophical frameworks."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BasicPrinciplesOfEthicalDecisionMaking
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Basic principles governing ethical decision making"@en ;
+      skos:prefLabel "Basic principles governing ethical decision making"@en ;
+      skos:definition "Knowledge of the basic principles governing ethical decision making."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataStorageAndCodesOfEthics
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data Storage and codes of ethics"@en ;
+      skos:prefLabel "Data Storage and codes of ethics"@en ;
+      skos:definition "Knowledge of data storage and related codes of ethics."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DecisionMakingForSharingAndUsingData
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Decision making for sharing and using data"@en ;
+      skos:prefLabel "Decision making for sharing and using data"@en ;
+      skos:definition "Knowledge of decision making for sharing and using data."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:MoralCodesForDataSharing
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Moral codes for data sharing"@en ;
+      skos:prefLabel "Moral codes for data sharing"@en ;
+      skos:definition "Knowledge of moral codes for data sharing."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:EthicalPhilosophies
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Ethical philosophies"@en ;
+      skos:prefLabel "Ethical philosophies"@en ;
+      skos:definition "Knowledge of ethical philosophies."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ComputingPracticesDataSharingAndSecurity
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Computing practices surrounding data sharing and security"@en ;
+      skos:prefLabel "Computing practices surrounding data sharing and security"@en ;
+      skos:definition "Knowledge of computing practices surrounding data sharing and security."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Vocabulary
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Vocabulary"@en ;
+      skos:prefLabel "Vocabulary"@en ;
+      skos:definition "Knowledge of relevant ethics and data-use vocabulary."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BestPractices
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Best practices"@en ;
+      skos:prefLabel "Best practices"@en ;
+      skos:definition "Knowledge of best practices in ethics, data use, and information systems."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ISEthicalCodeOfConduct
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "IS ethical code of conduct"@en ;
+      skos:prefLabel "IS ethical code of conduct"@en ;
+      skos:definition "Knowledge of an information systems ethical code of conduct."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ImportanceOfEthicalCodeOfConduct
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Importance of an ethical code of conduct"@en ;
+      skos:prefLabel "Importance of an ethical code of conduct"@en ;
+      skos:definition "Knowledge of the importance of an ethical code of conduct."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CriticalElementsOfEthicalCodeOfConduct
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Critical elements of an ethical code of conduct"@en ;
+      skos:prefLabel "Critical elements of an ethical code of conduct"@en ;
+      skos:definition "Knowledge of the critical elements of an ethical code of conduct."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ApplyingAndAdheringToEthicalCode
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Applying and adhering to ethical code of conduct"@en ;
+      skos:prefLabel "Applying and adhering to ethical code of conduct"@en ;
+      skos:definition "Knowledge of applying and adhering to an ethical code of conduct."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BreachesOfEthicalCodesOfConduct
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Breaches of ethical codes of conduct"@en ;
+      skos:prefLabel "Breaches of ethical codes of conduct"@en ;
+      skos:definition "Knowledge of breaches of ethical codes of conduct."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:LegalAspectsOfEthicalConduct
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Legal aspects of ethical conduct"@en ;
+      skos:prefLabel "Legal aspects of ethical conduct"@en ;
+      skos:definition "Knowledge of the legal aspects of ethical conduct."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SustainabilityOfSystems
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Sustainability of systems"@en ;
+      skos:prefLabel "Sustainability of systems"@en ;
+      skos:definition "Knowledge of the sustainability of systems."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AdaptabilityOfSystems
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Adaptability of systems"@en ;
+      skos:prefLabel "Adaptability of systems"@en ;
+      skos:definition "Knowledge of the adaptability of systems."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:LegalIssuesReusingDataForAnotherPurpose
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Legal issues surround reusing data collected for another purpose"@en ;
+      skos:prefLabel "Legal issues surround reusing data collected for another purpose"@en ;
+      skos:definition "Knowledge of legal issues surrounding the reuse of data collected for another purpose."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CoreISStakeholders
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Core IS stakeholders"@en ;
+      skos:prefLabel "Core IS stakeholders"@en ;
+      skos:definition "Knowledge of core information systems stakeholders."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ISStakeholderRoles
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "IS Stakeholder roles"@en ;
+      skos:prefLabel "IS Stakeholder roles"@en ;
+      skos:definition "Knowledge of the roles of information systems stakeholders."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ImplicationsForIS
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Implications for IS"@en ;
+      skos:prefLabel "Implications for IS"@en ;
+      skos:definition "Knowledge of the implications for information systems."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessesToSupportEthicalBehaviorInOrganizations
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Processes to support ethical behavior in organizations"@en ;
+      skos:prefLabel "Processes to support ethical behavior in organizations"@en ;
+      skos:definition "Knowledge of processes to support ethical behavior in organizations."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ActivitiesToSupportEthicalBehaviorInOrganizations
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Activities to support ethical behavior in organizations"@en ;
+      skos:prefLabel "Activities to support ethical behavior in organizations"@en ;
+      skos:definition "Knowledge of activities to support ethical behavior in organizations."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PerformanceCriteriaToSupportEthicalBehaviorInOrganizations
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Performance criteria to support ethical behavior in organizations"@en ;
+      skos:prefLabel "Performance criteria to support ethical behavior in organizations"@en ;
+      skos:definition "Knowledge of performance criteria to support ethical behavior in organizations."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessesToSupportEthicalBehaviorForIndividual
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Processes to support ethical behavior for the individual"@en ;
+      skos:prefLabel "Processes to support ethical behavior for the individual"@en ;
+      skos:definition "Knowledge of processes to support ethical behavior for the individual."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ActivitiesToSupportEthicalBehaviorForIndividual
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Activities to support ethical behavior for the individual"@en ;
+      skos:prefLabel "Activities to support ethical behavior for the individual"@en ;
+      skos:definition "Knowledge of activities to support ethical behavior for the individual."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PerformanceCriteriaToSupportEthicalBehaviorByIndividual
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Performance criteria to support ethical behavior by the individual"@en ;
+      skos:prefLabel "Performance criteria to support ethical behavior by the individual"@en ;
+      skos:definition "Knowledge of performance criteria to support ethical behavior by the individual."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessesToSupportEthicalBehaviorBySociety
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Processes to support ethical behavior by society"@en ;
+      skos:prefLabel "Processes to support ethical behavior by society"@en ;
+      skos:definition "Knowledge of processes to support ethical behavior by society."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ActivitiesToSupportEthicalBehaviorBySociety
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Activities to support ethical behavior by society"@en ;
+      skos:prefLabel "Activities to support ethical behavior by society"@en ;
+      skos:definition "Knowledge of activities to support ethical behavior by society."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PerformanceCriteriaToSupportEthicalBehaviorBySociety
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Performance Criteria to support ethical behavior by society"@en ;
+      skos:prefLabel "Performance Criteria to support ethical behavior by society"@en ;
+      skos:definition "Knowledge of performance criteria to support ethical behavior by society."@en ;
+      skos:inScheme is2020k:IS2020ISEthicsSustainabilitySocietyKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020c:Competence_ISESUS_1
+      a ontoksd:Competence ;
+      rdfs:label "Demonstrate ethical behavior during data collection"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 1"@en ;
+      skos:definition "Demonstrate ethical behavior during data collection."@en ;
+      dcterms:identifier "ISESUS-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:InternationalLawsForDataCollection ,
+          is2020k:CountrySpecificLawsForDataCollection ,
+          is2020k:StateAndLocalLawsForDataCollection ,
+          is2020k:DataCollectedViaMobileDevices ,
+          is2020k:DataCollectedViaWebsites ,
+          is2020k:DataCollectedViaSocialMedia ,
+          is2020k:DataCollectedViaEmail ,
+          is2020k:DataCollectedViaWearableDevices ,
+          is2020k:CommonEthicalPhilosophicalFrameworks ,
+          is2020k:BasicPrinciplesOfEthicalDecisionMaking ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_1_01 ,
+          is2020c:KS_ISESUS_1_02 ,
+          is2020c:KS_ISESUS_1_03 ,
+          is2020c:KS_ISESUS_1_04 ,
+          is2020c:KS_ISESUS_1_05 ,
+          is2020c:KS_ISESUS_1_06 ,
+          is2020c:KS_ISESUS_1_07 ,
+          is2020c:KS_ISESUS_1_08 ,
+          is2020c:KS_ISESUS_1_09 ,
+          is2020c:KS_ISESUS_1_10 .
+
+  is2020c:Competence_ISESUS_2
+      a ontoksd:Competence ;
+      rdfs:label "Identify the moral issues that surround the storage and usage of data"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 2"@en ;
+      skos:definition "Identify the moral issues that surround the storage and usage of data."@en ;
+      dcterms:identifier "ISESUS-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:DataStorageAndCodesOfEthics ,
+          is2020k:DecisionMakingForSharingAndUsingData ,
+          is2020k:MoralCodesForDataSharing ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_2_01 ,
+          is2020c:KS_ISESUS_2_02 ,
+          is2020c:KS_ISESUS_2_03 .
+
+  is2020c:Competence_ISESUS_3
+      a ontoksd:Competence ;
+      rdfs:label "Examine ethical philosophies and their practical application"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 3"@en ;
+      skos:definition "Examine ethical philosophies and their practical application."@en ;
+      dcterms:identifier "ISESUS-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:EthicalPhilosophies ,
+          is2020k:ComputingPracticesDataSharingAndSecurity ,
+          is2020k:Vocabulary ,
+          is2020k:BestPractices ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_3_01 ,
+          is2020c:KS_ISESUS_3_02 ,
+          is2020c:KS_ISESUS_3_03 ,
+          is2020c:KS_ISESUS_3_04 .
+
+  is2020c:Competence_ISESUS_4
+      a ontoksd:Competence ;
+      rdfs:label "Investigate ethical codes of practice and their implications for society"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 4"@en ;
+      skos:definition "Investigate ethical codes of practice and their implications for society."@en ;
+      dcterms:identifier "ISESUS-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ISEthicalCodeOfConduct ,
+          is2020k:ImportanceOfEthicalCodeOfConduct ,
+          is2020k:CriticalElementsOfEthicalCodeOfConduct ,
+          is2020k:ApplyingAndAdheringToEthicalCode ,
+          is2020k:BreachesOfEthicalCodesOfConduct ,
+          is2020k:LegalAspectsOfEthicalConduct ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_4_01 ,
+          is2020c:KS_ISESUS_4_02 ,
+          is2020c:KS_ISESUS_4_03 ,
+          is2020c:KS_ISESUS_4_04 ,
+          is2020c:KS_ISESUS_4_05 ,
+          is2020c:KS_ISESUS_4_06 .
+
+  is2020c:Competence_ISESUS_5
+      a ontoksd:Competence ;
+      rdfs:label "Identify aspects of sustainability and adaptive systems and data"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 5"@en ;
+      skos:definition "Identify aspects of sustainability and adaptive systems and data."@en ;
+      dcterms:identifier "ISESUS-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:SustainabilityOfSystems ,
+          is2020k:AdaptabilityOfSystems ,
+          is2020k:LegalIssuesReusingDataForAnotherPurpose ;
+      ontoksd:hasDisposition ontoksd:responsible , ontoksd:purposeDriven , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_5_01 ,
+          is2020c:KS_ISESUS_5_02 ,
+          is2020c:KS_ISESUS_5_03 .
+
+  is2020c:Competence_ISESUS_6
+      a ontoksd:Competence ;
+      rdfs:label "Categorize ethical stakeholders and their importance to Information Systems"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 6"@en ;
+      skos:definition "Categorize ethical stakeholders and their importance to Information Systems."@en ;
+      dcterms:identifier "ISESUS-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:CoreISStakeholders ,
+          is2020k:ISStakeholderRoles ,
+          is2020k:ImplicationsForIS ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:responsible , ontoksd:passionate ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_6_01 ,
+          is2020c:KS_ISESUS_6_02 ,
+          is2020c:KS_ISESUS_6_03 .
+
+  is2020c:Competence_ISESUS_7
+      a ontoksd:Competence ;
+      rdfs:label "Investigate sustainable processes, actions, and performance to support organizations"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 7"@en ;
+      skos:definition "Investigate sustainable processes, actions, and performance to support organizations."@en ;
+      dcterms:identifier "ISESUS-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ProcessesToSupportEthicalBehaviorInOrganizations ,
+          is2020k:ActivitiesToSupportEthicalBehaviorInOrganizations ,
+          is2020k:PerformanceCriteriaToSupportEthicalBehaviorInOrganizations ;
+      ontoksd:hasDisposition ontoksd:responsible , ontoksd:professional , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_7_01 ,
+          is2020c:KS_ISESUS_7_02 ,
+          is2020c:KS_ISESUS_7_03 .
+
+  is2020c:Competence_ISESUS_8
+      a ontoksd:Competence ;
+      rdfs:label "Investigate sustainable processes, actions, and performance to support the individual"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 8"@en ;
+      skos:definition "Investigate sustainable processes, actions, and performance to support the individual."@en ;
+      dcterms:identifier "ISESUS-8"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ProcessesToSupportEthicalBehaviorForIndividual ,
+          is2020k:ActivitiesToSupportEthicalBehaviorForIndividual ,
+          is2020k:PerformanceCriteriaToSupportEthicalBehaviorByIndividual ;
+      ontoksd:hasDisposition ontoksd:responsible , ontoksd:professional , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_8_01 ,
+          is2020c:KS_ISESUS_8_02 ,
+          is2020c:KS_ISESUS_8_03 .
+
+  is2020c:Competence_ISESUS_9
+      a ontoksd:Competence ;
+      rdfs:label "Investigate sustainable processes, actions, and performance to support society at large"@en ;
+      skos:prefLabel "IS Ethics Sustainability Society Competency 9"@en ;
+      skos:definition "Investigate sustainable processes, actions, and performance to support society at large."@en ;
+      dcterms:identifier "ISESUS-9"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-is-ethics-sustainability-use-and-implications-for-society-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ProcessesToSupportEthicalBehaviorBySociety ,
+          is2020k:ActivitiesToSupportEthicalBehaviorBySociety ,
+          is2020k:PerformanceCriteriaToSupportEthicalBehaviorBySociety ;
+      ontoksd:hasDisposition ontoksd:responsible , ontoksd:professional , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISESUS_9_01 ,
+          is2020c:KS_ISESUS_9_02 ,
+          is2020c:KS_ISESUS_9_03 .
+
+  is2020c:KS_ISESUS_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "International data collection laws × Understanding"@en ; skos:prefLabel "International data collection laws × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:InternationalLawsForDataCollection ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Country specific data collection laws × Understanding"@en ; skos:prefLabel "Country specific data collection laws × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CountrySpecificLawsForDataCollection ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "State and local data collection laws × Understanding"@en ; skos:prefLabel "State and local data collection laws × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:StateAndLocalLawsForDataCollection ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_04 a ontoksd:KnowledgeSkill ; rdfs:label "Data via mobile devices × Understanding"@en ; skos:prefLabel "Data via mobile devices × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DataCollectedViaMobileDevices ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_05 a ontoksd:KnowledgeSkill ; rdfs:label "Data via websites × Understanding"@en ; skos:prefLabel "Data via websites × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DataCollectedViaWebsites ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_06 a ontoksd:KnowledgeSkill ; rdfs:label "Data via social media × Understanding"@en ; skos:prefLabel "Data via social media × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DataCollectedViaSocialMedia ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_07 a ontoksd:KnowledgeSkill ; rdfs:label "Data via email × Understanding"@en ; skos:prefLabel "Data via email × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DataCollectedViaEmail ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_08 a ontoksd:KnowledgeSkill ; rdfs:label "Data via wearable devices × Understanding"@en ; skos:prefLabel "Data via wearable devices × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DataCollectedViaWearableDevices ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_09 a ontoksd:KnowledgeSkill ; rdfs:label "Ethical philosophical frameworks × Understanding"@en ; skos:prefLabel "Ethical philosophical frameworks × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CommonEthicalPhilosophicalFrameworks ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+  is2020c:KS_ISESUS_1_10 a ontoksd:KnowledgeSkill ; rdfs:label "Ethical decision making principles × Understanding"@en ; skos:prefLabel "Ethical decision making principles × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:BasicPrinciplesOfEthicalDecisionMaking ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_1 .
+
+  is2020c:KS_ISESUS_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Data storage and ethics codes × Applying"@en ; skos:prefLabel "Data storage and ethics codes × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DataStorageAndCodesOfEthics ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_2 .
+  is2020c:KS_ISESUS_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Decision making for sharing and using data × Evaluating"@en ; skos:prefLabel "Decision making for sharing and using data × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:DecisionMakingForSharingAndUsingData ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_2 .
+  is2020c:KS_ISESUS_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Moral codes for data sharing × Understanding"@en ; skos:prefLabel "Moral codes for data sharing × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MoralCodesForDataSharing ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_2 .
+
+  is2020c:KS_ISESUS_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Ethical philosophies × Analyzing"@en ; skos:prefLabel "Ethical philosophies × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:EthicalPhilosophies ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_3 .
+  is2020c:KS_ISESUS_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Computing practices for sharing and security × Applying"@en ; skos:prefLabel "Computing practices for sharing and security × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ComputingPracticesDataSharingAndSecurity ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_3 .
+  is2020c:KS_ISESUS_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Vocabulary × Applying"@en ; skos:prefLabel "Vocabulary × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:Vocabulary ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_3 .
+  is2020c:KS_ISESUS_3_04 a ontoksd:KnowledgeSkill ; rdfs:label "Best practices × Analyzing"@en ; skos:prefLabel "Best practices × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:BestPractices ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_3 .
+
+  is2020c:KS_ISESUS_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "IS ethical code of conduct × Applying"@en ; skos:prefLabel "IS ethical code of conduct × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ISEthicalCodeOfConduct ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_4 .
+  is2020c:KS_ISESUS_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Importance of ethical code of conduct × Understanding"@en ; skos:prefLabel "Importance of ethical code of conduct × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ImportanceOfEthicalCodeOfConduct ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_4 .
+  is2020c:KS_ISESUS_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Critical elements of ethical code × Applying"@en ; skos:prefLabel "Critical elements of ethical code × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CriticalElementsOfEthicalCodeOfConduct ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_4 .
+  is2020c:KS_ISESUS_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Applying and adhering to ethical code × Applying"@en ; skos:prefLabel "Applying and adhering to ethical code × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ApplyingAndAdheringToEthicalCode ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_4 .
+  is2020c:KS_ISESUS_4_05 a ontoksd:KnowledgeSkill ; rdfs:label "Breaches of ethical codes × Evaluating"@en ; skos:prefLabel "Breaches of ethical codes × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:BreachesOfEthicalCodesOfConduct ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_4 .
+  is2020c:KS_ISESUS_4_06 a ontoksd:KnowledgeSkill ; rdfs:label "Legal aspects of ethical conduct × Analyzing"@en ; skos:prefLabel "Legal aspects of ethical conduct × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:LegalAspectsOfEthicalConduct ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_4 .
+
+  is2020c:KS_ISESUS_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Sustainability of systems × Understanding"@en ; skos:prefLabel "Sustainability of systems × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SustainabilityOfSystems ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_5 .
+  is2020c:KS_ISESUS_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Adaptability of systems × Understanding"@en ; skos:prefLabel "Adaptability of systems × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AdaptabilityOfSystems ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_5 .
+  is2020c:KS_ISESUS_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Legal issues of reusing data × Analyzing"@en ; skos:prefLabel "Legal issues of reusing data × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:LegalIssuesReusingDataForAnotherPurpose ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_5 .
+
+  is2020c:KS_ISESUS_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Core IS stakeholders × Applying"@en ; skos:prefLabel "Core IS stakeholders × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CoreISStakeholders ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_6 .
+  is2020c:KS_ISESUS_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "IS stakeholder roles × Applying"@en ; skos:prefLabel "IS stakeholder roles × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ISStakeholderRoles ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_6 .
+  is2020c:KS_ISESUS_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Implications for IS × Evaluating"@en ; skos:prefLabel "Implications for IS × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ImplicationsForIS ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_6 .
+
+  is2020c:KS_ISESUS_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Processes for ethical behavior in organizations × Applying"@en ; skos:prefLabel "Processes for ethical behavior in organizations × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessesToSupportEthicalBehaviorInOrganizations ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_7 .
+  is2020c:KS_ISESUS_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Activities for ethical behavior in organizations × Applying"@en ; skos:prefLabel "Activities for ethical behavior in organizations × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ActivitiesToSupportEthicalBehaviorInOrganizations ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_7 .
+  is2020c:KS_ISESUS_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Performance criteria for ethical behavior in organizations × Applying"@en ; skos:prefLabel "Performance criteria for ethical behavior in organizations × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PerformanceCriteriaToSupportEthicalBehaviorInOrganizations ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_7 .
+
+  is2020c:KS_ISESUS_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Processes for ethical behavior for the individual × Applying"@en ; skos:prefLabel "Processes for ethical behavior for the individual × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessesToSupportEthicalBehaviorForIndividual ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_8 .
+  is2020c:KS_ISESUS_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "Activities for ethical behavior for the individual × Applying"@en ; skos:prefLabel "Activities for ethical behavior for the individual × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ActivitiesToSupportEthicalBehaviorForIndividual ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_8 .
+  is2020c:KS_ISESUS_8_03 a ontoksd:KnowledgeSkill ; rdfs:label "Performance criteria for ethical behavior by the individual × Applying"@en ; skos:prefLabel "Performance criteria for ethical behavior by the individual × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PerformanceCriteriaToSupportEthicalBehaviorByIndividual ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_8 .
+
+  is2020c:KS_ISESUS_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Processes for ethical behavior by society × Applying"@en ; skos:prefLabel "Processes for ethical behavior by society × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessesToSupportEthicalBehaviorBySociety ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_9 .
+  is2020c:KS_ISESUS_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Activities for ethical behavior by society × Applying"@en ; skos:prefLabel "Activities for ethical behavior by society × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ActivitiesToSupportEthicalBehaviorBySociety ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_9 .
+  is2020c:KS_ISESUS_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "Performance criteria for ethical behavior by society × Applying"@en ; skos:prefLabel "Performance criteria for ethical behavior by society × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PerformanceCriteriaToSupportEthicalBehaviorBySociety ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISESUS_9 .
+
+}

@@ -1,0 +1,109 @@
+@prefix ex: <http://purl.org/ontoksd/rcd/examples#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Valid example
+#################################################################
+
+ex:RCD_Valid_01 a rcd:RCD ;
+    rcd:title "Design deterministic finite automata"@en ;
+    rcd:title "Projetar autômatos finitos determinísticos"@pt-BR ;
+    rcd:description "Ability to construct a DFA that recognizes a formally specified regular language."@en ;
+    rcd:hasIdentifier ex:ID_RCD_Valid_01 ;
+    rcd:hasDefinition ex:DEF_RCD_Valid_01 ;
+    rcd:hasMetadata ex:META_RCD_Valid_01 .
+
+ex:ID_RCD_Valid_01 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "f3f83a0b-0f70-4f23-a2dc-0a4d8d0d1001" .
+
+ex:DEF_RCD_Valid_01 a rcd:Definition ;
+    rcd:modelSource "http://example.org/models/ksd" ;
+    rcd:hasStatement ex:STMT_RCD_Valid_01_A , ex:STMT_RCD_Valid_01_B .
+
+ex:STMT_RCD_Valid_01_A a rcd:Statement ;
+    rcd:statementName "performance" ;
+    rcd:statementText "Construct a deterministic finite automaton for a target regular language."@en .
+
+ex:STMT_RCD_Valid_01_B a rcd:Statement ;
+    rcd:statementName "criterion" ;
+    rcd:statementText "The automaton correctly accepts all strings in the language and rejects those outside it."@en ;
+    rcd:hasStatementToken ex:VOC_RCD_Valid_01_B .
+
+ex:VOC_RCD_Valid_01_B a rcd:Vocabulary ;
+    rcd:vocabularySource "http://example.org/vocab/criterion" ;
+    rcd:vocabularyValue "correctness" .
+
+ex:META_RCD_Valid_01 a rcd:Metadata ;
+    rcd:rcdSchema "ieee.org/1484.20.1/2006" ;
+    rcd:rcdSchemaVersion "1.0" ;
+    rcd:additionalMetadata "Example metadata literal for testing." .
+
+#################################################################
+# Invalid examples for SHACL testing
+#################################################################
+
+# Missing title
+ex:RCD_Invalid_01 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_01 .
+
+ex:ID_RCD_Invalid_01 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "c2aab5df-3018-494d-9b63-0e94a9f52001" .
+
+# Missing entry in LongIdentifier
+ex:RCD_Invalid_02 a rcd:RCD ;
+    rcd:title "Analyze algorithmic complexity"@en ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_02 .
+
+ex:ID_RCD_Invalid_02 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" .
+
+# Definition without statement
+ex:RCD_Invalid_03 a rcd:RCD ;
+    rcd:title "Explain stack operations"@en ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_03 ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_03 .
+
+ex:ID_RCD_Invalid_03 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "f8e66f7c-b3ef-445a-b611-f3a294ca3003" .
+
+ex:DEF_RCD_Invalid_03 a rcd:Definition .
+
+# Empty statement from the SHACL point of view
+ex:RCD_Invalid_04 a rcd:RCD ;
+    rcd:title "Use recursion to solve problems"@en ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_04 ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_04 .
+
+ex:ID_RCD_Invalid_04 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "a9d7f5ea-b7ff-4980-9e54-38d0db580004" .
+
+ex:DEF_RCD_Invalid_04 a rcd:Definition ;
+    rcd:hasStatement ex:STMT_RCD_Invalid_04 .
+
+ex:STMT_RCD_Invalid_04 a rcd:Statement .
+
+# Vocabulary missing source
+ex:RCD_Invalid_05 a rcd:RCD ;
+    rcd:title "Apply normalization rules in databases"@en ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_05 ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_05 .
+
+ex:ID_RCD_Invalid_05 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "b5ea2614-2c1f-4717-a1fc-5d5d66385005" .
+
+ex:DEF_RCD_Invalid_05 a rcd:Definition ;
+    rcd:hasStatement ex:STMT_RCD_Invalid_05 .
+
+ex:STMT_RCD_Invalid_05 a rcd:Statement ;
+    rcd:statementName "criterion" ;
+    rcd:hasStatementToken ex:VOC_RCD_Invalid_05 .
+
+ex:VOC_RCD_Invalid_05 a rcd:Vocabulary ;
+    rcd:vocabularyValue "third-normal-form" .

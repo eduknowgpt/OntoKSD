@@ -1,0 +1,46 @@
+
+1. Carregar a ontologia revisada: RCD.ttl
+
+2. Verificar com os raciocinadores as restrições lógicas:
+	a. classes RCD, Definition, Statement, LongIdentifier, Vocabulary, Metadata
+	b. propriedades e restrições
+	c. anotações rdfs:label e skos:definition
+
+
+3. Importar os exemplos em RCD_examples.ttl como ontologia adicional.
+	a. Verificar com os raciocinadores
+
+
+
+3. Importar as shapes SHACL em RCD_shapes.ttl para validação operacional das instâncias
+
+
+4. Rodar os raciociadores e observar:
+
+	a. se a ontologia permanece consistente;
+	b. se as restrições em RCD, Definition, LongIdentifier e Vocabulary não introduzem incoerências;
+	c. se os indivíduos inválidos por cardinalidade forte aparecem como problemáticos no raciocínio lógico.
+
+Em especial:
+
+ - RCD_Invalid_02 pode gerar problema por LongIdentifier incompleto.
+ - RCD_Invalid_03 pode gerar problema por Definition sem Statement.
+ - RCD_Invalid_04 tende a depender mais de SHACL do que apenas de OWL.
+
+
+
+5. Rodar a funcionalidade de validação SHACL disponível no Protégé (PlugIn opcional - instalar). Com isto, deve-se verifica conformidade de instâncias, detectar ausência de campos esperados e capturar regras práticas que o OWL não expressa tão bem.
+
+a. Validação esperada:
+
+	- RCD_Valid_01 deve passar
+	- RCD_Invalid_01 deve falhar por falta de title
+	- RCD_Invalid_02 deve falhar por falta de entry
+	- RCD_Invalid_03 deve falhar por falta de Statement
+	- RCD_Invalid_04 deve falhar porque o Statement está vazio
+	- RCD_Invalid_05 deve falhar porque Vocabulary não tem vocabularySource
+
+
+
+
+

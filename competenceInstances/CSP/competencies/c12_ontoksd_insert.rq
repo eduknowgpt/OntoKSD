@@ -1,0 +1,70 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <http://purl.org/cs2023#>
+PREFIX cs2023k:   <http://purl.org/cs2023/knowledge#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C12 a ontoksd:Competence ;
+      rdfs:label "Develop problem-solving solutions using Pushdown Automata"@en ;
+      dcterms:identifier "C12"^^xsd:string ;
+      rdfs:comment "Atomic competence concerned with designing, constructing, and validating computational solutions based on Pushdown Automata to represent behaviors that require stack-based memory, backtracking, nested structures, or sequence reversal, in alignment with formal problem requirements."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C12_PushdownAutomata_Creating ,
+                                ontoksd:KS_C12_RequirementsEngineering_Applying ,
+                                ontoksd:KS_C12_AnalyticalThinking_Applying ;
+      ontoksd:hasDisposition ontoksd:inventive ,
+                             ontoksd:collaborative ,
+                             ontoksd:responsible ,
+                             ontoksd:proactive ,
+                             ontoksd:creative .
+
+  ontoksd:KS_C12_PushdownAutomata_Creating a ontoksd:KnowledgeSkill ;
+      rdfs:label "C12 KS Pair — Pushdown Automata × Creating"@en ;
+      dcterms:identifier "C12-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with creating Pushdown Automata-based solutions by designing, developing, and constructing formal models that employ stack-based memory to support hierarchical processing, backtracking, nested structures, and sequence reversal."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_6 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Creating ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_6 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:design ,
+                                             bloom:develop ,
+                                             bloom:construct .
+
+  ontoksd:KS_C12_RequirementsEngineering_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C12 KS Pair — Requirements Engineering × Applying"@en ;
+      dcterms:identifier "C12-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying requirements-engineering knowledge to interpret, specify, and translate problem descriptions and constraints into formal specifications that guide Pushdown Automata design."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SE_Requirements_3 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_SE_Requirements_3 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:interpret ,
+                                             bloom:specify ,
+                                             bloom:translate .
+
+  ontoksd:KS_C12_AnalyticalThinking_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C12 KS Pair — Analytical and Critical Thinking × Applying"@en ;
+      dcterms:identifier "C12-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying analytical and critical thinking to decompose complex problems, evaluate alternative modeling strategies, and refine Pushdown Automata-based solutions according to formal properties, behavioral constraints, and system-level objectives."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:decompose ,
+                                             bloom:evaluate ,
+                                             bloom:refine .
+
+  cs2023k:Knowledge_AL_Models_6
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  cs2023k:Knowledge_SE_Requirements_3
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+}

@@ -1,0 +1,21 @@
+# This query retrieves evidence produced in the assessment occurrence associated with each assessment participation. Thus, the query demonstrates that OntoKSD can connect learner participation to the occurrence-level evidence produced in the same evaluative event.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?assessmentParticipation
+  ?assessmentParticipationLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+  ?evidence
+  ?evidenceLabel
+WHERE {
+  ?assessmentParticipation ontoksd:occursInAssessmentOccurrence ?assessmentOccurrence .
+  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
+
+  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+}
+ORDER BY ?assessmentParticipationLabel ?assessmentOccurrenceLabel ?evidenceLabel

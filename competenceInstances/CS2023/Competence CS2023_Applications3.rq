@@ -1,48 +1,130 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:AI-ML  ontoksd:cs2023ExplainSkill)
-    (cs2023:AI-SEP ontoksd:cs2023ExplainSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Applications3 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Critique a deployed machine learning model in terms of potential bias and correct the issues."@en ;
-    dcterms:description "Understand, recognize, and evaluate issues of data set bias in AI, the types of bias, and algorithmic strategies for mitigation."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Applications3"@en ;
-    ontoksd:hasDisposition ontoksd:responsible ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
-;
+  #################################################################
+  # Competence
+  #################################################################
 
-############# VERBOS ################
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:AI-ML  ontoksd:cs2023ExplainSkill bloom:explain)
-    (cs2023:AI-SEP ontoksd:cs2023ExplainSkill bloom:interpret)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  cs2023c:Competence_Applications3
+      a ontoksd:Competence ;
+      rdfs:label "Understand, recognize, and evaluate issues of data set bias in AI, the types of bias, and algorithmic strategies for mitigation"@en ;
+      skos:prefLabel "Understand, recognize, and evaluate issues of data set bias in AI, the types of bias, and algorithmic strategies for mitigation"@en ;
+      skos:definition "Understand, recognize, and evaluate issues of data set bias in AI, the types of bias, and algorithmic strategies for mitigation."@en ;
+      rdfs:comment "Competence derived from the CS2023 Applications Competency Area, Task Applications3. The competence is specified through explicit KnowledgeSkill pairs and the desirable professional dispositions associated with the task. Since the CS2023 statement assigns the skill level Explain, the knowledge elements are represented with that same required skill level."@en ;
+      dcterms:identifier "Applications3"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Applications3 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Applications3_AI_ML_1_Explain ,
+          cs2023c:KS_Applications3_AI_SEP_1_Explain ;
+      ontoksd:hasDisposition
+          ontoksd:responsible ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
+
+  #################################################################
+  # Specification-level Task
+  #################################################################
+
+  cs2023c:Task_Applications3
+      a ontoksd:Task ;
+      rdfs:label "Applications3 task"@en ;
+      skos:prefLabel "Applications3 task"@en ;
+      ontoksd:hasTaskStatement "Critique a deployed machine learning model in terms of potential bias and correct the issues."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Applications3. The task concerns examining a deployed machine learning model to identify potential bias, explain the nature and source of the bias, and support correction through appropriate mitigation strategies."@en ;
+      dcterms:identifier "Task_Applications3"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Applications3_DeployedMLModel ,
+          cs2023c:TaskComponent_Applications3_BiasIssues ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Applications3_Critique ,
+          cs2023c:TaskActivity_Applications3_Recognize ,
+          cs2023c:TaskActivity_Applications3_Explain ,
+          cs2023c:TaskActivity_Applications3_Correct ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Applications3_PotentialBias ,
+          cs2023c:TaskConstraint_Applications3_MitigationStrategies .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Applications3_DeployedMLModel
+      a ontoksd:TaskComponent ;
+      rdfs:label "deployed machine learning model"@en ;
+      skos:prefLabel "deployed machine learning model"@en ;
+      rdfs:comment "Task component corresponding to the machine learning model already deployed and subject to critical examination."@en .
+
+  cs2023c:TaskComponent_Applications3_BiasIssues
+      a ontoksd:TaskComponent ;
+      rdfs:label "bias issues in data set and model behavior"@en ;
+      skos:prefLabel "bias issues in data set and model behavior"@en ;
+      rdfs:comment "Task component corresponding to the bias-related issues that must be identified, explained, and addressed."@en .
+
+  cs2023c:TaskActivity_Applications3_Critique
+      a ontoksd:TaskActivity ;
+      rdfs:label "critique"@en ;
+      skos:prefLabel "critique"@en ;
+      rdfs:comment "Task activity capturing the critical examination of a deployed machine learning model in relation to potential bias."@en .
+
+  cs2023c:TaskActivity_Applications3_Recognize
+      a ontoksd:TaskActivity ;
+      rdfs:label "recognize"@en ;
+      skos:prefLabel "recognize"@en ;
+      rdfs:comment "Task activity capturing the recognition of data set bias, bias types, and problematic model behavior."@en .
+
+  cs2023c:TaskActivity_Applications3_Explain
+      a ontoksd:TaskActivity ;
+      rdfs:label "explain"@en ;
+      skos:prefLabel "explain"@en ;
+      rdfs:comment "Task activity capturing the explanation of the nature of bias, its causes, and possible mitigation strategies."@en .
+
+  cs2023c:TaskActivity_Applications3_Correct
+      a ontoksd:TaskActivity ;
+      rdfs:label "correct"@en ;
+      skos:prefLabel "correct"@en ;
+      rdfs:comment "Task activity capturing the correction of identified bias-related issues through appropriate mitigation actions."@en .
+
+  cs2023c:TaskConstraint_Applications3_PotentialBias
+      a ontoksd:TaskConstraint ;
+      rdfs:label "in terms of potential bias"@en ;
+      skos:prefLabel "in terms of potential bias"@en ;
+      rdfs:comment "Task constraint stating that the critique must specifically address potential bias in the deployed machine learning model."@en .
+
+  cs2023c:TaskConstraint_Applications3_MitigationStrategies
+      a ontoksd:TaskConstraint ;
+      rdfs:label "with attention to algorithmic strategies for mitigation"@en ;
+      skos:prefLabel "with attention to algorithmic strategies for mitigation"@en ;
+      rdfs:comment "Task constraint stating that the task must consider strategies for mitigating identified bias issues."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Applications3_AI_ML_1_Explain
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AI-ML × Explain"@en ;
+      skos:prefLabel "AI-ML × Explain"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications3. It associates AI-ML knowledge with the CS2023 skill level Explain in the recognition and explanation of data set bias, bias types, and algorithmic mitigation strategies in machine learning."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AI_ML_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Explain .
+
+  cs2023c:KS_Applications3_AI_SEP_1_Explain
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AI-SEP × Explain"@en ;
+      skos:prefLabel "AI-SEP × Explain"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications3. It associates AI-SEP knowledge with the CS2023 skill level Explain in articulating the ethical and societal implications of bias in deployed machine learning models and in justifying mitigation-oriented correction."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AI_SEP_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Explain .
+
 }

@@ -1,0 +1,543 @@
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX dc:        <http://purl.org/dc/elements/1.1/>
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <https://csed.acm.org/knowledge-area/>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+
+  #################################################################
+  # Acquisition context
+  #################################################################
+
+  ontoksd:AC_Task25.23 a ontoksd:AcquisitionContext ;
+    rdfs:label "Acquisition context for Task25.23 — Interactive Quiz: Fundamental Concepts of Hardware and Software"@en ;
+    rdfs:comment "Pedagogically relevant situation for Task25.23 in the Computer Architecture unit of the first-year Integrated Technical Program in Informatics at IFBA. The task is conducted after the theoretical block on computer architecture, hardware, software, and organization of computational systems, in a computer laboratory using mobile phones and institutional computers with internet access."@en .
+
+  #################################################################
+  # Learning task
+  #################################################################
+
+  ontoksd:Task25.23 a ontoksd:LearningTask ;
+    rdfs:label "Task25.23 — Interactive Quiz: Fundamental Concepts of Hardware and Software"@en ;
+    dcterms:title "Task25.23 — Interactive Quiz: Fundamental Concepts of Hardware and Software"@en ;
+    dc:description "Learning task in which learners participate in a 15-question interactive quiz about hardware, software, and basic computer architecture. Questions address identification and function of hardware components, differences between system software and application software, relations between hardware and performance, and problem-based scenarios involving real computational systems. After each question, guided discussion is used to explain the correct answer, clarify misunderstandings, and relate the topic to previous theoretical lessons."@en ;
+    rdfs:comment "Although the uploaded report text internally refers to TASK25.5, this materialization follows the file and user request identifier TASK25.23. The task is modeled as an interactive formative LearningTask rather than only as a quiz score, because evidence includes quiz performance records, scenario-based answers, oral justifications, and participation in feedback cycles."@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task25.23 ;
+    ontoksd:hasCompetenceRelator ontoksd:CA_Task25.23_CT25.23.1 ,
+                                 ontoksd:CA_Task25.23_CT25.23.2 ,
+                                 ontoksd:CA_Task25.23_CT25.23.3 ,
+                                 ontoksd:CA_Task25.23_CT25.23.4 ,
+                                 ontoksd:CA_Task25.23_CT25.23.5 ,
+                                 ontoksd:CA_Task25.23_CT25.23.6 .
+
+  #################################################################
+  # Competence specifications
+  #################################################################
+
+  ontoksd:CT25.23.1 a ontoksd:Competence ;
+    rdfs:label "CT25.23.1 — Identify hardware components and their functions"@en ;
+    dcterms:title "Identify hardware components and their functions"@en ;
+    dc:description "This competence involves recognizing basic computer hardware components and describing their primary functions within a computational system."@en ;
+    rdfs:comment "In Task25.23, this competence is demonstrated when learners identify components such as CPU, memory, storage devices, and input/output devices in multiple-choice questions and guided discussions. It focuses on conceptual identification and functional recognition rather than broader system diagnosis."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:meticulous , ontoksd:curious ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.23.1_HardwareComponents_Understanding ,
+                              ontoksd:KS_CT25.23.1_HardwareFunctions_Understanding ,
+                              ontoksd:KS_CT25.23.1_InputOutputDevices_Understanding .
+
+  ontoksd:CT25.23.2 a ontoksd:Competence ;
+    rdfs:label "CT25.23.2 — Distinguish system software from application software"@en ;
+    dcterms:title "Distinguish system software from application software"@en ;
+    dc:description "This competence involves distinguishing software categories according to their role in a computational system."@en ;
+    rdfs:comment "In Task25.23, this competence is demonstrated when learners classify examples of software as system software or application software and explain the difference between software that manages the system and software used by users to perform tasks."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:meticulous , ontoksd:analytical ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.23.2_SystemSoftware_Understanding ,
+                              ontoksd:KS_CT25.23.2_ApplicationSoftware_Understanding ,
+                              ontoksd:KS_CT25.23.2_SoftwareCategories_Analyzing .
+
+  ontoksd:CT25.23.3 a ontoksd:Competence ;
+    rdfs:label "CT25.23.3 — Explain hardware–software interaction in basic computer systems"@en ;
+    dcterms:title "Explain hardware–software interaction in basic computer systems"@en ;
+    dc:description "This competence involves explaining how hardware and software interact in the operation of a computer system."@en ;
+    rdfs:comment "In Task25.23, this competence is demonstrated when learners reason about how the operating system, applications, processors, memory, storage, and input/output devices contribute to system behavior and performance. It is distinct from component identification because it requires relating components and explaining their interaction."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:analytical , ontoksd:critical ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.23.3_HardwareSoftwareInteraction_Understanding ,
+                              ontoksd:KS_CT25.23.3_OperatingSystemResourceManagement_Understanding ,
+                              ontoksd:KS_CT25.23.3_SystemPerformanceFactors_Analyzing .
+
+  ontoksd:CT25.23.4 a ontoksd:Competence ;
+    rdfs:label "CT25.23.4 — Analyze computer system scenarios using foundational architecture concepts"@en ;
+    dcterms:title "Analyze computer system scenarios using foundational architecture concepts"@en ;
+    dc:description "This competence involves analyzing short scenarios about computer assembly, operation, configuration, or performance using foundational computer architecture concepts."@en ;
+    rdfs:comment "In Task25.23, this competence is demonstrated when learners answer problem-based quiz questions involving real computational systems and justify why a given answer is correct or incorrect. It is more advanced than simple recall because it requires applying concepts to contextualized situations."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:critical , ontoksd:meticulous , ontoksd:investigative ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.23.4_BasicComputerArchitecture_Applying ,
+                              ontoksd:KS_CT25.23.4_ScenarioInterpretation_Analyzing ,
+                              ontoksd:KS_CT25.23.4_ConceptualDiagnosis_Analyzing .
+
+  ontoksd:CT25.23.5 a ontoksd:Competence ;
+    rdfs:label "CT25.23.5 — Revise conceptual understanding through immediate feedback"@en ;
+    dcterms:title "Revise conceptual understanding through immediate feedback"@en ;
+    dc:description "This competence involves using feedback to identify misconceptions, revise explanations, and improve conceptual understanding."@en ;
+    rdfs:comment "In Task25.23, this competence is demonstrated when learners receive immediate feedback after each quiz question and participate in guided discussions that clarify correct answers and address misunderstandings. It captures the formative nature of the task beyond quiz scoring."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:professionalCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:reflective , ontoksd:receptive , ontoksd:persistent ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.23.5_FeedbackInterpretation_Understanding ,
+                              ontoksd:KS_CT25.23.5_MisconceptionIdentification_Analyzing ,
+                              ontoksd:KS_CT25.23.5_ConceptualRevision_Applying .
+
+  ontoksd:CT25.23.6 a ontoksd:Competence ;
+    rdfs:label "CT25.23.6 — Communicate and justify answers using computing vocabulary"@en ;
+    dcterms:title "Communicate and justify answers using computing vocabulary"@en ;
+    dc:description "This competence involves explaining and justifying quiz answers using appropriate computing vocabulary and coherent reasoning."@en ;
+    rdfs:comment "In Task25.23, this competence is demonstrated when learners participate in post-question discussions, explain why a selected answer is correct or incorrect, and relate answers to concepts such as hardware, software, operating systems, performance, and system organization."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:professionalCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:communicative , ontoksd:respectful , ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.23.6_TechnicalVocabulary_Understanding ,
+                              ontoksd:KS_CT25.23.6_LogicalJustification_Applying ,
+                              ontoksd:KS_CT25.23.6_OralCommunication_Applying .
+
+  #################################################################
+  # Knowledge-Skill relators
+  #################################################################
+
+  ontoksd:KS_CT25.23.1_HardwareComponents_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.1: Hardware components x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.1 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:identify , bloom:recognize , bloom:name .
+
+  ontoksd:KS_CT25.23.1_HardwareFunctions_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.1: Hardware functions x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.1 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:describe , bloom:explain , bloom:distinguish .
+
+  ontoksd:KS_CT25.23.1_InputOutputDevices_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.1: Input/output devices x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.1 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:classify , bloom:identify , bloom:relate .
+
+  ontoksd:KS_CT25.23.2_SystemSoftware_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.2: System software x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.2 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_OS ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_OS ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:define , bloom:describe , bloom:identify .
+
+  ontoksd:KS_CT25.23.2_ApplicationSoftware_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.2: Application software x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.2 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_SDF ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_SDF ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:classify , bloom:distinguish , bloom:compare .
+
+  ontoksd:KS_CT25.23.2_SoftwareCategories_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.2: Software categories x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.2 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_SF ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_SF ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:differentiate , bloom:contrast , bloom:justify .
+
+  ontoksd:KS_CT25.23.3_HardwareSoftwareInteraction_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.3: Hardware-software interaction x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.3 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain , bloom:describe , bloom:relate .
+
+  ontoksd:KS_CT25.23.3_OperatingSystemResourceManagement_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.3: Operating system resource management x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.3 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_OS ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_OS ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain , bloom:identify , bloom:clarify .
+
+  ontoksd:KS_CT25.23.3_SystemPerformanceFactors_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.3: System performance factors x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.3 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:analyze , bloom:relate , bloom:examine .
+
+  ontoksd:KS_CT25.23.4_BasicComputerArchitecture_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.4: Basic computer architecture x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.4 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:use , bloom:apply , bloom:interpret .
+
+  ontoksd:KS_CT25.23.4_ScenarioInterpretation_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.4: Scenario interpretation x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.4 ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:AnalyticalThinking ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:analyze , bloom:infer , bloom:determine .
+
+  ontoksd:KS_CT25.23.4_ConceptualDiagnosis_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.4: Conceptual diagnosis x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.4 ;
+    ontoksd:hasKnowledgeComponent cc2020found:CriticalThinking ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:CriticalThinking ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:diagnose , bloom:identify , bloom:justify .
+
+  ontoksd:KS_CT25.23.5_FeedbackInterpretation_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.5: Feedback interpretation x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.5 ;
+    ontoksd:hasKnowledgeComponent cc2020found:SelfReflection ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:SelfReflection ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:recognize , bloom:interpret , bloom:explain .
+
+  ontoksd:KS_CT25.23.5_MisconceptionIdentification_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.5: Misconception identification x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.5 ;
+    ontoksd:hasKnowledgeComponent cc2020found:CriticalThinking ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:CriticalThinking ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:detect , bloom:compare , bloom:revise .
+
+  ontoksd:KS_CT25.23.5_ConceptualRevision_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.5: Conceptual revision x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.5 ;
+    ontoksd:hasKnowledgeComponent cc2020found:SelfReflection ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:SelfReflection ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:correct , bloom:adjust , bloom:improve .
+
+  ontoksd:KS_CT25.23.6_TechnicalVocabulary_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.6: Technical vocabulary x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.6 ;
+    ontoksd:hasKnowledgeComponent cs2023:KA_AR ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:KA_AR ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:define , bloom:name , bloom:explain .
+
+  ontoksd:KS_CT25.23.6_LogicalJustification_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.6: Logical justification x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.6 ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:AnalyticalThinking ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:justify , bloom:support , bloom:demonstrate .
+
+  ontoksd:KS_CT25.23.6_OralCommunication_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.23.6: Oral communication x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.23.6 ;
+    ontoksd:hasKnowledgeComponent cc2020found:OralCommunication ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:OralCommunication ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:present , bloom:communicate , bloom:respond .
+
+  #################################################################
+  # Competence activations
+  #################################################################
+
+  ontoksd:CA_Task25.23_CT25.23.1 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.23.1 in Task25.23"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.23 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.23.1 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.23.1 is activated as a mandatory core interpretative competence because the task requires learners to identify hardware components and recognize their functions in quiz questions and guided discussion."@en .
+
+  ontoksd:CA_Task25.23_CT25.23.2 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.23.2 in Task25.23"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.23 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.23.2 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amInterpretativeAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.23.2 is activated as a mandatory core interpretative-analytical competence because learners must classify and distinguish software categories, including system software and application software."@en .
+
+  ontoksd:CA_Task25.23_CT25.23.3 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.23.3 in Task25.23"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.23 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.23.3 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.23.3 is activated as a mandatory core analytical competence because learners must relate hardware and software elements and explain how these elements contribute to system behavior and performance."@en .
+
+  ontoksd:CA_Task25.23_CT25.23.4 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.23.4 in Task25.23"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.23 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.23.4 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.23.4 is activated as a mandatory core analytical competence because learners must interpret scenario-based quiz questions and diagnose which foundational architecture concept explains the correct answer."@en .
+
+  ontoksd:CA_Task25.23_CT25.23.5 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.23.5 in Task25.23"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.23 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.23.5 ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:hasActivationMode ontoksd:amReflectiveAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.23.5 is activated as a mandatory supporting reflective-analytical competence because the task includes feedback cycles in which learners compare answers, detect misconceptions, and revise explanations."@en .
+
+  ontoksd:CA_Task25.23_CT25.23.6 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.23.6 in Task25.23"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.23 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.23.6 ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.23.6 is activated as a mandatory supporting justificatory competence because learners must communicate and justify answers using appropriate computing vocabulary during post-question discussions."@en .
+
+  #################################################################
+  # BNCC external competence references
+  #################################################################
+
+  ontoksd:BNCC_EM_GeneralCompetence_1 a ontoksd:BNCCGeneralCompetence ;
+    rdfs:label "BNCC Computing — High School General Competence 1"@en ;
+    skos:notation "BNCC-EM-CG1" .
+
+  ontoksd:BNCC_EM_GeneralCompetence_3 a ontoksd:BNCCGeneralCompetence ;
+    rdfs:label "BNCC Computing — High School General Competence 3"@en ;
+    skos:notation "BNCC-EM-CG3" .
+
+  ontoksd:BNCC_EM_GeneralCompetence_6 a ontoksd:BNCCGeneralCompetence ;
+    rdfs:label "BNCC Computing — High School General Competence 6"@en ;
+    skos:notation "BNCC-EM-CG6" .
+
+  ontoksd:BNCC_EM_GeneralCompetence_7 a ontoksd:BNCCGeneralCompetence ;
+    rdfs:label "BNCC Computing — High School General Competence 7"@en ;
+    skos:notation "BNCC-EM-CG7" .
+
+  ontoksd:BNCC_EF02CO04 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF02CO04"@pt ; skos:notation "EF02CO04" .
+  ontoksd:BNCC_EF05CO05 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF05CO05"@pt ; skos:notation "EF05CO05" .
+  ontoksd:BNCC_EF05CO07 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF05CO07"@pt ; skos:notation "EF05CO07" .
+  ontoksd:BNCC_EF06CO02 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF06CO02"@pt ; skos:notation "EF06CO02" .
+  ontoksd:BNCC_EF15CO06 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF15CO06"@pt ; skos:notation "EF15CO06" .
+  ontoksd:BNCC_EF15CO07 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF15CO07"@pt ; skos:notation "EF15CO07" .
+  ontoksd:BNCC_EF69CO02 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EF69CO02"@pt ; skos:notation "EF69CO02" .
+  ontoksd:BNCC_EM13CO06 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EM13CO06"@pt ; skos:notation "EM13CO06" .
+  ontoksd:BNCC_EM13CO19 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EM13CO19"@pt ; skos:notation "EM13CO19" .
+  ontoksd:BNCC_EM13CO21 a ontoksd:BNCCSpecificCompetence ; rdfs:label "BNCC EM13CO21"@pt ; skos:notation "EM13CO21" .
+
+  #################################################################
+  # Qualified external alignments
+  #################################################################
+
+  ontoksd:EA_CT25.23.1_BNCC_EF05CO05 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.1 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF05CO05 ;
+    ontoksd:hasAlignmentType ontoksd:CurricularContinuityAlignment ;
+    ontoksd:hasAlignmentJustification "Supports prior-stage identification of main computer components."@en .
+
+  ontoksd:EA_CT25.23.1_BNCC_EF06CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.1 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF06CO02 ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:hasAlignmentJustification "Relates indirectly to understanding how computational instructions are executed by systems."@en .
+
+  ontoksd:EA_CT25.23.1_BNCC_EF69CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.1 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF69CO02 ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:hasAlignmentJustification "Relates indirectly to understanding how computational instructions are executed by systems."@en .
+
+  ontoksd:EA_CT25.23.1_BNCC_CG1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.1 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_1 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports understanding computational systems for problem solving."@en .
+
+  ontoksd:EA_CT25.23.2_BNCC_EF05CO07 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.2 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF05CO07 ;
+    ontoksd:hasAlignmentType ontoksd:CurricularContinuityAlignment ;
+    ontoksd:hasAlignmentJustification "Supports understanding the operating system and its importance."@en .
+
+  ontoksd:EA_CT25.23.2_BNCC_EF02CO04 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.2 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF02CO04 ;
+    ontoksd:hasAlignmentType ontoksd:CurricularContinuityAlignment ;
+    ontoksd:hasAlignmentJustification "Prior-stage distinction between hardware and software."@en .
+
+  ontoksd:EA_CT25.23.2_BNCC_CG1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.2 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_1 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports understanding computational systems and their organization."@en .
+
+  ontoksd:EA_CT25.23.3_BNCC_EF15CO06 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.3 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF15CO06 ;
+    ontoksd:hasAlignmentType ontoksd:CurricularContinuityAlignment ;
+    ontoksd:hasAlignmentJustification "Supports knowledge of basic components and functioning of computational devices."@en .
+
+  ontoksd:EA_CT25.23.3_BNCC_EF15CO07 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.3 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EF15CO07 ;
+    ontoksd:hasAlignmentType ontoksd:CurricularContinuityAlignment ;
+    ontoksd:hasAlignmentJustification "Supports understanding the operating system as an integration layer between software and hardware."@en .
+
+  ontoksd:EA_CT25.23.3_BNCC_EM13CO06 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.3 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM13CO06 ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:hasAlignmentJustification "Relates to evaluating software characteristics, but the task focuses on introductory explanation rather than full software evaluation."@en .
+
+  ontoksd:EA_CT25.23.3_BNCC_CG1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.3 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_1 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports understanding possibilities and limits of computing systems."@en .
+
+  ontoksd:EA_CT25.23.4_BNCC_EM13CO06 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.4 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM13CO06 ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:hasAlignmentJustification "Scenario analysis may involve judging software or system characteristics, but the task remains introductory."@en .
+
+  ontoksd:EA_CT25.23.4_BNCC_CG1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.4 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_1 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports analyzing computational solutions and system behavior."@en .
+
+  ontoksd:EA_CT25.23.4_BNCC_CG3 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.4 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_3 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports selecting computational knowledge to analyze situations."@en .
+
+  ontoksd:EA_CT25.23.5_BNCC_CG7 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.5 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_7 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports responsible, autonomous, and reflective action."@en .
+
+  ontoksd:EA_CT25.23.5_BNCC_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.5 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM13CO19 ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:hasAlignmentJustification "Discussion and argumentation support feedback-based revision but do not fully define it."@en .
+
+  ontoksd:EA_CT25.23.6_BNCC_CG6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.6 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_6 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports expressing and sharing computational ideas clearly."@en .
+
+  ontoksd:EA_CT25.23.6_BNCC_CG7 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.6 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM_GeneralCompetence_7 ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:hasAlignmentJustification "Supports respectful and responsible interaction."@en .
+
+  ontoksd:EA_CT25.23.6_BNCC_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.6 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM13CO19 ;
+    ontoksd:hasAlignmentType ontoksd:CloseAlignment ;
+    ontoksd:hasAlignmentJustification "The activity explicitly requires exposition and argumentation about answers."@en .
+
+  ontoksd:EA_CT25.23.6_BNCC_EM13CO21 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:mediatesInternalCompetence ontoksd:CT25.23.6 ;
+    ontoksd:mediatesExternalCompetence ontoksd:BNCC_EM13CO21 ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:hasAlignmentJustification "Supports communication of complex ideas, although the task does not require specialized digital objects."@en .
+
+  #################################################################
+  # Assessment and evidence specification
+  #################################################################
+
+  ontoksd:Assessment_Task25.23 a ontoksd:Assessment ;
+    rdfs:label "Assessment specification for Task25.23"@en ;
+    dcterms:title "Assessment specification for Task25.23"@en ;
+    dc:description "Assessment specification for the Kahoot interactive quiz, scenario-based responses, oral justifications, and feedback-cycle participation associated with Task25.23."@en ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:QuizAssessmentType ;
+    rdfs:comment "The assessment design distinguishes quiz performance records from learner reasoning and feedback-based conceptual revision. This prevents quiz scores alone from being treated as sufficient evidence of competence and allows oral justification and feedback participation to support richer competence interpretation."@en .
+
+  ontoksd:AssessmentOccurrence_Task25.23 a ontoksd:AssessmentOccurrence ;
+    rdfs:label "Assessment occurrence for Task25.23"@en ;
+    ontoksd:realizes ontoksd:Assessment_Task25.23 ;
+    ontoksd:occursInAcquisitionContext ontoksd:AC_Task25.23 ;
+    ontoksd:producesEvidence ontoksd:Evidence_Task25.23_QuizPerformanceRecords ,
+                             ontoksd:Evidence_Task25.23_ScenarioBasedResponses ,
+                             ontoksd:Evidence_Task25.23_OralJustifications ,
+                             ontoksd:Evidence_Task25.23_FeedbackCycleParticipation ;
+    rdfs:comment "Concrete assessment occurrence that produces evidence from quiz performance records, scenario-based answers, oral justifications during guided discussion, and participation in feedback cycles."@en .
+
+  ontoksd:Evidence_Task25.23_QuizPerformanceRecords a ontoksd:Evidence ;
+    rdfs:label "Task25.23 quiz performance records"@en ;
+    ontoksd:hasEvidenceType ontoksd:AssessmentRecord ;
+    rdfs:comment "Artifact-level evidence generated by Kahoot, including selected answers, correctness, and response time across the 15 quiz questions."@en .
+
+  ontoksd:Evidence_Task25.23_ScenarioBasedResponses a ontoksd:Evidence ;
+    rdfs:label "Task25.23 scenario-based responses"@en ;
+    ontoksd:hasEvidenceType ontoksd:AssessmentResponse ;
+    rdfs:comment "Performance-level evidence from answers to problem-based questions, showing conceptual application of hardware, software, operating-system, and computer-architecture concepts in contextualized situations."@en .
+
+  ontoksd:Evidence_Task25.23_OralJustifications a ontoksd:Evidence ;
+    rdfs:label "Task25.23 oral justifications during guided discussion"@en ;
+    ontoksd:hasEvidenceType ontoksd:OralExplanation ;
+    rdfs:comment "Learner-level evidence consisting of oral explanations and justifications during post-question discussion, showing reasoning, technical vocabulary, and ability to explain why answers are correct or incorrect."@en .
+
+  ontoksd:Evidence_Task25.23_FeedbackCycleParticipation a ontoksd:Evidence ;
+    rdfs:label "Task25.23 participation in feedback cycles"@en ;
+    ontoksd:hasEvidenceType ontoksd:ParticipationRecord ;
+    rdfs:comment "Performance-level evidence showing learner engagement in immediate feedback cycles, correction of misconceptions, and revision of conceptual understanding after quiz questions."@en .
+
+}

@@ -1,0 +1,43 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  #################################################################
+  # Competency C05.01
+  #################################################################
+
+  ontoksd:C05_01 a ontoksd:Competence ;
+    rdfs:label "C05.01 — Write mathematically rigorous answers"@en ;
+    dcterms:title "Write mathematically rigorous answers"@en ;
+    dc:description "Competency involving the ability to produce mathematically rigorous written answers that justify conclusions through explicit definitions, precise notation, structured arguments, and appropriate supporting examples."@en ;
+    rdfs:comment "This competency involves the ability to produce mathematically rigorous written answers that clearly justify conclusions through explicit definitions, precise notation, structured arguments, and appropriate supporting examples. Learners demonstrate this competency by stating relevant formal definitions clearly, organizing answers so that claims, justifications, and conclusions are explicitly connected, using examples or counterexamples when they help clarify or validate the reasoning, applying appropriate technical and mathematical notation consistently, and presenting arguments with sufficient rigor to support the correctness of the conclusion. This competency specializes technical report writing toward tasks in which the main evidence lies not only in presenting a result, but in formally justifying why the result is valid."@en ;
+    ontoksd:isSpecializationOf ontoksd:C05 ;
+    ontoksd:hasDisposition ontoksd:Meticulous ,
+                           ontoksd:Responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:C05_01_KS1 ,
+                              ontoksd:C05_01_KS2 .
+
+  ontoksd:C05 a ontoksd:Competence .
+
+  ontoksd:C05_01_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "C05.01 KS1 — Written Communication applied"@en ;
+    ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+    ontoksd:hasRequiredSkillLevel bloom:Applying ;
+    rdfs:comment "Knowledge-skill pair for applying written communication to write, structure, document, and clarify mathematically rigorous answers."@en .
+
+  ontoksd:C05_01_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "C05.01 KS2 — Analytical and Critical Thinking analyzed and evaluated"@en ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasRequiredSkillLevel bloom:Analyzing , bloom:Evaluating ;
+    rdfs:comment "Knowledge-skill pair for distinguishing assumptions, assessing validity, supporting conclusions, and identifying inconsistencies in mathematically rigorous answers."@en .
+
+}

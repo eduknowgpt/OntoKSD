@@ -1,0 +1,50 @@
+# This query retrieves the evidence instances that support evidenced competence records or evidenced competence constituent records. It returns each evidenced record, its type, the abstract competence or competence constituent to which it refers, and the evidence that supports its identification or recognition. Thus, the query demonstrates that OntoKSD can trace evidenced competences and evidenced competence constituents back to the concrete evidence instances that support them.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?evidencedRecord
+  ?evidencedRecordLabel
+  ?recordType
+  ?referencedEntity
+  ?referencedEntityLabel
+  ?evidence
+  ?evidenceLabel
+WHERE {
+  {
+    ?evidencedRecord a ontoksd:EvidencedCompetence ;
+                     ontoksd:supportedByEvidence ?evidence .
+
+    BIND("EvidencedCompetence" AS ?recordType)
+
+    OPTIONAL {
+      ?evidencedRecord ontoksd:refersToCompetence ?referencedEntity .
+    }
+  }
+  UNION
+  {
+    ?evidencedRecord a ontoksd:EvidencedCompetenceConstituent ;
+                     ontoksd:supportedByEvidence ?evidence .
+
+    BIND("EvidencedCompetenceConstituent" AS ?recordType)
+
+    OPTIONAL {
+      ?evidencedRecord ontoksd:refersToCompetenceConstituent ?referencedEntity .
+    }
+  }
+
+  OPTIONAL { ?evidencedRecord rdfs:label ?evidencedRecordRdfsLabel . }
+  OPTIONAL { ?evidencedRecord skos:prefLabel ?evidencedRecordSkosLabel . }
+  BIND(COALESCE(?evidencedRecordRdfsLabel, ?evidencedRecordSkosLabel, STR(?evidencedRecord)) AS ?evidencedRecordLabel)
+
+  OPTIONAL { ?referencedEntity rdfs:label ?referencedEntityRdfsLabel . }
+  OPTIONAL { ?referencedEntity skos:prefLabel ?referencedEntitySkosLabel . }
+  BIND(COALESCE(?referencedEntityRdfsLabel, ?referencedEntitySkosLabel, STR(?referencedEntity)) AS ?referencedEntityLabel)
+
+  OPTIONAL { ?evidence rdfs:label ?evidenceRdfsLabel . }
+  OPTIONAL { ?evidence skos:prefLabel ?evidenceSkosLabel . }
+  BIND(COALESCE(?evidenceRdfsLabel, ?evidenceSkosLabel, STR(?evidence)) AS ?evidenceLabel)
+}
+ORDER BY ?recordType ?evidencedRecordLabel ?evidenceLabel

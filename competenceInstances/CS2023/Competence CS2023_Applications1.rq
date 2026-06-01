@@ -1,53 +1,119 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:AI-Search ontoksd:cs2023ApplySkill)
-    (cs2023:AI-Search ontoksd:cs2023DevelopSkill)
-    (cs2023:AI-KRR    ontoksd:cs2023ApplySkill)
-    (cs2023:AI-KRR    ontoksd:cs2023DevelopSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Applications1 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Implement an agent to make strategic decisions in a two-player adversarial game with uncertain actions (e.g., a board game, strategic stock purchasing)."@en ;
-    dcterms:description "Use minimax with alpha-beta pruning, and possible chance nodes (expectiminimax), and heuristic move evaluation (at a particular depth) to solve a two-player zero-sum game."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Applications1"@en ;
-    ontoksd:hasDisposition ontoksd:inventive ,
-                           ontoksd:persistent ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
-;
+  #################################################################
+  # Optional disposition extension
+  #################################################################
 
-############# VERBOS ################
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:AI-Search ontoksd:cs2023ApplySkill   bloom:apply)
-    (cs2023:AI-Search ontoksd:cs2023DevelopSkill bloom:implement)
-    (cs2023:AI-KRR    ontoksd:cs2023ApplySkill   bloom:use)
-    (cs2023:AI-KRR    ontoksd:cs2023DevelopSkill bloom:develop)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  ontoksd:persistent a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Persistent"@en ;
+      skos:prefLabel "Persistent"@en ;
+      rdfs:comment "A disposition characterized by sustained effort, perseverance, and continued engagement when facing difficulty, iteration, or failure during task execution."@en .
+
+  #################################################################
+  # Competence
+  #################################################################
+
+  cs2023c:Competence_Applications1
+      a ontoksd:Competence ;
+      rdfs:label "Use minimax with alpha-beta pruning, possible chance nodes (expectiminimax), and heuristic move evaluation to solve a two-player zero-sum game"@en ;
+      skos:prefLabel "Use minimax with alpha-beta pruning, possible chance nodes (expectiminimax), and heuristic move evaluation to solve a two-player zero-sum game"@en ;
+      skos:definition "Use minimax with alpha-beta pruning, and possible chance nodes (expectiminimax), and heuristic move evaluation (at a particular depth) to solve a two-player zero-sum game."@en ;
+      rdfs:comment "Competence derived from the CS2023 Applications Competency Area, Task Applications1. Since the competence combines the use of established search-based methods with the development of a problem-specific agent, this formalization distributes the required CS2023 skill levels across the selected knowledge elements: Apply for mobilizing representational and reasoning knowledge in the problem setting, and Develop for designing and implementing the search-based game-playing algorithm."@en ;
+      dcterms:identifier "Applications1"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Applications1 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Applications1_AI_Search_1_Develop ,
+          cs2023c:KS_Applications1_AI_KRR_1_Apply ;
+      ontoksd:hasDisposition
+          ontoksd:inventive ,
+          ontoksd:persistent ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
+
+  #################################################################
+  # Specification-level Task
+  #################################################################
+
+  cs2023c:Task_Applications1
+      a ontoksd:Task ;
+      rdfs:label "Applications1 task"@en ;
+      skos:prefLabel "Applications1 task"@en ;
+      ontoksd:hasTaskStatement "Implement an agent to make strategic decisions in a two-player adversarial game with uncertain actions."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Applications1. This compound task concerns designing and developing an algorithmic agent for a specific two-player adversarial game with uncertain actions, using search-based decision procedures and heuristic evaluation."@en ;
+      dcterms:identifier "Task_Applications1"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Applications1_Computation ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Applications1_Design ,
+          cs2023c:TaskActivity_Applications1_Develop ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Applications1_AdversarialGame ,
+          cs2023c:TaskConstraint_Applications1_UncertainActions .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Applications1_Computation
+      a ontoksd:TaskComponent ;
+      rdfs:label "algorithm for a two-player game"@en ;
+      skos:prefLabel "algorithm for a two-player game"@en ;
+      rdfs:comment "Task component corresponding to the computation, namely an algorithm designed for the specific problem of a two-player game."@en .
+
+  cs2023c:TaskActivity_Applications1_Design
+      a ontoksd:TaskActivity ;
+      rdfs:label "design"@en ;
+      skos:prefLabel "design"@en ;
+      rdfs:comment "Task activity capturing the design of the strategic decision-making approach for the game agent."@en .
+
+  cs2023c:TaskActivity_Applications1_Develop
+      a ontoksd:TaskActivity ;
+      rdfs:label "develop"@en ;
+      skos:prefLabel "develop"@en ;
+      rdfs:comment "Task activity capturing the implementation of the agent and its game-solving algorithm."@en .
+
+  cs2023c:TaskConstraint_Applications1_AdversarialGame
+      a ontoksd:TaskConstraint ;
+      rdfs:label "for a two-player adversarial game"@en ;
+      skos:prefLabel "for a two-player adversarial game"@en ;
+      rdfs:comment "Task constraint stating that the solution must address a two-player adversarial game setting."@en .
+
+  cs2023c:TaskConstraint_Applications1_UncertainActions
+      a ontoksd:TaskConstraint ;
+      rdfs:label "with uncertain actions"@en ;
+      skos:prefLabel "with uncertain actions"@en ;
+      rdfs:comment "Task constraint stating that the game includes uncertainty, motivating the use of chance-aware decision procedures such as expectiminimax."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Applications1_AI_Search_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AI-Search × Develop"@en ;
+      skos:prefLabel "AI-Search × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications1. It associates AI-Search knowledge with the CS2023 skill level Develop in the design and implementation of a game-playing agent using minimax, alpha-beta pruning, expectiminimax, and heuristic move evaluation."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AI_Search_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications1_AI_KRR_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AI-KRR × Apply"@en ;
+      skos:prefLabel "AI-KRR × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications1. It associates AI-KRR knowledge with the CS2023 skill level Apply in representing game states, reasoning about moves, and supporting heuristic evaluation within the adversarial decision process."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AI_KRR_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
 }

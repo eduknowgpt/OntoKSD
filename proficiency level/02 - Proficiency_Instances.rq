@@ -1,0 +1,197 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+
+  #################################################################
+  # PERSONS, ROLES, AND PROFILE
+  #################################################################
+
+  ontoksd:Learner_AnaSilva
+      a ontoksd:Learner ;
+      rdfs:label "Ana Silva as learner"@en ;
+      skos:prefLabel "Ana Silva as learner"@en ;
+      skos:prefLabel "Ana Silva como aprendiz"@pt ;
+      dcterms:identifier "Learner_AnaSilva" ;
+      dcterms:description "Learner role assumed by Ana Silva in the context of the formal languages assessment."@en ;
+      ontoksd:hasProfile ontoksd:Profile_AnaSilva ;
+      ontoksd:participatesIn ontoksd:AssessmentParticipation_AnaSilva_DFAExam_2026_01 .
+
+  ontoksd:Profile_AnaSilva
+      a ontoksd:Profile ;
+      rdfs:label "Profile of Ana Silva"@en ;
+      skos:prefLabel "Profile of Ana Silva"@en ;
+      skos:prefLabel "Perfil de Ana Silva"@pt ;
+      dcterms:identifier "Profile_AnaSilva" ;
+      dcterms:description "Educational profile of Ana Silva, including evidenced competences and associated evidence records."@en ;
+      ontoksd:isProfileOf ontoksd:Learner_AnaSilva ;
+      ontoksd:hasEvidencedCompetence ontoksd:EvidencedCompetence_DFAConstruction_AnaSilva ;
+      ontoksd:hasEvidence ontoksd:Evidence_DFAExam_AnaSilva_2026_01 .
+
+  ontoksd:Assessor_ProfCarlaSouza
+      a ontoksd:Assessor ;
+      rdfs:label "Prof. Carla Souza as assessor"@en ;
+      skos:prefLabel "Prof. Carla Souza as assessor"@en ;
+      skos:prefLabel "Profa. Carla Souza como avaliadora"@pt ;
+      dcterms:identifier "Assessor_ProfCarlaSouza" ;
+      dcterms:description "Assessor role performed by Prof. Carla Souza in the formal languages assessment occurrence."@en .
+
+  #################################################################
+  # COMPETENCE AND CONSTITUENTS
+  #################################################################
+
+  ontoksd:Competence_DFAConstruction
+      a ontoksd:Competence ;
+      rdfs:label "Construct deterministic finite automata for formal languages"@en ;
+      skos:prefLabel "Construct deterministic finite automata for formal languages"@en ;
+      skos:prefLabel "Construir autômatos finitos determinísticos para linguagens formais"@pt ;
+      dcterms:identifier "Competence_DFAConstruction" ;
+      dcterms:description "Competence related to constructing deterministic finite automata that correctly recognize specified formal languages."@en ;
+	  ontoksd:hasKnowledgeSkill ontoksd:KnowledgeSkill_DFAConstruction .
+
+   ontoksd:Knowledge_DFAConcepts
+      a ontoksd:Knowledge ;
+      rdfs:label "Concepts of deterministic finite automata"@en ;
+      skos:prefLabel "Concepts of deterministic finite automata"@en ;
+      skos:prefLabel "Conceitos de autômatos finitos determinísticos"@pt ;
+      dcterms:identifier "Knowledge_DFAConcepts" ;
+      dcterms:description "Knowledge of states, transitions, alphabet, initial state, accepting states, and formal language recognition by deterministic finite automata."@en ;
+      ontoksd:isKnowledgeOf ontoksd:Competence_DFAConstruction .
+
+  ontoksd:Skill_DFAConstruction
+      a ontoksd:Skill ;
+      rdfs:label "Construct deterministic finite automata"@en ;
+      skos:prefLabel "Construct deterministic finite automata"@en ;
+      skos:prefLabel "Construir autômatos finitos determinísticos"@pt ;
+      dcterms:identifier "Skill_DFAConstruction" ;
+      dcterms:description "Skill of designing and representing deterministic finite automata for a given formal language specification."@en ;
+      ontoksd:isSkillOf ontoksd:Competence_DFAConstruction .
+	  
+ontoksd:KnowledgeSkill_DFAConstruction
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "Knowledge-skill pair for deterministic finite automata construction"@en ;
+      skos:prefLabel "Knowledge-skill pair for deterministic finite automata construction"@en ;
+      skos:prefLabel "Par conhecimento-habilidade para construção de autômatos finitos determinísticos"@pt ;
+      dcterms:identifier "KnowledgeSkill_DFAConstruction" ;
+      dcterms:description "Knowledge-skill pair that combines conceptual knowledge of deterministic finite automata with the ability to construct them correctly for specified formal languages."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_DFAConcepts ;
+      ontoksd:hasSkillComponent ontoksd:Skill_DFAConstruction ;
+      ontoksd:isKnowledgeSkillOf ontoksd:Competence_DFAConstruction .
+	  
+
+  #################################################################
+  # ASSESSMENT SPECIFICATION
+  #################################################################
+
+  ontoksd:Assessment_DFAWrittenExam
+      a ontoksd:Assessment ;
+      rdfs:label "Written assessment on deterministic finite automata"@en ;
+      skos:prefLabel "Written assessment on deterministic finite automata"@en ;
+      skos:prefLabel "Avaliação escrita sobre autômatos finitos determinísticos"@pt ;
+      dcterms:identifier "Assessment_DFAWrittenExam" ;
+      dcterms:description "A written assessment designed to evaluate the learner's ability to analyze languages and construct deterministic finite automata."@en ;
+      ontoksd:maxScore "100"^^xsd:decimal ;
+      ontoksd:passingScore "60"^^xsd:decimal .
+
+  #################################################################
+  # ASSESSMENT OCCURRENCE
+  #################################################################
+
+  ontoksd:AssessmentOccurrence_DFAWrittenExam_2026_01
+      a ontoksd:AssessmentOccurrence ;
+      rdfs:label "Occurrence of the DFA written assessment - 2026-01"@en ;
+      skos:prefLabel "Occurrence of the DFA written assessment - 2026-01"@en ;
+      skos:prefLabel "Ocorrência da avaliação escrita de AFD - 2026-01"@pt ;
+      dcterms:identifier "AssessmentOccurrence_DFAWrittenExam_2026_01" ;
+      dcterms:description "Concrete occurrence of the DFA written assessment, carried out in an instructional setting and interpreted using the 0–100 four-level proficiency scheme."@en ;
+      ontoksd:realizes ontoksd:Assessment_DFAWrittenExam ;
+      ontoksd:usesProficiencyScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+      ontoksd:involvesAssessmentParticipation ontoksd:AssessmentParticipation_AnaSilva_DFAExam_2026_01 .
+
+  #################################################################
+  # ASSESSMENT PARTICIPATION
+  #################################################################
+
+  ontoksd:AssessmentParticipation_AnaSilva_DFAExam_2026_01
+      a ontoksd:AssessmentParticipation ;
+      rdfs:label "Ana Silva participation in DFA written assessment occurrence"@en ;
+      skos:prefLabel "Ana Silva participation in DFA written assessment occurrence"@en ;
+      skos:prefLabel "Participação de Ana Silva na ocorrência da avaliação escrita de AFD"@pt ;
+      dcterms:identifier "AssessmentParticipation_AnaSilva_DFAExam_2026_01" ;
+      dcterms:description "Participant-specific evaluative relation connecting Ana Silva to the concrete occurrence of the DFA written assessment, with individual score attribution."@en ;
+      ontoksd:hasLearner ontoksd:Learner_AnaSilva ;
+      ontoksd:hasAssessor ontoksd:Assessor_ProfCarlaSouza ;
+      ontoksd:occursInAssessmentOccurrence ontoksd:AssessmentOccurrence_DFAWrittenExam_2026_01 ;
+      ontoksd:hasScore "74"^^xsd:double .
+
+  #################################################################
+  # EVIDENCE
+  #################################################################
+
+  ontoksd:Evidence_DFAExam_AnaSilva_2026_01
+      a ontoksd:Evidence ;
+      rdfs:label "Evidence from Ana Silva's DFA written assessment"@en ;
+      skos:prefLabel "Evidence from Ana Silva's DFA written assessment"@en ;
+      skos:prefLabel "Evidência da avaliação escrita de AFD de Ana Silva"@pt ;
+      dcterms:identifier "Evidence_DFAExam_AnaSilva_2026_01" ;
+      dcterms:description "Evidence produced in the context of Ana Silva's written assessment on deterministic finite automata."@en ;
+      ontoksd:hasEvidenceType ontoksd:WrittenExam ;
+      ontoksd:evidenceBasedOn ontoksd:AssessmentOccurrence_DFAWrittenExam_2026_01 ;
+      ontoksd:evidencesCompetence ontoksd:EvidencedCompetence_DFAConstruction_AnaSilva ,
+                                  ontoksd:EvidencedConstituent_DFAConcepts_AnaSilva ,
+                                  ontoksd:EvidencedConstituent_DFAConstructionSkill_AnaSilva .
+
+  #################################################################
+  # EVIDENCED COMPETENCE
+  #################################################################
+
+  ontoksd:EvidencedCompetence_DFAConstruction_AnaSilva
+      a ontoksd:EvidencedCompetence ;
+      rdfs:label "Evidenced competence of Ana Silva in DFA construction"@en ;
+      skos:prefLabel "Evidenced competence of Ana Silva in DFA construction"@en ;
+      skos:prefLabel "Competência evidenciada de Ana Silva em construção de AFD"@pt ;
+      dcterms:identifier "EvidencedCompetence_DFAConstruction_AnaSilva" ;
+      dcterms:description "Contextualized evidential record indicating that Ana Silva evidenced the competence of constructing deterministic finite automata in the written assessment occurrence."@en ;
+      ontoksd:isEvidencedCompetenceOf ontoksd:Profile_AnaSilva ;
+      ontoksd:refersToCompetence ontoksd:Competence_DFAConstruction ;
+      ontoksd:supportedByEvidence ontoksd:Evidence_DFAExam_AnaSilva_2026_01 ;
+      ontoksd:derivedFromParticipation ontoksd:AssessmentParticipation_AnaSilva_DFAExam_2026_01 ;
+      ontoksd:hasProficiencyLevel ontoksd:ProficiencyLevel_Proficient ;
+      ontoksd:hasEvidencedConstituent
+          ontoksd:EvidencedConstituent_DFAConcepts_AnaSilva ,
+          ontoksd:EvidencedConstituent_DFAConstructionSkill_AnaSilva .
+
+  #################################################################
+  # EVIDENCED CONSTITUENTS
+  #################################################################
+
+  ontoksd:EvidencedConstituent_DFAConcepts_AnaSilva
+      a ontoksd:EvidencedCompetenceConstituent ;
+      rdfs:label "Evidenced DFA conceptual knowledge of Ana Silva"@en ;
+      skos:prefLabel "Evidenced DFA conceptual knowledge of Ana Silva"@en ;
+      skos:prefLabel "Conhecimento conceitual evidenciado de AFD de Ana Silva"@pt ;
+      dcterms:identifier "EvidencedConstituent_DFAConcepts_AnaSilva" ;
+      dcterms:description "Contextualized evidential record indicating that Ana Silva evidenced knowledge of deterministic finite automata concepts in the assessment occurrence."@en ;
+      ontoksd:isEvidencedCompetenceConstituentOf ontoksd:EvidencedCompetence_DFAConstruction_AnaSilva ;
+      ontoksd:refersToCompetenceConstituent ontoksd:Knowledge_DFAConcepts ;
+      ontoksd:supportedByEvidence ontoksd:Evidence_DFAExam_AnaSilva_2026_01 ;
+      ontoksd:derivedFromParticipation ontoksd:AssessmentParticipation_AnaSilva_DFAExam_2026_01 ;
+      ontoksd:hasProficiencyLevel ontoksd:ProficiencyLevel_Proficient .
+
+  ontoksd:EvidencedConstituent_DFAConstructionSkill_AnaSilva
+      a ontoksd:EvidencedCompetenceConstituent ;
+      rdfs:label "Evidenced DFA construction skill of Ana Silva"@en ;
+      skos:prefLabel "Evidenced DFA construction skill of Ana Silva"@en ;
+      skos:prefLabel "Habilidade evidenciada de construção de AFD de Ana Silva"@pt ;
+      dcterms:identifier "EvidencedConstituent_DFAConstructionSkill_AnaSilva" ;
+      dcterms:description "Contextualized evidential record indicating that Ana Silva evidenced the skill of constructing deterministic finite automata in the assessment occurrence."@en ;
+      ontoksd:isEvidencedCompetenceConstituentOf ontoksd:EvidencedCompetence_DFAConstruction_AnaSilva ;
+      ontoksd:refersToCompetenceConstituent ontoksd:Skill_DFAConstruction ;
+      ontoksd:supportedByEvidence ontoksd:Evidence_DFAExam_AnaSilva_2026_01 ;
+      ontoksd:derivedFromParticipation ontoksd:AssessmentParticipation_AnaSilva_DFAExam_2026_01 ;
+      ontoksd:hasProficiencyLevel ontoksd:ProficiencyLevel_Proficient .
+
+}

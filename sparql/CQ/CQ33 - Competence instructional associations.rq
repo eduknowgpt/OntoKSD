@@ -1,0 +1,33 @@
+# This query retrieves courses and instructional units associated with competences. It combines course-level curricular associations represented through CourseCompetenceSpecification with instructional-unit-level activation relations represented through CompetenceRelator. Thus, the query demonstrates that OntoKSD can trace both curricular and instructional associations involving competences.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?associationType
+  ?associationRelator
+  ?associatedEntity
+  ?associatedEntityLabel
+WHERE {
+  {
+    ?associationRelator a ontoksd:CourseCompetenceSpecification ;
+                        ontoksd:mediatesCourseCompetence ?competence ;
+                        ontoksd:mediatesCourse ?associatedEntity .
+
+    BIND("Course" AS ?associationType)
+  }
+  UNION
+  {
+    ?associationRelator a ontoksd:CompetenceRelator ;
+                        ontoksd:mediatesCompetence ?competence ;
+                        ontoksd:mediatesInstructionalUnit ?associatedEntity .
+
+    BIND("InstructionalUnit" AS ?associationType)
+  }
+
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?associatedEntity rdfs:label ?associatedEntityLabel . }
+}
+ORDER BY ?competenceLabel ?associationType ?associatedEntityLabel

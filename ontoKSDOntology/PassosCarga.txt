@@ -9,61 +9,62 @@ Upload de OntoKSD\ontoKSDOntology:
 		==> SKOS já importado (arquivo local)
 		==> RCD já importado
 
-	Importar RCD no Protegé (se não foi importado)
-		I:\Meu Drive\OntoKSD\rcd\rcd.ttl
+	OBS: 	Importar RCD no Protegé (se não foi importado)		I:\Meu Drive\OntoKSD\rcd\rcd.ttl
+			Importar bloom-taxonomy-punning V?.ttl no Protegé (se não foi importado)
+
+
+1. Carregar a Base de Conhecimento do CS2023 de OntoKSD\CS2023Vocabulary:
+	1.1 Carregar BoKCS2023.ttl
+	
 		
-	Importar bloom-taxonomy-punning-no-individuals.ttl no Protegé (se não foi importado)
-
-1. Upload de OntoKSD\ontoKSDOntology\knowledge
-	ontoKSD-KnowledgeType.ttl
-
-2. Upload de OntoKSD\cc2020Vocabulary e OntoKSD\CS2023Vocabulary:
-	cc2020-dispositions.ttl
-	cc2020-knowledge.ttl
-	cc2020-foundational-knowledge.ttl
-	ontoksd-knowledgeType-full-mapping.ttl
 	
-	KnowledgeAreas.ttl
-	BoKCS2023.ttl
+2. Inserir dados dos vocabulários I:\Meu Drive\OntoKSD\cc2020Vocabulary via Sparql:
+	2.1 - ontoKSD-disposition-insert.rq
+	2.2 - cc2020-knowledge-insert.rq
+	2.3 - cc2020-foundational-knowledge-insert.rq
 	
-
-4. Upload de OntoKSD\bloomTaxonomy
-	Em Java, no projeto OntoKSDAPP: 
-	****** AJUSTAR O REPOSITÓRIO *******
-		1. Executar InsertActionVerbTypes
-		2. Executar InsertBloomVerbs
-		3. Executar InsertDBPediaVerbs		
-
-
-5. Importar o mapeamento OntoKSD-Bloom de 		OntoKSD\ontoKSDOntology\skill
-	ontoKSD-Bloom-mapping.ttl
-	
-
-
-6. Carragar instâncias do CC2020 no GraphDB
-	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\CC2020\sparql
-	==> InsertCompetence_A, InsertCompetence_B e InsertCompetence_C
-	
-7. Carregar instâncias do IS2020 no GraphDB
-	Dados brutos em: 
-		I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\IS2020CompetenciesClear.txt
-	Cláusulas Sparql em:
-		I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\is2020Competencies.sparql
-	Git: 
-		https://github.com/EdeysonUFBA/EduKnow/tree/main/GraphDB
-	
-	Carga via Java:
-		C:\Projetos\EduKnow\GraphDBSparqlApp
-	
-	Execução do .sparql no GraphDB
-	
-8. Upload instâncias do Body of Knowledge 2013 - cs2013Vocabulary
-	OntoKSD\cs2013Vocabulary\BoK2013Ontology.ttl
-	
-	
-9. Carregar TASKS EdukNow
-	Inserir Competências Eduknow e Tasks
 		Eclipse GraphDB->OntoKSD->SparqlBatchInserter.java
-			Executa todos arquivos .rq em I:\Meu Drive\OntoKSD\competenceInstances\...\
+		Executa todos arquivos .rq em I:\Meu Drive\OntoKSD\cc2020Vocabulary
 	
+
+3. Inserir dados na OntoKSD\bloomTaxonomy via Sparql:
+	3.1 - bloom-taxonomy-actionVerbType-insert.rq
+	3.2 - bloom-taxonomy-verbs-insert.rq
+	3.3 - bloom-taxonomy-dbpedia-insert.rq
+
+		Eclipse GraphDB->OntoKSD->SparqlBatchInserter.java
+		Executa todos arquivos .rq em I:\Meu Drive\OntoKSD\bloomTaxonomy\verbs
+
+
+4. Carragar instâncias do CC2020 no GraphDB
+	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\CC2020\sparql
+
+	
+5. Carragar instâncias do CS2023 no GraphDB
+	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\CS2023
+	
+	Eclipse GraphDB->OntoKSD->SparqlBatchInserter.java
+		Executa todos arquivos .rq em I:\Meu Drive\OntoKSD\competenceInstances\...\
+	
+	
+6. Carregar instâncias do IS2020 no GraphDB
+
+	Códigos Sparql em: I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql
+	
+	Eclipse GraphDB->OntoKSD->SparqlBatchInserter.java
+		Executa todos arquivos .rq em I:\Meu Drive\OntoKSD\competenceInstances\IS2020\sparql\
+		
+
+	
+7. Carregar TASKS EdukNow
+	
+	Inserir Competências (I:\Meu Drive\OntoKSD\competenceInstances\CSP\competencies)
+	
+	Inserir Tasks (I:\Meu Drive\OntoKSD\competenceInstances\CSP\competencies\tasks)
+		Eclipse GraphDB->OntoKSD->SparqlBatchInserter.java
+			Executa todos arquivos .rq no diretório
+	
+	
+	
+	8. Carregar a RCD
 	

@@ -1,0 +1,41 @@
+# This query retrieves contexts in which competences are reused across instructional units, curricular structures, or learning contexts. It returns each competence together with instructional units mediated by competence activation relations, courses mediated by course-level competence specifications, and acquisition contexts associated with instructional units. Thus, the query demonstrates that OntoKSD can trace competence reuse across different educational structures and contexts.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?reuseContextType
+  ?reuseRelation
+  ?reuseContext
+  ?reuseContextLabel
+WHERE {
+  {
+    ?reuseRelation ontoksd:mediatesCompetence ?competence ;
+                   ontoksd:mediatesInstructionalUnit ?reuseContext .
+
+    BIND("InstructionalUnit" AS ?reuseContextType)
+  }
+  UNION
+  {
+    ?reuseRelation ontoksd:mediatesCourseCompetence ?competence ;
+                   ontoksd:mediatesCourse ?reuseContext .
+
+    BIND("Course" AS ?reuseContextType)
+  }
+  UNION
+  {
+    ?activation ontoksd:mediatesCompetence ?competence ;
+                ontoksd:mediatesInstructionalUnit ?instructionalUnit .
+
+    ?instructionalUnit ontoksd:hasAcquisitionContext ?reuseContext .
+
+    BIND(?activation AS ?reuseRelation)
+    BIND("AcquisitionContext" AS ?reuseContextType)
+  }
+
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?reuseContext rdfs:label ?reuseContextLabel . }
+}
+ORDER BY ?competenceLabel ?reuseContextType ?reuseContextLabel

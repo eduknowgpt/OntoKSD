@@ -1,0 +1,588 @@
+@prefix : <http://purl.org/ontoksd/rcd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://purl.org/ontoksd/rcd#> .
+
+<http://purl.org/ontoksd/rcd> rdf:type owl:Ontology ;
+                               owl:imports <file:/I:/Meu%20Drive/OntoKSD/rcd/RCD_examples.ttl> ,
+                                           <file:/I:/Meu%20Drive/OntoKSD/rcd/RCD_shapes.ttl> ;
+                               rdfs:label "RCD OWL Profile"@en ;
+                               skos:definition "OWL profile for the IEEE Reusable Competency Definition (RCD) core data model. This ontology captures the main structural components of IEEE 1484.20.1 while approximating selected conformance constraints in OWL 2 DL. Constraints such as default values, URI lexical validation, bag semantics, and cross-field completeness are better enforced with SHACL or application-level validation."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/ontoksd/rcd#hasDefinition
+rcd:hasDefinition rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain rcd:RCD ;
+                  rdfs:range rcd:Definition ;
+                  rdfs:label "has definition"@en ;
+                  skos:definition "Associates an RCD with its optional structured definition."@en .
+
+
+###  http://purl.org/ontoksd/rcd#hasIdentifier
+rcd:hasIdentifier rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain rcd:RCD ;
+                  rdfs:range rcd:LongIdentifier ;
+                  rdfs:label "has identifier"@en ;
+                  skos:definition "Associates an RCD with its mandatory unique identifier."@en .
+
+
+###  http://purl.org/ontoksd/rcd#hasMetadata
+rcd:hasMetadata rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain rcd:RCD ;
+                rdfs:range rcd:Metadata ;
+                rdfs:label "has metadata"@en ;
+                skos:definition "Associates an RCD with its optional metadata block."@en .
+
+
+###  http://purl.org/ontoksd/rcd#hasStatement
+rcd:hasStatement rdf:type owl:ObjectProperty ;
+                 rdfs:domain rcd:Definition ;
+                 rdfs:range rcd:Statement ;
+                 rdfs:label "has statement"@en ;
+                 skos:definition "Associates a structured definition with one or more statements."@en .
+
+
+###  http://purl.org/ontoksd/rcd#hasStatementID
+rcd:hasStatementID rdf:type owl:ObjectProperty ;
+                   rdfs:domain rcd:Statement ;
+                   rdfs:range rcd:LongIdentifier ;
+                   rdfs:label "has statement identifier"@en ;
+                   skos:definition "Associates a statement with its optional identifier."@en .
+
+
+###  http://purl.org/ontoksd/rcd#hasStatementToken
+rcd:hasStatementToken rdf:type owl:ObjectProperty ;
+                      rdfs:domain rcd:Statement ;
+                      rdfs:range rcd:Vocabulary ;
+                      rdfs:label "has statement token"@en ;
+                      skos:definition "Associates a statement with an optional controlled vocabulary token."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/ontoksd/rcd#additionalMetadata
+rcd:additionalMetadata rdf:type owl:DatatypeProperty ;
+                       rdfs:domain rcd:Metadata ;
+                       rdfs:range rdfs:Literal ;
+                       rdfs:label "additional metadata"@en ;
+                       skos:definition "Represents implementation-specific additional metadata. In the IEEE model this is open-ended (any_type), so a generic literal is used here as an OWL approximation."@en .
+
+
+###  http://purl.org/ontoksd/rcd#catalog
+rcd:catalog rdf:type owl:DatatypeProperty ;
+            rdfs:domain rcd:LongIdentifier ;
+            rdfs:range xsd:string ;
+            rdfs:label "catalog"@en ;
+            skos:definition "Catalog or namespace-scheme component of a long identifier."@en .
+
+
+###  http://purl.org/ontoksd/rcd#description
+rcd:description rdf:type owl:DatatypeProperty ;
+                rdfs:domain rcd:RCD ;
+                rdfs:range rdf:langString ;
+                rdfs:label "description"@en ;
+                skos:definition "Optional human-readable description of the RCD."@en .
+
+
+###  http://purl.org/ontoksd/rcd#entry
+rcd:entry rdf:type owl:DatatypeProperty ;
+          rdfs:domain rcd:LongIdentifier ;
+          rdfs:range xsd:string ;
+          rdfs:label "entry"@en ;
+          skos:definition "Entry or namespace-specific string component of a long identifier."@en .
+
+
+###  http://purl.org/ontoksd/rcd#modelSource
+rcd:modelSource rdf:type owl:DatatypeProperty ;
+                rdfs:domain rcd:Definition ;
+                rdfs:range xsd:string ;
+                rdfs:label "model source"@en ;
+                skos:definition "Optional source of the model used to structure the competency definition. Typically this may be a URI, but the IEEE model allows a character string."@en .
+
+
+###  http://purl.org/ontoksd/rcd#rcdSchema
+rcd:rcdSchema rdf:type owl:DatatypeProperty ;
+              rdfs:domain rcd:Metadata ;
+              rdfs:range xsd:string ;
+              rdfs:label "RCD schema"@en ;
+              skos:definition "Optional label for the schema that defines and controls the RCD instance."@en .
+
+
+###  http://purl.org/ontoksd/rcd#rcdSchemaVersion
+rcd:rcdSchemaVersion rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcd:Metadata ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "RCD schema version"@en ;
+                     skos:definition "Optional version of the schema identified by rcdSchema."@en .
+
+
+###  http://purl.org/ontoksd/rcd#statementName
+rcd:statementName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain rcd:Statement ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "statement name"@en ;
+                  skos:definition "Optional human-readable name for a statement dimension, such as condition, criterion, or indicator."@en .
+
+
+###  http://purl.org/ontoksd/rcd#statementText
+rcd:statementText rdf:type owl:DatatypeProperty ;
+                  rdfs:domain rcd:Statement ;
+                  rdfs:range rdf:langString ;
+                  rdfs:label "statement text"@en ;
+                  skos:definition "Optional free-text content of a statement."@en .
+
+
+###  http://purl.org/ontoksd/rcd#title
+rcd:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain rcd:RCD ;
+          rdfs:range rdf:langString ;
+          rdfs:label "title"@en ;
+          skos:definition "Mandatory human-readable title of the RCD; it may be repeated in multiple languages."@en .
+
+
+###  http://purl.org/ontoksd/rcd#vocabularySource
+rcd:vocabularySource rdf:type owl:DatatypeProperty ;
+                     rdfs:domain rcd:Vocabulary ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "vocabulary source"@en ;
+                     skos:definition "Source of a controlled vocabulary token."@en .
+
+
+###  http://purl.org/ontoksd/rcd#vocabularyValue
+rcd:vocabularyValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain rcd:Vocabulary ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "vocabulary value"@en ;
+                    skos:definition "Value of a controlled vocabulary token."@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/ontoksd/rcd#Definition
+rcd:Definition rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty rcd:hasStatement ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass rcd:Statement
+                               ] ;
+               rdfs:label "Definition"@en ;
+               skos:definition "Optional structured definition that refines the free-form title and description of an RCD."@en .
+
+
+###  http://purl.org/ontoksd/rcd#LongIdentifier
+rcd:LongIdentifier rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty rcd:catalog ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty rcd:entry ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ;
+                   rdfs:label "Long Identifier"@en ;
+                   skos:definition "Identifier type composed of catalog and entry, corresponding to the IEEE long_identifier_type."@en .
+
+
+###  http://purl.org/ontoksd/rcd#Metadata
+rcd:Metadata rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty rcd:rcdSchema ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty rcd:rcdSchemaVersion ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             rdfs:label "Metadata"@en ;
+             skos:definition "Optional metadata block associated with an RCD."@en .
+
+
+###  http://purl.org/ontoksd/rcd#RCD
+rcd:RCD rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty rcd:hasIdentifier ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass rcd:LongIdentifier
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty rcd:hasDefinition ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass rcd:Definition
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty rcd:hasMetadata ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass rcd:Metadata
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty rcd:title ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange rdf:langString
+                        ] ;
+        rdfs:label "Reusable Competency Definition"@en ;
+        skos:definition "A reusable competency definition record identified by a unique identifier and described by a human-readable title, with optional structured definition and metadata."@en .
+
+
+###  http://purl.org/ontoksd/rcd#Statement
+rcd:Statement rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Class ;
+                                owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcd:hasStatementID ;
+                                                owl:someValuesFrom rcd:LongIdentifier
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcd:hasStatementToken ;
+                                                owl:someValuesFrom rcd:Vocabulary
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcd:statementName ;
+                                                owl:someValuesFrom xsd:string
+                                              ]
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty rcd:statementText ;
+                                                owl:someValuesFrom rdf:langString
+                                              ]
+                                            )
+                              ] ;
+              rdfs:label "Statement"@en ;
+              skos:definition "A record describing one characteristic of a structured competency definition."@en .
+
+
+###  http://purl.org/ontoksd/rcd#Vocabulary
+rcd:Vocabulary rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty rcd:vocabularySource ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty rcd:vocabularyValue ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ;
+               rdfs:label "Vocabulary Token"@en ;
+               skos:definition "Controlled vocabulary token composed of a source and a value."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/ontoksd/rcd#DefinitionShape
+rcd:DefinitionShape rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+                    rdfs:label "Definition shape"@en ;
+                    skos:definition "Validates that a structured definition has at least one statement."@en ;
+                    <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                            <http://www.w3.org/ns/shacl#message> "Each model source must be a string; applications may further restrict it to URI syntax."@en ;
+                                                            <http://www.w3.org/ns/shacl#path> rcd:modelSource
+                                                          ] ,
+                                                          [ <http://www.w3.org/ns/shacl#class> rcd:Statement ;
+                                                            <http://www.w3.org/ns/shacl#message> "A Definition must contain at least one Statement."@en ;
+                                                            <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                            <http://www.w3.org/ns/shacl#path> rcd:hasStatement
+                                                          ] ;
+                    <http://www.w3.org/ns/shacl#targetClass> rcd:Definition .
+
+
+###  http://purl.org/ontoksd/rcd#LongIdentifierShape
+rcd:LongIdentifierShape rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+                        rdfs:label "LongIdentifier shape"@en ;
+                        skos:definition "Validates that a long identifier contains exactly one catalog and exactly one entry."@en ;
+                        <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                                <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                                <http://www.w3.org/ns/shacl#message> "A LongIdentifier must have exactly one non-empty entry."@en ;
+                                                                <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                                <http://www.w3.org/ns/shacl#minLength> 1 ;
+                                                                <http://www.w3.org/ns/shacl#path> rcd:entry
+                                                              ] ,
+                                                              [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                                <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                                <http://www.w3.org/ns/shacl#message> "A LongIdentifier must have exactly one non-empty catalog."@en ;
+                                                                <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                                <http://www.w3.org/ns/shacl#minLength> 1 ;
+                                                                <http://www.w3.org/ns/shacl#path> rcd:catalog
+                                                              ] ;
+                        <http://www.w3.org/ns/shacl#targetClass> rcd:LongIdentifier .
+
+
+###  http://purl.org/ontoksd/rcd#MetadataShape
+rcd:MetadataShape rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+                  rdfs:label "Metadata shape"@en ;
+                  skos:definition "Validates basic constraints over the optional metadata block."@en ;
+                  <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                          <http://www.w3.org/ns/shacl#message> "Metadata may contain at most one rcdSchema value."@en ;
+                                                          <http://www.w3.org/ns/shacl#path> rcd:rcdSchema
+                                                        ] ,
+                                                        [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                          <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                          <http://www.w3.org/ns/shacl#message> "Metadata may contain at most one rcdSchemaVersion value."@en ;
+                                                          <http://www.w3.org/ns/shacl#path> rcd:rcdSchemaVersion
+                                                        ] ,
+                                                        [ <http://www.w3.org/ns/shacl#message> "Additional metadata is intentionally open-ended."@en ;
+                                                          <http://www.w3.org/ns/shacl#path> rcd:additionalMetadata
+                                                        ] ;
+                  <http://www.w3.org/ns/shacl#targetClass> rcd:Metadata .
+
+
+###  http://purl.org/ontoksd/rcd#RCDShape
+rcd:RCDShape rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+             rdfs:label "RCD shape"@en ;
+             skos:definition "Validates the minimum core constraints of an IEEE-style reusable competency definition instance."@en ;
+             <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#class> rcd:LongIdentifier ;
+                                                     <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                     <http://www.w3.org/ns/shacl#message> "An RCD must have exactly one LongIdentifier."@en ;
+                                                     <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                     <http://www.w3.org/ns/shacl#path> rcd:hasIdentifier
+                                                   ] ,
+                                                   [ <http://www.w3.org/ns/shacl#datatype> rdf:langString ;
+                                                     <http://www.w3.org/ns/shacl#message> "Descriptions, when present, must be language-tagged strings."@en ;
+                                                     <http://www.w3.org/ns/shacl#path> rcd:description
+                                                   ] ,
+                                                   [ <http://www.w3.org/ns/shacl#datatype> rdf:langString ;
+                                                     <http://www.w3.org/ns/shacl#message> "An RCD must have at least one language-tagged title."@en ;
+                                                     <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                     <http://www.w3.org/ns/shacl#path> rcd:title
+                                                   ] ,
+                                                   [ <http://www.w3.org/ns/shacl#class> rcd:Metadata ;
+                                                     <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                     <http://www.w3.org/ns/shacl#message> "An RCD may have at most one metadata block."@en ;
+                                                     <http://www.w3.org/ns/shacl#path> rcd:hasMetadata
+                                                   ] ,
+                                                   [ <http://www.w3.org/ns/shacl#class> rcd:Definition ;
+                                                     <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                     <http://www.w3.org/ns/shacl#message> "An RCD may have at most one structured definition."@en ;
+                                                     <http://www.w3.org/ns/shacl#path> rcd:hasDefinition
+                                                   ] ;
+             <http://www.w3.org/ns/shacl#targetClass> rcd:RCD .
+
+
+###  http://purl.org/ontoksd/rcd#StatementShape
+rcd:StatementShape rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+                   rdfs:label "Statement shape"@en ;
+                   skos:definition "Validates that each statement contains at least one of the admissible information-bearing fields."@en ;
+                   <http://www.w3.org/ns/shacl#or> [ ] ;
+<http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                        <http://www.w3.org/ns/shacl#message> "Statement names, when present, must be strings."@en ;
+                                        <http://www.w3.org/ns/shacl#path> rcd:statementName
+                                      ] ,
+                                      [ <http://www.w3.org/ns/shacl#datatype> rdf:langString ;
+                                        <http://www.w3.org/ns/shacl#message> "Statement texts, when present, must be language-tagged strings."@en ;
+                                        <http://www.w3.org/ns/shacl#path> rcd:statementText
+                                      ] ,
+                                      [ <http://www.w3.org/ns/shacl#class> rcd:LongIdentifier ;
+                                        <http://www.w3.org/ns/shacl#message> "Statement identifiers, when present, must be LongIdentifier instances."@en ;
+                                        <http://www.w3.org/ns/shacl#path> rcd:hasStatementID
+                                      ] ,
+                                      [ <http://www.w3.org/ns/shacl#class> rcd:Vocabulary ;
+                                        <http://www.w3.org/ns/shacl#message> "Statement tokens, when present, must be Vocabulary instances."@en ;
+                                        <http://www.w3.org/ns/shacl#path> rcd:hasStatementToken
+                                      ] ;
+<http://www.w3.org/ns/shacl#targetClass> rcd:Statement .
+
+
+###  http://purl.org/ontoksd/rcd#VocabularyShape
+rcd:VocabularyShape rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+                    rdfs:label "Vocabulary shape"@en ;
+                    skos:definition "Validates that a vocabulary token contains exactly one source and one value."@en ;
+                    <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                            <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                            <http://www.w3.org/ns/shacl#message> "A vocabulary token must have exactly one non-empty source."@en ;
+                                                            <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                            <http://www.w3.org/ns/shacl#minLength> 1 ;
+                                                            <http://www.w3.org/ns/shacl#path> rcd:vocabularySource
+                                                          ] ,
+                                                          [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                                            <http://www.w3.org/ns/shacl#maxCount> 1 ;
+                                                            <http://www.w3.org/ns/shacl#message> "A vocabulary token must have exactly one non-empty value."@en ;
+                                                            <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                                            <http://www.w3.org/ns/shacl#minLength> 1 ;
+                                                            <http://www.w3.org/ns/shacl#path> rcd:vocabularyValue
+                                                          ] ;
+                    <http://www.w3.org/ns/shacl#targetClass> rcd:Vocabulary .
+
+
+###  http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_03
+<http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_03> rdf:type rcd:Definition .
+
+
+###  http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_04
+<http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_04> rdf:type rcd:Definition ;
+                                                          rcd:hasStatement <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> .
+
+
+###  http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_05
+<http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_05> rdf:type rcd:Definition ;
+                                                          rcd:hasStatement <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> .
+
+
+###  http://purl.org/ontoksd/rcd/examples#DEF_RCD_Valid_01
+<http://purl.org/ontoksd/rcd/examples#DEF_RCD_Valid_01> rdf:type rcd:Definition ;
+                                                        rcd:hasStatement <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Valid_01_A> ,
+                                                                         <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Valid_01_B> ;
+                                                        rcd:modelSource "http://example.org/models/ksd" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_01
+<http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_01> rdf:type rcd:LongIdentifier ;
+                                                         rcd:catalog "urn:uuid" ;
+                                                         rcd:entry "c2aab5df-3018-494d-9b63-0e94a9f52001" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_02
+<http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_02> rdf:type rcd:LongIdentifier ;
+                                                         rcd:catalog "urn:uuid" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_03
+<http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_03> rdf:type rcd:LongIdentifier ;
+                                                         rcd:catalog "urn:uuid" ;
+                                                         rcd:entry "f8e66f7c-b3ef-445a-b611-f3a294ca3003" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_04
+<http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_04> rdf:type rcd:LongIdentifier ;
+                                                         rcd:catalog "urn:uuid" ;
+                                                         rcd:entry "a9d7f5ea-b7ff-4980-9e54-38d0db580004" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_05
+<http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_05> rdf:type rcd:LongIdentifier ;
+                                                         rcd:catalog "urn:uuid" ;
+                                                         rcd:entry "b5ea2614-2c1f-4717-a1fc-5d5d66385005" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#ID_RCD_Valid_01
+<http://purl.org/ontoksd/rcd/examples#ID_RCD_Valid_01> rdf:type rcd:LongIdentifier ;
+                                                       rcd:catalog "urn:uuid" ;
+                                                       rcd:entry "f3f83a0b-0f70-4f23-a2dc-0a4d8d0d1001" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#META_RCD_Valid_01
+<http://purl.org/ontoksd/rcd/examples#META_RCD_Valid_01> rdf:type rcd:Metadata ;
+                                                         rcd:additionalMetadata "Example metadata literal for testing." ;
+                                                         rcd:rcdSchema "ieee.org/1484.20.1/2006" ;
+                                                         rcd:rcdSchemaVersion "1.0" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#RCD_Invalid_01
+<http://purl.org/ontoksd/rcd/examples#RCD_Invalid_01> rdf:type rcd:RCD ;
+                                                      rcd:hasIdentifier <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_01> .
+
+
+###  http://purl.org/ontoksd/rcd/examples#RCD_Invalid_02
+<http://purl.org/ontoksd/rcd/examples#RCD_Invalid_02> rdf:type rcd:RCD ;
+                                                      rcd:hasIdentifier <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_02> ;
+                                                      rcd:title "Analyze algorithmic complexity"@en .
+
+
+###  http://purl.org/ontoksd/rcd/examples#RCD_Invalid_03
+<http://purl.org/ontoksd/rcd/examples#RCD_Invalid_03> rdf:type rcd:RCD ;
+                                                      rcd:hasDefinition <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_03> ;
+                                                      rcd:hasIdentifier <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_03> ;
+                                                      rcd:title "Explain stack operations"@en .
+
+
+###  http://purl.org/ontoksd/rcd/examples#RCD_Invalid_04
+<http://purl.org/ontoksd/rcd/examples#RCD_Invalid_04> rdf:type rcd:RCD ;
+                                                      rcd:hasDefinition <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_04> ;
+                                                      rcd:hasIdentifier <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_04> ;
+                                                      rcd:title "Use recursion to solve problems"@en .
+
+
+###  http://purl.org/ontoksd/rcd/examples#RCD_Invalid_05
+<http://purl.org/ontoksd/rcd/examples#RCD_Invalid_05> rdf:type rcd:RCD ;
+                                                      rcd:hasDefinition <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_05> ;
+                                                      rcd:hasIdentifier <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_05> ;
+                                                      rcd:title "Apply normalization rules in databases"@en .
+
+
+###  http://purl.org/ontoksd/rcd/examples#RCD_Valid_01
+<http://purl.org/ontoksd/rcd/examples#RCD_Valid_01> rdf:type rcd:RCD ;
+                                                    rcd:hasDefinition <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Valid_01> ;
+                                                    rcd:hasIdentifier <http://purl.org/ontoksd/rcd/examples#ID_RCD_Valid_01> ;
+                                                    rcd:hasMetadata <http://purl.org/ontoksd/rcd/examples#META_RCD_Valid_01> ;
+                                                    rcd:description "Ability to construct a DFA that recognizes a formally specified regular language."@en ;
+                                                    rcd:title "Design deterministic finite automata"@en ,
+                                                              "Projetar autômatos finitos determinísticos"@pt-br .
+
+
+###  http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04
+<http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> rdf:type rcd:Statement .
+
+
+###  http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05
+<http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> rdf:type rcd:Statement ;
+                                                           rcd:hasStatementToken <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ;
+                                                           rcd:statementName "criterion" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#STMT_RCD_Valid_01_A
+<http://purl.org/ontoksd/rcd/examples#STMT_RCD_Valid_01_A> rdf:type rcd:Statement ;
+                                                           rcd:statementName "performance" ;
+                                                           rcd:statementText "Construct a deterministic finite automaton for a target regular language."@en .
+
+
+###  http://purl.org/ontoksd/rcd/examples#STMT_RCD_Valid_01_B
+<http://purl.org/ontoksd/rcd/examples#STMT_RCD_Valid_01_B> rdf:type rcd:Statement ;
+                                                           rcd:hasStatementToken <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Valid_01_B> ;
+                                                           rcd:statementName "criterion" ;
+                                                           rcd:statementText "The automaton correctly accepts all strings in the language and rejects those outside it."@en .
+
+
+###  http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05
+<http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> rdf:type rcd:Vocabulary ;
+                                                          rcd:vocabularyValue "third-normal-form" .
+
+
+###  http://purl.org/ontoksd/rcd/examples#VOC_RCD_Valid_01_B
+<http://purl.org/ontoksd/rcd/examples#VOC_RCD_Valid_01_B> rdf:type rcd:Vocabulary ;
+                                                          rcd:vocabularySource "http://example.org/vocab/criterion" ;
+                                                          rcd:vocabularyValue "correctness" .
+
+
+[ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#class> rcd:Vocabulary ;
+                                          <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                          <http://www.w3.org/ns/shacl#path> rcd:hasStatementToken
+                                        ]
+] .
+
+[ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> rdf:langString ;
+                                           <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                           <http://www.w3.org/ns/shacl#path> rcd:statementText
+                                         ]
+ ] .
+
+[ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#class> rcd:LongIdentifier ;
+                                           <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                           <http://www.w3.org/ns/shacl#path> rcd:hasStatementID
+                                         ]
+ ] .
+
+[ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+                                           <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                           <http://www.w3.org/ns/shacl#minLength> 1 ;
+                                           <http://www.w3.org/ns/shacl#path> rcd:statementName
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

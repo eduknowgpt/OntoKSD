@@ -1,64 +1,107 @@
-############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill)
-  }
+INSERT DATA {
 
-  FILTER NOT EXISTS {
-    ?existing a ontoksd:KnowledgeSkill ;
-              ontoksd:hasKnowledgeComponent ?k ;
-              ontoksd:hasSkillComponent ?s .
-  }
+  #################################################################
+  # Competence
+  #################################################################
 
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
+  cs2023c:Competence_Software5
+      a ontoksd:Competence ;
+      rdfs:label "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct"@en ;
+      skos:prefLabel "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct"@en ;
+      skos:definition "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct."@en ;
+      rdfs:comment "Competence derived from the CS2023 Software Competency Area, Task Software5. The competence is specified through an explicit KnowledgeSkill pair and the desirable professional dispositions associated with the task."@en ;
+      dcterms:identifier "Software5"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Software5 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Software5_FPL_Types_18_Develop ;
+      ontoksd:hasDisposition
+          ontoksd:inventive ,
+          ontoksd:meticulous ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
 
-;
+  #################################################################
+  # Specification-level Task
+  #################################################################
 
-############# INSERÇÃO DA COMPETÊNCIA CS2023_Software5 ################
+  cs2023c:Task_Software5
+      a ontoksd:Task ;
+      rdfs:label "Software5 task"@en ;
+      skos:prefLabel "Software5 task"@en ;
+      ontoksd:hasTaskStatement "Effectively use a programming language’s type system to develop safe and secure software."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Software5. The task concerns using a programming language's type system during software development to promote safety, security, and correctness in the resulting application."@en ;
+      dcterms:identifier "Task_Software5"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Software5_Application ,
+          cs2023c:TaskComponent_Software5_TypeSystem ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Software5_Use ,
+          cs2023c:TaskActivity_Software5_Develop ,
+          cs2023c:TaskActivity_Software5_Ensure ;
+      ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Software5_SafetySecurityCorrectness .
 
-INSERT {
-  ontoksd:competence_CS2023_Software5 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Effectively use a programming language’s type system to develop safe and secure software"@en ;
-    dcterms:description "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Software5"@en ;
-    ontoksd:hasDisposition ontoksd:inventive ,
-                           ontoksd:meticulous ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-  VALUES (?k ?s) {
-    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill)
-  }
-}
+  #################################################################
+  # Task elements
+  #################################################################
 
+  cs2023c:TaskComponent_Software5_Application
+      a ontoksd:TaskComponent ;
+      rdfs:label "application under development"@en ;
+      skos:prefLabel "application under development"@en ;
+      rdfs:comment "Task component corresponding to the software application being developed."@en .
 
-############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+  cs2023c:TaskComponent_Software5_TypeSystem
+      a ontoksd:TaskComponent ;
+      rdfs:label "programming language type system"@en ;
+      skos:prefLabel "programming language type system"@en ;
+      rdfs:comment "Task component corresponding to the type system whose static type rules are used during software development."@en .
 
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:develop)
-    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:design)
-    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:implement)
-    (cs2023:FPL-Types ontoksd:cs2023DevelopSkill bloom:ensure)
-  }
+  cs2023c:TaskActivity_Software5_Use
+      a ontoksd:TaskActivity ;
+      rdfs:label "use"@en ;
+      skos:prefLabel "use"@en ;
+      rdfs:comment "Task activity capturing the use of a programming language's type system during software development."@en .
 
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+  cs2023c:TaskActivity_Software5_Develop
+      a ontoksd:TaskActivity ;
+      rdfs:label "develop"@en ;
+      skos:prefLabel "develop"@en ;
+      rdfs:comment "Task activity capturing the development of software artifacts."@en .
+
+  cs2023c:TaskActivity_Software5_Ensure
+      a ontoksd:TaskActivity ;
+      rdfs:label "ensure"@en ;
+      skos:prefLabel "ensure"@en ;
+      rdfs:comment "Task activity capturing the intention to ensure that the resulting application is safe, secure, and correct."@en .
+
+  cs2023c:TaskConstraint_Software5_SafetySecurityCorrectness
+      a ontoksd:TaskConstraint ;
+      rdfs:label "to ensure the application is safe, secure, and correct"@en ;
+      skos:prefLabel "to ensure the application is safe, secure, and correct"@en ;
+      rdfs:comment "Task constraint stating that the use of the type system is directed toward achieving software safety, security, and correctness."@en .
+
+  #################################################################
+  # Knowledge-Skill pair
+  #################################################################
+
+  cs2023c:KS_Software5_FPL_Types_18_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "Explain how static overloading and associated resolution algorithms influence the dynamic behavior of programs × Develop"@en ;
+      skos:prefLabel "Explain how static overloading and associated resolution algorithms influence the dynamic behavior of programs × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Software5. It associates FPL-Types knowledge with the CS2023 skill level Develop in the context of producing software that is safe, secure, and correct."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_FPL_Types_18 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
 }

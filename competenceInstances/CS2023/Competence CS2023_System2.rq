@@ -1,78 +1,172 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
+INSERT DATA {
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:SEP-Context            ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEP-Context            ontoksd:cs2023ExplainSkill)
-    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023ExplainSkill)
-    (cs2023:SEP-Privacy            ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEP-Privacy            ontoksd:cs2023ExplainSkill)
-    (cs2023:SEP-Professional-Ethics ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEP-Professional-Ethics ontoksd:cs2023ExplainSkill)
-    (cs2023:SEP-Security           ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEP-Security           ontoksd:cs2023ExplainSkill)
-    (cs2023:SEP-DEIA               ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEP-DEIA               ontoksd:cs2023ExplainSkill)
-    (cs2023:DM-Data                ontoksd:cs2023EvaluateSkill)
-    (cs2023:DM-Data                ontoksd:cs2023ExplainSkill)
-    (cs2023:SEC-Foundations        ontoksd:cs2023EvaluateSkill)
-    (cs2023:SEC-Foundations        ontoksd:cs2023ExplainSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+  #################################################################
+  # Competence
+  #################################################################
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Systems2 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ProfessionalDomain ;
-    dcterms:title "Produce a white paper assessing the social and ethical implications of data collection and storage"@en ;
-    dcterms:description "Identify the stakeholders and evaluate the potential long-term consequences of data collection and retention, including unintended uses and data breaches."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Systems2"@en ;
-    ontoksd:hasDisposition ontoksd:collaborative ,
-                           ontoksd:communicative ,
-                           ontoksd:meticulous ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
+  cs2023c:Competence_Systems2
+      a ontoksd:Competence ;
+      rdfs:label "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects"@en ;
+      skos:prefLabel "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects"@en ;
+      skos:definition "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects. Consider both potential harm from unintended data use and from data breaches."@en ;
+      rdfs:comment "Competence derived from the CS2023 Systems Competency Area, Task Systems2. The CS2023 statement specifies the skill levels Evaluate and Explain without explicitly binding them to particular knowledge elements. In this formalization, OntoKSD represents the highest required skill level, Evaluate, in the corresponding KnowledgeSkill pairs, while explanatory and human-centered performance is preserved in the associated task activities."@en ;
+      dcterms:identifier "Systems2"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Systems2 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Systems2_SEP_Context_1_Evaluate ,
+          cs2023c:KS_Systems2_SEP_Ethical_Analysis_1_Evaluate ,
+          cs2023c:KS_Systems2_SEP_Privacy_1_Evaluate ,
+          cs2023c:KS_Systems2_SEP_Professional_Ethics_1_Evaluate ,
+          cs2023c:KS_Systems2_SEP_Security_1_Evaluate ,
+          cs2023c:KS_Systems2_SEP_DEIA_1_Evaluate ,
+          cs2023c:KS_Systems2_DM_Data_1_Evaluate ,
+          cs2023c:KS_Systems2_SEC_Foundations_1_Evaluate ;
+      ontoksd:hasDisposition
+          ontoksd:meticulous ,
+          ontoksd:responsible ,
+          ontoksd:proactive ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
 
+  #################################################################
+  # Specification-level Task
+  #################################################################
 
-############# VERBOS ################
+  cs2023c:Task_Systems2
+      a ontoksd:Task ;
+      rdfs:label "Systems2 task"@en ;
+      skos:prefLabel "Systems2 task"@en ;
+      ontoksd:hasTaskStatement "Produce a white paper assessing the social and ethical implications of collecting and storing data from a new (or existing) application."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Systems2. This compound task concerns producing a white paper that evaluates data-related practices and humanizes the design of the solution in light of social and ethical implications, including harms arising from unintended data use and data breaches."@en ;
+      dcterms:identifier "Task_Systems2"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Systems2_Data ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Systems2_Evaluate ,
+          cs2023c:TaskActivity_Systems2_Humanize ,
+          cs2023c:TaskActivity_Systems2_Explain ,
+          cs2023c:TaskActivity_Systems2_Identify ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Systems2_SocialEthicalImplications .
 
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:SEP-Context            ontoksd:cs2023ExplainSkill  bloom:explain)
-    (cs2023:SEP-Context            ontoksd:cs2023EvaluateSkill bloom:evaluate)
-    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023ExplainSkill  bloom:analyze)
-    (cs2023:SEP-Ethical-Analysis   ontoksd:cs2023EvaluateSkill bloom:assess)
-    (cs2023:SEP-Privacy            ontoksd:cs2023ExplainSkill  bloom:describe)
-    (cs2023:SEP-Privacy            ontoksd:cs2023EvaluateSkill bloom:judge)
-    (cs2023:SEP-Professional-Ethics ontoksd:cs2023ExplainSkill bloom:interpret)
-    (cs2023:SEP-Professional-Ethics ontoksd:cs2023EvaluateSkill bloom:justify)
-    (cs2023:SEP-Security           ontoksd:cs2023ExplainSkill  bloom:explain)
-    (cs2023:SEP-Security           ontoksd:cs2023EvaluateSkill bloom:assess)
-    (cs2023:SEP-DEIA               ontoksd:cs2023ExplainSkill  bloom:explain)
-    (cs2023:SEP-DEIA               ontoksd:cs2023EvaluateSkill bloom:evaluate)
-    (cs2023:DM-Data                ontoksd:cs2023ExplainSkill  bloom:identify)
-    (cs2023:DM-Data                ontoksd:cs2023EvaluateSkill bloom:assess)
-    (cs2023:SEC-Foundations        ontoksd:cs2023ExplainSkill  bloom:explain)
-    (cs2023:SEC-Foundations        ontoksd:cs2023EvaluateSkill bloom:evaluate)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Systems2_Data
+      a ontoksd:TaskComponent ;
+      rdfs:label "data"@en ;
+      skos:prefLabel "data"@en ;
+      rdfs:comment "Task component corresponding to the data objects whose collection, storage, and retention are assessed in relation to a new or existing application."@en .
+
+  cs2023c:TaskActivity_Systems2_Evaluate
+      a ontoksd:TaskActivity ;
+      rdfs:label "evaluate"@en ;
+      skos:prefLabel "evaluate"@en ;
+      rdfs:comment "Task activity capturing the evaluation of the long-term consequences of collecting, storing, and retaining data objects."@en .
+
+  cs2023c:TaskActivity_Systems2_Humanize
+      a ontoksd:TaskActivity ;
+      rdfs:label "humanize"@en ;
+      skos:prefLabel "humanize"@en ;
+      rdfs:comment "Task activity capturing the human-centered consideration of stakeholders, social impact, ethical implications, and potential harms related to data practices."@en .
+
+  cs2023c:TaskActivity_Systems2_Explain
+      a ontoksd:TaskActivity ;
+      rdfs:label "explain"@en ;
+      skos:prefLabel "explain"@en ;
+      rdfs:comment "Task activity capturing the explanation of the rationale, implications, and risks associated with data collection, storage, and retention practices."@en .
+
+  cs2023c:TaskActivity_Systems2_Identify
+      a ontoksd:TaskActivity ;
+      rdfs:label "identify"@en ;
+      skos:prefLabel "identify"@en ;
+      rdfs:comment "Task activity capturing the identification of stakeholders affected by the collection and retention of data objects."@en .
+
+  cs2023c:TaskConstraint_Systems2_SocialEthicalImplications
+      a ontoksd:TaskConstraint ;
+      rdfs:label "the design of the solution vis-a-vis social and ethical implications"@en ;
+      skos:prefLabel "the design of the solution vis-a-vis social and ethical implications"@en ;
+      rdfs:comment "Task constraint stating that the evaluation must be carried out in relation to the design of the solution and its social and ethical implications, including harms associated with unintended data use and data breaches."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Systems2_SEP_Context_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Context × Evaluate"@en ;
+      skos:prefLabel "SEP-Context × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEP-Context knowledge with the CS2023 skill level Evaluate in the analysis of stakeholders and the contextual implications of data practices."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Context_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_SEP_Ethical_Analysis_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Ethical-Analysis × Evaluate"@en ;
+      skos:prefLabel "SEP-Ethical-Analysis × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEP-Ethical-Analysis knowledge with the CS2023 skill level Evaluate in the assessment of social and ethical implications of data collection and retention."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Ethical_Analysis_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_SEP_Privacy_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Privacy × Evaluate"@en ;
+      skos:prefLabel "SEP-Privacy × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEP-Privacy knowledge with the CS2023 skill level Evaluate in the analysis of privacy implications of collecting, storing, and retaining data."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Privacy_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_SEP_Professional_Ethics_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Professional-Ethics × Evaluate"@en ;
+      skos:prefLabel "SEP-Professional-Ethics × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEP-Professional-Ethics knowledge with the CS2023 skill level Evaluate in examining professional responsibilities related to data practices."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Professional_Ethics_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_SEP_Security_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Security × Evaluate"@en ;
+      skos:prefLabel "SEP-Security × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEP-Security knowledge with the CS2023 skill level Evaluate in considering harms related to insecure handling of data and breach scenarios."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Security_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_SEP_DEIA_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-DEIA × Evaluate"@en ;
+      skos:prefLabel "SEP-DEIA × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEP-DEIA knowledge with the CS2023 skill level Evaluate in considering differential impacts of data practices across stakeholders and groups."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_DEIA_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_DM_Data_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "DM-Data × Evaluate"@en ;
+      skos:prefLabel "DM-Data × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates DM-Data knowledge with the CS2023 skill level Evaluate in the analysis of data objects, their collection, storage, retention, and potential uses."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_DM_Data_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
+  cs2023c:KS_Systems2_SEC_Foundations_1_Evaluate
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEC-Foundations × Evaluate"@en ;
+      skos:prefLabel "SEC-Foundations × Evaluate"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems2. It associates SEC-Foundations knowledge with the CS2023 skill level Evaluate in the assessment of foundational security risks related to data collection, retention, and breaches."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEC_Foundations_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Evaluate .
+
 }

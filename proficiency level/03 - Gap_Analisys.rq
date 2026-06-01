@@ -1,0 +1,58 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+
+  #################################################################
+  # COURSE
+  #################################################################
+
+  ontoksd:Course_FormalLanguages
+      a ontoksd:Course ;
+      rdfs:label "Formal Languages and Automata"@en ;
+      skos:prefLabel "Formal Languages and Automata"@en ;
+      skos:prefLabel "Linguagens Formais e Autômatos"@pt ;
+      dcterms:identifier "Course_FormalLanguages" ;
+      dcterms:description "Course focused on formal languages, automata, and related models of computation."@en .
+
+  #################################################################
+  # CURRICULAR EXPECTATION FOR THE COMPETENCE
+  #################################################################
+
+  ontoksd:CourseCompetenceSpecification_DFAConstruction_FormalLanguages
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "Course competence specification for DFA construction in Formal Languages and Automata"@en ;
+      skos:prefLabel "Course competence specification for DFA construction in Formal Languages and Automata"@en ;
+      skos:prefLabel "Especificação curricular da competência de construção de AFD em Linguagens Formais e Autômatos"@pt ;
+      dcterms:identifier "CourseCompetenceSpecification_DFAConstruction_FormalLanguages" ;
+      dcterms:description "Curricular specification stating that the competence of constructing deterministic finite automata is mandatory in the course and is expected to be addressed at least at the Advanced proficiency level."@en ;
+      ontoksd:mediatesCourse ontoksd:Course_FormalLanguages ;
+      ontoksd:mediatesCourseCompetence ontoksd:Competence_DFAConstruction ;
+      ontoksd:isMandatory "true"^^xsd:boolean ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:ProficiencyLevel_Advanced .
+
+  #################################################################
+  # LEARNING NEED DERIVED FROM THE GAP
+  #################################################################
+
+  ontoksd:LearningNeed_DFAConstruction_AnaSilva
+      a ontoksd:LearningNeed ;
+      rdfs:label "Learning need of Ana Silva regarding DFA construction competence"@en ;
+      skos:prefLabel "Learning need of Ana Silva regarding DFA construction competence"@en ;
+      skos:prefLabel "Necessidade de aprendizagem de Ana Silva relativa à competência de construção de AFD"@pt ;
+      dcterms:identifier "LearningNeed_DFAConstruction_AnaSilva" ;
+      dcterms:description "Learning need identified in Ana Silva's profile because the course expects the competence 'Construct deterministic finite automata for formal languages' at the Advanced level, while the evidenced competence currently indicates the Proficient level."@en ;
+      ontoksd:identifiedIn ontoksd:Profile_AnaSilva ;
+      ontoksd:targetsCompetence ontoksd:Competence_DFAConstruction .
+
+  #################################################################
+  # LINK FROM PROFILE TO LEARNING NEED
+  #################################################################
+
+  ontoksd:Profile_AnaSilva
+      ontoksd:hasLearningNeed ontoksd:LearningNeed_DFAConstruction_AnaSilva .
+
+}

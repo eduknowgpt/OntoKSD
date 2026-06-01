@@ -1,0 +1,41 @@
+# This query derives potential competence gaps by comparing proficiency levels evidenced in learner profiles with minimum proficiency levels required by course-level competence specifications. Since LearningNeed instances are not explicitly materialized in the dataset, this query identifies learning needs analytically rather than retrieving pre-existing records. Thus, the query demonstrates that OntoKSD can support competence-gap detection through rule-like SPARQL derivation.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT
+  ?profile
+  ?profileLabel
+  ?competence
+  ?competenceLabel
+  ?course
+  ?courseLabel
+  ?evidencedLevel
+  ?evidencedLevelLabel
+  ?evidencedOrdinal
+  ?requiredLevel
+  ?requiredLevelLabel
+  ?requiredOrdinal
+WHERE {
+  ?evidencedCompetence ontoksd:isEvidencedCompetenceOf ?profile ;
+                       ontoksd:refersToCompetence ?competence ;
+                       ontoksd:hasProficiencyLevel ?evidencedLevel .
+
+  ?evidencedLevel ontoksd:hasOrdinalPosition ?evidencedOrdinal .
+
+  ?courseSpecification ontoksd:mediatesCourseCompetence ?competence ;
+                       ontoksd:mediatesCourse ?course ;
+                       ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
+
+  ?requiredLevel ontoksd:hasOrdinalPosition ?requiredOrdinal .
+
+  FILTER(xsd:integer(?evidencedOrdinal) < xsd:integer(?requiredOrdinal))
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?course rdfs:label ?courseLabel . }
+  OPTIONAL { ?evidencedLevel rdfs:label ?evidencedLevelLabel . }
+  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+}
+ORDER BY ?profileLabel ?courseLabel ?competenceLabel

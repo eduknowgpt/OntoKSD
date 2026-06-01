@@ -1,0 +1,69 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <http://purl.org/cs2023#>
+PREFIX cs2023k:   <http://purl.org/cs2023/knowledge#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C14 a ontoksd:Competence ;
+      rdfs:label "Differentiate classifications of formal grammars"@en ;
+      dcterms:identifier "C14"^^xsd:string ;
+      rdfs:comment "Atomic competence concerned with understanding, comparing, and differentiating formal grammar classes, especially regular and context-free grammars, in relation to their structural properties, expressive power, and corresponding computational models."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:transversalCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C14_RegularLanguages_Understanding ,
+                                ontoksd:KS_C14_ContextFreeLanguages_Understanding ,
+                                ontoksd:KS_C14_AnalyticalThinking_Applying ;
+      ontoksd:hasDisposition ontoksd:inventive ,
+                             ontoksd:collaborative ,
+                             ontoksd:responsible ,
+                             ontoksd:proactive .
+
+  ontoksd:KS_C14_RegularLanguages_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C14 KS Pair — Regular Languages × Understanding"@en ;
+      dcterms:identifier "C14-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding regular grammars and languages in order to identify their defining structural simplicity, classify regular constructs, and compare their expressive limits with richer grammar classes."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_2 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:identify ,
+                                             bloom:classify ,
+                                             bloom:compare .
+
+  ontoksd:KS_C14_ContextFreeLanguages_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C14 KS Pair — Context-Free Languages × Understanding"@en ;
+      dcterms:identifier "C14-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding context-free grammars and languages in order to recognize their defining properties, describe derivational structures, and differentiate their expressive capabilities from those of regular languages."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_4 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_4 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:recognize ,
+                                             bloom:describe ,
+                                             bloom:differentiate .
+
+  ontoksd:KS_C14_AnalyticalThinking_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C14 KS Pair — Analytical and Critical Thinking × Applying"@en ;
+      dcterms:identifier "C14-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying analytical and critical thinking to contrast grammar classes, analyze modeling requirements, and justify the selection of an appropriate formalism according to expressiveness, memory requirements, and system constraints."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:analyze ,
+                                             bloom:contrast ,
+                                             bloom:justify .
+
+  cs2023k:Knowledge_AL_Models_2
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  cs2023k:Knowledge_AL_Models_4
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+}

@@ -1,0 +1,31 @@
+# This query retrieves evidenced competence constituent records that link abstract competence constituents to contextualized evidence of their demonstration. It returns each EvidencedCompetenceConstituent, the CompetenceConstituent to which it refers, the Evidence that supports it, and, when available, the profile and assessment occurrence in which the evidenced constituent record is contextualized. Thus, the query demonstrates that OntoKSD can connect abstract competence constituents to learner-specific evidential manifestations.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?competenceConstituent
+  ?competenceConstituentLabel
+  ?evidencedConstituent
+  ?evidencedConstituentLabel
+  ?evidence
+  ?evidenceLabel
+  ?profile
+  ?profileLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+WHERE {
+  ?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ;
+                        ontoksd:refersToCompetenceConstituent ?competenceConstituent ;
+                        ontoksd:supportedByEvidence ?evidence .
+
+  OPTIONAL { ?evidencedConstituent ontoksd:isEvidencedCompetenceConstituentOf ?profile . }
+  OPTIONAL { ?evidencedConstituent ontoksd:isEvidencedInAssessmentOccurrence ?assessmentOccurrence . }
+
+  OPTIONAL { ?competenceConstituent rdfs:label ?competenceConstituentLabel . }
+  OPTIONAL { ?evidencedConstituent rdfs:label ?evidencedConstituentLabel . }
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?competenceConstituentLabel ?evidencedConstituentLabel ?evidenceLabel

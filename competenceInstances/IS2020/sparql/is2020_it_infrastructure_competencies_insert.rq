@@ -1,0 +1,793 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  #################################################################
+  # Source markers and scheme
+  #################################################################
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 IT infrastructure competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.3.1 Competency Area – IT infrastructure."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020ITInfrastructureKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 IT infrastructure Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 IT infrastructure Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IT infrastructure competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Knowledge elements
+  #################################################################
+
+  is2020k:IndividualComponentsOfITInfrastructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Individual components of IT infrastructure"@en ;
+      skos:prefLabel "Individual components of IT infrastructure"@en ;
+      skos:definition "Knowledge of the individual components that compose IT infrastructure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FunctionsOfITInfrastructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Functions of IT infrastructure"@en ;
+      skos:prefLabel "Functions of IT infrastructure"@en ;
+      skos:definition "Knowledge of the functions performed by IT infrastructure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PlanningAndManagingITInfrastructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Planning and managing IT infrastructure"@en ;
+      skos:prefLabel "Planning and managing IT infrastructure"@en ;
+      skos:definition "Knowledge of how to plan and manage IT infrastructure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:OrganizingStructuresAndProcesses
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Organizing structures and processes"@en ;
+      skos:prefLabel "Organizing structures and processes"@en ;
+      skos:definition "Knowledge of organizing structures and processes related to IT infrastructure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RoleOfITInfrastructureInBusiness
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Role of IT infrastructure in business"@en ;
+      skos:prefLabel "Role of IT infrastructure in business"@en ;
+      skos:definition "Knowledge of the role of IT infrastructure in supporting business operations and objectives."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:LayersOfTCPIPProtocolSuite
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Layers of the TCP/IP protocol suite"@en ;
+      skos:prefLabel "Layers of the TCP/IP protocol suite"@en ;
+      skos:definition "Knowledge of the layers that compose the TCP/IP protocol suite."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:LayersOfOSIModel
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Layers of the OSI model"@en ;
+      skos:prefLabel "Layers of the OSI model"@en ;
+      skos:definition "Knowledge of the layers that compose the OSI reference model."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DutiesOfEachLayerOfTCPIPProtocolSuite
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Duties of each layer of the TCP/IP protocol suite"@en ;
+      skos:prefLabel "Duties of each layer of the TCP/IP protocol suite"@en ;
+      skos:definition "Knowledge of the responsibilities and duties of each layer of the TCP/IP protocol suite."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DutiesOfEachLayerOfOSIModel
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Duties of each layer of the OSI model"@en ;
+      skos:prefLabel "Duties of each layer of the OSI model"@en ;
+      skos:definition "Knowledge of the responsibilities and duties of each layer of the OSI model."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:NetworkSecurity
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Network security"@en ;
+      skos:prefLabel "Network security"@en ;
+      skos:definition "Knowledge of network security principles within layered network architectures."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ComponentsOfANetwork
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Components of a network"@en ;
+      skos:prefLabel "Components of a network"@en ;
+      skos:definition "Knowledge of the components that make up a computer network."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ComponentsOfClientServer
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Components of client/server architecture"@en ;
+      skos:prefLabel "Components of client/server architecture"@en ;
+      skos:definition "Knowledge of the components of client/server architecture."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WiredNetworks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Wired networks"@en ;
+      skos:prefLabel "Wired networks"@en ;
+      skos:definition "Knowledge of wired network infrastructures and their characteristics."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WirelessProtocols
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Wireless protocols"@en ;
+      skos:prefLabel "Wireless protocols"@en ;
+      skos:definition "Knowledge of wireless protocols used in IT infrastructure solutions."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ConfigurationAndSetupProcessesForNetworkInfrastructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Configuration and setup processes for network hardware, software, and supporting components"@en ;
+      skos:prefLabel "Configuration and setup processes for network hardware, software, and supporting components"@en ;
+      skos:definition "Knowledge of configuration and setup processes on network hardware, software, and other supporting devices and components."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FourTypesOfComputerNetworks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Four types of computer networks: LAN, WAN, PAN, MAN"@en ;
+      skos:prefLabel "Four types of computer networks: LAN, WAN, PAN, MAN"@en ;
+      skos:definition "Knowledge of the four common types of computer networks: LAN, WAN, PAN, and MAN."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:NetworkTopologies
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Network topologies: Mesh, Star, Bus, Ring, Hybrid"@en ;
+      skos:prefLabel "Network topologies: Mesh, Star, Bus, Ring, Hybrid"@en ;
+      skos:definition "Knowledge of network topologies, including mesh, star, bus, ring, and hybrid arrangements."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TypesOfProtocols
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Types of protocols: TCP, IP, UDP, POP, SMTP, FTP, HTTP, HTTPS"@en ;
+      skos:prefLabel "Types of protocols: TCP, IP, UDP, POP, SMTP, FTP, HTTP, HTTPS"@en ;
+      skos:definition "Knowledge of common network protocols, including Transmission Control Protocol, Internet Protocol, User Datagram Protocol, Post Office Protocol, Simple Mail Transfer Protocol, File Transfer Protocol, HyperText Transfer Protocol, and HyperText Transfer Protocol Secure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BasicFormsOfSystemAttacks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Basic forms of system attacks"@en ;
+      skos:prefLabel "Basic forms of system attacks"@en ;
+      skos:definition "Knowledge of basic forms of attacks against systems and networks."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AccessControlToComputersAndNetworks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Access control to computers and networks"@en ;
+      skos:prefLabel "Access control to computers and networks"@en ;
+      skos:definition "Knowledge of access control mechanisms for computers and networks."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechniquesToMakeDataSecure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Techniques to make data secure"@en ;
+      skos:prefLabel "Techniques to make data secure"@en ;
+      skos:definition "Knowledge of techniques used to secure data."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StrengthsAndWeaknessesOfPasswords
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Strengths and weaknesses of passwords"@en ;
+      skos:prefLabel "Strengths and weaknesses of passwords"@en ;
+      skos:definition "Knowledge of the strengths and weaknesses associated with password-based security."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BasicFeaturesOfCryptography
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Basic features of cryptography"@en ;
+      skos:prefLabel "Basic features of cryptography"@en ;
+      skos:definition "Knowledge of the basic features and principles of cryptography."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FirewallsAndTypesOfFirewallProtection
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Firewalls and types of firewall protection"@en ;
+      skos:prefLabel "Firewalls and types of firewall protection"@en ;
+      skos:definition "Knowledge of firewalls and the types of protection they provide."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechniquesToSecureWirelessCommunication
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Techniques to secure wireless communication"@en ;
+      skos:prefLabel "Techniques to secure wireless communication"@en ;
+      skos:definition "Knowledge of techniques used to secure wireless communication."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AdvantagesOfASecurityPolicy
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Advantages of a security policy"@en ;
+      skos:prefLabel "Advantages of a security policy"@en ;
+      skos:definition "Knowledge of the advantages of establishing and maintaining a security policy."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:InfrastructureComponents
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Infrastructure components"@en ;
+      skos:prefLabel "Infrastructure components"@en ;
+      skos:definition "Knowledge of infrastructure components for examining and critiquing organizational IT infrastructure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:InfrastructurePlanning
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Infrastructure planning"@en ;
+      skos:prefLabel "Infrastructure planning"@en ;
+      skos:definition "Knowledge of infrastructure planning for organizational contexts."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ContinuityPlanning
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Continuity planning"@en ;
+      skos:prefLabel "Continuity planning"@en ;
+      skos:definition "Knowledge of continuity planning related to organizational IT infrastructure."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ServerComponents
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Server components"@en ;
+      skos:prefLabel "Server components"@en ;
+      skos:definition "Knowledge of server components in physical and cloud-based server architecture."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CloudConfiguration
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Cloud configuration"@en ;
+      skos:prefLabel "Cloud configuration"@en ;
+      skos:definition "Knowledge of cloud configuration in IT server architecture."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FoundationsOfTOGAF
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Foundations of TOGAF"@en ;
+      skos:prefLabel "Foundations of TOGAF"@en ;
+      skos:definition "Knowledge of the foundational concepts of TOGAF."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FoundationsOfITIL
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Foundations of ITIL"@en ;
+      skos:prefLabel "Foundations of ITIL"@en ;
+      skos:definition "Knowledge of the foundational concepts of ITIL."@en ;
+      skos:inScheme is2020k:IS2020ITInfrastructureKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Competencies
+  #################################################################
+
+  is2020c:Competence_ISITI_1
+      a ontoksd:Competence ;
+      rdfs:label "Explain key infrastructure concepts, including how it functions, how to define critical functions, and how to plan and manage infrastructure"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 1"@en ;
+      skos:definition "Explain key infrastructure concepts, including how it functions, how to define critical functions, and how to plan and manage infrastructure."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+      dcterms:identifier "ISITI-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:IndividualComponentsOfITInfrastructure ,
+          is2020k:FunctionsOfITInfrastructure ,
+          is2020k:PlanningAndManagingITInfrastructure ,
+          is2020k:OrganizingStructuresAndProcesses ,
+          is2020k:RoleOfITInfrastructureInBusiness ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_1_01 ,
+          is2020c:KS_ISITI_1_02 ,
+          is2020c:KS_ISITI_1_03 ,
+          is2020c:KS_ISITI_1_04 ,
+          is2020c:KS_ISITI_1_05 .
+
+  is2020c:Competence_ISITI_2
+      a ontoksd:Competence ;
+      rdfs:label "Explain the principles of layered network architectures"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 2"@en ;
+      skos:definition "Explain the principles of layered network architectures."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:LayersOfTCPIPProtocolSuite ,
+          is2020k:LayersOfOSIModel ,
+          is2020k:DutiesOfEachLayerOfTCPIPProtocolSuite ,
+          is2020k:DutiesOfEachLayerOfOSIModel ,
+          is2020k:NetworkSecurity ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:meticulous , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_2_01 ,
+          is2020c:KS_ISITI_2_02 ,
+          is2020c:KS_ISITI_2_03 ,
+          is2020c:KS_ISITI_2_04 ,
+          is2020c:KS_ISITI_2_05 .
+
+  is2020c:Competence_ISITI_3
+      a ontoksd:Competence ;
+      rdfs:label "Explain the components of IT infrastructure solutions from client/server, network hardware, (including wireless and wired)"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 3"@en ;
+      skos:definition "Explain the components of IT infrastructure solutions from client/server, network hardware, including wireless and wired infrastructure."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ComponentsOfANetwork ,
+          is2020k:ComponentsOfClientServer ,
+          is2020k:WiredNetworks ,
+          is2020k:WirelessProtocols ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:meticulous , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_3_01 ,
+          is2020c:KS_ISITI_3_02 ,
+          is2020c:KS_ISITI_3_03 ,
+          is2020c:KS_ISITI_3_04 .
+
+  is2020c:Competence_ISITI_4
+      a ontoksd:Competence ;
+      rdfs:label "Explain the principles of network software and configuration"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 4"@en ;
+      skos:definition "Explain the principles of network software and configuration."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ConfigurationAndSetupProcessesForNetworkInfrastructure ,
+          is2020k:FourTypesOfComputerNetworks ,
+          is2020k:NetworkTopologies ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_4_01 ,
+          is2020c:KS_ISITI_4_02 ,
+          is2020c:KS_ISITI_4_03 .
+
+  is2020c:Competence_ISITI_5
+      a ontoksd:Competence ;
+      rdfs:label "Explain network protocols and their configuration"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 5"@en ;
+      skos:definition "Explain network protocols and their configuration."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:TypesOfProtocols ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_5_01 .
+
+  is2020c:Competence_ISITI_6
+      a ontoksd:Competence ;
+      rdfs:label "Explain security principles as they pertain to networks"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 6"@en ;
+      skos:definition "Explain security principles as they pertain to networks."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:BasicFormsOfSystemAttacks ,
+          is2020k:AccessControlToComputersAndNetworks ,
+          is2020k:TechniquesToMakeDataSecure ,
+          is2020k:StrengthsAndWeaknessesOfPasswords ,
+          is2020k:BasicFeaturesOfCryptography ,
+          is2020k:FirewallsAndTypesOfFirewallProtection ,
+          is2020k:TechniquesToSecureWirelessCommunication ,
+          is2020k:AdvantagesOfASecurityPolicy ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:professional , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_6_01 ,
+          is2020c:KS_ISITI_6_02 ,
+          is2020c:KS_ISITI_6_03 ,
+          is2020c:KS_ISITI_6_04 ,
+          is2020c:KS_ISITI_6_05 ,
+          is2020c:KS_ISITI_6_06 ,
+          is2020c:KS_ISITI_6_07 ,
+          is2020c:KS_ISITI_6_08 .
+
+  is2020c:Competence_ISITI_7
+      a ontoksd:Competence ;
+      rdfs:label "Examine and critique IT infrastructure for organizations"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 7"@en ;
+      skos:definition "Examine and critique IT infrastructure for organizations."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:InfrastructureComponents ,
+          is2020k:InfrastructurePlanning ,
+          is2020k:ContinuityPlanning ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_7_01 ,
+          is2020c:KS_ISITI_7_02 ,
+          is2020c:KS_ISITI_7_03 .
+
+  is2020c:Competence_ISITI_8
+      a ontoksd:Competence ;
+      rdfs:label "Examine and critique IT server architecture (both physical or cloud-based)"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 8"@en ;
+      skos:definition "Examine and critique IT server architecture, whether physical or cloud-based."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-8"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ServerComponents ,
+          is2020k:CloudConfiguration ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_8_01 ,
+          is2020c:KS_ISITI_8_02 .
+
+  is2020c:Competence_ISITI_9
+      a ontoksd:Competence ;
+      rdfs:label "Explain concepts of Enterprise Architecture"@en ;
+      skos:prefLabel "IS IT infrastructure Competency 9"@en ;
+      skos:definition "Explain concepts of Enterprise Architecture."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.1 IT infrastructure."@en ;
+      dcterms:identifier "ISITI-9"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-it-infrastructure-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:FoundationsOfTOGAF ,
+          is2020k:FoundationsOfITIL ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISITI_9_01 ,
+          is2020c:KS_ISITI_9_02 .
+
+  #################################################################
+  # KnowledgeSkill relators
+  #################################################################
+
+  is2020c:KS_ISITI_1_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Individual components of IT infrastructure × Understanding"@en ;
+      skos:prefLabel "Individual components of IT infrastructure × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 1 linking individual components of IT infrastructure to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:IndividualComponentsOfITInfrastructure ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_1 .
+
+  is2020c:KS_ISITI_1_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Functions of IT infrastructure × Applying"@en ;
+      skos:prefLabel "Functions of IT infrastructure × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 1 linking functions of IT infrastructure to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FunctionsOfITInfrastructure ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_1 .
+
+  is2020c:KS_ISITI_1_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Planning and managing IT infrastructure × Applying"@en ;
+      skos:prefLabel "Planning and managing IT infrastructure × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 1 linking planning and managing IT infrastructure to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:PlanningAndManagingITInfrastructure ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_1 .
+
+  is2020c:KS_ISITI_1_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Organizing structures and processes × Understanding"@en ;
+      skos:prefLabel "Organizing structures and processes × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 1 linking organizing structures and processes to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:OrganizingStructuresAndProcesses ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_1 .
+
+  is2020c:KS_ISITI_1_05 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Role of IT infrastructure in business × Understanding"@en ;
+      skos:prefLabel "Role of IT infrastructure in business × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 1 linking the role of IT infrastructure in business to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RoleOfITInfrastructureInBusiness ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_1 .
+
+  is2020c:KS_ISITI_2_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Layers of the TCP/IP protocol suite × Understanding"@en ;
+      skos:prefLabel "Layers of the TCP/IP protocol suite × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 2 linking the layers of the TCP/IP protocol suite to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:LayersOfTCPIPProtocolSuite ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_2 .
+
+  is2020c:KS_ISITI_2_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Layers of the OSI model × Understanding"@en ;
+      skos:prefLabel "Layers of the OSI model × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 2 linking the layers of the OSI model to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:LayersOfOSIModel ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_2 .
+
+  is2020c:KS_ISITI_2_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Duties of each layer of the TCP/IP protocol suite × Understanding"@en ;
+      skos:prefLabel "Duties of each layer of the TCP/IP protocol suite × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 2 linking the duties of each TCP/IP layer to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DutiesOfEachLayerOfTCPIPProtocolSuite ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_2 .
+
+  is2020c:KS_ISITI_2_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Duties of each layer of the OSI model × Understanding"@en ;
+      skos:prefLabel "Duties of each layer of the OSI model × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 2 linking the duties of each OSI layer to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DutiesOfEachLayerOfOSIModel ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_2 .
+
+  is2020c:KS_ISITI_2_05 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Network security × Analyzing"@en ;
+      skos:prefLabel "Network security × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 2 linking network security to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:NetworkSecurity ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_2 .
+
+  is2020c:KS_ISITI_3_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Components of a network × Analyzing"@en ;
+      skos:prefLabel "Components of a network × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 3 linking components of a network to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ComponentsOfANetwork ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_3 .
+
+  is2020c:KS_ISITI_3_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Components of client/server architecture × Understanding"@en ;
+      skos:prefLabel "Components of client/server architecture × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 3 linking client/server components to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ComponentsOfClientServer ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_3 .
+
+  is2020c:KS_ISITI_3_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Wired networks × Understanding"@en ;
+      skos:prefLabel "Wired networks × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 3 linking wired networks to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:WiredNetworks ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_3 .
+
+  is2020c:KS_ISITI_3_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Wireless protocols × Applying"@en ;
+      skos:prefLabel "Wireless protocols × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 3 linking wireless protocols to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:WirelessProtocols ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_3 .
+
+  is2020c:KS_ISITI_4_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Configuration and setup processes for network infrastructure × Applying"@en ;
+      skos:prefLabel "Configuration and setup processes for network infrastructure × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 4 linking configuration and setup processes to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ConfigurationAndSetupProcessesForNetworkInfrastructure ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_4 .
+
+  is2020c:KS_ISITI_4_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Four types of computer networks × Understanding"@en ;
+      skos:prefLabel "Four types of computer networks × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 4 linking common network types to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FourTypesOfComputerNetworks ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_4 .
+
+  is2020c:KS_ISITI_4_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Network topologies × Understanding"@en ;
+      skos:prefLabel "Network topologies × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 4 linking network topologies to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:NetworkTopologies ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_4 .
+
+  is2020c:KS_ISITI_5_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Types of protocols × Understanding"@en ;
+      skos:prefLabel "Types of protocols × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 5 linking types of protocols to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TypesOfProtocols ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_5 .
+
+  is2020c:KS_ISITI_6_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Basic forms of system attacks × Understanding"@en ;
+      skos:prefLabel "Basic forms of system attacks × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking basic forms of system attacks to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BasicFormsOfSystemAttacks ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Access control to computers and networks × Understanding"@en ;
+      skos:prefLabel "Access control to computers and networks × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking access control to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:AccessControlToComputersAndNetworks ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Techniques to make data secure × Understanding"@en ;
+      skos:prefLabel "Techniques to make data secure × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking techniques for data security to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TechniquesToMakeDataSecure ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Strengths and weaknesses of passwords × Understanding"@en ;
+      skos:prefLabel "Strengths and weaknesses of passwords × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking password strengths and weaknesses to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:StrengthsAndWeaknessesOfPasswords ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_05 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Basic features of cryptography × Understanding"@en ;
+      skos:prefLabel "Basic features of cryptography × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking basic features of cryptography to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BasicFeaturesOfCryptography ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_06 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Firewalls and types of firewall protection × Understanding"@en ;
+      skos:prefLabel "Firewalls and types of firewall protection × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking firewalls and firewall protection types to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FirewallsAndTypesOfFirewallProtection ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_07 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Techniques to secure wireless communication × Understanding"@en ;
+      skos:prefLabel "Techniques to secure wireless communication × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking techniques to secure wireless communication to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TechniquesToSecureWirelessCommunication ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_6_08 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Advantages of a security policy × Understanding"@en ;
+      skos:prefLabel "Advantages of a security policy × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 6 linking advantages of a security policy to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:AdvantagesOfASecurityPolicy ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_6 .
+
+  is2020c:KS_ISITI_7_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Infrastructure components × Analyzing"@en ;
+      skos:prefLabel "Infrastructure components × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 7 linking infrastructure components to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:InfrastructureComponents ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_7 .
+
+  is2020c:KS_ISITI_7_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Infrastructure planning × Analyzing"@en ;
+      skos:prefLabel "Infrastructure planning × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 7 linking infrastructure planning to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:InfrastructurePlanning ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_7 .
+
+  is2020c:KS_ISITI_7_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Continuity planning × Evaluating"@en ;
+      skos:prefLabel "Continuity planning × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 7 linking continuity planning to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ContinuityPlanning ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_7 .
+
+  is2020c:KS_ISITI_8_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Server components × Analyzing"@en ;
+      skos:prefLabel "Server components × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 8 linking server components to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ServerComponents ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_8 .
+
+  is2020c:KS_ISITI_8_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Cloud configuration × Analyzing"@en ;
+      skos:prefLabel "Cloud configuration × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 8 linking cloud configuration to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:CloudConfiguration ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_8 .
+
+  is2020c:KS_ISITI_9_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Foundations of TOGAF × Understanding"@en ;
+      skos:prefLabel "Foundations of TOGAF × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 9 linking the foundations of TOGAF to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FoundationsOfTOGAF ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_9 .
+
+  is2020c:KS_ISITI_9_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Foundations of ITIL × Understanding"@en ;
+      skos:prefLabel "Foundations of ITIL × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS IT infrastructure Competency 9 linking the foundations of ITIL to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FoundationsOfITIL ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISITI_9 .
+
+}

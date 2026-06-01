@@ -1,0 +1,90 @@
+PREFIX ontoksd:     <http://purl.org/ontoksd#>
+PREFIX cc2020:      <http://purl.org/cc2020/knowledge#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX bloom:       <http://purl.org/edu/bloom#>
+PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:         <http://www.w3.org/2002/07/owl#>
+PREFIX skos:        <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:     <http://purl.org/dc/terms/>
+
+INSERT DATA {
+
+  #################################################################
+  # Source marker
+  #################################################################
+
+  <http://purl.org/ontoksd/source/cc2020-competence-catalog>
+      a owl:NamedIndividual ;
+      rdfs:label "CC2020 competence catalog"@en ;
+      rdfs:comment "Source for competencies instantiated from the CC2020 report."@en .
+
+  #################################################################
+  # Competence
+  #################################################################
+
+  ontoksd:CC2020_Competence_C
+      a ontoksd:Competence ;
+      rdfs:label "Identify and document system requirements with stakeholders"@en ;
+      skos:prefLabel "C"@en ;
+      skos:altLabel "CC2020 Competence C"@en ;
+      skos:definition """Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."""@en ;
+      rdfs:comment """Competence derived from the CC2020 report."""@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+
+      ontoksd:hasDisposition ontoksd:purposeDriven ;
+      ontoksd:hasDisposition ontoksd:responsible ;
+      ontoksd:hasDisposition ontoksd:collaborative ;
+
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C_01 ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C_02 ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C_03 ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C_04 ;
+
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+	  dcterms:bibliographicCitation "Computing Curricula 2020 (CC2020), pp. 51–52."@en ;
+      dcterms:references <http://purl.org/ontoksd/source/cc2020-competence-catalog> .
+
+  #################################################################
+  # KnowledgeSkill relators
+  #################################################################
+
+  ontoksd:KS_C_01
+    a ontoksd:KnowledgeSkill ;
+    rdfs:label "Requirements Analysis and Specifications × Evaluating"@en ;
+    skos:prefLabel "Requirements Analysis and Specifications × Evaluating"@en ;
+    rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Requirements Analysis and Specifications to the required Bloom skill level Evaluating."@en ;
+    ontoksd:hasKnowledgeComponent cc2020:RequirementsAnalysisAndSpecifications ;
+    ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+
+  ontoksd:KS_C_02
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "Oral Communication × Applying"@en ;
+      skos:prefLabel "Oral Communication × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Oral Communication to the required Bloom skill level Applying."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:OralCommunication ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+
+  ontoksd:KS_C_03
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "Written Communication × Applying"@en ;
+      skos:prefLabel "Written Communication × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Written Communication to the required Bloom skill level Applying."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+
+  ontoksd:KS_C_04
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "Collaboration and Teamwork × Applying"@en ;
+      skos:prefLabel "Collaboration and Teamwork × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Collaboration and Teamwork to the required Bloom skill level Applying."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:Collaboration ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+
+}

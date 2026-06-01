@@ -1,0 +1,37 @@
+# This query retrieves evidenced competence constituents whose proficiency level is below the course-required proficiency level of the competence to which they belong.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?competence ?competenceLabel ?constituent ?constituentLabel ?evidencedLevel ?evidencedLevelLabel ?requiredLevel ?requiredLevelLabel
+WHERE {
+  ?courseSpec ontoksd:mediatesCourse ?course ;
+              ontoksd:mediatesCourseCompetence ?competence ;
+              ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
+
+  {
+    ?competence ontoksd:hasKnowledgeSkill ?constituent .
+  }
+  UNION
+  {
+    ?competence ontoksd:hasDisposition ?constituent .
+  }
+
+  ?evidencedConstituent ontoksd:isEvidencedCompetenceConstituentOf ?profile ;
+                        ontoksd:refersToCompetenceConstituent ?constituent ;
+                        ontoksd:hasProficiencyLevel ?evidencedLevel .
+
+  ?evidencedLevel ontoksd:hasOrdinalPosition ?evidencedOrdinal .
+  ?requiredLevel ontoksd:hasOrdinalPosition ?requiredOrdinal .
+
+  FILTER(xsd:integer(?evidencedOrdinal) < xsd:integer(?requiredOrdinal))
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?course rdfs:label ?courseLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?constituent rdfs:label ?constituentLabel . }
+  OPTIONAL { ?evidencedLevel rdfs:label ?evidencedLevelLabel . }
+  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+}
+ORDER BY ?profileLabel ?courseLabel ?competenceLabel ?constituentLabel

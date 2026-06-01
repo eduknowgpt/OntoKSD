@@ -1,0 +1,17 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?scheme ?scale ?interval ?lower ?upper ?level ?ordinal
+WHERE {
+  ?scheme a ontoksd:ProficiencyScheme ;
+          ontoksd:usesScale ?scale ;
+          ontoksd:definesInterval ?interval ;
+          ontoksd:definesLevel ?level .
+
+  ?interval ontoksd:lowerBound ?lower ;
+            ontoksd:upperBound ?upper ;
+            ontoksd:correspondsToLevel ?level .
+
+  ?level ontoksd:hasOrdinalPosition ?ordinal .
+}
+ORDER BY ?lower

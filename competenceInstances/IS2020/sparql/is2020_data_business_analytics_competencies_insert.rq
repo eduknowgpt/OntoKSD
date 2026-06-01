@@ -1,0 +1,491 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  #################################################################
+  # Source markers and scheme
+  #################################################################
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Data / Business Analytics competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.2.2 Competency Area – Data / Business Analytics."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 Data / Business Analytics Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 Data / Business Analytics Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Data / Business Analytics competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Knowledge elements
+  #################################################################
+
+  is2020k:PrinciplesOfComputationalThinking
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Principles of computational thinking"@en ;
+      skos:prefLabel "Principles of computational thinking"@en ;
+      skos:definition "Knowledge of the principles of computational thinking relevant to learning data science."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DecompositionAbstractionPatternRecognitionGeneralizationAndAutomation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Decomposition, abstraction, pattern recognition, generalization, and automation"@en ;
+      skos:prefLabel "Decomposition, abstraction, pattern recognition, generalization, and automation"@en ;
+      skos:definition "Knowledge of core computational thinking elements, including decomposition, abstraction, pattern recognition, generalization, and automation."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataScienceProblems
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data science problems"@en ;
+      skos:prefLabel "Data science problems"@en ;
+      skos:definition "Knowledge of the nature and characteristics of data science problems."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FrameworkForThinkingAboutComputationalThinking
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Framework for thinking about computational thinking"@en ;
+      skos:prefLabel "Framework for thinking about computational thinking"@en ;
+      skos:definition "Knowledge of a framework for thinking about computational thinking in the analysis of data science problems."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BusinessProblem
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Business problem"@en ;
+      skos:prefLabel "Business problem"@en ;
+      skos:definition "Knowledge of business problems as the starting point for expressing them as data problems."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProblemDataCharacteristicsAnalysisAndPolicy
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Problem, data characteristics, analysis, and policy"@en ;
+      skos:prefLabel "Problem, data characteristics, analysis, and policy"@en ;
+      skos:definition "Knowledge of the relation among problem framing, data characteristics, analysis, and policy in expressing a business problem as a data problem."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DescriptiveStatistics
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Descriptive statistics"@en ;
+      skos:prefLabel "Descriptive statistics"@en ;
+      skos:definition "Knowledge of descriptive statistics used in exploratory data analysis."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataVisualization
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data visualization"@en ;
+      skos:prefLabel "Data visualization"@en ;
+      skos:definition "Knowledge of data visualization techniques used in exploratory data analysis and value proposition development."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Classification
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Classification"@en ;
+      skos:prefLabel "Classification"@en ;
+      skos:definition "Knowledge of classification as an analytics task."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Clustering
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Clustering"@en ;
+      skos:prefLabel "Clustering"@en ;
+      skos:definition "Knowledge of clustering as an analytics task."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Optimization
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Optimization"@en ;
+      skos:prefLabel "Optimization"@en ;
+      skos:definition "Knowledge of optimization as an analytics task."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Recommendation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Recommendation"@en ;
+      skos:prefLabel "Recommendation"@en ;
+      skos:definition "Knowledge of recommendation as an analytics task."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BigDataVolume
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Volume"@en ;
+      skos:prefLabel "Volume"@en ;
+      skos:definition "Knowledge of volume as a core characteristic of Big Data."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BigDataVelocity
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Velocity"@en ;
+      skos:prefLabel "Velocity"@en ;
+      skos:definition "Knowledge of velocity as a core characteristic of Big Data."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BigDataVariety
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Variety"@en ;
+      skos:prefLabel "Variety"@en ;
+      skos:definition "Knowledge of variety as a core characteristic of Big Data."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Hadoop
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Hadoop"@en ;
+      skos:prefLabel "Hadoop"@en ;
+      skos:definition "Knowledge of Hadoop as a Big Data tool used in real-world case studies."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:MapReduce
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "MapReduce"@en ;
+      skos:prefLabel "MapReduce"@en ;
+      skos:definition "Knowledge of MapReduce as a Big Data programming and processing model used in real-world case studies."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Spark
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Spark"@en ;
+      skos:prefLabel "Spark"@en ;
+      skos:definition "Knowledge of Spark as a Big Data tool used in real-world case studies."@en ;
+      skos:inScheme is2020k:IS2020DataBusinessAnalyticsKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Competencies
+  #################################################################
+
+  is2020c:Competence_ISDBA_1
+      a ontoksd:Competence ;
+      rdfs:label "Apply the principles of computational thinking (CT) to learning data science"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 1"@en ;
+      skos:definition "Apply the principles of computational thinking (CT) to learning data science."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+      dcterms:identifier "ISDBA-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:PrinciplesOfComputationalThinking ,
+          is2020k:DecompositionAbstractionPatternRecognitionGeneralizationAndAutomation ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:adaptable ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_1_01 ,
+          is2020c:KS_ISDBA_1_02 .
+
+  is2020c:Competence_ISDBA_2
+      a ontoksd:Competence ;
+      rdfs:label "Analyze data science problems with a CT framework"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 2"@en ;
+      skos:definition "Analyze data science problems with a CT framework."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics."@en ;
+      dcterms:identifier "ISDBA-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:DataScienceProblems ,
+          is2020k:FrameworkForThinkingAboutComputationalThinking ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_2_01 ,
+          is2020c:KS_ISDBA_2_02 .
+
+  is2020c:Competence_ISDBA_3
+      a ontoksd:Competence ;
+      rdfs:label "Express a business problem as a data problem"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 3"@en ;
+      skos:definition "Express a business problem as a data problem."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics."@en ;
+      dcterms:identifier "ISDBA-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:BusinessProblem ,
+          is2020k:ProblemDataCharacteristicsAnalysisAndPolicy ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_3_01 ,
+          is2020c:KS_ISDBA_3_02 .
+
+  is2020c:Competence_ISDBA_4
+      a ontoksd:Competence ;
+      rdfs:label "Perform exploratory data analysis from inception to the value proposition"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 4"@en ;
+      skos:definition "Perform exploratory data analysis from inception to the value proposition."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics."@en ;
+      dcterms:identifier "ISDBA-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:DescriptiveStatistics ,
+          is2020k:DataVisualization ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_4_01 ,
+          is2020c:KS_ISDBA_4_02 .
+
+  is2020c:Competence_ISDBA_5
+      a ontoksd:Competence ;
+      rdfs:label "Explain the core principles behind various analytics tasks such as classification, clustering, optimization, recommendation"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 5"@en ;
+      skos:definition "Explain the core principles behind various analytics tasks such as classification, clustering, optimization, recommendation."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics."@en ;
+      dcterms:identifier "ISDBA-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:Classification ,
+          is2020k:Clustering ,
+          is2020k:Optimization ,
+          is2020k:Recommendation ;
+      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_5_01 ,
+          is2020c:KS_ISDBA_5_02 ,
+          is2020c:KS_ISDBA_5_03 ,
+          is2020c:KS_ISDBA_5_04 .
+
+  is2020c:Competence_ISDBA_6
+      a ontoksd:Competence ;
+      rdfs:label "Articulate the nature and potential of Big Data"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 6"@en ;
+      skos:definition "Articulate the nature and potential of Big Data."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics."@en ;
+      dcterms:identifier "ISDBA-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:BigDataVolume ,
+          is2020k:BigDataVelocity ,
+          is2020k:BigDataVariety ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_6_01 ,
+          is2020c:KS_ISDBA_6_02 ,
+          is2020c:KS_ISDBA_6_03 .
+
+  is2020c:Competence_ISDBA_7
+      a ontoksd:Competence ;
+      rdfs:label "Demonstrate the use of big data tools on real world case-studies"@en ;
+      skos:prefLabel "IS Data / Business Analytics Competency 7"@en ;
+      skos:definition "Demonstrate the use of big data tools on real world case-studies."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.2 Data / Business Analytics."@en ;
+      dcterms:identifier "ISDBA-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-data-business-analytics-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:Hadoop ,
+          is2020k:MapReduce ,
+          is2020k:Spark ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:adaptable ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISDBA_7_01 ,
+          is2020c:KS_ISDBA_7_02 ,
+          is2020c:KS_ISDBA_7_03 .
+
+  #################################################################
+  # KnowledgeSkill relators
+  #################################################################
+
+  is2020c:KS_ISDBA_1_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Principles of computational thinking × Understanding"@en ;
+      skos:prefLabel "Principles of computational thinking × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 1 linking principles of computational thinking to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:PrinciplesOfComputationalThinking ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_1 .
+
+  is2020c:KS_ISDBA_1_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "CT elements × Analyzing"@en ;
+      skos:prefLabel "CT elements × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 1 linking decomposition, abstraction, pattern recognition, generalization, and automation to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DecompositionAbstractionPatternRecognitionGeneralizationAndAutomation ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_1 .
+
+  is2020c:KS_ISDBA_2_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data science problems × Understanding"@en ;
+      skos:prefLabel "Data science problems × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 2 linking data science problems to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataScienceProblems ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_2 .
+
+  is2020c:KS_ISDBA_2_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "CT framework × Applying"@en ;
+      skos:prefLabel "CT framework × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 2 linking a framework for thinking about computational thinking to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FrameworkForThinkingAboutComputationalThinking ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_2 .
+
+  is2020c:KS_ISDBA_3_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Business problem × Understanding"@en ;
+      skos:prefLabel "Business problem × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 3 linking business problems to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BusinessProblem ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_3 .
+
+  is2020c:KS_ISDBA_3_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Problem, data characteristics, analysis, and policy × Evaluating"@en ;
+      skos:prefLabel "Problem, data characteristics, analysis, and policy × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 3 linking problem, data characteristics, analysis, and policy to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ProblemDataCharacteristicsAnalysisAndPolicy ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_3 .
+
+  is2020c:KS_ISDBA_4_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Descriptive statistics × Applying"@en ;
+      skos:prefLabel "Descriptive statistics × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 4 linking descriptive statistics to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DescriptiveStatistics ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_4 .
+
+  is2020c:KS_ISDBA_4_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data visualization × Creating"@en ;
+      skos:prefLabel "Data visualization × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 4 linking data visualization to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataVisualization ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_4 .
+
+  is2020c:KS_ISDBA_5_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Classification × Analyzing"@en ;
+      skos:prefLabel "Classification × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 5 linking classification to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Classification ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_5 .
+
+  is2020c:KS_ISDBA_5_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Clustering × Analyzing"@en ;
+      skos:prefLabel "Clustering × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 5 linking clustering to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Clustering ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_5 .
+
+  is2020c:KS_ISDBA_5_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Optimization × Analyzing"@en ;
+      skos:prefLabel "Optimization × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 5 linking optimization to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Optimization ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_5 .
+
+  is2020c:KS_ISDBA_5_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Recommendation × Analyzing"@en ;
+      skos:prefLabel "Recommendation × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 5 linking recommendation to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Recommendation ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_5 .
+
+  is2020c:KS_ISDBA_6_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Big Data volume × Understanding"@en ;
+      skos:prefLabel "Big Data volume × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 6 linking volume to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BigDataVolume ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_6 .
+
+  is2020c:KS_ISDBA_6_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Big Data velocity × Understanding"@en ;
+      skos:prefLabel "Big Data velocity × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 6 linking velocity to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BigDataVelocity ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_6 .
+
+  is2020c:KS_ISDBA_6_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Big Data variety × Understanding"@en ;
+      skos:prefLabel "Big Data variety × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 6 linking variety to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BigDataVariety ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_6 .
+
+  is2020c:KS_ISDBA_7_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Hadoop × Evaluating"@en ;
+      skos:prefLabel "Hadoop × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 7 linking Hadoop to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Hadoop ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_7 .
+
+  is2020c:KS_ISDBA_7_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "MapReduce × Evaluating"@en ;
+      skos:prefLabel "MapReduce × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 7 linking MapReduce to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:MapReduce ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_7 .
+
+  is2020c:KS_ISDBA_7_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Spark × Evaluating"@en ;
+      skos:prefLabel "Spark × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Data / Business Analytics Competency 7 linking Spark to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Spark ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDBA_7 .
+
+}

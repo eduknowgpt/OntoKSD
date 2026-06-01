@@ -1,0 +1,40 @@
+# This query retrieves evidenced competences, evidenced competence constituents, and proficiency attributions associated with assessment participations. It returns each assessment participation, the evidenced record derived from it, the type of evidenced record, the abstract competence or constituent to which the record refers, and the attributed proficiency level. Thus, the query demonstrates that OntoKSD can trace learner-specific proficiency attributions back to concrete assessment participation records.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?assessmentParticipation
+  ?assessmentParticipationLabel
+  ?recordType
+  ?evidencedRecord
+  ?evidencedRecordLabel
+  ?referencedEntity
+  ?referencedEntityLabel
+  ?proficiencyLevel
+  ?proficiencyLevelLabel
+WHERE {
+  {
+    ?evidencedRecord a ontoksd:EvidencedCompetence ;
+                     ontoksd:derivedFromParticipation ?assessmentParticipation ;
+                     ontoksd:refersToCompetence ?referencedEntity .
+
+    BIND("EvidencedCompetence" AS ?recordType)
+  }
+  UNION
+  {
+    ?evidencedRecord a ontoksd:EvidencedCompetenceConstituent ;
+                     ontoksd:derivedFromParticipation ?assessmentParticipation ;
+                     ontoksd:refersToCompetenceConstituent ?referencedEntity .
+
+    BIND("EvidencedCompetenceConstituent" AS ?recordType)
+  }
+
+  OPTIONAL { ?evidencedRecord ontoksd:hasProficiencyLevel ?proficiencyLevel . }
+
+  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
+  OPTIONAL { ?evidencedRecord rdfs:label ?evidencedRecordLabel . }
+  OPTIONAL { ?referencedEntity rdfs:label ?referencedEntityLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+}
+ORDER BY ?assessmentParticipationLabel ?recordType ?referencedEntityLabel

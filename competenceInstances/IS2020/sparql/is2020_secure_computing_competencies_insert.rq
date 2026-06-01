@@ -1,0 +1,571 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  #################################################################
+  # Source markers and scheme
+  #################################################################
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Secure Computing competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.3.2 Competency Area – Secure Computing."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020SecureComputingKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 Secure Computing Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 Secure Computing Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Secure Computing competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Knowledge elements
+  #################################################################
+
+  is2020k:DataCommunications
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data communications"@en ;
+      skos:prefLabel "Data communications"@en ;
+      skos:definition "Knowledge of data communications in the context of secure computing and cryptographic protection."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Cryptography
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Cryptography"@en ;
+      skos:prefLabel "Cryptography"@en ;
+      skos:definition "Knowledge of cryptography and its role in protecting data communications."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Authentication
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Authentication"@en ;
+      skos:prefLabel "Authentication"@en ;
+      skos:definition "Knowledge of authentication concepts in secure computing and data communication."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Authorization
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Authorization"@en ;
+      skos:prefLabel "Authorization"@en ;
+      skos:definition "Knowledge of authorization concepts in secure computing and data communication."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AccessControl
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Access control"@en ;
+      skos:prefLabel "Access control"@en ;
+      skos:definition "Knowledge of access control mechanisms in secure computing and data communication."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataIntegrity
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data integrity"@en ;
+      skos:prefLabel "Data integrity"@en ;
+      skos:definition "Knowledge of data integrity concepts in secure computing and data communication."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SecurityByDesign
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Security-by-design"@en ;
+      skos:prefLabel "Security-by-design"@en ;
+      skos:definition "Knowledge of security-by-design principles relevant to software design."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataSanitization
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data sanitization"@en ;
+      skos:prefLabel "Data sanitization"@en ;
+      skos:definition "Knowledge of data sanitization practices used to reduce security risks in software systems."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:InputValidationAndDataSanitization
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Input validation and data sanitization"@en ;
+      skos:prefLabel "Input validation and data sanitization"@en ;
+      skos:definition "Knowledge of input validation and data sanitization techniques for secure software design."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SecurityVulnerability
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Security vulnerability"@en ;
+      skos:prefLabel "Security vulnerability"@en ;
+      skos:definition "Knowledge of security vulnerabilities relevant to software design."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:Identification
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Identification"@en ;
+      skos:prefLabel "Identification"@en ;
+      skos:definition "Knowledge of identification concepts in the protection of people and devices."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AccessAuthorization
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Access authorization"@en ;
+      skos:prefLabel "Access authorization"@en ;
+      skos:definition "Knowledge of access authorization concepts in the protection of people and devices."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AuditTrailsAndLogs
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Audit trails and logs"@en ;
+      skos:prefLabel "Audit trails and logs"@en ;
+      skos:definition "Knowledge of audit trails and logs used in security monitoring and accountability."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PrivacyTradeOffsAndRisksInTheSocialContext
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Privacy trade-offs and risks in the social context"@en ;
+      skos:prefLabel "Privacy trade-offs and risks in the social context"@en ;
+      skos:definition "Knowledge of privacy trade-offs and risks in social media and broader social contexts."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:OrganizationalContext
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Organizational context"@en ;
+      skos:prefLabel "Organizational context"@en ;
+      skos:definition "Knowledge of the organizational context relevant to privacy and security analysis."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TypesOfCyberattacks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Types of cyberattacks"@en ;
+      skos:prefLabel "Types of cyberattacks"@en ;
+      skos:definition "Knowledge of different types of cyberattacks."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:AnatomyOfCyberattacks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Anatomy of cyberattacks"@en ;
+      skos:prefLabel "Anatomy of cyberattacks"@en ;
+      skos:definition "Knowledge of how cyberattacks work and how they unfold."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CyberattacksMitigationMechanisms
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Cyberattacks mitigation mechanisms"@en ;
+      skos:prefLabel "Cyberattacks mitigation mechanisms"@en ;
+      skos:definition "Knowledge of mechanisms used to avoid cyberattacks and counteract their malicious consequences."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:IdentifyAndPrioritizeRiskFactors
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Identify and prioritize risk factors"@en ;
+      skos:prefLabel "Identify and prioritize risk factors"@en ;
+      skos:definition "Knowledge of identifying and prioritizing risk factors for information assets."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RiskManagementTechniques
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Risk management techniques"@en ;
+      skos:prefLabel "Risk management techniques"@en ;
+      skos:definition "Knowledge of risk management techniques used to assess and prioritize risks."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SecurityLawsRegulationsAndStandards
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Security laws, regulations, and standards"@en ;
+      skos:prefLabel "Security laws, regulations, and standards"@en ;
+      skos:definition "Knowledge of security laws, regulations, and standards within which an organization operates."@en ;
+      skos:inScheme is2020k:IS2020SecureComputingKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Competencies
+  #################################################################
+
+  is2020c:Competence_ISSC_1
+      a ontoksd:Competence ;
+      rdfs:label "Explain the purpose of cryptography and how it can be used in data communications"@en ;
+      skos:prefLabel "IS Secure Computing Competency 1"@en ;
+      skos:definition "Explain the purpose of cryptography and how it can be used in data communications."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+      dcterms:identifier "ISSC-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:DataCommunications ,
+          is2020k:Cryptography ;
+      ontoksd:hasDisposition ontoksd:responsible , ontoksd:purposeDriven , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_1_01 ,
+          is2020c:KS_ISSC_1_02 .
+
+  is2020c:Competence_ISSC_2
+      a ontoksd:Competence ;
+      rdfs:label "Describe the concepts of authentication, authorization, access control, and data integrity in the context of data communication"@en ;
+      skos:prefLabel "IS Secure Computing Competency 2"@en ;
+      skos:definition "Describe the concepts of authentication, authorization, access control, and data integrity in the context of data communication."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:Authentication ,
+          is2020k:Authorization ,
+          is2020k:AccessControl ,
+          is2020k:DataIntegrity ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_2_01 ,
+          is2020c:KS_ISSC_2_02 ,
+          is2020c:KS_ISSC_2_03 ,
+          is2020c:KS_ISSC_2_04 .
+
+  is2020c:Competence_ISSC_3
+      a ontoksd:Competence ;
+      rdfs:label "Explain the security requirements that are important during software design"@en ;
+      skos:prefLabel "IS Secure Computing Competency 3"@en ;
+      skos:definition "Explain the security requirements that are important during software design."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:SecurityByDesign ,
+          is2020k:DataSanitization ,
+          is2020k:InputValidationAndDataSanitization ,
+          is2020k:SecurityVulnerability ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_3_01 ,
+          is2020c:KS_ISSC_3_02 ,
+          is2020c:KS_ISSC_3_03 ,
+          is2020c:KS_ISSC_3_04 .
+
+  is2020c:Competence_ISSC_4
+      a ontoksd:Competence ;
+      rdfs:label "Analyze the concepts of identification, authentication, and access authorization in the context of protecting people and devices"@en ;
+      skos:prefLabel "IS Secure Computing Competency 4"@en ;
+      skos:definition "Analyze the concepts of identification, authentication, and access authorization in the context of protecting people and devices."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:Identification ,
+          is2020k:Authentication ,
+          is2020k:AccessAuthorization ,
+          is2020k:AuditTrailsAndLogs ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_4_01 ,
+          is2020c:KS_ISSC_4_02 ,
+          is2020c:KS_ISSC_4_03 ,
+          is2020c:KS_ISSC_4_04 .
+
+  is2020c:Competence_ISSC_5
+      a ontoksd:Competence ;
+      rdfs:label "Analyze the importance of social media privacy and security"@en ;
+      skos:prefLabel "IS Secure Computing Competency 5"@en ;
+      skos:definition "Analyze the importance of social media privacy and security."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:PrivacyTradeOffsAndRisksInTheSocialContext ,
+          is2020k:OrganizationalContext ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:professional ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_5_01 ,
+          is2020c:KS_ISSC_5_02 .
+
+  is2020c:Competence_ISSC_6
+      a ontoksd:Competence ;
+      rdfs:label "Illustrate how cyberattacks work, how to avoid them and how to counteract their malicious consequences"@en ;
+      skos:prefLabel "IS Secure Computing Competency 6"@en ;
+      skos:definition "Illustrate how cyberattacks work, how to avoid them, and how to counteract their malicious consequences."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:TypesOfCyberattacks ,
+          is2020k:AnatomyOfCyberattacks ,
+          is2020k:CyberattacksMitigationMechanisms ;
+      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:inventive , ontoksd:selfDirected ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_6_01 ,
+          is2020c:KS_ISSC_6_02 ,
+          is2020c:KS_ISSC_6_03 .
+
+  is2020c:Competence_ISSC_7
+      a ontoksd:Competence ;
+      rdfs:label "Describe risk management techniques to identify and prioritize risk factors for information assets and how risk is assessed"@en ;
+      skos:prefLabel "IS Secure Computing Competency 7"@en ;
+      skos:definition "Describe risk management techniques to identify and prioritize risk factors for information assets and how risk is assessed."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:IdentifyAndPrioritizeRiskFactors ,
+          is2020k:RiskManagementTechniques ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:selfDirected , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_7_01 ,
+          is2020c:KS_ISSC_7_02 .
+
+  is2020c:Competence_ISSC_8
+      a ontoksd:Competence ;
+      rdfs:label "Illustrate the types of security laws, regulations, and standards within which an organization operates"@en ;
+      skos:prefLabel "IS Secure Computing Competency 8"@en ;
+      skos:definition "Illustrate the types of security laws, regulations, and standards within which an organization operates."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.2 Secure Computing."@en ;
+      dcterms:identifier "ISSC-8"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-secure-computing-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:SecurityLawsRegulationsAndStandards ;
+      ontoksd:hasDisposition ontoksd:professional , ontoksd:selfDirected , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSC_8_01 .
+
+  #################################################################
+  # KnowledgeSkill relators
+  #################################################################
+
+  is2020c:KS_ISSC_1_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data communications × Understanding"@en ;
+      skos:prefLabel "Data communications × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 1 linking data communications to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataCommunications ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_1 .
+
+  is2020c:KS_ISSC_1_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Cryptography × Understanding"@en ;
+      skos:prefLabel "Cryptography × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 1 linking cryptography to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Cryptography ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_1 .
+
+  is2020c:KS_ISSC_2_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Authentication × Understanding"@en ;
+      skos:prefLabel "Authentication × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 2 linking authentication to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Authentication ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_2 .
+
+  is2020c:KS_ISSC_2_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Authorization × Understanding"@en ;
+      skos:prefLabel "Authorization × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 2 linking authorization to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Authorization ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_2 .
+
+  is2020c:KS_ISSC_2_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Access control × Understanding"@en ;
+      skos:prefLabel "Access control × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 2 linking access control to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:AccessControl ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_2 .
+
+  is2020c:KS_ISSC_2_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data integrity × Understanding"@en ;
+      skos:prefLabel "Data integrity × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 2 linking data integrity to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataIntegrity ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_2 .
+
+  is2020c:KS_ISSC_3_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Security-by-design × Understanding"@en ;
+      skos:prefLabel "Security-by-design × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 3 linking security-by-design to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SecurityByDesign ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_3 .
+
+  is2020c:KS_ISSC_3_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data sanitization × Understanding"@en ;
+      skos:prefLabel "Data sanitization × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 3 linking data sanitization to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataSanitization ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_3 .
+
+  is2020c:KS_ISSC_3_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Input validation and data sanitization × Understanding"@en ;
+      skos:prefLabel "Input validation and data sanitization × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 3 linking input validation and data sanitization to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:InputValidationAndDataSanitization ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_3 .
+
+  is2020c:KS_ISSC_3_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Security vulnerability × Understanding"@en ;
+      skos:prefLabel "Security vulnerability × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 3 linking security vulnerability to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SecurityVulnerability ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_3 .
+
+  is2020c:KS_ISSC_4_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Identification × Analyzing"@en ;
+      skos:prefLabel "Identification × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 4 linking identification to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Identification ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_4 .
+
+  is2020c:KS_ISSC_4_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Authentication × Analyzing"@en ;
+      skos:prefLabel "Authentication × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 4 linking authentication to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:Authentication ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_4 .
+
+  is2020c:KS_ISSC_4_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Access authorization × Analyzing"@en ;
+      skos:prefLabel "Access authorization × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 4 linking access authorization to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:AccessAuthorization ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_4 .
+
+  is2020c:KS_ISSC_4_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Audit trails and logs × Understanding"@en ;
+      skos:prefLabel "Audit trails and logs × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 4 linking audit trails and logs to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:AuditTrailsAndLogs ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_4 .
+
+  is2020c:KS_ISSC_5_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Privacy trade-offs and risks in the social context × Analyzing"@en ;
+      skos:prefLabel "Privacy trade-offs and risks in the social context × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 5 linking privacy trade-offs and risks in the social context to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:PrivacyTradeOffsAndRisksInTheSocialContext ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_5 .
+
+  is2020c:KS_ISSC_5_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Organizational context × Analyzing"@en ;
+      skos:prefLabel "Organizational context × Analyzing"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 5 linking organizational context to the required Bloom level Analyzing."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:OrganizationalContext ;
+      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_5 .
+
+  is2020c:KS_ISSC_6_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Types of cyberattacks × Applying"@en ;
+      skos:prefLabel "Types of cyberattacks × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 6 linking types of cyberattacks to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TypesOfCyberattacks ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_6 .
+
+  is2020c:KS_ISSC_6_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Anatomy of cyberattacks × Applying"@en ;
+      skos:prefLabel "Anatomy of cyberattacks × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 6 linking anatomy of cyberattacks to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:AnatomyOfCyberattacks ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_6 .
+
+  is2020c:KS_ISSC_6_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Cyberattacks mitigation mechanisms × Applying"@en ;
+      skos:prefLabel "Cyberattacks mitigation mechanisms × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 6 linking cyberattack mitigation mechanisms to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:CyberattacksMitigationMechanisms ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_6 .
+
+  is2020c:KS_ISSC_7_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Identify and prioritize risk factors × Understanding"@en ;
+      skos:prefLabel "Identify and prioritize risk factors × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 7 linking risk factor identification and prioritization to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:IdentifyAndPrioritizeRiskFactors ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_7 .
+
+  is2020c:KS_ISSC_7_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Risk management techniques × Understanding"@en ;
+      skos:prefLabel "Risk management techniques × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 7 linking risk management techniques to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RiskManagementTechniques ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_7 .
+
+  is2020c:KS_ISSC_8_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Security laws, regulations, and standards × Understanding"@en ;
+      skos:prefLabel "Security laws, regulations, and standards × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Secure Computing Competency 8 linking security laws, regulations, and standards to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SecurityLawsRegulationsAndStandards ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSC_8 .
+
+}

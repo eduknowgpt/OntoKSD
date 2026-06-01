@@ -5,160 +5,234 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @base <http://purl.org/ontoksd/rcd#> .
 
-<http://purl.org/ontoksd/rcd> rdf:type owl:Ontology .
+<http://purl.org/ontoksd/rcd> rdf:type owl:Ontology ;
+    rdfs:label "RCD OWL Profile"@en ;
+    skos:definition "OWL profile for the IEEE Reusable Competency Definition (RCD) core data model. This ontology captures the main structural components of IEEE 1484.20.1 while approximating selected conformance constraints in OWL 2 DL. Constraints such as default values, URI lexical validation, bag semantics, and cross-field completeness are better enforced with SHACL or application-level validation."@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://purl.org/ontoksd/rcd#hasDefinition
-rcd:hasDefinition rdf:type owl:ObjectProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:domain rcd:RCD ;
-                  rdfs:range rcd:Definition .
+rcd:hasDefinition rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has definition"@en ;
+    skos:definition "Associates an RCD with its optional structured definition."@en ;
+    rdfs:domain rcd:RCD ;
+    rdfs:range rcd:Definition .
 
+rcd:hasIdentifier rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has identifier"@en ;
+    skos:definition "Associates an RCD with its mandatory unique identifier."@en ;
+    rdfs:domain rcd:RCD ;
+    rdfs:range rcd:LongIdentifier .
 
-###  http://purl.org/ontoksd/rcd#hasIdentifier
-rcd:hasIdentifier rdf:type owl:ObjectProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:domain rcd:RCD ;
-                  rdfs:range rcd:LongIdentifier .
+rcd:hasMetadata rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has metadata"@en ;
+    skos:definition "Associates an RCD with its optional metadata block."@en ;
+    rdfs:domain rcd:RCD ;
+    rdfs:range rcd:Metadata .
 
-
-###  http://purl.org/ontoksd/rcd#hasMetadata
-rcd:hasMetadata rdf:type owl:ObjectProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain rcd:RCD ;
-                rdfs:range rcd:Metadata .
-
-
-###  http://purl.org/ontoksd/rcd#hasStatement
 rcd:hasStatement rdf:type owl:ObjectProperty ;
-                 rdfs:domain rcd:Definition ;
-                 rdfs:range rcd:Statement .
+    rdfs:label "has statement"@en ;
+    skos:definition "Associates a structured definition with one or more statements."@en ;
+    rdfs:domain rcd:Definition ;
+    rdfs:range rcd:Statement .
 
-
-###  http://purl.org/ontoksd/rcd#hasStatementID
 rcd:hasStatementID rdf:type owl:ObjectProperty ;
-                   rdfs:domain rcd:Statement ;
-                   rdfs:range rcd:LongIdentifier .
+    rdfs:label "has statement identifier"@en ;
+    skos:definition "Associates a statement with its optional identifier."@en ;
+    rdfs:domain rcd:Statement ;
+    rdfs:range rcd:LongIdentifier .
 
-
-###  http://purl.org/ontoksd/rcd#hasStatementToken
 rcd:hasStatementToken rdf:type owl:ObjectProperty ;
-                      rdfs:domain rcd:Statement ;
-                      rdfs:range rcd:Vocabulary .
-
+    rdfs:label "has statement token"@en ;
+    skos:definition "Associates a statement with an optional controlled vocabulary token."@en ;
+    rdfs:domain rcd:Statement ;
+    rdfs:range rcd:Vocabulary .
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://purl.org/ontoksd/rcd#additionalMetadata
 rcd:additionalMetadata rdf:type owl:DatatypeProperty ;
-                       rdfs:domain rcd:Metadata ;
-                       rdfs:range xsd:anyURI .
+    rdfs:label "additional metadata"@en ;
+    skos:definition "Represents implementation-specific additional metadata. In the IEEE model this is open-ended (any_type), so a generic literal is used here as an OWL approximation."@en ;
+    rdfs:domain rcd:Metadata ;
+    rdfs:range rdfs:Literal .
 
-
-###  http://purl.org/ontoksd/rcd#catalog
 rcd:catalog rdf:type owl:DatatypeProperty ;
-            rdfs:domain rcd:LongIdentifier ;
-            rdfs:range xsd:string .
+    rdfs:label "catalog"@en ;
+    skos:definition "Catalog or namespace-scheme component of a long identifier."@en ;
+    rdfs:domain rcd:LongIdentifier ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#description
 rcd:description rdf:type owl:DatatypeProperty ;
-                rdfs:domain rcd:RCD ;
-                rdfs:range rdf:langString .
+    rdfs:label "description"@en ;
+    skos:definition "Optional human-readable description of the RCD."@en ;
+    rdfs:domain rcd:RCD ;
+    rdfs:range rdf:langString .
 
-
-###  http://purl.org/ontoksd/rcd#entry
 rcd:entry rdf:type owl:DatatypeProperty ;
-          rdfs:domain rcd:LongIdentifier ;
-          rdfs:range xsd:string .
+    rdfs:label "entry"@en ;
+    skos:definition "Entry or namespace-specific string component of a long identifier."@en ;
+    rdfs:domain rcd:LongIdentifier ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#modelSource
 rcd:modelSource rdf:type owl:DatatypeProperty ;
-                rdfs:domain rcd:Definition ;
-                rdfs:range xsd:string .
+    rdfs:label "model source"@en ;
+    skos:definition "Optional source of the model used to structure the competency definition. Typically this may be a URI, but the IEEE model allows a character string."@en ;
+    rdfs:domain rcd:Definition ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#rcdSchema
 rcd:rcdSchema rdf:type owl:DatatypeProperty ;
-              rdfs:domain rcd:Metadata ;
-              rdfs:range xsd:string .
+    rdfs:label "RCD schema"@en ;
+    skos:definition "Optional label for the schema that defines and controls the RCD instance."@en ;
+    rdfs:domain rcd:Metadata ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#rcdSchemaVersion
 rcd:rcdSchemaVersion rdf:type owl:DatatypeProperty ;
-                     rdfs:domain rcd:Metadata ;
-                     rdfs:range xsd:string .
+    rdfs:label "RCD schema version"@en ;
+    skos:definition "Optional version of the schema identified by rcdSchema."@en ;
+    rdfs:domain rcd:Metadata ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#statementName
 rcd:statementName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain rcd:Statement ;
-                  rdfs:range xsd:string .
+    rdfs:label "statement name"@en ;
+    skos:definition "Optional human-readable name for a statement dimension, such as condition, criterion, or indicator."@en ;
+    rdfs:domain rcd:Statement ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#statementText
 rcd:statementText rdf:type owl:DatatypeProperty ;
-                  rdfs:domain rcd:Statement ;
-                  rdfs:range rdf:langString .
+    rdfs:label "statement text"@en ;
+    skos:definition "Optional free-text content of a statement."@en ;
+    rdfs:domain rcd:Statement ;
+    rdfs:range rdf:langString .
 
-
-###  http://purl.org/ontoksd/rcd#title
 rcd:title rdf:type owl:DatatypeProperty ;
-          rdfs:domain rcd:RCD ;
-          rdfs:range rdf:langString .
+    rdfs:label "title"@en ;
+    skos:definition "Mandatory human-readable title of the RCD; it may be repeated in multiple languages."@en ;
+    rdfs:domain rcd:RCD ;
+    rdfs:range rdf:langString .
 
-
-###  http://purl.org/ontoksd/rcd#vocabularySource
 rcd:vocabularySource rdf:type owl:DatatypeProperty ;
-                     rdfs:domain rcd:Vocabulary ;
-                     rdfs:range xsd:string .
+    rdfs:label "vocabulary source"@en ;
+    skos:definition "Source of a controlled vocabulary token."@en ;
+    rdfs:domain rcd:Vocabulary ;
+    rdfs:range xsd:string .
 
-
-###  http://purl.org/ontoksd/rcd#vocabularyValue
 rcd:vocabularyValue rdf:type owl:DatatypeProperty ;
-                    rdfs:domain rcd:Vocabulary ;
-                    rdfs:range xsd:string .
-
+    rdfs:label "vocabulary value"@en ;
+    skos:definition "Value of a controlled vocabulary token."@en ;
+    rdfs:domain rcd:Vocabulary ;
+    rdfs:range xsd:string .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://purl.org/ontoksd/rcd#Definition
 rcd:Definition rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty rcd:hasStatement ;
-                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onClass rcd:Statement
-                               ] .
+    rdfs:label "Definition"@en ;
+    skos:definition "Optional structured definition that refines the free-form title and description of an RCD."@en ;
+    rdfs:subClassOf
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:hasStatement ;
+          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass rcd:Statement
+        ] .
 
+rcd:LongIdentifier rdf:type owl:Class ;
+    rdfs:label "Long Identifier"@en ;
+    skos:definition "Identifier type composed of catalog and entry, corresponding to the IEEE long_identifier_type."@en ;
+    rdfs:subClassOf
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:catalog ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:entry ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] .
 
-###  http://purl.org/ontoksd/rcd#LongIdentifier
-rcd:LongIdentifier rdf:type owl:Class .
+rcd:Metadata rdf:type owl:Class ;
+    rdfs:label "Metadata"@en ;
+    skos:definition "Optional metadata block associated with an RCD."@en ;
+    rdfs:subClassOf
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:rcdSchema ;
+          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:rcdSchemaVersion ;
+          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] .
 
+rcd:RCD rdf:type owl:Class ;
+    rdfs:label "Reusable Competency Definition"@en ;
+    skos:definition "A reusable competency definition record identified by a unique identifier and described by a human-readable title, with optional structured definition and metadata."@en ;
+    rdfs:subClassOf
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:hasIdentifier ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass rcd:LongIdentifier
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:title ;
+          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange rdf:langString
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:hasDefinition ;
+          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass rcd:Definition
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:hasMetadata ;
+          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onClass rcd:Metadata
+        ] .
 
-###  http://purl.org/ontoksd/rcd#Metadata
-rcd:Metadata rdf:type owl:Class .
+rcd:Statement rdf:type owl:Class ;
+    rdfs:label "Statement"@en ;
+    skos:definition "A record describing one characteristic of a structured competency definition."@en ;
+    rdfs:subClassOf
+        [ rdf:type owl:Class ;
+          owl:unionOf (
+            [ rdf:type owl:Restriction ;
+              owl:onProperty rcd:hasStatementID ;
+              owl:someValuesFrom rcd:LongIdentifier
+            ]
+            [ rdf:type owl:Restriction ;
+              owl:onProperty rcd:statementName ;
+              owl:someValuesFrom xsd:string
+            ]
+            [ rdf:type owl:Restriction ;
+              owl:onProperty rcd:statementText ;
+              owl:someValuesFrom rdf:langString
+            ]
+            [ rdf:type owl:Restriction ;
+              owl:onProperty rcd:hasStatementToken ;
+              owl:someValuesFrom rcd:Vocabulary
+            ]
+          )
+        ] .
 
-
-###  http://purl.org/ontoksd/rcd#RCD
-rcd:RCD rdf:type owl:Class .
-
-
-###  http://purl.org/ontoksd/rcd#Statement
-rcd:Statement rdf:type owl:Class .
-
-
-###  http://purl.org/ontoksd/rcd#Vocabulary
-rcd:Vocabulary rdf:type owl:Class .
-
-
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+rcd:Vocabulary rdf:type owl:Class ;
+    rdfs:label "Vocabulary Token"@en ;
+    skos:definition "Controlled vocabulary token composed of a source and a value."@en ;
+    rdfs:subClassOf
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:vocabularySource ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] ,
+        [ rdf:type owl:Restriction ;
+          owl:onProperty rcd:vocabularyValue ;
+          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+          owl:onDataRange xsd:string
+        ] .

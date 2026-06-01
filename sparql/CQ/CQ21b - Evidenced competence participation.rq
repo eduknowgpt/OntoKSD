@@ -1,0 +1,23 @@
+# This query retrieves the assessment participations from which evidenced competences are derived. It also returns the assessment occurrence in which each participation took place. Thus, the query demonstrates that OntoKSD can connect learner-specific evidenced competence records to participant-level assessment relations.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidencedCompetence
+  ?evidencedCompetenceLabel
+  ?assessmentParticipation
+  ?assessmentParticipationLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:derivedFromParticipation ?assessmentParticipation .
+
+  ?assessmentParticipation ontoksd:occursInAssessmentOccurrence ?assessmentOccurrence .
+
+  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
+  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?evidencedCompetenceLabel ?assessmentParticipationLabel ?assessmentOccurrenceLabel

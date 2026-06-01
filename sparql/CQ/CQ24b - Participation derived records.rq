@@ -1,0 +1,17 @@
+# This query retrieves evidenced competence and evidenced competence constituent records derived from assessment participations. Thus, the query demonstrates that OntoKSD can trace learner-specific competence records back to participant-level assessment relations.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?assessmentParticipation
+  ?assessmentParticipationLabel
+  ?derivedRecord
+  ?derivedRecordLabel
+WHERE {
+  ?derivedRecord ontoksd:derivedFromParticipation ?assessmentParticipation .
+
+  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
+  OPTIONAL { ?derivedRecord rdfs:label ?derivedRecordLabel . }
+}
+ORDER BY ?assessmentParticipationLabel ?derivedRecordLabel

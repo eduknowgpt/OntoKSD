@@ -1,0 +1,43 @@
+# This query retrieves the internal constituents of a selected competence. It returns the Knowledge--Skill pairings that specify the knowledge components and their required Bloom-aligned cognitive levels, together with the dispositions directly associated with the competence. Thus, the query demonstrates that OntoKSD can reconstruct the K--S--D structure of a competence from its formal representation.
+
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?knowledgeSkill
+  ?knowledge
+  ?knowledgeLabel
+  ?skillLevel
+  ?skillLevelLabel
+  ?disposition
+  ?dispositionLabel
+WHERE {
+  VALUES ?competence { ontoksd:C02 }
+
+  ?competence a ontoksd:Competence ;
+              rdfs:label ?competenceLabel ;
+              ontoksd:hasKnowledgeSkill ?knowledgeSkill .
+
+  ?knowledgeSkill ontoksd:hasKnowledgeComponent ?knowledge ;
+                  ontoksd:hasBloomCognitiveLevel ?skillLevel .
+
+  OPTIONAL { ?knowledge rdfs:label ?knowledgeRdfsLabel . }
+  OPTIONAL { ?knowledge skos:prefLabel ?knowledgeSkosLabel . }
+  BIND(COALESCE(?knowledgeRdfsLabel, ?knowledgeSkosLabel, STR(?knowledge)) AS ?knowledgeLabel)
+
+  OPTIONAL { ?skillLevel rdfs:label ?skillLevelRdfsLabel . }
+  OPTIONAL { ?skillLevel skos:prefLabel ?skillLevelSkosLabel . }
+  BIND(COALESCE(?skillLevelRdfsLabel, ?skillLevelSkosLabel, STR(?skillLevel)) AS ?skillLevelLabel)
+
+  OPTIONAL {
+    ?competence ontoksd:hasDisposition ?disposition .
+    OPTIONAL { ?disposition rdfs:label ?dispositionRdfsLabel . }
+    OPTIONAL { ?disposition skos:prefLabel ?dispositionSkosLabel . }
+    BIND(COALESCE(?dispositionRdfsLabel, ?dispositionSkosLabel, STR(?disposition)) AS ?dispositionLabel)
+  }
+}
+ORDER BY ?knowledgeLabel ?skillLevelLabel ?dispositionLabel

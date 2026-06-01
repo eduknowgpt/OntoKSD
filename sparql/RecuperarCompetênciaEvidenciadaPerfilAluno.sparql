@@ -1,0 +1,10 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?profile ?evidencedCompetence ?competence ?level ?participation
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:isEvidencedCompetenceOf ?profile ;
+                       ontoksd:refersToCompetence ?competence ;
+                       ontoksd:hasProficiencyLevel ?level ;
+                       ontoksd:derivedFromParticipation ?participation .
+}

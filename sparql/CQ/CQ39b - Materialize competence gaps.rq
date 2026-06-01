@@ -1,0 +1,48 @@
+# This update materializes LearningNeed instances only when an equivalent learning need does not already exist for the same learner profile and competence.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+  ?learningNeed a ontoksd:LearningNeed ;
+      rdfs:label ?learningNeedLabel ;
+      ontoksd:isLearningNeedOf ?profile ;
+      ontoksd:refersToCompetence ?competence ;
+      ontoksd:requiresProficiencyLevel ?requiredLevel ;
+      ontoksd:hasCurrentProficiencyLevel ?evidencedLevel .
+}
+WHERE {
+  ?evidencedCompetence ontoksd:isEvidencedCompetenceOf ?profile ;
+                       ontoksd:refersToCompetence ?competence ;
+                       ontoksd:hasProficiencyLevel ?evidencedLevel .
+
+  ?evidencedLevel ontoksd:hasOrdinalPosition ?evidencedOrdinal .
+
+  ?courseSpecification ontoksd:mediatesCourseCompetence ?competence ;
+                       ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
+
+  ?requiredLevel ontoksd:hasOrdinalPosition ?requiredOrdinal .
+
+  FILTER(xsd:integer(?evidencedOrdinal) < xsd:integer(?requiredOrdinal))
+
+  FILTER NOT EXISTS {
+    ?existingNeed a ontoksd:LearningNeed ;
+        ontoksd:isLearningNeedOf ?profile ;
+        ontoksd:refersToCompetence ?competence .
+  }
+
+  BIND(IRI(CONCAT(
+    "http://purl.org/ontoksd#LearningNeed_",
+    REPLACE(STRAFTER(STR(?profile), "#"), "[^A-Za-z0-9_]", "_"),
+    "_",
+    REPLACE(STRAFTER(STR(?competence), "#"), "[^A-Za-z0-9_]", "_")
+  )) AS ?learningNeed)
+
+  BIND(CONCAT(
+    "Learning need for ",
+    STRAFTER(STR(?competence), "#"),
+    " in profile ",
+    STRAFTER(STR(?profile), "#")
+  ) AS ?learningNeedLabel)
+}

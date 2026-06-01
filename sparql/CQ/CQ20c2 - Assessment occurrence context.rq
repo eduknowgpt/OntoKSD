@@ -1,0 +1,49 @@
+# CQ20c1 - Assessment occurrence realizes assessment.rq
+
+# This query retrieves which assessment specification is realized by each assessment occurrence.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+  ?assessment
+  ?assessmentLabel
+WHERE {
+  ?assessmentOccurrence ontoksd:realizes ?assessment .
+
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+  OPTIONAL { ?assessment rdfs:label ?assessmentLabel . }
+}
+ORDER BY ?assessmentOccurrenceLabel ?assessmentLabel
+
+
+
+
+
+
+
+
+
+
+
+# CQ20c2 - Assessment occurrence acquisition context.rq
+
+# This query retrieves the acquisition context in which each assessment occurrence takes place.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+  ?acquisitionContext
+  ?acquisitionContextLabel
+WHERE {
+  ?assessmentOccurrence ontoksd:occursInAcquisitionContext ?acquisitionContext .
+
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+  OPTIONAL { ?acquisitionContext rdfs:label ?acquisitionContextLabel . }
+}
+ORDER BY ?assessmentOccurrenceLabel ?acquisitionContextLabel

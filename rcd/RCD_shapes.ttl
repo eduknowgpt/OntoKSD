@@ -1,0 +1,151 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+
+rcd:RCDShape a sh:NodeShape ;
+    sh:targetClass rcd:RCD ;
+    rdfs:label "RCD shape"@en ;
+    skos:definition "Validates the minimum core constraints of an IEEE-style reusable competency definition instance."@en ;
+    sh:property [
+        sh:path rcd:hasIdentifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class rcd:LongIdentifier ;
+        sh:message "An RCD must have exactly one LongIdentifier."@en
+    ] ;
+    sh:property [
+        sh:path rcd:title ;
+        sh:minCount 1 ;
+        sh:datatype rdf:langString ;
+        sh:message "An RCD must have at least one language-tagged title."@en
+    ] ;
+    sh:property [
+        sh:path rcd:description ;
+        sh:datatype rdf:langString ;
+        sh:message "Descriptions, when present, must be language-tagged strings."@en
+    ] ;
+    sh:property [
+        sh:path rcd:hasDefinition ;
+        sh:maxCount 1 ;
+        sh:class rcd:Definition ;
+        sh:message "An RCD may have at most one structured definition."@en
+    ] ;
+    sh:property [
+        sh:path rcd:hasMetadata ;
+        sh:maxCount 1 ;
+        sh:class rcd:Metadata ;
+        sh:message "An RCD may have at most one metadata block."@en
+    ] .
+
+rcd:LongIdentifierShape a sh:NodeShape ;
+    sh:targetClass rcd:LongIdentifier ;
+    rdfs:label "LongIdentifier shape"@en ;
+    skos:definition "Validates that a long identifier contains exactly one catalog and exactly one entry."@en ;
+    sh:property [
+        sh:path rcd:catalog ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message "A LongIdentifier must have exactly one non-empty catalog."@en
+    ] ;
+    sh:property [
+        sh:path rcd:entry ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message "A LongIdentifier must have exactly one non-empty entry."@en
+    ] .
+
+rcd:DefinitionShape a sh:NodeShape ;
+    sh:targetClass rcd:Definition ;
+    rdfs:label "Definition shape"@en ;
+    skos:definition "Validates that a structured definition has at least one statement."@en ;
+    sh:property [
+        sh:path rcd:hasStatement ;
+        sh:minCount 1 ;
+        sh:class rcd:Statement ;
+        sh:message "A Definition must contain at least one Statement."@en
+    ] ;
+    sh:property [
+        sh:path rcd:modelSource ;
+        sh:datatype xsd:string ;
+        sh:message "Each model source must be a string; applications may further restrict it to URI syntax."@en
+    ] .
+
+rcd:StatementShape a sh:NodeShape ;
+    sh:targetClass rcd:Statement ;
+    rdfs:label "Statement shape"@en ;
+    skos:definition "Validates that each statement contains at least one of the admissible information-bearing fields."@en ;
+    sh:or (
+        [ sh:property [ sh:path rcd:hasStatementID ; sh:minCount 1 ; sh:class rcd:LongIdentifier ] ]
+        [ sh:property [ sh:path rcd:statementName ; sh:minCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ]
+        [ sh:property [ sh:path rcd:statementText ; sh:minCount 1 ; sh:datatype rdf:langString ] ]
+        [ sh:property [ sh:path rcd:hasStatementToken ; sh:minCount 1 ; sh:class rcd:Vocabulary ] ]
+    ) ;
+    sh:property [
+        sh:path rcd:statementName ;
+        sh:datatype xsd:string ;
+        sh:message "Statement names, when present, must be strings."@en
+    ] ;
+    sh:property [
+        sh:path rcd:statementText ;
+        sh:datatype rdf:langString ;
+        sh:message "Statement texts, when present, must be language-tagged strings."@en
+    ] ;
+    sh:property [
+        sh:path rcd:hasStatementID ;
+        sh:class rcd:LongIdentifier ;
+        sh:message "Statement identifiers, when present, must be LongIdentifier instances."@en
+    ] ;
+    sh:property [
+        sh:path rcd:hasStatementToken ;
+        sh:class rcd:Vocabulary ;
+        sh:message "Statement tokens, when present, must be Vocabulary instances."@en
+    ] .
+
+rcd:VocabularyShape a sh:NodeShape ;
+    sh:targetClass rcd:Vocabulary ;
+    rdfs:label "Vocabulary shape"@en ;
+    skos:definition "Validates that a vocabulary token contains exactly one source and one value."@en ;
+    sh:property [
+        sh:path rcd:vocabularySource ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message "A vocabulary token must have exactly one non-empty source."@en
+    ] ;
+    sh:property [
+        sh:path rcd:vocabularyValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 1 ;
+        sh:message "A vocabulary token must have exactly one non-empty value."@en
+    ] .
+
+rcd:MetadataShape a sh:NodeShape ;
+    sh:targetClass rcd:Metadata ;
+    rdfs:label "Metadata shape"@en ;
+    skos:definition "Validates basic constraints over the optional metadata block."@en ;
+    sh:property [
+        sh:path rcd:rcdSchema ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Metadata may contain at most one rcdSchema value."@en
+    ] ;
+    sh:property [
+        sh:path rcd:rcdSchemaVersion ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Metadata may contain at most one rcdSchemaVersion value."@en
+    ] ;
+    sh:property [
+        sh:path rcd:additionalMetadata ;
+        sh:message "Additional metadata is intentionally open-ended."@en
+    ] .

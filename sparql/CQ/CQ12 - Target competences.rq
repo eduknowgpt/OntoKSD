@@ -1,0 +1,35 @@
+# This query retrieves competences associated with instructional structures as targets of development, mobilization, or assessment. It identifies CompetenceRelator instances whose activation function is classified as a target function, returning the instructional unit and the competence intentionally addressed in that context. Thus, the query demonstrates that OntoKSD can distinguish target competences from prerequisite competences through qualified competence activation relations.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?instructionalUnit
+  ?instructionalUnitLabel
+  ?competence
+  ?competenceLabel
+  ?competenceRelator
+  ?activationFunction
+  ?activationFunctionLabel
+WHERE {
+  ?competenceRelator a ontoksd:CompetenceRelator ;
+                     ontoksd:mediatesInstructionalUnit ?instructionalUnit ;
+                     ontoksd:mediatesCompetence ?competence ;
+                     ontoksd:hasActivationFunction ?activationFunction .
+
+  FILTER(?activationFunction = ontoksd:targetFunction)
+
+  OPTIONAL { ?instructionalUnit rdfs:label ?instructionalUnitRdfsLabel . }
+  OPTIONAL { ?instructionalUnit skos:prefLabel ?instructionalUnitSkosLabel . }
+  BIND(COALESCE(?instructionalUnitRdfsLabel, ?instructionalUnitSkosLabel, STR(?instructionalUnit)) AS ?instructionalUnitLabel)
+
+  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
+  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
+  BIND(COALESCE(?competenceRdfsLabel, ?competenceSkosLabel, STR(?competence)) AS ?competenceLabel)
+
+  OPTIONAL { ?activationFunction rdfs:label ?activationFunctionRdfsLabel . }
+  OPTIONAL { ?activationFunction skos:prefLabel ?activationFunctionSkosLabel . }
+  BIND(COALESCE(?activationFunctionRdfsLabel, ?activationFunctionSkosLabel, STR(?activationFunction)) AS ?activationFunctionLabel)
+}
+ORDER BY ?instructionalUnitLabel ?competenceLabel

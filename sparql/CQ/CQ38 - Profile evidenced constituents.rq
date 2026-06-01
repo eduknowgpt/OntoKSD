@@ -1,0 +1,27 @@
+# This query retrieves evidenced competence constituents associated with learner profiles. It returns each learner profile, the evidenced competence constituent records associated with that profile, the abstract competence constituent to which each evidenced record refers, and, when available, the attributed proficiency level. Thus, the query demonstrates that OntoKSD can support learner-profile-oriented views of demonstrated competence constituents such as Knowledge, Skill, or Disposition elements.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?profile
+  ?profileLabel
+  ?evidencedConstituent
+  ?evidencedConstituentLabel
+  ?competenceConstituent
+  ?competenceConstituentLabel
+  ?proficiencyLevel
+  ?proficiencyLevelLabel
+WHERE {
+  ?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ;
+                        ontoksd:isEvidencedCompetenceConstituentOf ?profile ;
+                        ontoksd:refersToCompetenceConstituent ?competenceConstituent .
+
+  OPTIONAL { ?evidencedConstituent ontoksd:hasProficiencyLevel ?proficiencyLevel . }
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?evidencedConstituent rdfs:label ?evidencedConstituentLabel . }
+  OPTIONAL { ?competenceConstituent rdfs:label ?competenceConstituentLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+}
+ORDER BY ?profileLabel ?competenceConstituentLabel ?proficiencyLevelLabel

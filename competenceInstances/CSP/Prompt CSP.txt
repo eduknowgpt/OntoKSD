@@ -1,0 +1,184 @@
+Analise a competência definida pelo CSP e produza sua representação ontológica ideal na OntoKSD, com base exclusivamente na versão da ontologia anexada e nos vocabulários de apoio fornecidos. O resultado deve ser um arquivo SPARQL .rq de INSERT DATA completo, semanticamente consistente e aderente às decisões de modelagem já estabelecidas na OntoKSD.
+
+A tarefa deve ser executada com rigor ontológico, reuso máximo de entidades existentes e justificativa explícita das decisões tomadas.
+
+1. Objetivo
+
+Para a competência fornecida, você deve:
+
+identificar sua estrutura semântica;
+decidir a melhor forma de representá-la na OntoKSD;
+instanciar a competência e seus elementos relacionados;
+associar corretamente conhecimentos, disposições e referências curriculares;
+gerar o conteúdo final do arquivo .rq;
+apresentar separadamente as decisões de modelagem adotadas.
+
+
+2. Base obrigatória de análise
+
+Considere como fonte de verdade apenas:
+
+a versão anexada da OntoKSD;
+os vocabulários anexados de apoio;
+a especificação textual da competência fornecida pelo CSP.
+
+Não invente classes, propriedades, padrões ou alinhamentos que não sejam sustentados por essas fontes.
+
+
+3. Regras de modelagem
+3.1 Competência
+Criar a competência como instância de ontoksd:Competence.
+Definir explicitamente, quando aplicável:
+ontoksd:hasStructureType
+ontoksd:hasSpecificationPattern
+ontoksd:hasCompetenceScope
+Preservar título, descrição e intenção pedagógica da competência de forma tecnicamente consistente.
+Representar a formulação final consolidada da competência, evitando versões intermediárias, redundâncias ou duplicações.
+
+3.2 Knowledge–Skill pairs
+Representar os pares conhecimento-habilidade como instâncias de ontoksd:KnowledgeSkill.
+Cada KS pair deve:
+estar associado à competência;
+ligar um conhecimento ao nível cognitivo apropriado;
+usar o nível de Bloom coerente com a especificação fornecida.
+O nível cognitivo deve ser expresso com a ontologia de Bloom reutilizada pela OntoKSD.
+Quando a ontologia e os dados anexos permitirem, registrar verbos de apoio que justifiquem o nível cognitivo adotado, sem extrapolar o que está semanticamente sustentado.
+
+
+3.3 Conhecimentos
+Classifique cada conhecimento da competência conforme sua natureza semântica e faça o alinhamento correto:
+
+Conhecimentos específicos de computação:
+devem ser representados na OntoKSD;
+devem ser associados ao BoKCS2023, usando as propriedades curriculares apropriadas já definidas na ontologia.
+Conhecimentos fundacionais e conhecimentos profissionais:
+devem ser alinhados aos vocabulários do CC2020 já incorporados à OntoKSD, incluindo o arquivo cc2020-foundational-knowledge-insert, conforme a correspondência semântica disponível;
+reutilize os conceitos existentes sempre que houver equivalência adequada;
+evite criar duplicações desnecessárias.
+Em caso de ambiguidade entre conhecimento específico de computação, fundacional ou profissional, decidir com base em:
+definição textual da competência;
+semântica do conhecimento;
+organização conceitual já adotada na OntoKSD.
+Toda classificação deve ser justificada na seção de decisões de modelagem.
+
+
+3.4 Disposições
+As disposições devem ser associadas ao vocabulário existente em ontoksd-dispositions-insert.
+Reutilize as disposições já existentes.
+Não crie novas disposições se houver equivalente semântico adequado no vocabulário.
+Quando houver múltiplas formulações possíveis, prefira a instância padronizada já adotada pela OntoKSD.
+
+
+3.5 Task
+Verifique se a competência deve ser associada a uma instância de ontoksd:Task, de acordo com a modelagem já definida na OntoKSD.
+Modele Task apenas quando a formulação da competência expressar claramente uma ação ou realização delimitada.
+Não confunda Task com LearningTask.
+Caso Task seja criada, decompô-la conforme o padrão adotado na OntoKSD e justificar a decisão.
+
+
+3.6 Reuso e consistência
+Priorize o reuso de indivíduos, conceitos e alinhamentos já existentes nos arquivos anexados.
+Evite duplicar conhecimentos, disposições, tópicos curriculares ou estruturas já disponíveis.
+Quando existir correspondência adequada, reutilize:
+BoKCS2023;
+vocabulários CC2020 já incorporados à OntoKSD;
+vocabulário de disposições da OntoKSD.
+
+
+3.7 Restrições obrigatórias
+Não criar classes, propriedades ou padrões fora da OntoKSD anexada.
+Não misturar Task com LearningTask.
+Não modelar Skill como entidade independente quando a OntoKSD exigir KnowledgeSkill como unidade principal.
+Não forçar alinhamentos curriculares artificiais apenas para preencher referência.
+Quando não houver correspondência adequada em BoKCS2023, CC2020 ou vocabulário de disposições, declarar explicitamente a ausência de alinhamento e justificar.
+
+
+4. Processo de decisão esperado
+
+Siga este procedimento:
+
+Etapa 1 — Ler e interpretar a competência
+identificar título, descrição, conhecimentos, disposições, KS pairs, verbos e alinhamentos com Bloom;
+identificar a formulação final mais estável da competência.
+Etapa 2 — Decidir a estrutura ontológica
+definir StructureType;
+definir SpecificationPattern;
+definir CompetenceScope;
+decidir se haverá Task.
+Etapa 3 — Analisar os conhecimentos
+
+Para cada conhecimento:
+
+determinar se é:
+específico de computação,
+fundacional,
+profissional;
+verificar se já existe conceito correspondente nos vocabulários anexados;
+alinhar ao BoKCS2023 ou aos vocabulários do CC2020, conforme apropriado.
+
+Etapa 4 — Modelar os KS pairs
+criar um KS pair para cada pareamento explícito ou semanticamente justificado;
+associar conhecimento, nível Bloom e verbos de apoio, quando apropriado.
+
+Etapa 5 — Associar disposições
+mapear cada disposição ao vocabulário existente;
+reutilizar instâncias padronizadas.
+
+Etapa 6 — Validar a coerência semântica
+
+Antes de gerar o .rq, verificar:
+
+consistência da modelagem;
+aderência à OntoKSD;
+ausência de duplicações desnecessárias;
+correção dos alinhamentos curriculares;
+coerência entre descrição, KS pairs e representação final.
+
+
+5. Formato obrigatório da saída
+
+A resposta deve conter exatamente duas partes.
+
+Parte A — Decisões de modelagem
+
+Explique de forma objetiva e técnica:
+
+como a competência foi classificada estruturalmente;
+qual SpecificationPattern foi adotado e por quê;
+qual CompetenceScope foi adotado e por quê;
+se houve modelagem de Task e a justificativa;
+quais KS pairs foram criados;
+como cada conhecimento foi classificado:
+específico de computação,
+fundacional,
+profissional;
+quais alinhamentos foram realizados com:
+BoKCS2023;
+vocabulários do CC2020 já incorporados à OntoKSD, incluindo cc2020-foundational-knowledge-insert, quando aplicável;
+ontoksd-dispositions-insert;
+quais ambiguidades, limitações ou escolhas prudenciais foram identificadas.
+Parte B — Arquivo .rq
+
+Gerar o conteúdo completo do arquivo SPARQL INSERT DATA, pronto para uso, com:
+
+PREFIX adequados;
+IRIs consistentes e estáveis;
+triples semanticamente corretas;
+reuso das entidades existentes sempre que possível;
+comentários curtos apenas quando forem úteis para rastreabilidade ou clareza.
+
+
+6. Critérios de qualidade
+
+A representação final deve ser:
+
+ontologicamente consistente;
+semanticamente precisa;
+aderente à OntoKSD;
+alinhada aos vocabulários anexados;
+rastreável às fontes curriculares usadas;
+reutilizável em consultas, validações e evolução futura da ontologia.
+
+7. Instrução final
+
+Não produza apenas um insert sintaticamente válido. Produza a melhor representação ontológica possível da competência na OntoKSD, com decisões justificadas, alinhamentos curriculares adequados e máximo reuso dos recursos já existentes.

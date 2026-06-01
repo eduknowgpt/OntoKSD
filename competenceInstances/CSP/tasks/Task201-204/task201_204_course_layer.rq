@@ -1,0 +1,164 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+
+INSERT DATA {
+
+  #################################################################
+  # Course layer for the second CSP task cycle (Task201--Task204)
+  #
+  # This file adds the curricular layer that was absent from the
+  # task-level materializations. It does not modify the task files.
+  # The course aggregates the four learning tasks and uses
+  # CourseCompetenceSpecification relators to state course-level
+  # competence expectations and minimum proficiency requirements.
+  #
+  # Modeling assumption: the competences activated by Task201--Task204
+  # are treated as mandatory course competences for this validation
+  # scenario, with SecondCycle_CompetentLevel as the minimum expected
+  # proficiency level.
+  #################################################################
+
+  #################################################################
+  # Course
+  #################################################################
+
+  ontoksd:TheoryOfComputationCourse a ontoksd:Course ;
+      rdfs:label "Theory of Computation course"@en ;
+      dcterms:identifier "TOC"^^xsd:string ;
+      rdfs:comment "Course-level curricular unit used to aggregate the second CSP task cycle materialized through Task201, Task202, Task203, and Task204. This course layer enables requirement-driven gap analysis by associating reused competences with minimum expected proficiency levels through CourseCompetenceSpecification relators."@en ;
+      ontoksd:hasInstructionalUnit
+          ontoksd:Task201_DroneMonitoring ,
+          ontoksd:Task202_TeamControl ,
+          ontoksd:Task203_ParkingControl ,
+          ontoksd:Task204_OnlineJudgesAtLogisticSolutions .
+
+  #################################################################
+  # Course-Competence Specifications
+  # Minimum expected proficiency: SecondCycle_CompetentLevel
+  #################################################################
+
+  ontoksd:TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C02 - justify use of deterministic finite automata"@en ;
+      rdfs:comment "Course-level specification stating that C02 is a mandatory competence in the Theory of Computation course and requires at least the Competent level in the second-cycle proficiency scheme."@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C02 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C03 - test automata using simulators"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C03 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C04 - define regular expressions for finite automata"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C04 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C05 - write a technical report"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C05 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C06 - develop solutions using finite state machines"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C06 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C07 - develop solutions using Turing machines"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C07 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C08 - identify Turing machine variants"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C08 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C09 - apply Turing machine variants"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C09 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C10 - test Turing machines using simulators"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C10 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C11 - identify patterns in finite state machines"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C11 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C12 - develop solutions using pushdown automata"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C12 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C13.01 - interpret formal grammar-based rules"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C13_01 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C14 - differentiate classifications of formal grammars"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C14 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C15 - understand the Halting Problem and its implications"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C15 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+  ontoksd:TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification
+      a ontoksd:CourseCompetenceSpecification ;
+      rdfs:label "TOC course specification for C16 - interpret Turing machine concepts to analyze computational system capabilities"@en ;
+      ontoksd:mediatesCourse ontoksd:TheoryOfComputationCourse ;
+      ontoksd:mediatesCourseCompetence ontoksd:C16 ;
+      ontoksd:isMandatory true ;
+      ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel .
+
+}

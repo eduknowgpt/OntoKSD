@@ -1,74 +1,99 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX cs2023: <http://purl.org/cs2023#>
-PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# INSERÇÃO CONDICIONAL DOS PARES KNOWLEDGESKILL ################
+INSERT DATA {
 
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:SDF-Practices ontoksd:cs2023DevelopSkill)
-  }
+  #################################################################
+  # Competence
+  #################################################################
 
-  FILTER NOT EXISTS {
-    ?existing a ontoksd:KnowledgeSkill ;
-              ontoksd:hasKnowledgeComponent ?k ;
-              ontoksd:hasSkillComponent ?s .
-  }
+  cs2023c:Competence_Software1
+      a ontoksd:Competence ;
+      rdfs:label "Develop test cases and test a given program"@en ;
+      skos:prefLabel "Develop test cases and test a given program"@en ;
+      skos:definition "Develop test cases and test a given program."@en ;
+      rdfs:comment "Competence derived from the CS2023 Software Competency Area, Task Software1. The competence is specified through an explicit KnowledgeSkill pair and the desirable professional dispositions associated with the task."@en ;
+      dcterms:identifier "Software1"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Software1 ;
+      ontoksd:hasKnowledgeSkill cs2023c:KS_Software1_SDF_Practices_1_Develop ;
+      ontoksd:hasDisposition
+          ontoksd:meticulous ,
+          ontoksd:persistent ,
+          ontoksd:responsible ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
 
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
+  #################################################################
+  # Specification-level Task
+  #################################################################
 
-;
+  cs2023c:Task_Software1
+      a ontoksd:Task ;
+      rdfs:label "Software1 task"@en ;
+      skos:prefLabel "Software1 task"@en ;
+      ontoksd:hasTaskStatement "Develop test cases to determine if a program is functionally correct."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Software1. This task is analytically decomposed according to the CS2023-inspired structure adopted in OntoKSD."@en ;
+      dcterms:identifier "Task_Software1"^^xsd:string ;
+      ontoksd:hasTaskComponent cs2023c:TaskComponent_Software1_TestCaseSet ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Software1_Design ,
+          cs2023c:TaskActivity_Software1_Develop ,
+          cs2023c:TaskActivity_Software1_Document ;
+      ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Software1_FunctionalCorrectness .
 
-############# INSERÇÃO DA COMPETÊNCIA CS2023_Software1 ################
+  #################################################################
+  # Task elements
+  #################################################################
 
-INSERT {
-  ontoksd:competence_CS2023_Software1 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Develop test cases and test a given program"@en ;
-    dcterms:description "This competency refers to the ability to design and execute test cases in order to verify if a program is functionally correct, applying systematic software development practices."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Software1"@en ;
-    ontoksd:hasDisposition ontoksd:meticulous ,
-                           ontoksd:persistent ,
-                           ontoksd:responsible ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+  cs2023c:TaskComponent_Software1_TestCaseSet
+      a ontoksd:TaskComponent ;
+      rdfs:label "set of test cases for a program"@en ;
+      skos:prefLabel "set of test cases for a program"@en ;
+      rdfs:comment "Task component corresponding to the principal semantic target of the task: the set of test cases to be produced and used in relation to a given program."@en .
 
-  VALUES (?k ?s) {
-    (cs2023:SDF-Practices ontoksd:cs2023DevelopSkill)
-  }
-}
+  cs2023c:TaskActivity_Software1_Design
+      a ontoksd:TaskActivity ;
+      rdfs:label "design"@en ;
+      skos:prefLabel "design"@en ;
+      rdfs:comment "Task activity capturing the design dimension involved in defining appropriate test cases."@en .
 
-;
+  cs2023c:TaskActivity_Software1_Develop
+      a ontoksd:TaskActivity ;
+      rdfs:label "develop"@en ;
+      skos:prefLabel "develop"@en ;
+      rdfs:comment "Task activity capturing the development of the test cases required by the task."@en .
 
-############# INSERÇÃO DOS VERBOS COMO ANOTAÇÃO (leve) ################
+  cs2023c:TaskActivity_Software1_Document
+      a ontoksd:TaskActivity ;
+      rdfs:label "document"@en ;
+      skos:prefLabel "document"@en ;
+      rdfs:comment "Task activity capturing the need to document the produced test cases and their intended use."@en .
 
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:SDF-Practices ontoksd:cs2023DevelopSkill bloom:develop)
-    (cs2023:SDF-Practices ontoksd:cs2023DevelopSkill bloom:test)
-    (cs2023:SDF-Practices ontoksd:cs2023DevelopSkill bloom:verify)
-  }
+  cs2023c:TaskConstraint_Software1_FunctionalCorrectness
+      a ontoksd:TaskConstraint ;
+      rdfs:label "verifying the correctness of implementation of the program"@en ;
+      skos:prefLabel "verifying the correctness of implementation of the program"@en ;
+      rdfs:comment "Task constraint that qualifies the task in terms of its intended purpose: checking whether the implementation of the given program is functionally correct."@en .
 
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
+  #################################################################
+  # Knowledge-Skill pair
+  #################################################################
+
+  cs2023c:KS_Software1_SDF_Practices_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "Basic testing, including test case design × Develop"@en ;
+      skos:prefLabel "Basic testing, including test case design × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Software1. It associates the CS2023 knowledge element 'Basic testing, including test case design' with the CS2023 skill level required to develop test cases and test a given program."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SDF_Practices_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
 }

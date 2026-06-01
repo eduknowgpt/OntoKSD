@@ -1,0 +1,268 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+INSERT DATA {
+
+  <http://purl.org/ontoksd/source/cc2020>
+      a owl:NamedIndividual ;
+      rdfs:label "CC2020 disposition catalog"@en ;
+      rdfs:comment "Source marker for dispositions explicitly listed in the prospective dispositions catalog of CC2020."@en .
+
+  <http://purl.org/ontoksd/source/ontoksd-extension>
+      a owl:NamedIndividual ;
+      rdfs:label "OntoKSD curated extension"@en ;
+      rdfs:comment "Source marker for additional dispositions curated in OntoKSD beyond the prospective dispositions catalog of CC2020."@en .
+
+  ontoksd:CC2020CoreDispositionScheme
+      a skos:ConceptScheme ;
+      rdfs:label "CC2020 Core Disposition Scheme"@en ;
+      skos:prefLabel "CC2020 Core Disposition Scheme"@en ;
+      rdfs:comment "Concept scheme containing the core dispositions adopted from the prospective dispositions catalog of CC2020."@en .
+
+  ontoksd:OntoKSDExtendedDispositionScheme
+      a skos:ConceptScheme ;
+      rdfs:label "OntoKSD Extended Disposition Scheme"@en ;
+      skos:prefLabel "OntoKSD Extended Disposition Scheme"@en ;
+      rdfs:comment "Concept scheme containing dispositions curated as extensions in OntoKSD beyond the core repertoire adopted from CC2020."@en .
+
+  ontoksd:adaptable a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Adaptable"@en ;
+      skos:prefLabel "Adaptable"@en ;
+      rdfs:comment "A disposition characterized by openness and readiness to adjust effectively to new situations, evolving requirements, and changing conditions."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:collaborative a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Collaborative"@en ;
+      skos:prefLabel "Collaborative"@en ;
+      rdfs:comment "A disposition characterized by willingness to work constructively with others, contribute to shared goals, and engage productively in team-based contexts."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:communicative a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Communicative"@en ;
+      skos:prefLabel "Communicative"@en ;
+      rdfs:comment "A disposition characterized by readiness to express ideas clearly, listen attentively, and support effective exchange of information across different audiences and contexts."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:creative a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Creative"@en ;
+      skos:prefLabel "Creative"@en ;
+      rdfs:comment "A disposition characterized by inclination to generate original ideas, explore alternatives, and propose innovative solutions."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:ethical a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Ethical"@en ;
+      skos:prefLabel "Ethical"@en ;
+      rdfs:comment "A disposition characterized by commitment to ethical principles, responsible judgment, and integrity in action and decision making."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:inclusive a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Inclusive"@en ;
+      skos:prefLabel "Inclusive"@en ;
+      rdfs:comment "A disposition characterized by valuing diversity, fostering participation, and acting in ways that support inclusive and respectful environments."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:inventive a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Inventive"@en ;
+      skos:prefLabel "Inventive"@en ;
+      rdfs:comment "A disposition characterized by exploratory thinking, resourcefulness, and willingness to look beyond straightforward or conventional solutions."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:lifelongLearner a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Lifelong Learner"@en ;
+      skos:prefLabel "Lifelong Learner"@en ;
+      skos:altLabel "Continuous Learner"@en ;
+      rdfs:comment "A disposition characterized by sustained commitment to continuous learning, self-improvement, and ongoing professional and personal development."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:meticulous a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Meticulous"@en ;
+      skos:prefLabel "Meticulous"@en ;
+      rdfs:comment "A disposition characterized by attentiveness to detail, carefulness, accuracy, and thoroughness in carrying out tasks."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:passionate a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Passionate"@en ;
+      skos:prefLabel "Passionate"@en ;
+      rdfs:comment "A disposition characterized by strong commitment, enthusiasm, and conviction toward meaningful work, goals, or areas of practice."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:proactive a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Proactive"@en ;
+      skos:prefLabel "Proactive"@en ;
+      rdfs:comment "A disposition characterized by initiative, anticipation of needs or problems, and willingness to act without waiting for external prompting."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:professional a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Professional"@en ;
+      skos:prefLabel "Professional"@en ;
+      skos:altLabel "Professionally responsible"@en ;
+      rdfs:comment "A disposition characterized by commitment to professional conduct, reliability, accountability, and respect for standards and responsibilities in practice."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:purposeDriven a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Purpose-driven"@en ;
+      skos:prefLabel "Purpose-driven"@en ;
+      rdfs:comment "A disposition characterized by orientation toward meaningful goals, intentional action, and sustained focus on achieving relevant outcomes."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:resilient a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Resilient"@en ;
+      skos:prefLabel "Resilient"@en ;
+      rdfs:comment "A disposition characterized by persistence, recovery from setbacks, and continued engagement in the face of difficulty or challenge."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:responsible a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Responsible"@en ;
+      skos:prefLabel "Responsible"@en ;
+      rdfs:comment "A disposition characterized by taking ownership of actions, decisions, obligations, and their consequences."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:responsive a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Responsive"@en ;
+      skos:prefLabel "Responsive"@en ;
+      rdfs:comment "A disposition characterized by attentiveness to others, timely reaction to situations, and willingness to respond constructively and respectfully."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:selfDirected a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Self-directed"@en ;
+      skos:prefLabel "Self-directed"@en ;
+      skos:altLabel "Autonomous"@en ;
+      skos:altLabel "Self-regulated"@en ;
+      rdfs:comment "A disposition characterized by autonomy in setting goals, managing effort and time, and guiding one's own learning and work."@en ;
+      skos:inScheme ontoksd:CC2020CoreDispositionScheme ;
+      skos:topConceptOf ontoksd:CC2020CoreDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/cc2020> .
+
+  ontoksd:persistent a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Persistent"@en ;
+      skos:prefLabel "Persistent"@en ;
+      rdfs:comment "A disposition characterized by sustained effort, perseverance, and continued engagement when facing difficulty, iteration, or failure during task execution."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+
+  ontoksd:investigative a ontoksd:Disposition , owl:NamedIndividual ;
+      rdfs:label "Investigative"@en ;
+      skos:prefLabel "Investigative"@en ;
+      skos:definition "A disposition characterized by curiosity, inquiry-oriented engagement, and a willingness to examine evidence, behaviors, structures, and alternative explanations in a careful and systematic way."@en ;
+      rdfs:comment "Disposition reused in CSP-based competence specifications to capture systematic inquiry, examination of evidence, and analytical exploration during problem solving, testing, and model evaluation."@en ;
+      dcterms:identifier "investigative" .
+	  
+	  
+	  
+#################################################################
+  # OntoKSD curated disposition extensions
+  # Consolidated from TASK25.22--TASK25.25
+  # No repeated individuals are inserted.
+  #################################################################
+
+  ontoksd:systematic a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Systematic"@en ;
+      skos:prefLabel "Systematic"@en ;
+      skos:definition "A disposition characterized by ordered, methodical, and structured attention to processes, steps, dependencies, and results."@en ;
+      rdfs:comment "OntoKSD curated disposition used to represent methodical organization of procedures, explanations, algorithms, and program structures. It is especially relevant when learners must maintain ordered reasoning across steps, counters, iterations, function calls, or progressive refinements."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:analytical a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Analytical"@en ;
+      skos:prefLabel "Analytical"@en ;
+      skos:definition "A disposition characterized by careful examination of parts, relations, conditions, cases, constraints, evidence, and implications in a problem, artifact, or solution."@en ;
+      rdfs:comment "OntoKSD curated disposition used when learners are expected to inspect structures, distinguish cases, reason about conditions, compare alternatives, or analyze execution paths and conceptual relations."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:reflective a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Reflective"@en ;
+      skos:prefLabel "Reflective"@en ;
+      skos:definition "A disposition characterized by willingness to review one's reasoning, reconsider decisions, revise explanations, and improve understanding or solutions based on evidence, feedback, or self-examination."@en ;
+      rdfs:comment "OntoKSD curated disposition used when learners are expected to revisit their reasoning, explain decisions, refine algorithms or programs, incorporate feedback, or identify opportunities for improvement."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:curious a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Curious"@en ;
+      skos:prefLabel "Curious"@en ;
+      skos:definition "A disposition characterized by interest in exploring concepts, asking questions, and seeking explanations for how systems, artifacts, or phenomena work."@en ;
+      rdfs:comment "OntoKSD curated disposition used when the instructional situation emphasizes conceptual exploration, questioning, clarification of misunderstandings, and active interest in understanding computing systems or behaviors. Although related to investigative inquiry, it emphasizes motivational interest rather than systematic evidence examination."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:critical a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Critical"@en ;
+      skos:prefLabel "Critical"@en ;
+      skos:definition "A disposition characterized by reasoned judgment, careful evaluation of claims, alternatives, outputs, and evidence, with attention to correctness, reliability, and justification."@en ;
+      rdfs:comment "OntoKSD curated disposition used when learners must evaluate alternatives, detect misconceptions, inspect outputs, verify correctness, or justify why a solution, answer, or interpretation is adequate."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:receptive a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Receptive"@en ;
+      skos:prefLabel "Receptive"@en ;
+      skos:definition "A disposition characterized by openness to feedback, correction, alternative explanations, and conceptual improvement."@en ;
+      rdfs:comment "OntoKSD curated disposition used when learners are expected to compare their reasoning with feedback, accept clarification, revise misconceptions, or improve understanding through guided discussion or formative assessment."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:logical a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Logical"@en ;
+      skos:prefLabel "Logical"@en ;
+      skos:definition "A disposition characterized by consistency, coherence, and rule-based reasoning when designing, validating, or explaining computational solutions."@en ;
+      rdfs:comment "OntoKSD curated disposition used when learners are expected to maintain coherent reasoning across conditions, branches, formula selections, execution paths, or decision rules."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+
+  ontoksd:careful a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Careful"@en ;
+      skos:prefLabel "Careful"@en ;
+      skos:definition "A disposition characterized by caution, attention to constraints, and concern for avoiding errors in interpretation, implementation, validation, or execution."@en ;
+      rdfs:comment "OntoKSD curated disposition used when learners are expected to avoid invalid states, handle edge cases, prevent incorrect assumptions, or ensure that computational constraints are respected. It is close to meticulous, but emphasizes caution and error avoidance rather than general thoroughness."@en ;
+      skos:inScheme ontoksd:OntoKSDExtendedDispositionScheme ;
+      skos:topConceptOf ontoksd:OntoKSDExtendedDispositionScheme ;
+      dcterms:source <http://purl.org/ontoksd/source/ontoksd-extension> .
+	  
+}

@@ -1,0 +1,27 @@
+# This query retrieves evidenced competences and proficiency levels associated with learner profiles. It returns each learner profile, the evidenced competence records included in or associated with that profile, the abstract competence to which each evidenced record refers, and the attributed proficiency level. Thus, the query demonstrates that OntoKSD can support learner-profile-oriented views of demonstrated competences and their interpreted proficiency levels.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?profile
+  ?profileLabel
+  ?evidencedCompetence
+  ?evidencedCompetenceLabel
+  ?competence
+  ?competenceLabel
+  #?proficiencyLevel
+  ?proficiencyLevelLabel
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:isEvidencedCompetenceOf ?profile ;
+                       ontoksd:refersToCompetence ?competence .
+
+  OPTIONAL { ?evidencedCompetence ontoksd:hasProficiencyLevel ?proficiencyLevel . }
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+}
+ORDER BY ?profileLabel ?competenceLabel ?proficiencyLevelLabel

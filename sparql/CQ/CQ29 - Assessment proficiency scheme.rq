@@ -1,0 +1,17 @@
+# This query retrieves the proficiency scheme that governs score interpretation and proficiency attribution in assessment occurrences. It returns each AssessmentOccurrence and the ProficiencyScheme used to interpret scores or assign proficiency levels in that concrete assessment context. Thus, the query demonstrates that OntoKSD can explicitly connect assessment occurrences to the proficiency schemes that structure evaluative interpretation.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+  ?proficiencyScheme
+  ?proficiencySchemeLabel
+WHERE {
+  ?assessmentOccurrence ontoksd:usesProficiencyScheme ?proficiencyScheme .
+
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+  OPTIONAL { ?proficiencyScheme rdfs:label ?proficiencySchemeLabel . }
+}
+ORDER BY ?assessmentOccurrenceLabel ?proficiencySchemeLabel

@@ -1,0 +1,40 @@
+# This query retrieves how the activation configuration of competences varies across instructional units in which they are reused. It returns each competence, each instructional unit associated with it through a competence activation relation, and the corresponding activation mode, role, and constraint. Thus, the query demonstrates that OntoKSD can compare how the same competence is pedagogically configured across different reuse contexts.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  #?instructionalUnit
+  ?instructionalUnitLabel
+  ?competenceActivation
+  #?activationMode
+  ?activationModeLabel
+  #?activationRole
+  ?activationRoleLabel
+  #?activationConstraint
+  ?activationConstraintLabel
+WHERE {
+  ?competenceActivation ontoksd:mediatesCompetence ?competence ;
+                        ontoksd:mediatesInstructionalUnit ?instructionalUnit .
+
+  OPTIONAL {
+    ?competenceActivation ontoksd:hasActivationMode ?activationMode .
+    OPTIONAL { ?activationMode rdfs:label ?activationModeLabel . }
+  }
+
+  OPTIONAL {
+    ?competenceActivation ontoksd:hasActivationRole ?activationRole .
+    OPTIONAL { ?activationRole rdfs:label ?activationRoleLabel . }
+  }
+
+  OPTIONAL {
+    ?competenceActivation ontoksd:hasActivationConstraint ?activationConstraint .
+    OPTIONAL { ?activationConstraint rdfs:label ?activationConstraintLabel . }
+  }
+
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?instructionalUnit rdfs:label ?instructionalUnitLabel . }
+}
+ORDER BY ?competence ?instructionalUnitLabel

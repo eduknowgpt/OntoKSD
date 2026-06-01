@@ -1,0 +1,338 @@
+PREFIX cc2020:     <http://purl.org/cc2020/knowledge#>
+PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos:       <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl:        <http://www.w3.org/2002/07/owl#>
+PREFIX ontoksd:    <http://purl.org/ontoksd#>
+PREFIX dcterms:    <http://purl.org/dc/terms/>
+
+
+INSERT DATA {
+
+<http://purl.org/cc2020/knowledge>
+    a owl:Ontology ;
+    rdfs:label "CC2020 Illustrative Computing Knowledge Vocabulary"@en ;
+    rdfs:comment """A simplified illustrative vocabulary of computing knowledge concepts derived from the knowledge examples presented in CC2020.
+
+	This ontology layer was created to support the specification of example competences in OntoKSD by providing a lightweight set of knowledge instances aligned with the competency-oriented perspective of CC2020. The represented items are modeled both as SKOS concepts and as OntoKSD Knowledge individuals in order to support semantic organization and direct reuse in competence specification.
+
+	Unlike the CS2023 Body of Knowledge layer, this vocabulary is not intended as a full curricular reconstruction or as a formally separated curricular-semantic alignment model. Rather, it functions as a pragmatic and illustrative knowledge layer derived from the examples provided in CC2020, suitable for competence modeling, prototyping, and demonstration purposes."""@en ;
+    dcterms:title "CC2020 Illustrative Computing Knowledge Vocabulary"@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+	  
+	  
+	  
+
+  cc2020:UsersAndOrganizations a skos:ConceptScheme ;
+	  rdfs:label "Users and Organizations"@en ;
+	  skos:notation "1" ;
+	  skos:definition "An organizational category in the simplified CC2020 illustrative knowledge vocabulary, corresponding to Category 1 in the ordered sequence of computing knowledge categories presented in CC2020 Table 4.1."@en ;
+	  dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SystemsModeling a skos:ConceptScheme ;
+      rdfs:label "Systems Modeling"@en ;
+      skos:notation "2" ;
+      skos:definition "An organizational category in the simplified CC2020 illustrative knowledge vocabulary, corresponding to Category 2 in the ordered sequence of computing knowledge categories presented in CC2020 Table 4.1."@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SystemsArchitectureAndInfrastructure a skos:ConceptScheme ;
+      rdfs:label "Systems Architecture and Infrastructure"@en ;
+      skos:notation "3" ;
+      skos:definition "An organizational category in the simplified CC2020 illustrative knowledge vocabulary, corresponding to Category 3 in the ordered sequence of computing knowledge categories in CC2020 Table 4.1."@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SoftwareDevelopment a skos:ConceptScheme ;
+      rdfs:label "Software Development"@en ;
+      skos:notation "4" ;
+      skos:definition "An organizational category in the simplified CC2020 illustrative knowledge vocabulary, corresponding to Category 4 in the ordered sequence of computing knowledge categories in CC2020 Table 4.1."@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SoftwareFundamentals a skos:ConceptScheme ;
+      rdfs:label "Software Fundamentals"@en ;
+      skos:notation "5" ;
+      skos:definition "An organizational category in the simplified CC2020 illustrative knowledge vocabulary, corresponding to Category 5 in the ordered sequence of computing knowledge categories in CC2020 Table 4.1."@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:Hardware a skos:ConceptScheme ;
+      rdfs:label "Hardware"@en ;
+      skos:notation "6" ;
+      skos:definition "An organizational category in the simplified CC2020 illustrative knowledge vocabulary, corresponding to Category 6 in the ordered sequence of computing knowledge categories in CC2020 Table 4.1."@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ArchitectureAndOrganization a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Architecture and Organization"@en ;
+      skos:notation "ArchitectureAndOrganization" ;
+      skos:definition "A computing knowledge area concerned with computer architecture, machine organization, and the structural principles that govern computing systems."@en ;
+      skos:inScheme cc2020:Hardware ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:CircuitsAndElectronics a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Circuits and Electronics"@en ;
+      skos:notation "CircuitsAndElectronics" ;
+      skos:definition "A computing knowledge area concerned with electronic circuits, digital and analog components, and the electrical foundations of computing systems."@en ;
+      skos:inScheme cc2020:Hardware ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ComputerNetworks a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Computer Networks"@en ;
+      skos:notation "ComputerNetworks" ;
+      skos:definition "A computing knowledge area concerned with network architectures, protocols, communication mechanisms, and interconnected systems."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ComputingSystemsFundamentals a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Computing Systems Fundamentals"@en ;
+      skos:notation "ComputingSystemsFundamentals" ;
+      skos:definition "A computing knowledge area concerned with core principles of computing systems, including their structure, behavior, and interaction."@en ;
+      skos:inScheme cc2020:SoftwareFundamentals ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:DataAndInformationManagement a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Data and Information Management"@en ;
+      skos:notation "DataAndInformationManagement" ;
+      skos:definition "A computing knowledge area concerned with data modeling, storage, retrieval, organization, governance, and management of information resources."@en ;
+      skos:inScheme cc2020:SystemsModeling ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:DataStructuresAlgorithmsAndComplexity a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Data Structures, Algorithms and Complexity"@en ;
+      skos:notation "DataStructuresAlgorithmsAndComplexity" ;
+      skos:definition "A computing knowledge area concerned with data structures, algorithmic design, computational complexity, and performance trade-offs in problem solving."@en ;
+      skos:inScheme cc2020:SoftwareFundamentals ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:DigitalDesign a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Digital Design"@en ;
+      skos:notation "DigitalDesign" ;
+      skos:definition "A computing knowledge area concerned with the design of digital systems, logic structures, and hardware-level representations of computation."@en ;
+      skos:inScheme cc2020:Hardware ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:EmbeddedSystems a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Embedded Systems"@en ;
+      skos:notation "EmbeddedSystems" ;
+      skos:definition "A computing knowledge area concerned with embedded devices, hardware-software integration, and specialized systems operating within constrained environments."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:EnterpriseArchitecture a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Enterprise Architecture"@en ;
+      skos:notation "EnterpriseArchitecture" ;
+      skos:definition "A computing knowledge area concerned with the alignment of organizational structures, business processes, information systems, and technological infrastructures."@en ;
+      skos:inScheme cc2020:UsersAndOrganizations ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:GraphicsAndVisualization a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Graphics and Visualization"@en ;
+      skos:notation "GraphicsAndVisualization" ;
+      skos:definition "A computing knowledge area concerned with graphical representation, visual interaction, rendering, and the use of visualization to support analysis and communication."@en ;
+      skos:inScheme cc2020:SoftwareFundamentals ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ISManagementAndLeadership a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "IS Management and Leadership"@en ;
+      skos:notation "ISManagementAndLeadership" ;
+      skos:definition "A computing knowledge area concerned with leadership, governance, and management of information systems within organizational settings."@en ;
+      skos:inScheme cc2020:UsersAndOrganizations ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:IntegratedSystemsTechnology a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Integrated Systems Technology"@en ;
+      skos:notation "IntegratedSystemsTechnology" ;
+      skos:definition "A computing knowledge area concerned with the integration of multiple technologies and system components into coherent operational environments."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:IntelligentSystemsAndAI a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Intelligent Systems (AI)"@en ;
+      skos:notation "IntelligentSystemsAndAI" ;
+      skos:altLabel "Artificial Intelligence"@en ;
+      skos:definition "A computing knowledge area concerned with intelligent systems, artificial intelligence methods, and computational techniques for reasoning, learning, and autonomous behavior."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:InternetOfThings a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Internet of Things"@en ;
+      skos:notation "InternetOfThings" ;
+      skos:definition "A computing knowledge area concerned with interconnected sensing, communication, and actuation devices operating in networked physical-digital environments."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:OperatingSystems a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Operating Systems"@en ;
+      skos:notation "OperatingSystems" ;
+      skos:definition "A computing knowledge area concerned with operating system structures, resource management, concurrency, and core services supporting software execution."@en ;
+      skos:inScheme cc2020:SoftwareFundamentals ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ParallelAndDistributedComputing a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Parallel and Distributed Computing"@en ;
+      skos:notation "ParallelAndDistributedComputing" ;
+      skos:definition "A computing knowledge area concerned with concurrent, parallel, and distributed computation across multiple processing elements or networked nodes."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:PlatformBasedDevelopment a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Platform-Based Development"@en ;
+      skos:notation "PlatformBasedDevelopment" ;
+      skos:definition "A computing knowledge area concerned with building software solutions on top of existing technological platforms, frameworks, or ecosystems."@en ;
+      skos:inScheme cc2020:SoftwareDevelopment ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:PlatformTechnologies a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Platform Technologies"@en ;
+      skos:notation "PlatformTechnologies" ;
+      skos:definition "A computing knowledge area concerned with hardware and software platforms that support the deployment, operation, and integration of computing systems."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ProgrammingFundamentals a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Programming Fundamentals"@en ;
+      skos:notation "ProgrammingFundamentals" ;
+      skos:definition "A computing knowledge area concerned with the foundational constructs, principles, and practices of programming."@en ;
+      skos:inScheme cc2020:SoftwareFundamentals ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ProgrammingLanguages a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Programming Languages"@en ;
+      skos:notation "ProgrammingLanguages" ;
+      skos:definition "A computing knowledge area concerned with programming language paradigms, syntax, semantics, translation, and language-based abstraction mechanisms."@en ;
+      skos:inScheme cc2020:SoftwareFundamentals ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:ProjectManagement a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Project Management"@en ;
+      skos:notation "ProjectManagement" ;
+      skos:definition "A computing knowledge area concerned with planning, coordinating, monitoring, and managing projects in organizational and technical settings."@en ;
+      skos:inScheme cc2020:UsersAndOrganizations ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:RequirementsAnalysisAndSpecifications a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Requirements Analysis and Specifications"@en ;
+      skos:notation "RequirementsAnalysisAndSpecifications" ;
+      skos:altLabel "Requirements Engineering"@en ;
+      skos:definition "A computing knowledge area concerned with eliciting, analyzing, documenting, and managing system requirements and specifications."@en ;
+      skos:inScheme cc2020:SystemsModeling ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SecurityIssuesAndPrinciples a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Security Issues and Principles"@en ;
+      skos:notation "SecurityIssuesAndPrinciples" ;
+      skos:definition "A computing knowledge area concerned with foundational security concepts, threats, principles, and risk-aware reasoning in computing systems."@en ;
+      skos:inScheme cc2020:SystemsModeling ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SecurityPolicyAndManagement a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Security Policy and Management"@en ;
+      skos:notation "SecurityPolicyAndManagement" ;
+      skos:definition "A computing knowledge area concerned with governance, policy, compliance, and organizational management of security practices and controls."@en ;
+      skos:inScheme cc2020:UsersAndOrganizations ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SecurityTechnologyAndImplementation a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Security Technology and Implementation"@en ;
+      skos:notation "SecurityTechnologyAndImplementation" ;
+      skos:definition "A computing knowledge area concerned with security technologies, mechanisms, and implementation practices used to protect systems, services, and data."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SignalProcessing a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Signal Processing"@en ;
+      skos:notation "SignalProcessing" ;
+      skos:definition "A computing knowledge area concerned with representation, analysis, transformation, and interpretation of signals in digital and computational contexts."@en ;
+      skos:inScheme cc2020:Hardware ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SocialIssuesAndProfessionalPractice a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Social Issues and Professional Practice"@en ;
+      skos:notation "SocialIssuesAndProfessionalPractice" ;
+      skos:definition "A computing knowledge area concerned with professional practice, social implications of computing, and responsible engagement with societal issues."@en ;
+      skos:inScheme cc2020:UsersAndOrganizations ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SoftwareDesign a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Software Design"@en ;
+      skos:notation "SoftwareDesign" ;
+      skos:definition "A computing knowledge area concerned with the design of software structures, components, interfaces, and architectural solutions."@en ;
+      skos:inScheme cc2020:SoftwareDevelopment ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SoftwareModelingAndAnalysis a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Software Modeling and Analysis"@en ;
+      skos:notation "SoftwareModelingAndAnalysis" ;
+      skos:definition "A computing knowledge area concerned with software representations, analytical methods, and model-based reasoning about software systems."@en ;
+      skos:inScheme cc2020:SoftwareDevelopment ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SoftwareProcess a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Software Process"@en ;
+      skos:notation "SoftwareProcess" ;
+      skos:definition "A computing knowledge area concerned with lifecycle models, processes, practices, and organizational approaches to software development and maintenance."@en ;
+      skos:inScheme cc2020:SoftwareDevelopment ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SoftwareQualityVerificationAndValidation a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Software Quality, Verification and Validation"@en ;
+      skos:notation "SoftwareQualityVerificationAndValidation" ;
+      skos:altLabel "Software Verification and Validation"@en ;
+      skos:definition "A computing knowledge area concerned with software quality, testing, verification, validation, and assurance of correctness and reliability."@en ;
+      skos:inScheme cc2020:SoftwareDevelopment ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:SystemsAnalysisAndDesign a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Systems Analysis and Design"@en ;
+      skos:notation "SystemsAnalysisAndDesign" ;
+      skos:definition "A computing knowledge area concerned with analyzing stakeholder needs and designing system solutions within organizational and technical contexts."@en ;
+      skos:inScheme cc2020:SystemsModeling ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:UserExperienceDesign a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "User Experience Design"@en ;
+      skos:notation "UserExperienceDesign" ;
+      skos:altLabel "UX Design"@en ;
+      skos:definition "A computing knowledge area concerned with designing interactive systems and digital experiences that are usable, effective, and aligned with user needs."@en ;
+      skos:inScheme cc2020:UsersAndOrganizations ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020:VirtualSystemsAndServices a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Virtual Systems and Services"@en ;
+      skos:notation "VirtualSystemsAndServices" ;
+      skos:definition "A computing knowledge area concerned with virtualization technologies, virtualized environments, and services delivered through virtual infrastructure."@en ;
+      skos:inScheme cc2020:SystemsArchitectureAndInfrastructure ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+}

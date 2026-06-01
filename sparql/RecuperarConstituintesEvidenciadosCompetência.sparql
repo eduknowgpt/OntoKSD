@@ -1,0 +1,11 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?evidencedCompetence ?evidencedConstituent ?constituent ?level
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:hasEvidencedConstituent ?evidencedConstituent .
+
+  ?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ;
+                        ontoksd:refersToCompetenceConstituent ?constituent ;
+                        ontoksd:hasProficiencyLevel ?level .
+}

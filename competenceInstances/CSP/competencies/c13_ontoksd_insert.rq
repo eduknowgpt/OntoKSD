@@ -1,0 +1,74 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C13 a ontoksd:Competence ;
+      rdfs:label "Interpret rule-based notation"@en ;
+      dcterms:identifier "C13"^^xsd:string ;
+      rdfs:comment "Atomic competence concerned with understanding, interpreting, and reasoning about rule-based notations used to formally specify structured symbol sequences, constraints, or control logic in computational systems, with emphasis on syntactic organization, rule dependencies, and symbolic meaning rather than on artifact construction."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:transversalCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C13_RuleBasedFormalisms_Understanding ,
+                                ontoksd:KS_C13_FormalGrammars_Understanding ,
+                                ontoksd:KS_C13_AnalyticalThinking_Analyzing ;
+      ontoksd:hasDisposition ontoksd:collaborative ,
+                             ontoksd:responsible ,
+                             ontoksd:proactive .
+
+  ontoksd:KS_C13_RuleBasedFormalisms_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C13 KS Pair — Rule-Based Formalisms × Understanding"@en ;
+      dcterms:identifier "C13-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding rule-based formalisms in order to interpret symbolic specifications that define valid sequences, structures, constraints, or control logic."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C13_RuleBasedFormalisms ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:interpret ,
+                                             bloom:relate ,
+                                             bloom:explain .
+
+  ontoksd:KS_C13_FormalGrammars_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C13 KS Pair — Formal Grammars and Language Models × Understanding"@en ;
+      dcterms:identifier "C13-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding formal grammars and language models as canonical examples of rule-based notation that organize symbols hierarchically or sequentially and constrain admissible structures."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C13_FormalGrammarsAndLanguageModels ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:recognize ,
+                                             bloom:explain ,
+                                             bloom:compare .
+
+  ontoksd:KS_C13_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C13 KS Pair — Analytical and Critical Reasoning × Analyzing"@en ;
+      dcterms:identifier "C13-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing symbolic rule systems in order to identify ambiguities or inconsistencies, evaluate adequacy, and validate whether a given notation captures its intended constraints."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:analyze ,
+                                             bloom:evaluate ,
+                                             bloom:validate .
+
+  ontoksd:Knowledge_C13_RuleBasedFormalisms a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Rule-Based Formalisms"@en ;
+      skos:prefLabel "Rule-Based Formalisms"@en ;
+      skos:definition "Knowledge concerned with the general structure of rule-based systems, including production rules, symbolic constraints, and notational mechanisms used to define valid sequences, configurations, or control conditions."@en ;
+      skos:scopeNote "Local OntoKSD knowledge individual created for C13 because the stabilized competency is intentionally domain-independent and refers to a broad class of rule-based notations rather than to a single specific curricular topic."@en ;
+      dcterms:identifier "C13-K-RuleBasedFormalisms"^^xsd:string ;
+      ontoksd:hasKnowledgeType ontoksd:transversalKnowledgeType .
+
+  ontoksd:Knowledge_C13_FormalGrammarsAndLanguageModels a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Formal Grammars and Language Models"@en ;
+      skos:prefLabel "Formal Grammars and Language Models"@en ;
+      skos:definition "Knowledge concerned with grammatical formalisms and language models that organize symbols hierarchically or sequentially, serving as canonical examples for interpreting rule-based notation and symbolic constraints."@en ;
+      skos:scopeNote "Local OntoKSD knowledge individual created for C13 to represent the stabilized cross-domain role of formal grammars and language models as interpretive references for rule-based notation."@en ;
+      dcterms:identifier "C13-K-FormalGrammarsAndLanguageModels"^^xsd:string ;
+      ontoksd:hasKnowledgeType ontoksd:transversalKnowledgeType .
+
+}

@@ -1,0 +1,31 @@
+# This query retrieves the ActivationMode that qualifies competence activation relations. It returns each competence, the instructional structure associated with it through a CompetenceRelator, and the activation mode that specifies how the competence is operationalized in that instructional context. Thus, the query demonstrates that OntoKSD can explicitly represent the mode by which a competence is developed, mobilized, or assessed in an instructional structure.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?instructionalUnit
+  ?instructionalUnitLabel
+  ?competenceRelator
+  ?activationMode
+  ?activationModeLabel
+WHERE {
+  ?competenceRelator a ontoksd:CompetenceRelator ;
+                     ontoksd:mediatesCompetence ?competence ;
+                     ontoksd:mediatesInstructionalUnit ?instructionalUnit ;
+                     ontoksd:hasActivationMode ?activationMode .
+
+  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
+  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
+  BIND(COALESCE(?competenceRdfsLabel, ?competenceSkosLabel, STR(?competence)) AS ?competenceLabel)
+
+  OPTIONAL { ?instructionalUnit rdfs:label ?instructionalUnitRdfsLabel . }
+  OPTIONAL { ?instructionalUnit skos:prefLabel ?instructionalUnitSkosLabel . }
+  BIND(COALESCE(?instructionalUnitRdfsLabel, ?instructionalUnitSkosLabel, STR(?instructionalUnit)) AS ?instructionalUnitLabel)
+
+  ?activationMode rdfs:label ?activationModeLabel .
+}
+ORDER BY ?competenceLabel ?instructionalUnitLabel ?activationModeLabel

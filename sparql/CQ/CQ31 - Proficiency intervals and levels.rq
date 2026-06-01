@@ -1,0 +1,26 @@
+# This query retrieves the scale intervals associated with proficiency levels within proficiency schemes. It returns each ProficiencyScheme, the ScaleInterval defined by that scheme, the interval bounds used for score interpretation, and the ProficiencyLevel corresponding to the interval. Thus, the query demonstrates that OntoKSD can formally represent proficiency interpretation through mappings between bounded score intervals and proficiency categories.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?proficiencyScheme
+  ?proficiencySchemeLabel
+  ?scaleInterval
+  ?scaleIntervalLabel
+  ?lowerBound
+  ?upperBound
+  ?proficiencyLevel
+  ?proficiencyLevelLabel
+WHERE {
+  ?proficiencyScheme ontoksd:definesInterval ?scaleInterval .
+
+  ?scaleInterval ontoksd:correspondsToLevel ?proficiencyLevel ;
+                 ontoksd:lowerBound ?lowerBound ;
+                 ontoksd:upperBound ?upperBound .
+
+  OPTIONAL { ?proficiencyScheme rdfs:label ?proficiencySchemeLabel . }
+  OPTIONAL { ?scaleInterval rdfs:label ?scaleIntervalLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+}
+ORDER BY ?proficiencySchemeLabel ?lowerBound

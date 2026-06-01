@@ -1,64 +1,218 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s .
+INSERT DATA {
+
+  #################################################################
+  # Optional disposition extension
+  #################################################################
+
+  ontoksd:persistent a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Persistent"@en ;
+      skos:prefLabel "Persistent"@en ;
+      rdfs:comment "A disposition characterized by sustained effort, perseverance, and continued engagement when facing difficulty, iteration, or failure during task execution."@en .
+
+  #################################################################
+  # Competence
+  #################################################################
+
+  cs2023c:Competence_Systems6
+      a ontoksd:Competence ;
+      rdfs:label "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution"@en ;
+      skos:prefLabel "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution"@en ;
+      skos:definition "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution."@en ;
+      rdfs:comment "Competence derived from the CS2023 Systems Competency Area, Task Systems6. The competence is specified through explicit KnowledgeSkill pairs and the desirable professional dispositions associated with the task."@en ;
+      dcterms:identifier "Systems6"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Systems6 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Systems6_OS_Purpose_1_Apply ,
+          cs2023c:KS_Systems6_OS_Principles_1_Apply ,
+          cs2023c:KS_Systems6_OS_Concurrency_1_Apply ,
+          cs2023c:KS_Systems6_OS_Scheduling_1_Apply ,
+          cs2023c:KS_Systems6_OS_Process_1_Apply ,
+          cs2023c:KS_Systems6_OS_Memory_1_Apply ,
+          cs2023c:KS_Systems6_OS_Protection_1_Apply ,
+          cs2023c:KS_Systems6_AR_Assembly_1_Apply ,
+          cs2023c:KS_Systems6_FPL_Scripting_1_Apply ;
+      ontoksd:hasDisposition
+          ontoksd:meticulous ,
+          ontoksd:persistent ,
+          ontoksd:proactive ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
+
+  #################################################################
+  # Specification-level Task
+  #################################################################
+
+  cs2023c:Task_Systems6
+      a ontoksd:Task ;
+      rdfs:label "Systems6 task"@en ;
+      skos:prefLabel "Systems6 task"@en ;
+      ontoksd:hasTaskStatement "Deploy an application component on an operating system/runtime/virtualized operating system/container."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Systems6. The task concerns deploying an application component on an operating system, runtime, virtualized operating system, or container, while identifying and mitigating deployment problems, automating environment setup, and establishing monitoring of component execution."@en ;
+      dcterms:identifier "Task_Systems6"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Systems6_ApplicationComponent ,
+          cs2023c:TaskComponent_Systems6_DeploymentEnvironment ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Systems6_Identify ,
+          cs2023c:TaskActivity_Systems6_Mitigate ,
+          cs2023c:TaskActivity_Systems6_Automate ,
+          cs2023c:TaskActivity_Systems6_SetUp ,
+          cs2023c:TaskActivity_Systems6_Monitor ,
+          cs2023c:TaskActivity_Systems6_Deploy ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Systems6_ExecutionEnvironment ,
+          cs2023c:TaskConstraint_Systems6_ComponentExecutionMonitoring .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Systems6_ApplicationComponent
+      a ontoksd:TaskComponent ;
+      rdfs:label "application component"@en ;
+      skos:prefLabel "application component"@en ;
+      rdfs:comment "Task component corresponding to the software component to be deployed and monitored."@en .
+
+  cs2023c:TaskComponent_Systems6_DeploymentEnvironment
+      a ontoksd:TaskComponent ;
+      rdfs:label "deployment environment"@en ;
+      skos:prefLabel "deployment environment"@en ;
+      rdfs:comment "Task component corresponding to the operating system, runtime, virtualized operating system, or container in which the application component is deployed."@en .
+
+  cs2023c:TaskActivity_Systems6_Identify
+      a ontoksd:TaskActivity ;
+      rdfs:label "identify"@en ;
+      skos:prefLabel "identify"@en ;
+      rdfs:comment "Task activity capturing the identification of potential deployment problems."@en .
+
+  cs2023c:TaskActivity_Systems6_Mitigate
+      a ontoksd:TaskActivity ;
+      rdfs:label "mitigate"@en ;
+      skos:prefLabel "mitigate"@en ;
+      rdfs:comment "Task activity capturing the mitigation of deployment-related problems and risks."@en .
+
+  cs2023c:TaskActivity_Systems6_Automate
+      a ontoksd:TaskActivity ;
+      rdfs:label "automate"@en ;
+      skos:prefLabel "automate"@en ;
+      rdfs:comment "Task activity capturing the automation of deployment environment setup."@en .
+
+  cs2023c:TaskActivity_Systems6_SetUp
+      a ontoksd:TaskActivity ;
+      rdfs:label "set up"@en ;
+      skos:prefLabel "set up"@en ;
+      rdfs:comment "Task activity capturing the setup of the deployment environment and execution monitoring."@en .
+
+  cs2023c:TaskActivity_Systems6_Monitor
+      a ontoksd:TaskActivity ;
+      rdfs:label "monitor"@en ;
+      skos:prefLabel "monitor"@en ;
+      rdfs:comment "Task activity capturing the establishment of monitoring for component execution."@en .
+
+  cs2023c:TaskActivity_Systems6_Deploy
+      a ontoksd:TaskActivity ;
+      rdfs:label "deploy"@en ;
+      skos:prefLabel "deploy"@en ;
+      rdfs:comment "Task activity capturing the deployment of the application component in the target execution environment."@en .
+
+  cs2023c:TaskConstraint_Systems6_ExecutionEnvironment
+      a ontoksd:TaskConstraint ;
+      rdfs:label "on an operating system/runtime/virtualized operating system/container"@en ;
+      skos:prefLabel "on an operating system/runtime/virtualized operating system/container"@en ;
+      rdfs:comment "Task constraint stating that deployment must be performed in an execution environment such as an operating system, runtime, virtualized operating system, or container."@en .
+
+  cs2023c:TaskConstraint_Systems6_ComponentExecutionMonitoring
+      a ontoksd:TaskConstraint ;
+      rdfs:label "with monitoring of component execution"@en ;
+      skos:prefLabel "with monitoring of component execution"@en ;
+      rdfs:comment "Task constraint stating that the deployed component must have its execution monitored appropriately."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Systems6_OS_Purpose_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Purpose × Apply"@en ;
+      skos:prefLabel "OS-Purpose × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Purpose knowledge with the CS2023 skill level Apply in deployment planning and execution."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Purpose_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_OS_Principles_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Principles × Apply"@en ;
+      skos:prefLabel "OS-Principles × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Principles knowledge with the CS2023 skill level Apply in configuring and operating deployment environments."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Principles_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_OS_Concurrency_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Concurrency × Apply"@en ;
+      skos:prefLabel "OS-Concurrency × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Concurrency knowledge with the CS2023 skill level Apply in handling concurrent execution issues during deployment and monitoring."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Concurrency_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_OS_Scheduling_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Scheduling × Apply"@en ;
+      skos:prefLabel "OS-Scheduling × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Scheduling knowledge with the CS2023 skill level Apply in understanding and managing execution behavior in the deployment environment."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Scheduling_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_OS_Process_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Process × Apply"@en ;
+      skos:prefLabel "OS-Process × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Process knowledge with the CS2023 skill level Apply in deploying and supervising application components as executing processes."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Process_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_OS_Memory_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Memory × Apply"@en ;
+      skos:prefLabel "OS-Memory × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Memory knowledge with the CS2023 skill level Apply in managing deployment and execution issues related to memory use."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Memory_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_OS_Protection_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Protection × Apply"@en ;
+      skos:prefLabel "OS-Protection × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates OS-Protection knowledge with the CS2023 skill level Apply in configuring secure and controlled deployment environments."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Protection_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_AR_Assembly_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AR-Assembly × Apply"@en ;
+      skos:prefLabel "AR-Assembly × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates AR-Assembly knowledge with the CS2023 skill level Apply in understanding lower-level execution and environment dependencies relevant to deployment."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AR_Assembly_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
+  cs2023c:KS_Systems6_FPL_Scripting_1_Apply
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "FPL-Scripting × Apply"@en ;
+      skos:prefLabel "FPL-Scripting × Apply"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Systems6. It associates FPL-Scripting knowledge with the CS2023 skill level Apply in automating deployment environment setup and operational procedures."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_FPL_Scripting_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Apply .
+
 }
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:OS-Purpose     ontoksd:cs2023ApplySkill)
-    (cs2023:OS-Principles  ontoksd:cs2023ApplySkill)
-    (cs2023:OS-Concurrency ontoksd:cs2023ApplySkill)
-    (cs2023:OS-Scheduling  ontoksd:cs2023ApplySkill)
-    (cs2023:OS-Process     ontoksd:cs2023ApplySkill)
-    (cs2023:OS-Memory      ontoksd:cs2023ApplySkill)
-    (cs2023:OS-Protection  ontoksd:cs2023ApplySkill)
-    (cs2023:AR-Assembly    ontoksd:cs2023ApplySkill)
-    (cs2023:FPL-Scripting  ontoksd:cs2023ApplySkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
-
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Systems6 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Deploy an application component"@en ;
-    dcterms:description "Identify and mitigate deployment problems, automate setup, and monitor component execution."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Systems6"@en ;
-    ontoksd:hasDisposition ontoksd:meticulous ,
-                           ontoksd:persistent ,
-                           ontoksd:proactive ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
-
-
-############# VERBOS ################
-
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:OS-Purpose     ontoksd:cs2023ApplySkill bloom:apply)
-    (cs2023:OS-Principles  ontoksd:cs2023ApplySkill bloom:implement)
-    (cs2023:OS-Concurrency ontoksd:cs2023ApplySkill bloom:configure)
-    (cs2023:OS-Scheduling  ontoksd:cs2023ApplySkill bloom:manage)
-    (cs2023:OS-Process     ontoksd:cs2023ApplySkill bloom:monitor)
-    (cs2023:OS-Memory      ontoksd:cs2023ApplySkill bloom:allocate)
-    (cs2023:OS-Protection  ontoksd:cs2023ApplySkill bloom:ensure)
-    (cs2023:AR-Assembly    ontoksd:cs2023ApplySkill bloom:automate)
-    (cs2023:FPL-Scripting  ontoksd:cs2023ApplySkill bloom:script)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
-}
-

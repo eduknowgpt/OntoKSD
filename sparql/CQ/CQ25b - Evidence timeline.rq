@@ -1,0 +1,27 @@
+# This query retrieves dated evidence instances associated with evidenced competence records. It returns each EvidencedCompetence, the supporting evidence, and the dates at which the evidence was generated or validated. Thus, the query demonstrates that OntoKSD can trace competence demonstration over time through dated evidence instances.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidencedCompetence
+  ?evidencedCompetenceLabel
+  ?competence
+  ?competenceLabel
+  ?evidence
+  ?evidenceLabel
+  ?generatedAt
+  ?validatedAt
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:refersToCompetence ?competence ;
+                       ontoksd:supportedByEvidence ?evidence .
+
+  OPTIONAL { ?evidence ontoksd:generatedAt ?generatedAt . }
+  OPTIONAL { ?evidence ontoksd:validatedAt ?validatedAt . }
+
+  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+}
+ORDER BY ?competenceLabel ?generatedAt ?validatedAt ?evidenceLabel

@@ -1,0 +1,19 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?profile ?competence ?requiredLevel ?requiredPos ?evidencedLevel ?evidencedPos
+WHERE {
+  ?ccs a ontoksd:CourseCompetenceSpecification ;
+       ontoksd:mediatesCourseCompetence ?competence ;
+       ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
+
+  ?requiredLevel ontoksd:hasOrdinalPosition ?requiredPos .
+
+  ?ec a ontoksd:EvidencedCompetence ;
+      ontoksd:isEvidencedCompetenceOf ?profile ;
+      ontoksd:refersToCompetence ?competence ;
+      ontoksd:hasProficiencyLevel ?evidencedLevel .
+
+  ?evidencedLevel ontoksd:hasOrdinalPosition ?evidencedPos .
+
+  FILTER(?evidencedPos < ?requiredPos)
+}

@@ -1,0 +1,22 @@
+# This query retrieves the proficiency level associated with evidenced competence records. It returns each EvidencedCompetence, the abstract competence to which it refers, and the ProficiencyLevel attributed to the contextualized competence demonstration. Thus, the query demonstrates that OntoKSD can represent proficiency interpretation at the level of learner-specific evidenced competence records rather than at the level of abstract competence specifications.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidencedCompetence
+  ?evidencedCompetenceLabel
+  ?competence
+  ?competenceLabel
+  ?proficiencyLevel
+  ?proficiencyLevelLabel
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:refersToCompetence ?competence ;
+                       ontoksd:hasProficiencyLevel ?proficiencyLevel .
+
+  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+}
+ORDER BY ?competenceLabel ?evidencedCompetenceLabel ?proficiencyLevelLabel

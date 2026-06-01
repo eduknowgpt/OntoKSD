@@ -1,0 +1,17 @@
+# This query retrieves the measurement scale used by proficiency schemes. It returns each ProficiencyScheme together with the Scale adopted for score representation, interval interpretation, or proficiency attribution. Thus, the query demonstrates that OntoKSD can explicitly separate proficiency interpretation schemes from the measurement scales on which they operate.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?proficiencyScheme
+  ?proficiencySchemeLabel
+  ?scale
+  ?scaleLabel
+WHERE {
+  ?proficiencyScheme ontoksd:usesScale ?scale .
+
+  OPTIONAL { ?proficiencyScheme rdfs:label ?proficiencySchemeLabel . }
+  OPTIONAL { ?scale rdfs:label ?scaleLabel . }
+}
+ORDER BY ?proficiencySchemeLabel ?scaleLabel

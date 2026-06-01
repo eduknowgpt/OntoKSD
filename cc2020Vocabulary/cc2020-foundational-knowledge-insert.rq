@@ -1,0 +1,196 @@
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX rdfs:       <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos:       <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl:        <http://www.w3.org/2002/07/owl#>
+PREFIX ontoksd:    <http://purl.org/ontoksd#>
+PREFIX dcterms:    <http://purl.org/dc/terms/>
+
+INSERT DATA {
+
+  <http://purl.org/cc2020/foundational>
+      a owl:Ontology ;
+      rdfs:label "CC2020 Foundational and Professional Knowledge Vocabulary"@en ;
+      dcterms:title "CC2020 Foundational and Professional Knowledge Vocabulary"@en ;
+      rdfs:comment """A simplified illustrative vocabulary of foundational and professional knowledge concepts derived from CC2020 Table 4.2.
+
+	  This ontology layer was created to support competence specification in OntoKSD and to provide a reusable knowledge base for the Competency Specification Process (CSP). The represented items are modeled both as SKOS concepts and as OntoKSD Knowledge individuals in order to support semantic organization and direct reuse in competence specification, especially in KnowledgeSkill pairings.
+
+	  This layer is not intended as a full curricular Body of Knowledge reconstruction. Rather, it provides a pragmatic and reusable vocabulary of foundational and professional knowledge elements explicitly presented in CC2020 as part of the knowledge dimension of competency."""@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:FoundationalAndProfessionalKnowledgeScheme a skos:ConceptScheme ;
+      rdfs:label "Foundational and Professional Knowledge Areas"@en ;
+      skos:definition "The set of foundational and professional knowledge elements presented in CC2020 Table 4.2 as part of the knowledge dimension of competency."@en ;
+      skos:scopeNote "This scheme groups the foundational and professional knowledge elements explicitly identified in CC2020. In OntoKSD, these elements are modeled as reusable Knowledge individuals and SKOS concepts in order to support competence specification."@en ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:FoundationalKnowledgeCollection a skos:Collection ;
+      skos:prefLabel "Foundational Knowledge Elements"@en ;
+      skos:definition "The subset of CC2020 foundational and professional knowledge elements classified in OntoKSD as foundational knowledge."@en ;
+      skos:member
+          cc2020found:AnalyticalThinking ,
+          cc2020found:MathematicsAndStatistics .
+
+  cc2020found:ProfessionalKnowledgeCollection a skos:Collection ;
+      skos:prefLabel "Professional Knowledge Elements"@en ;
+      skos:definition "The subset of CC2020 foundational and professional knowledge elements classified in OntoKSD as professional knowledge."@en ;
+      skos:member
+          cc2020found:Collaboration ,
+          cc2020found:EthicalPerspectives ,
+          cc2020found:MultiTaskPrioritizationAndManagement ,
+          cc2020found:OralCommunication ,
+          cc2020found:ProblemSolvingAndTroubleshooting ,
+          cc2020found:ProjectAndTaskOrganizationAndPlanning ,
+          cc2020found:QualityAssuranceControl ,
+          cc2020found:RelationshipManagement ,
+          cc2020found:ResearchAndSelfStarterLearner ,
+          cc2020found:TimeManagement ,
+          cc2020found:WrittenCommunication .
+
+  cc2020found:AnalyticalThinking a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Analytical and Critical Thinking"@en ;
+      skos:notation "AnalyticalThinking" ;
+      skos:altLabel "Critical Thinking"@en ;
+      skos:definition "A foundational knowledge element concerned with analyzing complex situations, breaking problems into manageable parts, and evaluating alternatives to support sound judgment and decision making."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:foundationalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:Collaboration a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Collaboration and Teamwork"@en ;
+      skos:notation "Collaboration" ;
+      skos:altLabel "Teamwork"@en ;
+      skos:definition "A professional knowledge element concerned with collaborating effectively with others, coordinating contributions, and supporting shared work toward common goals."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:EthicalPerspectives a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Ethical and Intercultural Perspectives"@en ;
+      skos:notation "EthicalPerspectives" ;
+      skos:altLabel "Intercultural Perspectives"@en ;
+      skos:definition "A professional knowledge element concerned with ethical and intercultural perspectives used to analyze problems in light of human values, social responsibility, and multiple viewpoints."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:MathematicsAndStatistics a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Mathematics and Statistics"@en ;
+      skos:notation "MathematicsAndStatistics" ;
+      skos:definition "A foundational knowledge element concerned with mathematical reasoning and statistical methods used to represent, analyze, and interpret quantitative information."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:foundationalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:MultiTaskPrioritizationAndManagement a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Multi-Task Prioritization and Management"@en ;
+      skos:notation "MultiTaskPrioritizationAndManagement" ;
+      skos:altLabel "Multitasking"@en ;
+      skos:altLabel "Task Prioritization"@en ;
+      skos:altLabel "Task Management"@en ;
+      skos:definition "A professional knowledge element concerned with prioritizing, coordinating, and managing multiple tasks effectively according to relevance, urgency, and available resources."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:OralCommunication a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Oral Communication and Presentation"@en ;
+      skos:notation "OralCommunication" ;
+      skos:altLabel "Presentation"@en ;
+      skos:definition "A professional knowledge element concerned with presenting ideas orally in a clear, structured, and audience-aware way, including the effective use of supporting materials when appropriate."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:ProblemSolvingAndTroubleshooting a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Problem Solving and Troubleshooting"@en ;
+      skos:notation "ProblemSolvingAndTroubleshooting" ;
+      skos:altLabel "Problem Solving"@en ;
+      skos:altLabel "Troubleshooting"@en ;
+      skos:definition "A professional knowledge element concerned with identifying, analyzing, and resolving problems through systematic reasoning, troubleshooting, and solution-oriented decision making."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:ProjectAndTaskOrganizationAndPlanning a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Project and Task Organization and Planning"@en ;
+      skos:notation "ProjectAndTaskOrganizationAndPlanning" ;
+      skos:altLabel "Project Organization"@en ;
+      skos:altLabel "Task Planning"@en ;
+      skos:definition "A professional knowledge element concerned with organizing, planning, and coordinating project and task structures in order to support effective execution and successful outcomes."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:QualityAssuranceControl a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Quality Assurance / Control"@en ;
+      skos:notation "QualityAssuranceControl" ;
+      skos:altLabel "Quality Control"@en ;
+      skos:altLabel "Quality Assurance"@en ;
+      skos:definition "A professional knowledge element concerned with quality assurance and control practices used to define standards, identify defects, and improve the reliability of processes and outputs."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:RelationshipManagement a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Relationship Management"@en ;
+      skos:notation "RelationshipManagement" ;
+      skos:definition "A professional knowledge element concerned with establishing, maintaining, and improving productive relationships with clients, collaborators, stakeholders, or partner organizations."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:ResearchAndSelfStarterLearner a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Research and Self-Starter/Learner"@en ;
+      skos:notation "ResearchAndSelfStarterLearner" ;
+      skos:altLabel "Self-Learning"@en ;
+      skos:altLabel "Self-Starter/Learner"@en ;
+      skos:definition "A professional knowledge element concerned with self-directed learning, initiative in pursuing new knowledge, and the capacity to begin and sustain inquiry or work with limited external prompting."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:TimeManagement a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Time Management"@en ;
+      skos:notation "TimeManagement" ;
+      skos:definition "A professional knowledge element concerned with planning, allocating, and using time effectively in order to work productively and meet commitments."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+  cc2020found:WrittenCommunication a skos:Concept , ontoksd:Knowledge ;
+      skos:prefLabel "Written Communication"@en ;
+      skos:notation "WrittenCommunication" ;
+      skos:definition "A professional knowledge element concerned with communicating effectively in written form for professional, academic, and organizational purposes."@en ;
+      skos:scopeNote "In CC2020, this element belongs to the foundational and professional knowledge dimension of competency."@en ;
+      rdfs:comment "A foundational or professional knowledge concept derived from CC2020 Table 4.2 and modeled in OntoKSD as both a SKOS concept and a reusable Knowledge individual for competence specification."@en ;
+      skos:inScheme cc2020found:FoundationalAndProfessionalKnowledgeScheme ;
+      ontoksd:hasKnowledgeType ontoksd:professionalKnowledgeType ;
+      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> .
+
+}

@@ -1,0 +1,37 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C05 a ontoksd:Competence ;
+      rdfs:label "Write a Technical Report"@en ;
+      dcterms:identifier "C05"^^xsd:string ;
+      rdfs:comment "Atomic competence concerned with producing clear, structured, and technically accurate reports that document computational problem-solving processes, decisions, modeling choices, implementation details, and validation results using appropriate technical language and standard report conventions."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:transversalCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C05_WrittenCommunication_Applying ;
+      ontoksd:hasDisposition ontoksd:collaborative ,
+                             ontoksd:meticulous ,
+                             ontoksd:responsible .
+
+  ontoksd:KS_C05_WrittenCommunication_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C05 KS Pair — Written Communication × Applying"@en ;
+      dcterms:identifier "C05-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying written communication knowledge to document, present, write, revise, and clarify technical content in a structured report grounded in evidence and logical justification."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:WrittenCommunication ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:document ,
+                                             bloom:present ,
+                                             bloom:write ,
+                                             bloom:revise .
+
+}

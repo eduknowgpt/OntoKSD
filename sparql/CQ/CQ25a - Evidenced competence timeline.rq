@@ -1,0 +1,25 @@
+# This query retrieves dated evidenced competence records over time. It returns each EvidencedCompetence, the abstract competence to which it refers, the evidence supporting it, and the date at which the evidenced competence record was established. Thus, the query demonstrates that OntoKSD can trace the temporal evolution of learner-specific competence demonstrations.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?evidencedCompetence
+  ?evidencedCompetenceLabel
+  ?evidencedAt
+  ?evidence
+  ?evidenceLabel
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:refersToCompetence ?competence ;
+                       ontoksd:evidencedAt ?evidencedAt .
+
+  OPTIONAL { ?evidencedCompetence ontoksd:supportedByEvidence ?evidence . }
+
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+}
+ORDER BY ?competenceLabel ?evidencedAt ?evidencedCompetenceLabel

@@ -1,0 +1,76 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <http://purl.org/cs2023#>
+PREFIX cs2023k:   <http://purl.org/cs2023/knowledge#>
+
+INSERT DATA {
+
+  ontoksd:C13_01 a ontoksd:Competence ;
+      rdfs:label "Interpret formal grammar-based rules"@en ;
+      dcterms:identifier "C13.01"^^xsd:string ;
+      rdfs:comment "Atomic specialized competence concerned with understanding, interpreting, and analytically explaining formal grammar-based rule systems, especially context-free grammars, in relation to structured behavior, admissible sequences, and corresponding automaton models with memory."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+      ontoksd:isSpecializationOf ontoksd:C13_InterpretRuleBasedNotation ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C13_01_ContextFreeGrammars_Understanding ,
+                                ontoksd:KS_C13_01_PushdownAutomata_Understanding ,
+                                ontoksd:KS_C13_01_FormalReasoning_Analyzing ;
+      ontoksd:hasDisposition ontoksd:meticulous ,
+                             ontoksd:responsible ,
+                             ontoksd:investigative ,
+                             ontoksd:collaborative .
+
+  ontoksd:KS_C13_01_ContextFreeGrammars_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C13.01 KS Pair — Context-Free Grammars × Understanding"@en ;
+      dcterms:identifier "C13.01-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding context-free grammars in order to interpret how production rules define hierarchical or recursive structures and constrain admissible strings, behaviors, or event sequences."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_4 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_4 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:interpret ,
+                                             bloom:explain ,
+                                             bloom:recognize .
+
+  ontoksd:KS_C13_01_PushdownAutomata_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C13.01 KS Pair — Pushdown Automata × Understanding"@en ;
+      dcterms:identifier "C13.01-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding Pushdown Automata as recognizers of context-free grammars, particularly the role of stack-based memory, state transitions, and recognition behavior in explaining context-free structures."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_6 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_6 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:relate ,
+                                             bloom:explain ,
+                                             bloom:recognize .
+
+  ontoksd:KS_C13_01_FormalReasoning_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C13.01 KS Pair — Formal Reasoning in Computation Theory × Analyzing"@en ;
+      dcterms:identifier "C13.01-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing formal rule systems to identify structural properties, expressive limitations, possible ambiguities, and the adequacy of grammar-based specifications for explaining and validating system behavior."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C13_01_FormalReasoningInComputationTheory ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:analyze ,
+                                             bloom:evaluate ,
+                                             bloom:validate .
+
+  ontoksd:Knowledge_C13_01_FormalReasoningInComputationTheory a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Formal Reasoning in Computation Theory"@en ;
+      skos:prefLabel "Formal Reasoning in Computation Theory"@en ;
+      skos:definition "Computing-specific knowledge concerned with the use of formal derivations, symbolic rules, and automaton-based explanations to analyze, justify, and validate behavior in computation-theoretic models."@en ;
+      skos:scopeNote "Local OntoKSD knowledge individual created for C13.01 because the specialized competency explicitly requires reasoning about the joint explanatory role of grammars, derivations, and automaton transitions, which is more specific than the stabilized general competence C13."@en ;
+      dcterms:identifier "C13.01-K-FormalReasoningInComputationTheory"^^xsd:string ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  cs2023k:Knowledge_AL_Models_4
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  cs2023k:Knowledge_AL_Models_6
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+}

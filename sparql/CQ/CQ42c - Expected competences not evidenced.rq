@@ -1,0 +1,28 @@
+# This query identifies competence gaps caused by curricular expectations for which no evidenced competence record exists in a learner profile.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?profile ?profileLabel
+  ?course ?courseLabel
+  ?competence ?competenceLabel
+  ?requiredLevel ?requiredLevelLabel
+WHERE {
+  ?profile a ontoksd:LearnerProfile .
+
+  ?courseSpec ontoksd:mediatesCourse ?course ;
+              ontoksd:mediatesCourseCompetence ?competence ;
+              ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
+
+  FILTER NOT EXISTS {
+    ?evidencedCompetence ontoksd:isEvidencedCompetenceOf ?profile ;
+                         ontoksd:refersToCompetence ?competence .
+  }
+
+  OPTIONAL { ?profile rdfs:label ?profileLabel . }
+  OPTIONAL { ?course rdfs:label ?courseLabel . }
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+}
+ORDER BY ?profileLabel ?courseLabel ?competenceLabel

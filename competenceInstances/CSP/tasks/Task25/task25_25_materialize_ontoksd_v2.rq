@@ -1,0 +1,404 @@
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX dc:        <http://purl.org/dc/elements/1.1/>
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <https://csed.acm.org/knowledge-area/>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+
+  #################################################################
+  # Acquisition context
+  #################################################################
+
+  ontoksd:AC_Task25.25 a ontoksd:AcquisitionContext ;
+    rdfs:label "Acquisition context for Task25.25 — Factorial Computation Using Functions and Iteration Structures"@en ;
+    rdfs:comment "Pedagogically relevant situation for Task25.25 in an introductory programming course within an Integrated Technical Program in Informatics. The task is typically used after initial exposure to variables, conditionals, loops, and functions."@en .
+
+  #################################################################
+  # Learning task
+  #################################################################
+
+  ontoksd:Task25.25 a ontoksd:LearningTask ;
+    rdfs:label "Task25.25 — Factorial Computation Using Functions and Iteration Structures"@en ;
+    dcterms:title "Task25.25 — Factorial Computation Using Functions and Iteration Structures"@en ;
+    dc:description "Learning task in which learners develop a program that reads a number of inputs, processes multiple integer values, computes the factorial of each value using a dedicated function, validates input values, and displays formatted results."@en ;
+    rdfs:comment "Although the uploaded CSP-Report internally refers to TASK25.7, this materialization follows the user's request for Task25.25. The mathematical concept of factorial is represented as prerequisite support, while the target competencies focus on computational structure, functions, iteration, validation, testing, and explanation."@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task25.25 ;
+    ontoksd:hasCompetenceRelator ontoksd:CA_Task25.25_CT25.25.1 ,
+                                 ontoksd:CA_Task25.25_CT25.25.2 ,
+                                 ontoksd:CA_Task25.25_CT25.25.3 ,
+                                 ontoksd:CA_Task25.25_CT25.25.4 ,
+                                 ontoksd:CA_Task25.25_CT25.25.5 ,
+                                 ontoksd:CA_Task25.25_CT25.25.6 .
+
+  #################################################################
+  # Prerequisite knowledge base
+  #################################################################
+
+  ontoksd:PrerequisiteKnowledge_Task25.25_Factorial a ontoksd:Knowledge ;
+    rdfs:label "Prerequisite knowledge for Task25.25 — Factorial"@en ;
+    skos:prefLabel "Factorial as prerequisite knowledge"@en ;
+    rdfs:comment "Prerequisite knowledge used to support the task context: concept of factorial, multiplicative sequences, and basic arithmetic operations. This knowledge is not modeled as a target competence in Task25.25 because the CSP-Report explicitly states that the competency specification focuses on computational structure and implementation."@en .
+
+  #################################################################
+  # Competence specifications
+  #################################################################
+
+  ontoksd:CT25.25.1 a ontoksd:Competence ;
+    rdfs:label "CT25.25.1 — Implement mathematical procedures as reusable functions"@en ;
+    dcterms:title "Implement mathematical procedures as reusable functions"@en ;
+    dc:description "This competence involves implementing a computational procedure as a reusable function with defined inputs and outputs."@en ;
+    rdfs:comment "In Task25.25, this competence is demonstrated when learners implement a factorial function that receives a value and returns the computed result."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:systematic , ontoksd:meticulous ;
+    ontoksd:hasPrerequisiteKnowledge ontoksd:PrerequisiteKnowledge_Task25.25_Factorial ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.25.1_Functions_Applying ,
+                              ontoksd:KS_CT25.25.1_ParametersReturn_Applying ,
+                              ontoksd:KS_CT25.25.1_Modularization_Analyzing .
+
+  ontoksd:CT25.25.2 a ontoksd:Competence ;
+    rdfs:label "CT25.25.2 — Process multiple inputs using iterative control structures"@en ;
+    dcterms:title "Process multiple inputs using iterative control structures"@en ;
+    dc:description "This competence involves processing collections of input values using loop structures."@en ;
+    rdfs:comment "In Task25.25, this competence is demonstrated when learners iterate over n inputs and apply the factorial function to each value."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:persistent ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.25.2_Loops_Applying ,
+                              ontoksd:KS_CT25.25.2_SequentialExecution_Applying ,
+                              ontoksd:KS_CT25.25.2_InputProcessing_Applying .
+
+  ontoksd:CT25.25.3 a ontoksd:Competence ;
+    rdfs:label "CT25.25.3 — Validate input data using conditional logic"@en ;
+    dcterms:title "Validate input data using conditional logic"@en ;
+    dc:description "This competence involves verifying that input values satisfy constraints and handling invalid inputs appropriately."@en ;
+    rdfs:comment "In Task25.25, this competence is demonstrated when learners ensure that factorial is computed only for non-negative integers and invalid values are rejected or handled."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:responsible , ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.25.3_Conditionals_Applying ,
+                              ontoksd:KS_CT25.25.3_InputValidation_Applying ,
+                              ontoksd:KS_CT25.25.3_ErrorHandling_Analyzing .
+
+  ontoksd:CT25.25.4 a ontoksd:Competence ;
+    rdfs:label "CT25.25.4 — Integrate functions and control flow in a complete program"@en ;
+    dcterms:title "Integrate functions and control flow in a complete program"@en ;
+    dc:description "This competence involves coordinating multiple program components — input, processing, function calls, and output — into a coherent solution."@en ;
+    rdfs:comment "In Task25.25, this competence is demonstrated when learners coordinate input reading, iteration over values, validation, function calls, factorial computation, and formatted output in a complete program."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.25.4_ProgramStructure_Applying ,
+                              ontoksd:KS_CT25.25.4_FunctionCalls_Applying ,
+                              ontoksd:KS_CT25.25.4_ControlFlow_Analyzing .
+
+  ontoksd:CT25.25.5 a ontoksd:Competence ;
+    rdfs:label "CT25.25.5 — Test and verify program correctness across input scenarios"@en ;
+    dcterms:title "Test and verify program correctness across input scenarios"@en ;
+    dc:description "This competence involves executing the program with different inputs and verifying correctness."@en ;
+    rdfs:comment "In Task25.25, this competence is demonstrated when learners test valid and invalid inputs, verify factorial results, and inspect output formatting and validation behavior."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.25.5_Testing_Applying ,
+                              ontoksd:KS_CT25.25.5_CaseAnalysis_Analyzing ,
+                              ontoksd:KS_CT25.25.5_OutputValidation_Applying .
+
+  ontoksd:CT25.25.6 a ontoksd:Competence ;
+    rdfs:label "CT25.25.6 — Explain computational logic and program structure"@en ;
+    dcterms:title "Explain computational logic and program structure"@en ;
+    dc:description "This competence involves explaining how the program works, including function behavior and execution flow."@en ;
+    rdfs:comment "In Task25.25, this competence is demonstrated when learners explain the factorial function, the loop over multiple inputs, validation rules, function calls, and the overall modular organization of the program."@en ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasCompetenceScope ontoksd:professionalCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:communicative , ontoksd:reflective ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_CT25.25.6_AlgorithmExplanation_Understanding ,
+                              ontoksd:KS_CT25.25.6_ProgramStructure_Applying ,
+                              ontoksd:KS_CT25.25.6_LogicalReasoning_Applying .
+
+  #################################################################
+  # Knowledge-Skill relators
+  #################################################################
+
+  ontoksd:KS_CT25.25.1_Functions_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.1: Functions x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.1 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:implement , bloom:define , bloom:use .
+
+  ontoksd:KS_CT25.25.1_ParametersReturn_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.1: Parameters and return x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.1 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:pass , bloom:return , bloom:structure .
+
+  ontoksd:KS_CT25.25.1_Modularization_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.1: Modularization x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.1 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SE_Design_8 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SE_Design_8 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:separate , bloom:organize , bloom:reuse .
+
+  ontoksd:KS_CT25.25.2_Loops_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.2: Loops x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.2 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:iterate , bloom:repeat , bloom:process .
+
+  ontoksd:KS_CT25.25.2_SequentialExecution_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.2: Sequential execution x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.2 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:execute , bloom:traverse , bloom:control .
+
+  ontoksd:KS_CT25.25.2_InputProcessing_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.2: Input processing x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.2 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_4 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_4 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:read , bloom:handle , bloom:manage .
+
+  ontoksd:KS_CT25.25.3_Conditionals_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.3: Conditionals x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.3 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_FPL_Abstraction_12 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_FPL_Abstraction_12 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:check , bloom:evaluate , bloom:decide .
+
+  ontoksd:KS_CT25.25.3_InputValidation_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.3: Input validation x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.3 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_DevelopmentMethods_4 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_DevelopmentMethods_4 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:validate , bloom:reject , bloom:enforce .
+
+  ontoksd:KS_CT25.25.3_ErrorHandling_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.3: Error handling x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.3 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_DevelopmentMethods_4 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_DevelopmentMethods_4 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:detect , bloom:diagnose , bloom:respond .
+
+  ontoksd:KS_CT25.25.4_ProgramStructure_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.4: Program structure x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.4 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:organize , bloom:integrate , bloom:coordinate .
+
+  ontoksd:KS_CT25.25.4_FunctionCalls_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.4: Function calls x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.4 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:invoke , bloom:execute , bloom:manage .
+
+  ontoksd:KS_CT25.25.4_ControlFlow_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.4: Control flow x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.4 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_FPL_Abstraction_12 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_FPL_Abstraction_12 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:control , bloom:sequence , bloom:structure .
+
+  ontoksd:KS_CT25.25.5_Testing_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.5: Testing x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.5 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SE_Validation_3 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SE_Validation_3 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:test , bloom:run , bloom:verify .
+
+  ontoksd:KS_CT25.25.5_CaseAnalysis_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.5: Case analysis x Analyzing"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.5 ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:AnalyticalThinking ;
+    ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:compare , bloom:inspect , bloom:evaluate .
+
+  ontoksd:KS_CT25.25.5_OutputValidation_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.5: Output validation x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.5 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SE_Validation_3 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SE_Validation_3 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:check , bloom:confirm , bloom:validate .
+
+  ontoksd:KS_CT25.25.6_AlgorithmExplanation_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.6: Algorithm explanation x Understanding"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.6 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_PDC_Algorithms ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_PDC_Algorithms ;
+    ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain , bloom:describe , bloom:justify .
+
+  ontoksd:KS_CT25.25.6_ProgramStructure_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.6: Program structure x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.6 ;
+    ontoksd:hasKnowledgeComponent cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasCurricularKnowledgeConcept cs2023:Topic_SDF_Fundamentals_5 ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:describe , bloom:outline , bloom:present .
+
+  ontoksd:KS_CT25.25.6_LogicalReasoning_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "KS — CT25.25.6: Logical reasoning x Applying"@en ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CT25.25.6 ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasCurricularKnowledgeConcept cc2020found:AnalyticalThinking ;
+    ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:justify , bloom:support , bloom:demonstrate .
+
+  #################################################################
+  # Competence activations
+  #################################################################
+
+  ontoksd:CA_Task25.25_CT25.25.1 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.25.1 in Task25.25"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.25 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.25.1 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.25.1 is activated as a mandatory core constructive competence because learners must implement the factorial calculation as a dedicated reusable function."@en .
+
+  ontoksd:CA_Task25.25_CT25.25.2 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.25.2 in Task25.25"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.25 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.25.2 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.25.2 is activated as a mandatory core constructive competence because learners must process multiple input values through iterative control structures."@en .
+
+  ontoksd:CA_Task25.25_CT25.25.3 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.25.3 in Task25.25"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.25 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.25.3 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.25.3 is activated as a mandatory core analytical competence because learners must check constraints, distinguish valid from invalid cases, and handle invalid input values."@en .
+
+  ontoksd:CA_Task25.25_CT25.25.4 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.25.4 in Task25.25"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.25 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.25.4 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amConstructiveAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.25.4 is activated as a mandatory core constructive-analytical competence because the task requires integration of input, validation, function calls, iteration, computation, and output in a complete program."@en .
+
+  ontoksd:CA_Task25.25_CT25.25.5 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.25.5 in Task25.25"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.25 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.25.5 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.25.5 is activated as a mandatory core analytical competence because learners must test the program across valid and invalid input scenarios and verify correctness."@en .
+
+  ontoksd:CA_Task25.25_CT25.25.6 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of CT25.25.6 in Task25.25"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.25 ;
+    ontoksd:mediatesCompetence ontoksd:CT25.25.6 ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "CT25.25.6 is activated as a mandatory supporting justificatory competence because learners must explain the logic of the function, the iteration, the validation rules, and the overall program structure."@en .
+
+  #################################################################
+  # Assessment and evidence specification
+  #################################################################
+
+  ontoksd:Assessment_Task25.25 a ontoksd:Assessment ;
+    rdfs:label "Assessment specification for Task25.25"@en ;
+    dcterms:title "Assessment specification for Task25.25"@en ;
+    dc:description "Assessment specification for the source code, function implementation, execution outputs, test cases, and explanation of the factorial computation program associated with Task25.25."@en ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentType ;
+    rdfs:comment "The assessment design distinguishes artifact-level evidence from performance-level execution evidence and learner-level explanation. The factorial concept acts as prerequisite support, while the competence evidence concerns modularization, iteration, validation, integration, testing, and explanation."@en .
+
+  ontoksd:AssessmentOccurrence_Task25.25 a ontoksd:AssessmentOccurrence ;
+    rdfs:label "Assessment occurrence for Task25.25"@en ;
+    ontoksd:realizes ontoksd:Assessment_Task25.25 ;
+    ontoksd:occursInAcquisitionContext ontoksd:AC_Task25.25 ;
+    ontoksd:producesEvidence ontoksd:Evidence_Task25.25_SourceCode ,
+                             ontoksd:Evidence_Task25.25_FunctionImplementation ,
+                             ontoksd:Evidence_Task25.25_ExecutionOutputs ,
+                             ontoksd:Evidence_Task25.25_TestCases ,
+                             ontoksd:Evidence_Task25.25_Explanation ;
+    rdfs:comment "Concrete assessment occurrence that produces evidence from source code, the factorial function implementation, execution results, test cases, validation behavior, and learner explanation of computational logic and modular program structure."@en .
+
+  ontoksd:Evidence_Task25.25_SourceCode a ontoksd:Evidence ;
+    rdfs:label "Task25.25 source code evidence"@en ;
+    ontoksd:hasEvidenceType ontoksd:SourceCode ;
+    rdfs:comment "Artifact-level evidence consisting of the implemented program, including input reading, iteration, validation, function calls, and formatted output."@en .
+
+  ontoksd:Evidence_Task25.25_FunctionImplementation a ontoksd:Evidence ;
+    rdfs:label "Task25.25 factorial function implementation evidence"@en ;
+    ontoksd:hasEvidenceType ontoksd:SourceCode ;
+    rdfs:comment "Artifact-level evidence consisting specifically of the dedicated factorial function, including its parameter, return behavior, repeated multiplication logic, and reuse across multiple inputs."@en .
+
+  ontoksd:Evidence_Task25.25_ExecutionOutputs a ontoksd:Evidence ;
+    rdfs:label "Task25.25 execution outputs evidence"@en ;
+    ontoksd:hasEvidenceType ontoksd:ProgramExecution ;
+    rdfs:comment "Performance-level evidence showing correct factorial computation, correct iteration over multiple inputs, correct validation behavior, and formatted output."@en .
+
+  ontoksd:Evidence_Task25.25_TestCases a ontoksd:Evidence ;
+    rdfs:label "Task25.25 test cases evidence"@en ;
+    ontoksd:hasEvidenceType ontoksd:TestCaseSet ;
+    rdfs:comment "Artifact-level and performance-oriented evidence consisting of test cases including valid and invalid inputs, expected factorial results, and validation cases such as negative values."@en .
+
+  ontoksd:Evidence_Task25.25_Explanation a ontoksd:Evidence ;
+    rdfs:label "Task25.25 explanation of computational logic evidence"@en ;
+    ontoksd:hasEvidenceType ontoksd:OralExplanation ;
+    rdfs:comment "Learner-level evidence consisting of the learner's explanation and justification of the factorial function, function calls, loop behavior, validation rules, output formatting, and modular program structure."@en .
+
+}

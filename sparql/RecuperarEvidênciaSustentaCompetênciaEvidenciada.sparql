@@ -1,0 +1,11 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?evidencedCompetence ?evidence ?evidenceType ?occurrence
+WHERE {
+  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
+                       ontoksd:supportedByEvidence ?evidence .
+
+  ?evidence a ontoksd:Evidence ;
+            ontoksd:hasEvidenceType ?evidenceType ;
+            ontoksd:evidenceBasedOn ?occurrence .
+}

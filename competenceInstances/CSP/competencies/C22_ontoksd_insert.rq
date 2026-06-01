@@ -1,0 +1,49 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/bloom#>
+
+INSERT DATA {
+
+  #################################################################
+  # Competency C22
+  #################################################################
+
+  ontoksd:C22 a ontoksd:Competence ;
+    rdfs:label "C22 — Define Context-Free Grammars for Pushdown Automata"@en ;
+	dcterms:identifier "C22"^^xsd:string ;
+    dcterms:title "Define Context-Free Grammars for Pushdown Automata"@en ;
+    dc:description "Competency involving the ability to define and apply context-free grammars that accurately represent the languages recognized by pushdown automata, including the construction, interpretation, translation, and validation of equivalent representations."@en ;
+    rdfs:comment "This competency involves the ability to define and apply context-free grammars that accurately represent the languages recognized by pushdown automata. Learners must understand the formal correspondence between pushdown automata and context-free grammars and use this relationship to construct, interpret, and validate equivalent representations. Learners demonstrate this competency by analyzing pushdown automata to identify the structure of the language recognized, constructing context-free grammars that generate the same language, translating between pushdown automata and context-free grammars using standard formal notation, and verifying representational equivalence through systematic testing or formal reasoning."@en ;
+    ontoksd:hasDisposition ontoksd:Investigative ,
+                           ontoksd:Meticulous ,
+                           ontoksd:Responsible ,
+                           ontoksd:Proactive ;
+    ontoksd:hasKnowledgeSkill ontoksd:C22_KS1 ,
+                              ontoksd:C22_KS2 ,
+                              ontoksd:C22_KS3 .
+
+  ontoksd:C22_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "C22 KS1 — Pushdown Automata analyzed"@en ;
+    ontoksd:hasKnowledgeComponent ontoksd:PushdownAutomata ;
+    ontoksd:hasRequiredSkillLevel bloom:Analyze ;
+    rdfs:comment "Knowledge-skill pair for analyzing pushdown automata in order to identify, analyze, and abstract stack-based language structure."@en .
+
+  ontoksd:C22_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "C22 KS2 — Context-Free Grammars applied"@en ;
+    ontoksd:hasKnowledgeComponent ontoksd:ContextFreeGrammars ;
+    ontoksd:hasRequiredSkillLevel bloom:Apply ;
+    rdfs:comment "Knowledge-skill pair for constructing, expressing, and translating context-free grammars equivalent to pushdown automata."@en .
+
+  ontoksd:C22_KS3 a ontoksd:KnowledgeSkill ;
+    rdfs:label "C22 KS3 — Analytical and Critical Thinking applied"@en ;
+    ontoksd:hasKnowledgeComponent ontoksd:AnalyticalAndCriticalThinking ;
+    ontoksd:hasRequiredSkillLevel bloom:Apply ;
+    rdfs:comment "Knowledge-skill pair for reasoning about equivalence, validating correctness, and justifying formal representations relating pushdown automata and context-free grammars."@en .
+
+}

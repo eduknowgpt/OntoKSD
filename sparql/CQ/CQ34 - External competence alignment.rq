@@ -1,0 +1,30 @@
+# This query retrieves external competences aligned with OntoKSD competences. It returns the internal competence, the external competence, the qualified alignment relation, the alignment type, and the justification when available. Thus, the query demonstrates that OntoKSD can represent interoperability links with external curricular frameworks such as BNCC through both direct and qualified alignment structures.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?competence
+  ?competenceLabel
+  ?externalCompetence
+  ?externalCompetenceLabel
+  ?externalNotation
+  ?alignment
+  ?alignmentType
+  ?alignmentTypeLabel
+  ?alignmentJustification
+WHERE {
+  ?alignment a ontoksd:ExternalCompetenceAlignment ;
+             ontoksd:mediatesInternalCompetence ?competence ;
+             ontoksd:mediatesExternalCompetence ?externalCompetence .
+
+  OPTIONAL { ?alignment ontoksd:hasAlignmentType ?alignmentType . }
+  OPTIONAL { ?alignment ontoksd:hasAlignmentJustification ?alignmentJustification . }
+
+  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
+  OPTIONAL { ?externalCompetence rdfs:label ?externalCompetenceLabel . }
+  OPTIONAL { ?externalCompetence skos:notation ?externalNotation . }
+  OPTIONAL { ?alignmentType rdfs:label ?alignmentTypeLabel . }
+}
+ORDER BY ?competenceLabel ?externalNotation ?externalCompetenceLabel

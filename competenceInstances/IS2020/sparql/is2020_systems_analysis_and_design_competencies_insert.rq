@@ -1,0 +1,1065 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020:   <http://purl.org/is2020#>
+PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
+PREFIX is2020c:  <http://purl.org/is2020/competency#>
+PREFIX bloom:    <http://purl.org/edu/bloom#>
+PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:      <http://www.w3.org/2002/07/owl#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:     <http://www.w3.org/ns/prov#>
+
+INSERT DATA {
+
+  #################################################################
+  # Source markers and scheme
+  #################################################################
+
+  is2020:IS2020Document
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 report"@en ;
+      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+
+  <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area>
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Systems Analysis and Design competency area"@en ;
+      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.1 Competency Area – Systems Analysis and Design."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020:IS2020SpecificationPattern
+      a owl:NamedIndividual ;
+      rdfs:label "IS2020 Specification Pattern"@en ;
+      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+
+  is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme
+      a skos:ConceptScheme ;
+      rdfs:label "IS2020 Systems Analysis and Design Knowledge Scheme"@en ;
+      skos:prefLabel "IS2020 Systems Analysis and Design Knowledge Scheme"@en ;
+      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Systems Analysis and Design competency area."@en ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Knowledge elements
+  #################################################################
+
+  is2020k:PurposeOfSystemsAnalysis
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Purpose of systems analysis"@en ;
+      skos:prefLabel "Purpose of systems analysis"@en ;
+      skos:definition "Knowledge of the purpose of systems analysis, including what the system should do."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:PurposeOfDesign
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Purpose of design"@en ;
+      skos:prefLabel "Purpose of design"@en ;
+      skos:definition "Knowledge of the purpose of design, including how to accomplish the objective of the system."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WhatIsASystem
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "What is a system"@en ;
+      skos:prefLabel "What is a system"@en ;
+      skos:definition "Knowledge of what a system is in the context of systems analysis and design."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ValueOfFormalizedStepByStepApproach
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Need for and value of a formalized step-by-step approach to analysis, design, and implementation"@en ;
+      skos:prefLabel "Need for and value of a formalized step-by-step approach to analysis, design, and implementation"@en ;
+      skos:definition "Knowledge of the need for and value of a formalized step-by-step approach to the analysis, design, and implementation of computer information systems."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectDefinitionAndAttributes
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project definition and attributes"@en ;
+      skos:prefLabel "Project definition and attributes"@en ;
+      skos:definition "Knowledge of project definition and key project attributes in the SDLC context."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SystemsRequest
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Systems request"@en ;
+      skos:prefLabel "Systems request"@en ;
+      skos:definition "Knowledge of systems requests and their role in initiating systems development efforts."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechnicalAndSoftwareRequirementSpecifications
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Technical and Software Requirement Specifications"@en ;
+      skos:prefLabel "Technical and Software Requirement Specifications"@en ;
+      skos:definition "Knowledge of technical and software requirement specifications used in systems development."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TechnicalFeasibility
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Technical feasibility"@en ;
+      skos:prefLabel "Technical feasibility"@en ;
+      skos:definition "Knowledge of technical feasibility analysis in systems development projects."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:CostBenefitAnalysis
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Cost-benefit analysis"@en ;
+      skos:prefLabel "Cost-benefit analysis"@en ;
+      skos:definition "Knowledge of cost-benefit analysis in the evaluation of systems development projects."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:EconomicFeasibility
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Economic feasibility"@en ;
+      skos:prefLabel "Economic feasibility"@en ;
+      skos:definition "Knowledge of economic feasibility analysis for systems development initiatives."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:BusinessRequirementDocumentation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Business Requirement Documentation"@en ;
+      skos:prefLabel "Business Requirement Documentation"@en ;
+      skos:definition "Knowledge of business requirement documentation in the SDLC."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:OrganizationalFeasibility
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Organizational feasibility"@en ;
+      skos:prefLabel "Organizational feasibility"@en ;
+      skos:definition "Knowledge of organizational feasibility in systems development projects."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project Management plan"@en ;
+      skos:prefLabel "Project Management plan"@en ;
+      skos:definition "Knowledge of project management plans used in systems development."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ResponsibilityAssignmentMatrix
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Responsibility Assignment Matrix"@en ;
+      skos:prefLabel "Responsibility Assignment Matrix"@en ;
+      skos:definition "Knowledge of responsibility assignment matrices used in project planning and coordination."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FunctionalAndNonFunctionalRequirements
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Functional and non-functional requirements"@en ;
+      skos:prefLabel "Functional and non-functional requirements"@en ;
+      skos:definition "Knowledge of functional and non-functional requirements in systems development."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RequirementElicitationTechniques
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Requirement elicitation techniques"@en ;
+      skos:prefLabel "Requirement elicitation techniques"@en ;
+      skos:definition "Knowledge of techniques used to elicit requirements from stakeholders and sources."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RootCauseAnalysis
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Root cause analysis"@en ;
+      skos:prefLabel "Root cause analysis"@en ;
+      skos:definition "Knowledge of root cause analysis in the context of systems development and problem investigation."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:UseCases
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Use Cases"@en ;
+      skos:prefLabel "Use Cases"@en ;
+      skos:definition "Knowledge of use cases as artifacts for describing system interactions and functional behavior."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WorkBreakdownStructure
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Work Breakdown Structure"@en ;
+      skos:prefLabel "Work Breakdown Structure"@en ;
+      skos:definition "Knowledge of work breakdown structures used for project decomposition and planning."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:WorkScheduleAndCriticalPath
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Work schedule and Critical Path"@en ;
+      skos:prefLabel "Work schedule and Critical Path"@en ;
+      skos:definition "Knowledge of work scheduling and critical path analysis in project management."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RiskManagementRoleInProjectManagement
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Risk management and its role in project management"@en ;
+      skos:prefLabel "Risk management and its role in project management"@en ;
+      skos:definition "Knowledge of risk management and its role in project management."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SystemsMigrationPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Systems migration plan"@en ;
+      skos:prefLabel "Systems migration plan"@en ;
+      skos:definition "Knowledge of systems migration plans for transitioning systems into operation."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SystemsMaintenanceProgram
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Systems maintenance program"@en ;
+      skos:prefLabel "Systems maintenance program"@en ;
+      skos:definition "Knowledge of systems maintenance programs and their role after deployment."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ITInfrastructureDesign
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "IT infrastructure design"@en ;
+      skos:prefLabel "IT infrastructure design"@en ;
+      skos:definition "Knowledge of IT infrastructure design in support of systems development."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:UserInterfaces
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "User Interfaces"@en ;
+      skos:prefLabel "User Interfaces"@en ;
+      skos:definition "Knowledge of user interfaces as design artifacts in systems development."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataModelsAndERDs
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data models and entity relationship diagrams (ERDs)"@en ;
+      skos:prefLabel "Data models and entity relationship diagrams (ERDs)"@en ;
+      skos:definition "Knowledge of data models and entity relationship diagrams used in systems analysis and design."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProcessModelingDiagrams
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Process modeling diagrams"@en ;
+      skos:prefLabel "Process modeling diagrams"@en ;
+      skos:definition "Knowledge of process modeling diagrams used to represent workflows and system processes."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataFlowDiagrams
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data Flow diagrams"@en ;
+      skos:prefLabel "Data Flow diagrams"@en ;
+      skos:definition "Knowledge of data flow diagrams used to represent the movement and transformation of data."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DatabaseCreation
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Database creation"@en ;
+      skos:prefLabel "Database creation"@en ;
+      skos:definition "Knowledge of database creation in systems implementation and design."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TestingPlanForPerformanceAndSecurity
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Testing plan for performance and security"@en ;
+      skos:prefLabel "Testing plan for performance and security"@en ;
+      skos:definition "Knowledge of testing plans focused on performance and security."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DeploymentPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Deployment plan"@en ;
+      skos:prefLabel "Deployment plan"@en ;
+      skos:definition "Knowledge of deployment plans for placing systems into operation."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TerminatingAProject
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Terminating a project"@en ;
+      skos:prefLabel "Terminating a project"@en ;
+      skos:definition "Knowledge of the conditions and processes involved in terminating a project."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SystemMaintenancePlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "System maintenance plan"@en ;
+      skos:prefLabel "System maintenance plan"@en ;
+      skos:definition "Knowledge of system maintenance planning after deployment and during operation."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ChangeRequestDocument
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Change request document"@en ;
+      skos:prefLabel "Change request document"@en ;
+      skos:definition "Knowledge of change request documents used to manage modifications during the SDLC."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SDLCModelAgile
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "System Development Life Cycle (SDLC) model: Agile"@en ;
+      skos:prefLabel "System Development Life Cycle (SDLC) model: Agile"@en ;
+      skos:definition "Knowledge of the Agile SDLC model."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SDLCModelWaterfall
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "System Development Life Cycle (SDLC) model: Waterfall"@en ;
+      skos:prefLabel "System Development Life Cycle (SDLC) model: Waterfall"@en ;
+      skos:definition "Knowledge of the Waterfall SDLC model."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:SDLCModelOtherRelevantModels
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "System Development Life Cycle (SDLC) model: other relevant models"@en ;
+      skos:prefLabel "System Development Life Cycle (SDLC) model: other relevant models"@en ;
+      skos:definition "Knowledge of other relevant SDLC models, such as V-shaped, iterative, and spiral approaches."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TeamEnvironmentToolsAndSkills
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Team environment tools and skills"@en ;
+      skos:prefLabel "Team environment tools and skills"@en ;
+      skos:definition "Knowledge of tools and skills that support effective work in team environments."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:TeamCommunication
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Team communication"@en ;
+      skos:prefLabel "Team communication"@en ;
+      skos:definition "Knowledge of communication practices for effective teamwork."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DifferentTypesOfDataDiagramingModelsAndWhenUsed
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Different types of data diagraming models and when used"@en ;
+      skos:prefLabel "Different types of data diagraming models and when used"@en ;
+      skos:definition "Knowledge of different types of data diagraming models and the contexts in which they are used."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DifferentTypesOfEntityRelationshipDiagrams
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Different types of entity relationship diagrams (Bachman, Chen, ORM, etc.)"@en ;
+      skos:prefLabel "Different types of entity relationship diagrams (Bachman, Chen, ORM, etc.)"@en ;
+      skos:definition "Knowledge of different types of entity relationship diagrams, including Bachman, Chen, ORM, and related notations."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:DataEntityModels
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Data entity models"@en ;
+      skos:prefLabel "Data entity models"@en ;
+      skos:definition "Knowledge of data entity models used in data modeling and conceptual design."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RolesAndResponsibilities
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Roles and responsibilities"@en ;
+      skos:prefLabel "Roles and responsibilities"@en ;
+      skos:definition "Knowledge of the roles and responsibilities of participants in the SDLC."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:StakeholderManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Stakeholder management plan"@en ;
+      skos:prefLabel "Stakeholder management plan"@en ;
+      skos:definition "Knowledge of stakeholder management plans in the SDLC."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:HistoricalFailedProjects
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Historical failed projects"@en ;
+      skos:prefLabel "Historical failed projects"@en ;
+      skos:definition "Knowledge of historical failed projects and lessons related to systems development failures."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:ProjectRisks
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Project risks"@en ;
+      skos:prefLabel "Project risks"@en ;
+      skos:definition "Knowledge of project risks and their relevance to project failure and mitigation."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:RiskManagementPlan
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Risk Management plan"@en ;
+      skos:prefLabel "Risk Management plan"@en ;
+      skos:definition "Knowledge of risk management plans used to reduce project failure and manage uncertainty."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FoundationsOfTOGAF
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Foundations of TOGAF"@en ;
+      skos:prefLabel "Foundations of TOGAF"@en ;
+      skos:definition "Knowledge of the foundational concepts of TOGAF related to enterprise architecture."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  is2020k:FoundationsOfITIL
+      a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Foundations of ITIL"@en ;
+      skos:prefLabel "Foundations of ITIL"@en ;
+      skos:definition "Knowledge of the foundational concepts of ITIL related to enterprise architecture and service management."@en ;
+      skos:inScheme is2020k:IS2020SystemsAnalysisAndDesignKnowledgeScheme ;
+      dcterms:source is2020:IS2020Document .
+
+  #################################################################
+  # Competencies
+  #################################################################
+
+  is2020c:Competence_ISSAD_1
+      a ontoksd:Competence ;
+      rdfs:label "Explain what systems are and how they are developed"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 1"@en ;
+      skos:definition "Explain what systems are and how they are developed."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+      dcterms:identifier "ISSAD-1"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:PurposeOfSystemsAnalysis ,
+          is2020k:PurposeOfDesign ,
+          is2020k:WhatIsASystem ,
+          is2020k:ValueOfFormalizedStepByStepApproach ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:proactive ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_1_01 ,
+          is2020c:KS_ISSAD_1_02 ,
+          is2020c:KS_ISSAD_1_03 ,
+          is2020c:KS_ISSAD_1_04 .
+
+  is2020c:Competence_ISSAD_2
+      a ontoksd:Competence ;
+      rdfs:label "Demonstrate the SDLC phases and activities"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 2"@en ;
+      skos:definition "Demonstrate the SDLC phases and activities."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-2"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:ProjectDefinitionAndAttributes ,
+          is2020k:SystemsRequest ,
+          is2020k:TechnicalAndSoftwareRequirementSpecifications ,
+          is2020k:TechnicalFeasibility ,
+          is2020k:CostBenefitAnalysis ,
+          is2020k:EconomicFeasibility ,
+          is2020k:BusinessRequirementDocumentation ,
+          is2020k:OrganizationalFeasibility ,
+          is2020k:ProjectManagementPlan ,
+          is2020k:ResponsibilityAssignmentMatrix ,
+          is2020k:FunctionalAndNonFunctionalRequirements ,
+          is2020k:RequirementElicitationTechniques ,
+          is2020k:RootCauseAnalysis ,
+          is2020k:UseCases ,
+          is2020k:WorkBreakdownStructure ,
+          is2020k:WorkScheduleAndCriticalPath ,
+          is2020k:RiskManagementRoleInProjectManagement ,
+          is2020k:SystemsMigrationPlan ,
+          is2020k:SystemsMaintenanceProgram ,
+          is2020k:ITInfrastructureDesign ,
+          is2020k:UserInterfaces ,
+          is2020k:DataModelsAndERDs ,
+          is2020k:ProcessModelingDiagrams ,
+          is2020k:DataFlowDiagrams ,
+          is2020k:DatabaseCreation ,
+          is2020k:TestingPlanForPerformanceAndSecurity ,
+          is2020k:DeploymentPlan ,
+          is2020k:TerminatingAProject ,
+          is2020k:SystemMaintenancePlan ,
+          is2020k:ChangeRequestDocument ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:meticulous ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_2_01 ,
+          is2020c:KS_ISSAD_2_02 ,
+          is2020c:KS_ISSAD_2_03 ,
+          is2020c:KS_ISSAD_2_04 ,
+          is2020c:KS_ISSAD_2_05 ,
+          is2020c:KS_ISSAD_2_06 ,
+          is2020c:KS_ISSAD_2_07 ,
+          is2020c:KS_ISSAD_2_08 ,
+          is2020c:KS_ISSAD_2_09 ,
+          is2020c:KS_ISSAD_2_10 ,
+          is2020c:KS_ISSAD_2_11 ,
+          is2020c:KS_ISSAD_2_12 ,
+          is2020c:KS_ISSAD_2_13 ,
+          is2020c:KS_ISSAD_2_14 ,
+          is2020c:KS_ISSAD_2_15 ,
+          is2020c:KS_ISSAD_2_16 ,
+          is2020c:KS_ISSAD_2_17 ,
+          is2020c:KS_ISSAD_2_18 ,
+          is2020c:KS_ISSAD_2_19 ,
+          is2020c:KS_ISSAD_2_20 ,
+          is2020c:KS_ISSAD_2_21 ,
+          is2020c:KS_ISSAD_2_22 ,
+          is2020c:KS_ISSAD_2_23 ,
+          is2020c:KS_ISSAD_2_24 ,
+          is2020c:KS_ISSAD_2_25 ,
+          is2020c:KS_ISSAD_2_26 ,
+          is2020c:KS_ISSAD_2_27 ,
+          is2020c:KS_ISSAD_2_28 ,
+          is2020c:KS_ISSAD_2_29 ,
+          is2020c:KS_ISSAD_2_30 .
+
+  is2020c:Competence_ISSAD_3
+      a ontoksd:Competence ;
+      rdfs:label "Identify SDLC Models (Agile, Waterfall, V-shaped, iterative, spiral, etc.)"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 3"@en ;
+      skos:definition "Identify SDLC Models such as Agile, Waterfall, V-shaped, iterative, spiral, and related approaches."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-3"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:SDLCModelAgile ,
+          is2020k:SDLCModelWaterfall ,
+          is2020k:SDLCModelOtherRelevantModels ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_3_01 ,
+          is2020c:KS_ISSAD_3_02 ,
+          is2020c:KS_ISSAD_3_03 .
+
+  is2020c:Competence_ISSAD_4
+      a ontoksd:Competence ;
+      rdfs:label "Work effectively in a team environment"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 4"@en ;
+      skos:definition "Work effectively in a team environment."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-4"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:TeamEnvironmentToolsAndSkills ,
+          is2020k:TeamCommunication ;
+      ontoksd:hasDisposition ontoksd:collaborative , ontoksd:adaptable , ontoksd:responsible ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_4_01 ,
+          is2020c:KS_ISSAD_4_02 .
+
+  is2020c:Competence_ISSAD_5
+      a ontoksd:Competence ;
+      rdfs:label "Describe data modeling techniques"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 5"@en ;
+      skos:definition "Describe data modeling techniques."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-5"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:DifferentTypesOfDataDiagramingModelsAndWhenUsed ,
+          is2020k:DifferentTypesOfEntityRelationshipDiagrams ,
+          is2020k:DataEntityModels ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_5_01 ,
+          is2020c:KS_ISSAD_5_02 ,
+          is2020c:KS_ISSAD_5_03 .
+
+  is2020c:Competence_ISSAD_6
+      a ontoksd:Competence ;
+      rdfs:label "Describe the role and responsibilities of the participants in the SDLC"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 6"@en ;
+      skos:definition "Describe the role and responsibilities of the participants in the SDLC."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-6"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:RolesAndResponsibilities ,
+          is2020k:StakeholderManagementPlan ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_6_01 ,
+          is2020c:KS_ISSAD_6_02 .
+
+  is2020c:Competence_ISSAD_7
+      a ontoksd:Competence ;
+      rdfs:label "Explain the common ways projects fail and how to avoid these failures"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 7"@en ;
+      skos:definition "Explain the common ways projects fail and how to avoid these failures."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-7"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:HistoricalFailedProjects ,
+          is2020k:ProjectRisks ,
+          is2020k:RiskManagementPlan ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_7_01 ,
+          is2020c:KS_ISSAD_7_02 ,
+          is2020c:KS_ISSAD_7_03 .
+
+  is2020c:Competence_ISSAD_8
+      a ontoksd:Competence ;
+      rdfs:label "Identify Enterprise Architecture concepts related to SDLC phases"@en ;
+      skos:prefLabel "IS Systems Analysis and Design Competency 8"@en ;
+      skos:definition "Identify Enterprise Architecture concepts related to SDLC phases."@en ;
+      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.1 Systems Analysis and Design."@en ;
+      dcterms:identifier "ISSAD-8"^^xsd:string ;
+      dcterms:source is2020:IS2020Document ;
+      dcterms:references <http://purl.org/ontoksd/source/is2020-systems-analysis-and-design-competency-area> ;
+      prov:wasDerivedFrom is2020:IS2020Document ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+      ontoksd:hasKnowledge
+          is2020k:FoundationsOfTOGAF ,
+          is2020k:FoundationsOfITIL ;
+      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:professional , ontoksd:purposeDriven ;
+      ontoksd:hasKnowledgeSkill
+          is2020c:KS_ISSAD_8_01 ,
+          is2020c:KS_ISSAD_8_02 .
+
+  #################################################################
+  # KnowledgeSkill relators
+  #################################################################
+
+  is2020c:KS_ISSAD_1_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Purpose of systems analysis × Understanding"@en ;
+      skos:prefLabel "Purpose of systems analysis × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 1 linking the purpose of systems analysis to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:PurposeOfSystemsAnalysis ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_1 .
+
+  is2020c:KS_ISSAD_1_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Purpose of design × Understanding"@en ;
+      skos:prefLabel "Purpose of design × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 1 linking the purpose of design to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:PurposeOfDesign ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_1 .
+
+  is2020c:KS_ISSAD_1_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "What is a system × Understanding"@en ;
+      skos:prefLabel "What is a system × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 1 linking the concept of system to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:WhatIsASystem ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_1 .
+
+  is2020c:KS_ISSAD_1_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Formalized step-by-step approach × Understanding"@en ;
+      skos:prefLabel "Formalized step-by-step approach × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 1 linking the value of a formalized step-by-step approach to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ValueOfFormalizedStepByStepApproach ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_1 .
+
+  is2020c:KS_ISSAD_2_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Project definition and attributes × Understanding"@en ;
+      skos:prefLabel "Project definition and attributes × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking project definition and attributes to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ProjectDefinitionAndAttributes ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Systems request × Applying"@en ;
+      skos:prefLabel "Systems request × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking systems requests to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SystemsRequest ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Technical and Software Requirement Specifications × Evaluating"@en ;
+      skos:prefLabel "Technical and Software Requirement Specifications × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking technical and software requirement specifications to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TechnicalAndSoftwareRequirementSpecifications ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_04 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Technical feasibility × Evaluating"@en ;
+      skos:prefLabel "Technical feasibility × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking technical feasibility to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TechnicalFeasibility ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_05 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Cost-benefit analysis × Understanding"@en ;
+      skos:prefLabel "Cost-benefit analysis × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking cost-benefit analysis to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:CostBenefitAnalysis ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_06 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Economic feasibility × Understanding"@en ;
+      skos:prefLabel "Economic feasibility × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking economic feasibility to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:EconomicFeasibility ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_07 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Business Requirement Documentation × Understanding"@en ;
+      skos:prefLabel "Business Requirement Documentation × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking business requirement documentation to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:BusinessRequirementDocumentation ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_08 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Organizational feasibility × Understanding"@en ;
+      skos:prefLabel "Organizational feasibility × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking organizational feasibility to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:OrganizationalFeasibility ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_09 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Project Management plan × Applying"@en ;
+      skos:prefLabel "Project Management plan × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking project management plans to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ProjectManagementPlan ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_10 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Responsibility Assignment Matrix × Applying"@en ;
+      skos:prefLabel "Responsibility Assignment Matrix × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking the responsibility assignment matrix to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ResponsibilityAssignmentMatrix ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_11 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Functional and non-functional requirements × Applying"@en ;
+      skos:prefLabel "Functional and non-functional requirements × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking functional and non-functional requirements to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FunctionalAndNonFunctionalRequirements ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_12 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Requirement elicitation techniques × Applying"@en ;
+      skos:prefLabel "Requirement elicitation techniques × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking requirement elicitation techniques to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RequirementElicitationTechniques ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_13 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Root cause analysis × Applying"@en ;
+      skos:prefLabel "Root cause analysis × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking root cause analysis to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RootCauseAnalysis ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_14 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Use Cases × Creating"@en ;
+      skos:prefLabel "Use Cases × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking use cases to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:UseCases ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_15 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Work Breakdown Structure × Evaluating"@en ;
+      skos:prefLabel "Work Breakdown Structure × Evaluating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking work breakdown structures to the required Bloom level Evaluating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:WorkBreakdownStructure ;
+      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_16 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Work schedule and Critical Path × Applying"@en ;
+      skos:prefLabel "Work schedule and Critical Path × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking work schedules and critical path analysis to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:WorkScheduleAndCriticalPath ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_17 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Risk management in project management × Understanding"@en ;
+      skos:prefLabel "Risk management in project management × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking risk management and its role in project management to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RiskManagementRoleInProjectManagement ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_18 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Systems migration plan × Understanding"@en ;
+      skos:prefLabel "Systems migration plan × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking systems migration plans to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SystemsMigrationPlan ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_19 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Systems maintenance program × Understanding"@en ;
+      skos:prefLabel "Systems maintenance program × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking systems maintenance programs to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SystemsMaintenanceProgram ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_20 a ontoksd:KnowledgeSkill ;
+      rdfs:label "IT infrastructure design × Understanding"@en ;
+      skos:prefLabel "IT infrastructure design × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking IT infrastructure design to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ITInfrastructureDesign ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_21 a ontoksd:KnowledgeSkill ;
+      rdfs:label "User Interfaces × Creating"@en ;
+      skos:prefLabel "User Interfaces × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking user interfaces to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:UserInterfaces ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_22 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data models and ERDs × Creating"@en ;
+      skos:prefLabel "Data models and ERDs × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking data models and ERDs to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataModelsAndERDs ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_23 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Process modeling diagrams × Creating"@en ;
+      skos:prefLabel "Process modeling diagrams × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking process modeling diagrams to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ProcessModelingDiagrams ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_24 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data Flow diagrams × Creating"@en ;
+      skos:prefLabel "Data Flow diagrams × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking data flow diagrams to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataFlowDiagrams ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_25 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Database creation × Creating"@en ;
+      skos:prefLabel "Database creation × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking database creation to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DatabaseCreation ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_26 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Testing plan for performance and security × Applying"@en ;
+      skos:prefLabel "Testing plan for performance and security × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking testing plans for performance and security to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TestingPlanForPerformanceAndSecurity ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_27 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Deployment plan × Applying"@en ;
+      skos:prefLabel "Deployment plan × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking deployment plans to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DeploymentPlan ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_28 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Terminating a project × Understanding"@en ;
+      skos:prefLabel "Terminating a project × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking project termination to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TerminatingAProject ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_29 a ontoksd:KnowledgeSkill ;
+      rdfs:label "System maintenance plan × Applying"@en ;
+      skos:prefLabel "System maintenance plan × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking system maintenance plans to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SystemMaintenancePlan ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_2_30 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Change request document × Applying"@en ;
+      skos:prefLabel "Change request document × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 2 linking change request documents to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ChangeRequestDocument ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_2 .
+
+  is2020c:KS_ISSAD_3_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "SDLC model: Agile × Understanding"@en ;
+      skos:prefLabel "SDLC model: Agile × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 3 linking the Agile SDLC model to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SDLCModelAgile ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_3 .
+
+  is2020c:KS_ISSAD_3_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "SDLC model: Waterfall × Understanding"@en ;
+      skos:prefLabel "SDLC model: Waterfall × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 3 linking the Waterfall SDLC model to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SDLCModelWaterfall ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_3 .
+
+  is2020c:KS_ISSAD_3_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "SDLC model: other relevant models × Understanding"@en ;
+      skos:prefLabel "SDLC model: other relevant models × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 3 linking other relevant SDLC models to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:SDLCModelOtherRelevantModels ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_3 .
+
+  is2020c:KS_ISSAD_4_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Team environment tools and skills × Applying"@en ;
+      skos:prefLabel "Team environment tools and skills × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 4 linking team environment tools and skills to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TeamEnvironmentToolsAndSkills ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_4 .
+
+  is2020c:KS_ISSAD_4_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Team communication × Applying"@en ;
+      skos:prefLabel "Team communication × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 4 linking team communication to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:TeamCommunication ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_4 .
+
+  is2020c:KS_ISSAD_5_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data diagraming models × Understanding"@en ;
+      skos:prefLabel "Data diagraming models × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 5 linking different types of data diagraming models to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DifferentTypesOfDataDiagramingModelsAndWhenUsed ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_5 .
+
+  is2020c:KS_ISSAD_5_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Entity relationship diagrams × Understanding"@en ;
+      skos:prefLabel "Entity relationship diagrams × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 5 linking different types of entity relationship diagrams to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DifferentTypesOfEntityRelationshipDiagrams ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_5 .
+
+  is2020c:KS_ISSAD_5_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Data entity models × Creating"@en ;
+      skos:prefLabel "Data entity models × Creating"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 5 linking data entity models to the required Bloom level Creating."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:DataEntityModels ;
+      ontoksd:hasRequiredSkillLevel bloom:Creating ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_5 .
+
+  is2020c:KS_ISSAD_6_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Roles and responsibilities × Understanding"@en ;
+      skos:prefLabel "Roles and responsibilities × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 6 linking roles and responsibilities to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RolesAndResponsibilities ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_6 .
+
+  is2020c:KS_ISSAD_6_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Stakeholder management plan × Understanding"@en ;
+      skos:prefLabel "Stakeholder management plan × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 6 linking stakeholder management plans to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:StakeholderManagementPlan ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_6 .
+
+  is2020c:KS_ISSAD_7_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Historical failed projects × Understanding"@en ;
+      skos:prefLabel "Historical failed projects × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 7 linking historical failed projects to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:HistoricalFailedProjects ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_7 .
+
+  is2020c:KS_ISSAD_7_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Project risks × Understanding"@en ;
+      skos:prefLabel "Project risks × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 7 linking project risks to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:ProjectRisks ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_7 .
+
+  is2020c:KS_ISSAD_7_03 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Risk Management plan × Applying"@en ;
+      skos:prefLabel "Risk Management plan × Applying"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 7 linking risk management plans to the required Bloom level Applying."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:RiskManagementPlan ;
+      ontoksd:hasRequiredSkillLevel bloom:Applying ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_7 .
+
+  is2020c:KS_ISSAD_8_01 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Foundations of TOGAF × Understanding"@en ;
+      skos:prefLabel "Foundations of TOGAF × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 8 linking the foundations of TOGAF to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FoundationsOfTOGAF ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_8 .
+
+  is2020c:KS_ISSAD_8_02 a ontoksd:KnowledgeSkill ;
+      rdfs:label "Foundations of ITIL × Understanding"@en ;
+      skos:prefLabel "Foundations of ITIL × Understanding"@en ;
+      rdfs:comment "KnowledgeSkill relation for IS Systems Analysis and Design Competency 8 linking the foundations of ITIL to the required Bloom level Understanding."@en ;
+      ontoksd:hasKnowledgeComponent is2020k:FoundationsOfITIL ;
+      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
+      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISSAD_8 .
+
+}

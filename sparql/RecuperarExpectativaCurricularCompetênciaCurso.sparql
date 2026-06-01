@@ -1,0 +1,10 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT ?course ?competence ?mandatory ?requiredLevel
+WHERE {
+  ?ccs a ontoksd:CourseCompetenceSpecification ;
+       ontoksd:mediatesCourse ?course ;
+       ontoksd:mediatesCourseCompetence ?competence ;
+       ontoksd:isMandatory ?mandatory ;
+       ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
+}

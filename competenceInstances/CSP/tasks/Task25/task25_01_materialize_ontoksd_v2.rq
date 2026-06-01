@@ -1,0 +1,105 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+INSERT DATA {
+
+  #################################################################
+  # Acquisition context
+  #################################################################
+
+  ontoksd:AC_Task25.01 a ontoksd:AcquisitionContext ;
+    rdfs:label "Acquisition context for Task25.01 — Máquina de Vender Refrigerantes e Salgados"@en ;
+    rdfs:comment "Pedagogically relevant situation for Task25.01 in MATC94 – Introdução às Linguagens Formais e Teoria da Computação. This context frames a problem-based learning task centered on the formal modeling, simulation, and justification of a vending machine system through finite automata, formal languages, and regular expressions."@en .
+
+  #################################################################
+  # Learning task
+  #################################################################
+
+  ontoksd:Task25.01 a ontoksd:LearningTask ;
+    rdfs:label "Task25.01 — Máquina de Vender Refrigerantes e Salgados"@pt ;
+    dcterms:title "Task25.01 — Máquina de Vender Refrigerantes e Salgados"@pt ;
+    dc:description "Learning task in which learners formally model the behavior of a vending machine system, define an input alphabet for products and monetary symbols, represent valid and invalid usage sequences, construct and test a finite automaton, analyze the role of nondeterminism, and document the model through mathematically rigorous written answers and a technical report."@en ;
+    rdfs:comment "Task25.01 is a formal-language and automata-oriented learning task in which learners model a vending machine that sells beverages and snacks, accepts finite monetary inputs, computes change, and may introduce bonus change through nondeterministic behavior. The task requires a JFLAP automaton artefact and a rigorous report, with possible extension to regular-expression analysis when appropriate. It integrates symbolic abstraction, sequence modeling, automata construction, simulation-based validation, algebraic notation for strings and languages, and mathematical justification of formal properties and expressive limits."@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task25.01 ;
+    ontoksd:hasCompetenceRelator ontoksd:CA_Task25.01_C18 ,
+                                 ontoksd:CA_Task25.01_C17 ,
+                                 ontoksd:CA_Task25.01_C23 ,
+                                 ontoksd:CA_Task25.01_C05.01 ,
+                                 ontoksd:CA_Task25.01_C02 ,
+                                 ontoksd:CA_Task25.01_C03 ,
+                                 ontoksd:CA_Task25.01_C04 .
+
+  #################################################################
+  # Competence activations
+  #################################################################
+
+  ontoksd:CA_Task25.01_C18 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C18 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "C18 is activated in Task25.01 as a core constructive competence because learners must abstract products, notes, coins, change, and bonus behavior into symbols, strings, and formal-language structures that define the vending machine system to be modeled."@en .
+
+  ontoksd:CA_Task25.01_C17 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C17 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "C17 is activated in Task25.01 as a core analytical competence because the task requires operations on strings and languages at the level needed to characterize valid and invalid usage sequences through concatenation, prefixes, and partial sequences, without making closure properties the main analytical focus."@en .
+
+  ontoksd:CA_Task25.01_C23 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C23 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "C23 is activated in Task25.01 as a transversal analytical competence because algebraic notation for strings and languages is needed throughout the task to define alphabets, represent sequences, state acceptance conditions, and describe the recognized language precisely."@en .
+
+  ontoksd:CA_Task25.01_C05.01 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C05.01 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "C05.01 is activated in Task25.01 as a transversal justificatory competence because the task explicitly requires mathematically rigorous justification of automaton correctness, valid strings, nondeterminism, and any regular-expression correspondence or impossibility claim."@en .
+
+  ontoksd:CA_Task25.01_C02 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C02 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationConstraint ontoksd:acMandatory ;
+    rdfs:comment "C02 is activated in Task25.01 as a mandatory supporting competence because learners must justify why the vending-machine behavior can be modeled by a finite automaton, explain how state space represents accumulated balance, change, and bonus behavior, and discuss the formal role of determinism or nondeterminism in the model."@en .
+
+  ontoksd:CA_Task25.01_C03 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C03 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationConstraint ontoksd:acConditional ;
+    rdfs:comment "C03 is activated in Task25.01 as a conditional supporting competence because the task requires simulation in JFLAP or an equivalent tool as an empirical validation resource for the automaton artefact and its behavior under selected input sequences."@en .
+
+  ontoksd:CA_Task25.01_C04 a ontoksd:CompetenceActivation ;
+    rdfs:label "Competence activation of C04 in Task25.01"@en ;
+    ontoksd:mediatesInstructionalUnit ontoksd:Task25.01 ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationConstraint ontoksd:acConditional ;
+    rdfs:comment "C04 is activated in Task25.01 as a conditional extension competence because the task invites learners to investigate whether a segment of the automaton can be described by a regular expression and, when appropriate, to present either the construction method or a formal impossibility justification."@en .
+
+}

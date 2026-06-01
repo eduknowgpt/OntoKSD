@@ -1,0 +1,283 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+
+  #################################################################
+  # 1. AQUISITION CONTEXT
+  #################################################################
+
+  ontoksd:AC_Task01_VendingMachine_PBLContext a ontoksd:AcquisitionContext ;
+      rdfs:label "Task01 Acquisition Context — PBL Automata Modeling and Evaluation"@en ;
+      dcterms:identifier "Task01-AC"^^xsd:string ;
+      rdfs:comment "Pedagogically relevant context for Task01, characterized by problem-based learning, collaborative work, use of JFLAP or equivalent simulator, documentation through whiteboard and logbook, and evaluation based on submitted formal artifacts and technical documentation."@en .
+
+  #################################################################
+  # 2. SPECIFICATION-LEVEL TASK
+  #################################################################
+
+  ontoksd:Task01_VendingMachine_Task a ontoksd:Task ;
+      rdfs:label "Task01 — The Vending Machine for Sodas and Snacks"@en ;
+      dcterms:identifier "Task01-TASK"^^xsd:string ;
+      ontoksd:hasTaskStatement "Design, validate, and document a vending-machine solution based on finite-state representations, including payment handling, change calculation, and product dispensing, with optional treatment of a bonus-change behavior and optional regular-expression documentation for part of the model."@en ;
+      ontoksd:hasTaskActivity ontoksd:TaskActivity_Task01_ModelAndValidateFSM ;
+      ontoksd:hasTaskComponent ontoksd:TaskComponent_Task01_VendingMachineSystem ,
+                               ontoksd:TaskComponent_Task01_FSMArtifact ,
+                               ontoksd:TaskComponent_Task01_TechnicalReport ,
+                               ontoksd:TaskComponent_Task01_RegexFragment ;
+      ontoksd:hasTaskConstraint ontoksd:TaskConstraint_Task01_PaymentAndChange ,
+                                ontoksd:TaskConstraint_Task01_ThreeProductsMinimum ,
+                                ontoksd:TaskConstraint_Task01_SimulatorSupport ,
+                                ontoksd:TaskConstraint_Task01_ProcessDocumentation ,
+                                ontoksd:TaskConstraint_Task01_OptionalBonusChange .
+
+  ontoksd:TaskActivity_Task01_ModelAndValidateFSM a ontoksd:TaskActivity ;
+      rdfs:label "Model, simulate, validate, and document a vending-machine FSM solution"@en ;
+      rdfs:comment "Central task activity of Task01, involving formal modeling, simulation-based validation, and technical documentation."@en .
+
+  ontoksd:TaskComponent_Task01_VendingMachineSystem a ontoksd:TaskComponent ;
+      rdfs:label "Vending machine computational system"@en ;
+      rdfs:comment "Domain object to be modeled, including product selection, payment processing, change calculation, and dispensing behavior."@en .
+
+  ontoksd:TaskComponent_Task01_FSMArtifact a ontoksd:TaskComponent ;
+      rdfs:label "Finite-state-machine artifact"@en ;
+      rdfs:comment "Formal automaton artifact representing the vending machine behavior."@en .
+
+  ontoksd:TaskComponent_Task01_TechnicalReport a ontoksd:TaskComponent ;
+      rdfs:label "Technical report"@en ;
+      rdfs:comment "Structured report describing design decisions, formal representation, validation results, and system behavior."@en .
+
+  ontoksd:TaskComponent_Task01_RegexFragment a ontoksd:TaskComponent ;
+      rdfs:label "Regular-expression fragment"@en ;
+      rdfs:comment "Optional or conditional representational component relating a portion of the automaton to a regular expression."@en .
+
+  ontoksd:TaskConstraint_Task01_PaymentAndChange a ontoksd:TaskConstraint ;
+      rdfs:label "Accept R$1.00 and R$2.00 and provide change"@en ;
+      rdfs:comment "The modeled machine must process specified payments and return change correctly."@en .
+
+  ontoksd:TaskConstraint_Task01_ThreeProductsMinimum a ontoksd:TaskConstraint ;
+      rdfs:label "Support at least three products"@en ;
+      rdfs:comment "The solution must represent a machine configured to sell at least three products."@en .
+
+  ontoksd:TaskConstraint_Task01_SimulatorSupport a ontoksd:TaskConstraint ;
+      rdfs:label "Be testable in JFLAP or equivalent"@en ;
+      rdfs:comment "The automaton artifact must be suitable for simulation and testing in JFLAP or equivalent tool."@en .
+
+  ontoksd:TaskConstraint_Task01_OptionalBonusChange a ontoksd:TaskConstraint ;
+      rdfs:label "Optional bonus-change behavior"@en ;
+      rdfs:comment "Optional challenge requiring random bonus change of R$1.00 under exact-payment conditions."@en .
+
+  #################################################################
+  # 3. LEARNING TASK
+  #################################################################
+
+  ontoksd:LT_Task01_VendingMachine a ontoksd:LearningTask ;
+      rdfs:label "Learning Task — The Vending Machine for Sodas and Snacks"@en ;
+      dcterms:identifier "Task01-LT"^^xsd:string ;
+      dcterms:description "Concrete PBL learning task in which learners analyze requirements, model vending-machine behavior as a finite-state machine, test the model with simulator support, and document the solution."@en ;
+      ontoksd:hasAcquisitionContext ontoksd:AC_Task01_VendingMachine_PBLContext ;
+      ontoksd:usesResource ontoksd:ER_Task01_ProblemStatement ,
+                           ontoksd:ER_Task01_JFLAP ,
+                           ontoksd:ER_Task01_PBLWhiteboard ,
+                           ontoksd:ER_Task01_Logbook ,
+                           ontoksd:ER_Task01_SBCReportTemplate .
+
+  #################################################################
+  # 4. ASSESSMENT SPECIFICATION
+  #################################################################
+
+  ontoksd:AS_Task01_VendingMachineAssessment a ontoksd:Assessment ;
+      rdfs:label "Assessment — Task01 Vending Machine Solution"@en ;
+      dcterms:identifier "Task01-AS"^^xsd:string ;
+      dcterms:description "Assessment specification based on the Task01 PBL case, intended to evaluate learners through the submitted vending-machine automaton, simulation-supported validation, and technical report."@en ;
+      ontoksd:isBasedOnActivity ontoksd:LT_Task01_VendingMachine ;
+      ontoksd:hasAcquisitionContext ontoksd:AC_Task01_VendingMachine_PBLContext ;
+      ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentStrategyType ,
+                                       ontoksd:WrittenAssessmentModalityType ;
+      ontoksd:usesResource ontoksd:ER_Task01_ProblemStatement ,
+                           ontoksd:ER_Task01_JFLAP ,
+                           ontoksd:ER_Task01_SBCReportTemplate .
+
+  #################################################################
+  # 5. EDUCATIONAL RESOURCES
+  #################################################################
+
+  ontoksd:ER_Task01_ProblemStatement a ontoksd:EducationalResource ;
+      rdfs:label "Task01 problem statement"@en ;
+      dcterms:identifier "Task01-ER1"^^xsd:string ;
+      dcterms:description "Problem statement describing the vending-machine scenario, its operational requirements, and expected deliverables."@en ;
+      ontoksd:intendedUse "Instructional framing and requirement interpretation for the learning task and the assessment."^^xsd:string .
+
+  ontoksd:ER_Task01_JFLAP a ontoksd:EducationalResource ;
+      rdfs:label "JFLAP simulator"@en ;
+      dcterms:identifier "Task01-ER2"^^xsd:string ;
+      dcterms:description "Automata simulator used to test, inspect, and validate finite-state-machine behavior."@en ;
+      ontoksd:intendedUse "Simulation, execution, debugging, and validation of finite-state-machine artifacts."^^xsd:string .
+
+  ontoksd:ER_Task01_PBLWhiteboard a ontoksd:EducationalResource ;
+      rdfs:label "PBL whiteboard"@en ;
+      dcterms:identifier "Task01-ER3"^^xsd:string ;
+      dcterms:description "Collaborative whiteboard structure used to document questions, facts, ideas/hypotheses, and actions during the PBL process."@en ;
+      ontoksd:intendedUse "Process documentation and collaborative reasoning support."^^xsd:string .
+
+  ontoksd:ER_Task01_Logbook a ontoksd:EducationalResource ;
+      rdfs:label "Task01 logbook"@en ;
+      dcterms:identifier "Task01-ER4"^^xsd:string ;
+      dcterms:description "Shared document used to register progress, decisions, and development history during the task."@en ;
+      ontoksd:intendedUse "Traceability of collaborative work and process recording."^^xsd:string .
+
+  ontoksd:ER_Task01_SBCReportTemplate a ontoksd:EducationalResource ;
+      rdfs:label "SBC article-format report template"@en ;
+      dcterms:identifier "Task01-ER5"^^xsd:string ;
+      dcterms:description "Template or normative reference for the preparation of the technical report required as a deliverable."@en ;
+      ontoksd:intendedUse "Support for technical writing and report standardization."^^xsd:string .
+
+  #################################################################
+  # 6. COMPETENCE ↔ TASK LINKS
+  #################################################################
+
+  ontoksd:C06  ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+  ontoksd:C02  ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+  ontoksd:C03  ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+  ontoksd:C04  ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+  ontoksd:C05  ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+  #################################################################
+  # 7. COMPETENCE ACTIVATIONS IN THE ASSESSMENT
+  #################################################################
+
+  ontoksd:CA_Task01_C06 a ontoksd:CompetenceRelator ;
+      rdfs:label "Task01 Assessment Activation — C06"@en ;
+      ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+      ontoksd:mediatesCompetence ontoksd:C06 ;
+      ontoksd:hasActivationFunction ontoksd:targetFunction ;
+      ontoksd:hasActivationRole ontoksd:arCore ;
+      ontoksd:hasActivationMode ontoksd:amConstructive ,
+                                ontoksd:amArtifactOriented ;
+      ontoksd:hasActivationConstraint ontoksd:acMandatory .
+
+  ontoksd:CA_Task01_C02 a ontoksd:CompetenceRelator ;
+      rdfs:label "Task01 Assessment Activation — C02"@en ;
+      ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+      ontoksd:mediatesCompetence ontoksd:C02 ;
+      ontoksd:hasActivationFunction ontoksd:targetFunction ;
+      ontoksd:hasActivationRole ontoksd:arSupporting ;
+      ontoksd:hasActivationMode ontoksd:amAnalytical ,
+                                ontoksd:amJustificatory ;
+      ontoksd:hasActivationConstraint ontoksd:acMandatory .
+
+  ontoksd:CA_Task01_C03 a ontoksd:CompetenceRelator ;
+      rdfs:label "Task01 Assessment Activation — C03"@en ;
+      ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+      ontoksd:mediatesCompetence ontoksd:C03 ;
+      ontoksd:hasActivationFunction ontoksd:targetFunction ;
+      ontoksd:hasActivationRole ontoksd:arCore ;
+      ontoksd:hasActivationMode ontoksd:amAnalytical ,
+                                ontoksd:amArtifactOriented ;
+      ontoksd:hasActivationConstraint ontoksd:acMandatory .
+
+  ontoksd:CA_Task01_C04 a ontoksd:CompetenceRelator ;
+      rdfs:label "Task01 Assessment Activation — C04"@en ;
+      ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+      ontoksd:mediatesCompetence ontoksd:C04 ;
+      ontoksd:hasActivationFunction ontoksd:targetFunction ;
+      ontoksd:hasActivationRole ontoksd:arExtension ;
+      ontoksd:hasActivationMode ontoksd:amInterpretative ,
+                                ontoksd:amJustificatory ;
+      ontoksd:hasActivationConstraint ontoksd:conditional .
+
+  ontoksd:CA_Task01_C05 a ontoksd:CompetenceRelator ;
+      rdfs:label "Task01 Assessment Activation — C05"@en ;
+      ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+      ontoksd:mediatesCompetence ontoksd:C05 ;
+      ontoksd:hasActivationFunction ontoksd:targetFunction ;
+      ontoksd:hasActivationRole ontoksd:arCore ;
+      ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+      ontoksd:hasActivationConstraint ontoksd:acMandatory .
+
+  ontoksd:AS_Task01_VendingMachineAssessment
+      ontoksd:hasCompetenceActivation ontoksd:CA_Task01_C06 ,
+                                      ontoksd:CA_Task01_C02 ,
+                                      ontoksd:CA_Task01_C03 ,
+                                      ontoksd:CA_Task01_C04 ,
+                                      ontoksd:CA_Task01_C05 .
+
+  #################################################################
+  # 8. PROFICIENCY SCALE AND SCHEME
+  #################################################################
+
+  ontoksd:Scale_Task01_0_10 a ontoksd:Scale ;
+      rdfs:label "Task01 proficiency scale 0–10"@en ;
+      dcterms:identifier "Task01-SCALE"^^xsd:string ;
+      ontoksd:minValue "0.0"^^xsd:decimal ;
+      ontoksd:maxValue "10.0"^^xsd:decimal ;
+      ontoksd:step "0.1"^^xsd:decimal ;
+      ontoksd:hasInterval ontoksd:Interval_Task01_Novice ,
+                          ontoksd:Interval_Task01_Competent ,
+                          ontoksd:Interval_Task01_Advanced .
+
+  ontoksd:PL_Task01_Novice a ontoksd:ProficiencyLevel ;
+      rdfs:label "Novice"@en ;
+      dcterms:identifier "Task01-PL1"^^xsd:string ;
+      ontoksd:hasOrdinalPosition "1"^^xsd:int .
+
+  ontoksd:PL_Task01_Competent a ontoksd:ProficiencyLevel ;
+      rdfs:label "Competent"@en ;
+      dcterms:identifier "Task01-PL2"^^xsd:string ;
+      ontoksd:hasOrdinalPosition "2"^^xsd:int .
+
+  ontoksd:PL_Task01_Advanced a ontoksd:ProficiencyLevel ;
+      rdfs:label "Advanced"@en ;
+      dcterms:identifier "Task01-PL3"^^xsd:string ;
+      ontoksd:hasOrdinalPosition "3"^^xsd:int .
+
+  ontoksd:PS_Task01_0_10 a ontoksd:ProficiencyScheme ;
+      rdfs:label "Task01 proficiency scheme"@en ;
+      dcterms:identifier "Task01-PS"^^xsd:string ;
+      ontoksd:usesScale ontoksd:Scale_Task01_0_10 ;
+      ontoksd:definesLevel ontoksd:PL_Task01_Novice ,
+                           ontoksd:PL_Task01_Competent ,
+                           ontoksd:PL_Task01_Advanced ;
+      ontoksd:definesInterval ontoksd:Interval_Task01_Novice ,
+                              ontoksd:Interval_Task01_Competent ,
+                              ontoksd:Interval_Task01_Advanced .
+
+  ontoksd:Interval_Task01_Novice a ontoksd:ScaleInterval ;
+      rdfs:label "Task01 interval — Novice"@en ;
+      ontoksd:isIntervalOf ontoksd:Scale_Task01_0_10 ;
+      ontoksd:intervalDefinedInScheme ontoksd:PS_Task01_0_10 ;
+      ontoksd:correspondsToLevel ontoksd:PL_Task01_Novice ;
+      ontoksd:lowerBound "0.0"^^xsd:decimal ;
+      ontoksd:upperBound "5.0"^^xsd:decimal ;
+      ontoksd:includesLower "true"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean .
+
+  ontoksd:Interval_Task01_Competent a ontoksd:ScaleInterval ;
+      rdfs:label "Task01 interval — Competent"@en ;
+      ontoksd:isIntervalOf ontoksd:Scale_Task01_0_10 ;
+      ontoksd:intervalDefinedInScheme ontoksd:PS_Task01_0_10 ;
+      ontoksd:correspondsToLevel ontoksd:PL_Task01_Competent ;
+      ontoksd:lowerBound "5.0"^^xsd:decimal ;
+      ontoksd:upperBound "9.0"^^xsd:decimal ;
+      ontoksd:includesLower "false"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean .
+
+  ontoksd:Interval_Task01_Advanced a ontoksd:ScaleInterval ;
+      rdfs:label "Task01 interval — Advanced"@en ;
+      ontoksd:isIntervalOf ontoksd:Scale_Task01_0_10 ;
+      ontoksd:intervalDefinedInScheme ontoksd:PS_Task01_0_10 ;
+      ontoksd:correspondsToLevel ontoksd:PL_Task01_Advanced ;
+      ontoksd:lowerBound "9.0"^^xsd:decimal ;
+      ontoksd:upperBound "10.0"^^xsd:decimal ;
+      ontoksd:includesLower "false"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean .
+
+}

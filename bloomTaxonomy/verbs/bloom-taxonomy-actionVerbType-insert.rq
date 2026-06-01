@@ -1,0 +1,27 @@
+PREFIX bloom:   <http://purl.org/edu/bloom#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+
+  bloom:StandardVerb
+      rdf:type owl:NamedIndividual ,
+               bloom:ActionVerbType ;
+      rdfs:label "Standard Bloom Verb"@en ;
+      skos:definition "An action verb traditionally associated with Bloom’s Revised Taxonomy and used in general educational objective specification."@en .
+
+  bloom:ComputingVerb
+      rdf:type owl:NamedIndividual ,
+               bloom:ActionVerbType ;
+      rdfs:label "Computing-Enhanced Verb"@en ;
+      skos:definition "An action verb adapted or emphasized for competence specification in computing education contexts."@en .
+
+  bloom:CS2023Verb
+      rdf:type owl:NamedIndividual ,
+               bloom:ActionVerbType ;
+      rdfs:label "CS2023 Verb"@en ;
+      skos:definition "An action verb explicitly associated with the skill-level formulation adopted in CS2023."@en .
+
+}

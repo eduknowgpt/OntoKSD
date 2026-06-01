@@ -1,65 +1,212 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:AR-Performance-Energy ontoksd:cs2023DevelopSkill)
-    (cs2023:NC-Security           ontoksd:cs2023DevelopSkill)
-    (cs2023:OS-Protection         ontoksd:cs2023DevelopSkill)
-    (cs2023:SF-Security           ontoksd:cs2023DevelopSkill)
-    (cs2023:SE-Design             ontoksd:cs2023DevelopSkill)
-    (cs2023:SE-Tools              ontoksd:cs2023DevelopSkill)
-    (cs2023:SPD-Common            ontoksd:cs2023DevelopSkill)
-    (cs2023:SPD-Mobile            ontoksd:cs2023DevelopSkill)
-    (cs2023:SEP-Privacy           ontoksd:cs2023DevelopSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Applications9 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Build and optimize a secure web page for evolving business needs using a variety of appropriate programming languages."@en ;
-    dcterms:description "Evaluate potential security hazards and apply optimization techniques to meet evolving business needs."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Applications9"@en ;
-    ontoksd:hasDisposition ontoksd:adaptable ,
-                           ontoksd:meticulous ,
-                           ontoksd:proactive ,
-                           ontoksd:responsible ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
-;
+  #################################################################
+  # Optional disposition extension
+  #################################################################
 
-############# VERBOS ################
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:AR-Performance-Energy ontoksd:cs2023DevelopSkill bloom:optimize)
-    (cs2023:NC-Security           ontoksd:cs2023DevelopSkill bloom:secure)
-    (cs2023:OS-Protection         ontoksd:cs2023DevelopSkill bloom:apply)
-    (cs2023:SF-Security           ontoksd:cs2023DevelopSkill bloom:implement)
-    (cs2023:SE-Design             ontoksd:cs2023DevelopSkill bloom:design)
-    (cs2023:SE-Tools              ontoksd:cs2023DevelopSkill bloom:use)
-    (cs2023:SPD-Common            ontoksd:cs2023DevelopSkill bloom:develop)
-    (cs2023:SPD-Mobile            ontoksd:cs2023DevelopSkill bloom:develop)
-    (cs2023:SEP-Privacy           ontoksd:cs2023DevelopSkill bloom:ensure)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  ontoksd:adaptable a ontoksd:Disposition , skos:Concept ;
+      rdfs:label "Adaptable"@en ;
+      skos:prefLabel "Adaptable"@en ;
+      rdfs:comment "A disposition characterized by readiness to adjust strategies, tools, and design decisions in response to changing requirements, constraints, or contexts."@en .
+
+  #################################################################
+  # Competence
+  #################################################################
+
+  cs2023c:Competence_Applications9
+      a ontoksd:Competence ;
+      rdfs:label "Evaluate potential security hazards and apply optimization techniques"@en ;
+      skos:prefLabel "Evaluate potential security hazards and apply optimization techniques"@en ;
+      skos:definition "Evaluate potential security hazards and apply optimization techniques."@en ;
+      rdfs:comment "Competence derived from the CS2023 Applications Competency Area, Task Applications9. Although the competency statement mentions evaluating security hazards and applying optimization techniques, the CS2023 specification assigns the required skill level Develop. In this formalization, the selected knowledge elements are therefore represented with the CS2023 skill level Develop, while evaluative and optimization-oriented aspects are preserved in the associated task activities and task description."@en ;
+      dcterms:identifier "Applications9"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Applications9 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Applications9_AR_Performance_Energy_1_Develop ,
+          cs2023c:KS_Applications9_NC_Security_1_Develop ,
+          cs2023c:KS_Applications9_OS_Protection_1_Develop ,
+          cs2023c:KS_Applications9_SF_Security_1_Develop ,
+          cs2023c:KS_Applications9_SE_Design_1_Develop ,
+          cs2023c:KS_Applications9_SE_Tools_1_Develop ,
+          cs2023c:KS_Applications9_SPD_Common_1_Develop ,
+          cs2023c:KS_Applications9_SPD_Mobile_1_Develop ,
+          cs2023c:KS_Applications9_SEP_Privacy_1_Develop ;
+      ontoksd:hasDisposition
+          ontoksd:adaptable ,
+          ontoksd:meticulous ,
+          ontoksd:proactive ,
+          ontoksd:responsible ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
+
+  #################################################################
+  # Specification-level Task
+  #################################################################
+
+  cs2023c:Task_Applications9
+      a ontoksd:Task ;
+      rdfs:label "Applications9 task"@en ;
+      skos:prefLabel "Applications9 task"@en ;
+      ontoksd:hasTaskStatement "Build and optimize a secure web page for evolving business needs using a variety of appropriate programming languages."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Applications9. The task concerns building and optimizing a secure web page that responds to evolving business needs, using appropriate programming languages while considering security hazards, optimization opportunities, and platform-related constraints."@en ;
+      dcterms:identifier "Task_Applications9"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Applications9_SecureWebPage ,
+          cs2023c:TaskComponent_Applications9_BusinessNeeds ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Applications9_Build ,
+          cs2023c:TaskActivity_Applications9_Optimize ,
+          cs2023c:TaskActivity_Applications9_Evaluate ,
+          cs2023c:TaskActivity_Applications9_Apply ,
+          cs2023c:TaskActivity_Applications9_Secure ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Applications9_EvolvingBusinessNeeds ,
+          cs2023c:TaskConstraint_Applications9_AppropriateProgrammingLanguages .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Applications9_SecureWebPage
+      a ontoksd:TaskComponent ;
+      rdfs:label "secure web page"@en ;
+      skos:prefLabel "secure web page"@en ;
+      rdfs:comment "Task component corresponding to the web page to be built, secured, and optimized."@en .
+
+  cs2023c:TaskComponent_Applications9_BusinessNeeds
+      a ontoksd:TaskComponent ;
+      rdfs:label "evolving business needs"@en ;
+      skos:prefLabel "evolving business needs"@en ;
+      rdfs:comment "Task component corresponding to the changing business requirements that shape the design and evolution of the web page."@en .
+
+  cs2023c:TaskActivity_Applications9_Build
+      a ontoksd:TaskActivity ;
+      rdfs:label "build"@en ;
+      skos:prefLabel "build"@en ;
+      rdfs:comment "Task activity capturing the construction of the web page."@en .
+
+  cs2023c:TaskActivity_Applications9_Optimize
+      a ontoksd:TaskActivity ;
+      rdfs:label "optimize"@en ;
+      skos:prefLabel "optimize"@en ;
+      rdfs:comment "Task activity capturing the application of optimization techniques to improve the web page."@en .
+
+  cs2023c:TaskActivity_Applications9_Evaluate
+      a ontoksd:TaskActivity ;
+      rdfs:label "evaluate"@en ;
+      skos:prefLabel "evaluate"@en ;
+      rdfs:comment "Task activity capturing the evaluation of potential security hazards and technical trade-offs."@en .
+
+  cs2023c:TaskActivity_Applications9_Apply
+      a ontoksd:TaskActivity ;
+      rdfs:label "apply"@en ;
+      skos:prefLabel "apply"@en ;
+      rdfs:comment "Task activity capturing the application of optimization and security-related techniques during implementation."@en .
+
+  cs2023c:TaskActivity_Applications9_Secure
+      a ontoksd:TaskActivity ;
+      rdfs:label "secure"@en ;
+      skos:prefLabel "secure"@en ;
+      rdfs:comment "Task activity capturing the implementation of measures to reduce or prevent security hazards in the web page."@en .
+
+  cs2023c:TaskConstraint_Applications9_EvolvingBusinessNeeds
+      a ontoksd:TaskConstraint ;
+      rdfs:label "for evolving business needs"@en ;
+      skos:prefLabel "for evolving business needs"@en ;
+      rdfs:comment "Task constraint stating that the web page must support changing business requirements over time."@en .
+
+  cs2023c:TaskConstraint_Applications9_AppropriateProgrammingLanguages
+      a ontoksd:TaskConstraint ;
+      rdfs:label "using a variety of appropriate programming languages"@en ;
+      skos:prefLabel "using a variety of appropriate programming languages"@en ;
+      rdfs:comment "Task constraint stating that implementation must use programming languages appropriate to the requirements and technical context."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Applications9_AR_Performance_Energy_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "AR-Performance-Energy × Develop"@en ;
+      skos:prefLabel "AR-Performance-Energy × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates AR-Performance-Energy knowledge with the CS2023 skill level Develop in building and optimizing a web page with attention to performance-related concerns."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AR_Performance_Energy_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_NC_Security_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "NC-Security × Develop"@en ;
+      skos:prefLabel "NC-Security × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates NC-Security knowledge with the CS2023 skill level Develop in implementing network-aware protections relevant to a secure web page."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_NC_Security_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_OS_Protection_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "OS-Protection × Develop"@en ;
+      skos:prefLabel "OS-Protection × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates OS-Protection knowledge with the CS2023 skill level Develop in implementing secure execution and protection-related aspects of the web page environment."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_OS_Protection_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_SF_Security_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SF-Security × Develop"@en ;
+      skos:prefLabel "SF-Security × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates SF-Security knowledge with the CS2023 skill level Develop in addressing system-level security hazards during web-page construction and optimization."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SF_Security_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_SE_Design_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SE-Design × Develop"@en ;
+      skos:prefLabel "SE-Design × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates SE-Design knowledge with the CS2023 skill level Develop in designing a secure and adaptable web-page solution."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SE_Design_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_SE_Tools_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SE-Tools × Develop"@en ;
+      skos:prefLabel "SE-Tools × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates SE-Tools knowledge with the CS2023 skill level Develop in using appropriate tools and environments to build and optimize the secure web page."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SE_Tools_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_SPD_Common_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SPD-Common × Develop"@en ;
+      skos:prefLabel "SPD-Common × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates SPD-Common knowledge with the CS2023 skill level Develop in supporting web-page implementation across common software-platform concerns."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SPD_Common_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_SPD_Mobile_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SPD-Mobile × Develop"@en ;
+      skos:prefLabel "SPD-Mobile × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates SPD-Mobile knowledge with the CS2023 skill level Develop in considering mobile-related platform needs relevant to the web page."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SPD_Mobile_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
+  cs2023c:KS_Applications9_SEP_Privacy_1_Develop
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SEP-Privacy × Develop"@en ;
+      skos:prefLabel "SEP-Privacy × Develop"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications9. It associates SEP-Privacy knowledge with the CS2023 skill level Develop in building a web page that addresses privacy-related implications and risks."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SEP_Privacy_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Develop .
+
 }

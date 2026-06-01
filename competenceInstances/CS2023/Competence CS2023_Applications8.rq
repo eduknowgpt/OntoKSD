@@ -1,52 +1,141 @@
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023:  <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov:    <http://www.w3.org/ns/prov#>
 
-############# PARES KS ################
-INSERT {
-  ?ks a ontoksd:KnowledgeSkill ;
-      ontoksd:hasKnowledgeComponent ?k ;
-      ontoksd:hasSkillComponent ?s .
-}
-WHERE {
-  VALUES (?k ?s) {
-    (cs2023:SE-Tools  ontoksd:cs2023ExplainSkill)
-    (cs2023:SPD-Common ontoksd:cs2023ExplainSkill)
-    (cs2023:SPD-Mobile ontoksd:cs2023ExplainSkill)
-  }
-  FILTER NOT EXISTS { ?existing a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?k ; ontoksd:hasSkillComponent ?s . }
-  BIND(IRI(CONCAT("http://purl.org/ontoksd#ks_", STRUUID())) AS ?ks)
-}
-;
+INSERT DATA {
 
-############# COMPETÊNCIA ################
-INSERT {
-  ontoksd:competence_CS2023_Applications8 a ontoksd:Competence ;
-    ontoksd:hasStructureType ontoksd:Atomic ;
-    ontoksd:hasCompetenceType ontoksd:ComputingDomain ;
-    dcterms:title "Decide between native app or cross-platform app"@en ;
-    dcterms:description "Understand performance and scalability issues and evaluate development approaches considering requirements, audience, time-to-market, and costs."@en ;
-    dcterms:source "CS2023 Competence Report"@en ;
-    skos:notation "CS2023 Competence - Applications8"@en ;
-    ontoksd:hasDisposition ontoksd:inventive ,
-                           ontoksd:meticulous ,
-                           ontoksd:responsible ;
-    ontoksd:hasKnowledgeSkill ?ks .
-}
-WHERE { ?ks a ontoksd:KnowledgeSkill . }
-;
+  #################################################################
+  # Competence
+  #################################################################
 
-############# VERBOS ################
-INSERT {
-  ?ks ontoksd:hasSuggestedVerb ?verb .
-}
-WHERE {
-  VALUES (?k ?s ?verb) {
-    (cs2023:SE-Tools   ontoksd:cs2023ExplainSkill bloom:explain)
-    (cs2023:SPD-Common ontoksd:cs2023ExplainSkill bloom:analyze)
-    (cs2023:SPD-Mobile ontoksd:cs2023ExplainSkill bloom:interpret)
-  }
-  ?ks a ontoksd:KnowledgeSkill .
+  cs2023c:Competence_Applications8
+      a ontoksd:Competence ;
+      rdfs:label "Understand performance and scalability issues, and evaluate different approaches and tools by carefully considering factors such as app requirements, target audience, time-to-market, and costs"@en ;
+      skos:prefLabel "Understand performance and scalability issues, and evaluate different approaches and tools by carefully considering factors such as app requirements, target audience, time-to-market, and costs"@en ;
+      skos:definition "Understand performance and scalability issues, and evaluate different approaches and tools by carefully considering factors such as app requirements, target audience, time-to-market, and costs."@en ;
+      rdfs:comment "Competence derived from the CS2023 Applications Competency Area, Task Applications8. The competence is specified through explicit KnowledgeSkill pairs and the desirable professional dispositions associated with the task. Since the CS2023 statement assigns the skill level Explain, the selected knowledge elements are represented with that required skill level, while evaluative comparison remains explicit in the associated task activities and task description."@en ;
+      dcterms:identifier "Applications8"^^xsd:string ;
+      dcterms:source cs2023:CS2023Document ;
+      prov:wasDerivedFrom cs2023:CS2023Document ;
+      ontoksd:hasTask cs2023c:Task_Applications8 ;
+      ontoksd:hasKnowledgeSkill
+          cs2023c:KS_Applications8_SE_Tools_1_Explain ,
+          cs2023c:KS_Applications8_SPD_Common_1_Explain ,
+          cs2023c:KS_Applications8_SPD_Mobile_1_Explain ;
+      ontoksd:hasDisposition
+          ontoksd:inventive ,
+          ontoksd:meticulous ,
+          ontoksd:responsible ;
+      ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern .
+
+  #################################################################
+  # Specification-level Task
+  #################################################################
+
+  cs2023c:Task_Applications8
+      a ontoksd:Task ;
+      rdfs:label "Applications8 task"@en ;
+      skos:prefLabel "Applications8 task"@en ;
+      ontoksd:hasTaskStatement "Determine whether to develop an app as a native app or as a cross-platform app."@en ;
+      rdfs:comment "Specification-level task associated with Competence_Applications8. The task concerns comparing native and cross-platform development approaches in order to determine which is more appropriate for a given application, taking into account performance, scalability, app requirements, target audience, time-to-market, and costs."@en ;
+      dcterms:identifier "Task_Applications8"^^xsd:string ;
+      ontoksd:hasTaskComponent
+          cs2023c:TaskComponent_Applications8_AppDevelopmentApproach ,
+          cs2023c:TaskComponent_Applications8_ApplicationContext ;
+      ontoksd:hasTaskActivity
+          cs2023c:TaskActivity_Applications8_Determine ,
+          cs2023c:TaskActivity_Applications8_Compare ,
+          cs2023c:TaskActivity_Applications8_Evaluate ,
+          cs2023c:TaskActivity_Applications8_Explain ;
+      ontoksd:hasTaskConstraint
+          cs2023c:TaskConstraint_Applications8_NativeVsCrossPlatform ,
+          cs2023c:TaskConstraint_Applications8_RequirementsAudienceTimeCost .
+
+  #################################################################
+  # Task elements
+  #################################################################
+
+  cs2023c:TaskComponent_Applications8_AppDevelopmentApproach
+      a ontoksd:TaskComponent ;
+      rdfs:label "app development approach"@en ;
+      skos:prefLabel "app development approach"@en ;
+      rdfs:comment "Task component corresponding to the development approach under consideration, such as native or cross-platform."@en .
+
+  cs2023c:TaskComponent_Applications8_ApplicationContext
+      a ontoksd:TaskComponent ;
+      rdfs:label "application context and constraints"@en ;
+      skos:prefLabel "application context and constraints"@en ;
+      rdfs:comment "Task component corresponding to the contextual factors that influence the decision, including app requirements, target audience, time-to-market, costs, performance, and scalability expectations."@en .
+
+  cs2023c:TaskActivity_Applications8_Determine
+      a ontoksd:TaskActivity ;
+      rdfs:label "determine"@en ;
+      skos:prefLabel "determine"@en ;
+      rdfs:comment "Task activity capturing the determination of whether a native or cross-platform approach is more appropriate."@en .
+
+  cs2023c:TaskActivity_Applications8_Compare
+      a ontoksd:TaskActivity ;
+      rdfs:label "compare"@en ;
+      skos:prefLabel "compare"@en ;
+      rdfs:comment "Task activity capturing the comparison of alternative approaches and tools for app development."@en .
+
+  cs2023c:TaskActivity_Applications8_Evaluate
+      a ontoksd:TaskActivity ;
+      rdfs:label "evaluate"@en ;
+      skos:prefLabel "evaluate"@en ;
+      rdfs:comment "Task activity capturing the evaluation of performance, scalability, and practical trade-offs among development options."@en .
+
+  cs2023c:TaskActivity_Applications8_Explain
+      a ontoksd:TaskActivity ;
+      rdfs:label "explain"@en ;
+      skos:prefLabel "explain"@en ;
+      rdfs:comment "Task activity capturing the explanation of the rationale for selecting a native or cross-platform approach."@en .
+
+  cs2023c:TaskConstraint_Applications8_NativeVsCrossPlatform
+      a ontoksd:TaskConstraint ;
+      rdfs:label "with respect to native versus cross-platform development"@en ;
+      skos:prefLabel "with respect to native versus cross-platform development"@en ;
+      rdfs:comment "Task constraint stating that the decision must explicitly compare native and cross-platform app development approaches."@en .
+
+  cs2023c:TaskConstraint_Applications8_RequirementsAudienceTimeCost
+      a ontoksd:TaskConstraint ;
+      rdfs:label "considering app requirements, target audience, time-to-market, costs, performance, and scalability"@en ;
+      skos:prefLabel "considering app requirements, target audience, time-to-market, costs, performance, and scalability"@en ;
+      rdfs:comment "Task constraint stating that the decision must be justified in relation to requirements, audience, delivery time, costs, and technical performance concerns."@en .
+
+  #################################################################
+  # Knowledge-Skill pairs
+  #################################################################
+
+  cs2023c:KS_Applications8_SE_Tools_1_Explain
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SE-Tools × Explain"@en ;
+      skos:prefLabel "SE-Tools × Explain"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications8. It associates SE-Tools knowledge with the CS2023 skill level Explain in articulating the implications of different tools and development ecosystems for native and cross-platform applications."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SE_Tools_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Explain .
+
+  cs2023c:KS_Applications8_SPD_Common_1_Explain
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SPD-Common × Explain"@en ;
+      skos:prefLabel "SPD-Common × Explain"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications8. It associates SPD-Common knowledge with the CS2023 skill level Explain in explaining common software platform considerations that affect the choice between native and cross-platform development."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SPD_Common_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Explain .
+
+  cs2023c:KS_Applications8_SPD_Mobile_1_Explain
+      a ontoksd:KnowledgeSkill ;
+      rdfs:label "SPD-Mobile × Explain"@en ;
+      skos:prefLabel "SPD-Mobile × Explain"@en ;
+      rdfs:comment "Knowledge-skill pair for Competence_Applications8. It associates SPD-Mobile knowledge with the CS2023 skill level Explain in justifying mobile-app development choices based on platform-specific capabilities, constraints, and trade-offs."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SPD_Mobile_1 ;
+      ontoksd:hasRequiredSkillLevel cs2023:Explain .
+
 }

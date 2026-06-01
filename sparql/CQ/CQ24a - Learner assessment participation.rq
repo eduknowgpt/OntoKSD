@@ -1,0 +1,21 @@
+# This query retrieves assessment participation records that link learners to concrete assessment occurrences. Thus, the query demonstrates that OntoKSD can explicitly represent learner-specific participation in assessment events.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?learner
+  ?learnerLabel
+  ?assessmentParticipation
+  ?assessmentParticipationLabel
+  ?assessmentOccurrence
+  ?assessmentOccurrenceLabel
+WHERE {
+  ?assessmentParticipation ontoksd:hasLearner ?learner ;
+                           ontoksd:occursInAssessmentOccurrence ?assessmentOccurrence .
+
+  OPTIONAL { ?learner rdfs:label ?learnerLabel . }
+  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?learnerLabel ?assessmentOccurrenceLabel

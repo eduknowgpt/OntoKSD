@@ -1,0 +1,96 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <http://purl.org/cs2023#>
+PREFIX cs2023k:   <http://purl.org/cs2023/knowledge#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C19 a ontoksd:Competence ;
+      rdfs:label "Apply homomorphisms in formal languages"@en ;
+      dcterms:identifier "C19"^^xsd:string ;
+      rdfs:comment "Supporting atomic competence concerned with defining and applying homomorphisms over symbols, strings, and languages in order to relate distinct symbolic representations through formal codifications. Demonstration of this competence requires not only the consistent application of mappings, but also conceptual analysis of which structural properties are preserved, modified, or lost under transformation. The competence also requires formally justified conclusions about the limits of equivalence between representations, making explicit the distinction between structural correspondence and semantic equivalence. Its scope is strictly conceptual and interpretative: it does not involve the computational implementation of encoding functions, and it treats homomorphisms as theoretical instruments for analysis and justification rather than as operational mechanisms."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C19_FormalLanguages_Understanding ,
+                                ontoksd:KS_C19_Homomorphisms_Applying ,
+                                ontoksd:KS_C19_Codifications_Applying ,
+                                ontoksd:KS_C19_AnalyticalThinking_Analyzing ;
+      ontoksd:hasDisposition ontoksd:Reflectiveness .
+
+  ontoksd:KS_C19_FormalLanguages_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C19 KS Pair — Formal Languages × Understanding"@en ;
+      dcterms:identifier "C19-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding the structure of formal languages and their properties independently of domain semantics. This KS pair provides the basis for recognizing what kinds of structural features may or may not be preserved when homomorphic transformations are applied to symbols, strings, or language sets."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C19_FormalLanguages ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2 ,
+                                              cs2023:Topic_AL_Models_4 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:interpret ,
+                                             bloom:explain .
+
+  ontoksd:KS_C19_Homomorphisms_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C19 KS Pair — Homomorphisms × Applying"@en ;
+      dcterms:identifier "C19-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with defining and applying homomorphisms to alphabets, strings, and languages. The emphasis is on the formal extension of symbol mappings to longer structures and on the disciplined use of these mappings to relate distinct symbolic representations in a theoretically controlled way."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C19_Homomorphisms ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2 ,
+                                              cs2023:Topic_AL_Models_4 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:define ,
+                                             bloom:map ,
+                                             bloom:transform .
+
+  ontoksd:KS_C19_Codifications_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C19 KS Pair — Codifications × Applying"@en ;
+      dcterms:identifier "C19-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying codifications as formal translations between symbolic representations. In this competence, codifications are used conceptually to examine representational correspondence, to make explicit the boundaries of formal equivalence, and to support arguments about preservation and loss of structural information."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C19_Codifications ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2 ,
+                                              cs2023:Topic_AL_Models_4 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:encode ,
+                                             bloom:translate .
+
+  ontoksd:KS_C19_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C19 KS Pair — Analytical and Critical Thinking × Analyzing"@en ;
+      dcterms:identifier "C19-KS4"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing preserved and non-preserved properties under homomorphic transformation, justifying the limits of formal equivalence, and differentiating structural correspondence from semantic equivalence. It supports rigorous reflection on what a formal codification can legitimately claim to preserve."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:justify ,
+                                             bloom:differentiate .
+
+  ontoksd:Knowledge_C19_FormalLanguages a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Formal Languages"@en ;
+      skos:prefLabel "Formal Languages"@en ;
+      skos:definition "Computing-specific knowledge concerning alphabets, strings, languages, and their structural properties independently of semantic interpretation."@en ;
+      skos:scopeNote "Local OntoKSD knowledge individual created for C19 because this competence requires a compact structural notion of formal languages as the source and target of homomorphic transformations and codifications."@en ;
+      dcterms:identifier "C19-K-FormalLanguages"^^xsd:string ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  ontoksd:Knowledge_C19_Homomorphisms a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Homomorphisms"@en ;
+      skos:prefLabel "Homomorphisms"@en ;
+      skos:definition "Computing-specific knowledge concerning formal mappings over alphabets, their extension to strings and languages, and the resulting transformation or preservation of structural properties."@en ;
+      skos:scopeNote "Local OntoKSD knowledge individual created for C19 because the competence centers specifically on homomorphisms as theoretical devices for relating formal representations and analyzing structural preservation."@en ;
+      dcterms:identifier "C19-K-Homomorphisms"^^xsd:string ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+  ontoksd:Knowledge_C19_Codifications a ontoksd:Knowledge , skos:Concept ;
+      rdfs:label "Codifications"@en ;
+      skos:prefLabel "Codifications"@en ;
+      skos:definition "Computing-specific knowledge concerning formal codifications between symbolic representations, including conditions of equivalence, non-equivalence, and limits of representational correspondence."@en ;
+      skos:scopeNote "Local OntoKSD knowledge individual created for C19 because codification is treated here as an explicit conceptual component, distinct from homomorphism in order to support reflection on representational equivalence and loss of information."@en ;
+      dcterms:identifier "C19-K-Codifications"^^xsd:string ;
+      ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType .
+
+}

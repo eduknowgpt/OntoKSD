@@ -1,0 +1,51 @@
+PREFIX ontoksd:   <http://purl.org/ontoksd#>
+PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:       <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:      <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:   <http://purl.org/dc/terms/>
+PREFIX bloom:     <http://purl.org/edu/bloom#>
+PREFIX cs2023:    <http://purl.org/cs2023#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+
+INSERT DATA {
+
+  ontoksd:C08_01 a ontoksd:Competence ;
+      rdfs:label "Analyze the System-Level Adequacy of Turing Machine Variants"@en ;
+      dcterms:identifier "C08.01"^^xsd:string ;
+      rdfs:comment "Atomic specialized competence concerned with analyzing, comparing, and interpreting the adequacy of Turing Machine variants in integrated and multi-agent computational systems, with emphasis on structural implications for coordination, modularity, and information flow, without engaging in implementation or metatheoretical discussion."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+      ontoksd:isSpecializationOf ontoksd:C08_IdentifyTuringMachineVariants ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C08_01_TuringMachineVariants_Analyzing ,
+                                ontoksd:KS_C08_01_AnalyticalThinking_Analyzing ;
+      ontoksd:hasDisposition ontoksd:investigative ,
+                             ontoksd:collaborative ,
+                             ontoksd:responsible ,
+                             ontoksd:proactive .
+
+  ontoksd:KS_C08_01_TuringMachineVariants_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C08.01 KS Pair — Turing Machine Variants × Analyzing"@en ;
+      dcterms:identifier "C08.01-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing Turing Machine variants in integrated computational scenarios in order to compare their structural implications for coordination, modularity, clarity of behavior, and adequacy within unified system architectures."@en ;
+      ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C08_TuringMachineVariants ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_8 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:compare ,
+                                             bloom:examine ,
+                                             bloom:differentiate .
+
+  ontoksd:KS_C08_01_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C08.01 KS Pair — Analytical and Critical Thinking × Analyzing"@en ;
+      dcterms:identifier "C08.01-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing integrated computational scenarios, evaluating adequacy trade-offs among alternative formal models, and justifying comparative judgments about Turing Machine variants in system-level contexts."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:evaluate ,
+                                             bloom:justify ,
+                                             bloom:relate .
+
+}

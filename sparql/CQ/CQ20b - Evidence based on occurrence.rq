@@ -1,0 +1,13 @@
+# Retrieves the assessment occurrence on which each evidence instance is based.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?evidence ?evidenceLabel ?assessmentOccurrence ?assessmentOccurrenceLabel
+WHERE {
+  ?evidence ontoksd:evidenceBasedOn ?assessmentOccurrence .
+
+  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+}
+ORDER BY ?evidenceLabel ?assessmentOccurrenceLabel

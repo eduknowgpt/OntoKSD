@@ -1,0 +1,24 @@
+# This query retrieves the EvidenceType associated with evidence instances. It returns each evidence instance together with the EvidenceType used to classify it. Thus, the query demonstrates that OntoKSD can formally classify evidence according to evidence categories and types used in competence assessment and evidential interpretation.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?evidence
+  ?evidenceLabel
+  ?evidenceType
+  ?evidenceTypeLabel
+WHERE {
+  ?evidence a ontoksd:Evidence ;
+            ontoksd:hasEvidenceType ?evidenceType .
+
+  OPTIONAL { ?evidence rdfs:label ?evidenceRdfsLabel . }
+  OPTIONAL { ?evidence skos:prefLabel ?evidenceSkosLabel . }
+  BIND(COALESCE(?evidenceRdfsLabel, ?evidenceSkosLabel, STR(?evidence)) AS ?evidenceLabel)
+
+  OPTIONAL { ?evidenceType rdfs:label ?evidenceTypeRdfsLabel . }
+  OPTIONAL { ?evidenceType skos:prefLabel ?evidenceTypeSkosLabel . }
+  BIND(COALESCE(?evidenceTypeRdfsLabel, ?evidenceTypeSkosLabel, STR(?evidenceType)) AS ?evidenceTypeLabel)
+}
+ORDER BY ?evidenceLabel ?evidenceTypeLabel

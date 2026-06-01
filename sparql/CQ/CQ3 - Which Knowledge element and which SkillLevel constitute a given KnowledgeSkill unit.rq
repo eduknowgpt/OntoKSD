@@ -1,0 +1,26 @@
+# This query retrieves the internal structure of a selected KnowledgeSkill unit. It returns the Knowledge element that serves as its knowledge component and the Bloom-aligned SkillLevel that specifies the required cognitive demand. Thus, the query demonstrates that OntoKSD can decompose a KnowledgeSkill unit into its constitutive knowledge and skill-level elements.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT
+  ?knowledgeSkill
+  ?knowledge
+  ?knowledgeLabel
+  ?skillLevel
+  ?skillLevelLabel
+WHERE {
+  ?knowledgeSkill a ontoksd:KnowledgeSkill ;
+                  ontoksd:hasKnowledgeComponent ?knowledge ;
+                  ontoksd:hasBloomCognitiveLevel ?skillLevel .
+
+  OPTIONAL { ?knowledge rdfs:label ?knowledgeRdfsLabel . }
+  OPTIONAL { ?knowledge skos:prefLabel ?knowledgeSkosLabel . }
+  BIND(COALESCE(?knowledgeRdfsLabel, ?knowledgeSkosLabel, STR(?knowledge)) AS ?knowledgeLabel)
+
+  OPTIONAL { ?skillLevel rdfs:label ?skillLevelRdfsLabel . }
+  OPTIONAL { ?skillLevel skos:prefLabel ?skillLevelSkosLabel . }
+  BIND(COALESCE(?skillLevelRdfsLabel, ?skillLevelSkosLabel, STR(?skillLevel)) AS ?skillLevelLabel)
+}
+ORDER BY ?knowledgeLabel ?skillLevelLabel

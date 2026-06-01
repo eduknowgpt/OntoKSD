@@ -1,0 +1,22 @@
+# This query retrieves the proficiency level associated with evidenced competence constituent records. It returns each EvidencedCompetenceConstituent, the abstract competence constituent to which it refers, and the ProficiencyLevel attributed to that learner-specific demonstration. Thus, the query demonstrates that OntoKSD can represent proficiency interpretation at the level of evidenced Knowledge, Skill, or Disposition elements.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT
+  ?evidencedConstituent
+  ?evidencedConstituentLabel
+  ?competenceConstituent
+  ?competenceConstituentLabel
+  ?proficiencyLevel
+  ?proficiencyLevelLabel
+WHERE {
+  ?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ;
+                        ontoksd:refersToCompetenceConstituent ?competenceConstituent ;
+                        ontoksd:hasProficiencyLevel ?proficiencyLevel .
+
+  OPTIONAL { ?evidencedConstituent rdfs:label ?evidencedConstituentLabel . }
+  OPTIONAL { ?competenceConstituent rdfs:label ?competenceConstituentLabel . }
+  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+}
+ORDER BY ?competenceConstituentLabel ?evidencedConstituentLabel ?proficiencyLevelLabel

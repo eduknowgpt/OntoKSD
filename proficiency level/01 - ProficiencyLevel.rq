@@ -1,0 +1,160 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms:  <http://purl.org/dc/terms/>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+
+  #################################################################
+  # SCALE
+  #################################################################
+
+  ontoksd:Scale_0_100
+      a ontoksd:Scale ;
+      rdfs:label "0–100 numeric assessment scale"@en ;
+      skos:prefLabel "0–100 numeric assessment scale"@en ;
+      skos:prefLabel "Escala numérica de avaliação de 0 a 100"@pt ;
+      dcterms:identifier "Scale_0_100" ;
+      dcterms:description "A numeric scale ranging from 0 to 100, used to express assessment scores in competence evaluation contexts."@en ;
+      ontoksd:minValue "0"^^xsd:decimal ;
+      ontoksd:maxValue "100"^^xsd:decimal ;
+      ontoksd:step "1"^^xsd:decimal ;
+      ontoksd:hasInterval
+          ontoksd:ScaleInterval_0_35 ,
+          ontoksd:ScaleInterval_36_60 ,
+          ontoksd:ScaleInterval_61_79 ,
+          ontoksd:ScaleInterval_80_100 .
+
+  #################################################################
+  # PROFICIENCY SCHEME
+  #################################################################
+
+  ontoksd:ProficiencyScheme_0_100_FourLevels
+      a ontoksd:ProficiencyScheme ;
+      rdfs:label "Four-level proficiency scheme for the 0–100 scale"@en ;
+      skos:prefLabel "Four-level proficiency scheme for the 0–100 scale"@en ;
+      skos:prefLabel "Esquema de proficiência em quatro níveis para a escala de 0 a 100"@pt ;
+      dcterms:identifier "ProficiencyScheme_0_100_FourLevels" ;
+      dcterms:description "A proficiency scheme that interprets scores expressed on the 0–100 scale through four qualitative levels: Insufficient, Basic, Proficient, and Advanced."@en ;
+      ontoksd:usesScale ontoksd:Scale_0_100 ;
+      ontoksd:definesLevel
+          ontoksd:ProficiencyLevel_Insufficient ,
+          ontoksd:ProficiencyLevel_Basic ,
+          ontoksd:ProficiencyLevel_Proficient ,
+          ontoksd:ProficiencyLevel_Advanced ;
+      ontoksd:definesInterval
+          ontoksd:ScaleInterval_0_35 ,
+          ontoksd:ScaleInterval_36_60 ,
+          ontoksd:ScaleInterval_61_79 ,
+          ontoksd:ScaleInterval_80_100 .
+
+  #################################################################
+  # PROFICIENCY LEVELS
+  #################################################################
+
+  ontoksd:ProficiencyLevel_Insufficient
+      a ontoksd:ProficiencyLevel ;
+      rdfs:label "Insufficient"@en ;
+      skos:prefLabel "Insufficient"@en ;
+      skos:prefLabel "Insuficiente"@pt ;
+      dcterms:identifier "ProficiencyLevel_Insufficient" ;
+      dcterms:description "A proficiency level assigned when the learner does not yet demonstrate sufficient evidence of the targeted competence according to the adopted evaluative criteria."@en ;
+      skos:note "This level denotes performance below the expected threshold for satisfactory competence demonstration."@en ;
+	  ontoksd:hasOrdinalPosition "1"^^xsd:integer .
+
+  ontoksd:ProficiencyLevel_Basic
+      a ontoksd:ProficiencyLevel ;
+      rdfs:label "Basic"@en ;
+      skos:prefLabel "Basic"@en ;
+      skos:prefLabel "Básico"@pt ;
+      dcterms:identifier "ProficiencyLevel_Basic" ;
+      dcterms:description "A proficiency level assigned when the learner demonstrates partial and still developing evidence of the targeted competence, with limited consistency or autonomy."@en ;
+      skos:note "This level denotes an initial but already recognizable degree of competence development."@en ;
+	  ontoksd:hasOrdinalPosition "2"^^xsd:integer .
+
+  ontoksd:ProficiencyLevel_Proficient
+      a ontoksd:ProficiencyLevel ;
+      rdfs:label "Proficient"@en ;
+      skos:prefLabel "Proficient"@en ;
+      skos:prefLabel "Proficiente"@pt ;
+      dcterms:identifier "ProficiencyLevel_Proficient" ;
+      dcterms:description "A proficiency level assigned when the learner demonstrates consistent, functionally adequate, and pedagogically expected mastery of the targeted competence."@en ;
+      skos:note "This level denotes satisfactory and reliable competence performance in standard situations."@en ;
+	  ontoksd:hasOrdinalPosition "3"^^xsd:integer .	  
+
+  ontoksd:ProficiencyLevel_Advanced
+      a ontoksd:ProficiencyLevel ;
+      rdfs:label "Advanced"@en ;
+      skos:prefLabel "Advanced"@en ;
+      skos:prefLabel "Avançado"@pt ;
+      dcterms:identifier "ProficiencyLevel_Advanced" ;
+      dcterms:description "A proficiency level assigned when the learner demonstrates solid, autonomous, and transferable mastery of the targeted competence, including performance in more complex situations."@en ;
+      skos:note "This level denotes strong and well-consolidated competence demonstration."@en ;
+	  ontoksd:hasOrdinalPosition "4"^^xsd:integer .
+
+  #################################################################
+  # SCALE INTERVALS
+  #################################################################
+
+  ontoksd:ScaleInterval_0_35
+      a ontoksd:ScaleInterval ;
+      rdfs:label "[0,35]"@en ;
+      skos:prefLabel "[0,35]"@en ;
+      skos:prefLabel "[0,35]"@pt ;
+      dcterms:identifier "ScaleInterval_0_35" ;
+      dcterms:description "Closed interval from 0 to 35 in the 0–100 scale, interpreted as Insufficient in the associated proficiency scheme."@en ;
+      ontoksd:lowerBound "0"^^xsd:decimal ;
+      ontoksd:upperBound "35"^^xsd:decimal ;
+      ontoksd:includesLower "true"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean ;
+      ontoksd:isIntervalOf ontoksd:Scale_0_100 ;
+      ontoksd:intervalDefinedInScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+      ontoksd:correspondsToLevel ontoksd:ProficiencyLevel_Insufficient .
+
+  ontoksd:ScaleInterval_36_60
+      a ontoksd:ScaleInterval ;
+      rdfs:label "[36,60]"@en ;
+      skos:prefLabel "[36,60]"@en ;
+      skos:prefLabel "[36,60]"@pt ;
+      dcterms:identifier "ScaleInterval_36_60" ;
+      dcterms:description "Closed interval from 36 to 60 in the 0–100 scale, interpreted as Basic in the associated proficiency scheme."@en ;
+      ontoksd:lowerBound "36"^^xsd:decimal ;
+      ontoksd:upperBound "60"^^xsd:decimal ;
+      ontoksd:includesLower "true"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean ;
+      ontoksd:isIntervalOf ontoksd:Scale_0_100 ;
+      ontoksd:intervalDefinedInScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+      ontoksd:correspondsToLevel ontoksd:ProficiencyLevel_Basic .
+
+  ontoksd:ScaleInterval_61_79
+      a ontoksd:ScaleInterval ;
+      rdfs:label "[61,79]"@en ;
+      skos:prefLabel "[61,79]"@en ;
+      skos:prefLabel "[61,79]"@pt ;
+      dcterms:identifier "ScaleInterval_61_79" ;
+      dcterms:description "Closed interval from 61 to 79 in the 0–100 scale, interpreted as Proficient in the associated proficiency scheme."@en ;
+      ontoksd:lowerBound "61"^^xsd:decimal ;
+      ontoksd:upperBound "79"^^xsd:decimal ;
+      ontoksd:includesLower "true"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean ;
+      ontoksd:isIntervalOf ontoksd:Scale_0_100 ;
+      ontoksd:intervalDefinedInScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+      ontoksd:correspondsToLevel ontoksd:ProficiencyLevel_Proficient .
+
+  ontoksd:ScaleInterval_80_100
+      a ontoksd:ScaleInterval ;
+      rdfs:label "[80,100]"@en ;
+      skos:prefLabel "[80,100]"@en ;
+      skos:prefLabel "[80,100]"@pt ;
+      dcterms:identifier "ScaleInterval_80_100" ;
+      dcterms:description "Closed interval from 80 to 100 in the 0–100 scale, interpreted as Advanced in the associated proficiency scheme."@en ;
+      ontoksd:lowerBound "80"^^xsd:decimal ;
+      ontoksd:upperBound "100"^^xsd:decimal ;
+      ontoksd:includesLower "true"^^xsd:boolean ;
+      ontoksd:includesUpper "true"^^xsd:boolean ;
+      ontoksd:isIntervalOf ontoksd:Scale_0_100 ;
+      ontoksd:intervalDefinedInScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+      ontoksd:correspondsToLevel ontoksd:ProficiencyLevel_Advanced .
+
+}

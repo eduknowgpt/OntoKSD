@@ -1,0 +1,80 @@
+PREFIX ontoksd:      <http://purl.org/ontoksd#>
+PREFIX rdf:          <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:          <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:          <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos:         <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms:      <http://purl.org/dc/terms/>
+PREFIX bloom:        <http://purl.org/edu/bloom#>
+PREFIX cc2020found:  <http://purl.org/cc2020/foundational#>
+PREFIX cs2023:       <http://purl.org/cs2023#>
+PREFIX cs2023k:      <http://purl.org/cs2023/knowledge#>
+
+INSERT DATA {
+
+  #################################################################
+  # Competency C23
+  #################################################################
+
+  ontoksd:C23 a ontoksd:Competence ;
+      rdfs:label "Interpret and apply algebraic notation for strings and languages"@en ;
+      dcterms:identifier "C23"^^xsd:string ;
+      rdfs:comment "Atomic competence concerned with interpreting, using, and justifying formal algebraic notation for strings and languages in order to represent, analyze, and communicate structural properties of symbolic systems. Demonstration of this competence includes interpreting notation for strings such as epsilon, alphabet symbols, length, concatenation, exponentiation, reversal, prefixes, suffixes, and substrings; interpreting and applying notation for languages such as union, intersection, complement, concatenation, L^n, and L*; using such notation consistently to express structural properties and relations; and justifying the meaning and use of notation in formally rigorous answers."@en ;
+      ontoksd:hasStructureType ontoksd:Atomic ;
+      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+      ontoksd:hasKnowledgeSkill ontoksd:KS_C23_LanguageTheory_Understanding ,
+                                ontoksd:KS_C23_FormalLanguages_Applying ,
+                                ontoksd:KS_C23_WrittenCommunication_Applying ,
+                                ontoksd:KS_C23_AnalyticalThinking_Analyzing ;
+      ontoksd:hasDisposition ontoksd:meticulous ,
+                             ontoksd:responsible .
+
+  ontoksd:KS_C23_LanguageTheory_Understanding a ontoksd:KnowledgeSkill ;
+      rdfs:label "C23 KS Pair — Language Theory × Understanding"@en ;
+      dcterms:identifier "C23-KS1"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with understanding the foundational symbolic notation used to describe strings and related formal structures. It supports the interpretation and explanation of notation such as epsilon, alphabet symbols, length, concatenation, exponentiation, reversal, prefixes, suffixes, and substrings in a formally precise way."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_2 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Understanding ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2 ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:interpret ,
+                                             bloom:explain ,
+                                             bloom:identify .
+
+  ontoksd:KS_C23_FormalLanguages_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C23 KS Pair — Formal Languages × Applying"@en ;
+      dcterms:identifier "C23-KS2"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying algebraic notation to express, derive, and manipulate operations and relations over formal languages. It includes the consistent use of notation for union, intersection, complement, concatenation, iteration, closure, and related symbolic descriptions of language structure."@en ;
+      ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_2 ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2 ,
+                                              cs2023:Topic_AL_Models_2_a_i ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:use ,
+                                             bloom:express ,
+                                             bloom:derive ,
+                                             bloom:manipulate .
+
+  ontoksd:KS_C23_WrittenCommunication_Applying a ontoksd:KnowledgeSkill ;
+      rdfs:label "C23 KS Pair — Written Communication × Applying"@en ;
+      dcterms:identifier "C23-KS3"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with applying written communication knowledge to write, structure, and clarify symbolic expressions and algebraic formulations in technically correct form, so that formal notation remains explicit, readable, and semantically precise."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+      ontoksd:hasBloomCognitiveLevel bloom:Applying ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:WrittenCommunication ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:write ,
+                                             bloom:structure ,
+                                             bloom:clarify .
+
+  ontoksd:KS_C23_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+      rdfs:label "C23 KS Pair — Analytical and Critical Thinking × Analyzing"@en ;
+      dcterms:identifier "C23-KS4"^^xsd:string ;
+      rdfs:comment "Knowledge-skill pairing concerned with analyzing and justifying the interpretation of algebraic notation, including distinguishing meanings, relating symbolic expressions to structural properties, and validating whether a formal expression correctly represents the intended string or language behavior."@en ;
+      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomCognitiveLevel bloom:Analyzing ;
+      ontoksd:hasCurricularKnowledgeReference cc2020found:AnalyticalThinking ;
+      ontoksd:hasBloomLevelJustificationVerb bloom:justify ,
+                                             bloom:distinguish ,
+                                             bloom:relate ,
+                                             bloom:validate .
+
+}

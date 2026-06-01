@@ -1,0 +1,77 @@
+PREFIX bloom:   <http://purl.org/edu/bloom#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT DATA {
+
+bloom:analyze        rdfs:seeAlso <http://dbpedia.org/resource/Analysis> .
+bloom:appraise       rdfs:seeAlso <http://dbpedia.org/resource/Appraisal> .
+bloom:argue          rdfs:seeAlso <http://dbpedia.org/resource/Argument> .
+bloom:assemble       rdfs:seeAlso <http://dbpedia.org/resource/Assembly> .
+bloom:assess         rdfs:seeAlso <http://dbpedia.org/resource/Assessment> .
+bloom:backup         rdfs:seeAlso <http://dbpedia.org/resource/Backup> .
+bloom:calculate      rdfs:seeAlso <http://dbpedia.org/resource/Calculation> .
+bloom:reference      rdfs:seeAlso <http://dbpedia.org/resource/Citation> .
+bloom:classify       rdfs:seeAlso <http://dbpedia.org/resource/Classification> .
+bloom:compare        rdfs:seeAlso <http://dbpedia.org/resource/Comparison> .
+bloom:compile        rdfs:seeAlso <http://dbpedia.org/resource/Compiler> .
+bloom:compose        rdfs:seeAlso <http://dbpedia.org/resource/Composition> .
+bloom:code           rdfs:seeAlso <http://dbpedia.org/resource/Computer_programming> .
+bloom:construct      rdfs:seeAlso <http://dbpedia.org/resource/Construction> .
+bloom:contextualize  rdfs:seeAlso <http://dbpedia.org/resource/Contextualization> .
+bloom:critique       rdfs:seeAlso <http://dbpedia.org/resource/Critique> .
+bloom:decrypt        rdfs:seeAlso <http://dbpedia.org/resource/Decryption> .
+bloom:define         rdfs:seeAlso <http://dbpedia.org/resource/Definition> .
+bloom:describe       rdfs:seeAlso <http://dbpedia.org/resource/Description> .
+bloom:design         rdfs:seeAlso <http://dbpedia.org/resource/Design> .
+bloom:detect         rdfs:seeAlso <http://dbpedia.org/resource/Detection_theory> .
+bloom:develop        rdfs:seeAlso <http://dbpedia.org/resource/Development> .
+bloom:discuss        rdfs:seeAlso <http://dbpedia.org/resource/Discussion> .
+bloom:encrypt        rdfs:seeAlso <http://dbpedia.org/resource/Encryption> .
+bloom:enumerate      rdfs:seeAlso <http://dbpedia.org/resource/Enumeration> .
+bloom:examine        rdfs:seeAlso <http://dbpedia.org/resource/Examination> .
+bloom:exemplify      rdfs:seeAlso <http://dbpedia.org/resource/Example> .
+bloom:explain        rdfs:seeAlso <http://dbpedia.org/resource/Explanation> .
+bloom:illustrate     rdfs:seeAlso <http://dbpedia.org/resource/Illustration> .
+bloom:implement      rdfs:seeAlso <http://dbpedia.org/resource/Implementation> .
+bloom:infer          rdfs:seeAlso <http://dbpedia.org/resource/Inference> .
+bloom:retrieve       rdfs:seeAlso <http://dbpedia.org/resource/Information_retrieval> .
+bloom:interpret      rdfs:seeAlso <http://dbpedia.org/resource/Interpretation> .
+bloom:invent         rdfs:seeAlso <http://dbpedia.org/resource/Invention> .
+bloom:investigate    rdfs:seeAlso <http://dbpedia.org/resource/Investigation> .
+bloom:judge          rdfs:seeAlso <http://dbpedia.org/resource/Judgment> .
+bloom:justify        rdfs:seeAlso <http://dbpedia.org/resource/Justification> .
+bloom:label          rdfs:seeAlso <http://dbpedia.org/resource/Label> .
+bloom:list           rdfs:seeAlso <http://dbpedia.org/resource/List> .
+bloom:name           rdfs:seeAlso <http://dbpedia.org/resource/Name> .
+bloom:operate        rdfs:seeAlso <http://dbpedia.org/resource/Operation> .
+bloom:organize       rdfs:seeAlso <http://dbpedia.org/resource/Organization> .
+bloom:paraphrase     rdfs:seeAlso <http://dbpedia.org/resource/Paraphrase> .
+bloom:perform        rdfs:seeAlso <http://dbpedia.org/resource/Performance> .
+bloom:plan           rdfs:seeAlso <http://dbpedia.org/resource/Planning> .
+bloom:predict        rdfs:seeAlso <http://dbpedia.org/resource/Prediction> .
+bloom:produce        rdfs:seeAlso <http://dbpedia.org/resource/Production> .
+bloom:question       rdfs:seeAlso <http://dbpedia.org/resource/Question> .
+bloom:rate           rdfs:seeAlso <http://dbpedia.org/resource/Rating> .
+bloom:simulate       rdfs:seeAlso <http://dbpedia.org/resource/Simulation> .
+bloom:deploy         rdfs:seeAlso <http://dbpedia.org/resource/Software_deployment> .
+bloom:summarize      rdfs:seeAlso <http://dbpedia.org/resource/Summary> .
+bloom:translate      rdfs:seeAlso <http://dbpedia.org/resource/Translation> .
+bloom:use            rdfs:seeAlso <http://dbpedia.org/resource/Usage> .
+bloom:virtualize     rdfs:seeAlso <http://dbpedia.org/resource/Virtualization> .
+bloom:scan           rdfs:seeAlso <http://dbpedia.org/resource/Vulnerability_scanner> .
+bloom:demonstrate    rdfs:seeAlso <http://dbpedia.org/resource/Demonstration> .
+bloom:execute        rdfs:seeAlso <http://dbpedia.org/resource/Execution_(computing)> .
+bloom:run            rdfs:seeAlso <http://dbpedia.org/resource/Execution_(computing)> .
+bloom:generate       rdfs:seeAlso <http://dbpedia.org/resource/Generation_(problem_solving)> .
+bloom:install        rdfs:seeAlso <http://dbpedia.org/resource/Installation_(computer_programs)> .
+bloom:recall         rdfs:seeAlso <http://dbpedia.org/resource/Recall_(memory)> .
+bloom:recognize      rdfs:seeAlso <http://dbpedia.org/resource/Recognition_(memory)> .
+bloom:trace          rdfs:seeAlso <http://dbpedia.org/resource/Tracing_(software)> .
+bloom:train          rdfs:seeAlso <http://dbpedia.org/resource/Training_(machine_learning)> .
+bloom:validate       rdfs:seeAlso <http://dbpedia.org/resource/Verification_and_validation> .
+bloom:solve          rdfs:seeAlso <http://dbpedia.org/resource/Problem_solving> .
+bloom:model          rdfs:seeAlso <http://dbpedia.org/resource/Model> .
+bloom:contrast       rdfs:seeAlso <http://dbpedia.org/resource/Comparison> .
+bloom:check          rdfs:seeAlso <http://dbpedia.org/resource/Inspection> .
+
+}
