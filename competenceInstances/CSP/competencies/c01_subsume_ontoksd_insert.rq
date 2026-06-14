@@ -12,24 +12,24 @@ PREFIX bloom: <http://purl.org/edu/bloom#>
 
 
 
-############# INSERÇÃO DA COMPETÊNCIA EdukNow_C01 ################
+############# INSERÇÃO DA COMPETÊNCIA PROJECT_C01 ################
 
 INSERT DATA {
-  ontoksd:competence_EdukNow_C01_ABS a ontoksd:Competence ;
+  ontoksd:competence_PROJECT_C01_ABS a ontoksd:Competence ;
    	ontoksd:hasStructureType	ontoksd:Atomic ;
 	ontoksd:hasCompetenceType	ontoksd:ComputingDomain ;
     dcterms:title "Develop problem solutions using Automata (Abstract)"@en ;
     dcterms:description "Abstract (non-aggregating) competence used as a conceptual umbrella for automata-based problem solving. It generalizes the family of competences specialized to finite automata (FA), pushdown automata (PDA), and Turing machines (TM). This node supports taxonomy, curriculum mapping, and navigation; it does not by itself entail mastery of any particular automaton class."@en ;
-    dcterms:source "EdukNow Competence Project"@en ;
-    skos:notation "EdukNow Abstract Competence - C01"@en ;
+    dcterms:source "PROJECT Competence Project"@en ;
+    skos:notation "PROJECT Abstract Competence - C01"@en ;
     ontoksd:hasCompetenceElement ontoksd:collaborative ,
                                  ontoksd:responsible ,
                                  ontoksd:proactive ,
                                  ontoksd:creative ;
 
-	ontoksd:hasSpecialization 	ontoksd:competence_EdukNow_C06,
-								ontoksd:competence_EdukNow_C07,
-								ontoksd:competence_EdukNow_C12 ;
+	ontoksd:hasSpecialization 	ontoksd:competence_PROJECT_C06,
+								ontoksd:competence_PROJECT_C07,
+								ontoksd:competence_PROJECT_C12 ;
 								
 	ontoksd:hasStructureType	ontoksd:Abstract ;
 	ontoksd:hasCompetenceType	ontoksd:ComputingDomain .

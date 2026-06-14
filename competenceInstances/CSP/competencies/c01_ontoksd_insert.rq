@@ -6,22 +6,22 @@ PREFIX cs2013: <http://purl.org/cs2013/>
 PREFIX cc2020fpk: <http://purl.org/cc2020fpk/foundational#>
 PREFIX bloom: <http://purl.org/edu/bloom#>
 
-############# INSERÇÃO DA COMPETÊNCIA EdukNow_C01 ################
+############# INSERÇÃO DA COMPETÊNCIA PROJECT_C01 ################
 
 INSERT {
-  ontoksd:competence_EdukNow_C01_CC a ontoksd:Competence ;
+  ontoksd:competence_PROJECT_C01_CC a ontoksd:Competence ;
     dcterms:title "Develop problem solutions using Automata (Composite)"@en ;
     dcterms:description "Composite competence that requires the combined ability to design, construct, simulate, and validate automata-based solutions across finite automata, pushdown automata, and Turing machines. Learners are expected to interpret requirements, model system behavior with the appropriate automaton class, and use specialized tools (e.g., JFLAP or equivalent) to test correctness, completeness, and conformance with formal specifications. Mastery of this composite competence presupposes achieving the required proficiency in its component competences (FA, PDA, TM)."@en ;
-    dcterms:source "EdukNow Competence Project"@en ;
-    skos:notation "EdukNow Composite Competence - C01"@en ;
+    dcterms:source "PROJECT Competence Project"@en ;
+    skos:notation "PROJECT Composite Competence - C01"@en ;
     ontoksd:hasDisposition ontoksd:collaborative ,
                                  ontoksd:responsible ,
                                  ontoksd:proactive ,
                                  ontoksd:creative ;
 								 
-    ontoksd:hasComponent        ontoksd:competence_EdukNow_C06 ,
-                                ontoksd:competence_EdukNow_C07 ,
-                                ontoksd:competence_EdukNow_C12 ;
+    ontoksd:hasComponent        ontoksd:competence_PROJECT_C06 ,
+                                ontoksd:competence_PROJECT_C07 ,
+                                ontoksd:competence_PROJECT_C12 ;
 								
     ontoksd:hasStructureType    ontoksd:Composite ;
     ontoksd:hasCompetenceType   ontoksd:ComputingDomain .

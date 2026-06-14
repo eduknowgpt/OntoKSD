@@ -38,21 +38,21 @@ INSERT DATA {
   # LEARNING NEED DERIVED FROM THE GAP
   #################################################################
 
-  ontoksd:LearningNeed_DFAConstruction_AnaSilva
+  ontoksd:LearningNeed_DFAConstruction_Learner_01
       a ontoksd:LearningNeed ;
-      rdfs:label "Learning need of Ana Silva regarding DFA construction competence"@en ;
-      skos:prefLabel "Learning need of Ana Silva regarding DFA construction competence"@en ;
-      skos:prefLabel "Necessidade de aprendizagem de Ana Silva relativa à competência de construção de AFD"@pt ;
-      dcterms:identifier "LearningNeed_DFAConstruction_AnaSilva" ;
-      dcterms:description "Learning need identified in Ana Silva's profile because the course expects the competence 'Construct deterministic finite automata for formal languages' at the Advanced level, while the evidenced competence currently indicates the Proficient level."@en ;
-      ontoksd:identifiedIn ontoksd:Profile_AnaSilva ;
+      rdfs:label "Learning need of Learner_01 regarding DFA construction competence"@en ;
+      skos:prefLabel "Learning need of Learner_01 regarding DFA construction competence"@en ;
+      skos:prefLabel "Necessidade de aprendizagem de Learner_01 relativa à competência de construção de AFD"@pt ;
+      dcterms:identifier "LearningNeed_DFAConstruction_Learner_01" ;
+      dcterms:description "Learning need identified in Learner_01's profile because the course expects the competence 'Construct deterministic finite automata for formal languages' at the Advanced level, while the evidenced competence currently indicates the Proficient level."@en ;
+      ontoksd:identifiedIn ontoksd:Profile_Learner_01 ;
       ontoksd:targetsCompetence ontoksd:Competence_DFAConstruction .
 
   #################################################################
   # LINK FROM PROFILE TO LEARNING NEED
   #################################################################
 
-  ontoksd:Profile_AnaSilva
-      ontoksd:hasLearningNeed ontoksd:LearningNeed_DFAConstruction_AnaSilva .
+  ontoksd:Profile_Learner_01
+      ontoksd:hasLearningNeed ontoksd:LearningNeed_DFAConstruction_Learner_01 .
 
 }
