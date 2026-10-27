@@ -148,41 +148,40 @@ bloom:ActionVerbType rdf:type owl:Class ;
 
 ###  http://purl.org/edu/bloom#Analyzing
 bloom:Analyzing rdf:type owl:Class ;
-                rdfs:subClassOf bloom:CognitiveProcessLevel .
+                rdfs:subClassOf bloom:CC2020SkillLevel .
 
 
 ###  http://purl.org/edu/bloom#Applying
 bloom:Applying rdf:type owl:Class ;
-               rdfs:subClassOf bloom:CognitiveProcessLevel .
+               rdfs:subClassOf bloom:CC2020SkillLevel .
 
 
-###  http://purl.org/edu/bloom#CognitiveProcessLevel
-bloom:CognitiveProcessLevel rdf:type owl:Class ;
-                            rdfs:subClassOf bloom:SkillLevel ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty bloom:hasComplexityLevel ;
-                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                              owl:onDataRange xsd:int
-                                            ] ;
-                            owl:disjointWith cs2023:CS2023SkillLevel ;
-                            rdfs:comment "CognitiveProcessLevel represents the six levels of the revised Bloom taxonomy—Remembering, Understanding, Applying, Analyzing, Evaluating, and Creating. These levels are modeled as distinct pedagogical categories that express increasing cognitive demand. They are not intended to form a subclass hierarchy of conceptual containment, but rather an ordered set of alternative levels within the same classificatory scheme." ;
-                            rdfs:label "BloomLevel"@en ;
-                            skos:definition "A skill level defined according to Bloom’s Revised Taxonomy." .
+###  http://purl.org/edu/bloom#CC2020SkillLevel
+bloom:CC2020SkillLevel rdf:type owl:Class ;
+                       rdfs:subClassOf bloom:SkillLevel ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty bloom:hasComplexityLevel ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:int
+                                       ] ;
+                       owl:disjointWith cs2023:CS2023SkillLevel ;
+                       rdfs:comment "CognitiveProcessLevel represents the six levels of the revised Bloom taxonomy—Remembering, Understanding, Applying, Analyzing, Evaluating, and Creating. These levels are modeled as distinct pedagogical categories that express increasing cognitive demand. They are not intended to form a subclass hierarchy of conceptual containment, but rather an ordered set of alternative levels within the same classificatory scheme." ;
+                       skos:definition "A skill level defined according to Bloom’s Revised Taxonomy." .
 
 
 ###  http://purl.org/edu/bloom#Creating
 bloom:Creating rdf:type owl:Class ;
-               rdfs:subClassOf bloom:CognitiveProcessLevel .
+               rdfs:subClassOf bloom:CC2020SkillLevel .
 
 
 ###  http://purl.org/edu/bloom#Evaluating
 bloom:Evaluating rdf:type owl:Class ;
-                 rdfs:subClassOf bloom:CognitiveProcessLevel .
+                 rdfs:subClassOf bloom:CC2020SkillLevel .
 
 
 ###  http://purl.org/edu/bloom#Remembering
 bloom:Remembering rdf:type owl:Class ;
-                  rdfs:subClassOf bloom:CognitiveProcessLevel .
+                  rdfs:subClassOf bloom:CC2020SkillLevel .
 
 
 ###  http://purl.org/edu/bloom#SkillLevel
@@ -227,7 +226,7 @@ SkillLevel is modeled as a classificatory abstraction because curricular and ped
 
 ###  http://purl.org/edu/bloom#Understanding
 bloom:Understanding rdf:type owl:Class ;
-                    rdfs:subClassOf bloom:CognitiveProcessLevel .
+                    rdfs:subClassOf bloom:CC2020SkillLevel .
 
 
 ###  http://purl.org/edu/cs2023#Apply
@@ -269,41 +268,41 @@ cs2023:Explain rdf:type owl:Class ;
 
 ###  http://purl.org/edu/bloom#Analyzing
 bloom:Analyzing rdf:type owl:NamedIndividual ,
-                         bloom:CognitiveProcessLevel ;
+                         bloom:CC2020SkillLevel ;
                 bloom:directPrecedes bloom:Evaluating ;
                 bloom:hasComplexityLevel 4 .
 
 
 ###  http://purl.org/edu/bloom#Applying
 bloom:Applying rdf:type owl:NamedIndividual ,
-                        bloom:CognitiveProcessLevel ;
+                        bloom:CC2020SkillLevel ;
                bloom:directPrecedes bloom:Analyzing ;
                bloom:hasComplexityLevel 3 .
 
 
 ###  http://purl.org/edu/bloom#Creating
 bloom:Creating rdf:type owl:NamedIndividual ,
-                        bloom:CognitiveProcessLevel ;
+                        bloom:CC2020SkillLevel ;
                bloom:hasComplexityLevel 6 .
 
 
 ###  http://purl.org/edu/bloom#Evaluating
 bloom:Evaluating rdf:type owl:NamedIndividual ,
-                          bloom:CognitiveProcessLevel ;
+                          bloom:CC2020SkillLevel ;
                  bloom:directPrecedes bloom:Creating ;
                  bloom:hasComplexityLevel 5 .
 
 
 ###  http://purl.org/edu/bloom#Remembering
 bloom:Remembering rdf:type owl:NamedIndividual ,
-                           bloom:CognitiveProcessLevel ;
+                           bloom:CC2020SkillLevel ;
                   bloom:directPrecedes bloom:Understanding ;
                   bloom:hasComplexityLevel 1 .
 
 
 ###  http://purl.org/edu/bloom#Understanding
 bloom:Understanding rdf:type owl:NamedIndividual ,
-                             bloom:CognitiveProcessLevel ;
+                             bloom:CC2020SkillLevel ;
                     bloom:directPrecedes bloom:Applying ;
                     bloom:hasComplexityLevel 2 .
 

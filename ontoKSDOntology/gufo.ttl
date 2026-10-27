@@ -14,7 +14,6 @@
 
 <http://purl.org/nemo/gufo#> rdf:type owl:Ontology ;
                               owl:versionIRI <http://purl.org/nemo/gufo#/1.0.0> ;
-                              owl:versionInfo "1.0.0"@en ;
                               dc:creator "Almeida, João Paulo A." ,
                                          "Falbo, Ricardo A." ,
                                          "Guizzardi, Giancarlo" ,
@@ -22,8 +21,8 @@
                               dc:title "gUFO: A Lightweight Implementation of the Unified Foundational Ontology (UFO)"@en ;
                               dct:bibliographicCitation "J. P. A. Almeida, G. Guizzardi, T. P. Sales, R. A. Falbo, \"gUFO: A Lightweight Implementation of the Unified Foundational Ontology (UFO)\", 2019, http://purl.org/nemo/doc/gufo"@en ;
                               dct:created "2019-11-11"^^xsd:date ;
-                              dct:modified "2021-11-01"^^xsd:date ;
                               dct:license <https://creativecommons.org/licenses/by/4.0/legalcode> ;
+                              dct:modified "2021-11-01"^^xsd:date ;
                               vann:preferredNamespacePrefix "gufo"@en ;
                               vann:preferredNamespaceUri "http://purl.org/nemo/gufo#"^^xsd:anyURI ;
                               rdfs:comment """The objective of gUFO is to provide a lightweight implementation of the Unified Foundational Ontology (UFO) [1-5] suitable for Semantic Web OWL 2 DL applications. 
@@ -49,7 +48,8 @@ J. P. A. Almeida, G. Guizzardi, T. P. Sales, R. A. Falbo, \"gUFO: A Lightweight 
 
 This work is distributed under Creative Commons Attribution License CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/legalcode>.
 
-For the source repository, see: <https://github.com/nemo-ufes/gufo>"""@en .
+For the source repository, see: <https://github.com/nemo-ufes/gufo>"""@en ;
+                              owl:versionInfo "1.0.0"@en .
 
 #################################################################
 #    Annotation properties
@@ -105,8 +105,7 @@ gufo:broughtAbout rdf:type owl:ObjectProperty ;
                   rdfs:range gufo:Situation ;
                   rdfs:comment """Identifies a gufo:Situation that is brought about by the gufo:Event.
 
-Guizzardi et al. (2013) included a notion of \"brings-about\" that related events to a single (\"maximal\") situation, embodying all the effects of the event at the time it ends. This implementation of gufo:broughtAbout diverges from \"brings-about\" in that work because gufo:broughtAbout can be used to relate events to more than one gufo:Situation. Each gufo:Situation identified through gufo:broughtAbout should be understood as an (improper) part of the maximal situation."""@en ;
-                  rdfs:label "broughtAbout"@en .
+Guizzardi et al. (2013) included a notion of \"brings-about\" that related events to a single (\"maximal\") situation, embodying all the effects of the event at the time it ends. This implementation of gufo:broughtAbout diverges from \"brings-about\" in that work because gufo:broughtAbout can be used to relate events to more than one gufo:Situation. Each gufo:Situation identified through gufo:broughtAbout should be understood as an (improper) part of the maximal situation."""@en .
 
 
 ###  http://purl.org/nemo/gufo#categorizes
@@ -169,8 +168,7 @@ gufo:concernsReifiedQualityValue rdf:type owl:ObjectProperty ,
                                           owl:FunctionalProperty ;
                                  rdfs:domain gufo:QualityValueAttributionSituation ;
                                  rdfs:range gufo:QualityValue ;
-                                 rdfs:comment gufo:concernsQualityValue ,
-                                              "Identifies the gufo:QualityValue (i.e., the reified quality value) associated with the endurant that stands in the gufo:QualityValueAttributionSituation."@en ;
+                                 rdfs:comment "Identifies the gufo:QualityValue (i.e., the reified quality value) associated with the endurant that stands in the gufo:QualityValueAttributionSituation."@en ;
                                  rdfs:label "concernsReifiedQualityValue"@en .
 
 
@@ -962,8 +960,7 @@ Consider, for example, a group of people understood as a gufo:FixedCollection. I
 ###  http://purl.org/nemo/gufo#FunctionalComplex
 gufo:FunctionalComplex rdf:type owl:Class ;
                        rdfs:subClassOf gufo:Object ;
-                       rdfs:comment gufo:isComponentOf ,
-                                    """A complex gufo:Object whose parts (components) play different roles in its composition. 
+                       rdfs:comment """A complex gufo:Object whose parts (components) play different roles in its composition. 
 
 For example, a person could be considered a gufo:FunctionalComplex with the various organs (heart, brain, lungs, etc.) playing different roles. Another example is a scrum team, which is composed by people playing the roles of scrum master, product owner, developer, etc.
 
@@ -1355,7 +1352,7 @@ gufo:TemporaryInstantiationSituation rdf:type owl:Class ;
 
 A gufo:TemporaryInstantiationSituation can account for the time period in which a particular instantiation holds.
 
-Examples include: the situation in which Obama instantiates the role of president, which began in 20/01/2009 and lasted until 20/01/2017; the situation in which Coatria instantiates the role of EU Member, which began in 01/07/2013 (and is still on-going); and the situation in which Steve Jobs instantiates the child phase, which began in 24/02/1955 and lasted until 24/02/1965.
+Examples include: the situation in which Obama instantiates the role of president, which began in 20/01/2009 and lasted until 20/01/2017; the situation in which Croatia instantiates the role of EU Member, which began in 01/07/2013 (and is still on-going); and the situation in which Steve Jobs instantiates the child phase, which began in 24/02/1955 and lasted until 24/02/1965.
 
 This solution is inspired in the qualified relation pattern (http://patterns.dataincubator.org/book/qualified-relation.html)."""@en ;
                                      rdfs:label "TemporaryInstantiationSituation"@en .
@@ -1471,4 +1468,4 @@ time:Instant rdf:type owl:Class ;
 ] .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
