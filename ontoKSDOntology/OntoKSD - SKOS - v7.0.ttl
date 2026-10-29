@@ -71,17 +71,6 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/nemo/gufo#mediates> rdf:type owl:ObjectProperty .
 
 
-###  http://purl.org/ontoksd#alignedWith
-ontoksd:alignedWith rdf:type owl:ObjectProperty ;
-                    rdfs:domain ontoksd:Competence ;
-                    rdfs:range ontoksd:ExternalCompetence ;
-                    rdfs:comment """Relates an OntoKSD competence to an externally defined competence with which it presents some recognized semantic, curricular, or referential correspondence. 
-
-This property provides a direct and simplified way to assert external alignment, without by itself specifying the exact nature, strength, or scope of the correspondence. 
-
-It is useful for representing generic links to external frameworks such as BNCC, CC2020, CS2023, or other competence references. When the alignment must be qualified more precisely—such as indicating whether it is equivalent, partial, broader, narrower, contextual, or based on curricular continuity—a dedicated alignment relator or additional alignment metadata should be used.""" .
-
-
 ###  http://purl.org/ontoksd#appliesKnowledge
 ontoksd:appliesKnowledge rdf:type owl:ObjectProperty ;
                          rdfs:domain ontoksd:Skill ;
@@ -904,7 +893,11 @@ ontoksd:identifiedIn rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/ontoksd#interpretedUsingScheme
 ontoksd:interpretedUsingScheme rdf:type owl:ObjectProperty ;
-                               rdfs:domain ontoksd:EvidencedCompetence ;
+                               rdfs:domain [ rdf:type owl:Class ;
+                                             owl:unionOf ( ontoksd:EvidencedCompetence
+                                                           ontoksd:EvidencedCompetenceConstituent
+                                                         )
+                                           ] ;
                                rdfs:range ontoksd:ProficiencyScheme ;
                                rdfs:comment """Relates an EvidencedCompetence or EvidencedCompetenceConstituent record to the ProficiencyScheme governing its proficiency interpretation.
 
@@ -1678,7 +1671,7 @@ ontoksd:hasOrdinalPosition rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/ontoksd#hasScore
 ontoksd:hasScore rdf:type owl:DatatypeProperty ;
                  rdfs:domain ontoksd:AssessmentParticipation ;
-                 rdfs:range xsd:double .
+                 rdfs:range xsd:decimal .
 
 
 ###  http://purl.org/ontoksd#hasSpecializationDescription
@@ -2182,7 +2175,7 @@ ontoksd:AssessmentParticipation rdf:type owl:Class ;
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty ontoksd:hasScore ;
                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                  owl:onDataRange xsd:double
+                                                  owl:onDataRange xsd:decimal
                                                 ] ;
                                 rdfs:comment """An individualized assessment record that identifies a learner's participation in a particular assessment occurrence and provides an anchor for participant-specific results and competence-related judgments.
 
