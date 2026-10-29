@@ -1,0 +1,534 @@
+@prefix : <http://purl.org/edu/bloom#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bloom: <http://purl.org/edu/bloom#> .
+@prefix cs2023: <http://purl.org/edu/cs2023#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://purl.org/edu/bloom#> .
+
+<http://purl.org/edu/bloom> rdf:type owl:Ontology ;
+                             owl:versionIRI <http://purl.org/edu/bloom/2.0.0> ;
+                             rdfs:comment "Represents framework-specific skill levels as individuals, their ordinal organization, and the classes and properties used to describe action-verb vocabularies. Verb and verb-type individuals are maintained in separate population files."@en ;
+                             rdfs:label "Skill-Level and Action-Verb Ontology for OntoKSD"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/references
+dcterms:references rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/edu/bloom#directFollows
+bloom:directFollows rdf:type owl:ObjectProperty ;
+                    owl:inverseOf bloom:directPrecedes ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain bloom:SkillLevel ;
+                    rdfs:range bloom:SkillLevel ;
+                    rdfs:comment """
+Relates a SkillLevel individual to its immediate predecessor in
+the ordering adopted within the same reference scheme.
+
+directFollows is the inverse of directPrecedes. For example,
+Applying directly follows Understanding in the Bloom-based scheme.
+
+The property is functional because each level has at most one
+immediate predecessor under the adopted linear-order policy.
+As the inverse of the asymmetric and irreflexive directPrecedes,
+it also excludes self-links and reciprocal predecessor links.
+
+The property is not declared transitive: if C directly follows B
+and B directly follows A, A is an indirect predecessor of C.
+Longer chains and cycles involving three or more levels require
+property-path queries or separate validation checks.
+
+The relation expresses category ordering, not mandatory instructional
+prerequisites, measured cognitive differences, or learner progression.
+"""@en ;
+                    rdfs:label "directly follows"@en .
+
+
+###  http://purl.org/edu/bloom#directPrecedes
+bloom:directPrecedes rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ,
+                              owl:AsymmetricProperty ,
+                              owl:IrreflexiveProperty ;
+                     rdfs:domain bloom:SkillLevel ;
+                     rdfs:range bloom:SkillLevel ;
+                     skos:definition """Relates a SkillLevel individual to its immediate successor in the ordering adopted within the same reference scheme.
+
+directPrecedes identifies the immediate successor; its inverse, directFollows, identifies the immediate predecessor. These relations organize level categories rather than occurrences of instruction or learner development.
+
+Under the adopted linear-order policy, both properties are functional, allowing at most one immediate successor and one immediate predecessor per level. The relation is irreflexive because a level cannot immediately precede itself, and asymmetric because two levels cannot immediately precede each other.
+
+Neither property is declared transitive: if A directly precedes B and B directly precedes C, C is an indirect successor of A, not its immediate successor. Property-path queries can retrieve longer chains and detect cycles involving three or more levels, which asymmetry and irreflexivity alone do not exclude.
+
+Ordering applies within a scheme. It does not establish correspondence between schemes, measurable differences in cognitive demand, mandatory instructional prerequisites, or learner progression.""" .
+
+
+###  http://purl.org/edu/bloom#hasActionVerb
+bloom:hasActionVerb rdf:type owl:ObjectProperty ;
+                    owl:inverseOf bloom:isActionVerbFor ;
+                    rdfs:domain bloom:SkillLevel ;
+                    rdfs:range bloom:ActionVerb ;
+                    rdfs:comment """
+Associates a SkillLevel individual with an ActionVerb whose use is
+associated with that category under an identifiable source or
+contextual justification.
+
+hasActionVerb relates the level to the vocabulary entry;
+isActionVerbFor expresses the inverse direction. The association
+supports retrieval of expressions that may help formulate or interpret
+performance requirements.
+
+The property is not functional because a level may be associated
+with multiple verbs. Its inverse is also not functional because
+a verb may be associated with multiple levels.
+
+The association does not determine the cognitive demand of every
+use of the expression. Interpretation requires examining the task,
+knowledge, expected product, and applicable conditions. The property
+does not require every level to have a populated verb list.
+"""@en .
+
+
+###  http://purl.org/edu/bloom#hasActionVerbType
+bloom:hasActionVerbType rdf:type owl:ObjectProperty ;
+                        owl:inverseOf bloom:isActionVerbTypeFor ;
+                        rdfs:domain bloom:ActionVerb ;
+                        rdfs:range bloom:ActionVerbType ;
+                        rdfs:comment """
+Associates an ActionVerb with an ActionVerbType that classifies
+its pedagogical, disciplinary, or framework-related scope.
+
+hasActionVerbType relates the vocabulary entry to its category;
+isActionVerbTypeFor expresses the inverse direction.
+
+The property is not functional because categories may overlap:
+an expression may be both computing-oriented and listed in a
+particular curricular framework. Multiple verbs may share a type.
+
+Classification supports vocabulary organization and filtering.
+It does not assign a SkillLevel, establish that all uses of the verb
+have the same cognitive demand, or replace provenance for a particular
+verb–level association.
+"""@en .
+
+
+###  http://purl.org/edu/bloom#isActionVerbFor
+bloom:isActionVerbFor rdf:type owl:ObjectProperty ;
+                      rdfs:domain bloom:ActionVerb ;
+                      rdfs:range bloom:SkillLevel ;
+                      rdfs:comment """
+Associates an ActionVerb with a SkillLevel individual for which
+the expression is listed or explicitly justified as a candidate
+description of expected performance.
+
+This property is the inverse of hasActionVerb. It allows a vocabulary
+entry to identify multiple associated levels, including categories
+from different reference schemes where separately supported.
+
+The property is not functional because the interpretation of an
+expression may vary with its source, sense, and task context.
+Multiple associations do not establish equivalence between their
+target levels.
+
+Each association should retain its supporting source or contextual
+justification. The relation does not automatically classify a task,
+assign a required level to a KnowledgeSkill pairing, or attribute
+proficiency to a learner.
+"""@en .
+
+
+###  http://purl.org/edu/bloom#isActionVerbTypeFor
+bloom:isActionVerbTypeFor rdf:type owl:ObjectProperty ;
+                          rdfs:domain bloom:ActionVerbType ;
+                          rdfs:range bloom:ActionVerb ;
+                          rdfs:comment """
+Associates an ActionVerbType with an ActionVerb classified under
+that category.
+
+This property is the inverse of hasActionVerbType and supports
+retrieval of vocabulary entries by pedagogical, disciplinary,
+or framework-related scope.
+
+The property is not functional because a category may classify
+multiple verbs. Category membership is not exclusive unless additional
+restrictions explicitly establish exclusivity.
+
+The association concerns vocabulary classification rather than
+cognitive-level assignment. It does not independently establish
+the source or validity of any verb–level association.
+"""@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/edu/bloom#hasOrdinalPosition
+bloom:hasOrdinalPosition rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain bloom:SkillLevel ;
+                         rdfs:range xsd:int ;
+                         rdfs:comment """Associates a SkillLevel individual with an integer representing its ordinal position within the adopted reference scheme.
+
+hasOrdinalPosition supports sorting, filtering, and retrieval of level categories. Values are interpreted within their scheme: identical positions across schemes do not establish equivalent categories, and differences between positions do not measure distances in cognitive demand.
+
+The property is functional because each level occupies a single position within its scheme. Functionality does not require different levels to have different positions; uniqueness and consistency with directPrecedes require separate checks.
+
+An ordinal position does not establish mandatory instructional prerequisites, learner progression, or attained proficiency.""" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/edu/bloom#ActionVerb
+bloom:ActionVerb rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty bloom:hasActionVerbType ;
+                                   owl:someValuesFrom bloom:ActionVerbType
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty bloom:isActionVerbFor ;
+                                   owl:someValuesFrom bloom:SkillLevel
+                                 ] ;
+                 owl:disjointWith bloom:ActionVerbType ,
+                                  bloom:SkillLevel ;
+                 rdfs:comment """A lexical action expression used to describe expected performance in a competence specification or learning outcome.
+
+In OntoKSD, ActionVerb represents an identifiable vocabulary entry that can be classified through hasActionVerbType and associated with one or more SkillLevel individuals through isActionVerbFor. A KnowledgeSkill pairing may reference a verb through hasBloomLevelJustificationVerb to document the wording supporting its required-level assignment.
+
+Verb–level associations express source-based or explicitly justified interpretations. A verb alone does not determine cognitive demand: its meaning depends on the knowledge involved, expected product, task conditions, and assessment criteria. The same expression may therefore be associated with different levels without implying equivalence between those levels.
+
+ActionVerb is distinct from SkillLevel, which qualifies expected performance, and from Skill, which specifies a capability. Its instances are maintained in separate vocabulary files, allowing lexical content to evolve independently of the core ontology.""" .
+
+
+###  http://purl.org/edu/bloom#ActionVerbType
+bloom:ActionVerbType rdf:type owl:Class ;
+                     owl:disjointWith bloom:SkillLevel ;
+                     rdfs:comment """A controlled category used to classify action-verb vocabulary entries according to their pedagogical, disciplinary, or framework-related scope.
+
+In OntoKSD, ActionVerbType individuals are associated with ActionVerb through hasActionVerbType. Categories may distinguish general educational expressions, computing-oriented expressions, and expressions listed in a particular curricular framework.
+
+These classifications are not necessarily exclusive: the same verb may belong to multiple categories. They support vocabulary organization, filtering, and reuse without determining the verb’s associated SkillLevel.
+
+Category membership does not replace provenance for a particular verb–level association. Such associations require their own source or contextual justification.
+
+ActionVerbType is distinct from ActionVerb and SkillLevel. Its individuals are maintained in separate vocabulary files.""" .
+
+
+###  http://purl.org/edu/bloom#CC2020SkillLevel
+bloom:CC2020SkillLevel rdf:type owl:Class ;
+                       rdfs:subClassOf bloom:SkillLevel ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty bloom:directFollows ;
+                                         owl:allValuesFrom bloom:CC2020SkillLevel
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty bloom:directPrecedes ;
+                                         owl:allValuesFrom bloom:CC2020SkillLevel
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty bloom:hasOrdinalPosition ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:int
+                                       ] ;
+                       owl:disjointWith cs2023:CS2023SkillLevel ;
+                       rdfs:comment """A SkillLevel category belonging to the revised Bloom cognitive-process scheme used in CC2020-oriented OntoKSD specifications.
+
+CC2020SkillLevel has six named individuals: Remembering, Understanding, Applying, Analyzing, Evaluating, and Creating. These individuals qualify the performance expected for a knowledge element through a KnowledgeSkill pairing. They are not subclasses or learner-specific proficiency judgments.
+
+The class name identifies the scheme’s use in CC2020-oriented specifications; it does not imply that CC2020 originated Bloom’s taxonomy.
+
+Ordinal positions and ordering relations organize the categories within the scheme. They do not establish equal distances in cognitive demand or a mandatory instructional sequence.
+
+CC2020SkillLevel is disjoint from CS2023SkillLevel because their individuals denote categories belonging to distinct reference schemes. Correspondence between their categories requires explicit justification and does not establish identity.""" .
+
+
+###  http://purl.org/edu/bloom#SkillLevel
+bloom:SkillLevel rdf:type owl:Class ;
+                 rdfs:comment """A controlled category used to qualify the expected performance required by a competence specification within an identifiable reference scheme.
+
+In OntoKSD, SkillLevel provides the common superclass for CC2020SkillLevel and CS2023SkillLevel. Specific levels, such as Applying and Develop, are represented as individuals of their respective scheme classes, rather than as classes themselves.
+
+A KnowledgeSkill pairing identifies its required level through hasSkillLevel, allowing the same knowledge element to participate in requirements with different performance expectations.
+
+SkillLevel is distinct from Skill, which represents a capability constituent, and from ProficiencyLevel, which expresses an interpretation of assessed performance or a curricular proficiency expectation. Assigning a required SkillLevel does not establish that a learner has demonstrated it.
+
+Levels may have an ordinal position and explicit ordering relations within their scheme. These support organization and retrieval without establishing measurable distances, equivalence across schemes, or a mandatory learning sequence.
+
+This shared abstraction supports consistent references and queries across schemes while preserving their distinct categories and interpretations.""" .
+
+
+###  http://purl.org/edu/cs2023#CS2023SkillLevel
+cs2023:CS2023SkillLevel rdf:type owl:Class ;
+                        rdfs:subClassOf bloom:SkillLevel ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty bloom:directFollows ;
+                                          owl:allValuesFrom cs2023:CS2023SkillLevel
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty bloom:directPrecedes ;
+                                          owl:allValuesFrom cs2023:CS2023SkillLevel
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty bloom:hasOrdinalPosition ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:int
+                                        ] ;
+                        rdfs:comment """A SkillLevel category belonging to the four-level scheme adopted in CS2023 to qualify expected performance in computing.
+
+CS2023SkillLevel has four named individuals: Explain, Apply, Evaluate, and Develop. In OntoKSD, these individuals qualify the performance required for a knowledge element through a KnowledgeSkill pairing. They are not subclasses, explicit Skill constituents, or learner-specific proficiency judgments.
+
+The CS2023 categories are loosely aligned with revised Bloom’s taxonomy. This alignment supports comparison without making similarly named categories identical or interchangeable.
+
+Ordinal positions and ordering relations organize the categories within the adopted representation. They do not measure distances in cognitive demand or prescribe a complete sequence of learning prerequisites.
+
+CS2023SkillLevel specializes SkillLevel and is disjoint from CC2020SkillLevel, preserving the identity of each framework’s categories while supporting shared properties and queries.""" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/edu/bloom#Analyzing
+bloom:Analyzing rdf:type owl:NamedIndividual ,
+                         bloom:CC2020SkillLevel ;
+                bloom:directPrecedes bloom:Evaluating ;
+                bloom:hasOrdinalPosition 4 ;
+                rdfs:comment """
+A cognitive-process category concerning the examination of parts and
+their relationships to one another and to an overall structure or purpose.
+
+Analyzing qualifies requirements involving differentiation, organization,
+or attribution, such as examining how the components of an algorithm
+contribute to its behavior.
+
+In OntoKSD, this individual identifies an expected performance category
+within the CC2020-oriented scheme. Its ordinal position does not measure
+cognitive difficulty or establish learner attainment.
+"""@en ;
+                rdfs:label "Analyzing"@en .
+
+
+###  http://purl.org/edu/bloom#Applying
+bloom:Applying rdf:type owl:NamedIndividual ,
+                        bloom:CC2020SkillLevel ;
+               bloom:directPrecedes bloom:Analyzing ;
+               bloom:hasOrdinalPosition 3 ;
+               rdfs:comment """
+A cognitive-process category concerning the execution or implementation
+of a procedure in a given situation.
+
+Applying qualifies requirements in which knowledge is mobilized through
+a method, technique, or operation, such as executing a specified algorithm
+or using a procedure to solve a problem. The required interpretation
+depends on the task and its conditions, rather than on an action verb alone.
+
+In OntoKSD, this individual qualifies a KnowledgeSkill requirement.
+It is distinct from the CS2023 category Apply and from an attributed
+proficiency level.
+"""@en ;
+               rdfs:label "Applying"@en .
+
+
+###  http://purl.org/edu/bloom#Creating
+bloom:Creating rdf:type owl:NamedIndividual ,
+                        bloom:CC2020SkillLevel ;
+               bloom:hasOrdinalPosition 6 ;
+               rdfs:comment """
+A cognitive-process category concerning the organization of elements
+into a coherent or functional whole through generating, planning,
+or producing.
+
+Creating qualifies requirements involving the formulation or construction
+of a solution or artifact, such as designing a computational model
+to address stated requirements. It does not require that the result
+be unprecedented beyond the educational context.
+
+In OntoKSD, this individual identifies required performance rather
+than evidence that a learner has produced an adequate result.
+Its final position in the adopted ordering does not prescribe an
+instructional sequence.
+"""@en ;
+               rdfs:label "Creating"@en .
+
+
+###  http://purl.org/edu/bloom#Evaluating
+bloom:Evaluating rdf:type owl:NamedIndividual ,
+                          bloom:CC2020SkillLevel ;
+                 bloom:directPrecedes bloom:Creating ;
+                 bloom:hasOrdinalPosition 5 ;
+                 rdfs:comment """
+A cognitive-process category concerning judgments made against
+identifiable criteria and standards.
+
+Evaluating qualifies requirements involving checking or critiquing,
+such as assessing whether a proposed solution satisfies correctness,
+security, or efficiency criteria. The criteria distinguish evaluative
+judgment from unsupported preference.
+
+In OntoKSD, this individual qualifies expected performance within
+the CC2020-oriented scheme. It is distinct from the CS2023 category
+Evaluate and does not itself represent an assessment judgment.
+"""@en ;
+                 rdfs:label "Evaluating"@en .
+
+
+###  http://purl.org/edu/bloom#Remembering
+bloom:Remembering rdf:type owl:NamedIndividual ,
+                           bloom:CC2020SkillLevel ;
+                  bloom:directPrecedes bloom:Understanding ;
+                  bloom:hasOrdinalPosition 1 ;
+                  rdfs:comment """
+A cognitive-process category concerning the recognition or recall
+of relevant knowledge from memory.
+
+Remembering qualifies requirements involving the retrieval of facts,
+terms, conventions, or previously learned procedures, such as recalling
+the defining components of a deterministic finite automaton.
+
+In OntoKSD, this individual specifies an expected cognitive process.
+Its first position in the adopted scheme does not establish that
+instruction must begin with remembering tasks or that recall alone
+demonstrates a competence.
+"""@en ;
+                  rdfs:label "Remembering"@en .
+
+
+###  http://purl.org/edu/bloom#Understanding
+bloom:Understanding rdf:type owl:NamedIndividual ,
+                             bloom:CC2020SkillLevel ;
+                    bloom:directPrecedes bloom:Applying ;
+                    bloom:hasOrdinalPosition 2 ;
+                    rdfs:comment """
+A cognitive-process category concerning the construction of meaning
+from verbal, written, graphical, or other representations.
+
+Understanding qualifies requirements involving interpretation,
+exemplification, classification, summarization, inference, comparison,
+or explanation, such as explaining the behavior represented by an
+automaton diagram.
+
+In OntoKSD, this individual identifies the required treatment of
+knowledge within a specification. It is not an assertion that a
+particular learner understands that knowledge.
+"""@en ;
+                    rdfs:label "Understanding"@en .
+
+
+###  http://purl.org/edu/cs2023#Apply
+cs2023:Apply rdf:type owl:NamedIndividual ,
+                      cs2023:CS2023SkillLevel ;
+             bloom:directPrecedes cs2023:Evaluate ;
+             bloom:hasOrdinalPosition 2 ;
+             rdfs:comment """
+A CS2023 skill-level category concerning the use of knowledge,
+procedures, or techniques to carry out a task.
+
+Apply qualifies requirements such as configuring a system, interpreting
+an output, or testing a solution, where the intended demand is
+established by the task and its conditions. These examples do not
+determine the category independently of context.
+
+In OntoKSD, Apply is a controlled value for CS2023-oriented
+KnowledgeSkill requirements. It is distinct from bloom:Applying;
+similar terminology does not establish category identity.
+"""@en ;
+             rdfs:label "Apply"@en .
+
+
+###  http://purl.org/edu/cs2023#Develop
+cs2023:Develop rdf:type owl:NamedIndividual ,
+                        cs2023:CS2023SkillLevel ;
+               bloom:hasOrdinalPosition 4 ;
+               rdfs:comment """
+A CS2023 skill-level category concerning the formulation, construction,
+integration, or revision of a solution or artifact.
+
+Develop qualifies requirements involving activities such as designing,
+composing, refactoring, or producing, interpreted against the expected
+result and task scope. It is not limited to writing source code.
+
+In OntoKSD, this individual qualifies required performance in the
+CS2023 scheme. Its ordinal position is a representation convention,
+not evidence of proficiency or a requirement that instruction follow
+all preceding categories.
+"""@en ;
+               rdfs:label "Develop"@en .
+
+
+###  http://purl.org/edu/cs2023#Evaluate
+cs2023:Evaluate rdf:type owl:NamedIndividual ,
+                         cs2023:CS2023SkillLevel ;
+                bloom:directPrecedes cs2023:Develop ;
+                bloom:hasOrdinalPosition 3 ;
+                rdfs:comment """
+A CS2023 skill-level category concerning the examination, comparison,
+and judgment of information, alternatives, or solutions.
+
+Evaluate qualifies requirements involving analytical distinctions
+or justified decisions, such as comparing design alternatives against
+stated criteria. Its interpretation follows the CS2023 scheme rather
+than an assumed identity with a single Bloom category.
+
+In OntoKSD, this individual identifies expected performance.
+It is distinct from bloom:Evaluating and from the learner-specific
+judgment through which that performance may later be assessed.
+"""@en ;
+                rdfs:label "Evaluate"@en .
+
+
+###  http://purl.org/edu/cs2023#Explain
+cs2023:Explain rdf:type owl:NamedIndividual ,
+                        cs2023:CS2023SkillLevel ;
+               bloom:directPrecedes cs2023:Apply ;
+               bloom:hasOrdinalPosition 1 ;
+               rdfs:comment """
+A CS2023 skill-level category concerning the articulation of relevant
+knowledge through descriptions, explanations, summaries, or related
+forms of expression.
+
+Explain qualifies requirements such as describing a concept,
+summarizing a process, or explaining system behavior. Its scope
+follows the CS2023 category, which is loosely aligned with the
+Remembering and Understanding categories of revised Bloom's taxonomy.
+
+In OntoKSD, this individual is a level value rather than an ActionVerb
+entry. The lexical expression explain may be represented separately
+in the action-verb vocabulary.
+"""@en ;
+               rdfs:label "Explain"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

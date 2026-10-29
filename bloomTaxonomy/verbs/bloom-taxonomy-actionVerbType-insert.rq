@@ -3,25 +3,57 @@ PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl:     <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
 INSERT DATA {
 
   bloom:StandardVerb
-      rdf:type owl:NamedIndividual ,
-               bloom:ActionVerbType ;
-      rdfs:label "Standard Bloom Verb"@en ;
-      skos:definition "An action verb traditionally associated with Bloom’s Revised Taxonomy and used in general educational objective specification."@en .
+      rdf:type owl:NamedIndividual, bloom:ActionVerbType ;
+      rdfs:label "CCECC Standard-List Verb"@en ;
+      skos:definition """
+		A vocabulary category identifying an action expression included
+		in the baseline verb list presented in Table 1 of Bloom's for
+		Computing.
+		"""@en ;
+      skos:note """
+		Standard refers to the baseline list adopted by the cited report,
+		not to a universal or exclusive list of Bloom verbs. Membership
+		does not determine the level associated with every use of the
+		expression.
+		"""@en ;
+      dcterms:references <https://doi.org/10.1145/3587276> .
 
   bloom:ComputingVerb
-      rdf:type owl:NamedIndividual ,
-               bloom:ActionVerbType ;
+      rdf:type owl:NamedIndividual, bloom:ActionVerbType ;
       rdfs:label "Computing-Enhanced Verb"@en ;
-      skos:definition "An action verb adapted or emphasized for competence specification in computing education contexts."@en .
+      skos:definition """
+		A vocabulary category identifying an action expression included
+		in the enhanced verb list presented in Table 2 of Bloom's for
+		Computing.
+		"""@en ;
+      skos:note """
+		The category identifies membership in the documented extension,
+		rather than every verb used in computing. Its expressions are
+		not necessarily technical or exclusive to computing disciplines.
+		Membership may overlap with other vocabulary categories.
+		"""@en ;
+      dcterms:references <https://doi.org/10.1145/3587276> .
 
   bloom:CS2023Verb
-      rdf:type owl:NamedIndividual ,
-               bloom:ActionVerbType ;
-      rdfs:label "CS2023 Verb"@en ;
-      skos:definition "An action verb explicitly associated with the skill-level formulation adopted in CS2023."@en .
+      rdf:type owl:NamedIndividual, bloom:ActionVerbType ;
+      rdfs:label "CS2023 Table-Listed Verb"@en ;
+      skos:definition """
+		A vocabulary category identifying an action expression explicitly
+		listed under a skill-level category in Table 1 of CS2023.
+		"""@en ;
+      skos:note """
+		Membership records the expression's presence in the CS2023 table.
+		It does not establish that the expression originated in CS2023
+		or that every associated SkillLevel is supported by that report.
+		The source and interpretation of each verb–level association
+		must remain identifiable.
+		"""@en ;
+      dcterms:references
+          <https://csed.acm.org/wp-content/uploads/2025/11/CS2023-Report.htm> .
 
 }
