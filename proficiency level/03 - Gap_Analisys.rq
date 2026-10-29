@@ -1,58 +1,99 @@
+# Run after 01 and 02. This is an executable, example-specific gap policy.
+# dcterms:references on the course specification identifies its proficiency scheme in this example.
+# Cross-scheme comparisons and diagnosis from absent evidence are not performed.
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
+ontoksd:CourseCompetenceSpecification_DFAConstruction_FormalLanguages a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "Course competence specification for DFA construction in Formal Languages and Automata"@en ;
+    dcterms:description "Illustrative curricular expectation addressing DFA construction at Advanced under the referenced example proficiency scheme. This is distinct from a course passing score or a claim of learner attainment."@en ;
+    dcterms:identifier "CourseCompetenceSpecification_DFAConstruction_FormalLanguages" ;
+    dcterms:references ontoksd:ProficiencyScheme_0_100_FourLevels ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguages ;
+    ontoksd:mediatesCourseCompetence ontoksd:Competence_DFAConstruction ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:ProficiencyLevel_Advanced ;
+    skos:prefLabel "Course competence specification for DFA construction in Formal Languages and Automata"@en,
+        "Especificação curricular da competência de construção de AFD em Linguagens Formais e Autômatos"@pt .
 
-  #################################################################
-  # COURSE
-  #################################################################
+ontoksd:GapAnalysisRule_DFAExample rdfs:label "Example same-scheme ordinal gap comparison"@en ;
+    dcterms:description "For this selected profile, course, and judgment, the example policy treats the course minimum as a desired reference. A lower observed ordinal position indicates a learning need. Missing judgments are not treated as zero proficiency. This is an application rule, not an OWL entailment or a general student-approval policy."@en .
 
-  ontoksd:Course_FormalLanguages
-      a ontoksd:Course ;
-      rdfs:label "Formal Languages and Automata"@en ;
-      skos:prefLabel "Formal Languages and Automata"@en ;
-      skos:prefLabel "Linguagens Formais e Autômatos"@pt ;
-      dcterms:identifier "Course_FormalLanguages" ;
-      dcterms:description "Course focused on formal languages, automata, and related models of computation."@en .
+ontoksd:Course_FormalLanguages a ontoksd:Course ;
+    rdfs:label "Formal Languages and Automata"@en ;
+    dcterms:description "Course focused on formal languages, automata, and related models of computation."@en ;
+    dcterms:identifier "Course_FormalLanguages" ;
+    ontoksd:hasInstructionalUnit ontoksd:Assessment_DFAWrittenExam ;
+    skos:prefLabel "Formal Languages and Automata"@en,
+        "Linguagens Formais e Autômatos"@pt .
+}
 
-  #################################################################
-  # CURRICULAR EXPECTATION FOR THE COMPETENCE
-  #################################################################
-
-  ontoksd:CourseCompetenceSpecification_DFAConstruction_FormalLanguages
-      a ontoksd:CourseCompetenceSpecification ;
-      rdfs:label "Course competence specification for DFA construction in Formal Languages and Automata"@en ;
-      skos:prefLabel "Course competence specification for DFA construction in Formal Languages and Automata"@en ;
-      skos:prefLabel "Especificação curricular da competência de construção de AFD em Linguagens Formais e Autômatos"@pt ;
-      dcterms:identifier "CourseCompetenceSpecification_DFAConstruction_FormalLanguages" ;
-      dcterms:description "Curricular specification stating that the competence of constructing deterministic finite automata is mandatory in the course and is expected to be addressed at least at the Advanced proficiency level."@en ;
-      ontoksd:mediatesCourse ontoksd:Course_FormalLanguages ;
-      ontoksd:mediatesCourseCompetence ontoksd:Competence_DFAConstruction ;
-      ontoksd:isMandatory "true"^^xsd:boolean ;
-      ontoksd:requiresMinimumProficiencyLevel ontoksd:ProficiencyLevel_Advanced .
-
-  #################################################################
-  # LEARNING NEED DERIVED FROM THE GAP
-  #################################################################
-
-  ontoksd:LearningNeed_DFAConstruction_Learner_01
-      a ontoksd:LearningNeed ;
-      rdfs:label "Learning need of Learner_01 regarding DFA construction competence"@en ;
-      skos:prefLabel "Learning need of Learner_01 regarding DFA construction competence"@en ;
-      skos:prefLabel "Necessidade de aprendizagem de Learner_01 relativa à competência de construção de AFD"@pt ;
+;
+# Refresh only the named output owned by this example rule. Other needs are untouched.
+DELETE { ?need ?property ?value . ?profile ontoksd:hasLearningNeed ?need . }
+WHERE {
+  VALUES (?profile ?need) {
+    (ontoksd:Profile_Learner_01 ontoksd:LearningNeed_DFAConstruction_Learner_01)
+  }
+  ?need dcterms:creator ontoksd:GapAnalysisRule_DFAExample ; ?property ?value .
+}
+;
+INSERT {
+  ?need a ontoksd:LearningNeed ;
+      rdfs:label "Learning need concerning DFA construction"@en ;
       dcterms:identifier "LearningNeed_DFAConstruction_Learner_01" ;
-      dcterms:description "Learning need identified in Learner_01's profile because the course expects the competence 'Construct deterministic finite automata for formal languages' at the Advanced level, while the evidenced competence currently indicates the Proficient level."@en ;
-      ontoksd:identifiedIn ontoksd:Profile_Learner_01 ;
-      ontoksd:targetsCompetence ontoksd:Competence_DFAConstruction .
-
-  #################################################################
-  # LINK FROM PROFILE TO LEARNING NEED
-  #################################################################
-
-  ontoksd:Profile_Learner_01
-      ontoksd:hasLearningNeed ontoksd:LearningNeed_DFAConstruction_Learner_01 .
-
+      dcterms:creator ontoksd:GapAnalysisRule_DFAExample ;
+      dcterms:description ?description ;
+      dcterms:references ?judgment, ?specification, ?scheme ;
+      ontoksd:identifiedIn ?profile ;
+      ontoksd:targetsCompetence ?competence .
+  ?profile ontoksd:hasLearningNeed ?need .
+}
+WHERE {
+  # Explicitly selected judgment: no implicit "latest", "best", or "worst" policy.
+  VALUES (?profile ?course ?judgment ?need) {
+    (ontoksd:Profile_Learner_01 ontoksd:Course_FormalLanguages
+     ontoksd:EvidencedCompetence_DFAConstruction_Learner_01
+     ontoksd:LearningNeed_DFAConstruction_Learner_01)
+  }
+  ?specification a ontoksd:CourseCompetenceSpecification ;
+      ontoksd:mediatesCourse ?course ;
+      ontoksd:mediatesCourseCompetence ?competence ;
+      ontoksd:requiresMinimumProficiencyLevel ?requiredLevel ;
+      dcterms:references ?scheme .
+  ?scheme a ontoksd:ProficiencyScheme ;
+      ontoksd:definesLevel ?requiredLevel, ?observedLevel .
+  ?profile a ontoksd:Profile ;
+      ontoksd:isProfileOf ?learner ;
+      ontoksd:hasEvidencedCompetence ?judgment .
+  ?judgment a ontoksd:EvidencedCompetence ;
+      ontoksd:isEvidencedCompetenceOf ?profile ;
+      ontoksd:refersToCompetence ?competence ;
+      ontoksd:derivedFromParticipation ?participation ;
+      ontoksd:supportedByEvidence ?evidence ;
+      ontoksd:interpretedUsingScheme ?scheme ;
+      ontoksd:hasProficiencyLevel ?observedLevel .
+  ?participation ontoksd:hasLearner ?learner ;
+      ontoksd:occursInAssessmentOccurrence ?occurrence .
+  ?occurrence ontoksd:usesProficiencyScheme ?scheme .
+  ?evidence ontoksd:evidenceBasedOn ?occurrence .
+  ?requiredLevel ontoksd:hasOrdinalPosition ?requiredPosition .
+  ?observedLevel ontoksd:hasOrdinalPosition ?observedPosition .
+  FILTER(datatype(?requiredPosition) = xsd:int && datatype(?observedPosition) = xsd:int)
+  FILTER(?observedPosition < ?requiredPosition)
+  FILTER NOT EXISTS { ?judgment ontoksd:hasProficiencyLevel ?anotherLevel . FILTER(?anotherLevel != ?observedLevel) }
+  FILTER NOT EXISTS { ?judgment ontoksd:interpretedUsingScheme ?anotherScheme . FILTER(?anotherScheme != ?scheme) }
+  FILTER NOT EXISTS { ?specification dcterms:references ?anotherExpectedScheme . ?anotherExpectedScheme a ontoksd:ProficiencyScheme . FILTER(?anotherExpectedScheme != ?scheme) }
+  FILTER NOT EXISTS { ?specification ontoksd:requiresMinimumProficiencyLevel ?anotherRequired . FILTER(?anotherRequired != ?requiredLevel) }
+  FILTER NOT EXISTS { ?requiredLevel ontoksd:hasOrdinalPosition ?otherRequiredPosition . FILTER(?otherRequiredPosition != ?requiredPosition) }
+  FILTER NOT EXISTS { ?observedLevel ontoksd:hasOrdinalPosition ?otherObservedPosition . FILTER(?otherObservedPosition != ?observedPosition) }
+  # Do not overwrite an independently authored need with this identifier.
+  FILTER NOT EXISTS { ?need ?existingProperty ?existingValue . }
+  BIND(STRLANG(CONCAT("Learning need indicated by the example policy: the selected judgment has level ",
+       STR(?observedLevel), "; the selected curricular reference expects at least ",
+       STR(?requiredLevel), ". Comparison is ordinal within the same proficiency scheme."), "en") AS ?description)
 }
