@@ -1,0 +1,65 @@
+# Competence CM06; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM06 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence ;
+    rdfs:label "Validate inputs and operation preconditions"@en ;
+    dcterms:identifier "CM06" ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM06_KS1,
+        ontoksd:CM06_KS2,
+        ontoksd:CM06_KS3,
+        ontoksd:CM06_KS4 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task401_Reference ;
+    skos:definition "check inputs and operation preconditions, rejecting invalid values or actions before they cause an invalid state change."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM06_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K03 - Data types, constants and variables x Apply"@en ;
+    dcterms:description "Check whether input values are compatible with the required data types."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:check ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K03 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K03 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM06_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K07 - Relational and logical operators x Apply"@en ;
+    dcterms:description "Express conditions that determine whether values and operations are permitted."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:express ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K07 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K07 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM06_KS3 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K08 - Decision structures x Apply"@en ;
+    dcterms:description "Implement branches that accept or reject values and operations according to specified constraints."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:implement ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K08 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K08 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM06_KS4 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K10 - Arrays and matrices, when used x Apply"@en ;
+    dcterms:description "Check index validity before accessing or updating elements."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:check ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K10 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K10 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    skos:scopeNote "Source qualification retained: K10 - Arrays and matrices, when used. This required specification-level association is not a claim that every task provides evidence for that aspect. OWL does not encode the conditional scope of a phrase in this annotation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+}

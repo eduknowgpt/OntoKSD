@@ -1,0 +1,88 @@
+# Cycle-03 competence C17
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C17_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:examine,
+        bloom:identify,
+        bloom:justify ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C17_LanguageTheory_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain,
+        bloom:interpret ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_LanguageTheory ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C17_OperationsOnFormalLanguages_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Operations on Formal Languages x Analyzing"@en ;
+    dcterms:description "Source knowledge: Operations on Formal Languages. Source skill cell: Apply / Analyze."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:analyze ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_OperationsOnFormalLanguages ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C17 ;
+    skos:scopeNote "The source lists two cognitive categories. Each listed category is preserved as a separate knowledge-level requirement; no highest-level collapse, numeric range or automatic hierarchy is inferred. Verb distribution between these pairs is a local interpretation of the recorded performance."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C17_OperationsOnFormalLanguages_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Operations on Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Operations on Formal Languages. Source skill cell: Apply / Analyze."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:apply ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_OperationsOnFormalLanguages ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C17 ;
+    skos:scopeNote "The source lists two cognitive categories. Each listed category is preserved as a separate knowledge-level requirement; no highest-level collapse, numeric range or automatic hierarchy is inferred. Verb distribution between these pairs is a local interpretation of the recorded performance."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C17_RegularExpressions_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Regular Expressions (conceptual) x Applying"@en ;
+    dcterms:description "Source knowledge: Regular Expressions (conceptual). Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:use ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2_a_i ;
+    ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_2_a_i ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:C17 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply operations on formal languages"@en ;
+    dcterms:identifier "C17"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:cspEpistemicRigor,
+        ontoksd:cspIntellectualResponsibility,
+        ontoksd:persistent ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C17_AnalyticalThinking_Analyzing,
+        ontoksd:KS_C17_LanguageTheory_Understanding,
+        ontoksd:KS_C17_OperationsOnFormalLanguages_Analyzing,
+        ontoksd:KS_C17_OperationsOnFormalLanguages_Applying,
+        ontoksd:KS_C17_RegularExpressions_Applying ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "This competency involves the ability to apply, analyze, and justify formal operations over languages, including concatenation, union, intersection, difference, complement, Kleene closure, and reversal, with attention to their structural effects and theoretical properties. Learners demonstrate this competency by: - applying operations to languages over an explicitly defined alphabet and specifying the universe for complement; - assessing the structural validity of the resulting languages; - determining whether relevant properties, including class membership, finiteness, or infinitude, are preserved; - justifying conclusions through definitions, examples, counterexamples, and known theoretical properties. The scope is conceptual and algebraic; it does not require automaton construction, simulation, or implementation."@en ;
+    skos:definition "Apply operations on formal languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+}

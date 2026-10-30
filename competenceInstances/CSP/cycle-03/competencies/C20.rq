@@ -1,0 +1,132 @@
+# Cycle-03 competence C20
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:C18 ontoksd:isComponentOfCompetence ontoksd:C20 ;
+    owl:differentFrom ontoksd:C04,
+        ontoksd:C05_01,
+        ontoksd:C17,
+        ontoksd:C19,
+        ontoksd:C23 .
+
+ontoksd:KS_C20_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:evaluate,
+        bloom:integrate,
+        bloom:justify ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C20_FormalLanguages_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:apply,
+        bloom:model ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_FormalLanguages ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C20_HomomorphismsAndCodifications_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Homomorphisms and Codifications x Applying"@en ;
+    dcterms:description "Source knowledge: Homomorphisms and Codifications. Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:relate ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_HomomorphismsAndCodifications ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C20_LanguageTheory_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:interpret ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_LanguageTheory ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C20_RegularExpressions_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Regular Expressions x Applying"@en ;
+    dcterms:description "Source knowledge: Regular Expressions. Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:specify ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2_a_i ;
+    ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_2_a_i ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C20_TechnicalWrittenCommunication_Creating a ontoksd:KnowledgeSkill ;
+    rdfs:label "Technical Written Communication (FPK) x Creating"@en ;
+    dcterms:description "Source knowledge: Technical Written Communication (FPK). Source skill cell: Create."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:produce ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#WrittenCommunication> ;
+    ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:C17 ontoksd:isComponentOfCompetence ontoksd:C20 ;
+    owl:differentFrom ontoksd:C04,
+        ontoksd:C05_01,
+        ontoksd:C19,
+        ontoksd:C23 .
+
+ontoksd:C19 ontoksd:isComponentOfCompetence ontoksd:C20 ;
+    owl:differentFrom ontoksd:C04,
+        ontoksd:C05_01,
+        ontoksd:C23 .
+
+ontoksd:C04 ontoksd:isComponentOfCompetence ontoksd:C20 ;
+    owl:differentFrom ontoksd:C05_01,
+        ontoksd:C23 .
+
+ontoksd:C23 ontoksd:isComponentOfCompetence ontoksd:C20 ;
+    owl:differentFrom ontoksd:C05_01 .
+
+ontoksd:C05_01 ontoksd:isComponentOfCompetence ontoksd:C20 .
+
+ontoksd:C20 a ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        ontoksd:CompositeCompetence,
+        owl:NamedIndividual ;
+    rdfs:label "Model and analyze musical collections as formal languages"@en ;
+    dcterms:identifier "C20"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasComponentCompetence ontoksd:C04,
+        ontoksd:C05_01,
+        ontoksd:C17,
+        ontoksd:C18,
+        ontoksd:C19,
+        ontoksd:C23 ;
+    ontoksd:hasDisposition ontoksd:cspEpistemicRigor,
+        ontoksd:cspIntellectualResponsibility,
+        ontoksd:persistent,
+        ontoksd:reflective ;
+    ontoksd:hasIntegrationDescription "Integrate formal abstraction (C18), operations (C17), encoding analysis (C19), regular-expression characterization (C04), consistent algebraic notation (C23) and rigorous written justification (C05.01) into one coherent account of musical collections. Alphabet/model assumptions, operations, representations and conclusions must remain mutually consistent. Integration is additional expected performance, not automatic synthesis of component evidence."@en ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C20_AnalyticalThinking_Analyzing,
+        ontoksd:KS_C20_FormalLanguages_Applying,
+        ontoksd:KS_C20_HomomorphismsAndCodifications_Applying,
+        ontoksd:KS_C20_LanguageTheory_Understanding,
+        ontoksd:KS_C20_RegularExpressions_Applying,
+        ontoksd:KS_C20_TechnicalWrittenCommunication_Creating ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Composite ;
+    rdfs:comment "This task-level competency involves the ability to integrate concepts, operations, and representations from Formal Language Theory in order to model musical collections as formal languages and analyze rigorously their structural properties. Learners demonstrate this competency by: - abstracting musical artifacts as symbols, strings, and languages; - applying algebraic operations and regular expressions to characterize musical collections; - analyzing formal codifications and transformations between representations; - justifying structural properties, limitations, and implications through explicit definitions, minimal examples, counterexamples, and logical argumentation. This competency synthesizes the component competencies specified for this task into a coherent formal analysis of a real-world problem, without requiring implementation or operational recognizer construction."@en ;
+    skos:definition "Model and analyze musical collections as formal languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+}

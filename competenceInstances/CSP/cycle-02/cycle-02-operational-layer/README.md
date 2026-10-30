@@ -1,6 +1,6 @@
 # Optional Curricular and Proficiency Layer for CSP Cycle 02
 
-These two insertions complement the corrected [CSP cycle 02](https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02) instance dataset with a **user-defined operational scenario**. They express selected course expectations and a shared numeric interpretation for experimentation, comparison and future record-level gap analysis.
+These two insertions complement the [CSP cycle 02](https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02) instance dataset with a **user-defined operational scenario**. They express selected course expectations and a shared numeric interpretation for experimentation, comparison and future record-level gap analysis.
 
 They are optional additions. In a dataset where they are loaded, the curricular expectations become asserted facts of that selected scenario. Their provenance identifies the modeling assumptions; it does not make the RDF assertions logically conditional or establish that the CSP documents imposed those assumptions.
 

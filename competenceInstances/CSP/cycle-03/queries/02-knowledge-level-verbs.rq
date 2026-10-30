@@ -1,0 +1,7 @@
+PREFIX o: <http://purl.org/ontoksd#>
+SELECT ?competence ?pair ?knowledge ?level ?verb WHERE {
+ VALUES ?competence { o:C05_01 o:C17 o:C18 o:C19 o:C20 o:C21 o:C22 o:C23 }
+ ?competence o:hasKnowledgeSkill ?pair .
+ ?pair o:hasKnowledgeComponent ?knowledge; o:hasSkillLevel ?level .
+ OPTIONAL { ?pair o:hasBloomLevelJustificationVerb ?verb }
+} ORDER BY ?competence ?pair ?verb

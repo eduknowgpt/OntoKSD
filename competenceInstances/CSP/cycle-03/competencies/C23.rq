@@ -1,0 +1,80 @@
+# Cycle-03 competence C23
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C23_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:distinguish,
+        bloom:justify,
+        bloom:relate,
+        bloom:validate ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C23_FormalLanguages_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:derive,
+        bloom:express,
+        bloom:manipulate,
+        bloom:use ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_FormalLanguages ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C23_LanguageTheory_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain,
+        bloom:identify,
+        bloom:interpret ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_LanguageTheory ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C23_WrittenCommunication_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Written Communication (FPK) x Applying"@en ;
+    dcterms:description "Source knowledge: Written Communication (FPK). Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:clarify,
+        bloom:structure,
+        bloom:write ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#WrittenCommunication> ;
+    ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:C23 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Interpret and apply algebraic notation for strings and languages"@en ;
+    dcterms:identifier "C23"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C23_AnalyticalThinking_Analyzing,
+        ontoksd:KS_C23_FormalLanguages_Applying,
+        ontoksd:KS_C23_LanguageTheory_Understanding,
+        ontoksd:KS_C23_WrittenCommunication_Applying ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "This competency involves the ability to interpret, use, and justify formal algebraic notation for strings and languages in order to represent, analyze, and communicate structural properties of symbolic systems. Learners demonstrate this competency by: - interpreting standard notation for strings, such as ε, Σ, |x|, concatenation, exponentiation, reversal, prefixes, suffixes, and substrings; - interpreting and applying standard notation for languages, such as union, intersection, complement, concatenation, \\(L^n\\), and \\(L^*\\); - using algebraic notation consistently to express structural properties, operations, and relations over strings and languages; - connecting formal notation to conceptual reasoning about symbolic structures and language behavior; - justifying the meaning and use of notation in formally rigorous answers. This competency supports instructional contexts in which learners must reason explicitly through symbolic notation, not merely recognize concepts informally."@en ;
+    skos:definition "Interpret and apply algebraic notation for strings and languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+}

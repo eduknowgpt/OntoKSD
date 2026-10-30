@@ -1,0 +1,271 @@
+# Task 411; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task411_CM02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Maintain valid indexed access and an ordered coordinate result. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM02_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM02_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Maintain valid indexed access and an ordered coordinate result"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Maintain valid indexed access and an ordered coordinate result. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Maintain valid indexed access and an ordered coordinate result"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select successors using arrows and recognize the tail. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select successors using arrows and recognize the tail"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select successors using arrows and recognize the tail. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select successors using arrows and recognize the tail"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Search and traverse with correct termination. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Search and traverse with correct termination"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Search and traverse with correct termination. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Search and traverse with correct termination"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Compare outputs with expectations and judge conformity. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Compare outputs with expectations and judge conformity"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task411_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Compare outputs with expectations and judge conformity. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Compare outputs with expectations and judge conformity"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task411_CM14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain the selection and tail-recognition conditions. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain the selection and tail-recognition conditions"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain the selection and tail-recognition conditions. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain the selection and tail-recognition conditions"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM15_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain traversal continuation and termination. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM15_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM15_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain traversal continuation and termination"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task411_CM15_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain traversal continuation and termination. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task411_CM15_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task411 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> .
+
+ontoksd:CA_Task411_CM15_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain traversal continuation and termination"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task411_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task411_locate a ontoksd:TaskActivity ;
+    rdfs:label "locate"@en .
+
+ontoksd:TA_Task411_return a ontoksd:TaskActivity ;
+    rdfs:label "return"@en .
+
+ontoksd:TA_Task411_traverse a ontoksd:TaskActivity ;
+    rdfs:label "traverse"@en .
+
+ontoksd:TC_Task411 a ontoksd:TaskComponent ;
+    rdfs:label "An ordered snake path in a rectangular character matrix"@en .
+
+ontoksd:TCons_Task411_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Coordinates are [row, column], not [x, y]; rows increase downwards and columns rightwards."@en .
+
+ontoksd:TCons_Task411_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Required example outputs alone do not demonstrate optional test comparison and judgment."@en .
+
+ontoksd:TCons_Task411_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Do not prescribe a visited structure, search strategy or function organization."@en .
+
+ontoksd:AC_Task411 a ontoksd:AcquisitionContext ;
+    rdfs:label "Finding the Snake in a Grid reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-Snake.md> .
+
+ontoksd:CM02 ontoksd:hasTask ontoksd:Task411_Reference .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task411_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task411_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task411_Reference .
+
+ontoksd:CM14 ontoksd:hasTask ontoksd:Task411_Reference .
+
+ontoksd:CM15 ontoksd:hasTask ontoksd:Task411_Reference .
+
+ontoksd:ER_Task411_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Finding the Snake in a Grid source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-Snake.md> .
+
+ontoksd:AS_Task411 a ontoksd:Assessment ;
+    rdfs:label "Finding the Snake in a Grid assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task411 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task411_CM02_Assessment,
+        ontoksd:CA_Task411_CM03_Assessment,
+        ontoksd:CA_Task411_CM04_Assessment,
+        ontoksd:CA_Task411_CM08_Assessment,
+        ontoksd:CA_Task411_CM14_Assessment,
+        ontoksd:CA_Task411_CM15_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task411 ;
+    ontoksd:usesResource ontoksd:ER_Task411_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-Snake.md> .
+
+ontoksd:Task411_Reference a ontoksd:Task ;
+    rdfs:label "Finding the Snake in a Grid reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task411_explain,
+        ontoksd:TA_Task411_locate,
+        ontoksd:TA_Task411_return,
+        ontoksd:TA_Task411_traverse ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task411 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task411_1,
+        ontoksd:TCons_Task411_2,
+        ontoksd:TCons_Task411_3 ;
+    ontoksd:hasTaskStatement "For an arbitrary M x N rectangular matrix, locate h and return every snake cell exactly once from head to tail as zero-based [row, column] coordinates."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-Snake.md> .
+
+ontoksd:LT_Task411 a ontoksd:LearningTask ;
+    rdfs:label "Finding the Snake in a Grid learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task411 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task411_CM02_Learning,
+        ontoksd:CA_Task411_CM03_Learning,
+        ontoksd:CA_Task411_CM04_Learning,
+        ontoksd:CA_Task411_CM08_Learning,
+        ontoksd:CA_Task411_CM14_Learning,
+        ontoksd:CA_Task411_CM15_Learning ;
+    ontoksd:hasInstructionalStatement "Assume exactly one valid, connected snake, without branches, loops or disconnected cells, with one head and tail. No invalid-grid validation or interactive input parser is required; the matrix may be supplied directly."@en,
+        "Every body arrow points to its predecessor toward the head. Select an edge-adjacent body cell whose arrow points to the current cell; mere occupied adjacency is insufficient. The tail has no adjacent body cell pointing to it."@en,
+        "For an arbitrary M x N rectangular matrix, locate h and return every snake cell exactly once from head to tail as zero-based [row, column] coordinates."@en,
+        "Submit source code, coordinate sequences for both supplied examples, and a brief explanation of arrow-based selection and tail recognition. Rectangular-grid and boundary-head checks with explicit comparison and judgment are optional."@en ;
+    ontoksd:usesResource ontoksd:ER_Task411_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-Snake.md> .
+}

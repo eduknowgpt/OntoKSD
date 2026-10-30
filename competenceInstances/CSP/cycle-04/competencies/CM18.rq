@@ -1,0 +1,35 @@
+# Competence CM18; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM17 ontoksd:isComponentOfCompetence ontoksd:CM18 ;
+    owl:differentFrom ontoksd:CM12 .
+
+ontoksd:CM12 ontoksd:isComponentOfCompetence ontoksd:CM18 .
+
+ontoksd:CM18 a ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        ontoksd:CompositeCompetence ;
+    rdfs:label "Explain variable updates and arithmetic evaluation"@en ;
+    dcterms:identifier "CM18" ;
+    ontoksd:hasComponentCompetence ontoksd:CM12,
+        ontoksd:CM17 ;
+    ontoksd:hasDisposition ontoksd:communicative,
+        ontoksd:meticulous ;
+    ontoksd:hasIntegrationDescription "Coordinate the complete explanations of variable representation and assignment updates (CM17) with arithmetic expression evaluation (CM12), explaining how current operand values and evaluation order jointly produce successive states. A selected alternative or unexplained trace table is insufficient."@en ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM12_KS1,
+        ontoksd:CM17_KS1,
+        ontoksd:CM17_KS2 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Composite ;
+    ontoksd:hasTask ontoksd:Task402_Reference ;
+    skos:definition "explain how variable updates and arithmetic expression evaluation jointly determine values during program execution."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+}

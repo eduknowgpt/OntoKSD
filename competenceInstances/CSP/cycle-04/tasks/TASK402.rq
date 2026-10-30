@@ -1,0 +1,133 @@
+# Task 402; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task402_CM11_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Determine the result by following the supplied program; Selected alternative; a trace record strengthens evidence of the procedure. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task402_CM11_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM11 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task402 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CA_Task402_CM11_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Determine the result by following the supplied program"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task402_CM11_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Determine the result by following the supplied program; Selected alternative; a trace record strengthens evidence of the procedure. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task402_CM11_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM11 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task402 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CA_Task402_CM11_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Determine the result by following the supplied program"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task402_CM18_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Individual explanation of updates and arithmetic evaluation is requested; Coordinated explanation satisfying both component criteria. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task402_CM18_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task402 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CA_Task402_CM18_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Individual explanation of updates and arithmetic evaluation is requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task402_CM18_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Individual explanation of updates and arithmetic evaluation is requested; Coordinated explanation satisfying both component criteria. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task402_CM18_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task402 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CA_Task402_CM18_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Individual explanation of updates and arithmetic evaluation is requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:TA_Task402_determine a ontoksd:TaskActivity ;
+    rdfs:label "determine"@en .
+
+ontoksd:TA_Task402_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task402_trace a ontoksd:TaskActivity ;
+    rdfs:label "trace"@en .
+
+ontoksd:TC_Task402 a ontoksd:TaskComponent ;
+    rdfs:label "Successive states of a supplied C program"@en .
+
+ontoksd:TCons_Task402_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Assume all four inputs were successfully read."@en .
+
+ontoksd:TCons_Task402_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Use current values after each assignment; a supplementary tracing table is recommended rather than required."@en .
+
+ontoksd:AC_Task402 a ontoksd:AcquisitionContext ;
+    rdfs:label "Variable Manipulation reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-VariablesManipulation.md> .
+
+ontoksd:AS_Task402 a ontoksd:Assessment ;
+    rdfs:label "Variable Manipulation assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task402 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task402_CM11_Assessment,
+        ontoksd:CA_Task402_CM18_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task402 ;
+    ontoksd:usesResource ontoksd:ER_Task402_Statement ;
+    skos:scopeNote "Initial, Developing and Expected are task-specific descriptive criteria in the source. They are not converted into a general proficiency scheme or score intervals."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-VariablesManipulation.md> .
+
+ontoksd:CM11 ontoksd:hasTask ontoksd:Task402_Reference .
+
+ontoksd:CM18 ontoksd:hasTask ontoksd:Task402_Reference .
+
+ontoksd:ER_Task402_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Variable Manipulation source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-VariablesManipulation.md> .
+
+ontoksd:Task402_Reference a ontoksd:Task ;
+    rdfs:label "Variable Manipulation reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task402_determine,
+        ontoksd:TA_Task402_explain,
+        ontoksd:TA_Task402_trace ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task402 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task402_1,
+        ontoksd:TCons_Task402_2 ;
+    ontoksd:hasTaskStatement "For the supplied C program with float variables and successful %f input of 10, 15, 20 and 25, follow assignments in execution order using current values and operator precedence; select the final-value alternative."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-VariablesManipulation.md> .
+
+ontoksd:LT_Task402 a ontoksd:LearningTask ;
+    rdfs:label "Variable Manipulation learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task402 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task402_CM11_Learning,
+        ontoksd:CA_Task402_CM18_Learning ;
+    ontoksd:hasInstructionalStatement "A state table is recommended supplementary evidence, not an original mandatory deliverable. An individual explanation of updates and arithmetic evaluation activates CM18 only when explicitly requested."@en,
+        "For the supplied C program with float variables and successful %f input of 10, 15, 20 and 25, follow assignments in execution order using current values and operator precedence; select the final-value alternative."@en,
+        "Interpret supplied code; program construction and debugging are not required. A correct selected alternative alone does not demonstrate the tracing procedure."@en ;
+    ontoksd:usesResource ontoksd:ER_Task402_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-VariablesManipulation.md> .
+}

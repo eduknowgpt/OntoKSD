@@ -1,0 +1,100 @@
+# Task 408; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:AS_Task408 a ontoksd:Assessment ;
+    rdfs:label "Independent IF Statements and IF-ELSE assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task408 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task408_CM14_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task408 ;
+    ontoksd:usesResource ontoksd:ER_Task408_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-IF-ELSE.md> .
+
+ontoksd:CA_Task408_CM14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain conditional behavior and output equivalence under the stated assumptions. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task408_CM14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task408 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md> .
+
+ontoksd:CA_Task408_CM14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain conditional behavior and output equivalence under the stated assumptions"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task408_CM14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain conditional behavior and output equivalence under the stated assumptions. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task408_CM14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task408 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md> .
+
+ontoksd:CA_Task408_CM14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain conditional behavior and output equivalence under the stated assumptions"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task408_compare a ontoksd:TaskActivity ;
+    rdfs:label "compare"@en .
+
+ontoksd:TA_Task408_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task408_interpret a ontoksd:TaskActivity ;
+    rdfs:label "interpret"@en .
+
+ontoksd:TC_Task408 a ontoksd:TaskComponent ;
+    rdfs:label "Two supplied pseudocode decision fragments"@en .
+
+ontoksd:TCons_Task408_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Count condition evaluations according to the pseudocode, without assuming compiler optimization."@en .
+
+ontoksd:TCons_Task408_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Only CM14 is a current direct competence association; the withdrawn CM24/K19 proposal is excluded."@en .
+
+ontoksd:Task408_Reference a ontoksd:Task ;
+    rdfs:label "Independent IF Statements and IF-ELSE reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task408_compare,
+        ontoksd:TA_Task408_explain,
+        ontoksd:TA_Task408_interpret ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task408 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task408_1,
+        ontoksd:TCons_Task408_2 ;
+    ontoksd:hasTaskStatement "Examine the two supplied fragments for integer x: independent tests x > 0 and x <= 0 versus a single IF-ELSE. Assume x remains unchanged and displaying a message has no side effects."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-IF-ELSE.md> .
+
+ontoksd:AC_Task408 a ontoksd:AcquisitionContext ;
+    rdfs:label "Independent IF Statements and IF-ELSE reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-IF-ELSE.md> .
+
+ontoksd:CM14 ontoksd:hasTask ontoksd:Task408_Reference .
+
+ontoksd:ER_Task408_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Independent IF Statements and IF-ELSE source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-IF-ELSE.md> .
+
+ontoksd:LT_Task408 a ontoksd:LearningTask ;
+    rdfs:label "Independent IF Statements and IF-ELSE learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task408 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task408_CM14_Learning ;
+    ontoksd:hasInstructionalStatement "Examine the two supplied fragments for integer x: independent tests x > 0 and x <= 0 versus a single IF-ELSE. Assume x remains unchanged and displaying a message has no side effects."@en,
+        "Explain why source-level counts do not guarantee lower runtime in every environment and why arbitrary independent IF statements are not universally equivalent to IF-ELSE. No implementation, execution, benchmark or formal complexity analysis is required."@en,
+        "Select the correct alternative and briefly justify output equivalence, complementary and exhaustive conditions and the two-versus-one count of condition evaluations under the pseudocode."@en ;
+    ontoksd:usesResource ontoksd:ER_Task408_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-IF-ELSE.md> .
+}

@@ -1,0 +1,154 @@
+# Contextual action verbs extracted from source observable operations; no inferred levels.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+bloom:accept a bloom:ActionVerb ;
+    rdfs:label "accept"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:access a bloom:ActionVerb ;
+    rdfs:label "access"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+bloom:assign a bloom:ActionVerb ;
+    rdfs:label "assign"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:check a bloom:ActionVerb ;
+    rdfs:label "check"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:compare a bloom:ActionVerb ;
+    rdfs:label "compare"@en .
+
+bloom:construct a bloom:ActionVerb ;
+    rdfs:label "construct"@en .
+
+bloom:define a bloom:ActionVerb ;
+    rdfs:label "define"@en .
+
+bloom:design a bloom:ActionVerb ;
+    rdfs:label "design"@en .
+
+bloom:determine a bloom:ActionVerb ;
+    rdfs:label "determine"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+bloom:distinguish a bloom:ActionVerb ;
+    rdfs:label "distinguish"@en .
+
+bloom:encode a bloom:ActionVerb ;
+    rdfs:label "encode"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:evaluate a bloom:ActionVerb ;
+    rdfs:label "evaluate"@en .
+
+bloom:execute a bloom:ActionVerb ;
+    rdfs:label "execute"@en .
+
+bloom:explain a bloom:ActionVerb ;
+    rdfs:label "explain"@en .
+
+bloom:express a bloom:ActionVerb ;
+    rdfs:label "express"@en .
+
+bloom:follow a bloom:ActionVerb ;
+    rdfs:label "follow"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+bloom:identify a bloom:ActionVerb ;
+    rdfs:label "identify"@en .
+
+bloom:implement a bloom:ActionVerb ;
+    rdfs:label "implement"@en .
+
+bloom:initialize a bloom:ActionVerb ;
+    rdfs:label "initialize"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+bloom:integrate a bloom:ActionVerb ;
+    rdfs:label "integrate"@en .
+
+bloom:interpret a bloom:ActionVerb ;
+    rdfs:label "interpret"@en .
+
+bloom:invoke a bloom:ActionVerb ;
+    rdfs:label "invoke"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+bloom:isolate a bloom:ActionVerb ;
+    rdfs:label "isolate"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:judge a bloom:ActionVerb ;
+    rdfs:label "judge"@en .
+
+bloom:reject a bloom:ActionVerb ;
+    rdfs:label "reject"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:repeat a bloom:ActionVerb ;
+    rdfs:label "repeat"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+bloom:represent a bloom:ActionVerb ;
+    rdfs:label "represent"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Local extraction from an observable operation in the CSP report, not an official or exclusive Bloom placement. The verb alone does not establish the required cognitive level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+bloom:store a bloom:ActionVerb ;
+    rdfs:label "store"@en .
+
+bloom:update a bloom:ActionVerb ;
+    rdfs:label "update"@en .
+
+ontoksd:CSPRecordedActionVerbType a bloom:ActionVerbType ;
+    rdfs:label "CSP-recorded justification verb"@en .
+}

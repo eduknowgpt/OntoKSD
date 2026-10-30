@@ -1,0 +1,295 @@
+# Task 407; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task407_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement classification and divisor-selection decisions. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement classification and divisor-selection decisions"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement classification and divisor-selection decisions. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement classification and divisor-selection decisions"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Repeat processing and stop at a nonpositive input. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Repeat processing and stop at a nonpositive input"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Repeat processing and stop at a nonpositive input. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Repeat processing and stop at a nonpositive input"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read inputs and display the required results. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read inputs and display the required results"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read inputs and display the required results. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read inputs and display the required results"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task407_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task407_CM14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain classification and divisor-selection conditions in comments. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain classification and divisor-selection conditions in comments"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain classification and divisor-selection conditions in comments. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain classification and divisor-selection conditions in comments"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM15_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain repetition and stopping rules in comments. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM15_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM15_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain repetition and stopping rules in comments"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM15_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explain repetition and stopping rules in comments. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM15_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM15_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explain repetition and stopping rules in comments"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement numeric operations and smallest-divisor identification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement numeric operations and smallest-divisor identification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task407_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement numeric operations and smallest-divisor identification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task407_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task407 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> .
+
+ontoksd:CA_Task407_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement numeric operations and smallest-divisor identification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task407_classify a ontoksd:TaskActivity ;
+    rdfs:label "classify"@en .
+
+ontoksd:TA_Task407_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task407_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TC_Task407 a ontoksd:TaskComponent ;
+    rdfs:label "Prime classification and smallest-divisor reporting"@en .
+
+ontoksd:TCons_Task407_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Report the smallest divisor even if a chosen primality algorithm does not directly provide it."@en .
+
+ontoksd:TCons_Task407_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Required explanatory comments are distinct from the optional testing judgment; no additional oral assessment is imposed."@en .
+
+ontoksd:AC_Task407 a ontoksd:AcquisitionContext ;
+    rdfs:label "Prime Numbers and Smallest Divisors reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-Primes.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:CM14 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:CM15 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task407_Reference .
+
+ontoksd:ER_Task407_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Prime Numbers and Smallest Divisors source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-Primes.md> .
+
+ontoksd:AS_Task407 a ontoksd:Assessment ;
+    rdfs:label "Prime Numbers and Smallest Divisors assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task407 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task407_CM03_Assessment,
+        ontoksd:CA_Task407_CM04_Assessment,
+        ontoksd:CA_Task407_CM05_Assessment,
+        ontoksd:CA_Task407_CM08_Assessment,
+        ontoksd:CA_Task407_CM14_Assessment,
+        ontoksd:CA_Task407_CM15_Assessment,
+        ontoksd:CA_Task407_CM20_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task407 ;
+    ontoksd:usesResource ontoksd:ER_Task407_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-Primes.md> .
+
+ontoksd:Task407_Reference a ontoksd:Task ;
+    rdfs:label "Prime Numbers and Smallest Divisors reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task407_classify,
+        ontoksd:TA_Task407_explain,
+        ontoksd:TA_Task407_implement ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task407 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task407_1,
+        ontoksd:TCons_Task407_2 ;
+    ontoksd:hasTaskStatement "Repeatedly read valid integers. Process positive values and stop on a nonpositive value without evaluating it."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-Primes.md> .
+
+ontoksd:LT_Task407 a ontoksd:LearningTask ;
+    rdfs:label "Prime Numbers and Smallest Divisors learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task407 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task407_CM03_Learning,
+        ontoksd:CA_Task407_CM04_Learning,
+        ontoksd:CA_Task407_CM05_Learning,
+        ontoksd:CA_Task407_CM08_Learning,
+        ontoksd:CA_Task407_CM14_Learning,
+        ontoksd:CA_Task407_CM15_Learning,
+        ontoksd:CA_Task407_CM20_Learning ;
+    ontoksd:hasInstructionalStatement "For a prime, identify it as prime. For a composite greater than one, report its smallest positive divisor greater than one. Handle 1 explicitly as nonprime with no such divisor."@en,
+        "Implement a suitable algorithm and explain divisor checks, stopping conditions and special cases in code comments. Identify any external algorithm source used."@en,
+        "Repeatedly read valid integers. Process positive values and stop on a nonpositive value without evaluating it."@en,
+        "Submit commented source code. Comparing expected and actual outcomes and judging correctness is optional."@en ;
+    ontoksd:usesResource ontoksd:ER_Task407_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-Primes.md> .
+}

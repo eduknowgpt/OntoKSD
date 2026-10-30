@@ -1,0 +1,5 @@
+PREFIX o: <http://purl.org/ontoksd#>
+SELECT ?competence ?pair ?knowledge ?level ?verb WHERE {
+ ?competence o:hasKnowledgeSkill ?pair . FILTER(REGEX(STR(?competence), "#CM[0-9]+$"))
+ ?pair o:hasKnowledgeComponent ?knowledge; o:hasSkillLevel ?level; o:hasBloomLevelJustificationVerb ?verb .
+} ORDER BY ?competence ?pair ?verb

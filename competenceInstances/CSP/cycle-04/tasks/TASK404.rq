@@ -1,0 +1,194 @@
+# Task 404; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task404_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select behavior for 3, 4 or 5 sides. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select behavior for 3, 4 or 5 sides"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task404_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select behavior for 3, 4 or 5 sides. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select behavior for 3, 4 or 5 sides"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task404_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Receive data and present the requested information. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Receive data and present the requested information"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task404_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Receive data and present the requested information. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Receive data and present the requested information"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task404_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate the optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate the optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task404_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate the optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate the optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task404_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Correctly implement both area calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Correctly implement both area calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task404_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Correctly implement both area calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task404_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task404 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> .
+
+ontoksd:CA_Task404_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Correctly implement both area calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task404_calculate a ontoksd:TaskActivity ;
+    rdfs:label "calculate"@en .
+
+ontoksd:TA_Task404_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TA_Task404_select a ontoksd:TaskActivity ;
+    rdfs:label "select"@en .
+
+ontoksd:TC_Task404 a ontoksd:TaskComponent ;
+    rdfs:label "Polygon classification and the supplied area calculations"@en .
+
+ontoksd:TCons_Task404_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Assume valid inputs; no validation, loops, functions, arrays, geometric derivation or pentagon-area calculation is required."@en .
+
+ontoksd:AC_Task404 a ontoksd:AcquisitionContext ;
+    rdfs:label "Area of Regular Polygons reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK404-Area.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task404_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task404_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task404_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task404_Reference .
+
+ontoksd:ER_Task404_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Area of Regular Polygons source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK404-Area.md> .
+
+ontoksd:AS_Task404 a ontoksd:Assessment ;
+    rdfs:label "Area of Regular Polygons assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task404 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task404_CM03_Assessment,
+        ontoksd:CA_Task404_CM05_Assessment,
+        ontoksd:CA_Task404_CM08_Assessment,
+        ontoksd:CA_Task404_CM20_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task404 ;
+    ontoksd:usesResource ontoksd:ER_Task404_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK404-Area.md> .
+
+ontoksd:Task404_Reference a ontoksd:Task ;
+    rdfs:label "Area of Regular Polygons reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task404_calculate,
+        ontoksd:TA_Task404_implement,
+        ontoksd:TA_Task404_select ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task404 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task404_1 ;
+    ontoksd:hasTaskStatement "Read a side count of 3, 4 or 5 and a positive side length in centimeters. Display TRIANGLE and its equilateral area for 3, SQUARE and its area for 4, and only PENTAGON for 5."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK404-Area.md> .
+
+ontoksd:LT_Task404 a ontoksd:LearningTask ;
+    rdfs:label "Area of Regular Polygons learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task404 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task404_CM03_Learning,
+        ontoksd:CA_Task404_CM05_Learning,
+        ontoksd:CA_Task404_CM08_Learning,
+        ontoksd:CA_Task404_CM20_Learning ;
+    ontoksd:hasInstructionalStatement "Read a side count of 3, 4 or 5 and a positive side length in centimeters. Display TRIANGLE and its equilateral area for 3, SQUARE and its area for 4, and only PENTAGON for 5."@en,
+        "Submit source code. Running the examples and comparing actual and expected results is optional."@en,
+        "Use the supplied formulas A = (sqrt(3)/4) * l^2 and A = l^2. Preserve fractional results and display areas in square centimeters; no fixed decimal formatting is required."@en ;
+    ontoksd:usesResource ontoksd:ER_Task404_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK404-Area.md> .
+}

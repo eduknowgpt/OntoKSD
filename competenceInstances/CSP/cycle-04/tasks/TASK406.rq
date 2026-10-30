@@ -1,0 +1,230 @@
+# Task 406; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task406_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement the Boolean decisions for all counting categories. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement the Boolean decisions for all counting categories"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement the Boolean decisions for all counting categories. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement the Boolean decisions for all counting categories"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Process records and stop correctly at `FIM`. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Process records and stop correctly at `FIM`"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Process records and stop correctly at `FIM`. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Process records and stop correctly at `FIM`"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read student data and display the complete labeled summary. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read student data and display the complete labeled summary"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read student data and display the complete labeled summary. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read student data and display the complete labeled summary"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task406_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task406_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Initialize, accumulate and calculate correct counts. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Initialize, accumulate and calculate correct counts"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task406_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Initialize, accumulate and calculate correct counts. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task406_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task406 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> .
+
+ontoksd:CA_Task406_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Initialize, accumulate and calculate correct counts"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task406_count a ontoksd:TaskActivity ;
+    rdfs:label "count"@en .
+
+ontoksd:TA_Task406_process a ontoksd:TaskActivity ;
+    rdfs:label "process"@en .
+
+ontoksd:TA_Task406_summarize a ontoksd:TaskActivity ;
+    rdfs:label "summarize"@en .
+
+ontoksd:TC_Task406 a ontoksd:TaskComponent ;
+    rdfs:label "A sentinel-controlled census summary"@en .
+
+ontoksd:TCons_Task406_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Pairwise condition counts include students with all three conditions."@en .
+
+ontoksd:TCons_Task406_2 a ontoksd:TaskConstraint ;
+    rdfs:label "No invalid-input handling or storage of all individual records is required."@en .
+
+ontoksd:AC_Task406 a ontoksd:AcquisitionContext ;
+    rdfs:label "School Census reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-SchoolCensus.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task406_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task406_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task406_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task406_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task406_Reference .
+
+ontoksd:ER_Task406_Statement a ontoksd:EducationalResource ;
+    rdfs:label "School Census source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-SchoolCensus.md> .
+
+ontoksd:AS_Task406 a ontoksd:Assessment ;
+    rdfs:label "School Census assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task406 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task406_CM03_Assessment,
+        ontoksd:CA_Task406_CM04_Assessment,
+        ontoksd:CA_Task406_CM05_Assessment,
+        ontoksd:CA_Task406_CM08_Assessment,
+        ontoksd:CA_Task406_CM20_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task406 ;
+    ontoksd:usesResource ontoksd:ER_Task406_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-SchoolCensus.md> .
+
+ontoksd:Task406_Reference a ontoksd:Task ;
+    rdfs:label "School Census reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task406_count,
+        ontoksd:TA_Task406_process,
+        ontoksd:TA_Task406_summarize ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task406 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task406_1,
+        ontoksd:TCons_Task406_2 ;
+    ontoksd:hasTaskStatement "Read each student name, sex code M/F and three separate Boolean values for myopia, hypermetropia and astigmatism. Check the name FIM before requesting any remaining fields and exclude the sentinel from all counts."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-SchoolCensus.md> .
+
+ontoksd:LT_Task406 a ontoksd:LearningTask ;
+    rdfs:label "School Census learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task406 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task406_CM03_Learning,
+        ontoksd:CA_Task406_CM04_Learning,
+        ontoksd:CA_Task406_CM05_Learning,
+        ontoksd:CA_Task406_CM08_Learning,
+        ontoksd:CA_Task406_CM20_Learning ;
+    ontoksd:hasInstructionalStatement "Assume valid, distinct records. Immediate FIM produces zero for every count. Submit source code; explicit test comparison and judgment is optional."@en,
+        "Display total students, boys and girls; totals by sex for each condition; the union, each inclusive pairwise intersection and the triple intersection. Count each student once per category, allowing the same student in distinct applicable categories."@en,
+        "Read each student name, sex code M/F and three separate Boolean values for myopia, hypermetropia and astigmatism. Check the name FIM before requesting any remaining fields and exclude the sentinel from all counts."@en ;
+    ontoksd:usesResource ontoksd:ER_Task406_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-SchoolCensus.md> .
+}

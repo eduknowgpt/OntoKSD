@@ -1,0 +1,263 @@
+# Task 405; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task405_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Accept nonnegative values and reject negative values. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Accept nonnegative values and reject negative values"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Accept nonnegative values and reject negative values. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Accept nonnegative values and reject negative values"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Control input processing, retries and factorial iteration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Control input processing, retries and factorial iteration"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Control input processing, retries and factorial iteration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Control input processing, retries and factorial iteration"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read inputs and display results and error messages. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read inputs and display results and error messages"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read inputs and display results and error messages. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read inputs and display results and error messages"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task405_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task405_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement correct factorial calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement correct factorial calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement correct factorial calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement correct factorial calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM23_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Define and invoke the required function with parameter and return value. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM23_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM23_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Define and invoke the required function with parameter and return value"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task405_CM23_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Define and invoke the required function with parameter and return value. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task405_CM23_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task405 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CA_Task405_CM23_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Define and invoke the required function with parameter and return value"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task405_calculate a ontoksd:TaskActivity ;
+    rdfs:label "calculate"@en .
+
+ontoksd:TA_Task405_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TA_Task405_invoke a ontoksd:TaskActivity ;
+    rdfs:label "invoke"@en .
+
+ontoksd:TC_Task405 a ontoksd:TaskComponent ;
+    rdfs:label "An iterative factorial function and repeated input processing"@en .
+
+ontoksd:TCons_Task405_1 a ontoksd:TaskConstraint ;
+    rdfs:label "A return value is required; printing inside the function alone does not satisfy its contract."@en .
+
+ontoksd:TCons_Task405_2 a ontoksd:TaskConstraint ;
+    rdfs:label "A supplied function contract supports bounded implementation at Applying; it does not itself demonstrate independent modular design at Creating."@en .
+
+ontoksd:AC_Task405 a ontoksd:AcquisitionContext ;
+    rdfs:label "Factorials Using Functions and Loops reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-Factorial.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task405_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task405_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task405_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task405_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task405_Reference .
+
+ontoksd:CM23 ontoksd:hasTask ontoksd:Task405_Reference .
+
+ontoksd:ER_Task405_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Factorials Using Functions and Loops source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-Factorial.md> .
+
+ontoksd:AS_Task405 a ontoksd:Assessment ;
+    rdfs:label "Factorials Using Functions and Loops assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task405 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task405_CM03_Assessment,
+        ontoksd:CA_Task405_CM04_Assessment,
+        ontoksd:CA_Task405_CM05_Assessment,
+        ontoksd:CA_Task405_CM08_Assessment,
+        ontoksd:CA_Task405_CM20_Assessment,
+        ontoksd:CA_Task405_CM23_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task405 ;
+    ontoksd:usesResource ontoksd:ER_Task405_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-Factorial.md> .
+
+ontoksd:Task405_Reference a ontoksd:Task ;
+    rdfs:label "Factorials Using Functions and Loops reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task405_calculate,
+        ontoksd:TA_Task405_implement,
+        ontoksd:TA_Task405_invoke ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task405 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task405_1,
+        ontoksd:TCons_Task405_2 ;
+    ontoksd:hasTaskStatement "Read a positive integer n and process exactly n valid nonnegative integer values. For each x, invoke a separate factorial(x) function that receives x, calculates factorial using a loop and returns the result."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-Factorial.md> .
+
+ontoksd:LT_Task405 a ontoksd:LearningTask ;
+    rdfs:label "Factorials Using Functions and Loops learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task405 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task405_CM03_Learning,
+        ontoksd:CA_Task405_CM04_Learning,
+        ontoksd:CA_Task405_CM05_Learning,
+        ontoksd:CA_Task405_CM08_Learning,
+        ontoksd:CA_Task405_CM20_Learning,
+        ontoksd:CA_Task405_CM23_Learning ;
+    ontoksd:hasInstructionalStatement "Assume n is positive and subsequent inputs are integers; do not add mandatory nonnumeric-input validation. Submit source code including function, loops and rejection behavior."@en,
+        "Large-number handling and storing a summary are optional extensions. Running the example with explicit outcome comparison and judgment is optional."@en,
+        "Read a positive integer n and process exactly n valid nonnegative integer values. For each x, invoke a separate factorial(x) function that receives x, calculates factorial using a loop and returns the result."@en,
+        "Reject negative x with an error and request a replacement; rejected inputs do not count toward n. Calculate 0! = 1 and display each accepted result as x! = result."@en ;
+    ontoksd:usesResource ontoksd:ER_Task405_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-Factorial.md> .
+}

@@ -1,0 +1,40 @@
+# Supplemental declarations for previously unpopulated CSP action verbs.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+bloom:abstract a bloom:ActionVerb ;
+    rdfs:label "abstract"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Analyzing ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+bloom:clarify a bloom:ActionVerb ;
+    rdfs:label "clarify"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+bloom:derive a bloom:ActionVerb ;
+    rdfs:label "derive"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+bloom:reason a bloom:ActionVerb ;
+    rdfs:label "reason"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CSPRecordedActionVerbType a bloom:ActionVerbType ;
+    rdfs:label "CSP-recorded justification verb"@en .
+}

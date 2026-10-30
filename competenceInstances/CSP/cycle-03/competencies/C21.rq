@@ -1,0 +1,82 @@
+# Cycle-03 competence C21
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C21_AlgorithmicScalability_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Algorithmic Scalability (Conceptual Perspective) x Understanding"@en ;
+    dcterms:description "Source knowledge: Algorithmic Scalability (Conceptual Perspective). Source skill cell: Understand (Relate, Interpret, Explain)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain,
+        bloom:interpret,
+        bloom:relate ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_AlgorithmicScalability ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:KS_C21_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze (Evaluate, Structure, Argue)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:argue,
+        bloom:evaluate,
+        bloom:structure ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:KS_C21_ComplexityClassesAndIntractability_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Complexity Classes and Intractability (P, NP, NP-hard, NP-complete) x Understanding"@en ;
+    dcterms:description "Source knowledge: Complexity Classes and Intractability (P, NP, NP-hard, NP-complete). Source skill cell: Understand (Explain, Distinguish, Justify)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:distinguish,
+        bloom:explain,
+        bloom:justify ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Complexity_4 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_ComplexityClassesAndIntractability ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:KS_C21_ComputationalComplexity_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Computational Complexity x Analyzing"@en ;
+    dcterms:description "Source knowledge: Computational Complexity. Source skill cell: Analyze (Decompose, Relate, Interpret)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:decompose,
+        bloom:interpret,
+        bloom:relate ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:KU_AL_Complexity ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_ComputationalComplexity ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:C21 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Analyze Computational Complexity and the Implications of NP-Hardness"@en ;
+    dcterms:identifier "C21"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:creative,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C21_AlgorithmicScalability_Understanding,
+        ontoksd:KS_C21_AnalyticalThinking_Analyzing,
+        ontoksd:KS_C21_ComplexityClassesAndIntractability_Understanding,
+        ontoksd:KS_C21_ComputationalComplexity_Analyzing ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Analyze computational complexity and interpret the implications of NP-hardness for scalability, performance limits, and the practical feasibility of algorithmic solutions."@en ;
+    skos:definition "Analyze Computational Complexity and the Implications of NP-Hardness"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+}

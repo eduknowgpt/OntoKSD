@@ -21,11 +21,6 @@ There are 23 current task–competence associations: three creations and 20 reus
 - `competencies/C13.01.rq`, `C15.rq`, `C16.rq`: the three new specifications and their ten knowledge–level pairings.
 - `tasks/TASK201.rq` through `TASK204.rq`: reference tasks, instructional requirements, assessment plans, acquisition contexts, activations and qualifications.
 - `cycle02-instances.ttl`: the same incremental instance graph, ready for loading with the schema and dependencies.
-- `cycle02-specifications.json`: a derived index of the instantiated specifications, current associations, contextual levels and qualifier alternatives.
-- `source-references.json`: CSP links, archive-relative paths and source-file fingerprints; no source-file contents.
-- `dependencies.json`: cycle-01 identities required by this dataset.
-- `queries/`: queries for current task sets, new knowledge–level requirements and verbs, admissible qualifier alternatives, historical association handling and specialization cycles.
-- `validation.json`: validation results and input fingerprints.
 - `REVISAO.md`: modeling decisions and source limitations requiring attention.
 
 ## New competence specifications
@@ -119,8 +114,7 @@ The Assessment refers documentarily to this planned scheme. `usesProficiencySche
 
 1. Load the current OntoKSD schema and imported skill-level module.
 2. Load the CS2023 body-of-knowledge vocabulary, CC2020 foundational-knowledge and disposition instances, and Bloom action-verb/type instances.
-3. Load the corrected cycle-01 instance dataset, including its supplemental justification-verb declarations. The required inherited identities are listed in `dependencies.json`.
-4. Load `cycle02-instances.ttl`, **or** execute the root shared `.rq` file, the three competence files and the four task files in the intended instance dataset.
+3. Load `cycle02-instances.ttl`, **or** execute the root shared `.rq` file, the three competence files and the four task files in the intended instance dataset.
 
 The `.rq` files are SPARQL Update operations, not Turtle ontologies. All use `INSERT DATA`; re-execution is idempotent and final content is independent of insertion order. The combined Turtle contains only the cycle-02 increment, so it does not replace the schema, cycle-01 instances or vocabulary dependencies.
 

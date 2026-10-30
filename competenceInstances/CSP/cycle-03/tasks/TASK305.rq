@@ -1,0 +1,387 @@
+# Cycle-03 Task305 and current instructional/assessment activations.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT DATA {
+ontoksd:CA_Task305_C02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C02_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C02_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Automata Using Simulators. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Automata Using Simulators. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write a Technical Report. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write a Technical Report. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C06_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C06_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C06_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C06_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C06_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C06_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C15_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Understand the Halting Problem and its Implications. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C15_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C15_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C15_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Understand the Halting Problem and its Implications. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C15_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C15_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C16_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C16_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C16 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C16_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C16_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C16_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C16 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C16_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C21_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Analyze Computational Complexity and the Implications of NP-Hardness. Created in TASK305, Cycle 3 (2025), as recorded in Sections 1.1, 6 and 10."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C21_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C21 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C21_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C21_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Analyze Computational Complexity and the Implications of NP-Hardness. Created in TASK305, Cycle 3 (2025), as recorded in Sections 1.1, 6 and 10."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task305_C21_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C21 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:CA_Task305_C21_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:TA_Task305_analyze a ontoksd:TaskActivity ;
+    rdfs:label "analyze"@en .
+
+ontoksd:TA_Task305_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task305_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task305_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TA_Task305_test a ontoksd:TaskActivity ;
+    rdfs:label "test"@en .
+
+ontoksd:TC_Task305_1 a ontoksd:TaskComponent ;
+    rdfs:label "Online Judge workflow and outcomes"@en .
+
+ontoksd:TC_Task305_2 a ontoksd:TaskComponent ;
+    rdfs:label "TSP/timetabling complexity analysis"@en .
+
+ontoksd:TC_Task305_3 a ontoksd:TaskComponent ;
+    rdfs:label "Halting and diagnostic limits"@en .
+
+ontoksd:TC_Task305_4 a ontoksd:TaskComponent ;
+    rdfs:label "Scientifically grounded technical article"@en .
+
+ontoksd:TCons_Task305_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Retain theoretical and practical explanations, OJ modeling and report deliverables."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ontoksd:TCons_Task305_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Preserve the extra-challenge status of code experiments."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ontoksd:TCons_Task305_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Do not infer independent outcomes from overlapping C15/C16 explanations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ontoksd:AC_Task305 a ontoksd:AcquisitionContext ;
+    rdfs:label "Online Judges at Logistic Solutions educational setting"@en ;
+    dcterms:identifier "Task305-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:ER_Task305_ProblemStatement a ontoksd:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ontoksd:C02 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C06 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C14 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C15 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C16 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:C21 ontoksd:hasTask ontoksd:Task305_Reference .
+
+ontoksd:AS_Task305 a ontoksd:Assessment ;
+    rdfs:label "Online Judges at Logistic Solutions assessment specification"@en ;
+    dcterms:identifier "Task305-Assessment" ;
+    dcterms:references ontoksd:CSPCycle03_TenPointScale ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task305 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task305_C02_Assessment,
+        ontoksd:CA_Task305_C03_Assessment,
+        ontoksd:CA_Task305_C05_Assessment,
+        ontoksd:CA_Task305_C06_Assessment,
+        ontoksd:CA_Task305_C14_Assessment,
+        ontoksd:CA_Task305_C15_Assessment,
+        ontoksd:CA_Task305_C16_Assessment,
+        ontoksd:CA_Task305_C21_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task305 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task305_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:Task305_Reference a ontoksd:Task ;
+    rdfs:label "Online Judges at Logistic Solutions reference performance"@en ;
+    dcterms:identifier "Task305-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task305_analyze,
+        ontoksd:TA_Task305_document,
+        ontoksd:TA_Task305_explain,
+        ontoksd:TA_Task305_model,
+        ontoksd:TA_Task305_test ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task305_1,
+        ontoksd:TC_Task305_2,
+        ontoksd:TC_Task305_3,
+        ontoksd:TC_Task305_4 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task305_1,
+        ontoksd:TCons_Task305_2,
+        ontoksd:TCons_Task305_3 ;
+    ontoksd:hasTaskStatement "Analyze Online Judge behavior, TSP/timetabling complexity and computability limits; represent the evaluation workflow with an FSM and provide a theoretically grounded article."@en ;
+    ontoksd:isTaskOf ontoksd:C02,
+        ontoksd:C03,
+        ontoksd:C05,
+        ontoksd:C06,
+        ontoksd:C14,
+        ontoksd:C15,
+        ontoksd:C16,
+        ontoksd:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:LT_Task305 a ontoksd:LearningTask ;
+    rdfs:label "Online Judges at Logistic Solutions learning task"@en ;
+    dcterms:identifier "Task305-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task305 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task305_C02_Learning,
+        ontoksd:CA_Task305_C03_Learning,
+        ontoksd:CA_Task305_C05_Learning,
+        ontoksd:CA_Task305_C06_Learning,
+        ontoksd:CA_Task305_C14_Learning,
+        ontoksd:CA_Task305_C15_Learning,
+        ontoksd:CA_Task305_C16_Learning,
+        ontoksd:CA_Task305_C21_Learning ;
+    ontoksd:hasInstructionalStatement "Analyze TSP and timetabling submissions and reasons for TLE in relation to input size, algorithmic strategy, resource limits and problem formulation."@en,
+        "Explain computability/termination limits and distinguish them from practical time limits and NP-hardness."@en,
+        "Preserve the source simulation/testing objective while documenting conditional C03 activation. Do not treat every timeout as an infinite loop."@en,
+        "Provide an SBC-format article with hypotheses, characterization of TSP/PT, manager-facing answers, the FSM and illustrative examples."@en,
+        "Represent observable Online Judge workflow and AC, WA, TLE, CE and RE outcomes with an FSM, explaining model and evaluation limits."@en,
+        "State the formulation before assigning a complexity class: decision TSP and optimization TSP are different formulations; timetabling depends on its constraints."@en,
+        "The experiment evaluating TSP/PT code at different input sizes is an extra challenge; no benchmark result or executed evaluation is asserted."@en ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task305_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+}

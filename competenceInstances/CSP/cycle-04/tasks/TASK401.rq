@@ -1,0 +1,432 @@
+# Task 401; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task401_CM01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explicit requirements-analysis question or activity; Relationship between rules, inputs and expected behavior. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM01_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM01_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explicit requirements-analysis question or activity"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explicit requirements-analysis question or activity; Relationship between rules, inputs and expected behavior. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explicit requirements-analysis question or activity"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Data representation and updates required; Code and individual update demonstration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM02_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM02_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Data representation and updates required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Data representation and updates required; Code and individual update demonstration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Data representation and updates required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Decisions required by the game rules; Conditions and branches exercised with contrasting cases. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Decisions required by the game rules"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Decisions required by the game rules; Conditions and branches exercised with contrasting cases. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Decisions required by the game rules"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Repetition and termination required; Loop continuation and termination. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Repetition and termination required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Repetition and termination required; Loop continuation and termination. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Repetition and termination required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: User interaction required; Input/output demonstration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "User interaction required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: User interaction required; Input/output demonstration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "User interaction required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM06_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Invalid-input and illegal-move rejection required; Rejection and preservation of valid state. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM06_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM06_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Invalid-input and illegal-move rejection required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM06_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Invalid-input and illegal-move rejection required; Rejection and preservation of valid state. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM06_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM06_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Invalid-input and illegal-move rejection required"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM07_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Function organization explicitly required by this adjustment; Responsibilities, data exchange and integration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM07_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM07_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Function organization explicitly required by this adjustment"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM07_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Function organization explicitly required by this adjustment; Responsibilities, data exchange and integration. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM07_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM07_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Function organization explicitly required by this adjustment"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explicit verification against expected results requested; Test record and conclusion. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explicit verification against expected results requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Explicit verification against expected results requested; Test record and conclusion. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Explicit verification against expected results requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM09_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Failure observed or provided for diagnosis; Relevant execution steps and causal explanation. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM09_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM09_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Failure observed or provided for diagnosis"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM09_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Failure observed or provided for diagnosis; Relevant execution steps and causal explanation. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM09_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM09_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Failure observed or provided for diagnosis"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM10_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Complete individual explanation, including function organization, required by this adjustment; Coordinated explanation satisfying all five component criteria. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM10_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM10_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Complete individual explanation, including function organization, required by this adjustment"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM10_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Complete individual explanation, including function organization, required by this adjustment; Coordinated explanation satisfying all five component criteria. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM10_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM10_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Complete individual explanation, including function organization, required by this adjustment"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task401_CM12_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Arithmetic expression present and its explanation requested; Explanation of operands, precedence and result. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM12_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:CM12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM12_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Arithmetic expression present and its explanation requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task401_CM12_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Arithmetic expression present and its explanation requested; Explanation of operands, precedence and result. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task401_CM12_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:CM12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task401 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CA_Task401_CM12_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Arithmetic expression present and its explanation requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:TA_Task401_design a ontoksd:TaskActivity ;
+    rdfs:label "design"@en .
+
+ontoksd:TA_Task401_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task401_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TC_Task401 a ontoksd:TaskComponent ;
+    rdfs:label "A complete interactive tic-tac-toe solution"@en .
+
+ontoksd:TCons_Task401_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Small groups of two or three with individual oral accountability."@en .
+
+ontoksd:TCons_Task401_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Apply the documented adjustment prospectively; do not attribute its modularization requirement retrospectively to an earlier occurrence."@en .
+
+ontoksd:AC_Task401 a ontoksd:AcquisitionContext ;
+    rdfs:label "Tic-Tac-Toe reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-TicTacToe.md> .
+
+ontoksd:CM01 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM02 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM06 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM07 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM09 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM10 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:CM12 ontoksd:hasTask ontoksd:Task401_Reference .
+
+ontoksd:ER_Task401_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Tic-Tac-Toe source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-TicTacToe.md> .
+
+ontoksd:AS_Task401 a ontoksd:Assessment ;
+    rdfs:label "Tic-Tac-Toe assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task401 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task401_CM01_Assessment,
+        ontoksd:CA_Task401_CM02_Assessment,
+        ontoksd:CA_Task401_CM03_Assessment,
+        ontoksd:CA_Task401_CM04_Assessment,
+        ontoksd:CA_Task401_CM05_Assessment,
+        ontoksd:CA_Task401_CM06_Assessment,
+        ontoksd:CA_Task401_CM07_Assessment,
+        ontoksd:CA_Task401_CM08_Assessment,
+        ontoksd:CA_Task401_CM09_Assessment,
+        ontoksd:CA_Task401_CM10_Assessment,
+        ontoksd:CA_Task401_CM12_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task401 ;
+    ontoksd:usesResource ontoksd:ER_Task401_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-TicTacToe.md> .
+
+ontoksd:Task401_Reference a ontoksd:Task ;
+    rdfs:label "Tic-Tac-Toe reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task401_design,
+        ontoksd:TA_Task401_explain,
+        ontoksd:TA_Task401_implement ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task401 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task401_1,
+        ontoksd:TCons_Task401_2 ;
+    ontoksd:hasTaskStatement "In groups of two or three, implement a 3 x 3 text-based or graphical tic-tac-toe game for two human players, alternating X and O."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-TicTacToe.md> .
+
+ontoksd:LT_Task401 a ontoksd:LearningTask ;
+    rdfs:label "Tic-Tac-Toe learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task401 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task401_CM01_Learning,
+        ontoksd:CA_Task401_CM02_Learning,
+        ontoksd:CA_Task401_CM03_Learning,
+        ontoksd:CA_Task401_CM04_Learning,
+        ontoksd:CA_Task401_CM05_Learning,
+        ontoksd:CA_Task401_CM06_Learning,
+        ontoksd:CA_Task401_CM07_Learning,
+        ontoksd:CA_Task401_CM08_Learning,
+        ontoksd:CA_Task401_CM09_Learning,
+        ontoksd:CA_Task401_CM10_Learning,
+        ontoksd:CA_Task401_CM12_Learning ;
+    ontoksd:hasInstructionalStatement "Assess individual accountability and acknowledged, fairly distributed contributions to the group. A requirements analysis, systematic test record or diagnostic activity is conditional on the explicit request or opportunity described in the activation table."@en,
+        "Display the current board after each accepted move and submit source code and a complete-match demonstration."@en,
+        "In groups of two or three, implement a 3 x 3 text-based or graphical tic-tac-toe game for two human players, alternating X and O."@en,
+        "Represent the board; reject malformed or illegal moves without changing the board or player; detect row, column and diagonal wins and draws. A winning last move takes precedence over a draw."@en,
+        "The conditional arithmetic-expression explanation is an extension. Requiring functions alone does not establish independently designed organization at Creating."@en,
+        "Under the TASK401 adjustment, organize the solution into functions with explicit responsibilities and data exchange. Require each learner to explain data organization, state updates, decisions, repetition and function organization coherently."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task401_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-TicTacToe.md> .
+}

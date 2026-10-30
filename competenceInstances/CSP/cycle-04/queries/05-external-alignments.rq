@@ -1,0 +1,5 @@
+PREFIX o: <http://purl.org/ontoksd#>
+SELECT ?competence ?external ?type ?justification WHERE {
+ ?a a o:ExternalCompetenceAlignment; o:mediatesInternalCompetence ?competence; o:mediatesExternalCompetence ?external; o:hasAlignmentType ?type; o:hasAlignmentJustification ?justification .
+ FILTER(STRSTARTS(STR(?a), "http://purl.org/ontoksd#CSP4_Alignment_"))
+} ORDER BY ?competence ?external

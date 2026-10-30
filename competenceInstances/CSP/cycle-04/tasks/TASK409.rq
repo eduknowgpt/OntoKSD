@@ -1,0 +1,197 @@
+# Task 409; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task409_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select excess or no-excess behavior using the stated limit. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select excess or no-excess behavior using the stated limit"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task409_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select excess or no-excess behavior using the stated limit. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select excess or no-excess behavior using the stated limit"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task409_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read weight and display both labeled results with the required formatting. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read weight and display both labeled results with the required formatting"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task409_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read weight and display both labeled results with the required formatting. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read weight and display both labeled results with the required formatting"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task409_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task409_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task409_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Calculate and store excess and fine, or assign zeros. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Calculate and store excess and fine, or assign zeros"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task409_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Calculate and store excess and fine, or assign zeros. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task409_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task409 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> .
+
+ontoksd:CA_Task409_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Calculate and store excess and fine, or assign zeros"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task409_calculate a ontoksd:TaskActivity ;
+    rdfs:label "calculate"@en .
+
+ontoksd:TA_Task409_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TA_Task409_select a ontoksd:TaskActivity ;
+    rdfs:label "select"@en .
+
+ontoksd:TC_Task409 a ontoksd:TaskComponent ;
+    rdfs:label "Excess catch and fine calculations under supplied exercise rules"@en .
+
+ontoksd:TCons_Task409_1 a ontoksd:TaskConstraint ;
+    rdfs:label "The limit and fine are problem parameters, not a claim about current regulations."@en .
+
+ontoksd:TCons_Task409_2 a ontoksd:TaskConstraint ;
+    rdfs:label "No input validation, repeated calculation, functions, arrays or individual explanation is required."@en .
+
+ontoksd:AC_Task409 a ontoksd:AcquisitionContext ;
+    rdfs:label "Excess Fishing Weight reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-ExcessFishingWeight.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task409_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task409_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task409_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task409_Reference .
+
+ontoksd:ER_Task409_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Excess Fishing Weight source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-ExcessFishingWeight.md> .
+
+ontoksd:AS_Task409 a ontoksd:Assessment ;
+    rdfs:label "Excess Fishing Weight assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task409 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task409_CM03_Assessment,
+        ontoksd:CA_Task409_CM05_Assessment,
+        ontoksd:CA_Task409_CM08_Assessment,
+        ontoksd:CA_Task409_CM20_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task409 ;
+    ontoksd:usesResource ontoksd:ER_Task409_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-ExcessFishingWeight.md> .
+
+ontoksd:Task409_Reference a ontoksd:Task ;
+    rdfs:label "Excess Fishing Weight reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task409_calculate,
+        ontoksd:TA_Task409_implement,
+        ontoksd:TA_Task409_select ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task409 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task409_1,
+        ontoksd:TCons_Task409_2 ;
+    ontoksd:hasTaskStatement "Read a valid nonnegative fractional catch weight P. Under the exercise rule of 50 kilograms and R$4.00 per excess kilogram, set E = P - 50 and M = 4 * E only when P > 50; otherwise assign zero to both."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-ExcessFishingWeight.md> .
+
+ontoksd:LT_Task409 a ontoksd:LearningTask ;
+    rdfs:label "Excess Fishing Weight learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task409 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task409_CM03_Learning,
+        ontoksd:CA_Task409_CM05_Learning,
+        ontoksd:CA_Task409_CM08_Learning,
+        ontoksd:CA_Task409_CM20_Learning ;
+    ontoksd:hasInstructionalStatement "Display E in kilograms and M in Brazilian reais to two decimal places. Submit source code; explicit example comparison and judgment is optional."@en,
+        "Read a valid nonnegative fractional catch weight P. Under the exercise rule of 50 kilograms and R$4.00 per excess kilogram, set E = P - 50 and M = 4 * E only when P > 50; otherwise assign zero to both."@en ;
+    ontoksd:usesResource ontoksd:ER_Task409_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-ExcessFishingWeight.md> .
+}

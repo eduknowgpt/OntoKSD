@@ -1,0 +1,73 @@
+# Competence CM11; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM11 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence ;
+    rdfs:label "Trace program execution"@en ;
+    dcterms:identifier "CM11" ;
+    ontoksd:hasDisposition ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM11_KS1,
+        ontoksd:CM11_KS2,
+        ontoksd:CM11_KS3,
+        ontoksd:CM11_KS4,
+        ontoksd:CM11_KS5 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task402_Reference ;
+    skos:definition "determine successive control steps and data values for specified inputs by following the program's execution rules."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CM11_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K01 - Algorithms x Apply"@en ;
+    dcterms:description "Follow instructions in execution order to determine successive states."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:follow ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K01 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K01 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CM11_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K03 - Data types, constants and variables x Understand"@en ;
+    dcterms:description "Interpret the types and values used by the program."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:interpret ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K03 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K03 ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CM11_KS3 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K05 - Assignment statements x Apply"@en ;
+    dcterms:description "Determine variable values after successive assignments using current values."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:determine ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K05 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K05 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CM11_KS4 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K04 - Arithmetic and literal expressions x Apply"@en ;
+    dcterms:description "Evaluate arithmetic expressions according to operator precedence and current operand values."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:evaluate ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K04 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K04 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CM11_KS5 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K06 - Input and output statements x Understand"@en ;
+    dcterms:description "Interpret the input operations and the values supplied to the program."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:interpret ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K06 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K06 ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+}

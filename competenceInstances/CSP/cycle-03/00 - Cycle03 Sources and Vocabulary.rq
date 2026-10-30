@@ -1,0 +1,199 @@
+# Cycle-03 CSP references, shared knowledge, dispositions and numeric course scale; no source documents bundled.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CSPCycle03_TenPointScale a ontoksd:Scale ;
+    rdfs:label "Cycle-03 syllabus numeric grading scale, 0 to 10"@en ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 ;
+    skos:scopeNote "The syllabus documents a numeric range only. No score step, qualitative proficiency bands, minimum attainment or course-approval threshold is inferred."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation.md> .
+
+ontoksd:Course_FormalLanguagesAndTheoryOfComputation a ontoksd:Course ;
+    ontoksd:hasInstructionalUnit ontoksd:AS_Task301,
+        ontoksd:AS_Task302,
+        ontoksd:AS_Task303,
+        ontoksd:AS_Task304,
+        ontoksd:AS_Task305,
+        ontoksd:LT_Task301,
+        ontoksd:LT_Task302,
+        ontoksd:LT_Task303,
+        ontoksd:LT_Task304,
+        ontoksd:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation.md> .
+
+ontoksd:Knowledge_CSP_AlgorithmicScalability a ontoksd:Knowledge ;
+    rdfs:label "Algorithmic Scalability"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Conceptual relationships among input growth, algorithmic cost, practical resource limits and feasibility of solving instances."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_Codifications a ontoksd:Knowledge ;
+    rdfs:label "Codifications"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Formal encodings and conditions under which symbolic representations can or cannot be treated as structurally interchangeable."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_ComplexityClassesAndIntractability a ontoksd:Knowledge ;
+    rdfs:label "Complexity Classes and Intractability"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "P, NP, NP-hardness, NP-completeness and the distinction between decision and optimization formulations and their tractability implications."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_ComputationalComplexity a ontoksd:Knowledge ;
+    rdfs:label "Computational Complexity"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Analysis of input size, computational resources, cost growth and performance limits of algorithmic solutions."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_FormalLanguages a ontoksd:Knowledge ;
+    rdfs:label "Formal Languages"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Collections as sets of strings, representation assumptions and structural properties considered independently of semantic interpretation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_Homomorphisms a ontoksd:Knowledge ;
+    rdfs:label "Homomorphisms"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Mappings defined on symbols and extended to strings and languages, including structural preservation and transformation properties."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_HomomorphismsAndCodifications a ontoksd:Knowledge ;
+    rdfs:label "Homomorphisms and Codifications"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Mappings between symbolic representations, preservation/loss of structure, and limits of representational equivalence."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_LanguageTheory a ontoksd:Knowledge ;
+    rdfs:label "Language Theory"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Alphabets, strings, languages, empty string/language, substructures and finite/infinite collections, as foundations of formal representation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP_OperationsOnFormalLanguages a ontoksd:Knowledge ;
+    rdfs:label "Operations on Formal Languages"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Concatenation, union, intersection, difference, complement relative to a universe, Kleene closure, reversal and conceptual closure properties."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:cspEpistemicRigor a ontoksd:Disposition ;
+    rdfs:label "Epistemic Rigor"@en ;
+    skos:definition "An orientation toward explicit formal justification, with careful distinction among definitions, examples, counterexamples and conclusions, rather than reliance on informal intuition."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:cspIntellectualResponsibility a ontoksd:Disposition ;
+    rdfs:label "Intellectual Responsibility"@en ;
+    skos:definition "An orientation toward accountability for the correctness, assumptions and limits of formal claims and explanatory arguments."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Competency-Lifecycle.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:881509c0c9841a3a3c3450cb2340e6cd2a0ac26b727b9426f07c611e333774b4" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Competency-Lifecycle.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Competency-Registry.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:e065908acc02b2ec4221dc7fc47323499cc7f7b40a479cbbd6288cafc5814eda" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Competency-Registry.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Competency-Task-Matrix.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4adc65b525cead159c207fa444b3248474086992b68c79f27fcfb24f4ea8427e" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Competency-Task-Matrix.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Data-Dictionary.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:922854b4cbb3a9f9d61c7ebc88d672fed79260a847bc6fd55609734e102fcc1f" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Data-Dictionary.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Task-Competency-Mapping.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:47c51bab43afa779192561fca5d6d33a8f29caec06e961c3f00c2c7f0da156fa" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Task-Competency-Mapping.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/README.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:d738a70f826ebbd5bdc942188c5e885b7197475ca579b564292d30279dc1bfa7" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "README.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:dbe36ca49b30552120b608b550def1005bd1d1c821061d59279ef2fc3d257247" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK301 - MusicCollection.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img01.jpg> a prov:Entity ;
+    dcterms:identifier "archive-sha256:8d52ac5a3e573371d24ff1682c823ec26d1187c631cfe506b1bb93d850cb2a6a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "img01.jpg"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img02.jpg> a prov:Entity ;
+    dcterms:identifier "archive-sha256:9fc44814a650f4834dd2c8b1ec7e5c9bd2e6553c9d526d35ee4825e96a57d021" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "img02.jpg"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4725187c792512aa6a7ed309a2cca0e4f34e38ebc8b9f76b569376d68fbfc69c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK302 - TheVendingMachine.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4107ac1ed5d5e8dd43c9e10e7f1b5a2a0f563cee9fdd19e548a73475193860bd" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK302-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/Labirinto.png> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4a7eb3a72d1a298bbbb9527d2e0647e6ec94d4fdbaaf7f19e84e2dd15d823c3b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "Labirinto.png"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:34151c9a4c469c8fac34909c8c1368b9e91023e5a8f3e3f847ce33407e89bf8c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK303 - TheMinotaursLabyrinth.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:112624422087842ed9c68a9d7cb10c90fb8dcfdcf361f4fcabac92d54173b53c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK303-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:1f86fdf994beeabd81dc0675e697b7b3030fc71126d824eda1abfd6b827761dc" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK304 - TrafficControl.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:6d0817c3db9605ba4622d42c568a7d03eecede0b5caf98ab7369ee3672264332" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK304-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:2e0f71d655f04a94f6dad23e5777083de031f684d6fb86f1914fac7e93d2d42b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK305 - OnlineJudges.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation_Competences.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:57a77cd6cae4345a5be47d20e3a19851df4fa3dcf4c1c0b9a0bb7191132509cc" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "syllabusTheoryOfComputation_Competences.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:09872b2fa2b769f4dc4b80a07d10f23830f4d4d9486ef8c0614b4b15bb4c7021" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "syllabusTheoryOfComputation.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:6dc647d299b4963d395592467de391ee4f46edbd3440fabcd9dd6bae7f155d23" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK305-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ebd68d2447c5de11e5d72aa770c2a0d8a10df88a6ac99f98d0484c33e552379f" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK301-CSP-Report.md"@en .
+}

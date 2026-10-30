@@ -1,0 +1,358 @@
+# Source references, source-local knowledge and supplementary controlled values.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CSP4_Curricular_K01 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K01 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Algorithms: concept, properties and construction"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K03 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K03 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Data types, constants and variables"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K04 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K04 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Arithmetic and literal expressions"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K05 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K05 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Assignment statements"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K06 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K06 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Input and output statements"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K07 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K07 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Relational and logical operators"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K08 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K08 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Decision structures"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K09 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K09 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Repetition structures"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K10 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K10 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Arrays and matrices"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K11 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K11 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Modularization: functions and parameter passing"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K12 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K12 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Software testing"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K14 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K14 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Software debugging"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:CSP4_Curricular_K15 a skos:Concept ;
+    ontoksd:curricularlyRepresentsKnowledge ontoksd:Knowledge_CSP4_K15 ;
+    skos:inScheme ontoksd:CSP4_CourseKnowledgeScheme ;
+    skos:prefLabel "Code comments"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Course_AlgorithmsAndProgrammingLogic a ontoksd:Course ;
+    rdfs:label "Algorithms and Programming Logic"@en ;
+    ontoksd:hasInstructionalUnit ontoksd:AS_Task401,
+        ontoksd:AS_Task402,
+        ontoksd:AS_Task403,
+        ontoksd:AS_Task404,
+        ontoksd:AS_Task405,
+        ontoksd:AS_Task406,
+        ontoksd:AS_Task407,
+        ontoksd:AS_Task408,
+        ontoksd:AS_Task409,
+        ontoksd:AS_Task410,
+        ontoksd:AS_Task411,
+        ontoksd:LT_Task401,
+        ontoksd:LT_Task402,
+        ontoksd:LT_Task403,
+        ontoksd:LT_Task404,
+        ontoksd:LT_Task405,
+        ontoksd:LT_Task406,
+        ontoksd:LT_Task407,
+        ontoksd:LT_Task408,
+        ontoksd:LT_Task409,
+        ontoksd:LT_Task410,
+        ontoksd:LT_Task411 ;
+    skos:scopeNote "Course-plan reference for the cycle-04 instructional catalog. Aggregation represents proposed instructional organization, not proof that all tasks were administered at IFBA, in 2026, or in one offering."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K17 a ontoksd:Knowledge ;
+    rdfs:label "Physical quantities, units and average velocity"@en ;
+    dcterms:identifier "CSP-cycle04:K17" ;
+    skos:scopeNote "Interdisciplinary task content; not asserted to be explicit content of the programming course plan."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:Knowledge_CSP4_K18 a ontoksd:Knowledge ;
+    rdfs:label "Algebraic rearrangement of formulas"@en ;
+    dcterms:identifier "CSP-cycle04:K18" ;
+    skos:scopeNote "Interdisciplinary task content; not asserted to be explicit content of the programming course plan."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:amEvaluative a ontoksd:ActivationMode ;
+    rdfs:label "evaluative"@en ;
+    skos:definition "Comparing observed and expected behavior and judging conformity using stated criteria."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:amExplanatory a ontoksd:ActivationMode ;
+    rdfs:label "explanatory"@en ;
+    skos:definition "Explaining how data, expressions, decisions or repeated actions determine the specified behavior."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:amOperational a ontoksd:ActivationMode ;
+    rdfs:label "operational"@en ;
+    skos:definition "Carrying out a specified procedure, such as execution tracing, formula manipulation or test execution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:cspConsiderate a ontoksd:Disposition ;
+    rdfs:label "Considerate"@en ;
+    skos:definition "An expected inclination to consider users and communicate prompts, information and outcomes clearly in a computational interaction."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:cspOrganized a ontoksd:Disposition ;
+    rdfs:label "Organized"@en ;
+    skos:definition "An expected inclination to arrange responsibilities, steps and exchanged information coherently when performing a computational task."@en ;
+    skos:scopeNote "Source-local expected orientation; not an observed personality trait or an asserted equivalence with another disposition."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/CSP-Competency-Composition.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:315b42049d9f6f6a9c715a3d11783d4209e17d62bea35ea2ecd188336d4b77a7" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/CSP-Competency-Lifecycle.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:3f5ddaf63efdd276d98e268ce69c6b58a3e5ed4e9778fb425784e402ae1e9bf9" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/CSP-Competency-Registry.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:aded6ddac38b4aaa3adaf8a5207a99f10aaf61eb380a56ee8d8e63b3868e5c9e" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/CSP-Competency-Task-Matrix.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:12d9ebdc3534584f47fd47713495a6368d154b7a7de3eac5f2f4545432e320ba" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/CSP-Data-Dictionary.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ef7658a8554ba544ccb85f518190bffad4b0c32a6b22046ac105271c6fac9d70" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/CSP-Task-Competency-Mapping.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:217147f0e04b0bb7a65c56f0014095bff97c76506f42011e2b0ccfe97d789c38" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/README.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:f710a3015f98aadfc7a3d717f458210b4b47ba6c718d1f60978f2d12a842cba8" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:d662c0d386165eb46575613350b21010bcbfde93e21106fd612dea1be70f4efd" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ca63f3f40b31919e62d6d7674718f9422bc1f9975d8dc00fd78db58909e765af" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-TicTacToe.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ac868c954e4740f1e75fd8921810df4e11d319328843c6dc64401abd0a21d9eb" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/Original.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:7367695508dc7095d78c37a1e56229f953e545a1facae48a233190fb8d9a4351" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:98d644be62e9eba6d1f887dc4acefeb66d4322c8788ac90c392e450f427427e9" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-VariablesManipulation.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:85fe08f99b90352af1e715d02b01842171a89a0d2616fe155f32f3fb690dc59a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-Velocity.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:924a3b58ee1c1771cd446a865a7575afa90f7c7ab0173d8aeb9cbdc2902d560c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/AtividadeOriginal.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:e064a15cd398ee4b6103e6af2f149c3071524258ffc4096d11debad79091ef20" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:475876cf2233ee031666d4b7c9fac64ea84b8ca42e549f61ec22418f1fbd598b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK404-Area/TASK404-Area.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:fa5b0feb0e05d7c8e35efe62e7efc9490040b2b0a19c5ee9e9468e9426a9f8a6" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:80d69bbff7b9b92ec55db6d16c5e569e34325682539e5f19f7bc0b95e4d8c79d" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-Factorial.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:0af3a5632a4af2a4c8c666806496fa93b68fc22afc36faceb759a00587d851ad" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:5a6be45fa873bbf82be8e50ee2478c26263176f6139397e13d9303688a1e855a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK406-SchoolCenso/TASK406-SchoolCensus.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:8c02c484cd7f6daca88e606e89a90613aa1b38a1de930bdcccef74ac9ed3a3e2" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:9633aa99df944c2a0b097a6d63e93979f5473ca7dceb9ca264633a57ec1fe461" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK407-Primes/TASK407-Primes.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:8f5ff2cbb35a313335a2f9bf8ddca5e2d5627be7966d98b656bc8eed03d828d8" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:3a5dd921ef3866a16756f3d0fcf1499aeb0f746d4df0d8231e646b9e8bdb6f54" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-IF-ELSE.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:2ae728a7308072f6f36cb021ab2cc1d57bf2126255b126568e37ff7b3fb63c8a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:bab5d4cc3e0cae39d169d981aae1ebabff31b7e8fa99130bf529c093f20e3931" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK409-ExcessFishingWeight/TASK409-ExcessFishingWeight.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ea406b5e3e5e2efc8cfe2f32b66eaeb93abbcbfa0b1402e98caed162ead51c63" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:954569e8b5f093791dc84ab825218522d95d68258172cd641950fcb6df6cca3b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-Football.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:088f1727bb04c8fe13d5a0fc8441a56610cb36df3fefe28752e0c9bdae82cbf8" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:66a4881de890b65f2f0b89474f8ba136f5df5b8eb7c2bec8e62a01ff0fef52ef" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK411-Snake/TASK411-Snake.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:a249877956163cff6a6f11094186ae8cea4e442b07f9ace0e907eae2524b3d90" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+ontoksd:Knowledge_CSP4_K01 a ontoksd:Knowledge ;
+    rdfs:label "Algorithms: concept, properties and construction"@en ;
+    dcterms:identifier "CSP-cycle04:K01" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K03 a ontoksd:Knowledge ;
+    rdfs:label "Data types, constants and variables"@en ;
+    dcterms:identifier "CSP-cycle04:K03" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K04 a ontoksd:Knowledge ;
+    rdfs:label "Arithmetic and literal expressions"@en ;
+    dcterms:identifier "CSP-cycle04:K04" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K05 a ontoksd:Knowledge ;
+    rdfs:label "Assignment statements"@en ;
+    dcterms:identifier "CSP-cycle04:K05" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K06 a ontoksd:Knowledge ;
+    rdfs:label "Input and output statements"@en ;
+    dcterms:identifier "CSP-cycle04:K06" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K07 a ontoksd:Knowledge ;
+    rdfs:label "Relational and logical operators"@en ;
+    dcterms:identifier "CSP-cycle04:K07" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K08 a ontoksd:Knowledge ;
+    rdfs:label "Decision structures"@en ;
+    dcterms:identifier "CSP-cycle04:K08" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K09 a ontoksd:Knowledge ;
+    rdfs:label "Repetition structures"@en ;
+    dcterms:identifier "CSP-cycle04:K09" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K10 a ontoksd:Knowledge ;
+    rdfs:label "Arrays and matrices"@en ;
+    dcterms:identifier "CSP-cycle04:K10" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K11 a ontoksd:Knowledge ;
+    rdfs:label "Modularization: functions and parameter passing"@en ;
+    dcterms:identifier "CSP-cycle04:K11" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K12 a ontoksd:Knowledge ;
+    rdfs:label "Software testing"@en ;
+    dcterms:identifier "CSP-cycle04:K12" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K14 a ontoksd:Knowledge ;
+    rdfs:label "Software debugging"@en ;
+    dcterms:identifier "CSP-cycle04:K14" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+ontoksd:Knowledge_CSP4_K15 a ontoksd:Knowledge ;
+    rdfs:label "Code comments"@en ;
+    dcterms:identifier "CSP-cycle04:K15" ;
+    skos:scopeNote "Retained source curricular topic. Code comments may carry required explanations, but K15 is not introduced as a constitutive pairing without a source-assigned level."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:a0fc54b7253e97ecbd5c5d5d10c387d2b543c4e6a6448b855127f9fb515d0f7b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:e8fdedd5700e63305084cd77af5385d56823180259f3069e5d849cdf9454a306" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+
+ontoksd:CSP4_CourseKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "Algorithms and Programming Logic: source curricular topics"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/syllabus/Algorithms-ProgrammingLogic.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:8008649dfd3fc744a3a84e767e289d939ed3e71bcff076b059ad397aac48e589" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-04> .
+}

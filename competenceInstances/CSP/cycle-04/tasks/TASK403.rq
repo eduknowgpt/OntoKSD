@@ -1,0 +1,364 @@
+# Task 403; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task403_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select the calculation or rejection branch. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select the calculation or rejection branch"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select the calculation or rejection branch. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select the calculation or rejection branch"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Repeat attempts/calculations and terminate. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Repeat attempts/calculations and terminate"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Repeat attempts/calculations and terminate. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Repeat attempts/calculations and terminate"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement understandable interaction. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement understandable interaction"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement understandable interaction. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement understandable interaction"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Learner includes the optional test cases and evaluates their results. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Learner includes the optional test cases and evaluates their results"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task403_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Learner includes the optional test cases and evaluates their results. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Learner includes the optional test cases and evaluates their results"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task403_CM18_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Complete explanation of updates and expression evaluation is requested. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM18_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM18_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Complete explanation of updates and expression evaluation is requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task403_CM18_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Complete explanation of updates and expression evaluation is requested. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM18_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM18_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Complete explanation of updates and expression evaluation is requested"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional .
+
+ontoksd:CA_Task403_CM19_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Document all three formula rearrangements. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM19_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM19 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM19_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Document all three formula rearrangements"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM19_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Document all three formula rearrangements. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM19_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM19 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM19_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Document all three formula rearrangements"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement all three numeric calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement all three numeric calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Implement all three numeric calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Implement all three numeric calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM21_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Validate inputs and protect calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM21_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM21 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM21_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Validate inputs and protect calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM21_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Validate inputs and protect calculations. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM21_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM21 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM21_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Validate inputs and protect calculations"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM22_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Investigate the physical meaning of the relationship. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM22_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM22 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM22_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Investigate the physical meaning of the relationship"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task403_CM22_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Investigate the physical meaning of the relationship. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task403_CM22_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amExplanatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM22 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task403 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CA_Task403_CM22_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Investigate the physical meaning of the relationship"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task403_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task403_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TA_Task403_investigate a ontoksd:TaskActivity ;
+    rdfs:label "investigate"@en .
+
+ontoksd:TA_Task403_rearrange a ontoksd:TaskActivity ;
+    rdfs:label "rearrange"@en .
+
+ontoksd:TC_Task403 a ontoksd:TaskComponent ;
+    rdfs:label "An interactive average-velocity calculation program"@en .
+
+ontoksd:TCons_Task403_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Positive-only data are a restriction of this task, not a universal physical law."@en .
+
+ontoksd:TCons_Task403_2 a ontoksd:TaskConstraint ;
+    rdfs:label "No unit conversion, prescribed function organization, arrays or additional oral defense is required."@en .
+
+ontoksd:AC_Task403 a ontoksd:AcquisitionContext ;
+    rdfs:label "Average Velocity reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-Velocity.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM18 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM19 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM21 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:CM22 ontoksd:hasTask ontoksd:Task403_Reference .
+
+ontoksd:ER_Task403_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Average Velocity source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-Velocity.md> .
+
+ontoksd:AS_Task403 a ontoksd:Assessment ;
+    rdfs:label "Average Velocity assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task403 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task403_CM03_Assessment,
+        ontoksd:CA_Task403_CM04_Assessment,
+        ontoksd:CA_Task403_CM05_Assessment,
+        ontoksd:CA_Task403_CM08_Assessment,
+        ontoksd:CA_Task403_CM18_Assessment,
+        ontoksd:CA_Task403_CM19_Assessment,
+        ontoksd:CA_Task403_CM20_Assessment,
+        ontoksd:CA_Task403_CM21_Assessment,
+        ontoksd:CA_Task403_CM22_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task403 ;
+    ontoksd:usesResource ontoksd:ER_Task403_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-Velocity.md> .
+
+ontoksd:Task403_Reference a ontoksd:Task ;
+    rdfs:label "Average Velocity reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task403_explain,
+        ontoksd:TA_Task403_implement,
+        ontoksd:TA_Task403_investigate,
+        ontoksd:TA_Task403_rearrange ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task403 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task403_1,
+        ontoksd:TCons_Task403_2 ;
+    ontoksd:hasTaskStatement "Investigate displacement, time interval and average velocity for positive-direction straight-line motion without reversal; document all three formula rearrangements in writing or code comments."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-Velocity.md> .
+
+ontoksd:LT_Task403 a ontoksd:LearningTask ;
+    rdfs:label "Average Velocity learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task403 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task403_CM03_Learning,
+        ontoksd:CA_Task403_CM04_Learning,
+        ontoksd:CA_Task403_CM05_Learning,
+        ontoksd:CA_Task403_CM08_Learning,
+        ontoksd:CA_Task403_CM18_Learning,
+        ontoksd:CA_Task403_CM19_Learning,
+        ontoksd:CA_Task403_CM20_Learning,
+        ontoksd:CA_Task403_CM21_Learning,
+        ontoksd:CA_Task403_CM22_Learning ;
+    ontoksd:hasInstructionalStatement "Investigate displacement, time interval and average velocity for positive-direction straight-line motion without reversal; document all three formula rearrangements in writing or code comments."@en,
+        "Receive exactly two positive numeric values and identify the missing quantity using an explicitly stated marker; calculate the third quantity and display the result and its unit using fixed coherent units."@en,
+        "Submit commented source code and a brief description of the marker, exit command, identification logic, units, validation and usage examples. Test comparison is optional; complete CM18 explanatory assessment is conditional on an additional request."@en,
+        "Support repeated calculations and an explicit exit command distinct from the missing-value marker, recognized before requesting remaining fields."@en,
+        "Validate numeric positivity, exactly one missing quantity and nonzero denominators. Recognize a zero marker as missing before validating data, if zero is chosen. Reject invalid combinations and request a new attempt without calculation."@en ;
+    ontoksd:usesResource ontoksd:ER_Task403_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-Velocity.md> .
+}

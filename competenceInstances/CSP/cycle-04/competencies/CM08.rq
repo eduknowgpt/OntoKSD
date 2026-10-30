@@ -1,0 +1,45 @@
+# Competence CM08; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM08 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence ;
+    rdfs:label "Verify program behavior with test cases"@en ;
+    dcterms:identifier "CM08" ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:persistent ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM08_KS1,
+        ontoksd:CM08_KS2 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task401_Reference ;
+    skos:definition "use test cases to compare observed and expected behavior and judge conformity to specified requirements."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM08_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K12 - Software testing x Apply"@en ;
+    dcterms:description "Execute representative test cases with specified inputs and expected results."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:execute ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K12 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K12 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM08_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K12 - Software testing x Evaluate"@en ;
+    dcterms:description "Judge conformity to requirements by comparing observed and expected results."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:compare,
+        bloom:judge ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K12 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K12 ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+}

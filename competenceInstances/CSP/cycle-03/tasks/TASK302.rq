@@ -1,0 +1,395 @@
+# Cycle-03 Task302 and current instructional/assessment activations.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT DATA {
+ontoksd:Cycle03_Historical_Task302_C13_01 a prov:Entity ;
+    dcterms:description "Historical task association replaced by C23. The former identity is preserved; this is not a current activation or an identity equivalence."@en ;
+    dcterms:references ontoksd:C13_01 ;
+    dcterms:relation ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C02_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C02_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. If a regular-expression fragment is provided, document its construction; otherwise justify the limitation."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. If a regular-expression fragment is provided, document its construction; otherwise justify the limitation."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C05_01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C05_01_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C05_01_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C05_01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C05_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C05_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C06_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. Added to LO3 by the adopted mapping refinement; existing supporting associations retained (Section 9.1)."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C06_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C06_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C06_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. Added to LO3 by the adopted mapping refinement; existing supporting associations retained (Section 9.1)."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C06_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C06_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C17_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C17_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C17_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C17_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C17_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C17_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C18_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C18_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C18_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C18_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C18_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C18_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C23_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C23_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C23_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C23_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task302_C23_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:CA_Task302_C23_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:TA_Task302_construct a ontoksd:TaskActivity ;
+    rdfs:label "construct"@en .
+
+ontoksd:TA_Task302_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task302_justify a ontoksd:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ontoksd:TA_Task302_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TA_Task302_simulate a ontoksd:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ontoksd:TC_Task302_1 a ontoksd:TaskComponent ;
+    rdfs:label "Vending-machine finite-state model"@en .
+
+ontoksd:TC_Task302_2 a ontoksd:TaskComponent ;
+    rdfs:label "Payment and change handling"@en .
+
+ontoksd:TC_Task302_3 a ontoksd:TaskComponent ;
+    rdfs:label "Symbolic event representation"@en .
+
+ontoksd:TC_Task302_4 a ontoksd:TaskComponent ;
+    rdfs:label "Rigorous technical documentation"@en .
+
+ontoksd:TCons_Task302_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Preserve the 2025 product prices and specified payment denominations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ontoksd:TCons_Task302_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Give at least two operational examples and the requested report."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ontoksd:TCons_Task302_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Treat regular-expression output according to the source conditional alternative."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ontoksd:TCons_Task302_4 a ontoksd:TaskConstraint ;
+    rdfs:label "Keep the bonus-change challenge optional."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ontoksd:AC_Task302 a ontoksd:AcquisitionContext ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks educational setting"@en ;
+    dcterms:identifier "Task302-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:ER_Task302_ProblemStatement a ontoksd:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ontoksd:C02 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C04 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C05_01 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C06 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C17 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C18 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:C23 ontoksd:hasTask ontoksd:Task302_Reference .
+
+ontoksd:AS_Task302 a ontoksd:Assessment ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks assessment specification"@en ;
+    dcterms:identifier "Task302-Assessment" ;
+    dcterms:references ontoksd:CSPCycle03_TenPointScale ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task302 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task302_C02_Assessment,
+        ontoksd:CA_Task302_C03_Assessment,
+        ontoksd:CA_Task302_C04_Assessment,
+        ontoksd:CA_Task302_C05_01_Assessment,
+        ontoksd:CA_Task302_C06_Assessment,
+        ontoksd:CA_Task302_C17_Assessment,
+        ontoksd:CA_Task302_C18_Assessment,
+        ontoksd:CA_Task302_C23_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task302 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task302_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:Task302_Reference a ontoksd:Task ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks reference performance"@en ;
+    dcterms:identifier "Task302-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task302_construct,
+        ontoksd:TA_Task302_document,
+        ontoksd:TA_Task302_justify,
+        ontoksd:TA_Task302_model,
+        ontoksd:TA_Task302_simulate ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task302_1,
+        ontoksd:TC_Task302_2,
+        ontoksd:TC_Task302_3,
+        ontoksd:TC_Task302_4 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task302_1,
+        ontoksd:TCons_Task302_2,
+        ontoksd:TCons_Task302_3,
+        ontoksd:TCons_Task302_4 ;
+    ontoksd:hasTaskStatement "Develop and document a finite-state vending-machine solution that handles product selection, payment and change; provide the JFLAP artifact, operational examples and the conditional regular-expression explanation."@en ;
+    ontoksd:isTaskOf ontoksd:C02,
+        ontoksd:C03,
+        ontoksd:C04,
+        ontoksd:C05_01,
+        ontoksd:C06,
+        ontoksd:C17,
+        ontoksd:C18,
+        ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ontoksd:LT_Task302 a ontoksd:LearningTask ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks learning task"@en ;
+    dcterms:identifier "Task302-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task302 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task302_C02_Learning,
+        ontoksd:CA_Task302_C03_Learning,
+        ontoksd:CA_Task302_C04_Learning,
+        ontoksd:CA_Task302_C05_01_Learning,
+        ontoksd:CA_Task302_C06_Learning,
+        ontoksd:CA_Task302_C17_Learning,
+        ontoksd:CA_Task302_C18_Learning,
+        ontoksd:CA_Task302_C23_Learning ;
+    ontoksd:hasInstructionalStatement "If a regular-expression representation for a selected fragment is feasible, include it and its construction method; otherwise justify the limitation."@en,
+        "Investigate nondeterministic behavior, relate machine options/payments to alphabet symbols and use formal notation consistently."@en,
+        "Model at least three products, accepting R$1 and R$2, dispensing the selected product and returning change. The listed drinks cost R$5/R$7 and snack packets R$7/R$10."@en,
+        "Preserve the source simulation objective despite conditional activation metadata; hypothetical examples are not evidence that the model was executed."@en,
+        "Submit a JFLAP-compatible automaton file and an SBC-format report describing payment/dispensing operations with at least two examples."@en,
+        "The R$1 random bonus-change modification under exact payment is an additional challenge, not a baseline requirement."@en ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task302_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+}

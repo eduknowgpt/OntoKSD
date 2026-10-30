@@ -1,0 +1,2 @@
+PREFIX o: <http://purl.org/ontoksd#>
+SELECT ?parent ?component WHERE { VALUES ?parent { o:CM10 o:CM18 } ?parent o:hasComponentCompetence ?component } ORDER BY ?parent ?component

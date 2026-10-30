@@ -1,0 +1,71 @@
+# Cycle-03 competence C22
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:C22_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "Pushdown Automata x Analyzing"@en ;
+    dcterms:description "Source knowledge: Pushdown Automata. Source skill cell: Analyze (Identify, Analyze, Abstract)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:abstract,
+        bloom:analyze,
+        bloom:identify ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_1_b ;
+    ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_1_b ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:C22_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "Context-Free Grammars x Applying"@en ;
+    dcterms:description "Source knowledge: Context-Free Grammars. Source skill cell: Apply (Construct, Express, Translate)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:construct,
+        bloom:express,
+        bloom:translate ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_2_b ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_ContextFreeGrammars ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:C22_KS3 a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Applying"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Apply (Reason, Validate, Justify)."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:justify,
+        bloom:reason,
+        bloom:validate ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:C22 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Define Context-Free Grammars for Pushdown Automata"@en ;
+    dcterms:identifier "C22"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:investigative,
+        ontoksd:meticulous,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:C22_KS1,
+        ontoksd:C22_KS2,
+        ontoksd:C22_KS3 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Define and apply context-free grammars that represent languages recognized by pushdown automata. Analyze the recognized structure, construct corresponding grammars, translate between representations, and examine their equivalence."@en ;
+    skos:definition "Define Context-Free Grammars for Pushdown Automata"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+}

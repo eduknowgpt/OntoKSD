@@ -1,0 +1,477 @@
+# Cycle-03 Task303 and current instructional/assessment activations.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task303_C02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C02_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    skos:scopeNote "Rejecting a finite-state model alone does not demonstrate the full positively stated DFA-use justification competence."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C02_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    skos:scopeNote "Rejecting a finite-state model alone does not demonstrate the full positively stated DFA-use justification competence."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    skos:scopeNote "The source retains FSM reference knowledge while using the procedure for PDA/grammar tests. Tests on examples are not proof of equivalence for an infinite language."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    skos:scopeNote "The source retains FSM reference knowledge while using the procedure for PDA/grammar tests. Tests on examples are not proof of equivalence for an infinite language."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C05_01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C05_01_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C05_01_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C05_01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C05_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C05_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C12_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Construct the PDA required by LO4 using stack-based route memory. Added by RF-01-03 on 2026-10-02; absent from the pre-refinement nine-competency set. No new deliverable or identity."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C12_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C12_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C12_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Construct the PDA required by LO4 using stack-based route memory. Added by RF-01-03 on 2026-10-02; absent from the pre-refinement nine-competency set. No new deliverable or identity."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C12_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C12_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C13_01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret formal grammar-based rules. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C13_01_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C13_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    skos:scopeNote "Grammar-rule interpretation applies to productions and derivations, not to symbol naming alone."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C13_01_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C13_01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret formal grammar-based rules. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C13_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C13_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    skos:scopeNote "Grammar-rule interpretation applies to productions and derivations, not to symbol naming alone."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C13_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C17_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C17_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C17_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C17_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C17_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C17_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C18_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C18_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C18_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C18_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C18_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C18_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C19_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C19_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C19 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C19_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. A selected alphabet alone is insufficient; the source requires an explicit homomorphism or encoding-transformation claim for this contribution."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C19_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C19_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C19 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C19_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. A selected alphabet alone is insufficient; the source requires an explicit homomorphism or encoding-transformation claim for this contribution."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C22_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Context-Free Grammars for Pushdown Automata. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C22_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C22 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C22_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C22_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Context-Free Grammars for Pushdown Automata. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task303_C22_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C22 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:CA_Task303_C22_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:ER_Task303_Labirinto a ontoksd:EducationalResource ;
+    rdfs:label "Linked source illustration: Labirinto.png"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/Labirinto.png> .
+
+ontoksd:TA_Task303_abstract a ontoksd:TaskActivity ;
+    rdfs:label "abstract"@en .
+
+ontoksd:TA_Task303_construct a ontoksd:TaskActivity ;
+    rdfs:label "construct"@en .
+
+ontoksd:TA_Task303_derive a ontoksd:TaskActivity ;
+    rdfs:label "derive"@en .
+
+ontoksd:TA_Task303_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task303_justify a ontoksd:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ontoksd:TA_Task303_test a ontoksd:TaskActivity ;
+    rdfs:label "test"@en .
+
+ontoksd:TC_Task303_1 a ontoksd:TaskComponent ;
+    rdfs:label "Outward and return route language"@en .
+
+ontoksd:TC_Task303_2 a ontoksd:TaskComponent ;
+    rdfs:label "Pushdown navigation model"@en .
+
+ontoksd:TC_Task303_3 a ontoksd:TaskComponent ;
+    rdfs:label "Corresponding context-free grammar"@en .
+
+ontoksd:TC_Task303_4 a ontoksd:TaskComponent ;
+    rdfs:label "Simulation and rigorous explanation"@en .
+
+ontoksd:TCons_Task303_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Represent the required outward and return journeys under explicit assumptions."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ontoksd:TCons_Task303_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Preserve navigation, formal sequence generation and report deliverables."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ontoksd:TCons_Task303_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Use simulation and theoretical justification as complementary, not interchangeable, forms of support."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ontoksd:TCons_Task303_4 a ontoksd:TaskConstraint ;
+    rdfs:label "The source file heading says TASK302; its filename, report and registry identify this problem as TASK303."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ontoksd:AC_Task303 a ontoksd:AcquisitionContext ;
+    rdfs:label "The Minotaur's Labyrinth educational setting"@en ;
+    dcterms:identifier "Task303-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:ER_Task303_ProblemStatement a ontoksd:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ontoksd:C02 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C05_01 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C12 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C13_01 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C14 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C17 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C18 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C19 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:C22 ontoksd:hasTask ontoksd:Task303_Reference .
+
+ontoksd:AS_Task303 a ontoksd:Assessment ;
+    rdfs:label "The Minotaur's Labyrinth assessment specification"@en ;
+    dcterms:identifier "Task303-Assessment" ;
+    dcterms:references ontoksd:CSPCycle03_TenPointScale ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task303 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task303_C02_Assessment,
+        ontoksd:CA_Task303_C03_Assessment,
+        ontoksd:CA_Task303_C05_01_Assessment,
+        ontoksd:CA_Task303_C12_Assessment,
+        ontoksd:CA_Task303_C13_01_Assessment,
+        ontoksd:CA_Task303_C14_Assessment,
+        ontoksd:CA_Task303_C17_Assessment,
+        ontoksd:CA_Task303_C18_Assessment,
+        ontoksd:CA_Task303_C19_Assessment,
+        ontoksd:CA_Task303_C22_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task303 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task303_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:Task303_Reference a ontoksd:Task ;
+    rdfs:label "The Minotaur's Labyrinth reference performance"@en ;
+    dcterms:identifier "Task303-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task303_abstract,
+        ontoksd:TA_Task303_construct,
+        ontoksd:TA_Task303_derive,
+        ontoksd:TA_Task303_document,
+        ontoksd:TA_Task303_justify,
+        ontoksd:TA_Task303_test ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task303_1,
+        ontoksd:TC_Task303_2,
+        ontoksd:TC_Task303_3,
+        ontoksd:TC_Task303_4 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task303_1,
+        ontoksd:TCons_Task303_2,
+        ontoksd:TCons_Task303_3,
+        ontoksd:TCons_Task303_4 ;
+    ontoksd:hasTaskStatement "Develop and test the adopted pushdown route-memory model for outward and return navigation through the labyrinth, construct the corresponding context-free grammar and justify the representations."@en ;
+    ontoksd:isTaskOf ontoksd:C02,
+        ontoksd:C03,
+        ontoksd:C05_01,
+        ontoksd:C12,
+        ontoksd:C13_01,
+        ontoksd:C14,
+        ontoksd:C17,
+        ontoksd:C18,
+        ontoksd:C19,
+        ontoksd:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ontoksd:LT_Task303 a ontoksd:LearningTask ;
+    rdfs:label "The Minotaur's Labyrinth learning task"@en ;
+    dcterms:identifier "Task303-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task303 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task303_C02_Learning,
+        ontoksd:CA_Task303_C03_Learning,
+        ontoksd:CA_Task303_C05_01_Learning,
+        ontoksd:CA_Task303_C12_Learning,
+        ontoksd:CA_Task303_C13_01_Learning,
+        ontoksd:CA_Task303_C14_Learning,
+        ontoksd:CA_Task303_C17_Learning,
+        ontoksd:CA_Task303_C18_Learning,
+        ontoksd:CA_Task303_C19_Learning,
+        ontoksd:CA_Task303_C22_Learning ;
+    ontoksd:hasInstructionalStatement "Construct a CFG for the adopted PDA route language and explain the correspondence as elaborated by the integrated CSP report; example tests alone do not prove equivalence for an infinite language."@en,
+        "Construct a JFLAP navigation model and an SBC report describing operations, at least two simulations, location-sequence notation, difficulties and investigation results."@en,
+        "Discuss multiple exits or dynamic obstacles as investigation questions; do not silently turn them into mandatory implementation products."@en,
+        "Model outward navigation and return to the entrance using route memory in the adopted PDA formulation."@en,
+        "Retain C12 as the direct PDA-construction competence in the current consolidated set. Symbol naming alone is not grammar-rule interpretation or a homomorphism analysis."@en,
+        "State route-language, movement-inverse and memory assumptions. A finite pictured maze by itself does not prove nonregularity."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task303_Labirinto,
+        ontoksd:ER_Task303_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+}

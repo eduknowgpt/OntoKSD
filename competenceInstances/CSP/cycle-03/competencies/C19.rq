@@ -1,0 +1,73 @@
+# Cycle-03 competence C19
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C19_AnalyticalThinking_Analyzing a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:examine,
+        bloom:justify ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C19_Codifications_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Codifications x Applying"@en ;
+    dcterms:description "Source knowledge: Codifications. Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:map,
+        bloom:translate ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_Codifications ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C19_FormalLanguages_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Understanding"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Understand."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:interpret ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_FormalLanguages ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:KS_C19_Homomorphisms_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Homomorphisms x Applying"@en ;
+    dcterms:description "Source knowledge: Homomorphisms. Source skill cell: Apply."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:apply,
+        bloom:define ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_Homomorphisms ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:C19 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply homomorphisms in formal languages"@en ;
+    dcterms:identifier "C19"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:cspEpistemicRigor,
+        ontoksd:cspIntellectualResponsibility,
+        ontoksd:reflective ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C19_AnalyticalThinking_Analyzing,
+        ontoksd:KS_C19_Codifications_Applying,
+        ontoksd:KS_C19_FormalLanguages_Understanding,
+        ontoksd:KS_C19_Homomorphisms_Applying ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "This competency involves the ability to define and apply homomorphisms over symbols, strings, and languages, using formal encodings to relate symbolic representations of the same domain or different domains. Learners demonstrate this competency by: - defining mappings on symbols and applying their extensions to strings and languages; - identifying which structural properties are preserved, modified, or lost; - analyzing the conditions under which representations can be related by a formal encoding; - justifying the limits of equivalence while distinguishing structural correspondence from semantic equivalence. The scope is conceptual and interpretative, without implementation of encoding functions. The task's declared correspondence between a score and its recording motivates the analysis; it does not by itself prove a homomorphism or structural equivalence. Initial domain modeling is addressed by C18 and language operations by C17."@en ;
+    skos:definition "Apply homomorphisms in formal languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+}

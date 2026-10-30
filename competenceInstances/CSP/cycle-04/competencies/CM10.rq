@@ -1,0 +1,58 @@
+# Competence CM10; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM13 ontoksd:isComponentOfCompetence ontoksd:CM10 ;
+    owl:differentFrom ontoksd:CM14,
+        ontoksd:CM15,
+        ontoksd:CM16,
+        ontoksd:CM17 .
+
+ontoksd:CM14 ontoksd:isComponentOfCompetence ontoksd:CM10 ;
+    owl:differentFrom ontoksd:CM15,
+        ontoksd:CM16,
+        ontoksd:CM17 .
+
+ontoksd:CM15 ontoksd:isComponentOfCompetence ontoksd:CM10 ;
+    owl:differentFrom ontoksd:CM16,
+        ontoksd:CM17 .
+
+ontoksd:CM16 ontoksd:isComponentOfCompetence ontoksd:CM10 ;
+    owl:differentFrom ontoksd:CM17 .
+
+ontoksd:CM10 a ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        ontoksd:CompositeCompetence ;
+    rdfs:label "Explain a computational solution"@en ;
+    dcterms:identifier "CM10" ;
+    ontoksd:hasComponentCompetence ontoksd:CM13,
+        ontoksd:CM14,
+        ontoksd:CM15,
+        ontoksd:CM16,
+        ontoksd:CM17 ;
+    ontoksd:hasDisposition ontoksd:communicative,
+        ontoksd:meticulous,
+        ontoksd:responsible ;
+    ontoksd:hasIntegrationDescription "Coordinate all five complete explanatory components: data organization (CM13), conditional execution (CM14), repeated execution (CM15), function organization (CM16), and variable updates (CM17). Relate them coherently as one computational solution. A single-component explanation is insufficient; coordination does not automatically raise the Understanding level."@en ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM13_KS1,
+        ontoksd:CM14_KS1,
+        ontoksd:CM14_KS2,
+        ontoksd:CM15_KS1,
+        ontoksd:CM16_KS1,
+        ontoksd:CM17_KS1,
+        ontoksd:CM17_KS2 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Composite ;
+    ontoksd:hasTask ontoksd:Task401_Reference ;
+    skos:definition "explain a computational solution by relating its data representation, state updates, decisions, repetition and function organization."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CM17 ontoksd:isComponentOfCompetence ontoksd:CM10 .
+}

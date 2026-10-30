@@ -1,0 +1,231 @@
+# Task 410; reference performance, instructional requirements and qualified planned assessment.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CA_Task410_CM03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select category updates and handle empty groups before division. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select category updates and handle empty groups before division"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Select category updates and handle empty groups before division. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Select category updates and handle empty groups before division"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Process records until club code `0`. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Process records until club code `0`"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Process records until club code `0`. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Process records until club code `0`"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read the survey data and display all required results. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read the survey data and display all required results"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Read the survey data and display all required results. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Read the survey data and display all required results"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM08_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task410_CM08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Perform and evaluate optional verification. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amEvaluative,
+        ontoksd:amOperational ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:CM08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Perform and evaluate optional verification"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional .
+
+ontoksd:CA_Task410_CM20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Accumulate counts and salary sums and calculate group averages. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Accumulate counts and salary sums and calculate group averages"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:CA_Task410_CM20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Expected performance and evidence basis: Accumulate counts and salary sums and calculate group averages. This association specifies intended activation; no observed learner attainment is asserted."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task410_CM20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:CM20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
+
+ontoksd:CA_Task410_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "Accumulate counts and salary sums and calculate group averages"@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory .
+
+ontoksd:TA_Task410_aggregate a ontoksd:TaskActivity ;
+    rdfs:label "aggregate"@en .
+
+ontoksd:TA_Task410_calculate a ontoksd:TaskActivity ;
+    rdfs:label "calculate"@en .
+
+ontoksd:TA_Task410_process a ontoksd:TaskActivity ;
+    rdfs:label "process"@en .
+
+ontoksd:TC_Task410 a ontoksd:TaskComponent ;
+    rdfs:label "A sentinel-controlled football survey summary"@en .
+
+ontoksd:TCons_Task410_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Each group average uses only its own count and salary sum."@en .
+
+ontoksd:TCons_Task410_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Termination entries are not respondents."@en .
+
+ontoksd:AC_Task410 a ontoksd:AcquisitionContext ;
+    rdfs:label "Football Preferences Survey reference educational setting"@en ;
+    skos:scopeNote "Pedagogical reference setting used to situate the instructional specification; no dated delivery, learner participation or actual assessment occurrence is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-Football.md> .
+
+ontoksd:CM03 ontoksd:hasTask ontoksd:Task410_Reference .
+
+ontoksd:CM04 ontoksd:hasTask ontoksd:Task410_Reference .
+
+ontoksd:CM05 ontoksd:hasTask ontoksd:Task410_Reference .
+
+ontoksd:CM08 ontoksd:hasTask ontoksd:Task410_Reference .
+
+ontoksd:CM20 ontoksd:hasTask ontoksd:Task410_Reference .
+
+ontoksd:ER_Task410_Statement a ontoksd:EducationalResource ;
+    rdfs:label "Football Preferences Survey source problem"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-Football.md> .
+
+ontoksd:AS_Task410 a ontoksd:Assessment ;
+    rdfs:label "Football Preferences Survey assessment specification"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task410 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task410_CM03_Assessment,
+        ontoksd:CA_Task410_CM04_Assessment,
+        ontoksd:CA_Task410_CM05_Assessment,
+        ontoksd:CA_Task410_CM08_Assessment,
+        ontoksd:CA_Task410_CM20_Assessment ;
+    ontoksd:hasInstructionalStatement "Evaluate the required deliverables against the source report criteria and the qualified activation conditions. Distinguish mandatory deliverables, optional verification and conditional additional questioning. This is an assessment design, not collected evidence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task410 ;
+    ontoksd:usesResource ontoksd:ER_Task410_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-Football.md> .
+
+ontoksd:Task410_Reference a ontoksd:Task ;
+    rdfs:label "Football Preferences Survey reference performance"@en ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task410_aggregate,
+        ontoksd:TA_Task410_calculate,
+        ontoksd:TA_Task410_process ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task410 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task410_1,
+        ontoksd:TCons_Task410_2 ;
+    ontoksd:hasTaskStatement "Read club code 1/2/3, nonnegative fractional salary and birthplace code 0/1. Club code 0 ends input before remaining fields are requested and is excluded from counts. Assume valid distinct respondent records."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-Football.md> .
+
+ontoksd:LT_Task410 a ontoksd:LearningTask ;
+    rdfs:label "Football Preferences Survey learning task"@en ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task410 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task410_CM03_Learning,
+        ontoksd:CA_Task410_CM04_Learning,
+        ontoksd:CA_Task410_CM05_Learning,
+        ontoksd:CA_Task410_CM08_Learning,
+        ontoksd:CA_Task410_CM20_Learning ;
+    ontoksd:hasInstructionalStatement "Display counts by club, separate average salaries for Gremio and Internacional, Porto Alegre respondents supporting other clubs, and total respondents. Include zero salaries in the correct category average."@en,
+        "For an empty category display No respondents in this category instead of dividing by zero; immediate termination produces zero counts and both empty-average messages. Display averages in reais to two decimal places."@en,
+        "Read club code 1/2/3, nonnegative fractional salary and birthplace code 0/1. Club code 0 ends input before remaining fields are requested and is excluded from counts. Assume valid distinct respondent records."@en,
+        "Submit source code. Explicit comparison of test outcomes and judgment is optional; no arrays, stored record collection, functions, invalid-input validation or individual explanation is prescribed."@en ;
+    ontoksd:usesResource ontoksd:ER_Task410_Statement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-Football.md> .
+}

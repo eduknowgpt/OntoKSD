@@ -1,0 +1,5 @@
+PREFIX o: <http://purl.org/ontoksd#>
+SELECT DISTINCT ?relation ?competence WHERE {
+ { ?competence o:hasComponentCompetence+ ?competence BIND("composition" AS ?relation) }
+ UNION { ?competence o:isSpecializationOf+ ?competence BIND("specialization" AS ?relation) }
+} ORDER BY ?relation ?competence

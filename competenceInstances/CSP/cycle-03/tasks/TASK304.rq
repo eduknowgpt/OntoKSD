@@ -1,0 +1,390 @@
+# Cycle-03 Task304 and current instructional/assessment activations.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT DATA {
+ontoksd:Cycle03_Historical_Task304_C13_01 a prov:Entity ;
+    dcterms:description "Historical task association replaced by C23. The former identity is preserved; this is not a current activation or an identity equivalence."@en ;
+    dcterms:references ontoksd:C13_01 ;
+    dcterms:relation ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C05_01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C05_01_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C05_01_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C05_01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C05_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C05_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C07_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop problem-solving solutions using Turing Machines. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C07_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C07_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C07_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop problem-solving solutions using Turing Machines. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C07_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C07_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C09_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply Turing Machine Variants. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C09_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C09_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C09_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply Turing Machine Variants. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C09_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C09_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C10_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Turing Machines Using Simulators. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C10_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C10_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C10_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Turing Machines Using Simulators. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C10_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C10_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C16_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C16_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C16 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C16_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C16_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C16_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C16 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C16_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C17_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C17_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C17_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C17_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C17_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C17_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C18_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C18_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C18_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C18_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C18_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C18_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C23_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C23_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C23_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C23_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task304_C23_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:CA_Task304_C23_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:TA_Task304_construct a ontoksd:TaskActivity ;
+    rdfs:label "construct"@en .
+
+ontoksd:TA_Task304_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task304_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task304_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TA_Task304_simulate a ontoksd:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ontoksd:TC_Task304_1 a ontoksd:TaskComponent ;
+    rdfs:label "Traffic-category classification"@en .
+
+ontoksd:TC_Task304_2 a ontoksd:TaskComponent ;
+    rdfs:label "Nightly counters and most-frequent-category output"@en .
+
+ontoksd:TC_Task304_3 a ontoksd:TaskComponent ;
+    rdfs:label "Turing-machine-based representation"@en .
+
+ontoksd:TC_Task304_4 a ontoksd:TaskComponent ;
+    rdfs:label "Theoretically justified report"@en .
+
+ontoksd:TCons_Task304_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Preserve the inclusive 6-tonne light bound and inclusive 10-tonne very-heavy bound."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ontoksd:TCons_Task304_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Count the previous-night category frequencies and determine the most frequent category."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ontoksd:TCons_Task304_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Deliver JFLAP machine files and detailed technical/theoretical documentation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ontoksd:AC_Task304 a ontoksd:AcquisitionContext ;
+    rdfs:label "Traffic Control educational setting"@en ;
+    dcterms:identifier "Task304-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:ER_Task304_ProblemStatement a ontoksd:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ontoksd:C05_01 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C07 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C09 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C10 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C16 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C17 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C18 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:C23 ontoksd:hasTask ontoksd:Task304_Reference .
+
+ontoksd:AS_Task304 a ontoksd:Assessment ;
+    rdfs:label "Traffic Control assessment specification"@en ;
+    dcterms:identifier "Task304-Assessment" ;
+    dcterms:references ontoksd:CSPCycle03_TenPointScale ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task304 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task304_C05_01_Assessment,
+        ontoksd:CA_Task304_C07_Assessment,
+        ontoksd:CA_Task304_C09_Assessment,
+        ontoksd:CA_Task304_C10_Assessment,
+        ontoksd:CA_Task304_C16_Assessment,
+        ontoksd:CA_Task304_C17_Assessment,
+        ontoksd:CA_Task304_C18_Assessment,
+        ontoksd:CA_Task304_C23_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task304 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task304_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:Task304_Reference a ontoksd:Task ;
+    rdfs:label "Traffic Control reference performance"@en ;
+    dcterms:identifier "Task304-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task304_construct,
+        ontoksd:TA_Task304_document,
+        ontoksd:TA_Task304_explain,
+        ontoksd:TA_Task304_model,
+        ontoksd:TA_Task304_simulate ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task304_1,
+        ontoksd:TC_Task304_2,
+        ontoksd:TC_Task304_3,
+        ontoksd:TC_Task304_4 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task304_1,
+        ontoksd:TCons_Task304_2,
+        ontoksd:TCons_Task304_3 ;
+    ontoksd:hasTaskStatement "Develop, simulate and justify the adopted Turing-Machine-based traffic-counting solution, preserving weight categories, previous-night totals and the most frequent category."@en ;
+    ontoksd:isTaskOf ontoksd:C05_01,
+        ontoksd:C07,
+        ontoksd:C09,
+        ontoksd:C10,
+        ontoksd:C16,
+        ontoksd:C17,
+        ontoksd:C18,
+        ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ontoksd:LT_Task304 a ontoksd:LearningTask ;
+    rdfs:label "Traffic Control learning task"@en ;
+    dcterms:identifier "Task304-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task304 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task304_C05_01_Learning,
+        ontoksd:CA_Task304_C07_Learning,
+        ontoksd:CA_Task304_C09_Learning,
+        ontoksd:CA_Task304_C10_Learning,
+        ontoksd:CA_Task304_C16_Learning,
+        ontoksd:CA_Task304_C17_Learning,
+        ontoksd:CA_Task304_C18_Learning,
+        ontoksd:CA_Task304_C23_Learning ;
+    ontoksd:hasInstructionalStatement "Classify light vehicles at weight <=6 tonnes, heavy vehicles at 6<weight<10 tonnes and very-heavy vehicles at weight >=10 tonnes."@en,
+        "Consider the need for Turing Machine extensions and explain the relation between the formal model and the intuitive algorithm notion in the source objectives."@en,
+        "Develop the adopted machine model and submit one or more JFLAP files and an SBC-format report with detailed system operation and theoretical justification."@en,
+        "Preserve algebraic encoding, formal reasoning and model-adequacy discussion without redefining the reusable competence pairings."@en,
+        "Use the sensor-derived input to count vehicles by category during the previous night and identify the most frequent category."@en,
+        "Variant-related discussion remains conditional; the adopted formalism is an instructional representation, not a blanket proof that every bounded formulation excludes other models."@en ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:ER_Task304_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+}

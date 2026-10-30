@@ -40,7 +40,7 @@ The levels in the following table are the reviewed CSP decisions. They are not r
 | C08.01 | Analyze the System-Level Adequacy of Turing Machine Variants | Turing Machine Variants — Analyzing; Analytical and Critical Thinking — Analyzing |
 | C09.01 | Apply and Coordinate Turing Machine Variants in Integrated Architectures | Turing Machine Variants — Applying; Requirements Engineering — Applying; Analytical and Critical Thinking — Analyzing |
 
-`cycle01-specifications.json` also records the dispositions, action verbs, knowledge IRIs, curricular references, and source document for every specification. `knowledge-level-mapping.tsv` makes the relationship to the input references inspectable.
+
 
 ## Modeling process
 
@@ -86,7 +86,7 @@ ontoksd:KS_C03_FiniteStateMachines_Applying
 
 The three verbs support the Applying assignment for this pairing. They are object-property values, not a list embedded in `dcterms:description`.
 
-Existing verb individuals are reused. `01 - Cycle01 Justification Verbs.rq` declares the ten supplemental verbs not populated in the checked external vocabulary, typing each as `bloom:ActionVerb`, identifying its CSP-recorded type, and documenting its source-supported level associations. These declarations do not claim official or exclusive placement in a Bloom verb list. `supplemental-justification-verbs.json` records their pairing-specific uses.
+Existing verb individuals are reused. `01 - Cycle01 Justification Verbs.rq` declares the ten supplemental verbs not populated in the checked external vocabulary, typing each as `bloom:ActionVerb`, identifying its CSP-recorded type, and documenting its source-supported level associations. 
 
 The justification relation is contextual: a verb supports the level assigned to this particular knowledge requirement. It neither computes that level automatically nor requires the same word to justify only one level in every context.
 
@@ -146,13 +146,6 @@ All data files use `INSERT DATA`, contain named resources, and can be re-execute
 
 The `.rq` files are SPARQL Update operations, not Turtle ontologies. For Protégé, `cycle01-instances.ttl` provides the combined instance graph directly. Load it together with the schema and the dependencies above. It is an alternative representation of the same data, not a replacement for the schema.
 
-Supporting files:
 
-- `cycle01-specifications.json`: reviewed competence content and task associations;
-- `knowledge-level-mapping.tsv`: input and corrected knowledge/level references;
-- `scope-exclusions.json`: input files outside the reviewed cycle-01 scope;
-- `supplemental-justification-verbs.json`: supplemental verb declarations and their contextual uses;
-- `queries/`: task activation, specialization, interval-boundary, and cycle queries;
-- `validation.json`: checks, results, and dependency fingerprints;
 
 

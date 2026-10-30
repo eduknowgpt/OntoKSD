@@ -1,0 +1,46 @@
+# Competence CM04; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM04 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence ;
+    rdfs:label "Implement repetition with a stopping condition"@en ;
+    dcterms:identifier "CM04" ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:persistent ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM04_KS1,
+        ontoksd:CM04_KS2 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task401_Reference ;
+    skos:definition "implement repeated execution controlled by a condition or iteration limit, updating control values when required."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM04_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K09 - Repetition structures x Apply"@en ;
+    dcterms:description "Implement loops with appropriate continuation and stopping conditions."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:implement ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K09 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K09 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CM04_KS2 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K05 - Assignment statements, when required x Apply"@en ;
+    dcterms:description "Initialize and update values used to control repetition."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:initialize,
+        bloom:update ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K05 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K05 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    skos:scopeNote "Source qualification retained: K05 - Assignment statements, when required. This required specification-level association is not a claim that every task provides evidence for that aspect. OWL does not encode the conditional scope of a phrase in this annotation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+}

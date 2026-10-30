@@ -1,0 +1,2760 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://purl.org/ontoksd#> .
+@prefix ns2: <http://purl.org/edu/bloom#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Course_FormalLanguagesAndTheoryOfComputation a ns1:Course ;
+    ns1:hasInstructionalUnit ns1:AS_Task301,
+        ns1:AS_Task302,
+        ns1:AS_Task303,
+        ns1:AS_Task304,
+        ns1:AS_Task305,
+        ns1:LT_Task301,
+        ns1:LT_Task302,
+        ns1:LT_Task303,
+        ns1:LT_Task304,
+        ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation.md> .
+
+ns1:Cycle03_Historical_Task302_C13_01 a prov:Entity ;
+    dcterms:description "Historical task association replaced by C23. The former identity is preserved; this is not a current activation or an identity equivalence."@en ;
+    dcterms:references ns1:C13_01 ;
+    dcterms:relation ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:Cycle03_Historical_Task304_C13_01 a prov:Entity ;
+    dcterms:description "Historical task association replaced by C23. The former identity is preserved; this is not a current activation or an identity equivalence."@en ;
+    dcterms:references ns1:C13_01 ;
+    dcterms:relation ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Competency-Lifecycle.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:881509c0c9841a3a3c3450cb2340e6cd2a0ac26b727b9426f07c611e333774b4" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Competency-Lifecycle.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Competency-Registry.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:e065908acc02b2ec4221dc7fc47323499cc7f7b40a479cbbd6288cafc5814eda" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Competency-Registry.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Competency-Task-Matrix.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4adc65b525cead159c207fa444b3248474086992b68c79f27fcfb24f4ea8427e" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Competency-Task-Matrix.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Data-Dictionary.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:922854b4cbb3a9f9d61c7ebc88d672fed79260a847bc6fd55609734e102fcc1f" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Data-Dictionary.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/CSP-Task-Competency-Mapping.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:47c51bab43afa779192561fca5d6d33a8f29caec06e961c3f00c2c7f0da156fa" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "CSP-Task-Competency-Mapping.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/README.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:d738a70f826ebbd5bdc942188c5e885b7197475ca579b564292d30279dc1bfa7" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "README.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation_Competences.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:57a77cd6cae4345a5be47d20e3a19851df4fa3dcf4c1c0b9a0bb7191132509cc" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "syllabusTheoryOfComputation_Competences.md"@en .
+
+ns2:abstract a ns2:ActionVerb ;
+    rdfs:label "abstract"@en ;
+    ns2:hasActionVerbType ns1:CSPRecordedActionVerbType ;
+    ns2:isActionVerbFor ns2:Analyzing ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns2:derive a ns2:ActionVerb ;
+    rdfs:label "derive"@en ;
+    ns2:hasActionVerbType ns1:CSPRecordedActionVerbType ;
+    ns2:isActionVerbFor ns2:Applying ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns2:reason a ns2:ActionVerb ;
+    rdfs:label "reason"@en ;
+    ns2:hasActionVerbType ns1:CSPRecordedActionVerbType ;
+    ns2:isActionVerbFor ns2:Applying ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:C05_01_KS1 a ns1:KnowledgeSkill ;
+    rdfs:label "Written Communication (FPK) x Applying"@en ;
+    dcterms:description "Source knowledge: Written Communication (FPK). Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:clarify,
+        ns2:document,
+        ns2:structure,
+        ns2:write ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#WrittenCommunication> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#WrittenCommunication> ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C05_01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C05_01_KS2 a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze / Evaluate."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:distinguish,
+        ns2:identify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C05_01 ;
+    skos:scopeNote "The source lists two cognitive categories. Each listed category is preserved as a separate knowledge-level requirement; no highest-level collapse, numeric range or automatic hierarchy is inferred. Verb distribution between these pairs is a local interpretation of the recorded performance."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C05_01_KS3 a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Evaluating"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze / Evaluate."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:assess,
+        ns2:support ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Evaluating ;
+    ns1:isKnowledgeSkillOf ns1:C05_01 ;
+    skos:scopeNote "The source lists two cognitive categories. Each listed category is preserved as a separate knowledge-level requirement; no highest-level collapse, numeric range or automatic hierarchy is inferred. Verb distribution between these pairs is a local interpretation of the recorded performance."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C22_KS1 a ns1:KnowledgeSkill ;
+    rdfs:label "Pushdown Automata x Analyzing"@en ;
+    dcterms:description "Source knowledge: Pushdown Automata. Source skill cell: Analyze (Identify, Analyze, Abstract)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:abstract,
+        ns2:analyze,
+        ns2:identify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_1_b> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_b> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:C22_KS2 a ns1:KnowledgeSkill ;
+    rdfs:label "Context-Free Grammars x Applying"@en ;
+    dcterms:description "Source knowledge: Context-Free Grammars. Source skill cell: Apply (Construct, Express, Translate)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:construct,
+        ns2:express,
+        ns2:translate ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_2_b> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_ContextFreeGrammars ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:C22_KS3 a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Applying"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Apply (Reason, Validate, Justify)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:justify,
+        ns2:reason,
+        ns2:validate ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task301_C04_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C04_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C04 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C04_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C04_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C04_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C04 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C04_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C05_01_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C05_01_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C05_01_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C05_01_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C05_01_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C05_01_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C14_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C14_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C14_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C14_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C14_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C14_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C17_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C17_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C17_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C17_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C17_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C17_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C18_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C18_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C18_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C18_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C18_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C18_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C19_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C19_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amInterpretative ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C19 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C19_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C19_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C19_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amInterpretative ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C19 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C19_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C20_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model and analyze musical collections as formal languages. Composite identity and its six component associations are counted once each; component links are not extra associations."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C20_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amIntegrative ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C20 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C20_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C20_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model and analyze musical collections as formal languages. Composite identity and its six component associations are counted once each; component links are not extra associations."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C20_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amIntegrative ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C20 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C20_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C23_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C23_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C23 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C23_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C23_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task301_C23_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C23 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task301_C23_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:CA_Task302_C02_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C02_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C02_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C02_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C02_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C02_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C03_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C03_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C03_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C03_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C03_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C03_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C04_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C04_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C04 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C04_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. If a regular-expression fragment is provided, document its construction; otherwise justify the limitation."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C04_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C04_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C04 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C04_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. If a regular-expression fragment is provided, document its construction; otherwise justify the limitation."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C05_01_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C05_01_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C05_01_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C05_01_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C05_01_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C05_01_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C06_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. Added to LO3 by the adopted mapping refinement; existing supporting associations retained (Section 9.1)."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C06_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C06_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C06_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. Added to LO3 by the adopted mapping refinement; existing supporting associations retained (Section 9.1)."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C06_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C06_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C17_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C17_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C17_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C17_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C17_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C17_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C18_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C18_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C18_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C18_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C18_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C18_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C23_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C23_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C23 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C23_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C23_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task302_C23_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C23 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task302 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task302_C23_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:CA_Task303_C02_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C02_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    skos:scopeNote "Rejecting a finite-state model alone does not demonstrate the full positively stated DFA-use justification competence."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C02_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C02_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C02_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    skos:scopeNote "Rejecting a finite-state model alone does not demonstrate the full positively stated DFA-use justification competence."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C02_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C03_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C03_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    skos:scopeNote "The source retains FSM reference knowledge while using the procedure for PDA/grammar tests. Tests on examples are not proof of equivalence for an infinite language."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C03_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C03_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test automata using simulators. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C03_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    skos:scopeNote "The source retains FSM reference knowledge while using the procedure for PDA/grammar tests. Tests on examples are not proof of equivalence for an infinite language."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C03_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C05_01_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C05_01_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C05_01_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C05_01_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C05_01_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C05_01_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C12_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Construct the PDA required by LO4 using stack-based route memory. Added by RF-01-03 on 2026-10-02; absent from the pre-refinement nine-competency set. No new deliverable or identity."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C12_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C12 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C12_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C12_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Construct the PDA required by LO4 using stack-based route memory. Added by RF-01-03 on 2026-10-02; absent from the pre-refinement nine-competency set. No new deliverable or identity."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C12_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C12 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C12_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C13_01_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret formal grammar-based rules. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C13_01_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C13_01 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    skos:scopeNote "Grammar-rule interpretation applies to productions and derivations, not to symbol naming alone."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C13_01_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C13_01_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret formal grammar-based rules. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C13_01_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C13_01 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    skos:scopeNote "Grammar-rule interpretation applies to productions and derivations, not to symbol naming alone."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C13_01_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C14_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C14_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C14_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C14_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C14_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C14_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C17_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C17_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C17_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C17_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C17_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C17_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C18_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C18_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C18_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C18_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. Task-specific scope or coverage boundary is retained in Section 9.2; no proposed addition is counted."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C18_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C18_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C19_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C19_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C19 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C19_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. A selected alphabet alone is insufficient; the source requires an explicit homomorphism or encoding-transformation claim for this contribution."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C19_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C19_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C19 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C19_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented. A selected alphabet alone is insufficient; the source requires an explicit homomorphism or encoding-transformation claim for this contribution."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C22_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Context-Free Grammars for Pushdown Automata. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C22_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C22 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C22_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C22_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Context-Free Grammars for Pushdown Automata. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task303_C22_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C22 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task303 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task303_C22_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:CA_Task304_C05_01_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C05_01_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C05_01_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C05_01_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C05_01_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05_01 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C05_01_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C07_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop problem-solving solutions using Turing Machines. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C07_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C07 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C07_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C07_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop problem-solving solutions using Turing Machines. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C07_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C07 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C07_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C09_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply Turing Machine Variants. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C09_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C09 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C09_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C09_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply Turing Machine Variants. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C09_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C09 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C09_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C10_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Turing Machines Using Simulators. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C10_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C10 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C10_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C10_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Turing Machines Using Simulators. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C10_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C10 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C10_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C16_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C16_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C16 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C16_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C16_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C16_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C16 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C16_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C17_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C17_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C17_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C17_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C17_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C17 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C17_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C18_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C18_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C18_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C18_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C18_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C18 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C18_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C23_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C23_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C23 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C23_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C23_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task304_C23_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C23 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task304 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task304_C23_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:CA_Task305_C02_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C02_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C02_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C02_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Justify the use of Deterministic Finite Automata (DFAs). "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C02_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C02_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C03_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Automata Using Simulators. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C03_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C03_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C03_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Test Automata Using Simulators. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C03_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C03_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C05_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write a Technical Report. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C05_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C05_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C05_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write a Technical Report. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C05_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C05_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C06_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C06_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C06_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C06_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Develop Problem-Solving Solutions Using Finite State Machines. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C06_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C06_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C14_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C14_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C14_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C14_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C14_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C14_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C15_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Understand the Halting Problem and its Implications. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C15_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C15 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C15_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C15_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Understand the Halting Problem and its Implications. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C15_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C15 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C15_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C16_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C16_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amInterpretative ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C16 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C16_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C16_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret Turing Machine Concepts to Analyze Computational System Capabilities. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C16_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amInterpretative ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C16 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C16_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as conditional. Address this contribution when the documented solution strategy or instructional emphasis calls for it; the source task requirements remain independently represented."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C21_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Analyze Computational Complexity and the Implications of NP-Hardness. Created in TASK305, Cycle 3 (2025), as recorded in Sections 1.1, 6 and 10."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C21_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C21 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C21_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C21_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual source function: Analyze Computational Complexity and the Implications of NP-Hardness. Created in TASK305, Cycle 3 (2025), as recorded in Sections 1.1, 6 and 10."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task305_C21_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C21 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task305 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:CA_Task305_C21_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:ER_Task301_img01 a ns1:EducationalResource ;
+    rdfs:label "Linked source illustration: img01.jpg"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img01.jpg> .
+
+ns1:ER_Task301_img02 a ns1:EducationalResource ;
+    rdfs:label "Linked source illustration: img02.jpg"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img02.jpg> .
+
+ns1:ER_Task303_Labirinto a ns1:EducationalResource ;
+    rdfs:label "Linked source illustration: Labirinto.png"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/Labirinto.png> .
+
+ns1:KS_C17_AnalyticalThinking_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:examine,
+        ns2:identify,
+        ns2:justify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C17_LanguageTheory_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:explain,
+        ns2:interpret ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_LanguageTheory ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C17_OperationsOnFormalLanguages_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Operations on Formal Languages x Analyzing"@en ;
+    dcterms:description "Source knowledge: Operations on Formal Languages. Source skill cell: Apply / Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:analyze ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_OperationsOnFormalLanguages ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C17 ;
+    skos:scopeNote "The source lists two cognitive categories. Each listed category is preserved as a separate knowledge-level requirement; no highest-level collapse, numeric range or automatic hierarchy is inferred. Verb distribution between these pairs is a local interpretation of the recorded performance."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C17_OperationsOnFormalLanguages_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Operations on Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Operations on Formal Languages. Source skill cell: Apply / Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:apply ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_OperationsOnFormalLanguages ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C17 ;
+    skos:scopeNote "The source lists two cognitive categories. Each listed category is preserved as a separate knowledge-level requirement; no highest-level collapse, numeric range or automatic hierarchy is inferred. Verb distribution between these pairs is a local interpretation of the recorded performance."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C17_RegularExpressions_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Regular Expressions (conceptual) x Applying"@en ;
+    dcterms:description "Source knowledge: Regular Expressions (conceptual). Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:use ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_2_a_i> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cs2023/knowledge#Knowledge_AL_Models_2_a_i> ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C18_AnalyticalThinking_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:assess,
+        ns2:identify,
+        ns2:justify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C18 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C18_FormalLanguages_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:model ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_FormalLanguages ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C18 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C18_HomomorphismsAndCodifications_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Homomorphisms and Codifications (conceptual) x Applying"@en ;
+    dcterms:description "Source knowledge: Homomorphisms and Codifications (conceptual). Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:map ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_HomomorphismsAndCodifications ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C18 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C18_LanguageTheory_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:explain,
+        ns2:interpret ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_LanguageTheory ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C18 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C19_AnalyticalThinking_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:examine,
+        ns2:justify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C19_Codifications_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Codifications x Applying"@en ;
+    dcterms:description "Source knowledge: Codifications. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:map,
+        ns2:translate ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_Codifications ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C19_FormalLanguages_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Understanding"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Understand."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:interpret ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_FormalLanguages ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C19_Homomorphisms_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Homomorphisms x Applying"@en ;
+    dcterms:description "Source knowledge: Homomorphisms. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:apply,
+        ns2:define ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_Homomorphisms ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C20_AnalyticalThinking_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:evaluate,
+        ns2:integrate,
+        ns2:justify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C20_FormalLanguages_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:apply,
+        ns2:model ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_FormalLanguages ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C20_HomomorphismsAndCodifications_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Homomorphisms and Codifications x Applying"@en ;
+    dcterms:description "Source knowledge: Homomorphisms and Codifications. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:relate ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_HomomorphismsAndCodifications ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C20_LanguageTheory_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:interpret ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_LanguageTheory ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C20_RegularExpressions_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Regular Expressions x Applying"@en ;
+    dcterms:description "Source knowledge: Regular Expressions. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:specify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_2_a_i> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cs2023/knowledge#Knowledge_AL_Models_2_a_i> ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C20_TechnicalWrittenCommunication_Creating a ns1:KnowledgeSkill ;
+    rdfs:label "Technical Written Communication (FPK) x Creating"@en ;
+    dcterms:description "Source knowledge: Technical Written Communication (FPK). Source skill cell: Create."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:produce ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#WrittenCommunication> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#WrittenCommunication> ;
+    ns1:hasSkillLevel ns2:Creating ;
+    ns1:isKnowledgeSkillOf ns1:C20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C21_AlgorithmicScalability_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Algorithmic Scalability (Conceptual Perspective) x Understanding"@en ;
+    dcterms:description "Source knowledge: Algorithmic Scalability (Conceptual Perspective). Source skill cell: Understand (Relate, Interpret, Explain)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:explain,
+        ns2:interpret,
+        ns2:relate ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_AlgorithmicScalability ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:KS_C21_AnalyticalThinking_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze (Evaluate, Structure, Argue)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:argue,
+        ns2:evaluate,
+        ns2:structure ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:KS_C21_ComplexityClassesAndIntractability_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Complexity Classes and Intractability (P, NP, NP-hard, NP-complete) x Understanding"@en ;
+    dcterms:description "Source knowledge: Complexity Classes and Intractability (P, NP, NP-hard, NP-complete). Source skill cell: Understand (Explain, Distinguish, Justify)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:distinguish,
+        ns2:explain,
+        ns2:justify ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Complexity_4> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_ComplexityClassesAndIntractability ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:KS_C21_ComputationalComplexity_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Computational Complexity x Analyzing"@en ;
+    dcterms:description "Source knowledge: Computational Complexity. Source skill cell: Analyze (Decompose, Relate, Interpret)."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:decompose,
+        ns2:interpret,
+        ns2:relate ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#KU_AL_Complexity> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_ComputationalComplexity ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:KS_C23_AnalyticalThinking_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking (FPK) x Analyzing"@en ;
+    dcterms:description "Source knowledge: Analytical and Critical Thinking (FPK). Source skill cell: Analyze."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:distinguish,
+        ns2:justify,
+        ns2:relate,
+        ns2:validate ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel ns2:Analyzing ;
+    ns1:isKnowledgeSkillOf ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C23_FormalLanguages_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Formal Languages x Applying"@en ;
+    dcterms:description "Source knowledge: Formal Languages. Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:derive,
+        ns2:express,
+        ns2:manipulate,
+        ns2:use ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_FormalLanguages ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C23_LanguageTheory_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Language Theory x Understanding"@en ;
+    dcterms:description "Source knowledge: Language Theory. Source skill cell: Understand."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:explain,
+        ns2:identify,
+        ns2:interpret ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_LanguageTheory ;
+    ns1:hasSkillLevel ns2:Understanding ;
+    ns1:isKnowledgeSkillOf ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:KS_C23_WrittenCommunication_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Written Communication (FPK) x Applying"@en ;
+    dcterms:description "Source knowledge: Written Communication (FPK). Source skill cell: Apply."@en ;
+    ns1:hasBloomLevelJustificationVerb ns2:clarify,
+        ns2:structure,
+        ns2:write ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#WrittenCommunication> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#WrittenCommunication> ;
+    ns1:hasSkillLevel ns2:Applying ;
+    ns1:isKnowledgeSkillOf ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:Knowledge_CSP_AlgorithmicScalability a ns1:Knowledge ;
+    rdfs:label "Algorithmic Scalability"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Conceptual relationships among input growth, algorithmic cost, practical resource limits and feasibility of solving instances."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:Knowledge_CSP_Codifications a ns1:Knowledge ;
+    rdfs:label "Codifications"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Formal encodings and conditions under which symbolic representations can or cannot be treated as structurally interchangeable."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:Knowledge_CSP_ComplexityClassesAndIntractability a ns1:Knowledge ;
+    rdfs:label "Complexity Classes and Intractability"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "P, NP, NP-hardness, NP-completeness and the distinction between decision and optimization formulations and their tractability implications."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:Knowledge_CSP_ComputationalComplexity a ns1:Knowledge ;
+    rdfs:label "Computational Complexity"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Analysis of input size, computational resources, cost growth and performance limits of algorithmic solutions."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:Knowledge_CSP_Homomorphisms a ns1:Knowledge ;
+    rdfs:label "Homomorphisms"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Mappings defined on symbols and extended to strings and languages, including structural preservation and transformation properties."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:TA_Task301_abstract a ns1:TaskActivity ;
+    rdfs:label "abstract"@en .
+
+ns1:TA_Task301_analyze a ns1:TaskActivity ;
+    rdfs:label "analyze"@en .
+
+ns1:TA_Task301_apply a ns1:TaskActivity ;
+    rdfs:label "apply"@en .
+
+ns1:TA_Task301_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task301_justify a ns1:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ns1:TA_Task301_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task302_construct a ns1:TaskActivity ;
+    rdfs:label "construct"@en .
+
+ns1:TA_Task302_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task302_justify a ns1:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ns1:TA_Task302_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task302_simulate a ns1:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ns1:TA_Task303_abstract a ns1:TaskActivity ;
+    rdfs:label "abstract"@en .
+
+ns1:TA_Task303_construct a ns1:TaskActivity ;
+    rdfs:label "construct"@en .
+
+ns1:TA_Task303_derive a ns1:TaskActivity ;
+    rdfs:label "derive"@en .
+
+ns1:TA_Task303_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task303_justify a ns1:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ns1:TA_Task303_test a ns1:TaskActivity ;
+    rdfs:label "test"@en .
+
+ns1:TA_Task304_construct a ns1:TaskActivity ;
+    rdfs:label "construct"@en .
+
+ns1:TA_Task304_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task304_explain a ns1:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ns1:TA_Task304_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task304_simulate a ns1:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ns1:TA_Task305_analyze a ns1:TaskActivity ;
+    rdfs:label "analyze"@en .
+
+ns1:TA_Task305_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task305_explain a ns1:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ns1:TA_Task305_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task305_test a ns1:TaskActivity ;
+    rdfs:label "test"@en .
+
+ns1:TC_Task301_1 a ns1:TaskComponent ;
+    rdfs:label "Musical scores and recordings"@en .
+
+ns1:TC_Task301_2 a ns1:TaskComponent ;
+    rdfs:label "Strings and collections as formal languages"@en .
+
+ns1:TC_Task301_3 a ns1:TaskComponent ;
+    rdfs:label "Operations and encodings"@en .
+
+ns1:TC_Task301_4 a ns1:TaskComponent ;
+    rdfs:label "Mathematically justified answers"@en .
+
+ns1:TC_Task302_1 a ns1:TaskComponent ;
+    rdfs:label "Vending-machine finite-state model"@en .
+
+ns1:TC_Task302_2 a ns1:TaskComponent ;
+    rdfs:label "Payment and change handling"@en .
+
+ns1:TC_Task302_3 a ns1:TaskComponent ;
+    rdfs:label "Symbolic event representation"@en .
+
+ns1:TC_Task302_4 a ns1:TaskComponent ;
+    rdfs:label "Rigorous technical documentation"@en .
+
+ns1:TC_Task303_1 a ns1:TaskComponent ;
+    rdfs:label "Outward and return route language"@en .
+
+ns1:TC_Task303_2 a ns1:TaskComponent ;
+    rdfs:label "Pushdown navigation model"@en .
+
+ns1:TC_Task303_3 a ns1:TaskComponent ;
+    rdfs:label "Corresponding context-free grammar"@en .
+
+ns1:TC_Task303_4 a ns1:TaskComponent ;
+    rdfs:label "Simulation and rigorous explanation"@en .
+
+ns1:TC_Task304_1 a ns1:TaskComponent ;
+    rdfs:label "Traffic-category classification"@en .
+
+ns1:TC_Task304_2 a ns1:TaskComponent ;
+    rdfs:label "Nightly counters and most-frequent-category output"@en .
+
+ns1:TC_Task304_3 a ns1:TaskComponent ;
+    rdfs:label "Turing-machine-based representation"@en .
+
+ns1:TC_Task304_4 a ns1:TaskComponent ;
+    rdfs:label "Theoretically justified report"@en .
+
+ns1:TC_Task305_1 a ns1:TaskComponent ;
+    rdfs:label "Online Judge workflow and outcomes"@en .
+
+ns1:TC_Task305_2 a ns1:TaskComponent ;
+    rdfs:label "TSP/timetabling complexity analysis"@en .
+
+ns1:TC_Task305_3 a ns1:TaskComponent ;
+    rdfs:label "Halting and diagnostic limits"@en .
+
+ns1:TC_Task305_4 a ns1:TaskComponent ;
+    rdfs:label "Scientifically grounded technical article"@en .
+
+ns1:TCons_Task301_1 a ns1:TaskConstraint ;
+    rdfs:label "State representation assumptions and distinguish finite-string structure from semantic musical properties."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ns1:TCons_Task301_2 a ns1:TaskConstraint ;
+    rdfs:label "Specify a universe when using complement; distinguish the empty language from the language containing the empty string."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ns1:TCons_Task301_3 a ns1:TaskConstraint ;
+    rdfs:label "Provide mathematical justification for every question."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ns1:TCons_Task301_4 a ns1:TaskConstraint ;
+    rdfs:label "No automaton implementation or simulation is required by the source task."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ns1:TCons_Task302_1 a ns1:TaskConstraint ;
+    rdfs:label "Preserve the 2025 product prices and specified payment denominations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ns1:TCons_Task302_2 a ns1:TaskConstraint ;
+    rdfs:label "Give at least two operational examples and the requested report."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ns1:TCons_Task302_3 a ns1:TaskConstraint ;
+    rdfs:label "Treat regular-expression output according to the source conditional alternative."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ns1:TCons_Task302_4 a ns1:TaskConstraint ;
+    rdfs:label "Keep the bonus-change challenge optional."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ns1:TCons_Task303_1 a ns1:TaskConstraint ;
+    rdfs:label "Represent the required outward and return journeys under explicit assumptions."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ns1:TCons_Task303_2 a ns1:TaskConstraint ;
+    rdfs:label "Preserve navigation, formal sequence generation and report deliverables."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ns1:TCons_Task303_3 a ns1:TaskConstraint ;
+    rdfs:label "Use simulation and theoretical justification as complementary, not interchangeable, forms of support."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ns1:TCons_Task303_4 a ns1:TaskConstraint ;
+    rdfs:label "The source file heading says TASK302; its filename, report and registry identify this problem as TASK303."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ns1:TCons_Task304_1 a ns1:TaskConstraint ;
+    rdfs:label "Preserve the inclusive 6-tonne light bound and inclusive 10-tonne very-heavy bound."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ns1:TCons_Task304_2 a ns1:TaskConstraint ;
+    rdfs:label "Count the previous-night category frequencies and determine the most frequent category."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ns1:TCons_Task304_3 a ns1:TaskConstraint ;
+    rdfs:label "Deliver JFLAP machine files and detailed technical/theoretical documentation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ns1:TCons_Task305_1 a ns1:TaskConstraint ;
+    rdfs:label "Retain theoretical and practical explanations, OJ modeling and report deliverables."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ns1:TCons_Task305_2 a ns1:TaskConstraint ;
+    rdfs:label "Preserve the extra-challenge status of code experiments."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ns1:TCons_Task305_3 a ns1:TaskConstraint ;
+    rdfs:label "Do not infer independent outcomes from overlapping C15/C16 explanations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img01.jpg> a prov:Entity ;
+    dcterms:identifier "archive-sha256:8d52ac5a3e573371d24ff1682c823ec26d1187c631cfe506b1bb93d850cb2a6a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "img01.jpg"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img02.jpg> a prov:Entity ;
+    dcterms:identifier "archive-sha256:9fc44814a650f4834dd2c8b1ec7e5c9bd2e6553c9d526d35ee4825e96a57d021" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "img02.jpg"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/Labirinto.png> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4a7eb3a72d1a298bbbb9527d2e0647e6ec94d4fdbaaf7f19e84e2dd15d823c3b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "Labirinto.png"@en .
+
+ns2:clarify a ns2:ActionVerb ;
+    rdfs:label "clarify"@en ;
+    ns2:hasActionVerbType ns1:CSPRecordedActionVerbType ;
+    ns2:isActionVerbFor ns2:Applying ;
+    skos:scopeNote "CSP-recorded contextual use, not an official or exclusive Bloom placement. Pair-specific justification is represented by hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:AC_Task301 a ns1:AcquisitionContext ;
+    rdfs:label "Music Collection educational setting"@en ;
+    dcterms:identifier "Task301-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:AC_Task302 a ns1:AcquisitionContext ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks educational setting"@en ;
+    dcterms:identifier "Task302-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:AC_Task303 a ns1:AcquisitionContext ;
+    rdfs:label "The Minotaur's Labyrinth educational setting"@en ;
+    dcterms:identifier "Task303-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:AC_Task304 a ns1:AcquisitionContext ;
+    rdfs:label "Traffic Control educational setting"@en ;
+    dcterms:identifier "Task304-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:AC_Task305 a ns1:AcquisitionContext ;
+    rdfs:label "Online Judges at Logistic Solutions educational setting"@en ;
+    dcterms:identifier "Task305-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:ER_Task301_ProblemStatement a ns1:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ns1:ER_Task302_ProblemStatement a ns1:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> .
+
+ns1:ER_Task303_ProblemStatement a ns1:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> .
+
+ns1:ER_Task304_ProblemStatement a ns1:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> .
+
+ns1:ER_Task305_ProblemStatement a ns1:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> .
+
+ns1:Knowledge_CSP_HomomorphismsAndCodifications a ns1:Knowledge ;
+    rdfs:label "Homomorphisms and Codifications"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Mappings between symbolic representations, preservation/loss of structure, and limits of representational equivalence."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:Knowledge_CSP_OperationsOnFormalLanguages a ns1:Knowledge ;
+    rdfs:label "Operations on Formal Languages"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Concatenation, union, intersection, difference, complement relative to a universe, Kleene closure, reversal and conceptual closure properties."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:09872b2fa2b769f4dc4b80a07d10f23830f4d4d9486ef8c0614b4b15bb4c7021" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "syllabusTheoryOfComputation.md"@en .
+
+ns1:C07 ns1:hasTask ns1:Task304_Reference .
+
+ns1:C09 ns1:hasTask ns1:Task304_Reference .
+
+ns1:C10 ns1:hasTask ns1:Task304_Reference .
+
+ns1:C12 ns1:hasTask ns1:Task303_Reference .
+
+ns1:C15 ns1:hasTask ns1:Task305_Reference .
+
+ns1:C05 ns1:hasSpecialization ns1:C05_01 ;
+    ns1:hasTask ns1:Task305_Reference .
+
+ns1:CSPRecordedActionVerbType a ns2:ActionVerbType ;
+    rdfs:label "CSP-recorded justification verb"@en .
+
+ns1:Knowledge_CSP_FormalLanguages a ns1:Knowledge ;
+    rdfs:label "Formal Languages"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Collections as sets of strings, representation assumptions and structural properties considered independently of semantic interpretation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:Knowledge_CSP_LanguageTheory a ns1:Knowledge ;
+    rdfs:label "Language Theory"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Alphabets, strings, languages, empty string/language, substructures and finite/infinite collections, as foundations of formal representation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:cspEpistemicRigor a ns1:Disposition ;
+    rdfs:label "Epistemic Rigor"@en ;
+    skos:definition "An orientation toward explicit formal justification, with careful distinction among definitions, examples, counterexamples and conclusions, rather than reliance on informal intuition."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:cspIntellectualResponsibility a ns1:Disposition ;
+    rdfs:label "Intellectual Responsibility"@en ;
+    skos:definition "An orientation toward accountability for the correctness, assumptions and limits of formal claims and explanatory arguments."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C13_01 ns1:hasTask ns1:Task303_Reference .
+
+ns1:CSPCycle03_TenPointScale a ns1:Scale ;
+    rdfs:label "Cycle-03 syllabus numeric grading scale, 0 to 10"@en ;
+    ns1:maxValue 10.0 ;
+    ns1:minValue 0.0 ;
+    skos:scopeNote "The syllabus documents a numeric range only. No score step, qualitative proficiency bands, minimum attainment or course-approval threshold is inferred."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/syllabus/syllabusTheoryOfComputation.md> .
+
+ns1:C06 ns1:hasTask ns1:Task302_Reference,
+        ns1:Task305_Reference .
+
+ns1:C16 ns1:hasTask ns1:Task304_Reference,
+        ns1:Task305_Reference .
+
+ns1:C22 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Define Context-Free Grammars for Pushdown Automata"@en ;
+    dcterms:identifier "C22"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:investigative,
+        ns1:meticulous,
+        ns1:proactive,
+        ns1:responsible ;
+    ns1:hasKnowledgeSkill ns1:C22_KS1,
+        ns1:C22_KS2,
+        ns1:C22_KS3 ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task303_Reference ;
+    rdfs:comment "Define and apply context-free grammars that represent languages recognized by pushdown automata. Analyze the recognized structure, construct corresponding grammars, translate between representations, and examine their equivalence."@en ;
+    skos:definition "Define Context-Free Grammars for Pushdown Automata"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:C21 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Analyze Computational Complexity and the Implications of NP-Hardness"@en ;
+    dcterms:identifier "C21"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:collaborative,
+        ns1:creative,
+        ns1:proactive,
+        ns1:responsible ;
+    ns1:hasKnowledgeSkill ns1:KS_C21_AlgorithmicScalability_Understanding,
+        ns1:KS_C21_AnalyticalThinking_Analyzing,
+        ns1:KS_C21_ComplexityClassesAndIntractability_Understanding,
+        ns1:KS_C21_ComputationalComplexity_Analyzing ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task305_Reference ;
+    rdfs:comment "Analyze computational complexity and interpret the implications of NP-hardness for scalability, performance limits, and the practical feasibility of algorithmic solutions."@en ;
+    skos:definition "Analyze Computational Complexity and the Implications of NP-Hardness"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:Task301_Reference a ns1:Task ;
+    rdfs:label "Music Collection reference performance"@en ;
+    dcterms:identifier "Task301-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task301_abstract,
+        ns1:TA_Task301_analyze,
+        ns1:TA_Task301_apply,
+        ns1:TA_Task301_document,
+        ns1:TA_Task301_justify,
+        ns1:TA_Task301_model ;
+    ns1:hasTaskComponent ns1:TC_Task301_1,
+        ns1:TC_Task301_2,
+        ns1:TC_Task301_3,
+        ns1:TC_Task301_4 ;
+    ns1:hasTaskConstraint ns1:TCons_Task301_1,
+        ns1:TCons_Task301_2,
+        ns1:TCons_Task301_3,
+        ns1:TCons_Task301_4 ;
+    ns1:hasTaskStatement "Represent musical scores, songs and collections as alphabets, strings and languages; analyze operations and encodings and provide mathematically justified answers without requiring executable automata."@en ;
+    ns1:isTaskOf ns1:C04,
+        ns1:C05_01,
+        ns1:C14,
+        ns1:C17,
+        ns1:C18,
+        ns1:C19,
+        ns1:C20,
+        ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:Task302_Reference a ns1:Task ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks reference performance"@en ;
+    dcterms:identifier "Task302-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task302_construct,
+        ns1:TA_Task302_document,
+        ns1:TA_Task302_justify,
+        ns1:TA_Task302_model,
+        ns1:TA_Task302_simulate ;
+    ns1:hasTaskComponent ns1:TC_Task302_1,
+        ns1:TC_Task302_2,
+        ns1:TC_Task302_3,
+        ns1:TC_Task302_4 ;
+    ns1:hasTaskConstraint ns1:TCons_Task302_1,
+        ns1:TCons_Task302_2,
+        ns1:TCons_Task302_3,
+        ns1:TCons_Task302_4 ;
+    ns1:hasTaskStatement "Develop and document a finite-state vending-machine solution that handles product selection, payment and change; provide the JFLAP artifact, operational examples and the conditional regular-expression explanation."@en ;
+    ns1:isTaskOf ns1:C02,
+        ns1:C03,
+        ns1:C04,
+        ns1:C05_01,
+        ns1:C06,
+        ns1:C17,
+        ns1:C18,
+        ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:Task304_Reference a ns1:Task ;
+    rdfs:label "Traffic Control reference performance"@en ;
+    dcterms:identifier "Task304-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task304_construct,
+        ns1:TA_Task304_document,
+        ns1:TA_Task304_explain,
+        ns1:TA_Task304_model,
+        ns1:TA_Task304_simulate ;
+    ns1:hasTaskComponent ns1:TC_Task304_1,
+        ns1:TC_Task304_2,
+        ns1:TC_Task304_3,
+        ns1:TC_Task304_4 ;
+    ns1:hasTaskConstraint ns1:TCons_Task304_1,
+        ns1:TCons_Task304_2,
+        ns1:TCons_Task304_3 ;
+    ns1:hasTaskStatement "Develop, simulate and justify the adopted Turing-Machine-based traffic-counting solution, preserving weight categories, previous-night totals and the most frequent category."@en ;
+    ns1:isTaskOf ns1:C05_01,
+        ns1:C07,
+        ns1:C09,
+        ns1:C10,
+        ns1:C16,
+        ns1:C17,
+        ns1:C18,
+        ns1:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:Task305_Reference a ns1:Task ;
+    rdfs:label "Online Judges at Logistic Solutions reference performance"@en ;
+    dcterms:identifier "Task305-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task305_analyze,
+        ns1:TA_Task305_document,
+        ns1:TA_Task305_explain,
+        ns1:TA_Task305_model,
+        ns1:TA_Task305_test ;
+    ns1:hasTaskComponent ns1:TC_Task305_1,
+        ns1:TC_Task305_2,
+        ns1:TC_Task305_3,
+        ns1:TC_Task305_4 ;
+    ns1:hasTaskConstraint ns1:TCons_Task305_1,
+        ns1:TCons_Task305_2,
+        ns1:TCons_Task305_3 ;
+    ns1:hasTaskStatement "Analyze Online Judge behavior, TSP/timetabling complexity and computability limits; represent the evaluation workflow with an FSM and provide a theoretically grounded article."@en ;
+    ns1:isTaskOf ns1:C02,
+        ns1:C03,
+        ns1:C05,
+        ns1:C06,
+        ns1:C14,
+        ns1:C15,
+        ns1:C16,
+        ns1:C21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:1f86fdf994beeabd81dc0675e697b7b3030fc71126d824eda1abfd6b827761dc" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK304 - TrafficControl.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:2e0f71d655f04a94f6dad23e5777083de031f684d6fb86f1914fac7e93d2d42b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK305 - OnlineJudges.md"@en .
+
+ns1:AS_Task301 a ns1:Assessment ;
+    rdfs:label "Music Collection assessment specification"@en ;
+    dcterms:identifier "Task301-Assessment" ;
+    dcterms:references ns1:CSPCycle03_TenPointScale ;
+    ns1:hasAcquisitionContext ns1:AC_Task301 ;
+    ns1:hasCompetenceActivation ns1:CA_Task301_C04_Assessment,
+        ns1:CA_Task301_C05_01_Assessment,
+        ns1:CA_Task301_C14_Assessment,
+        ns1:CA_Task301_C17_Assessment,
+        ns1:CA_Task301_C18_Assessment,
+        ns1:CA_Task301_C19_Assessment,
+        ns1:CA_Task301_C20_Assessment,
+        ns1:CA_Task301_C23_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task301 ;
+    ns1:usesResource ns1:ER_Task301_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:AS_Task302 a ns1:Assessment ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks assessment specification"@en ;
+    dcterms:identifier "Task302-Assessment" ;
+    dcterms:references ns1:CSPCycle03_TenPointScale ;
+    ns1:hasAcquisitionContext ns1:AC_Task302 ;
+    ns1:hasCompetenceActivation ns1:CA_Task302_C02_Assessment,
+        ns1:CA_Task302_C03_Assessment,
+        ns1:CA_Task302_C04_Assessment,
+        ns1:CA_Task302_C05_01_Assessment,
+        ns1:CA_Task302_C06_Assessment,
+        ns1:CA_Task302_C17_Assessment,
+        ns1:CA_Task302_C18_Assessment,
+        ns1:CA_Task302_C23_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task302 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task302_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:AS_Task304 a ns1:Assessment ;
+    rdfs:label "Traffic Control assessment specification"@en ;
+    dcterms:identifier "Task304-Assessment" ;
+    dcterms:references ns1:CSPCycle03_TenPointScale ;
+    ns1:hasAcquisitionContext ns1:AC_Task304 ;
+    ns1:hasCompetenceActivation ns1:CA_Task304_C05_01_Assessment,
+        ns1:CA_Task304_C07_Assessment,
+        ns1:CA_Task304_C09_Assessment,
+        ns1:CA_Task304_C10_Assessment,
+        ns1:CA_Task304_C16_Assessment,
+        ns1:CA_Task304_C17_Assessment,
+        ns1:CA_Task304_C18_Assessment,
+        ns1:CA_Task304_C23_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task304 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task304_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:AS_Task305 a ns1:Assessment ;
+    rdfs:label "Online Judges at Logistic Solutions assessment specification"@en ;
+    dcterms:identifier "Task305-Assessment" ;
+    dcterms:references ns1:CSPCycle03_TenPointScale ;
+    ns1:hasAcquisitionContext ns1:AC_Task305 ;
+    ns1:hasCompetenceActivation ns1:CA_Task305_C02_Assessment,
+        ns1:CA_Task305_C03_Assessment,
+        ns1:CA_Task305_C05_Assessment,
+        ns1:CA_Task305_C06_Assessment,
+        ns1:CA_Task305_C14_Assessment,
+        ns1:CA_Task305_C15_Assessment,
+        ns1:CA_Task305_C16_Assessment,
+        ns1:CA_Task305_C21_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task305 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task305_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:C02 ns1:hasTask ns1:Task302_Reference,
+        ns1:Task303_Reference,
+        ns1:Task305_Reference .
+
+ns1:C03 ns1:hasTask ns1:Task302_Reference,
+        ns1:Task303_Reference,
+        ns1:Task305_Reference .
+
+ns1:C14 ns1:hasTask ns1:Task301_Reference,
+        ns1:Task303_Reference,
+        ns1:Task305_Reference .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:dbe36ca49b30552120b608b550def1005bd1d1c821061d59279ef2fc3d257247" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK301 - MusicCollection.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4725187c792512aa6a7ed309a2cca0e4f34e38ebc8b9f76b569376d68fbfc69c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK302 - TheVendingMachine.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:34151c9a4c469c8fac34909c8c1368b9e91023e5a8f3e3f847ce33407e89bf8c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK303 - TheMinotaursLabyrinth.md"@en .
+
+ns1:C04 ns1:hasTask ns1:Task301_Reference,
+        ns1:Task302_Reference ;
+    ns1:isComponentOfCompetence ns1:C20 ;
+    owl:differentFrom ns1:C05_01,
+        ns1:C23 .
+
+ns1:LT_Task301 a ns1:LearningTask ;
+    rdfs:label "Music Collection learning task"@en ;
+    dcterms:identifier "Task301-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task301 ;
+    ns1:hasCompetenceActivation ns1:CA_Task301_C04_Learning,
+        ns1:CA_Task301_C05_01_Learning,
+        ns1:CA_Task301_C14_Learning,
+        ns1:CA_Task301_C17_Learning,
+        ns1:CA_Task301_C18_Learning,
+        ns1:CA_Task301_C19_Learning,
+        ns1:CA_Task301_C20_Learning,
+        ns1:CA_Task301_C23_Learning ;
+    ns1:hasInstructionalStatement "Address the collection questions: the 3500 rock pieces, 700 operas, first-20-note excerpts, empty collection, empty song, repetition, romantic-song predicate, union/intersection, combined instruments and complement relative to an explicit universe."@en,
+        "Analyze concatenation, prefixes/suffixes/substrings and reversal, distinguishing structural validity from musical interpretation."@en,
+        "Analyze whether score/MP3 correspondence supports interchangeability or a formal encoding; the declared correspondence is not by itself a proof of a homomorphism."@en,
+        "Define the alphabet and encoding assumptions for single-instrument and compound multi-instrument score symbols; represent songs as finite strings and collections as languages."@en,
+        "Justify every answer using definitions, explicit notation, examples, counterexamples and arguments where relevant. Work as a group."@en,
+        "Use regular expressions and automata conceptually where they support an argument; no executable automaton or simulation deliverable is required."@en ;
+    ns1:isTeamBased true ;
+    ns1:usesResource ns1:ER_Task301_ProblemStatement,
+        ns1:ER_Task301_img01,
+        ns1:ER_Task301_img02 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:LT_Task302 a ns1:LearningTask ;
+    rdfs:label "The Vending Machine for Soft Drinks and Snacks learning task"@en ;
+    dcterms:identifier "Task302-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task302 ;
+    ns1:hasCompetenceActivation ns1:CA_Task302_C02_Learning,
+        ns1:CA_Task302_C03_Learning,
+        ns1:CA_Task302_C04_Learning,
+        ns1:CA_Task302_C05_01_Learning,
+        ns1:CA_Task302_C06_Learning,
+        ns1:CA_Task302_C17_Learning,
+        ns1:CA_Task302_C18_Learning,
+        ns1:CA_Task302_C23_Learning ;
+    ns1:hasInstructionalStatement "If a regular-expression representation for a selected fragment is feasible, include it and its construction method; otherwise justify the limitation."@en,
+        "Investigate nondeterministic behavior, relate machine options/payments to alphabet symbols and use formal notation consistently."@en,
+        "Model at least three products, accepting R$1 and R$2, dispensing the selected product and returning change. The listed drinks cost R$5/R$7 and snack packets R$7/R$10."@en,
+        "Preserve the source simulation objective despite conditional activation metadata; hypothetical examples are not evidence that the model was executed."@en,
+        "Submit a JFLAP-compatible automaton file and an SBC-format report describing payment/dispensing operations with at least two examples."@en,
+        "The R$1 random bonus-change modification under exact payment is an additional challenge, not a baseline requirement."@en ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task302_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302%20-%20TheVendingMachine.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> .
+
+ns1:LT_Task304 a ns1:LearningTask ;
+    rdfs:label "Traffic Control learning task"@en ;
+    dcterms:identifier "Task304-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task304 ;
+    ns1:hasCompetenceActivation ns1:CA_Task304_C05_01_Learning,
+        ns1:CA_Task304_C07_Learning,
+        ns1:CA_Task304_C09_Learning,
+        ns1:CA_Task304_C10_Learning,
+        ns1:CA_Task304_C16_Learning,
+        ns1:CA_Task304_C17_Learning,
+        ns1:CA_Task304_C18_Learning,
+        ns1:CA_Task304_C23_Learning ;
+    ns1:hasInstructionalStatement "Classify light vehicles at weight <=6 tonnes, heavy vehicles at 6<weight<10 tonnes and very-heavy vehicles at weight >=10 tonnes."@en,
+        "Consider the need for Turing Machine extensions and explain the relation between the formal model and the intuitive algorithm notion in the source objectives."@en,
+        "Develop the adopted machine model and submit one or more JFLAP files and an SBC-format report with detailed system operation and theoretical justification."@en,
+        "Preserve algebraic encoding, formal reasoning and model-adequacy discussion without redefining the reusable competence pairings."@en,
+        "Use the sensor-derived input to count vehicles by category during the previous night and identify the most frequent category."@en,
+        "Variant-related discussion remains conditional; the adopted formalism is an instructional representation, not a blanket proof that every bounded formulation excludes other models."@en ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task304_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304%20-%20TrafficControl.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> .
+
+ns1:LT_Task305 a ns1:LearningTask ;
+    rdfs:label "Online Judges at Logistic Solutions learning task"@en ;
+    dcterms:identifier "Task305-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task305 ;
+    ns1:hasCompetenceActivation ns1:CA_Task305_C02_Learning,
+        ns1:CA_Task305_C03_Learning,
+        ns1:CA_Task305_C05_Learning,
+        ns1:CA_Task305_C06_Learning,
+        ns1:CA_Task305_C14_Learning,
+        ns1:CA_Task305_C15_Learning,
+        ns1:CA_Task305_C16_Learning,
+        ns1:CA_Task305_C21_Learning ;
+    ns1:hasInstructionalStatement "Analyze TSP and timetabling submissions and reasons for TLE in relation to input size, algorithmic strategy, resource limits and problem formulation."@en,
+        "Explain computability/termination limits and distinguish them from practical time limits and NP-hardness."@en,
+        "Preserve the source simulation/testing objective while documenting conditional C03 activation. Do not treat every timeout as an infinite loop."@en,
+        "Provide an SBC-format article with hypotheses, characterization of TSP/PT, manager-facing answers, the FSM and illustrative examples."@en,
+        "Represent observable Online Judge workflow and AC, WA, TLE, CE and RE outcomes with an FSM, explaining model and evaluation limits."@en,
+        "State the formulation before assigning a complexity class: decision TSP and optimization TSP are different formulations; timetabling depends on its constraints."@en,
+        "The experiment evaluating TSP/PT code at different input sizes is an extra challenge; no benchmark result or executed evaluation is asserted."@en ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task305_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305%20-%20OnlineJudges.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> .
+
+ns1:Task303_Reference a ns1:Task ;
+    rdfs:label "The Minotaur's Labyrinth reference performance"@en ;
+    dcterms:identifier "Task303-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task303_abstract,
+        ns1:TA_Task303_construct,
+        ns1:TA_Task303_derive,
+        ns1:TA_Task303_document,
+        ns1:TA_Task303_justify,
+        ns1:TA_Task303_test ;
+    ns1:hasTaskComponent ns1:TC_Task303_1,
+        ns1:TC_Task303_2,
+        ns1:TC_Task303_3,
+        ns1:TC_Task303_4 ;
+    ns1:hasTaskConstraint ns1:TCons_Task303_1,
+        ns1:TCons_Task303_2,
+        ns1:TCons_Task303_3,
+        ns1:TCons_Task303_4 ;
+    ns1:hasTaskStatement "Develop and test the adopted pushdown route-memory model for outward and return navigation through the labyrinth, construct the corresponding context-free grammar and justify the representations."@en ;
+    ns1:isTaskOf ns1:C02,
+        ns1:C03,
+        ns1:C05_01,
+        ns1:C12,
+        ns1:C13_01,
+        ns1:C14,
+        ns1:C17,
+        ns1:C18,
+        ns1:C19,
+        ns1:C22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:AS_Task303 a ns1:Assessment ;
+    rdfs:label "The Minotaur's Labyrinth assessment specification"@en ;
+    dcterms:identifier "Task303-Assessment" ;
+    dcterms:references ns1:CSPCycle03_TenPointScale ;
+    ns1:hasAcquisitionContext ns1:AC_Task303 ;
+    ns1:hasCompetenceActivation ns1:CA_Task303_C02_Assessment,
+        ns1:CA_Task303_C03_Assessment,
+        ns1:CA_Task303_C05_01_Assessment,
+        ns1:CA_Task303_C12_Assessment,
+        ns1:CA_Task303_C13_01_Assessment,
+        ns1:CA_Task303_C14_Assessment,
+        ns1:CA_Task303_C17_Assessment,
+        ns1:CA_Task303_C18_Assessment,
+        ns1:CA_Task303_C19_Assessment,
+        ns1:CA_Task303_C22_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task303 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task303_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:LT_Task303 a ns1:LearningTask ;
+    rdfs:label "The Minotaur's Labyrinth learning task"@en ;
+    dcterms:identifier "Task303-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task303 ;
+    ns1:hasCompetenceActivation ns1:CA_Task303_C02_Learning,
+        ns1:CA_Task303_C03_Learning,
+        ns1:CA_Task303_C05_01_Learning,
+        ns1:CA_Task303_C12_Learning,
+        ns1:CA_Task303_C13_01_Learning,
+        ns1:CA_Task303_C14_Learning,
+        ns1:CA_Task303_C17_Learning,
+        ns1:CA_Task303_C18_Learning,
+        ns1:CA_Task303_C19_Learning,
+        ns1:CA_Task303_C22_Learning ;
+    ns1:hasInstructionalStatement "Construct a CFG for the adopted PDA route language and explain the correspondence as elaborated by the integrated CSP report; example tests alone do not prove equivalence for an infinite language."@en,
+        "Construct a JFLAP navigation model and an SBC report describing operations, at least two simulations, location-sequence notation, difficulties and investigation results."@en,
+        "Discuss multiple exits or dynamic obstacles as investigation questions; do not silently turn them into mandatory implementation products."@en,
+        "Model outward navigation and return to the entrance using route memory in the adopted PDA formulation."@en,
+        "Retain C12 as the direct PDA-construction competence in the current consolidated set. Symbol naming alone is not grammar-rule interpretation or a homomorphism analysis."@en,
+        "State route-language, movement-inverse and memory assumptions. A finite pictured maze by itself does not prove nonregularity."@en ;
+    ns1:isTeamBased true ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:ER_Task303_Labirinto,
+        ns1:ER_Task303_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303%20-%20TheMinotaursLabyrinth.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> .
+
+ns1:C19 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply homomorphisms in formal languages"@en ;
+    dcterms:identifier "C19"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:cspEpistemicRigor,
+        ns1:cspIntellectualResponsibility,
+        ns1:reflective ;
+    ns1:hasKnowledgeSkill ns1:KS_C19_AnalyticalThinking_Analyzing,
+        ns1:KS_C19_Codifications_Applying,
+        ns1:KS_C19_FormalLanguages_Understanding,
+        ns1:KS_C19_Homomorphisms_Applying ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task301_Reference,
+        ns1:Task303_Reference ;
+    ns1:isComponentOfCompetence ns1:C20 ;
+    rdfs:comment "This competency involves the ability to define and apply homomorphisms over symbols, strings, and languages, using formal encodings to relate symbolic representations of the same domain or different domains. Learners demonstrate this competency by: - defining mappings on symbols and applying their extensions to strings and languages; - identifying which structural properties are preserved, modified, or lost; - analyzing the conditions under which representations can be related by a formal encoding; - justifying the limits of equivalence while distinguishing structural correspondence from semantic equivalence. The scope is conceptual and interpretative, without implementation of encoding functions. The task's declared correspondence between a score and its recording motivates the analysis; it does not by itself prove a homomorphism or structural equivalence. Initial domain modeling is addressed by C18 and language operations by C17."@en ;
+    owl:differentFrom ns1:C04,
+        ns1:C05_01,
+        ns1:C23 ;
+    skos:definition "Apply homomorphisms in formal languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C20 a ns1:CC2020Competence,
+        ns1:Competence,
+        ns1:CompositeCompetence,
+        owl:NamedIndividual ;
+    rdfs:label "Model and analyze musical collections as formal languages"@en ;
+    dcterms:identifier "C20"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasComponentCompetence ns1:C04,
+        ns1:C05_01,
+        ns1:C17,
+        ns1:C18,
+        ns1:C19,
+        ns1:C23 ;
+    ns1:hasDisposition ns1:cspEpistemicRigor,
+        ns1:cspIntellectualResponsibility,
+        ns1:persistent,
+        ns1:reflective ;
+    ns1:hasIntegrationDescription "Integrate formal abstraction (C18), operations (C17), encoding analysis (C19), regular-expression characterization (C04), consistent algebraic notation (C23) and rigorous written justification (C05.01) into one coherent account of musical collections. Alphabet/model assumptions, operations, representations and conclusions must remain mutually consistent. Integration is additional expected performance, not automatic synthesis of component evidence."@en ;
+    ns1:hasKnowledgeSkill ns1:KS_C20_AnalyticalThinking_Analyzing,
+        ns1:KS_C20_FormalLanguages_Applying,
+        ns1:KS_C20_HomomorphismsAndCodifications_Applying,
+        ns1:KS_C20_LanguageTheory_Understanding,
+        ns1:KS_C20_RegularExpressions_Applying,
+        ns1:KS_C20_TechnicalWrittenCommunication_Creating ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Composite ;
+    ns1:hasTask ns1:Task301_Reference ;
+    rdfs:comment "This task-level competency involves the ability to integrate concepts, operations, and representations from Formal Language Theory in order to model musical collections as formal languages and analyze rigorously their structural properties. Learners demonstrate this competency by: - abstracting musical artifacts as symbols, strings, and languages; - applying algebraic operations and regular expressions to characterize musical collections; - analyzing formal codifications and transformations between representations; - justifying structural properties, limitations, and implications through explicit definitions, minimal examples, counterexamples, and logical argumentation. This competency synthesizes the component competencies specified for this task into a coherent formal analysis of a real-world problem, without requiring implementation or operational recognizer construction."@en ;
+    skos:definition "Model and analyze musical collections as formal languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C18 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Model real-world problems using formal language concepts"@en ;
+    dcterms:identifier "C18"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:cspEpistemicRigor,
+        ns1:cspIntellectualResponsibility,
+        ns1:reflective ;
+    ns1:hasKnowledgeSkill ns1:KS_C18_AnalyticalThinking_Analyzing,
+        ns1:KS_C18_FormalLanguages_Applying,
+        ns1:KS_C18_HomomorphismsAndCodifications_Applying,
+        ns1:KS_C18_LanguageTheory_Understanding ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task301_Reference,
+        ns1:Task302_Reference,
+        ns1:Task303_Reference,
+        ns1:Task304_Reference ;
+    ns1:isComponentOfCompetence ns1:C20 ;
+    rdfs:comment "This competency involves the ability to abstract elements of a real-world domain and model them as formal language-based representations through explicit alphabets, strings, and languages that capture relevant structural features. Learners demonstrate this competency by: - establishing explicit mappings between domain entities and formal symbols; - defining alphabets, strings, and languages appropriate to the selected representation; - justifying modeling choices, including exclusions and simplifications; - assessing the structural adequacy of the model and identifying its formal limitations; - distinguishing structural correctness from semantic interpretation. The scope is abstraction and modeling. Operations on the resulting languages are addressed by C17, and transformations between representations by C19. Conceptual mapping supports the initial abstraction without subsuming the separate analysis of homomorphisms."@en ;
+    owl:differentFrom ns1:C04,
+        ns1:C05_01,
+        ns1:C17,
+        ns1:C19,
+        ns1:C23 ;
+    skos:definition "Model real-world problems using formal language concepts"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C17 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply operations on formal languages"@en ;
+    dcterms:identifier "C17"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:cspEpistemicRigor,
+        ns1:cspIntellectualResponsibility,
+        ns1:persistent ;
+    ns1:hasKnowledgeSkill ns1:KS_C17_AnalyticalThinking_Analyzing,
+        ns1:KS_C17_LanguageTheory_Understanding,
+        ns1:KS_C17_OperationsOnFormalLanguages_Analyzing,
+        ns1:KS_C17_OperationsOnFormalLanguages_Applying,
+        ns1:KS_C17_RegularExpressions_Applying ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task301_Reference,
+        ns1:Task302_Reference,
+        ns1:Task303_Reference,
+        ns1:Task304_Reference ;
+    ns1:isComponentOfCompetence ns1:C20 ;
+    rdfs:comment "This competency involves the ability to apply, analyze, and justify formal operations over languages, including concatenation, union, intersection, difference, complement, Kleene closure, and reversal, with attention to their structural effects and theoretical properties. Learners demonstrate this competency by: - applying operations to languages over an explicitly defined alphabet and specifying the universe for complement; - assessing the structural validity of the resulting languages; - determining whether relevant properties, including class membership, finiteness, or infinitude, are preserved; - justifying conclusions through definitions, examples, counterexamples, and known theoretical properties. The scope is conceptual and algebraic; it does not require automaton construction, simulation, or implementation."@en ;
+    owl:differentFrom ns1:C04,
+        ns1:C05_01,
+        ns1:C19,
+        ns1:C23 ;
+    skos:definition "Apply operations on formal languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C23 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Interpret and apply algebraic notation for strings and languages"@en ;
+    dcterms:identifier "C23"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:meticulous,
+        ns1:responsible ;
+    ns1:hasKnowledgeSkill ns1:KS_C23_AnalyticalThinking_Analyzing,
+        ns1:KS_C23_FormalLanguages_Applying,
+        ns1:KS_C23_LanguageTheory_Understanding,
+        ns1:KS_C23_WrittenCommunication_Applying ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task301_Reference,
+        ns1:Task302_Reference,
+        ns1:Task304_Reference ;
+    ns1:isComponentOfCompetence ns1:C20 ;
+    rdfs:comment "This competency involves the ability to interpret, use, and justify formal algebraic notation for strings and languages in order to represent, analyze, and communicate structural properties of symbolic systems. Learners demonstrate this competency by: - interpreting standard notation for strings, such as ε, Σ, |x|, concatenation, exponentiation, reversal, prefixes, suffixes, and substrings; - interpreting and applying standard notation for languages, such as union, intersection, complement, concatenation, \\(L^n\\), and \\(L^*\\); - using algebraic notation consistently to express structural properties, operations, and relations over strings and languages; - connecting formal notation to conceptual reasoning about symbolic structures and language behavior; - justifying the meaning and use of notation in formally rigorous answers. This competency supports instructional contexts in which learners must reason explicitly through symbolic notation, not merely recognize concepts informally."@en ;
+    owl:differentFrom ns1:C05_01 ;
+    skos:definition "Interpret and apply algebraic notation for strings and languages"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ns1:C05_01 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Write mathematically rigorous answers"@en ;
+    dcterms:identifier "C05.01"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:transversalCompetenceScope ;
+    ns1:hasDisposition ns1:meticulous,
+        ns1:responsible ;
+    ns1:hasKnowledgeSkill ns1:C05_01_KS1,
+        ns1:C05_01_KS2,
+        ns1:C05_01_KS3 ;
+    ns1:hasSpecializationDescription "C05.01 directly specializes C05 by requiring mathematically rigorous answers with explicit definitions, precise notation, structured argumentation, examples and counterexamples where appropriate. The relationship does not copy base values automatically or establish learner attainment."@en ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task301_Reference,
+        ns1:Task302_Reference,
+        ns1:Task303_Reference,
+        ns1:Task304_Reference ;
+    ns1:isComponentOfCompetence ns1:C20 ;
+    ns1:isSpecializationOf ns1:C05 ;
+    rdfs:comment "This competency involves the ability to produce mathematically rigorous written answers that clearly justify conclusions through explicit definitions, precise notation, structured arguments, and appropriate supporting examples. Learners demonstrate this competency by: - stating relevant formal definitions clearly; - organizing answers so that claims, justifications, and conclusions are explicitly connected; - using examples or counterexamples when they help clarify or validate the reasoning; - applying appropriate technical and mathematical notation consistently; - presenting arguments with sufficient rigor to support the correctness of the conclusion. This competency specializes technical report writing toward tasks in which the main evidence lies not only in presenting a result, but in formally justifying why the result is valid."@en ;
+    skos:definition "Write mathematically rigorous answers"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK302%20-%20TheVendingMachine/TASK302-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:4107ac1ed5d5e8dd43c9e10e7f1b5a2a0f563cee9fdd19e548a73475193860bd" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK302-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK304%20-%20TrafficControl/TASK304-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:6d0817c3db9605ba4622d42c568a7d03eecede0b5caf98ab7369ee3672264332" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK304-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK305%20-%20OnlineJudges/TASK305-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:6dc647d299b4963d395592467de391ee4f46edbd3440fabcd9dd6bae7f155d23" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK305-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK303%20-%20TheMinotaursLabyrinth/TASK303-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:112624422087842ed9c68a9d7cb10c90fb8dcfdcf361f4fcabac92d54173b53c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK303-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ebd68d2447c5de11e5d72aa770c2a0d8a10df88a6ac99f98d0484c33e552379f" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-03> ;
+    dcterms:title "TASK301-CSP-Report.md"@en .
+

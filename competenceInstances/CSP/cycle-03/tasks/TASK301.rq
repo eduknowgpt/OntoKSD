@@ -1,0 +1,401 @@
+# Cycle-03 Task301 and current instructional/assessment activations.
+# Incremental INSERT-only cycle-03 data. See README.md for dependencies and source limits.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task301_C04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C04_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C04_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Define Regular Expressions for Finite Automata. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C05_01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C05_01_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C05_01_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C05_01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Write mathematically rigorous answers. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C05_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C05_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Differentiate classifications of formal grammars. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as optional. This is an extension opportunity; it does not remove independent requirements in the task statement."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C17_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C17_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C17_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C17_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply operations on formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C17_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C17 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C17_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C18_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C18_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C18_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C18_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model real-world problems using formal language concepts. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C18_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C18 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C18_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C19_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C19_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C19 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C19_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C19_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Apply homomorphisms in formal languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C19_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C19 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C19_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C20_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model and analyze musical collections as formal languages. Composite identity and its six component associations are counted once each; component links are not extra associations."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C20_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amIntegrative ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C20_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C20_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Model and analyze musical collections as formal languages. Composite identity and its six component associations are counted once each; component links are not extra associations."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C20_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amIntegrative ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C20 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C20_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C23_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C23_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C23_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C23_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual source function: Interpret and apply algebraic notation for strings and languages. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task301_C23_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C23 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task301 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:CA_Task301_C23_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The source classifies this association as mandatory. Address the specified contribution to the task without inferring independent learner attainment from this planning record."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:ER_Task301_img01 a ontoksd:EducationalResource ;
+    rdfs:label "Linked source illustration: img01.jpg"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img01.jpg> .
+
+ontoksd:ER_Task301_img02 a ontoksd:EducationalResource ;
+    rdfs:label "Linked source illustration: img02.jpg"@en ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/img02.jpg> .
+
+ontoksd:TA_Task301_abstract a ontoksd:TaskActivity ;
+    rdfs:label "abstract"@en .
+
+ontoksd:TA_Task301_analyze a ontoksd:TaskActivity ;
+    rdfs:label "analyze"@en .
+
+ontoksd:TA_Task301_apply a ontoksd:TaskActivity ;
+    rdfs:label "apply"@en .
+
+ontoksd:TA_Task301_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task301_justify a ontoksd:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ontoksd:TA_Task301_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TC_Task301_1 a ontoksd:TaskComponent ;
+    rdfs:label "Musical scores and recordings"@en .
+
+ontoksd:TC_Task301_2 a ontoksd:TaskComponent ;
+    rdfs:label "Strings and collections as formal languages"@en .
+
+ontoksd:TC_Task301_3 a ontoksd:TaskComponent ;
+    rdfs:label "Operations and encodings"@en .
+
+ontoksd:TC_Task301_4 a ontoksd:TaskComponent ;
+    rdfs:label "Mathematically justified answers"@en .
+
+ontoksd:TCons_Task301_1 a ontoksd:TaskConstraint ;
+    rdfs:label "State representation assumptions and distinguish finite-string structure from semantic musical properties."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ontoksd:TCons_Task301_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Specify a universe when using complement; distinguish the empty language from the language containing the empty string."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ontoksd:TCons_Task301_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Provide mathematical justification for every question."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ontoksd:TCons_Task301_4 a ontoksd:TaskConstraint ;
+    rdfs:label "No automaton implementation or simulation is required by the source task."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ontoksd:AC_Task301 a ontoksd:AcquisitionContext ;
+    rdfs:label "Music Collection educational setting"@en ;
+    dcterms:identifier "Task301-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:ER_Task301_ProblemStatement a ontoksd:EducationalResource ;
+    dcterms:references <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md> .
+
+ontoksd:C04 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C05_01 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C14 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C17 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C18 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C19 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C20 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:C23 ontoksd:hasTask ontoksd:Task301_Reference .
+
+ontoksd:AS_Task301 a ontoksd:Assessment ;
+    rdfs:label "Music Collection assessment specification"@en ;
+    dcterms:identifier "Task301-Assessment" ;
+    dcterms:references ontoksd:CSPCycle03_TenPointScale ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task301 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task301_C04_Assessment,
+        ontoksd:CA_Task301_C05_01_Assessment,
+        ontoksd:CA_Task301_C14_Assessment,
+        ontoksd:CA_Task301_C17_Assessment,
+        ontoksd:CA_Task301_C18_Assessment,
+        ontoksd:CA_Task301_C19_Assessment,
+        ontoksd:CA_Task301_C20_Assessment,
+        ontoksd:CA_Task301_C23_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted answers, models and explanations against the task requirements and the documented activation configuration. This specification does not assert actual evaluation events, independent component mastery or collected evidence."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task301 ;
+    ontoksd:usesResource ontoksd:ER_Task301_ProblemStatement ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:Task301_Reference a ontoksd:Task ;
+    rdfs:label "Music Collection reference performance"@en ;
+    dcterms:identifier "Task301-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task301_abstract,
+        ontoksd:TA_Task301_analyze,
+        ontoksd:TA_Task301_apply,
+        ontoksd:TA_Task301_document,
+        ontoksd:TA_Task301_justify,
+        ontoksd:TA_Task301_model ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task301_1,
+        ontoksd:TC_Task301_2,
+        ontoksd:TC_Task301_3,
+        ontoksd:TC_Task301_4 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task301_1,
+        ontoksd:TCons_Task301_2,
+        ontoksd:TCons_Task301_3,
+        ontoksd:TCons_Task301_4 ;
+    ontoksd:hasTaskStatement "Represent musical scores, songs and collections as alphabets, strings and languages; analyze operations and encodings and provide mathematically justified answers without requiring executable automata."@en ;
+    ontoksd:isTaskOf ontoksd:C04,
+        ontoksd:C05_01,
+        ontoksd:C14,
+        ontoksd:C17,
+        ontoksd:C18,
+        ontoksd:C19,
+        ontoksd:C20,
+        ontoksd:C23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+
+ontoksd:LT_Task301 a ontoksd:LearningTask ;
+    rdfs:label "Music Collection learning task"@en ;
+    dcterms:identifier "Task301-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task301 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task301_C04_Learning,
+        ontoksd:CA_Task301_C05_01_Learning,
+        ontoksd:CA_Task301_C14_Learning,
+        ontoksd:CA_Task301_C17_Learning,
+        ontoksd:CA_Task301_C18_Learning,
+        ontoksd:CA_Task301_C19_Learning,
+        ontoksd:CA_Task301_C20_Learning,
+        ontoksd:CA_Task301_C23_Learning ;
+    ontoksd:hasInstructionalStatement "Address the collection questions: the 3500 rock pieces, 700 operas, first-20-note excerpts, empty collection, empty song, repetition, romantic-song predicate, union/intersection, combined instruments and complement relative to an explicit universe."@en,
+        "Analyze concatenation, prefixes/suffixes/substrings and reversal, distinguishing structural validity from musical interpretation."@en,
+        "Analyze whether score/MP3 correspondence supports interchangeability or a formal encoding; the declared correspondence is not by itself a proof of a homomorphism."@en,
+        "Define the alphabet and encoding assumptions for single-instrument and compound multi-instrument score symbols; represent songs as finite strings and collections as languages."@en,
+        "Justify every answer using definitions, explicit notation, examples, counterexamples and arguments where relevant. Work as a group."@en,
+        "Use regular expressions and automata conceptually where they support an argument; no executable automaton or simulation deliverable is required."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task301_ProblemStatement,
+        ontoksd:ER_Task301_img01,
+        ontoksd:ER_Task301_img02 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301%20-%20MusicCollection.md>,
+        <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-03/en/TASK301%20-%20MusicCollection/TASK301-CSP-Report.md> .
+}

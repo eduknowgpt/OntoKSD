@@ -1,0 +1,32 @@
+# Competence CM19; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM19 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence ;
+    rdfs:label "Rearrange formulas to isolate a quantity"@en ;
+    dcterms:identifier "CM19" ;
+    ontoksd:hasDisposition ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM19_KS1 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task403_Reference ;
+    skos:definition "rearrange a formula through valid algebraic operations to express a selected quantity in terms of the others."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CM19_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K18 - Algebraic rearrangement of formulas x Apply"@en ;
+    dcterms:description "Isolate a selected quantity using equivalent transformations and respecting denominator restrictions."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:isolate ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K18 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+}

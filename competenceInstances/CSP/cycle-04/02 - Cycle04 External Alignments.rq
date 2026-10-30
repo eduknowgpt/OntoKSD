@@ -1,0 +1,580 @@
+# Qualified source-reported BNCC correspondences; interoperability adapter for skill-coded external references.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CSP4_Alignment_CM01_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Analyze computational requirements\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM01_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM01 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM01_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Analyze computational requirements\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM02_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Maintain program data and state\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM02 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM02_CE4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Maintain program data and state\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM02 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM02_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM02 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM02_GC5 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Maintain program data and state\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC5 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM02 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM03_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement decisions with Boolean conditions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM03 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM03_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM03 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM03_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement decisions with Boolean conditions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM03 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM04_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement repetition with a stopping condition\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM04 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM04_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM04 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM04_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement repetition with a stopping condition\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM04 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM05_CE4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement input and output interaction\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM05 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM05_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM05 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM05_GC5 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement input and output interaction\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC5 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM05 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM06_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Validate inputs and operation preconditions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM06 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM06_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM06 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM06_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Validate inputs and operation preconditions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM06 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM07_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Organize a solution into functions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM07 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM07_CE4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Organize a solution into functions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM07 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM07_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM07 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM07_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Organize a solution into functions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM07 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM07_GC5 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Organize a solution into functions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC5 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM07 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM08_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Verify program behavior with test cases\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM08 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM08_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Testing or diagnosis supports checking or informing refinements, but does not itself establish complete solution construction." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM08 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM08_EM13CO06 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Applicable only when correctness is evaluated using explicit criteria and associated measures, such as successful cases per requirement; other software quality characteristics are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO06 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM08 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM08_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Verify program behavior with test cases\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM08 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM09_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Diagnose a program failure\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM09 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM09_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Testing or diagnosis supports checking or informing refinements, but does not itself establish complete solution construction." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM09 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM09_EM13CO06 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Applicable only when diagnosis contributes to an explicit evaluation of software correctness, rather than merely locating an error. Other quality characteristics are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO06 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM09 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM09_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Diagnose a program failure\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM09 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM10_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain a computational solution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM10 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM10_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM10 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM10_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain a computational solution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM10 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM11_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Trace program execution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM11 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM11_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Trace program execution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM11 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM12_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain arithmetic expression evaluation\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM12 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM12_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM12 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM12_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain arithmetic expression evaluation\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM12 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM13_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain data organization\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM13 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM13_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM13 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM13_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain data organization\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM13 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM14_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain conditional execution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM14 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM14_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM14 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM14_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain conditional execution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM14 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM15_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain repeated execution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM15_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM15 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM15_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain repeated execution\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM16_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain function organization\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM16_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM16 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM16_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain function organization\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM17_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain variable updates\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM17_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM17 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM17_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain variable updates\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM17 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Adjustments.md> .
+
+ontoksd:CSP4_Alignment_CM18_CE6 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain variable updates and arithmetic evaluation\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE6 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM18 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM18_EM13CO19 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "Conditional contribution: applicable when the explanatory performance uses code or program execution as digital presentation resources. Ordinary oral or paper explanation alone does not satisfy this condition. Negotiation and the full media/tool scope are not established." ;
+    ontoksd:hasAlignmentType ontoksd:PartialAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO19 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM18 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM18_GC4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Explain variable updates and arithmetic evaluation\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM18 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM19_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Rearrange formulas to isolate a quantity\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM19 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM20_CE4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement numeric calculations\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM20_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM20 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM20_GC5 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement numeric calculations\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC5 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM20 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM21_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Validate input values and operation conditions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM21_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM21 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM21_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Validate input values and operation conditions\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM21 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM22_GC2 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Interpret physical quantities and their relationships\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_GC2 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM22 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK403-Velocity/TASK403-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM23_CE1 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement a function with parameters and a return value\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE1 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM23_CE4 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The bounded performance \"Implement a function with parameters and a return value\" contributes to the framework reference in the CSP source. It does not establish its complete scope, equivalence, learner attainment or regulatory compliance." ;
+    ontoksd:hasAlignmentType ontoksd:GeneralFrameworkAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_CE4 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM23 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CSP4_Alignment_CM23_EM13CO02 a ontoksd:ExternalCompetenceAlignment ;
+    ontoksd:hasAlignmentJustification "The specified performance contributes one bounded aspect of refinement from specification toward implementation. It does not cover the complete exploration and construction process across levels of abstraction. A supplied function contract does not by itself establish independent modular design." ;
+    ontoksd:hasAlignmentType ontoksd:NarrowerThanExternalAlignment ;
+    ontoksd:mediatesExternalCompetence ontoksd:CSP4_BNCC_EM13CO02 ;
+    ontoksd:mediatesInternalCompetence ontoksd:CM23 ;
+    skos:scopeNote "Source-qualified alignment assertion. Applicability conditions are textual and require checking; OWL does not automatically enforce them. No owl:sameAs, equivalence or automatic inheritance is asserted."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_EM13CO06 a ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC Computing skill EM13CO06"@en ;
+    dcterms:identifier "EM13CO06" ;
+    dcterms:type "BNCC Computing skill for High School" ;
+    skos:scopeNote "Explicit interoperability adapter for a source-category skill: represented under ExternalCompetence to serve the existing alignment range, without classifying it as BNCCGeneralCompetence or BNCCSpecificCompetence. This does not change its source category into a competence."@en,
+        "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_GC5 a ontoksd:BNCCGeneralCompetence,
+        ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC General Competency 5"@en ;
+    dcterms:identifier "GC5" ;
+    skos:scopeNote "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_CE4 a ontoksd:BNCCSpecificCompetence,
+        ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC Computing-Specific Competency 4 for High School"@en ;
+    dcterms:identifier "CE4" ;
+    skos:scopeNote "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_CE6 a ontoksd:BNCCSpecificCompetence,
+        ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC Computing-Specific Competency 6 for High School"@en ;
+    dcterms:identifier "CE6" ;
+    skos:scopeNote "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_EM13CO19 a ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC Computing skill EM13CO19"@en ;
+    dcterms:identifier "EM13CO19" ;
+    dcterms:type "BNCC Computing skill for High School" ;
+    skos:scopeNote "Explicit interoperability adapter for a source-category skill: represented under ExternalCompetence to serve the existing alignment range, without classifying it as BNCCGeneralCompetence or BNCCSpecificCompetence. This does not change its source category into a competence."@en,
+        "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_GC4 a ontoksd:BNCCGeneralCompetence,
+        ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC General Competency 4"@en ;
+    dcterms:identifier "GC4" ;
+    skos:scopeNote "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_CE1 a ontoksd:BNCCSpecificCompetence,
+        ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC Computing-Specific Competency 1 for High School"@en ;
+    dcterms:identifier "CE1" ;
+    skos:scopeNote "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_GC2 a ontoksd:BNCCGeneralCompetence,
+        ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC General Competency 2"@en ;
+    dcterms:identifier "GC2" ;
+    skos:scopeNote "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+
+ontoksd:CSP4_BNCC_EM13CO02 a ontoksd:ExternalCompetence ;
+    rdfs:label "BNCC Computing skill EM13CO02"@en ;
+    dcterms:identifier "EM13CO02" ;
+    dcterms:type "BNCC Computing skill for High School" ;
+    skos:scopeNote "Explicit interoperability adapter for a source-category skill: represented under ExternalCompetence to serve the existing alignment range, without classifying it as BNCCGeneralCompetence or BNCCSpecificCompetence. This does not change its source category into a competence."@en,
+        "External reference identified in the CSP reports. Labels identify the reference and do not reproduce or certify the full normative statement. GC and CE are source-local abbreviations. Alignment is restricted to its documented contribution."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK401-TicTacToe/TASK401-CSP-Report.md> .
+}

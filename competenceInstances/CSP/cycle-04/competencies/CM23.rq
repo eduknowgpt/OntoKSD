@@ -1,0 +1,35 @@
+# Competence CM23; complete current specification.
+# INSERT-only cycle-04 data; see README.md for loading and interpretation.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CM23 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence ;
+    rdfs:label "Implement a function with parameters and a return value"@en ;
+    dcterms:identifier "CM23" ;
+    ontoksd:hasDisposition ontoksd:cspOrganized,
+        ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill ontoksd:CM23_KS1 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task405_Reference ;
+    skos:definition "implement and invoke a function with a specified responsibility, using parameters to receive data and a return value to provide its result."@en ;
+    skos:scopeNote "Documented CSP cycle-04 proposal. CC2020SpecificationPattern identifies the knowledge-level/disposition structure, not authorship in the CC2020 report or formal approval. Definition is independent of task-specific manifestations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+
+ontoksd:CM23_KS1 a ontoksd:KnowledgeSkill ;
+    rdfs:label "K11 — Modularization: functions and parameter passing x Apply"@en ;
+    dcterms:description "Define and invoke a function that receives the required data through parameters and returns the result to its caller"@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:define,
+        bloom:invoke ;
+    ontoksd:hasCurricularKnowledgeReference ontoksd:CSP4_Curricular_K11 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP4_K11 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK405-Factorial/TASK405-CSP-Report.md> .
+}
