@@ -1,0 +1,368 @@
+@prefix ontoksd: <http://purl.org/ontoksd#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a sh:ValidationReport ;
+    sh:conforms false ;
+    sh:result [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_02> ;
+                    sh:resultMessage "IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:entry ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape rcd:IdentifierEntryShape ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_02> ;
+            sh:resultMessage "RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasIdentifier ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordIdentifierShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_02> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:detail [ a sh:ValidationResult ;
+                            sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ;
+                            sh:resultMessage "Node ex:STMT_RCD_Invalid_04 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:hasStatementID ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:statementName ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:statementText ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:hasStatementToken ] ]" ;
+                            sh:resultSeverity sh:Violation ;
+                            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                            sh:sourceShape rcd:StatementShape ;
+                            sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ] ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_04> ;
+                    sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:hasStatement ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+                    sh:sourceShape rcd:DefinitionStatementsShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_04> ;
+            sh:resultMessage "RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasDefinition ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordDefinitionShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_04> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ;
+            sh:resultMessage "VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:vocabularySource ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape rcd:VocabularySourceShape ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_09_B> ;
+            sh:resultMessage "Another record in the validation graph uses the same catalog and entry." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint rcd:UniqueRecordIdentifierConstraint ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape rcd:RCDShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_09_B> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_06> ;
+            sh:resultMessage "RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:title ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:PatternConstraintComponent ;
+            sh:sourceShape rcd:RecordTitleShape ;
+            sh:value "   "@en ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ;
+                    sh:resultMessage "Node ex:STMT_RCD_Invalid_04 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:hasStatementID ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:statementName ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:statementText ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:hasStatementToken ] ]" ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:OrConstraintComponent ;
+                    sh:sourceShape rcd:StatementShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_04> ;
+            sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasStatement ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:DefinitionStatementsShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ;
+                    sh:resultMessage "Node ex:ID_RCD_Invalid_14 must not conform to shape [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ]" ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NotConstraintComponent ;
+                    sh:sourceShape rcd:LongIdentifierShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_14> ;
+            sh:resultMessage "RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasIdentifier ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordIdentifierShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:detail [ a sh:ValidationResult ;
+                            sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_10> ;
+                            sh:resultMessage "StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                            sh:resultPath rcd:statementName ;
+                            sh:resultSeverity sh:Violation ;
+                            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+                            sh:sourceShape rcd:StatementNameShape ] ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_10> ;
+                    sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:hasStatement ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+                    sh:sourceShape rcd:DefinitionStatementsShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_10> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_10> ;
+            sh:resultMessage "RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasDefinition ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordDefinitionShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_10> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_03> ;
+                    sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:hasStatement ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape rcd:DefinitionStatementsShape ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_03> ;
+            sh:resultMessage "RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasDefinition ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordDefinitionShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_03> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ;
+                    sh:resultMessage "VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:vocabularySource ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape rcd:VocabularySourceShape ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> ;
+            sh:resultMessage "StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasStatementToken ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:StatementTokenShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:detail [ a sh:ValidationResult ;
+                            sh:detail [ a sh:ValidationResult ;
+                                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ;
+                                    sh:resultMessage "VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                                    sh:resultPath rcd:vocabularySource ;
+                                    sh:resultSeverity sh:Violation ;
+                                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                                    sh:sourceShape rcd:VocabularySourceShape ] ;
+                            sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> ;
+                            sh:resultMessage "StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                            sh:resultPath rcd:hasStatementToken ;
+                            sh:resultSeverity sh:Violation ;
+                            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+                            sh:sourceShape rcd:StatementTokenShape ;
+                            sh:value <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ] ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_05> ;
+                    sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:hasStatement ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+                    sh:sourceShape rcd:DefinitionStatementsShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_05> ;
+            sh:resultMessage "RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasDefinition ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordDefinitionShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_05> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ;
+            sh:resultMessage "Node ex:ID_RCD_Invalid_14 must not conform to shape [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ]" ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NotConstraintComponent ;
+            sh:sourceShape rcd:LongIdentifierShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_10> ;
+                    sh:resultMessage "StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:statementName ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+                    sh:sourceShape rcd:StatementNameShape ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_10> ;
+            sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasStatement ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:DefinitionStatementsShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_10> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_01> ;
+            sh:resultMessage "RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:title ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape rcd:RecordTitleShape ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_13> ;
+            sh:resultMessage "The RCD record and the represented competence must be distinct nodes." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint rcd:SeparateCompetenceRecordConstraint ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape rcd:OntoKSDRCDShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_13> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ;
+            sh:resultMessage "Node ex:ID_RCD_Invalid_14 must not conform to shape [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Vocabulary ] ) ]" ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NotConstraintComponent ;
+            sh:sourceShape rcd:MetadataShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_14> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ;
+            sh:resultMessage "Value does not have class rcd:LongIdentifier" ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+            sh:sourceShape rcd:LongIdentifierShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_09_A> ;
+            sh:resultMessage "Another record in the validation graph uses the same catalog and entry." ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraint rcd:UniqueRecordIdentifierConstraint ;
+            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+            sh:sourceShape rcd:RCDShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_09_A> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ;
+            sh:resultMessage "IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:entry ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape rcd:IdentifierEntryShape ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_10> ;
+            sh:resultMessage "StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:statementName ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+            sh:sourceShape rcd:StatementNameShape ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ;
+                    sh:resultMessage "Value does not have class rcd:LongIdentifier" ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+                    sh:sourceShape rcd:LongIdentifierShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ],
+                [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ;
+                    sh:resultMessage "IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:entry ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                    sh:sourceShape rcd:IdentifierEntryShape ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_12> ;
+            sh:resultMessage "RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasIdentifier ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordIdentifierShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#META_RCD_Invalid_08> ;
+            sh:resultMessage "MetadataLiteralShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:additionalMetadata ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+            sh:sourceShape rcd:MetadataLiteralShape ;
+            sh:value <https://example.org/metadata/resource> ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:detail [ a sh:ValidationResult ;
+                            sh:focusNode <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ;
+                            sh:resultMessage "VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                            sh:resultPath rcd:vocabularySource ;
+                            sh:resultSeverity sh:Violation ;
+                            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+                            sh:sourceShape rcd:VocabularySourceShape ] ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> ;
+                    sh:resultMessage "StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:hasStatementToken ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+                    sh:sourceShape rcd:StatementTokenShape ;
+                    sh:value <http://purl.org/ontoksd/rcd/examples#VOC_RCD_Invalid_05> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_05> ;
+            sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasStatement ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:DefinitionStatementsShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_05> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_12> ;
+            sh:resultMessage "RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasIdentifier ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+            sh:sourceShape rcd:RecordIdentifierShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_12> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#ID_RCD_Invalid_02> ;
+            sh:resultMessage "IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:entry ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape rcd:IdentifierEntryShape ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_07> ;
+            sh:resultMessage "RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:title ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:UniqueLangConstraintComponent ;
+            sh:sourceShape rcd:RecordTitleShape ],
+        [ a sh:ValidationResult ;
+            sh:detail [ a sh:ValidationResult ;
+                    sh:focusNode <http://purl.org/ontoksd/rcd/examples#META_RCD_Invalid_08> ;
+                    sh:resultMessage "MetadataLiteralShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+                    sh:resultPath rcd:additionalMetadata ;
+                    sh:resultSeverity sh:Violation ;
+                    sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+                    sh:sourceShape rcd:MetadataLiteralShape ;
+                    sh:value <https://example.org/metadata/resource> ] ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_08> ;
+            sh:resultMessage "RecordMetadataShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasMetadata ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:NodeConstraintComponent ;
+            sh:sourceShape rcd:RecordMetadataShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#META_RCD_Invalid_08> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#RCD_Invalid_11> ;
+            sh:resultMessage "RepresentedCompetenceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath ontoksd:representsCompetence ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+            sh:sourceShape rcd:RepresentedCompetenceShape ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ;
+            sh:resultMessage "Node ex:STMT_RCD_Invalid_04 must conform to one or more shapes in [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:hasStatementID ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:statementName ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:statementText ] ] , [ sh:property [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rcd:hasStatementToken ] ]" ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:OrConstraintComponent ;
+            sh:sourceShape rcd:StatementShape ;
+            sh:value <http://purl.org/ontoksd/rcd/examples#STMT_RCD_Invalid_04> ],
+        [ a sh:ValidationResult ;
+            sh:focusNode <http://purl.org/ontoksd/rcd/examples#DEF_RCD_Invalid_03> ;
+            sh:resultMessage "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+            sh:resultPath rcd:hasStatement ;
+            sh:resultSeverity sh:Violation ;
+            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+            sh:sourceShape rcd:DefinitionStatementsShape ] .
+

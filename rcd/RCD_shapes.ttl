@@ -1,151 +1,263 @@
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-rcd:RCDShape a sh:NodeShape ;
-    sh:targetClass rcd:RCD ;
-    rdfs:label "RCD shape"@en ;
-    skos:definition "Validates the minimum core constraints of an IEEE-style reusable competency definition instance."@en ;
-    sh:property [
-        sh:path rcd:hasIdentifier ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:class rcd:LongIdentifier ;
-        sh:message "An RCD must have exactly one LongIdentifier."@en
-    ] ;
-    sh:property [
-        sh:path rcd:title ;
-        sh:minCount 1 ;
-        sh:datatype rdf:langString ;
-        sh:message "An RCD must have at least one language-tagged title."@en
-    ] ;
-    sh:property [
-        sh:path rcd:description ;
-        sh:datatype rdf:langString ;
-        sh:message "Descriptions, when present, must be language-tagged strings."@en
-    ] ;
-    sh:property [
-        sh:path rcd:hasDefinition ;
-        sh:maxCount 1 ;
-        sh:class rcd:Definition ;
-        sh:message "An RCD may have at most one structured definition."@en
-    ] ;
-    sh:property [
-        sh:path rcd:hasMetadata ;
-        sh:maxCount 1 ;
-        sh:class rcd:Metadata ;
-        sh:message "An RCD may have at most one metadata block."@en
-    ] .
+rcd:OntoKSDRCDShape a sh:NodeShape ;
+    rdfs:label "OntoKSD competence representation"@en ;
+    sh:class ontoksd:OntoKSDRCD ;
+    sh:node rcd:RCDShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:property rcd:RepresentedCompetenceShape ;
+    sh:sparql rcd:SeparateCompetenceRecordConstraint ;
+    sh:targetClass ontoksd:OntoKSDRCD ;
+    sh:targetObjectsOf ontoksd:hasRCD ;
+    sh:targetSubjectsOf ontoksd:representsCompetence .
 
-rcd:LongIdentifierShape a sh:NodeShape ;
-    sh:targetClass rcd:LongIdentifier ;
-    rdfs:label "LongIdentifier shape"@en ;
-    skos:definition "Validates that a long identifier contains exactly one catalog and exactly one entry."@en ;
-    sh:property [
-        sh:path rcd:catalog ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:minLength 1 ;
-        sh:message "A LongIdentifier must have exactly one non-empty catalog."@en
-    ] ;
-    sh:property [
-        sh:path rcd:entry ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:minLength 1 ;
-        sh:message "A LongIdentifier must have exactly one non-empty entry."@en
-    ] .
+rcd:DefinitionModelShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "DefinitionModelShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minLength 1 ;
+    sh:path rcd:modelSource ;
+    sh:pattern "\\S" .
 
 rcd:DefinitionShape a sh:NodeShape ;
+    rdfs:label "Structured definition"@en ;
+    sh:class rcd:Definition ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:not [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Statement ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ] ;
+    sh:property rcd:DefinitionModelShape,
+        rcd:DefinitionStatementsShape ;
     sh:targetClass rcd:Definition ;
-    rdfs:label "Definition shape"@en ;
-    skos:definition "Validates that a structured definition has at least one statement."@en ;
-    sh:property [
-        sh:path rcd:hasStatement ;
-        sh:minCount 1 ;
-        sh:class rcd:Statement ;
-        sh:message "A Definition must contain at least one Statement."@en
-    ] ;
-    sh:property [
-        sh:path rcd:modelSource ;
-        sh:datatype xsd:string ;
-        sh:message "Each model source must be a string; applications may further restrict it to URI syntax."@en
-    ] .
+    sh:targetObjectsOf rcd:hasDefinition .
 
-rcd:StatementShape a sh:NodeShape ;
-    sh:targetClass rcd:Statement ;
-    rdfs:label "Statement shape"@en ;
-    skos:definition "Validates that each statement contains at least one of the admissible information-bearing fields."@en ;
-    sh:or (
-        [ sh:property [ sh:path rcd:hasStatementID ; sh:minCount 1 ; sh:class rcd:LongIdentifier ] ]
-        [ sh:property [ sh:path rcd:statementName ; sh:minCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ]
-        [ sh:property [ sh:path rcd:statementText ; sh:minCount 1 ; sh:datatype rdf:langString ] ]
-        [ sh:property [ sh:path rcd:hasStatementToken ; sh:minCount 1 ; sh:class rcd:Vocabulary ] ]
-    ) ;
-    sh:property [
-        sh:path rcd:statementName ;
-        sh:datatype xsd:string ;
-        sh:message "Statement names, when present, must be strings."@en
-    ] ;
-    sh:property [
-        sh:path rcd:statementText ;
-        sh:datatype rdf:langString ;
-        sh:message "Statement texts, when present, must be language-tagged strings."@en
-    ] ;
-    sh:property [
-        sh:path rcd:hasStatementID ;
-        sh:class rcd:LongIdentifier ;
-        sh:message "Statement identifiers, when present, must be LongIdentifier instances."@en
-    ] ;
-    sh:property [
-        sh:path rcd:hasStatementToken ;
-        sh:class rcd:Vocabulary ;
-        sh:message "Statement tokens, when present, must be Vocabulary instances."@en
-    ] .
+rcd:DefinitionStatementsShape a sh:PropertyShape ;
+    sh:class rcd:Statement ;
+    sh:message "DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:node rcd:StatementShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path rcd:hasStatement .
 
-rcd:VocabularyShape a sh:NodeShape ;
-    sh:targetClass rcd:Vocabulary ;
-    rdfs:label "Vocabulary shape"@en ;
-    skos:definition "Validates that a vocabulary token contains exactly one source and one value."@en ;
-    sh:property [
-        sh:path rcd:vocabularySource ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:minLength 1 ;
-        sh:message "A vocabulary token must have exactly one non-empty source."@en
-    ] ;
-    sh:property [
-        sh:path rcd:vocabularyValue ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:minLength 1 ;
-        sh:message "A vocabulary token must have exactly one non-empty value."@en
-    ] .
+rcd:IdentifierCatalogShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "IdentifierCatalogShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:path rcd:catalog ;
+    sh:pattern "\\S" .
+
+rcd:IdentifierEntryShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:path rcd:entry ;
+    sh:pattern "\\S" .
+
+rcd:MetadataLiteralShape a sh:PropertyShape ;
+    sh:message "MetadataLiteralShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:nodeKind sh:Literal ;
+    sh:path rcd:additionalMetadata .
+
+rcd:MetadataSchemaShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "MetadataSchemaShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minLength 1 ;
+    sh:path rcd:rcdSchema ;
+    sh:pattern "\\S" .
 
 rcd:MetadataShape a sh:NodeShape ;
+    rdfs:label "Metadata block"@en ;
+    sh:class rcd:Metadata ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:not [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Vocabulary ] ) ] ;
+    sh:property rcd:MetadataLiteralShape,
+        rcd:MetadataSchemaShape,
+        rcd:MetadataVersionShape ;
     sh:targetClass rcd:Metadata ;
-    rdfs:label "Metadata shape"@en ;
-    skos:definition "Validates basic constraints over the optional metadata block."@en ;
-    sh:property [
-        sh:path rcd:rcdSchema ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "Metadata may contain at most one rcdSchema value."@en
-    ] ;
-    sh:property [
-        sh:path rcd:rcdSchemaVersion ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "Metadata may contain at most one rcdSchemaVersion value."@en
-    ] ;
-    sh:property [
-        sh:path rcd:additionalMetadata ;
-        sh:message "Additional metadata is intentionally open-ended."@en
-    ] .
+    sh:targetObjectsOf rcd:hasMetadata .
+
+rcd:MetadataVersionShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "MetadataVersionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minLength 1 ;
+    sh:path rcd:rcdSchemaVersion ;
+    sh:pattern "\\S" .
+
+rcd:RCDShape a sh:NodeShape ;
+    rdfs:label "Reusable competency-definition record"@en ;
+    sh:class rcd:RCD ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:not [ sh:or ( [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ] ;
+    sh:property rcd:RecordDefinitionShape,
+        rcd:RecordDescriptionShape,
+        rcd:RecordIdentifierShape,
+        rcd:RecordMetadataShape,
+        rcd:RecordTitleShape ;
+    sh:sparql rcd:UniqueRecordIdentifierConstraint ;
+    sh:targetClass rcd:RCD ;
+    sh:targetSubjectsOf rcd:hasIdentifier,
+        rcd:title .
+
+rcd:RecordDefinitionShape a sh:PropertyShape ;
+    sh:class rcd:Definition ;
+    sh:maxCount 1 ;
+    sh:message "RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:node rcd:DefinitionShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path rcd:hasDefinition .
+
+rcd:RecordDescriptionShape a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
+    sh:message "RecordDescriptionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minLength 1 ;
+    sh:path rcd:description ;
+    sh:pattern "\\S" ;
+    sh:uniqueLang true .
+
+rcd:RecordIdentifierShape a sh:PropertyShape ;
+    sh:class rcd:LongIdentifier ;
+    sh:maxCount 1 ;
+    sh:message "RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:node rcd:LongIdentifierShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path rcd:hasIdentifier .
+
+rcd:RecordMetadataShape a sh:PropertyShape ;
+    sh:class rcd:Metadata ;
+    sh:maxCount 1 ;
+    sh:message "RecordMetadataShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:node rcd:MetadataShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path rcd:hasMetadata .
+
+rcd:RecordTitleShape a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
+    sh:message "RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:path rcd:title ;
+    sh:pattern "\\S" ;
+    sh:uniqueLang true .
+
+rcd:RepresentedCompetenceShape a sh:PropertyShape ;
+    sh:class ontoksd:Competence ;
+    sh:maxCount 1 ;
+    sh:message "RepresentedCompetenceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path ontoksd:representsCompetence .
+
+rcd:SeparateCompetenceRecordConstraint a sh:SPARQLConstraint ;
+    sh:message "The RCD record and the represented competence must be distinct nodes."@en ;
+    sh:select """PREFIX ontoksd: <http://purl.org/ontoksd#>
+SELECT $this WHERE { $this ontoksd:representsCompetence $this . }""" .
+
+rcd:StatementIdentifierShape a sh:PropertyShape ;
+    sh:class rcd:LongIdentifier ;
+    sh:maxCount 1 ;
+    sh:message "StatementIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:node rcd:LongIdentifierShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path rcd:hasStatementID .
+
+rcd:StatementNameShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minLength 1 ;
+    sh:path rcd:statementName ;
+    sh:pattern "\\S" .
+
+rcd:StatementShape a sh:NodeShape ;
+    rdfs:label "Definition statement"@en ;
+    sh:class rcd:Statement ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:not [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ] ;
+    sh:or ( [ sh:property [ sh:minCount 1 ;
+                        sh:path rcd:hasStatementID ] ] [ sh:property [ sh:minCount 1 ;
+                        sh:path rcd:statementName ] ] [ sh:property [ sh:minCount 1 ;
+                        sh:path rcd:statementText ] ] [ sh:property [ sh:minCount 1 ;
+                        sh:path rcd:hasStatementToken ] ] ) ;
+    sh:property rcd:StatementIdentifierShape,
+        rcd:StatementNameShape,
+        rcd:StatementTextShape,
+        rcd:StatementTokenShape ;
+    sh:targetClass rcd:Statement ;
+    sh:targetObjectsOf rcd:hasStatement .
+
+rcd:StatementTextShape a sh:PropertyShape ;
+    sh:datatype rdf:langString ;
+    sh:message "StatementTextShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minLength 1 ;
+    sh:path rcd:statementText ;
+    sh:pattern "\\S" ;
+    sh:uniqueLang true .
+
+rcd:StatementTokenShape a sh:PropertyShape ;
+    sh:class rcd:Vocabulary ;
+    sh:maxCount 1 ;
+    sh:message "StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:node rcd:VocabularyShape ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path rcd:hasStatementToken .
+
+rcd:UniqueRecordIdentifierConstraint a sh:SPARQLConstraint ;
+    sh:message "Another record in the validation graph uses the same catalog and entry."@en ;
+    sh:select """PREFIX rcd: <http://purl.org/ontoksd/rcd#>
+SELECT $this ?other WHERE {
+  $this rcd:hasIdentifier ?identifier .
+  ?identifier rcd:catalog ?catalog ; rcd:entry ?entry .
+  ?other rcd:hasIdentifier ?otherIdentifier .
+  ?otherIdentifier rcd:catalog ?catalog ; rcd:entry ?entry .
+  FILTER(?other != $this)
+}""" .
+
+rcd:VocabularyShape a sh:NodeShape ;
+    rdfs:label "Controlled vocabulary token"@en ;
+    sh:class rcd:Vocabulary ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:not [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Metadata ] ) ] ;
+    sh:property rcd:VocabularySourceShape,
+        rcd:VocabularyValueShape ;
+    sh:targetClass rcd:Vocabulary ;
+    sh:targetObjectsOf rcd:hasStatementToken .
+
+rcd:VocabularySourceShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:path rcd:vocabularySource ;
+    sh:pattern "\\S" .
+
+rcd:VocabularyValueShape a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "VocabularyValueShape: supply values consistent with the profile datatype, cardinality, language, and content constraints."@en ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:path rcd:vocabularyValue ;
+    sh:pattern "\\S" .
+
+rcd:LongIdentifierShape a sh:NodeShape ;
+    rdfs:label "Long identifier"@en ;
+    sh:class rcd:LongIdentifier ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:not [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ] ;
+    sh:property rcd:IdentifierCatalogShape,
+        rcd:IdentifierEntryShape ;
+    sh:targetClass rcd:LongIdentifier ;
+    sh:targetObjectsOf rcd:hasIdentifier,
+        rcd:hasStatementID .
+

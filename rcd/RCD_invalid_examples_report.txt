@@ -1,0 +1,332 @@
+Validation Report
+Conforms: False
+Results (30):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:LongIdentifierShape
+	Focus Node: ex:ID_RCD_Invalid_12
+	Value Node: ex:ID_RCD_Invalid_12
+	Message: Value does not have class rcd:LongIdentifier
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordIdentifierShape
+	Focus Node: ex:RCD_Invalid_12
+	Value Node: ex:ID_RCD_Invalid_12
+	Result Path: rcd:hasIdentifier
+	Message: RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RepresentedCompetenceShape
+	Focus Node: ex:RCD_Invalid_11
+	Result Path: ontoksd:representsCompetence
+	Message: RepresentedCompetenceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:StatementNameShape
+	Focus Node: ex:STMT_RCD_Invalid_10
+	Result Path: rcd:statementName
+	Message: StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:DefinitionStatementsShape
+	Focus Node: ex:DEF_RCD_Invalid_03
+	Result Path: rcd:hasStatement
+	Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:IdentifierEntryShape
+	Focus Node: ex:ID_RCD_Invalid_02
+	Result Path: rcd:entry
+	Message: IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:IdentifierEntryShape
+	Focus Node: ex:ID_RCD_Invalid_12
+	Result Path: rcd:entry
+	Message: IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordTitleShape
+	Focus Node: ex:RCD_Invalid_01
+	Result Path: rcd:title
+	Message: RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:VocabularySourceShape
+	Focus Node: ex:VOC_RCD_Invalid_05
+	Result Path: rcd:vocabularySource
+	Message: VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:DefinitionStatementsShape
+	Focus Node: ex:DEF_RCD_Invalid_04
+	Value Node: ex:STMT_RCD_Invalid_04
+	Result Path: rcd:hasStatement
+	Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:StatementShape
+			Focus Node: ex:STMT_RCD_Invalid_04
+			Value Node: ex:STMT_RCD_Invalid_04
+			Message: Node ex:STMT_RCD_Invalid_04 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:hasStatementID ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:statementName ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:statementText ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:hasStatementToken ] ]
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:DefinitionStatementsShape
+	Focus Node: ex:DEF_RCD_Invalid_05
+	Value Node: ex:STMT_RCD_Invalid_05
+	Result Path: rcd:hasStatement
+	Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:StatementTokenShape
+			Focus Node: ex:STMT_RCD_Invalid_05
+			Value Node: ex:VOC_RCD_Invalid_05
+			Result Path: rcd:hasStatementToken
+			Message: StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+			Details:
+				Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: rcd:VocabularySourceShape
+					Focus Node: ex:VOC_RCD_Invalid_05
+					Result Path: rcd:vocabularySource
+					Message: VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:DefinitionStatementsShape
+	Focus Node: ex:DEF_RCD_Invalid_10
+	Value Node: ex:STMT_RCD_Invalid_10
+	Result Path: rcd:hasStatement
+	Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:StatementNameShape
+			Focus Node: ex:STMT_RCD_Invalid_10
+			Result Path: rcd:statementName
+			Message: StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordDefinitionShape
+	Focus Node: ex:RCD_Invalid_03
+	Value Node: ex:DEF_RCD_Invalid_03
+	Result Path: rcd:hasDefinition
+	Message: RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:DefinitionStatementsShape
+			Focus Node: ex:DEF_RCD_Invalid_03
+			Result Path: rcd:hasStatement
+			Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordDefinitionShape
+	Focus Node: ex:RCD_Invalid_04
+	Value Node: ex:DEF_RCD_Invalid_04
+	Result Path: rcd:hasDefinition
+	Message: RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:DefinitionStatementsShape
+			Focus Node: ex:DEF_RCD_Invalid_04
+			Value Node: ex:STMT_RCD_Invalid_04
+			Result Path: rcd:hasStatement
+			Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+			Details:
+				Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: rcd:StatementShape
+					Focus Node: ex:STMT_RCD_Invalid_04
+					Value Node: ex:STMT_RCD_Invalid_04
+					Message: Node ex:STMT_RCD_Invalid_04 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:hasStatementID ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:statementName ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:statementText ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:hasStatementToken ] ]
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordDefinitionShape
+	Focus Node: ex:RCD_Invalid_05
+	Value Node: ex:DEF_RCD_Invalid_05
+	Result Path: rcd:hasDefinition
+	Message: RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:DefinitionStatementsShape
+			Focus Node: ex:DEF_RCD_Invalid_05
+			Value Node: ex:STMT_RCD_Invalid_05
+			Result Path: rcd:hasStatement
+			Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+			Details:
+				Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: rcd:StatementTokenShape
+					Focus Node: ex:STMT_RCD_Invalid_05
+					Value Node: ex:VOC_RCD_Invalid_05
+					Result Path: rcd:hasStatementToken
+					Message: StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+					Details:
+						Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+							Severity: sh:Violation
+							Source Shape: rcd:VocabularySourceShape
+							Focus Node: ex:VOC_RCD_Invalid_05
+							Result Path: rcd:vocabularySource
+							Message: VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordDefinitionShape
+	Focus Node: ex:RCD_Invalid_10
+	Value Node: ex:DEF_RCD_Invalid_10
+	Result Path: rcd:hasDefinition
+	Message: RecordDefinitionShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:DefinitionStatementsShape
+			Focus Node: ex:DEF_RCD_Invalid_10
+			Value Node: ex:STMT_RCD_Invalid_10
+			Result Path: rcd:hasStatement
+			Message: DefinitionStatementsShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+			Details:
+				Constraint Violation in MaxCountConstraintComponent (http://www.w3.org/ns/shacl#MaxCountConstraintComponent):
+					Severity: sh:Violation
+					Source Shape: rcd:StatementNameShape
+					Focus Node: ex:STMT_RCD_Invalid_10
+					Result Path: rcd:statementName
+					Message: StatementNameShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordIdentifierShape
+	Focus Node: ex:RCD_Invalid_02
+	Value Node: ex:ID_RCD_Invalid_02
+	Result Path: rcd:hasIdentifier
+	Message: RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:IdentifierEntryShape
+			Focus Node: ex:ID_RCD_Invalid_02
+			Result Path: rcd:entry
+			Message: IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordIdentifierShape
+	Focus Node: ex:RCD_Invalid_12
+	Value Node: ex:ID_RCD_Invalid_12
+	Result Path: rcd:hasIdentifier
+	Message: RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:LongIdentifierShape
+			Focus Node: ex:ID_RCD_Invalid_12
+			Value Node: ex:ID_RCD_Invalid_12
+			Message: Value does not have class rcd:LongIdentifier
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:IdentifierEntryShape
+			Focus Node: ex:ID_RCD_Invalid_12
+			Result Path: rcd:entry
+			Message: IdentifierEntryShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordIdentifierShape
+	Focus Node: ex:RCD_Invalid_14
+	Value Node: ex:ID_RCD_Invalid_14
+	Result Path: rcd:hasIdentifier
+	Message: RecordIdentifierShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in NotConstraintComponent (http://www.w3.org/ns/shacl#NotConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:LongIdentifierShape
+			Focus Node: ex:ID_RCD_Invalid_14
+			Value Node: ex:ID_RCD_Invalid_14
+			Message: Node ex:ID_RCD_Invalid_14 must not conform to shape [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ]
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordMetadataShape
+	Focus Node: ex:RCD_Invalid_08
+	Value Node: ex:META_RCD_Invalid_08
+	Result Path: rcd:hasMetadata
+	Message: RecordMetadataShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:MetadataLiteralShape
+			Focus Node: ex:META_RCD_Invalid_08
+			Value Node: <https://example.org/metadata/resource>
+			Result Path: rcd:additionalMetadata
+			Message: MetadataLiteralShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeConstraintComponent (http://www.w3.org/ns/shacl#NodeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:StatementTokenShape
+	Focus Node: ex:STMT_RCD_Invalid_05
+	Value Node: ex:VOC_RCD_Invalid_05
+	Result Path: rcd:hasStatementToken
+	Message: StatementTokenShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+	Details:
+		Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+			Severity: sh:Violation
+			Source Shape: rcd:VocabularySourceShape
+			Focus Node: ex:VOC_RCD_Invalid_05
+			Result Path: rcd:vocabularySource
+			Message: VocabularySourceShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:MetadataLiteralShape
+	Focus Node: ex:META_RCD_Invalid_08
+	Value Node: <https://example.org/metadata/resource>
+	Result Path: rcd:additionalMetadata
+	Message: MetadataLiteralShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in NotConstraintComponent (http://www.w3.org/ns/shacl#NotConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:LongIdentifierShape
+	Focus Node: ex:ID_RCD_Invalid_14
+	Value Node: ex:ID_RCD_Invalid_14
+	Message: Node ex:ID_RCD_Invalid_14 must not conform to shape [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:Vocabulary ] [ sh:class rcd:Metadata ] ) ]
+Constraint Violation in NotConstraintComponent (http://www.w3.org/ns/shacl#NotConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:MetadataShape
+	Focus Node: ex:ID_RCD_Invalid_14
+	Value Node: ex:ID_RCD_Invalid_14
+	Message: Node ex:ID_RCD_Invalid_14 must not conform to shape [ sh:or ( [ sh:class rcd:RCD ] [ sh:class rcd:Definition ] [ sh:class rcd:Statement ] [ sh:class rcd:LongIdentifier ] [ sh:class rcd:Vocabulary ] ) ]
+Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:StatementShape
+	Focus Node: ex:STMT_RCD_Invalid_04
+	Value Node: ex:STMT_RCD_Invalid_04
+	Message: Node ex:STMT_RCD_Invalid_04 must conform to one or more shapes in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:hasStatementID ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:statementName ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:statementText ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path rcd:hasStatementToken ] ]
+Constraint Violation in PatternConstraintComponent (http://www.w3.org/ns/shacl#PatternConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordTitleShape
+	Focus Node: ex:RCD_Invalid_06
+	Value Node: Literal("   ", lang=en)
+	Result Path: rcd:title
+	Message: RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:OntoKSDRCDShape
+	Focus Node: ex:RCD_Invalid_13
+	Value Node: ex:RCD_Invalid_13
+	Source Constraint: rcd:SeparateCompetenceRecordConstraint
+	Message: The RCD record and the represented competence must be distinct nodes.
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RCDShape
+	Focus Node: ex:RCD_Invalid_09_A
+	Value Node: ex:RCD_Invalid_09_A
+	Source Constraint: rcd:UniqueRecordIdentifierConstraint
+	Message: Another record in the validation graph uses the same catalog and entry.
+Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RCDShape
+	Focus Node: ex:RCD_Invalid_09_B
+	Value Node: ex:RCD_Invalid_09_B
+	Source Constraint: rcd:UniqueRecordIdentifierConstraint
+	Message: Another record in the validation graph uses the same catalog and entry.
+Constraint Violation in UniqueLangConstraintComponent (http://www.w3.org/ns/shacl#UniqueLangConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: rcd:RecordTitleShape
+	Focus Node: ex:RCD_Invalid_07
+	Result Path: rcd:title
+	Message: RecordTitleShape: supply values consistent with the profile datatype, cardinality, language, and content constraints.

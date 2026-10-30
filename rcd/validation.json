@@ -1,0 +1,255 @@
+{
+  "checks_passed": 41,
+  "checks": [
+    {
+      "check": "Positive examples conform; shapes pass Meta-SHACL",
+      "passed": true
+    },
+    {
+      "check": "Negative fixture graph does not conform",
+      "passed": true
+    },
+    {
+      "check": "Positive case 1",
+      "passed": true
+    },
+    {
+      "check": "Positive case 2",
+      "passed": true
+    },
+    {
+      "check": "Positive case 3",
+      "passed": true
+    },
+    {
+      "check": "Positive case 4",
+      "passed": true
+    },
+    {
+      "check": "Negative case 1 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 1 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 2 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 2 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 3 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 3 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 4 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 4 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 5 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 5 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 6 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 6 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 7 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 7 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 8 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 8 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 9 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 9 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 10 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 10 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 11 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 11 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 12 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 12 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 13 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 13 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Negative case 14 rejected",
+      "passed": true
+    },
+    {
+      "check": "Negative case 14 expected constraint found",
+      "passed": true
+    },
+    {
+      "check": "Additional metadata IRI rejected",
+      "passed": true
+    },
+    {
+      "check": "Malformed optional statement field rejected despite valid text",
+      "passed": true
+    },
+    {
+      "check": "Positive examples conform with OntoKSD schema loaded",
+      "passed": true
+    },
+    {
+      "check": "No explicit class-disjointness conflict in positive OWL RL closure",
+      "passed": true
+    },
+    {
+      "check": "OntoKSD hasRCD inverse resolves to represented competence",
+      "passed": true
+    },
+    {
+      "check": "Positive and negative record IRIs do not overlap",
+      "passed": true
+    },
+    {
+      "check": "Base profile does not introduce circular OntoKSD imports",
+      "passed": true
+    }
+  ],
+  "positive_records": 4,
+  "negative_cases": 14,
+  "negative_records": 15,
+  "cases": [
+    {
+      "case": 1,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent"
+    },
+    {
+      "case": 2,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent"
+    },
+    {
+      "case": 3,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent"
+    },
+    {
+      "case": 4,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#OrConstraintComponent"
+    },
+    {
+      "case": 5,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent"
+    },
+    {
+      "case": 6,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#PatternConstraintComponent"
+    },
+    {
+      "case": 7,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#UniqueLangConstraintComponent"
+    },
+    {
+      "case": 8,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#NodeKindConstraintComponent"
+    },
+    {
+      "case": 9,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent"
+    },
+    {
+      "case": 10,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent"
+    },
+    {
+      "case": 11,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent"
+    },
+    {
+      "case": 12,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent"
+    },
+    {
+      "case": 13,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent"
+    },
+    {
+      "case": 14,
+      "conforms": false,
+      "expected_component": "http://www.w3.org/ns/shacl#NotConstraintComponent"
+    }
+  ],
+  "owl_disjointness_conflicts": [],
+  "limits": [
+    "SHACL validates this project profile, not complete IEEE or XML conformance.",
+    "No HermiT/Pellet execution.",
+    "No global identifier-registry uniqueness check.",
+    "Full OWL-import closure was not fetched; available local OntoKSD schema was used."
+  ],
+  "environment": {
+    "pyshacl": "0.40.2",
+    "rdflib": "7.6.0"
+  }
+}

@@ -1,46 +1,141 @@
+TESTES DO PERFIL RCD NO PROTÉGÉ E EM SHACL
 
-1. Carregar a ontologia revisada: RCD.ttl
+1. ARQUIVOS E FINALIDADES
 
-2. Verificar com os raciocinadores as restrições lógicas:
-	a. classes RCD, Definition, Statement, LongIdentifier, Vocabulary, Metadata
-	b. propriedades e restrições
-	c. anotações rdfs:label e skos:definition
+RCD.ttl: classes, propriedades e restrições OWL do perfil.
+RCD_examples.ttl: quatro exemplos positivos.
+RCD_invalid_examples.ttl: casos negativos intencionais para validação.
+RCD_shapes.ttl: formas SHACL Core e SHACL-SPARQL.
+catalog-v001.xml: associação local entre o IRI da ontologia RCD e RCD.ttl.
 
+Mantenha os arquivos na mesma pasta. O catálogo pode ser usado pelo
+resolvedor de imports do Protégé para o IRI http://purl.org/ontoksd/rcd.
+Se o import não for resolvido, associe esse IRI ao arquivo local na
+configuração de imports da instalação. O catálogo cobre apenas o módulo
+RCD; os demais imports da OntoKSD precisam de suas próprias resoluções.
 
-3. Importar os exemplos em RCD_examples.ttl como ontologia adicional.
-	a. Verificar com os raciocinadores
+2. INSPEÇÃO DO MODELO OWL
 
+Abra RCD.ttl e examine RCD, Definition, Statement, LongIdentifier,
+Vocabulary e Metadata. As classes representam tipos distintos de
+registros estruturais e são disjuntas neste perfil.
 
+Confira, em particular:
+- RCD: exatamente um identificador, pelo menos um título, no máximo uma
+  definição estruturada e um bloco de metadados;
+- Definition: pelo menos um Statement e no máximo um modelSource;
+- LongIdentifier: exatamente um catalog e um entry;
+- Vocabulary: exatamente uma fonte e um valor;
+- Statement: pelo menos um dos campos ID, nome, texto ou token; no máximo
+  um ID, um nome e um token. Textos podem ocorrer em idiomas diferentes.
 
-3. Importar as shapes SHACL em RCD_shapes.ttl para validação operacional das instâncias
+Essas são as escolhas deste perfil RDF/OWL. Sua inspeção não demonstra
+conformidade integral com a norma IEEE ou com um formato XML externo.
 
+3. TESTE LÓGICO COM EXEMPLOS POSITIVOS
 
-4. Rodar os raciociadores e observar:
+Carregue os dados de RCD_examples.ttl em uma ontologia de teste que tenha
+acesso a RCD.ttl. Use somente os exemplos positivos nessa etapa.
 
-	a. se a ontologia permanece consistente;
-	b. se as restrições em RCD, Definition, LongIdentifier e Vocabulary não introduzem incoerências;
-	c. se os indivíduos inválidos por cardinalidade forte aparecem como problemáticos no raciocínio lógico.
+Execute o raciocinador disponível na sua instalação, por exemplo HermiT
+ou Pellet, e examine a consistência e as classificações. Para interpretar
+integralmente RCD_Valid_03, carregue também a OntoKSD, que define
+OntoKSDRCD, Competence, hasRCD e representsCompetence.
 
-Em especial:
+RCD_Valid_01: registro com título multilíngue, definição e metadados.
+RCD_Valid_02: registro mínimo com título e identificador.
+RCD_Valid_03: representação documental de uma Competence da OntoKSD.
+RCD_Valid_04: Statement contendo somente o nome; permitido pelo perfil.
 
- - RCD_Invalid_02 pode gerar problema por LongIdentifier incompleto.
- - RCD_Invalid_03 pode gerar problema por Definition sem Statement.
- - RCD_Invalid_04 tende a depender mais de SHACL do que apenas de OWL.
+Na entrega, os exemplos passaram por SHACL e por verificações de
+disjunção após fechamento OWL RL. HermiT e Pellet não foram executados
+automaticamente; esse teste deve ser realizado no ambiente do usuário.
 
+4. O QUE O RACIOCINADOR NÃO DEVE SER USADO PARA TESTAR
 
+A ausência de uma afirmação obrigatória nos dados NÃO implica, por si
+só, inconsistência OWL. Sob mundo aberto, um título, entry ou Statement
+exigido pode existir sem ter sido explicitamente registrado.
 
-5. Rodar a funcionalidade de validação SHACL disponível no Protégé (PlugIn opcional - instalar). Com isto, deve-se verifica conformidade de instâncias, detectar ausência de campos esperados e capturar regras práticas que o OWL não expressa tão bem.
+Assim, os casos negativos 01, 02 e 03 não devem ser considerados testes
+de inconsistência apenas por faltar title, entry ou hasStatement.
 
-a. Validação esperada:
+Além disso, dois IRIs de objetos não são automaticamente indivíduos
+distintos em OWL. Uma cardinalidade máxima sobre objetos pode permitir
+que sejam interpretados como o mesmo indivíduo. SHACL, por sua vez,
+conta os nós presentes nos dados. O caso 11 ilustra essa distinção.
 
-	- RCD_Valid_01 deve passar
-	- RCD_Invalid_01 deve falhar por falta de title
-	- RCD_Invalid_02 deve falhar por falta de entry
-	- RCD_Invalid_03 deve falhar por falta de Statement
-	- RCD_Invalid_04 deve falhar porque o Statement está vazio
-	- RCD_Invalid_05 deve falhar porque Vocabulary não tem vocabularySource
+Valores literais distintos onde só um é permitido podem produzir uma
+contradição lógica. O caso 10 contém dois nomes distintos para o mesmo
+Statement. Não carregue todo o arquivo negativo esperando consistência:
+ele contém erros intencionais de diferentes naturezas.
 
+5. EXECUÇÃO DE SHACL
 
+Carregar RCD_shapes.ttl como uma ontologia OWL não executa validação
+SHACL. Use um processador SHACL que suporte Core e SPARQL.
 
+Se sua instalação do Protégé disponibiliza uma extensão SHACL, informe
+separadamente o grafo de dados, o grafo de formas e o esquema RCD.
+O caminho de interface depende da extensão instalada.
 
+Alternativa reproduzível com pySHACL, executada na pasta dos arquivos:
 
+python -m pip install pyshacl
+
+python -m pyshacl -s RCD_shapes.ttl -e RCD.ttl -i none -m -f human RCD_examples.ttl
+
+Resultado esperado: Conforms: True; código de saída 0.
+
+python -m pyshacl -s RCD_shapes.ttl -e RCD.ttl -i none -m -f human RCD_invalid_examples.ttl
+
+Resultado esperado: Conforms: False; código de saída 1.
+Nesse segundo comando, a não conformidade é o resultado esperado do
+teste, não uma falha do processador.
+
+Use os dois arquivos de dados separadamente. Se forem unidos, o grafo
+como um todo não será conforme, mesmo contendo exemplos positivos.
+O processamento sem inferência verifica os dados explicitamente
+fornecidos e evita confundir inferências de domínio com completude dos
+registros. A opção -m verifica também a estrutura das formas.
+
+6. RESULTADOS NEGATIVOS ESPERADOS
+
+01: título ausente.
+02: entry ausente no identificador.
+03: definição sem Statement.
+04: Statement sem nenhum dos quatro campos admitidos.
+05: Vocabulary sem vocabularySource.
+06: título composto apenas de espaços.
+07: dois títulos diferentes no mesmo idioma.
+08: additionalMetadata é um IRI em vez de literal.
+09: dois registros usam o mesmo par catalog/entry. Os registros A e B
+    devem ser validados juntos para que a duplicidade seja detectável.
+10: mais de um statementName.
+11: OntoKSDRCD aponta diretamente para duas competências.
+12: identificador aninhado sem tipo e sem entry.
+13: registro RCD aponta para si mesmo como competência representada.
+14: mesmo componente tipado como LongIdentifier e Metadata, tipos
+    disjuntos neste perfil.
+
+São 14 casos e 15 registros negativos, pois o caso 09 usa dois registros.
+
+O relatório pode mostrar falhas no registro RCD e nos componentes
+aninhados. Não use um número fixo de mensagens como critério de sucesso:
+verifique conformidade, nó de foco, caminho e restrição violada.
+
+7. INTERPRETAÇÃO DOS RESULTADOS
+
+Consistência OWL: verifica a compatibilidade lógica dos axiomas.
+Conformidade SHACL: verifica as condições deste perfil no grafo de dados.
+Conformidade de intercâmbio: exige mapeamento e validação específicos do
+formato e da norma adotados pelo sistema receptor.
+
+Uma dessas verificações não substitui automaticamente as outras.
+A unicidade catalog/entry é verificada somente no grafo apresentado ao
+validador; não certifica unicidade em um registro global.
+
+Referências técnicas:
+https://www.w3.org/TR/owl2-primer/
+https://www.w3.org/TR/shacl/
+https://standards.ieee.org/ieee/1484.20.1/4012/

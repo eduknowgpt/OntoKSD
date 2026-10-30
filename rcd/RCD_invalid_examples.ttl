@@ -1,0 +1,164 @@
+@prefix ex: <http://purl.org/ontoksd/rcd/examples#> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
+@prefix rcd: <http://purl.org/ontoksd/rcd#> .
+
+ex:RCD_Invalid_01 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_01 .
+
+ex:RCD_Invalid_02 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_02 ;
+    rcd:title "Analyze algorithmic complexity"@en .
+
+ex:RCD_Invalid_03 a rcd:RCD ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_03 ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_03 ;
+    rcd:title "Explain stack operations"@en .
+
+ex:RCD_Invalid_04 a rcd:RCD ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_04 ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_04 ;
+    rcd:title "Use recursion to solve problems"@en .
+
+ex:RCD_Invalid_05 a rcd:RCD ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_05 ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_05 ;
+    rcd:title "Apply normalization rules in databases"@en .
+
+ex:RCD_Invalid_06 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_06 ;
+    rcd:title "   "@en .
+
+ex:RCD_Invalid_07 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_07 ;
+    rcd:title "First English title"@en,
+        "Second English title"@en .
+
+ex:RCD_Invalid_08 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_08 ;
+    rcd:hasMetadata ex:META_RCD_Invalid_08 ;
+    rcd:title "Metadata test"@en .
+
+ex:RCD_Invalid_09_A a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_09_A ;
+    rcd:title "Duplicate identifier test"@en .
+
+ex:RCD_Invalid_09_B a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_09_B ;
+    rcd:title "Duplicate identifier test"@en .
+
+ex:RCD_Invalid_10 a rcd:RCD ;
+    rcd:hasDefinition ex:DEF_RCD_Invalid_10 ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_10 ;
+    rcd:title "Statement multiplicity test"@en .
+
+ex:RCD_Invalid_11 a ontoksd:OntoKSDRCD,
+        rcd:RCD ;
+    ontoksd:representsCompetence ex:Competence_Invalid_11_A,
+        ex:Competence_Invalid_11_B ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_11 ;
+    rcd:title "Ambiguous competence mapping"@en .
+
+ex:RCD_Invalid_12 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_12 ;
+    rcd:title "Untyped incomplete identifier"@en .
+
+ex:RCD_Invalid_14 a rcd:RCD ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_14 ;
+    rcd:title "Conflicting component types"@en .
+
+ex:Competence_Invalid_11_A a ontoksd:Competence .
+
+ex:Competence_Invalid_11_B a ontoksd:Competence .
+
+ex:DEF_RCD_Invalid_03 a rcd:Definition .
+
+ex:DEF_RCD_Invalid_04 a rcd:Definition ;
+    rcd:hasStatement ex:STMT_RCD_Invalid_04 .
+
+ex:DEF_RCD_Invalid_05 a rcd:Definition ;
+    rcd:hasStatement ex:STMT_RCD_Invalid_05 .
+
+ex:DEF_RCD_Invalid_10 a rcd:Definition ;
+    rcd:hasStatement ex:STMT_RCD_Invalid_10 .
+
+ex:ID_RCD_Invalid_01 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "c2aab5df-3018-494d-9b63-0e94a9f52001" .
+
+ex:ID_RCD_Invalid_02 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" .
+
+ex:ID_RCD_Invalid_03 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "f8e66f7c-b3ef-445a-b611-f3a294ca3003" .
+
+ex:ID_RCD_Invalid_04 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "a9d7f5ea-b7ff-4980-9e54-38d0db580004" .
+
+ex:ID_RCD_Invalid_05 a rcd:LongIdentifier ;
+    rcd:catalog "urn:uuid" ;
+    rcd:entry "b5ea2614-2c1f-4717-a1fc-5d5d66385005" .
+
+ex:ID_RCD_Invalid_06 a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/blank-title" .
+
+ex:ID_RCD_Invalid_07 a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/duplicate-language" .
+
+ex:ID_RCD_Invalid_08 a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/metadata-node" .
+
+ex:ID_RCD_Invalid_09_A a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/shared-record-identifier" .
+
+ex:ID_RCD_Invalid_09_B a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/shared-record-identifier" .
+
+ex:ID_RCD_Invalid_10 a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/two-statement-names" .
+
+ex:ID_RCD_Invalid_11 a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/two-competences" .
+
+ex:ID_RCD_Invalid_12 rcd:catalog "URI" .
+
+ex:ID_RCD_Invalid_13 a rcd:LongIdentifier ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/self-mapping" .
+
+ex:ID_RCD_Invalid_14 a rcd:LongIdentifier,
+        rcd:Metadata ;
+    rcd:catalog "URI" ;
+    rcd:entry "https://example.org/rcd/conflicting-types" .
+
+ex:META_RCD_Invalid_08 a rcd:Metadata ;
+    rcd:additionalMetadata <https://example.org/metadata/resource> .
+
+ex:RCD_Invalid_13 a ontoksd:Competence,
+        ontoksd:OntoKSDRCD,
+        rcd:RCD ;
+    ontoksd:representsCompetence ex:RCD_Invalid_13 ;
+    rcd:hasIdentifier ex:ID_RCD_Invalid_13 ;
+    rcd:title "Self mapping"@en .
+
+ex:STMT_RCD_Invalid_04 a rcd:Statement .
+
+ex:STMT_RCD_Invalid_05 a rcd:Statement ;
+    rcd:hasStatementToken ex:VOC_RCD_Invalid_05 ;
+    rcd:statementName "criterion" .
+
+ex:STMT_RCD_Invalid_10 a rcd:Statement ;
+    rcd:statementName "condition",
+        "criterion" .
+
+ex:VOC_RCD_Invalid_05 a rcd:Vocabulary ;
+    rcd:vocabularyValue "third-normal-form" .
+
