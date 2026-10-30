@@ -1,0 +1,10 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?option ?field ?value ?description
+WHERE {
+ ?option a prov:Entity ; dcterms:identifier ?field ;
+  dcterms:references ?value ; dcterms:description ?description ;
+  dcterms:relation ?activation .
+ ?activation a ontoksd:CompetenceActivation .
+} ORDER BY ?option ?value

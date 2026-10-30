@@ -1,0 +1,11 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?scheme ?score ?level
+WHERE {
+ VALUES ?scheme { ontoksd:PS_Task201 ontoksd:SecondCycle_ProficiencyScheme }
+ VALUES ?score { 0.0 5.0 6.0 6.70 7.0 9.0 10.0 }
+ ?scheme ontoksd:definesInterval ?interval .
+ ?interval ontoksd:lowerBound ?lo ; ontoksd:upperBound ?hi ;
+  ontoksd:includesLower ?il ; ontoksd:includesUpper ?iu ; ontoksd:correspondsToLevel ?level .
+ FILTER((?score > ?lo || (?il && ?score = ?lo)) && (?score < ?hi || (?iu && ?score = ?hi)))
+} ORDER BY ?scheme ?score

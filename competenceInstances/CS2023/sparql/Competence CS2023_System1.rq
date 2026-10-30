@@ -1,0 +1,131 @@
+# CS2023 Systems1; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems1_AR_Heterogeneity_3_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "AR-Heterogeneity × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_AR_Heterogeneity ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems1 ;
+    rdfs:comment "Local knowledge–level assignment for Systems1: AR-Heterogeneity at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "AR-Heterogeneity × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems1 .
+
+cs2023c:KS_Systems1_PDC_Programs_3_e_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "PDC-Programs × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_PDC_Programs ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems1 ;
+    rdfs:comment "Local knowledge–level assignment for Systems1: PDC-Programs at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "PDC-Programs × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems1 .
+
+cs2023c:KS_Systems1_SF_Design_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Design × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SF_Design ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems1 ;
+    rdfs:comment "Local knowledge–level assignment for Systems1: SF-Design at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SF-Design × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems1 .
+
+cs2023c:TaskActivity_Systems1_Accelerate a ontoksd:TaskActivity ;
+    rdfs:label "accelerate"@en ;
+    rdfs:comment "Task activity capturing the use of heterogeneous hardware to improve application performance."@en ;
+    skos:prefLabel "accelerate"@en .
+
+cs2023c:TaskActivity_Systems1_Adapt a ontoksd:TaskActivity ;
+    rdfs:label "adapt"@en ;
+    rdfs:comment "Task activity capturing the adaptation of a CPU-based application for execution on a hardware accelerator."@en ;
+    skos:prefLabel "adapt"@en .
+
+cs2023c:TaskActivity_Systems1_Develop a ontoksd:TaskActivity ;
+    rdfs:label "develop"@en ;
+    rdfs:comment "Task activity capturing the development of an accelerator-ready version of the application."@en ;
+    skos:prefLabel "develop"@en .
+
+cs2023c:TaskActivity_Systems1_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluation of the speed-up achieved by the accelerated version of the application."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskComponent_Systems1_AcceleratedApplicationVersion a ontoksd:TaskComponent ;
+    rdfs:label "accelerated version of the application"@en ;
+    rdfs:comment "Task component corresponding to the new version of the application adapted to run on a hardware accelerator."@en ;
+    skos:prefLabel "accelerated version of the application"@en .
+
+cs2023c:TaskComponent_Systems1_CPUBasedApplication a ontoksd:TaskComponent ;
+    rdfs:label "CPU-based application"@en ;
+    rdfs:comment "Task component corresponding to the original application designed to run on a CPU."@en ;
+    skos:prefLabel "CPU-based application"@en .
+
+cs2023c:TaskConstraint_Systems1_CodeSpeedup a ontoksd:TaskConstraint ;
+    rdfs:label "with evaluation of the achieved code speed-up"@en ;
+    rdfs:comment "Task constraint stating that the task includes judging the performance gain obtained by the accelerated application."@en ;
+    skos:prefLabel "with evaluation of the achieved code speed-up"@en .
+
+cs2023c:TaskConstraint_Systems1_HardwareAccelerator a ontoksd:TaskConstraint ;
+    rdfs:label "to run on a hardware accelerator (GPU, TPU, NPU)"@en ;
+    rdfs:comment "Task constraint stating that the developed version of the application must target a hardware accelerator such as a GPU, TPU, or NPU."@en ;
+    skos:prefLabel "to run on a hardware accelerator (GPU, TPU, NPU)"@en .
+
+cs2023c:Task_Systems1 a ontoksd:Task ;
+    rdfs:label "Systems1 task"@en ;
+    dcterms:identifier "Task_Systems1"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems1_Accelerate,
+        cs2023c:TaskActivity_Systems1_Adapt,
+        cs2023c:TaskActivity_Systems1_Develop,
+        cs2023c:TaskActivity_Systems1_Evaluate ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems1_AcceleratedApplicationVersion,
+        cs2023c:TaskComponent_Systems1_CPUBasedApplication ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems1_CodeSpeedup,
+        cs2023c:TaskConstraint_Systems1_HardwareAccelerator ;
+    ontoksd:hasTaskStatement "Develop a version of a CPU-based application to run on a hardware accelerator (GPU, TPU, NPU)."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems1 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems1. The task concerns adapting a CPU-based application to execute on a hardware accelerator and evaluating the resulting speed-up."@en ;
+    skos:prefLabel "Systems1 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems1 .
+
+cs2023c:Competence_Systems1 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply knowledge from systems design to accelerate an application code and evaluate the code speed-up"@en ;
+    dcterms:identifier "Systems1"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems1_AR_Heterogeneity_3_Develop,
+        cs2023c:KS_Systems1_PDC_Programs_3_e_Develop,
+        cs2023c:KS_Systems1_SF_Design_1_Evaluate ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems1 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems1. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Apply knowledge from systems design to accelerate an application code and evaluate the code speed-up."@en ;
+    skos:prefLabel "Apply knowledge from systems design to accelerate an application code and evaluate the code speed-up"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems1 .
+
+cs2023c:Source_Systems1 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems1, starting on printed page 400."@en ;
+    dcterms:description "Task: Develop a version of a CPU-based application to run on a hardware accelerator (GPU, TPU, NPU). Competency statement: Apply knowledge from systems design to accelerate an application code and evaluate the code speed-up. Required knowledge: AR-Heterogeneity, PDC-Programs, SF-Design. Required skills: Evaluate, Develop. Desirable professional dispositions: Meticulous, Inventive."@en ;
+    dcterms:identifier "Systems1" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_AR_Heterogeneity,
+        cs2023:KU_PDC_Programs,
+        cs2023:KU_SF_Design,
+        level:Develop,
+        level:Evaluate .
+}

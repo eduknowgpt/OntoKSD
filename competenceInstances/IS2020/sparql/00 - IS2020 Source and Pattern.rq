@@ -1,0 +1,23 @@
+# Shared IS2020 documentary source and controlled specification pattern.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+INSERT DATA {
+is2020:IS2020Document a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020, December 2020, Appendix 3 – Competencies, Knowledge-Skill Pairs and Dispositions by Competency Area."@en ;
+    dcterms:title "IS2020: A Competency Model for Undergraduate Programs in Information Systems"@en .
+
+is2020:IS2020SpecificationPattern a ontoksd:SpecificationPattern,
+        owl:NamedIndividual ;
+    rdfs:label "IS2020 Knowledge–Skill Pair and Disposition Pattern"@en ;
+    rdfs:comment "Controlled pattern value for IS2020 Appendix 3 specifications using explicit knowledge–Bloom-level pairs and source-listed key dispositions. This value does not classify a competence as CC2020Competence or impose a separate Task. Missing source dispositions remain unspecified; this pattern value alone is not an OWL definition of structural completeness."@en ;
+    owl:differentFrom ontoksd:CC2020SpecificationPattern,
+        ontoksd:CS2023SpecificationPattern,
+        ontoksd:KSASpecificationPattern,
+        ontoksd:KSSpecificationPattern .
+}

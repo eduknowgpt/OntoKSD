@@ -1,0 +1,155 @@
+# CS2023 Applications7; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Applications7_SEP_Communication_1_Explain a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Communication × Explain"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Communication ;
+    ontoksd:hasSkillLevel level:Explain ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications7 ;
+    rdfs:comment "Local knowledge–level assignment for Applications7: SEP-Communication at Explain. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Communication × Explain"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications7 .
+
+cs2023c:KS_Applications7_SEP_DEIA_1_Explain a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-DEIA × Explain"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_DEIA ;
+    ontoksd:hasSkillLevel level:Explain ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications7 ;
+    rdfs:comment "Local knowledge–level assignment for Applications7: SEP-DEIA at Explain. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-DEIA × Explain"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications7 .
+
+cs2023c:KS_Applications7_SEP_IP_1_Explain a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-IP × Explain"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_IP ;
+    ontoksd:hasSkillLevel level:Explain ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications7 ;
+    rdfs:comment "Local knowledge–level assignment for Applications7: SEP-IP at Explain. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-IP × Explain"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications7 .
+
+cs2023c:KS_Applications7_SEP_Privacy_1_Explain a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Privacy × Explain"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Privacy ;
+    ontoksd:hasSkillLevel level:Explain ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications7 ;
+    rdfs:comment "Local knowledge–level assignment for Applications7: SEP-Privacy at Explain. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Privacy × Explain"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications7 .
+
+cs2023c:KS_Applications7_SEP_Professional_Ethics_1_Explain a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Professional-Ethics × Explain"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Professional_Ethics ;
+    ontoksd:hasSkillLevel level:Explain ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications7 ;
+    rdfs:comment "Local knowledge–level assignment for Applications7: SEP-Professional-Ethics at Explain. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Professional-Ethics × Explain"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications7 .
+
+cs2023c:TaskActivity_Applications7_Document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en ;
+    rdfs:comment "Task activity capturing the documentation of the professional implications associated with release of the service, software, or product."@en ;
+    skos:prefLabel "document"@en .
+
+cs2023c:TaskActivity_Applications7_Explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en ;
+    rdfs:comment "Task activity capturing the explanation of accountability, responsibility, liability, and related professional implications."@en ;
+    skos:prefLabel "explain"@en .
+
+cs2023c:TaskActivity_Applications7_Gather a ontoksd:TaskActivity ;
+    rdfs:label "gather"@en ;
+    rdfs:comment "Task activity capturing the gathering of relevant information concerning accountability, responsibility, and liability."@en ;
+    skos:prefLabel "gather"@en .
+
+cs2023c:TaskActivity_Applications7_Present a ontoksd:TaskActivity ;
+    rdfs:label "present"@en ;
+    rdfs:comment "Task activity capturing the presentation of the gathered information in a coherent and actionable manner."@en ;
+    skos:prefLabel "present"@en .
+
+cs2023c:TaskComponent_Applications7_ProfessionalImplicationsDocumentation a ontoksd:TaskComponent ;
+    rdfs:label "documentation of professional implications"@en ;
+    rdfs:comment "Task component corresponding to the organized documentation that presents accountability, responsibility, and liability implications for the producing company."@en ;
+    skos:prefLabel "documentation of professional implications"@en .
+
+cs2023c:TaskComponent_Applications7_ServiceSoftwareProduct a ontoksd:TaskComponent ;
+    rdfs:label "service/software/product"@en ;
+    rdfs:comment "Task component corresponding to the service, software, or product whose professional implications are to be documented."@en ;
+    skos:prefLabel "service/software/product"@en .
+
+cs2023c:TaskConstraint_Applications7_CoherentActionablePresentation a ontoksd:TaskConstraint ;
+    rdfs:label "presented in a coherent and actionable manner"@en ;
+    rdfs:comment "Task constraint stating that the resulting documentation must be coherent, practically useful, and oriented toward action."@en ;
+    skos:prefLabel "presented in a coherent and actionable manner"@en .
+
+cs2023c:TaskConstraint_Applications7_CompanyRelease a ontoksd:TaskConstraint ;
+    rdfs:label "when releasing a service/software/product"@en ;
+    rdfs:comment "Task constraint stating that the analysis must concern the implications assumed by a company when releasing a service, software product, or other product."@en ;
+    skos:prefLabel "when releasing a service/software/product"@en .
+
+cs2023c:Task_Applications7 a ontoksd:Task ;
+    rdfs:label "Applications7 task"@en ;
+    dcterms:identifier "Task_Applications7"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Applications7_Document,
+        cs2023c:TaskActivity_Applications7_Explain,
+        cs2023c:TaskActivity_Applications7_Gather,
+        cs2023c:TaskActivity_Applications7_Present ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Applications7_ProfessionalImplicationsDocumentation,
+        cs2023c:TaskComponent_Applications7_ServiceSoftwareProduct ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Applications7_CoherentActionablePresentation,
+        cs2023c:TaskConstraint_Applications7_CompanyRelease ;
+    ontoksd:hasTaskStatement "Document the professional implications of a service/software/product for the company that produced it."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Applications7 ;
+    rdfs:comment "Specification-level task associated with Competence_Applications7. The task concerns gathering and organizing information about accountability, responsibility, and liability assumed by a company when releasing a service, software system, or product, and presenting that information in a coherent and actionable manner."@en ;
+    skos:prefLabel "Applications7 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications7 .
+
+cs2023c:Competence_Applications7 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Gather information regarding accountability, responsibility and liability assumed by a company when releasing a service/software/product and present it in a coherent and actionable manner"@en ;
+    dcterms:identifier "Applications7"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Applications7_SEP_Communication_1_Explain,
+        cs2023c:KS_Applications7_SEP_DEIA_1_Explain,
+        cs2023c:KS_Applications7_SEP_IP_1_Explain,
+        cs2023c:KS_Applications7_SEP_Privacy_1_Explain,
+        cs2023c:KS_Applications7_SEP_Professional_Ethics_1_Explain ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Applications7 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Applications7. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Gather information regarding accountability, responsibility and liability assumed by a company when releasing a service/software/product and present it in a coherent and actionable manner."@en ;
+    skos:prefLabel "Gather information regarding accountability, responsibility and liability assumed by a company when releasing a service/software/product and present it in a coherent and actionable manner"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Applications7 .
+
+cs2023c:Source_Applications7 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Applications7, starting on printed page 405."@en ;
+    dcterms:description "Task: Document the professional implications of a service/software/product for the company that produced it. Competency statement: Gather information regarding accountability, responsibility and liability assumed by a company when releasing a service/software/product and present it in a coherent and actionable manner. Required knowledge: SEP-Professional-Ethics, SEP-IP, SEP-Privacy, SEP-Communication, SEP-DEIA. Required skills: Explain. Desirable professional dispositions: Meticulous, Proactive, Responsible."@en ;
+    dcterms:identifier "Applications7" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_SEP_Communication,
+        cs2023:KU_SEP_DEIA,
+        cs2023:KU_SEP_IP,
+        cs2023:KU_SEP_Privacy,
+        cs2023:KU_SEP_Professional_Ethics,
+        level:Explain .
+}

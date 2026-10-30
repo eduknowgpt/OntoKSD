@@ -1,0 +1,5 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?competence
+WHERE { ?competence ontoksd:isSpecializationOf+ ?competence }

@@ -1,0 +1,100 @@
+# CS2023 Systems5; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems5_NC_Applications_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "NC-Applications × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_NC_Applications ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems5 ;
+    rdfs:comment "Local knowledge–level assignment for Systems5: NC-Applications at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "NC-Applications × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems5 .
+
+cs2023c:KS_Systems5_NC_Routing_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "NC-Routing × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_NC_Routing ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems5 ;
+    rdfs:comment "Local knowledge–level assignment for Systems5: NC-Routing at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "NC-Routing × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems5 .
+
+cs2023c:TaskActivity_Systems5_Analyze a ontoksd:TaskActivity ;
+    rdfs:label "analyze"@en ;
+    rdfs:comment "Task activity capturing the analysis of observed network performance indicators."@en ;
+    skos:prefLabel "analyze"@en .
+
+cs2023c:TaskActivity_Systems5_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluative judgment of network performance."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskActivity_Systems5_Measure a ontoksd:TaskActivity ;
+    rdfs:label "measure"@en ;
+    rdfs:comment "Task activity capturing the measurement of latency, throughput, congestion, and service levels."@en ;
+    skos:prefLabel "measure"@en .
+
+cs2023c:TaskComponent_Systems5_Network a ontoksd:TaskComponent ;
+    rdfs:label "network"@en ;
+    rdfs:comment "Task component corresponding to the network whose performance characteristics are to be assessed."@en ;
+    skos:prefLabel "network"@en .
+
+cs2023c:TaskConstraint_Systems5_PerformanceDimensions a ontoksd:TaskConstraint ;
+    rdfs:label "with respect to latency, throughput, congestion, and service levels"@en ;
+    rdfs:comment "Task constraint stating that the performance evaluation must consider latency, throughput, congestion, and various service levels of the network."@en ;
+    skos:prefLabel "with respect to latency, throughput, congestion, and service levels"@en .
+
+cs2023c:Task_Systems5 a ontoksd:Task ;
+    rdfs:label "Systems5 task"@en ;
+    dcterms:identifier "Task_Systems5"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems5_Analyze,
+        cs2023c:TaskActivity_Systems5_Evaluate,
+        cs2023c:TaskActivity_Systems5_Measure ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems5_Network ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems5_PerformanceDimensions ;
+    ontoksd:hasTaskStatement "Evaluate the performance of a network."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems5 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems5. The task concerns evaluating network performance in terms of latency, throughput, congestion, and service levels."@en ;
+    skos:prefLabel "Systems5 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems5 .
+
+cs2023c:Competence_Systems5 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluate the latency, throughput, congestion, and various service levels of a network"@en ;
+    dcterms:identifier "Systems5"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:proactive ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems5_NC_Applications_1_Evaluate,
+        cs2023c:KS_Systems5_NC_Routing_1_Evaluate ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems5 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems5. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Evaluate the latency, throughput, congestion, and various service levels of a network."@en ;
+    skos:prefLabel "Evaluate the latency, throughput, congestion, and various service levels of a network"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems5 .
+
+cs2023c:Source_Systems5 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems5, starting on printed page 402."@en ;
+    dcterms:description "Task: Evaluate the performance of a network. Competency statement: Evaluate the latency, throughput, congestion, and various service levels of a network. Required knowledge: NC-Applications, NC-Routing. Required skills: Evaluate. Desirable professional dispositions: Meticulous, Proactive."@en ;
+    dcterms:identifier "Systems5" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_NC_Applications,
+        cs2023:KU_NC_Routing,
+        level:Evaluate .
+}

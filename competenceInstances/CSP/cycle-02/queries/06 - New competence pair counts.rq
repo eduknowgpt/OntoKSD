@@ -1,0 +1,8 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT ?competence (COUNT(DISTINCT ?pair) AS ?pairCount)
+WHERE {
+ VALUES ?competence { ontoksd:C13_01 ontoksd:C15 ontoksd:C16 }
+ ?competence ontoksd:hasKnowledgeSkill ?pair .
+} GROUP BY ?competence ORDER BY ?competence

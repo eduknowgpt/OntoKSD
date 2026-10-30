@@ -1,654 +1,1293 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 IS Practicum competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.6.2 Competency Area – IS Practicum."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020ISPracticumKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 IS Practicum Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 IS Practicum Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IS Practicum competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PhasesOfTheSDLC
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Phases of the SDLC abstract the principal concerns of software systems development"@en ;
-      skos:prefLabel "Phases of the SDLC abstract the principal concerns of software systems development"@en ;
-      skos:definition "Knowledge that the phases of the SDLC abstract the principal concerns of software systems development."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SequentialNatureOfTheSDLC
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Appreciation for the implicit sequential nature of the cycle in terms of predicates and flow"@en ;
-      skos:prefLabel "Appreciation for the implicit sequential nature of the cycle in terms of predicates and flow"@en ;
-      skos:definition "Knowledge of the implicit sequential nature of the SDLC in terms of predicates and flow."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VarietyOfSDLCModels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Appreciation for the variety of models that describe the flow and evolution of the SDLC in practice"@en ;
-      skos:prefLabel "Appreciation for the variety of models that describe the flow and evolution of the SDLC in practice"@en ;
-      skos:definition "Knowledge of the variety of models that describe the flow and evolution of the SDLC in practice."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WaterfallModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Articulate and implement a Waterfall model understanding the assumptions, advantages, and disadvantages of utilizing this model methodologically"@en ;
-      skos:prefLabel "Articulate and implement a Waterfall model understanding the assumptions, advantages, and disadvantages of utilizing this model methodologically"@en ;
-      skos:definition "Knowledge of articulating and implementing a Waterfall model, including its assumptions, advantages, and disadvantages."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IterativeWaterfallModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Articulate and implement an Iterative Waterfall model as a set of sequential waterfall processes. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
-      skos:prefLabel "Articulate and implement an Iterative Waterfall model as a set of sequential waterfall processes"@en ;
-      skos:definition "Knowledge of articulating and implementing an Iterative Waterfall model, including its assumptions, advantages, and disadvantages."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SpiralModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Articulate and implement a Spiral model as a phased abstraction of both the Iterative and Waterfall models. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
-      skos:prefLabel "Articulate and implement a Spiral model as a phased abstraction of both the Iterative and Waterfall models"@en ;
-      skos:definition "Knowledge of articulating and implementing a Spiral model, including its assumptions, advantages, and disadvantages."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RapidApplicationDevelopmentModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Articulate and implement a Rapid Application Development/Prototyping model as an iterative approach that utilizes frequent empirical validation. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
-      skos:prefLabel "Articulate and implement a Rapid Application Development/Prototyping model"@en ;
-      skos:definition "Knowledge of articulating and implementing a Rapid Application Development or Prototyping model, including its assumptions, advantages, and disadvantages."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AgileModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Articulate and implement an Agile model as an iterative and incremental approach that utilizes frequent empirical validation and customer collaboration. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
-      skos:prefLabel "Articulate and implement an Agile model"@en ;
-      skos:definition "Knowledge of articulating and implementing an Agile model, including its assumptions, advantages, and disadvantages."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SoftwareProcessManagementTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Knowledge of tools that track and manage software projects with respect to resources, features, deadlines, conflicts, and impediments"@en ;
-      skos:prefLabel "Knowledge of tools that track and manage software projects with respect to resources, features, deadlines, conflicts, and impediments"@en ;
-      skos:definition "Knowledge of software process management tools used to track and manage projects with respect to resources, features, deadlines, conflicts, and impediments."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EstimationValidationVelocity
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Estimation, validation, and velocity as they pertain to productivity"@en ;
-      skos:prefLabel "Estimation, validation, and velocity as they pertain to productivity"@en ;
-      skos:definition "Knowledge of estimation, validation, and velocity as they pertain to productivity."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ExampleSoftwareProcessTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Exposure to at least one tool, such as Jira, Azure DevOps for Teams, TeamCity, etc."@en ;
-      skos:prefLabel "Exposure to at least one tool, such as Jira, Azure DevOps for Teams, TeamCity, etc."@en ;
-      skos:definition "Knowledge of at least one software process management tool such as Jira, Azure DevOps for Teams, or TeamCity."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VersionControlSystemsGraphStructure
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Version Control Systems (VCS) represent a graph structure of the changes, permutations, and state of the software codebase that constitutes the necessary instructions for system realization"@en ;
-      skos:prefLabel "Version Control Systems (VCS) represent a graph structure of the changes, permutations, and state of the software codebase"@en ;
-      skos:definition "Knowledge that version control systems represent a graph structure of changes, permutations, and state of the software codebase."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AtomicOperationsInVCS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Atomic operations enable precise change tracking and responsibility"@en ;
-      skos:prefLabel "Atomic operations enable precise change tracking and responsibility"@en ;
-      skos:definition "Knowledge that atomic operations in version control enable precise change tracking and responsibility."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BranchingAndMerging
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Branching and merging for feature evolution, defect management, and team coordination"@en ;
-      skos:prefLabel "Branching and merging for feature evolution, defect management, and team coordination"@en ;
-      skos:definition "Knowledge of branching and merging for feature evolution, defect management, and team coordination."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TaggingAndLabeling
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Tagging and labeling to align code changes with features"@en ;
-      skos:prefLabel "Tagging and labeling to align code changes with features"@en ;
-      skos:definition "Knowledge of tagging and labeling to align code changes with features."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VCSAsTransactionSystem
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Version control acts as a transaction system with ACID properties"@en ;
-      skos:prefLabel "Version control acts as a transaction system with ACID properties"@en ;
-      skos:definition "Knowledge that version control acts as a transaction system with ACID properties."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UseOfAtLeastOneVCS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use and familiarity with at least one VCS such as Git, SVN, Mercurial, CVS, etc."@en ;
-      skos:prefLabel "Use and familiarity with at least one VCS such as Git, SVN, Mercurial, CVS, etc."@en ;
-      skos:definition "Knowledge and use of at least one version control system such as Git, SVN, Mercurial, or CVS."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RealTimeCommunicationLinkedToManagement
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Real-time communication that is also linked to features management, code management, and defect tracking"@en ;
-      skos:prefLabel "Real-time communication linked to features management, code management, and defect tracking"@en ;
-      skos:definition "Knowledge of real-time communication linked to features management, code management, and defect tracking."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:LinksToVersionControlCommits
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Links to version control commits and collaborative code development"@en ;
-      skos:prefLabel "Links to version control commits and collaborative code development"@en ;
-      skos:definition "Knowledge of links to version control commits and collaborative code development."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ExampleTeamCollaborationTool
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Exposure to at least one tool, such as Jira, Trello, TeamCity, BandCamp, etc."@en ;
-      skos:prefLabel "Exposure to at least one tool, such as Jira, Trello, TeamCity, BandCamp, etc."@en ;
-      skos:definition "Knowledge of at least one team collaboration and communication tool such as Jira, Trello, TeamCity, or BandCamp."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UserInteractiveAcceptanceTesting
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Define and track user-interactive acceptance testing"@en ;
-      skos:prefLabel "Define and track user-interactive acceptance testing"@en ;
-      skos:definition "Knowledge of defining and tracking user-interactive acceptance testing."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ManageFeaturesPersonasUseCasesStories
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Manage features, personas, use cases, or user stories as they related to system modules, information flows, and user experience flows"@en ;
-      skos:prefLabel "Manage features, personas, use cases, or user stories as they relate to system modules, information flows, and user experience flows"@en ;
-      skos:definition "Knowledge of managing features, personas, use cases, or user stories as they relate to system modules, information flows, and user experience flows."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ProvisionsForTestAndValidationDeployments
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Provisions for test and validation deployments"@en ;
-      skos:prefLabel "Provisions for test and validation deployments"@en ;
-      skos:definition "Knowledge of provisions for test and validation deployments."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SystemForIdentifyingSoftwareDefects
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "A system for developers and end users to identify software defects"@en ;
-      skos:prefLabel "A system for developers and end users to identify software defects"@en ;
-      skos:definition "Knowledge of systems that allow developers and end users to identify software defects."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SystemForTrackingDefectStatus
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "A system for developers and end users to track the status of defects"@en ;
-      skos:prefLabel "A system for developers and end users to track the status of defects"@en ;
-      skos:definition "Knowledge of systems that allow developers and end users to track the status of defects."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IntegrationWithVCSAndFeaturesManagement
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Integration with version control systems and features management"@en ;
-      skos:prefLabel "Integration with version control systems and features management"@en ;
-      skos:definition "Knowledge of integration between testing tools, version control systems, and features management."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TestingPyramid
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "A linked and integrative 'pyramid' of testing that cascades from manual testing to integration testing, to unit testing"@en ;
-      skos:prefLabel "A linked and integrative pyramid of testing"@en ;
-      skos:definition "Knowledge of a linked and integrative testing pyramid from manual to integration to unit testing."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RegressionTesting
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Regression testing to safeguard against feature and function regression"@en ;
-      skos:prefLabel "Regression testing to safeguard against feature and function regression"@en ;
-      skos:definition "Knowledge of regression testing to safeguard against feature and function regression."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UnitTestingLibraryOrHarness
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use and familiarity with at least one unit testing library or harness"@en ;
-      skos:prefLabel "Use and familiarity with at least one unit testing library or harness"@en ;
-      skos:definition "Knowledge and use of at least one unit testing library or harness."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UMLStructuralDiagrams
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use UML structural diagrams to realize and validate object-oriented module and library design"@en ;
-      skos:prefLabel "Use UML structural diagrams to realize and validate object-oriented module and library design"@en ;
-      skos:definition "Knowledge of using UML structural diagrams to realize and validate object-oriented module and library design."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UMLBehavioralDiagrams
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use UML behavioral diagrams to realize and validate logical design"@en ;
-      skos:prefLabel "Use UML behavioral diagrams to realize and validate logical design"@en ;
-      skos:definition "Knowledge of using UML behavioral diagrams to realize and validate logical design."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DesignForModularityForReuse
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design for modularity for reuse"@en ;
-      skos:prefLabel "Design for modularity for reuse"@en ;
-      skos:definition "Knowledge of designing for modularity and reuse."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ApplicationOfSOLIDPrinciples
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Application of SOLID principles"@en ;
-      skos:prefLabel "Application of SOLID principles"@en ;
-      skos:definition "Knowledge of applying SOLID principles."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PersistenceStrategies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Persistence strategies, such as RDBMS and their role in system execution"@en ;
-      skos:prefLabel "Persistence strategies, such as RDBMS and their role in system execution"@en ;
-      skos:definition "Knowledge of persistence strategies such as RDBMS and their role in system execution."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DataAndObjectStructuresInRuntimeMemory
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Data and object structures housed in runtime-execution and resident in volatile memory"@en ;
-      skos:prefLabel "Data and object structures housed in runtime-execution and resident in volatile memory"@en ;
-      skos:definition "Knowledge of data and object structures housed in runtime execution and resident in volatile memory."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ORMToolsAsBridge
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "O/RM tools as a bridge from volatile execution contexts to persistence contexts"@en ;
-      skos:prefLabel "O/RM tools as a bridge from volatile execution contexts to persistence contexts"@en ;
-      skos:definition "Knowledge of ORM tools as a bridge from volatile execution contexts to persistence contexts."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UseOfAtLeastOneORM
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use and familiarity with at least one O/RM implementation"@en ;
-      skos:prefLabel "Use and familiarity with at least one O/RM implementation"@en ;
-      skos:definition "Knowledge and use of at least one ORM implementation."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ContinuousIntegrationAndDelivery
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Continuous Integration and Continuous Delivery strategies"@en ;
-      skos:prefLabel "Continuous Integration and Continuous Delivery strategies"@en ;
-      skos:definition "Knowledge of continuous integration and continuous delivery strategies."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TestDrivenDevelopment
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Test-Driven Development"@en ;
-      skos:prefLabel "Test-Driven Development"@en ;
-      skos:definition "Knowledge of test-driven development."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:StagedDevelopmentEnvironments
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Staged development environments"@en ;
-      skos:prefLabel "Staged development environments"@en ;
-      skos:definition "Knowledge of staged development environments."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PlatformAndInfrastructureAsAService
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Platform and Infrastructure as a Service"@en ;
-      skos:prefLabel "Platform and Infrastructure as a Service"@en ;
-      skos:definition "Knowledge of platform as a service and infrastructure as a service."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AssumeEdgeCasesAndVulnerabilities
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Assume edge cases and vulnerabilities will expose the system"@en ;
-      skos:prefLabel "Assume edge cases and vulnerabilities will expose the system"@en ;
-      skos:definition "Knowledge that edge cases and vulnerabilities will expose the system and must be anticipated."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CodeTechniquesForSecurity
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Code techniques for security"@en ;
-      skos:prefLabel "Code techniques for security"@en ;
-      skos:definition "Knowledge of code techniques for security."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DeploymentTechniquesForSecurity
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Deployment techniques for security"@en ;
-      skos:prefLabel "Deployment techniques for security"@en ;
-      skos:definition "Knowledge of deployment techniques for security."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:KeepDeploymentEnvironmentUpToDate
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Procedures for keeping the deployment environment up to date"@en ;
-      skos:prefLabel "Procedures for keeping the deployment environment up to date"@en ;
-      skos:definition "Knowledge of procedures for keeping the deployment environment up to date."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:KeepSoftwareDependenciesUpToDate
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Procedures for keeping software dependencies up to date"@en ;
-      skos:prefLabel "Procedures for keeping software dependencies up to date"@en ;
-      skos:definition "Knowledge of procedures for keeping software dependencies up to date."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TechnicalDebtAndSecurityDesign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Relationship between technical debt and security design"@en ;
-      skos:prefLabel "Relationship between technical debt and security design"@en ;
-      skos:definition "Knowledge of the relationship between technical debt and security design."@en ;
-      skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020c:Competence_ISPRA_1
-      a ontoksd:Competence ;
-      rdfs:label "Apply the SDLC"@en ;
-      skos:prefLabel "IS Practicum Competency 1"@en ;
-      skos:definition "Apply the SDLC."@en ;
-      dcterms:identifier "ISPRA-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:PhasesOfTheSDLC , is2020k:SequentialNatureOfTheSDLC , is2020k:VarietyOfSDLCModels ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_1_01 , is2020c:KS_ISPRA_1_02 , is2020c:KS_ISPRA_1_03 .
-
-  is2020c:Competence_ISPRA_2
-      a ontoksd:Competence ;
-      rdfs:label "Utilize a systems/software development methodology"@en ;
-      skos:prefLabel "IS Practicum Competency 2"@en ;
-      skos:definition "Utilize a systems/software development methodology."@en ;
-      dcterms:identifier "ISPRA-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:WaterfallModel , is2020k:IterativeWaterfallModel , is2020k:SpiralModel , is2020k:RapidApplicationDevelopmentModel , is2020k:AgileModel ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_2_01 , is2020c:KS_ISPRA_2_02 , is2020c:KS_ISPRA_2_03 , is2020c:KS_ISPRA_2_04 , is2020c:KS_ISPRA_2_05 .
-
-  is2020c:Competence_ISPRA_3
-      a ontoksd:Competence ;
-      rdfs:label "Utilize tools for software process management"@en ;
-      skos:prefLabel "IS Practicum Competency 3"@en ;
-      skos:definition "Utilize tools for software process management."@en ;
-      dcterms:identifier "ISPRA-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:SoftwareProcessManagementTools , is2020k:EstimationValidationVelocity , is2020k:ExampleSoftwareProcessTools ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_3_01 , is2020c:KS_ISPRA_3_02 , is2020c:KS_ISPRA_3_03 .
-
-  is2020c:Competence_ISPRA_4
-      a ontoksd:Competence ;
-      rdfs:label "Utilize tools for code and resource version control"@en ;
-      skos:prefLabel "IS Practicum Competency 4"@en ;
-      skos:definition "Utilize tools for code and resource version control."@en ;
-      dcterms:identifier "ISPRA-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:VersionControlSystemsGraphStructure , is2020k:AtomicOperationsInVCS , is2020k:BranchingAndMerging , is2020k:TaggingAndLabeling , is2020k:VCSAsTransactionSystem , is2020k:UseOfAtLeastOneVCS ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_4_01 , is2020c:KS_ISPRA_4_02 , is2020c:KS_ISPRA_4_03 , is2020c:KS_ISPRA_4_04 , is2020c:KS_ISPRA_4_05 , is2020c:KS_ISPRA_4_06 .
-
-  is2020c:Competence_ISPRA_5
-      a ontoksd:Competence ;
-      rdfs:label "Utilize tools for team collaboration and communication"@en ;
-      skos:prefLabel "IS Practicum Competency 5"@en ;
-      skos:definition "Utilize tools for team collaboration and communication."@en ;
-      dcterms:identifier "ISPRA-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:RealTimeCommunicationLinkedToManagement , is2020k:LinksToVersionControlCommits , is2020k:ExampleTeamCollaborationTool ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:collaborative , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_5_01 , is2020c:KS_ISPRA_5_02 , is2020c:KS_ISPRA_5_03 .
-
-  is2020c:Competence_ISPRA_6
-      a ontoksd:Competence ;
-      rdfs:label "Utilize tools for client collaboration and communication"@en ;
-      skos:prefLabel "IS Practicum Competency 6"@en ;
-      skos:definition "Utilize tools for client collaboration and communication."@en ;
-      dcterms:identifier "ISPRA-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:UserInteractiveAcceptanceTesting , is2020k:ManageFeaturesPersonasUseCasesStories , is2020k:ProvisionsForTestAndValidationDeployments ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:professional , ontoksd:proactive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_6_01 , is2020c:KS_ISPRA_6_02 , is2020c:KS_ISPRA_6_03 .
-
-  is2020c:Competence_ISPRA_7
-      a ontoksd:Competence ;
-      rdfs:label "Utilize tools for testing (unit, integration, acceptance)"@en ;
-      skos:prefLabel "IS Practicum Competency 7"@en ;
-      skos:definition "Utilize tools for testing (unit, integration, acceptance)."@en ;
-      dcterms:identifier "ISPRA-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:SystemForIdentifyingSoftwareDefects , is2020k:SystemForTrackingDefectStatus , is2020k:IntegrationWithVCSAndFeaturesManagement , is2020k:TestingPyramid , is2020k:RegressionTesting , is2020k:UnitTestingLibraryOrHarness ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_7_01 , is2020c:KS_ISPRA_7_02 , is2020c:KS_ISPRA_7_03 , is2020c:KS_ISPRA_7_04 , is2020c:KS_ISPRA_7_05 , is2020c:KS_ISPRA_7_06 .
-
-  is2020c:Competence_ISPRA_8
-      a ontoksd:Competence ;
-      rdfs:label "Align and utilize UML, ERD, and Class/Object Design"@en ;
-      skos:prefLabel "IS Practicum Competency 8"@en ;
-      skos:definition "Align and utilize UML, ERD, and Class/Object Design."@en ;
-      dcterms:identifier "ISPRA-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:UMLStructuralDiagrams , is2020k:UMLBehavioralDiagrams ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_8_01 , is2020c:KS_ISPRA_8_02 .
-
-  is2020c:Competence_ISPRA_9
-      a ontoksd:Competence ;
-      rdfs:label "Apply Object-Oriented principles in system/software design and implementation"@en ;
-      skos:prefLabel "IS Practicum Competency 9"@en ;
-      skos:definition "Apply Object-Oriented principles in system/software design and implementation."@en ;
-      dcterms:identifier "ISPRA-9"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:DesignForModularityForReuse , is2020k:ApplicationOfSOLIDPrinciples ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_9_01 , is2020c:KS_ISPRA_9_02 .
-
-  is2020c:Competence_ISPRA_10
-      a ontoksd:Competence ;
-      rdfs:label "Utilize Object-Relational Mapping tools"@en ;
-      skos:prefLabel "IS Practicum Competency 10"@en ;
-      skos:definition "Utilize Object-Relational Mapping tools."@en ;
-      dcterms:identifier "ISPRA-10"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:PersistenceStrategies , is2020k:DataAndObjectStructuresInRuntimeMemory , is2020k:ORMToolsAsBridge , is2020k:UseOfAtLeastOneORM ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_10_01 , is2020c:KS_ISPRA_10_02 , is2020c:KS_ISPRA_10_03 , is2020c:KS_ISPRA_10_04 .
-
-  is2020c:Competence_ISPRA_11
-      a ontoksd:Competence ;
-      rdfs:label "Apply principles of systems delivery and maintenance"@en ;
-      skos:prefLabel "IS Practicum Competency 11"@en ;
-      skos:definition "Apply principles of systems delivery and maintenance."@en ;
-      dcterms:identifier "ISPRA-11"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ContinuousIntegrationAndDelivery , is2020k:TestDrivenDevelopment , is2020k:StagedDevelopmentEnvironments , is2020k:PlatformAndInfrastructureAsAService ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_11_01 , is2020c:KS_ISPRA_11_02 , is2020c:KS_ISPRA_11_03 , is2020c:KS_ISPRA_11_04 .
-
-  is2020c:Competence_ISPRA_12
-      a ontoksd:Competence ;
-      rdfs:label "Utilize upfront design for system security"@en ;
-      skos:prefLabel "IS Practicum Competency 12"@en ;
-      skos:definition "Utilize upfront design for system security."@en ;
-      dcterms:identifier "ISPRA-12"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:AssumeEdgeCasesAndVulnerabilities , is2020k:CodeTechniquesForSecurity , is2020k:DeploymentTechniquesForSecurity , is2020k:KeepDeploymentEnvironmentUpToDate , is2020k:KeepSoftwareDependenciesUpToDate , is2020k:TechnicalDebtAndSecurityDesign ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:proactive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_12_01 , is2020c:KS_ISPRA_12_02 , is2020c:KS_ISPRA_12_03 , is2020c:KS_ISPRA_12_04 , is2020c:KS_ISPRA_12_05 , is2020c:KS_ISPRA_12_06 .
-
-  is2020c:KS_ISPRA_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Phases of the SDLC × Understanding"@en ; skos:prefLabel "Phases of the SDLC × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PhasesOfTheSDLC ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_1 .
-  is2020c:KS_ISPRA_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Sequential nature of the SDLC × Understanding"@en ; skos:prefLabel "Sequential nature of the SDLC × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SequentialNatureOfTheSDLC ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_1 .
-  is2020c:KS_ISPRA_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Variety of SDLC models × Understanding"@en ; skos:prefLabel "Variety of SDLC models × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:VarietyOfSDLCModels ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_1 .
-
-  is2020c:KS_ISPRA_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Waterfall model × Applying"@en ; skos:prefLabel "Waterfall model × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:WaterfallModel ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 .
-  is2020c:KS_ISPRA_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Iterative Waterfall model × Applying"@en ; skos:prefLabel "Iterative Waterfall model × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:IterativeWaterfallModel ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 .
-  is2020c:KS_ISPRA_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Spiral model × Applying"@en ; skos:prefLabel "Spiral model × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SpiralModel ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 .
-  is2020c:KS_ISPRA_2_04 a ontoksd:KnowledgeSkill ; rdfs:label "RAD/Prototyping model × Applying"@en ; skos:prefLabel "RAD/Prototyping model × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:RapidApplicationDevelopmentModel ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 .
-  is2020c:KS_ISPRA_2_05 a ontoksd:KnowledgeSkill ; rdfs:label "Agile model × Applying"@en ; skos:prefLabel "Agile model × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AgileModel ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 .
-
-  is2020c:KS_ISPRA_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Software process management tools × Applying"@en ; skos:prefLabel "Software process management tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SoftwareProcessManagementTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_3 .
-  is2020c:KS_ISPRA_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Estimation validation and velocity × Applying"@en ; skos:prefLabel "Estimation validation and velocity × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:EstimationValidationVelocity ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_3 .
-  is2020c:KS_ISPRA_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Example software process tools × Applying"@en ; skos:prefLabel "Example software process tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ExampleSoftwareProcessTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_3 .
-
-  is2020c:KS_ISPRA_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "VCS graph structure × Understanding"@en ; skos:prefLabel "VCS graph structure × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:VersionControlSystemsGraphStructure ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 .
-  is2020c:KS_ISPRA_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Atomic operations in VCS × Understanding"@en ; skos:prefLabel "Atomic operations in VCS × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AtomicOperationsInVCS ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 .
-  is2020c:KS_ISPRA_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Branching and merging × Understanding"@en ; skos:prefLabel "Branching and merging × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:BranchingAndMerging ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 .
-  is2020c:KS_ISPRA_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Tagging and labeling × Understanding"@en ; skos:prefLabel "Tagging and labeling × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TaggingAndLabeling ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 .
-  is2020c:KS_ISPRA_4_05 a ontoksd:KnowledgeSkill ; rdfs:label "VCS as transaction system × Understanding"@en ; skos:prefLabel "VCS as transaction system × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:VCSAsTransactionSystem ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 .
-  is2020c:KS_ISPRA_4_06 a ontoksd:KnowledgeSkill ; rdfs:label "Use of at least one VCS × Applying"@en ; skos:prefLabel "Use of at least one VCS × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UseOfAtLeastOneVCS ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 .
-
-  is2020c:KS_ISPRA_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Real-time communication linked to management × Understanding"@en ; skos:prefLabel "Real-time communication linked to management × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RealTimeCommunicationLinkedToManagement ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_5 .
-  is2020c:KS_ISPRA_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Links to version control commits × Understanding"@en ; skos:prefLabel "Links to version control commits × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:LinksToVersionControlCommits ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_5 .
-  is2020c:KS_ISPRA_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Example team collaboration tool × Applying"@en ; skos:prefLabel "Example team collaboration tool × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ExampleTeamCollaborationTool ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_5 .
-
-  is2020c:KS_ISPRA_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "User-interactive acceptance testing × Understanding"@en ; skos:prefLabel "User-interactive acceptance testing × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:UserInteractiveAcceptanceTesting ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_6 .
-  is2020c:KS_ISPRA_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Manage features personas use cases stories × Understanding"@en ; skos:prefLabel "Manage features personas use cases stories × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ManageFeaturesPersonasUseCasesStories ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_6 .
-  is2020c:KS_ISPRA_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Test and validation deployments × Understanding"@en ; skos:prefLabel "Test and validation deployments × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProvisionsForTestAndValidationDeployments ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_6 .
-
-  is2020c:KS_ISPRA_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "System for identifying software defects × Understanding"@en ; skos:prefLabel "System for identifying software defects × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SystemForIdentifyingSoftwareDefects ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 .
-  is2020c:KS_ISPRA_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "System for tracking defect status × Understanding"@en ; skos:prefLabel "System for tracking defect status × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SystemForTrackingDefectStatus ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 .
-  is2020c:KS_ISPRA_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Integration with VCS and features management × Understanding"@en ; skos:prefLabel "Integration with VCS and features management × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:IntegrationWithVCSAndFeaturesManagement ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 .
-  is2020c:KS_ISPRA_7_04 a ontoksd:KnowledgeSkill ; rdfs:label "Testing pyramid × Understanding"@en ; skos:prefLabel "Testing pyramid × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TestingPyramid ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 .
-  is2020c:KS_ISPRA_7_05 a ontoksd:KnowledgeSkill ; rdfs:label "Regression testing × Understanding"@en ; skos:prefLabel "Regression testing × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RegressionTesting ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 .
-  is2020c:KS_ISPRA_7_06 a ontoksd:KnowledgeSkill ; rdfs:label "Unit testing library or harness × Applying"@en ; skos:prefLabel "Unit testing library or harness × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UnitTestingLibraryOrHarness ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 .
-
-  is2020c:KS_ISPRA_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "UML structural diagrams × Applying"@en ; skos:prefLabel "UML structural diagrams × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UMLStructuralDiagrams ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_8 .
-  is2020c:KS_ISPRA_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "UML behavioral diagrams × Applying"@en ; skos:prefLabel "UML behavioral diagrams × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UMLBehavioralDiagrams ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_8 .
-
-  is2020c:KS_ISPRA_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Design for modularity for reuse × Applying"@en ; skos:prefLabel "Design for modularity for reuse × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DesignForModularityForReuse ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_9 .
-  is2020c:KS_ISPRA_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Application of SOLID principles × Applying"@en ; skos:prefLabel "Application of SOLID principles × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ApplicationOfSOLIDPrinciples ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_9 .
-
-  is2020c:KS_ISPRA_10_01 a ontoksd:KnowledgeSkill ; rdfs:label "Persistence strategies × Understanding"@en ; skos:prefLabel "Persistence strategies × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PersistenceStrategies ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 .
-  is2020c:KS_ISPRA_10_02 a ontoksd:KnowledgeSkill ; rdfs:label "Data and object structures in runtime memory × Understanding"@en ; skos:prefLabel "Data and object structures in runtime memory × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DataAndObjectStructuresInRuntimeMemory ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 .
-  is2020c:KS_ISPRA_10_03 a ontoksd:KnowledgeSkill ; rdfs:label "ORM tools as bridge × Understanding"@en ; skos:prefLabel "ORM tools as bridge × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ORMToolsAsBridge ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 .
-  is2020c:KS_ISPRA_10_04 a ontoksd:KnowledgeSkill ; rdfs:label "Use of at least one ORM implementation × Applying"@en ; skos:prefLabel "Use of at least one ORM implementation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UseOfAtLeastOneORM ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 .
-
-  is2020c:KS_ISPRA_11_01 a ontoksd:KnowledgeSkill ; rdfs:label "CI and CD strategies × Understanding"@en ; skos:prefLabel "CI and CD strategies × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ContinuousIntegrationAndDelivery ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 .
-  is2020c:KS_ISPRA_11_02 a ontoksd:KnowledgeSkill ; rdfs:label "Test-Driven Development × Understanding"@en ; skos:prefLabel "Test-Driven Development × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TestDrivenDevelopment ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 .
-  is2020c:KS_ISPRA_11_03 a ontoksd:KnowledgeSkill ; rdfs:label "Staged development environments × Understanding"@en ; skos:prefLabel "Staged development environments × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:StagedDevelopmentEnvironments ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 .
-  is2020c:KS_ISPRA_11_04 a ontoksd:KnowledgeSkill ; rdfs:label "PaaS and IaaS × Understanding"@en ; skos:prefLabel "PaaS and IaaS × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PlatformAndInfrastructureAsAService ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 .
-
-  is2020c:KS_ISPRA_12_01 a ontoksd:KnowledgeSkill ; rdfs:label "Assume edge cases and vulnerabilities × Understanding"@en ; skos:prefLabel "Assume edge cases and vulnerabilities × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AssumeEdgeCasesAndVulnerabilities ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 .
-  is2020c:KS_ISPRA_12_02 a ontoksd:KnowledgeSkill ; rdfs:label "Code techniques for security × Understanding"@en ; skos:prefLabel "Code techniques for security × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CodeTechniquesForSecurity ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 .
-  is2020c:KS_ISPRA_12_03 a ontoksd:KnowledgeSkill ; rdfs:label "Deployment techniques for security × Understanding"@en ; skos:prefLabel "Deployment techniques for security × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DeploymentTechniquesForSecurity ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 .
-  is2020c:KS_ISPRA_12_04 a ontoksd:KnowledgeSkill ; rdfs:label "Keep deployment environment up to date × Understanding"@en ; skos:prefLabel "Keep deployment environment up to date × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:KeepDeploymentEnvironmentUpToDate ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 .
-  is2020c:KS_ISPRA_12_05 a ontoksd:KnowledgeSkill ; rdfs:label "Keep software dependencies up to date × Understanding"@en ; skos:prefLabel "Keep software dependencies up to date × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:KeepSoftwareDependenciesUpToDate ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 .
-  is2020c:KS_ISPRA_12_06 a ontoksd:KnowledgeSkill ; rdfs:label "Technical debt and security design × Understanding"@en ; skos:prefLabel "Technical debt and security design × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TechnicalDebtAndSecurityDesign ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 .
-
+is2020c:KS_ISPRA_10_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Persistence strategies × Understanding"@en ;
+    dcterms:description "Source knowledge element: Persistence strategies, such as RDBMS and their role in system execution; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PersistenceStrategies ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Persistence strategies × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_10 .
+
+is2020c:KS_ISPRA_10_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Data and object structures in runtime memory × Understanding"@en ;
+    dcterms:description "Source knowledge element: Data and object structures house in runtime-execution and resident in volatile memory; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DataAndObjectStructuresInRuntimeMemory ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Data and object structures in runtime memory × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_10 .
+
+is2020c:KS_ISPRA_10_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "ORM tools as bridge × Understanding"@en ;
+    dcterms:description "Source knowledge element: O/RM tools as a bridge from volatile execution contexts to persistence contexts; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ORMToolsAsBridge ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "ORM tools as bridge × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_10 .
+
+is2020c:KS_ISPRA_10_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Use of at least one ORM implementation × Applying"@en ;
+    dcterms:description "Source knowledge element: Use and familiarity with at least one O/RM implementation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UseOfAtLeastOneORM ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Use of at least one ORM implementation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_10 .
+
+is2020c:KS_ISPRA_11_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "CI and CD strategies × Understanding"@en ;
+    dcterms:description "Source knowledge element: Continuous Integration and Continuous Delivery strategies; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ContinuousIntegrationAndDelivery ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "CI and CD strategies × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_11 .
+
+is2020c:KS_ISPRA_11_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Test-Driven Development × Understanding"@en ;
+    dcterms:description "Source knowledge element: Test-Driven Development; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TestDrivenDevelopment ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Test-Driven Development × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_11 .
+
+is2020c:KS_ISPRA_11_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Staged development environments × Understanding"@en ;
+    dcterms:description "Source knowledge element: Staged development environments; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StagedDevelopmentEnvironments ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Staged development environments × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_11 .
+
+is2020c:KS_ISPRA_11_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "PaaS and IaaS × Understanding"@en ;
+    dcterms:description "Source knowledge element: Platform and Infrastructure as a Service; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PlatformAndInfrastructureAsAService ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "PaaS and IaaS × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_11 .
+
+is2020c:KS_ISPRA_12_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Assume edge cases and vulnerabilities × Understanding"@en ;
+    dcterms:description "Source knowledge element: Assume edge cases and vulnerabilities will expose the system; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AssumeEdgeCasesAndVulnerabilities ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Assume edge cases and vulnerabilities × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_12 .
+
+is2020c:KS_ISPRA_12_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Code techniques for security × Understanding"@en ;
+    dcterms:description "Source knowledge element: Code techniques for security; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CodeTechniquesForSecurity ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Code techniques for security × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_12 .
+
+is2020c:KS_ISPRA_12_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Deployment techniques for security × Understanding"@en ;
+    dcterms:description "Source knowledge element: Deployment techniques for security; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DeploymentTechniquesForSecurity ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Deployment techniques for security × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_12 .
+
+is2020c:KS_ISPRA_12_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Keep deployment environment up to date × Understanding"@en ;
+    dcterms:description "Source knowledge element: Procedures for keeping the deployment environment up to date; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:KeepDeploymentEnvironmentUpToDate ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Keep deployment environment up to date × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_12 .
+
+is2020c:KS_ISPRA_12_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Keep software dependencies up to date × Understanding"@en ;
+    dcterms:description "Source knowledge element: Procedures for keeping software dependencies up to date; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:KeepSoftwareDependenciesUpToDate ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Keep software dependencies up to date × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_12 .
+
+is2020c:KS_ISPRA_12_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Technical debt and security design × Understanding"@en ;
+    dcterms:description "Source knowledge element: Relationship between technical debt and security design; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TechnicalDebtAndSecurityDesign ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Technical debt and security design × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_12 .
+
+is2020c:KS_ISPRA_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Phases of the SDLC × Understanding"@en ;
+    dcterms:description "Source knowledge element: Phases of the SDLC abstract the principal concerns of software systems development; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PhasesOfTheSDLC ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Phases of the SDLC × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_1 .
+
+is2020c:KS_ISPRA_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Sequential nature of the SDLC × Understanding"@en ;
+    dcterms:description "Source knowledge element: Appreciation for the implicit sequential nature of the cycle in terms of predicates and flow; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SequentialNatureOfTheSDLC ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Sequential nature of the SDLC × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_1 .
+
+is2020c:KS_ISPRA_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Variety of SDLC models × Understanding"@en ;
+    dcterms:description "Source knowledge element: Appreciation for the variety of models that describe the flow and evolution of the SDLC in practice; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VarietyOfSDLCModels ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Variety of SDLC models × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_1 .
+
+is2020c:KS_ISPRA_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Waterfall model × Applying"@en ;
+    dcterms:description "Source knowledge element: Articulate and implement a Waterfall model understanding the assumptions, advantages, and disadvantages of utilizing this model methodologically; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WaterfallModel ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Waterfall model × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_2 .
+
+is2020c:KS_ISPRA_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Iterative Waterfall model × Applying"@en ;
+    dcterms:description "Source knowledge element: Articulate and implement an Iterative Waterfall model as a set of sequential waterfall processes. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IterativeWaterfallModel ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Iterative Waterfall model × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_2 .
+
+is2020c:KS_ISPRA_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Spiral model × Applying"@en ;
+    dcterms:description "Source knowledge element: Articulate and implement a Spiral model as a phased abstraction of both the Iterative and Waterfall models. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SpiralModel ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Spiral model × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_2 .
+
+is2020c:KS_ISPRA_2_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "RAD/Prototyping model × Applying"@en ;
+    dcterms:description "Source knowledge element: Articulate and implement a Rapid Application Development/Prototyping model as an iterative approach that utilizes frequent empirical validation. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RapidApplicationDevelopmentModel ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "RAD/Prototyping model × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_2 .
+
+is2020c:KS_ISPRA_2_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Agile model × Applying"@en ;
+    dcterms:description "Source knowledge element: Articulate and implement an Agile model as an iterative and incremental approach that utilizes frequent empirical validation and customer collaboration. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AgileModel ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Agile model × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_2 .
+
+is2020c:KS_ISPRA_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Software process management tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Knowledge of tools that track and manage software projects with respect to resources, features, deadlines, conflicts, and impediments.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SoftwareProcessManagementTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Software process management tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_3 .
+
+is2020c:KS_ISPRA_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Estimation validation and velocity × Applying"@en ;
+    dcterms:description "Source knowledge element: Estimation, validation, and velocity as they pertain to productivity.; source skill-level cell: 3 – Appy."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EstimationValidationVelocity ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately. Source spelling Appy is normalized to Applying."@en ;
+    skos:prefLabel "Estimation validation and velocity × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_3 .
+
+is2020c:KS_ISPRA_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Example software process tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Exposure to at least one tool, such as Jira, Azure DevOps for Teams, TeamCity, etc.; source skill-level cell: 3 – Appy."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ExampleSoftwareProcessTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately. Source spelling Appy is normalized to Applying."@en ;
+    skos:prefLabel "Example software process tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_3 .
+
+is2020c:KS_ISPRA_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "VCS graph structure × Understanding"@en ;
+    dcterms:description "Source knowledge element: Version Control Systems (VCS) represent a graph structure of the changes, permutations, and state of the software codebase that constitutes the necessary instructions for system realization.; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VersionControlSystemsGraphStructure ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "VCS graph structure × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_4 .
+
+is2020c:KS_ISPRA_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Atomic operations in VCS × Understanding"@en ;
+    dcterms:description "Source knowledge element: Atomic operations enable precise change tracking and responsibility; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AtomicOperationsInVCS ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Atomic operations in VCS × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_4 .
+
+is2020c:KS_ISPRA_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Branching and merging × Understanding"@en ;
+    dcterms:description "Source knowledge element: Branching and merging for feature evolution, defect management, and team coordination; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BranchingAndMerging ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Branching and merging × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_4 .
+
+is2020c:KS_ISPRA_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Tagging and labeling × Understanding"@en ;
+    dcterms:description "Source knowledge element: Tagging and labeling to align code changes with features; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TaggingAndLabeling ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Tagging and labeling × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_4 .
+
+is2020c:KS_ISPRA_4_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "VCS as transaction system × Understanding"@en ;
+    dcterms:description "Source knowledge element: Version control acts as a transaction system with ACID properties; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VCSAsTransactionSystem ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "VCS as transaction system × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_4 .
+
+is2020c:KS_ISPRA_4_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Use of at least one VCS × Applying"@en ;
+    dcterms:description "Source knowledge element: Use and familiarity with at least one VCS such as Git, SVN, Mercurial, CVS, etc.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UseOfAtLeastOneVCS ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Use of at least one VCS × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_4 .
+
+is2020c:KS_ISPRA_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Real-time communication linked to management × Understanding"@en ;
+    dcterms:description "Source knowledge element: Real-time communication that is also linked to features management, code management, and defect tracking; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RealTimeCommunicationLinkedToManagement ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Real-time communication linked to management × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_5 .
+
+is2020c:KS_ISPRA_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Links to version control commits × Understanding"@en ;
+    dcterms:description "Source knowledge element: Links to version control commits and collaborative code development; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:LinksToVersionControlCommits ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Links to version control commits × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_5 .
+
+is2020c:KS_ISPRA_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Example team collaboration tool × Applying"@en ;
+    dcterms:description "Source knowledge element: Exposure to at least one tool, such as Jira, Trello, TeamCity, BandCamp, etc.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ExampleTeamCollaborationTool ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Example team collaboration tool × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_5 .
+
+is2020c:KS_ISPRA_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "User-interactive acceptance testing × Understanding"@en ;
+    dcterms:description "Source knowledge element: Define and track user-interactive acceptance testing; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UserInteractiveAcceptanceTesting ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "User-interactive acceptance testing × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_6 .
+
+is2020c:KS_ISPRA_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Manage features personas use cases stories × Understanding"@en ;
+    dcterms:description "Source knowledge element: Manage features, personas, use cases, or user stories as they related to system modules, information flows, and user experience flows; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ManageFeaturesPersonasUseCasesStories ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Manage features personas use cases stories × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_6 .
+
+is2020c:KS_ISPRA_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Test and validation deployments × Understanding"@en ;
+    dcterms:description "Source knowledge element: Provisions for test and validation deployments; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProvisionsForTestAndValidationDeployments ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Test and validation deployments × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_6 .
+
+is2020c:KS_ISPRA_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "System for identifying software defects × Understanding"@en ;
+    dcterms:description "Source knowledge element: A system for developers and end users to identify software defects; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SystemForIdentifyingSoftwareDefects ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "System for identifying software defects × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_7 .
+
+is2020c:KS_ISPRA_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "System for tracking defect status × Understanding"@en ;
+    dcterms:description "Source knowledge element: A system for developers and end users to track the status of defects; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SystemForTrackingDefectStatus ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "System for tracking defect status × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_7 .
+
+is2020c:KS_ISPRA_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Integration with VCS and features management × Understanding"@en ;
+    dcterms:description "Source knowledge element: Integration with version control systems and features management; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IntegrationWithVCSAndFeaturesManagement ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Integration with VCS and features management × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_7 .
+
+is2020c:KS_ISPRA_7_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Testing pyramid × Understanding"@en ;
+    dcterms:description "Source knowledge element: A linked and integrative “pyramid” of testing that cascades from manual testing to integration testing, to unit testing; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TestingPyramid ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Testing pyramid × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_7 .
+
+is2020c:KS_ISPRA_7_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Regression testing × Understanding"@en ;
+    dcterms:description "Source knowledge element: Regression testing to safeguard against feature and function regression; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RegressionTesting ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Regression testing × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_7 .
+
+is2020c:KS_ISPRA_7_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Unit testing library or harness × Applying"@en ;
+    dcterms:description "Source knowledge element: Use and familiarity with at least one unit testing library or harness.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UnitTestingLibraryOrHarness ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Unit testing library or harness × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_7 .
+
+is2020c:KS_ISPRA_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "UML structural diagrams × Applying"@en ;
+    dcterms:description "Source knowledge element: Use UML structural diagrams to realize and validate objectoriented module and library design; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UMLStructuralDiagrams ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "UML structural diagrams × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_8 .
+
+is2020c:KS_ISPRA_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "UML behavioral diagrams × Applying"@en ;
+    dcterms:description "Source knowledge element: Use UML behavioral diagrams to realize and validate logical design; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UMLBehavioralDiagrams ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "UML behavioral diagrams × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_8 .
+
+is2020c:KS_ISPRA_9_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design for modularity for reuse × Applying"@en ;
+    dcterms:description "Source knowledge element: Design for modularity for reuse; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignForModularityForReuse ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design for modularity for reuse × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_9 .
+
+is2020c:KS_ISPRA_9_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Application of SOLID principles × Applying"@en ;
+    dcterms:description "Source knowledge element: Application of SOLID principles; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ApplicationOfSOLIDPrinciples ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISPRA_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Application of SOLID principles × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISPRA_9 .
+
+is2020c:Competence_ISPRA_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Align and utilize UML, ERD, and Class/Object Design"@en ;
+    dcterms:identifier "ISPRA-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:UMLBehavioralDiagrams,
+        is2020k:UMLStructuralDiagrams ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_8_01,
+        is2020c:KS_ISPRA_8_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Align and utilize UML, ERD, and Class/Object Design"@en ;
+    skos:prefLabel "IS Practicum Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_8 .
+
+is2020c:Competence_ISPRA_9 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply Object-Oriented principles in system/software design and implementation"@en ;
+    dcterms:identifier "ISPRA-9"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ApplicationOfSOLIDPrinciples,
+        is2020k:DesignForModularityForReuse ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_9_01,
+        is2020c:KS_ISPRA_9_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply Object-Oriented principles in system/software design and implementation"@en ;
+    skos:prefLabel "IS Practicum Competency 9"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_9 .
+
+is2020k:AgileModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Articulate and implement an Agile model as an iterative and incremental approach that utilizes frequent empirical validation and customer collaboration. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of articulating and implementing an Agile model, including its assumptions, advantages, and disadvantages."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Articulate and implement an Agile model"@en .
+
+is2020k:ApplicationOfSOLIDPrinciples a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Application of SOLID principles"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying SOLID principles."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Application of SOLID principles"@en .
+
+is2020k:AssumeEdgeCasesAndVulnerabilities a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Assume edge cases and vulnerabilities will expose the system"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge that edge cases and vulnerabilities will expose the system and must be anticipated."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Assume edge cases and vulnerabilities will expose the system"@en .
+
+is2020k:AtomicOperationsInVCS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Atomic operations enable precise change tracking and responsibility"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge that atomic operations in version control enable precise change tracking and responsibility."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Atomic operations enable precise change tracking and responsibility"@en .
+
+is2020k:BranchingAndMerging a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Branching and merging for feature evolution, defect management, and team coordination"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of branching and merging for feature evolution, defect management, and team coordination."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Branching and merging for feature evolution, defect management, and team coordination"@en .
+
+is2020k:CodeTechniquesForSecurity a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Code techniques for security"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of code techniques for security."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Code techniques for security"@en .
+
+is2020k:ContinuousIntegrationAndDelivery a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Continuous Integration and Continuous Delivery strategies"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of continuous integration and continuous delivery strategies."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Continuous Integration and Continuous Delivery strategies"@en .
+
+is2020k:DataAndObjectStructuresInRuntimeMemory a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Data and object structures housed in runtime-execution and resident in volatile memory"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of data and object structures housed in runtime execution and resident in volatile memory."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Data and object structures housed in runtime-execution and resident in volatile memory"@en .
+
+is2020k:DeploymentTechniquesForSecurity a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Deployment techniques for security"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of deployment techniques for security."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Deployment techniques for security"@en .
+
+is2020k:DesignForModularityForReuse a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design for modularity for reuse"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing for modularity and reuse."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Design for modularity for reuse"@en .
+
+is2020k:EstimationValidationVelocity a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Estimation, validation, and velocity as they pertain to productivity"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of estimation, validation, and velocity as they pertain to productivity."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Estimation, validation, and velocity as they pertain to productivity"@en .
+
+is2020k:ExampleSoftwareProcessTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Exposure to at least one tool, such as Jira, Azure DevOps for Teams, TeamCity, etc."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of at least one software process management tool such as Jira, Azure DevOps for Teams, or TeamCity."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Exposure to at least one tool, such as Jira, Azure DevOps for Teams, TeamCity, etc."@en .
+
+is2020k:ExampleTeamCollaborationTool a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Exposure to at least one tool, such as Jira, Trello, TeamCity, BandCamp, etc."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of at least one team collaboration and communication tool such as Jira, Trello, TeamCity, or BandCamp."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Exposure to at least one tool, such as Jira, Trello, TeamCity, BandCamp, etc."@en .
+
+is2020k:IntegrationWithVCSAndFeaturesManagement a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Integration with version control systems and features management"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of integration between testing tools, version control systems, and features management."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Integration with version control systems and features management"@en .
+
+is2020k:IterativeWaterfallModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Articulate and implement an Iterative Waterfall model as a set of sequential waterfall processes. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of articulating and implementing an Iterative Waterfall model, including its assumptions, advantages, and disadvantages."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Articulate and implement an Iterative Waterfall model as a set of sequential waterfall processes"@en .
+
+is2020k:KeepDeploymentEnvironmentUpToDate a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Procedures for keeping the deployment environment up to date"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of procedures for keeping the deployment environment up to date."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Procedures for keeping the deployment environment up to date"@en .
+
+is2020k:KeepSoftwareDependenciesUpToDate a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Procedures for keeping software dependencies up to date"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of procedures for keeping software dependencies up to date."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Procedures for keeping software dependencies up to date"@en .
+
+is2020k:LinksToVersionControlCommits a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Links to version control commits and collaborative code development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of links to version control commits and collaborative code development."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Links to version control commits and collaborative code development"@en .
+
+is2020k:ManageFeaturesPersonasUseCasesStories a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Manage features, personas, use cases, or user stories as they related to system modules, information flows, and user experience flows"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of managing features, personas, use cases, or user stories as they relate to system modules, information flows, and user experience flows."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Manage features, personas, use cases, or user stories as they relate to system modules, information flows, and user experience flows"@en .
+
+is2020k:ORMToolsAsBridge a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "O/RM tools as a bridge from volatile execution contexts to persistence contexts"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of ORM tools as a bridge from volatile execution contexts to persistence contexts."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "O/RM tools as a bridge from volatile execution contexts to persistence contexts"@en .
+
+is2020k:PersistenceStrategies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Persistence strategies, such as RDBMS and their role in system execution"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of persistence strategies such as RDBMS and their role in system execution."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Persistence strategies, such as RDBMS and their role in system execution"@en .
+
+is2020k:PhasesOfTheSDLC a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Phases of the SDLC abstract the principal concerns of software systems development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge that the phases of the SDLC abstract the principal concerns of software systems development."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Phases of the SDLC abstract the principal concerns of software systems development"@en .
+
+is2020k:PlatformAndInfrastructureAsAService a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Platform and Infrastructure as a Service"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of platform as a service and infrastructure as a service."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Platform and Infrastructure as a Service"@en .
+
+is2020k:ProvisionsForTestAndValidationDeployments a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Provisions for test and validation deployments"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of provisions for test and validation deployments."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Provisions for test and validation deployments"@en .
+
+is2020k:RapidApplicationDevelopmentModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Articulate and implement a Rapid Application Development/Prototyping model as an iterative approach that utilizes frequent empirical validation. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of articulating and implementing a Rapid Application Development or Prototyping model, including its assumptions, advantages, and disadvantages."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Articulate and implement a Rapid Application Development/Prototyping model"@en .
+
+is2020k:RealTimeCommunicationLinkedToManagement a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Real-time communication that is also linked to features management, code management, and defect tracking"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of real-time communication linked to features management, code management, and defect tracking."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Real-time communication linked to features management, code management, and defect tracking"@en .
+
+is2020k:RegressionTesting a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Regression testing to safeguard against feature and function regression"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of regression testing to safeguard against feature and function regression."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Regression testing to safeguard against feature and function regression"@en .
+
+is2020k:SequentialNatureOfTheSDLC a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Appreciation for the implicit sequential nature of the cycle in terms of predicates and flow"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the implicit sequential nature of the SDLC in terms of predicates and flow."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Appreciation for the implicit sequential nature of the cycle in terms of predicates and flow"@en .
+
+is2020k:SoftwareProcessManagementTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Knowledge of tools that track and manage software projects with respect to resources, features, deadlines, conflicts, and impediments"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of software process management tools used to track and manage projects with respect to resources, features, deadlines, conflicts, and impediments."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Knowledge of tools that track and manage software projects with respect to resources, features, deadlines, conflicts, and impediments"@en .
+
+is2020k:SpiralModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Articulate and implement a Spiral model as a phased abstraction of both the Iterative and Waterfall models. Be familiar with the assumptions, advantages, and disadvantages of utilizing this model methodologically."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of articulating and implementing a Spiral model, including its assumptions, advantages, and disadvantages."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Articulate and implement a Spiral model as a phased abstraction of both the Iterative and Waterfall models"@en .
+
+is2020k:StagedDevelopmentEnvironments a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Staged development environments"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of staged development environments."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Staged development environments"@en .
+
+is2020k:SystemForIdentifyingSoftwareDefects a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "A system for developers and end users to identify software defects"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of systems that allow developers and end users to identify software defects."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "A system for developers and end users to identify software defects"@en .
+
+is2020k:SystemForTrackingDefectStatus a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "A system for developers and end users to track the status of defects"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of systems that allow developers and end users to track the status of defects."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "A system for developers and end users to track the status of defects"@en .
+
+is2020k:TaggingAndLabeling a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Tagging and labeling to align code changes with features"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of tagging and labeling to align code changes with features."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Tagging and labeling to align code changes with features"@en .
+
+is2020k:TechnicalDebtAndSecurityDesign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Relationship between technical debt and security design"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the relationship between technical debt and security design."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Relationship between technical debt and security design"@en .
+
+is2020k:TestDrivenDevelopment a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Test-Driven Development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of test-driven development."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Test-Driven Development"@en .
+
+is2020k:TestingPyramid a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "A linked and integrative 'pyramid' of testing that cascades from manual testing to integration testing, to unit testing"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of a linked and integrative testing pyramid from manual to integration to unit testing."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "A linked and integrative pyramid of testing"@en .
+
+is2020k:UMLBehavioralDiagrams a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use UML behavioral diagrams to realize and validate logical design"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using UML behavioral diagrams to realize and validate logical design."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Use UML behavioral diagrams to realize and validate logical design"@en .
+
+is2020k:UMLStructuralDiagrams a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use UML structural diagrams to realize and validate object-oriented module and library design"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using UML structural diagrams to realize and validate object-oriented module and library design."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Use UML structural diagrams to realize and validate object-oriented module and library design"@en .
+
+is2020k:UnitTestingLibraryOrHarness a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use and familiarity with at least one unit testing library or harness"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge and use of at least one unit testing library or harness."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Use and familiarity with at least one unit testing library or harness"@en .
+
+is2020k:UseOfAtLeastOneORM a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use and familiarity with at least one O/RM implementation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge and use of at least one ORM implementation."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Use and familiarity with at least one O/RM implementation"@en .
+
+is2020k:UseOfAtLeastOneVCS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use and familiarity with at least one VCS such as Git, SVN, Mercurial, CVS, etc."@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge and use of at least one version control system such as Git, SVN, Mercurial, or CVS."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Use and familiarity with at least one VCS such as Git, SVN, Mercurial, CVS, etc."@en .
+
+is2020k:UserInteractiveAcceptanceTesting a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Define and track user-interactive acceptance testing"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of defining and tracking user-interactive acceptance testing."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Define and track user-interactive acceptance testing"@en .
+
+is2020k:VCSAsTransactionSystem a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Version control acts as a transaction system with ACID properties"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge that version control acts as a transaction system with ACID properties."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Version control acts as a transaction system with ACID properties"@en .
+
+is2020k:VarietyOfSDLCModels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Appreciation for the variety of models that describe the flow and evolution of the SDLC in practice"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the variety of models that describe the flow and evolution of the SDLC in practice."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Appreciation for the variety of models that describe the flow and evolution of the SDLC in practice"@en .
+
+is2020k:VersionControlSystemsGraphStructure a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Version Control Systems (VCS) represent a graph structure of the changes, permutations, and state of the software codebase that constitutes the necessary instructions for system realization"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge that version control systems represent a graph structure of changes, permutations, and state of the software codebase."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Version Control Systems (VCS) represent a graph structure of the changes, permutations, and state of the software codebase"@en .
+
+is2020k:WaterfallModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Articulate and implement a Waterfall model understanding the assumptions, advantages, and disadvantages of utilizing this model methodologically"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of articulating and implementing a Waterfall model, including its assumptions, advantages, and disadvantages."@en ;
+    skos:inScheme is2020k:IS2020ISPracticumKnowledgeScheme ;
+    skos:prefLabel "Articulate and implement a Waterfall model understanding the assumptions, advantages, and disadvantages of utilizing this model methodologically"@en .
+
+is2020c:Competence_ISPRA_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply the SDLC"@en ;
+    dcterms:identifier "ISPRA-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:PhasesOfTheSDLC,
+        is2020k:SequentialNatureOfTheSDLC,
+        is2020k:VarietyOfSDLCModels ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_1_01,
+        is2020c:KS_ISPRA_1_02,
+        is2020c:KS_ISPRA_1_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply the SDLC"@en ;
+    skos:prefLabel "IS Practicum Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_1 .
+
+is2020c:Competence_ISPRA_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize tools for software process management"@en ;
+    dcterms:identifier "ISPRA-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:EstimationValidationVelocity,
+        is2020k:ExampleSoftwareProcessTools,
+        is2020k:SoftwareProcessManagementTools ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_3_01,
+        is2020c:KS_ISPRA_3_02,
+        is2020c:KS_ISPRA_3_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize tools for software process management"@en ;
+    skos:prefLabel "IS Practicum Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_3 .
+
+is2020c:Competence_ISPRA_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize tools for team collaboration and communication"@en ;
+    dcterms:identifier "ISPRA-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:meticulous,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ExampleTeamCollaborationTool,
+        is2020k:LinksToVersionControlCommits,
+        is2020k:RealTimeCommunicationLinkedToManagement ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_5_01,
+        is2020c:KS_ISPRA_5_02,
+        is2020c:KS_ISPRA_5_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize tools for team collaboration and communication"@en ;
+    skos:prefLabel "IS Practicum Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_5 .
+
+is2020c:Competence_ISPRA_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize tools for client collaboration and communication"@en ;
+    dcterms:identifier "ISPRA-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:proactive,
+        ontoksd:professional,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ManageFeaturesPersonasUseCasesStories,
+        is2020k:ProvisionsForTestAndValidationDeployments,
+        is2020k:UserInteractiveAcceptanceTesting ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_6_01,
+        is2020c:KS_ISPRA_6_02,
+        is2020c:KS_ISPRA_6_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize tools for client collaboration and communication"@en ;
+    skos:prefLabel "IS Practicum Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_6 .
+
+is2020c:Source_ISPRA_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 181 (PDF page 182)."@en ;
+    dcterms:description "Competency: Align and utilize UML, ERD, and Class/Object Design Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_9 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 181 (PDF page 182)."@en ;
+    dcterms:description "Competency: Apply Object-Oriented principles in system/software design and implementation Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-9"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISPRA_10 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize Object-Relational Mapping tools"@en ;
+    dcterms:identifier "ISPRA-10"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DataAndObjectStructuresInRuntimeMemory,
+        is2020k:ORMToolsAsBridge,
+        is2020k:PersistenceStrategies,
+        is2020k:UseOfAtLeastOneORM ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_10_01,
+        is2020c:KS_ISPRA_10_02,
+        is2020c:KS_ISPRA_10_03,
+        is2020c:KS_ISPRA_10_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize Object-Relational Mapping tools"@en ;
+    skos:prefLabel "IS Practicum Competency 10"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_10 .
+
+is2020c:Competence_ISPRA_11 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply principles of systems delivery and maintenance"@en ;
+    dcterms:identifier "ISPRA-11"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ContinuousIntegrationAndDelivery,
+        is2020k:PlatformAndInfrastructureAsAService,
+        is2020k:StagedDevelopmentEnvironments,
+        is2020k:TestDrivenDevelopment ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_11_01,
+        is2020c:KS_ISPRA_11_02,
+        is2020c:KS_ISPRA_11_03,
+        is2020c:KS_ISPRA_11_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply principles of systems delivery and maintenance"@en ;
+    skos:prefLabel "IS Practicum Competency 11"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_11 .
+
+is2020c:Source_ISPRA_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 177 (PDF page 178)."@en ;
+    dcterms:description "Competency: Apply the SDLC Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISPRA-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 178 (PDF page 179)."@en ;
+    dcterms:description "Competency: Utilize tools for software process management Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 179 (PDF page 180)."@en ;
+    dcterms:description "Competency: Utilize tools for team collaboration and communication Key dispositions: Meticulous, Collaborative, Self-Directed"@en ;
+    dcterms:identifier "ISPRA-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 180 (PDF page 181)."@en ;
+    dcterms:description "Competency: Utilize tools for client collaboration and communication Key dispositions: Self-Directed, Professional, Proactive"@en ;
+    dcterms:identifier "ISPRA-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISPRA_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize a systems/software development methodology"@en ;
+    dcterms:identifier "ISPRA-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:AgileModel,
+        is2020k:IterativeWaterfallModel,
+        is2020k:RapidApplicationDevelopmentModel,
+        is2020k:SpiralModel,
+        is2020k:WaterfallModel ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_2_01,
+        is2020c:KS_ISPRA_2_02,
+        is2020c:KS_ISPRA_2_03,
+        is2020c:KS_ISPRA_2_04,
+        is2020c:KS_ISPRA_2_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize a systems/software development methodology"@en ;
+    skos:prefLabel "IS Practicum Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_2 .
+
+is2020c:Source_ISPRA_10 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 181 (PDF page 182)."@en ;
+    dcterms:description "Competency: Utilize Object-Relational Mapping tools Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-10"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_11 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 182 (PDF page 183)."@en ;
+    dcterms:description "Competency: Apply principles of systems delivery and maintenance Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-11"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISPRA_12 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize upfront design for system security"@en ;
+    dcterms:identifier "ISPRA-12"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:proactive,
+        ontoksd:professional,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AssumeEdgeCasesAndVulnerabilities,
+        is2020k:CodeTechniquesForSecurity,
+        is2020k:DeploymentTechniquesForSecurity,
+        is2020k:KeepDeploymentEnvironmentUpToDate,
+        is2020k:KeepSoftwareDependenciesUpToDate,
+        is2020k:TechnicalDebtAndSecurityDesign ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_12_01,
+        is2020c:KS_ISPRA_12_02,
+        is2020c:KS_ISPRA_12_03,
+        is2020c:KS_ISPRA_12_04,
+        is2020c:KS_ISPRA_12_05,
+        is2020c:KS_ISPRA_12_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize upfront design for system security"@en ;
+    skos:prefLabel "IS Practicum Competency 12"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_12 .
+
+is2020c:Competence_ISPRA_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize tools for code and resource version control"@en ;
+    dcterms:identifier "ISPRA-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AtomicOperationsInVCS,
+        is2020k:BranchingAndMerging,
+        is2020k:TaggingAndLabeling,
+        is2020k:UseOfAtLeastOneVCS,
+        is2020k:VCSAsTransactionSystem,
+        is2020k:VersionControlSystemsGraphStructure ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_4_01,
+        is2020c:KS_ISPRA_4_02,
+        is2020c:KS_ISPRA_4_03,
+        is2020c:KS_ISPRA_4_04,
+        is2020c:KS_ISPRA_4_05,
+        is2020c:KS_ISPRA_4_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize tools for code and resource version control"@en ;
+    skos:prefLabel "IS Practicum Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_4 .
+
+is2020c:Competence_ISPRA_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize tools for testing (unit, integration, acceptance)"@en ;
+    dcterms:identifier "ISPRA-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:IntegrationWithVCSAndFeaturesManagement,
+        is2020k:RegressionTesting,
+        is2020k:SystemForIdentifyingSoftwareDefects,
+        is2020k:SystemForTrackingDefectStatus,
+        is2020k:TestingPyramid,
+        is2020k:UnitTestingLibraryOrHarness ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISPRA_7_01,
+        is2020c:KS_ISPRA_7_02,
+        is2020c:KS_ISPRA_7_03,
+        is2020c:KS_ISPRA_7_04,
+        is2020c:KS_ISPRA_7_05,
+        is2020c:KS_ISPRA_7_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize tools for testing (unit, integration, acceptance)"@en ;
+    skos:prefLabel "IS Practicum Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISPRA_7 .
+
+is2020c:Source_ISPRA_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 177 (PDF page 178)."@en ;
+    dcterms:description "Competency: Utilize a systems/software development methodology Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISPRA-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_12 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 182 (PDF page 183)."@en ;
+    dcterms:description "Competency: Utilize upfront design for system security Key dispositions: Purpose-driven, Professional, Proactive"@en ;
+    dcterms:identifier "ISPRA-12"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 179 (PDF page 180)."@en ;
+    dcterms:description "Competency: Utilize tools for code and resource version control Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISPRA_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 180 (PDF page 181)."@en ;
+    dcterms:description "Competency: Utilize tools for testing (unit, integration, acceptance) Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISPRA-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-is-practicum-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 IS Practicum competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.6.2 Competency Area – IS Practicum."@en .
+
+is2020k:IS2020ISPracticumKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 IS Practicum Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IS Practicum competency area."@en ;
+    skos:prefLabel "IS2020 IS Practicum Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

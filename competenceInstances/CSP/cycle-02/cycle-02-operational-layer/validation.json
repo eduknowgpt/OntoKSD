@@ -1,0 +1,4480 @@
+{
+  "checks_passed": 1116,
+  "all_passed": true,
+  "course_specifications": 15,
+  "operational_scheme": "[0,7) Novice; [7,9) Competent; [9,10] Advanced",
+  "query_results": {
+    "01 - Course expectations.rq": 15,
+    "02 - Compare documented and operational intervals.rq": 14,
+    "03 - Mandatory course expectation with only explicit optional activations.rq": 1,
+    "04 - Below-target evidenced records in the same scheme.rq": 0
+  },
+  "reasoning": "OWL RL over current schema and corrected cycle-01/cycle-02 dependencies; HermiT/Pellet not executed.",
+  "fixtures": "Comparison-query fixtures used only during verification; not delivered as learner data.",
+  "checks": [
+    {
+      "check": "INSERT-only second_cycle_shared_proficiency_scheme.rq",
+      "passed": true
+    },
+    {
+      "check": "Idempotent second_cycle_shared_proficiency_scheme.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only task201_204_course_layer.rq",
+      "passed": true
+    },
+    {
+      "check": "Idempotent task201_204_course_layer.rq",
+      "passed": true
+    },
+    {
+      "check": "Load order independence",
+      "passed": true
+    },
+    {
+      "check": "Turtle equivalent",
+      "passed": true
+    },
+    {
+      "check": "No second legacy course created",
+      "passed": true
+    },
+    {
+      "check": "Eight existing units",
+      "passed": true
+    },
+    {
+      "check": "AS_Task203 resolves",
+      "passed": true
+    },
+    {
+      "check": "AS_Task202 resolves",
+      "passed": true
+    },
+    {
+      "check": "LT_Task203 resolves",
+      "passed": true
+    },
+    {
+      "check": "LT_Task202 resolves",
+      "passed": true
+    },
+    {
+      "check": "AS_Task204 resolves",
+      "passed": true
+    },
+    {
+      "check": "LT_Task201 resolves",
+      "passed": true
+    },
+    {
+      "check": "AS_Task201 resolves",
+      "passed": true
+    },
+    {
+      "check": "LT_Task204 resolves",
+      "passed": true
+    },
+    {
+      "check": "15 course specifications",
+      "passed": true
+    },
+    {
+      "check": "Course set matches active cycle set",
+      "passed": true
+    },
+    {
+      "check": "TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification course cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification competence cardinality",
+      "passed": true
+    },
+    {
+      "check": "TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification mandatory Boolean",
+      "passed": true
+    },
+    {
+      "check": "TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification minimum and scheme",
+      "passed": true
+    },
+    {
+      "check": "Scale exact bounds",
+      "passed": true
+    },
+    {
+      "check": "No invented step",
+      "passed": true
+    },
+    {
+      "check": "Three intervals and levels",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Competent structure",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Competent decimal lowerBound",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Competent decimal upperBound",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Novice structure",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Novice decimal lowerBound",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Novice decimal upperBound",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Advanced structure",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Advanced decimal lowerBound",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_Interval_Advanced decimal upperBound",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_NoviceLevel ordinal",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_AdvancedLevel ordinal",
+      "passed": true
+    },
+    {
+      "check": "SecondCycle_CompetentLevel ordinal",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 0.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 1.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 2.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 3.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 4.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 5.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 6.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 7.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 8.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.01",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.02",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.03",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.04",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.05",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.06",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.07",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.08",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.09",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.1",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.11",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.12",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.13",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.14",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.15",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.16",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.17",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.18",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.19",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.2",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.21",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.22",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.23",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.24",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.25",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.26",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.27",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.28",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.29",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.3",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.31",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.32",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.33",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.34",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.35",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.36",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.37",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.38",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.39",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.4",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.41",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.42",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.43",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.44",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.45",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.46",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.47",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.48",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.49",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.5",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.51",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.52",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.53",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.54",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.55",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.56",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.57",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.58",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.59",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.6",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.61",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.62",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.63",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.64",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.65",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.66",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.67",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.68",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.69",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.7",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.71",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.72",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.73",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.74",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.75",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.76",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.77",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.78",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.79",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.8",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.81",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.82",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.83",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.84",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.85",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.86",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.87",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.88",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.89",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.9",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.91",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.92",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.93",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.94",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.95",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.96",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.97",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.98",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 9.99",
+      "passed": true
+    },
+    {
+      "check": "Unique interval for 10",
+      "passed": true
+    },
+    {
+      "check": "Reject out-of-range -0.01",
+      "passed": true
+    },
+    {
+      "check": "Reject out-of-range 10.01",
+      "passed": true
+    },
+    {
+      "check": "Boundary policy 0",
+      "passed": true
+    },
+    {
+      "check": "Boundary policy 6.70",
+      "passed": true
+    },
+    {
+      "check": "Boundary policy 7",
+      "passed": true
+    },
+    {
+      "check": "Boundary policy 8.99",
+      "passed": true
+    },
+    {
+      "check": "Boundary policy 9",
+      "passed": true
+    },
+    {
+      "check": "Boundary policy 10",
+      "passed": true
+    },
+    {
+      "check": "Documentary Task201 scheme unchanged",
+      "passed": true
+    },
+    {
+      "check": "No occurrence-only scheme property misuse",
+      "passed": true
+    },
+    {
+      "check": "No score or learner evidence manufactured",
+      "passed": true
+    },
+    {
+      "check": "Usage query counts",
+      "passed": true
+    },
+    {
+      "check": "Mixed optional/mandatory status not classified as only optional",
+      "passed": true
+    },
+    {
+      "check": "Unspecified status not classified as optional",
+      "passed": true
+    },
+    {
+      "check": "Below-target same-scheme fixture",
+      "passed": true
+    },
+    {
+      "check": "Competent meets minimum",
+      "passed": true
+    },
+    {
+      "check": "Advanced meets minimum",
+      "passed": true
+    },
+    {
+      "check": "Cross-scheme record excluded",
+      "passed": true
+    },
+    {
+      "check": "Ambiguous order excluded",
+      "passed": true
+    },
+    {
+      "check": "Specifications inferred as relators",
+      "passed": true
+    },
+    {
+      "check": "Assessments not inferred as occurrences",
+      "passed": true
+    },
+    {
+      "check": "No disjointness conflicts",
+      "passed": true
+    }
+  ]
+}

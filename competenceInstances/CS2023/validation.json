@@ -1,0 +1,2132 @@
+{
+  "checks_passed": 523,
+  "all_passed": true,
+  "insert_files": 23,
+  "instance_triples": 3121,
+  "summary": {
+    "competences": 22,
+    "knowledge_skill_pairs": 101,
+    "unit_knowledge": 67,
+    "task_elements": 163
+  },
+  "source_levels_without_local_pair_assignment": [
+    {
+      "example": "Software4",
+      "unallocated_source_levels": [
+        "Explain"
+      ]
+    },
+    {
+      "example": "Systems2",
+      "unallocated_source_levels": [
+        "Explain"
+      ]
+    }
+  ],
+  "reasoning": "OWL RL closure; not a full OWL DL consistency check with Pellet or HermiT",
+  "checks": [
+    {
+      "check": "INSERT-only 00 - KnowledgeUnitContent.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications1.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications2.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications3.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications4.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications5.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications6.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications7.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications8.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Applications9.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Software1.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Software2.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Software3.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Software4.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_Software5.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System1.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System2.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System3.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System4.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System5.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System6.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System7.rq",
+      "passed": true
+    },
+    {
+      "check": "INSERT-only Competence CS2023_System8.rq",
+      "passed": true
+    },
+    {
+      "check": "Re-running all insertions adds no triples",
+      "passed": true
+    },
+    {
+      "check": "Insertion order independence",
+      "passed": true
+    },
+    {
+      "check": "Software1 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Software1 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Software1 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Software1 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Software1 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Software1 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Software1 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Software1 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Software1_SDF_Practices_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software1_SDF_Practices_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Software1 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Software1 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Software2 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Software2 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Software2 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Software2 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Software2 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Software2 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Software2 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Software2 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Software2_SDF_Practices_3_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software2_SDF_Practices_3_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software2_SE_Teamwork_3_b_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software2_SE_Teamwork_3_b_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software2_SE_Validation_10_a_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software2_SE_Validation_10_a_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Software2 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Software2 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Software3 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Software3 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Software3 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Software3 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Software3 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Software3 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Software3 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Software3 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Software3_SE_Teamwork_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software3_SE_Teamwork_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software3_SE_Teamwork_5_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software3_SE_Teamwork_5_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Software3 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Software3 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Software4 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Software4 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Software4 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Software4 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Software4 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Software4 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Software4 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Software4 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Constructs_2_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Constructs_2_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Event_Driven_3_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Event_Driven_3_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Functional_3_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Functional_3_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Logic_13_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Logic_13_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_OOP_2_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_OOP_2_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Pragmatics_3_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Pragmatics_3_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Translation_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Translation_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Types_18_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_FPL_Types_18_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_SPD_Embedded_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software4_SPD_Embedded_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Software4 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Software4 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Software5 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Software5 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Software5 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Software5 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Software5 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Software5 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Software5 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Software5 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Software5_FPL_Types_18_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Software5_FPL_Types_18_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Software5 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Software5 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems1 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems1 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems1 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems1 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems1 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems1 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems1 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems1 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems1_AR_Heterogeneity_3_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems1_AR_Heterogeneity_3_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems1_PDC_Programs_3_e_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems1_PDC_Programs_3_e_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems1_SF_Design_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems1_SF_Design_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems1 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems1 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems2 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems2 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems2 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems2 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems2 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems2 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems2 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems2 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_DM_Data_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_DM_Data_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEC_Foundations_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEC_Foundations_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Context_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Context_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_DEIA_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_DEIA_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Ethical_Analysis_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Ethical_Analysis_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Privacy_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Privacy_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Professional_Ethics_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Professional_Ethics_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Security_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems2_SEP_Security_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems2 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems2 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems3 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems3 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems3 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems3 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems3 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems3 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems3 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems3 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_DM_Data_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_DM_Data_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_DM_Processing_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_DM_Processing_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_DM_Relational_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_DM_Relational_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEC_Foundations_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEC_Foundations_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEP_Privacy_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEP_Privacy_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEP_Professional_Ethics_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEP_Professional_Ethics_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEP_Security_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems3_SEP_Security_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems3 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems3 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems4 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems4 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems4 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems4 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems4 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems4 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems4 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems4 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Core_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Core_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Data_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Data_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Internals_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Internals_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Modeling_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Modeling_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_NoSQL_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_NoSQL_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Relational_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_DM_Relational_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEC_Foundations_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEC_Foundations_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Context_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Context_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_DEIA_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_DEIA_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Ethical_Analysis_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Ethical_Analysis_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Privacy_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Privacy_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Professional_Ethics_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Professional_Ethics_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Security_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems4_SEP_Security_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems4 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems4 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems5 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems5 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems5 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems5 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems5 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems5 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems5 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems5 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems5_NC_Applications_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems5_NC_Applications_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems5_NC_Routing_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems5_NC_Routing_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems5 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems5 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems6 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems6 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems6 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems6 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems6 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems6 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems6 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems6 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_AR_Assembly_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_AR_Assembly_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_FPL_Scripting_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_FPL_Scripting_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Concurrency_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Concurrency_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Memory_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Memory_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Principles_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Principles_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Process_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Process_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Protection_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Protection_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Purpose_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Purpose_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Scheduling_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems6_OS_Scheduling_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems6 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems6 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems7 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems7 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems7 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems7 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems7 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems7 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems7 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems7 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems7_FPL_Parallel_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems7_FPL_Parallel_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems7_PDC_Evaluation_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems7_PDC_Evaluation_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems7 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems7 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Systems8 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Systems8 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Systems8 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Systems8 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Systems8 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Systems8 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Systems8 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Systems8 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Design_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Design_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Evaluation_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Evaluation_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Overview_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Overview_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Performance_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Systems8_SF_Performance_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Systems8 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Systems8 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications1 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications1 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications1 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications1 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications1 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications1 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications1 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications1 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications1_AI_KRR_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications1_AI_KRR_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications1_AI_Search_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications1_AI_Search_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications1 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications1 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications2 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications2 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications2 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications2 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications2 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications2 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications2 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications2 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications2_AI_ML_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications2_AI_ML_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications2_AI_SEP_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications2_AI_SEP_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications2 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications2 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications3 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications3 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications3 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications3 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications3 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications3 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications3 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications3 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications3_AI_ML_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications3_AI_ML_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications3_AI_SEP_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications3_AI_SEP_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications3 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications3 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications4 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications4 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications4 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications4 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications4 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications4 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications4 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications4 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_GIT_Fundamentals_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_GIT_Fundamentals_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_GIT_Rendering_1_Apply exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_GIT_Rendering_1_Apply types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_GIT_Visualization_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_GIT_Visualization_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_HCI_Design_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_HCI_Design_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_HCI_User_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications4_HCI_User_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications4 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications4 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications5 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications5 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications5 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications5 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications5 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications5 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications5 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications5 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_Accessibility_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_Accessibility_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_Design_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_Design_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_Evaluation_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_Evaluation_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_SEP_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_SEP_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_User_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications5_HCI_User_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications5 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications5 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications6 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications6 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications6 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications6 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications6 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications6 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications6 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications6 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_Accessibility_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_Accessibility_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_Accountability_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_Accountability_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_Evaluation_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_Evaluation_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_User_1_Evaluate exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications6_HCI_User_1_Evaluate types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications6 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications6 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications7 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications7 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications7 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications7 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications7 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications7 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications7 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications7 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_Communication_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_Communication_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_DEIA_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_DEIA_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_IP_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_IP_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_Privacy_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_Privacy_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_Professional_Ethics_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications7_SEP_Professional_Ethics_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications7 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications7 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications8 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications8 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications8 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications8 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications8 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications8 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications8 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications8 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications8_SE_Tools_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications8_SE_Tools_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications8_SPD_Common_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications8_SPD_Common_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications8_SPD_Mobile_1_Explain exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications8_SPD_Mobile_1_Explain types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications8 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications8 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Applications9 preserves resource IRIs",
+      "passed": true
+    },
+    {
+      "check": "Applications9 pattern and explicit class",
+      "passed": true
+    },
+    {
+      "check": "Applications9 exact source statement",
+      "passed": true
+    },
+    {
+      "check": "Applications9 one reference Task",
+      "passed": true
+    },
+    {
+      "check": "Applications9 exact source task",
+      "passed": true
+    },
+    {
+      "check": "Applications9 all source units and levels preserved",
+      "passed": true
+    },
+    {
+      "check": "Applications9 dispositions match report",
+      "passed": true
+    },
+    {
+      "check": "Applications9 disposition vocabulary references resolve",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_AR_Performance_Energy_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_AR_Performance_Energy_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_NC_Security_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_NC_Security_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_OS_Protection_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_OS_Protection_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SEP_Privacy_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SEP_Privacy_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SE_Design_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SE_Design_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SE_Tools_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SE_Tools_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SF_Security_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SF_Security_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SPD_Common_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SPD_Common_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SPD_Mobile_1_Develop exact pair cardinalities",
+      "passed": true
+    },
+    {
+      "check": "KS_Applications9_SPD_Mobile_1_Develop types and vocabulary references",
+      "passed": true
+    },
+    {
+      "check": "Applications9 source unit coverage",
+      "passed": true
+    },
+    {
+      "check": "Applications9 pairing levels drawn from source",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_DEIA",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_HCI_Accountability",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Pragmatics",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_Context",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Translation",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Event_Driven",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SF_Evaluation",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_IP",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_PDC_Evaluation",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SE_Teamwork",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Parallel",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_Internals",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SPD_Embedded",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Concurrency",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SPD_Mobile",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Scheduling",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Functional",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Memory",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Process",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SF_Design",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Scripting",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Principles",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_Professional_Ethics",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Protection",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_GIT_Fundamentals",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SDF_Practices",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_HCI_Design",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SPD_Common",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEC_Foundations",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AI_ML",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SE_Validation",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_OOP",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_OS_Purpose",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_NoSQL",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AR_Assembly",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AI_SEP",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AI_KRR",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_NC_Applications",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_HCI_SEP",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_HCI_Evaluation",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SF_Performance",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_Security",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_PDC_Programs",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_Core",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_Relational",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_HCI_Accessibility",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_GIT_Rendering",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SF_Security",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AR_Performance_Energy",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_NC_Security",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AI_Search",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_Ethical_Analysis",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_Processing",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_Communication",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_AR_Heterogeneity",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SEP_Privacy",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SE_Design",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_HCI_User",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_Modeling",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_GIT_Visualization",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_DM_Data",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Types",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SE_Tools",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_SF_Overview",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_NC_Routing",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Constructs",
+      "passed": true
+    },
+    {
+      "check": "Unit content resolves KnowledgeUnitContent_FPL_Logic",
+      "passed": true
+    },
+    {
+      "check": "No obsolete property",
+      "passed": true
+    },
+    {
+      "check": "No wrong level namespace",
+      "passed": true
+    },
+    {
+      "check": "No invented ontology properties",
+      "passed": true
+    },
+    {
+      "check": "Source records and ontology instances separated",
+      "passed": true
+    },
+    {
+      "check": "All competences inferred in CS2023 pattern",
+      "passed": true
+    },
+    {
+      "check": "Generic constituent links inferred",
+      "passed": true
+    },
+    {
+      "check": "Inverse task and constituent links",
+      "passed": true
+    },
+    {
+      "check": "No inferred disjoint-class conflicts",
+      "passed": true
+    },
+    {
+      "check": "No named individual inferred owl:Nothing",
+      "passed": true
+    }
+  ],
+  "input_sha256": {
+    "source.zip": "c6aea71b79fcc3365e28972e349655af6bb29fd2a699d52b9b9a6b72b8b555e4",
+    "ontoksd.ttl": "bd65ede578b5524a0102a05c590ef55c756353bab7d3bcc15fcc6f64300563e4",
+    "bloom.ttl": "3d4b0f0a910cd0d25c2cb5f60614eb98000da739f9f37d9ca6e12d224954385c",
+    "bok.ttl": "3f077cfcb648974f0823ec398b62f3488678f1addb0b6348de3c8c6776256cd0",
+    "dispositions.rq": "b900aef3af0b7cb8349361cbe45f3520c5391e321e4a33330812a6ed37bd6473"
+  },
+  "query_results": {
+    "01 - Competence requirements.rq": 101,
+    "02 - Source levels without pair assignments.rq": 2
+  }
+}

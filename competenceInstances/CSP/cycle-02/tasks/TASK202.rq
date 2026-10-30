@@ -1,0 +1,244 @@
+# Cycle-02 Task202 and its adjusted instructional/assessment associations.
+# INSERT-only incremental cycle-02 instance data; see README.md for dependencies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CSP_Cycle02_Task202_C13_HistoricalAssociation a prov:Entity ;
+    dcterms:description "C13 was associated with the initial/reviewed Task202 specification. The adjusted set uses C13.01; C13 remains the historical base and is not an additional current task target."@en ;
+    dcterms:references ontoksd:C13 ;
+    dcterms:relation ontoksd:C13_01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA simulation. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA simulation. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C12_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA modeling. "@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C12_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA modeling. "@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C13_01_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Interpretation of formal grammar-based rules. Created by controlled specialization of C13. Understand/Analyze and the detailed disposition list are retained."@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Understanding ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:mediatesCompetence ontoksd:C13_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C13_01_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Interpretation of formal grammar-based rules. Created by controlled specialization of C13. Understand/Analyze and the detailed disposition list are retained."@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Understanding ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:mediatesCompetence ontoksd:C13_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Formal model justification. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:CA_Task202_C14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Formal model justification. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:TA_Task202_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task202_interpret a ontoksd:TaskActivity ;
+    rdfs:label "interpret"@en .
+
+ontoksd:TA_Task202_justify a ontoksd:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ontoksd:TA_Task202_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TA_Task202_validate a ontoksd:TaskActivity ;
+    rdfs:label "validate"@en .
+
+ontoksd:TC_Task202_1 a ontoksd:TaskComponent ;
+    rdfs:label "Team-composition control module"@en .
+
+ontoksd:TC_Task202_2 a ontoksd:TaskComponent ;
+    rdfs:label "Pushdown automaton representation"@en .
+
+ontoksd:TC_Task202_3 a ontoksd:TaskComponent ;
+    rdfs:label "Formal team-generation rules"@en .
+
+ontoksd:TCons_Task202_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Check Vi >= ni * NVi with ni > 0 for each event type. Equality satisfies the requirement."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:TCons_Task202_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Identify team members from location, unique identification and volunteer-status signals; alert the base when the ratio is not satisfied."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:TCons_Task202_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Adopt the documented memory-based instructional model; do not treat the ratio alone as a proof that every bounded encoding excludes finite-state computation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:TCons_Task202_4 a ontoksd:TaskConstraint ;
+    rdfs:label "Provide surveillance/team-control JFLAP modules and an SBC report with operations, at least two examples, and the documentation/budgeting discussion."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:AC_Task202 a ontoksd:AcquisitionContext ;
+    rdfs:label "Team Control pedagogical setting"@en ;
+    dcterms:identifier "Task202-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task202_Reference .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task202_Reference .
+
+ontoksd:C12 ontoksd:hasTask ontoksd:Task202_Reference .
+
+ontoksd:C14 ontoksd:hasTask ontoksd:Task202_Reference .
+
+ontoksd:C13_01 ontoksd:hasTask ontoksd:Task202_Reference .
+
+ontoksd:AS_Task202 a ontoksd:Assessment ;
+    rdfs:label "Team Control assessment specification"@en ;
+    dcterms:identifier "Task202-Assessment" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task202 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task202_C03_Assessment,
+        ontoksd:CA_Task202_C05_Assessment,
+        ontoksd:CA_Task202_C12_Assessment,
+        ontoksd:CA_Task202_C13_01_Assessment,
+        ontoksd:CA_Task202_C14_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task202 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:Task202_Reference a ontoksd:Task ;
+    rdfs:label "Team Control reference performance"@en ;
+    dcterms:identifier "Task202-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task202_document,
+        ontoksd:TA_Task202_interpret,
+        ontoksd:TA_Task202_justify,
+        ontoksd:TA_Task202_model,
+        ontoksd:TA_Task202_validate ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task202_1,
+        ontoksd:TC_Task202_2,
+        ontoksd:TC_Task202_3 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task202_1,
+        ontoksd:TCons_Task202_2,
+        ontoksd:TCons_Task202_3,
+        ontoksd:TCons_Task202_4 ;
+    ontoksd:hasTaskStatement "Model, simulate and document memory-based control of volunteer/non-volunteer team composition, checking Vi >= ni * NVi for each event type, where ni > 0, and explaining the adopted PDA/grammar representation."@en ;
+    ontoksd:isTaskOf ontoksd:C03,
+        ontoksd:C05,
+        ontoksd:C12,
+        ontoksd:C13_01,
+        ontoksd:C14 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ontoksd:LT_Task202 a ontoksd:LearningTask ;
+    rdfs:label "Team Control learning task"@en ;
+    dcterms:identifier "Task202-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task202 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task202_C03_Learning,
+        ontoksd:CA_Task202_C05_Learning,
+        ontoksd:CA_Task202_C12_Learning,
+        ontoksd:CA_Task202_C13_01_Learning,
+        ontoksd:CA_Task202_C14_Learning ;
+    ontoksd:hasInstructionalStatement "Check the event-specific team-composition regulation Vi >= ni * NVi, with ni > 0; issue an alert when it is violated."@en,
+        "Consider extension of the surveillance module or communicating parallel modules, and justify representation/design choices."@en,
+        "Develop and simulate the memory-based control model in JFLAP, explaining its grammar/PDA relationships and model adequacy."@en,
+        "Provide JFLAP modules and an SBC-format report with all operations, at least two examples and the requested documentation and budgeting analysis."@en,
+        "Use PBL, whiteboard versions and a shared logbook to document the team process."@en,
+        "Use the members location, unique identification and volunteer/non-volunteer signals as model inputs."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_Logbook,
+        ontoksd:CSPResource_SBC,
+        ontoksd:CSPResource_Whiteboard ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+}

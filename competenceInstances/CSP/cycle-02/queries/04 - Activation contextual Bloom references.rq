@@ -1,0 +1,9 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?activation ?competence ?contextualLevel
+WHERE {
+ ?activation a ontoksd:CompetenceActivation ;
+  ontoksd:mediatesCompetence ?competence ; dcterms:references ?contextualLevel .
+ ?contextualLevel a <http://purl.org/edu/bloom#CC2020SkillLevel> .
+} ORDER BY ?activation ?contextualLevel

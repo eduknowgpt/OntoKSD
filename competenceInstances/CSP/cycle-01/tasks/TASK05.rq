@@ -1,0 +1,496 @@
+# Reviewed CSP cycle-01 Task5
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task05_C05 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task05 Competence Activation — C05"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C05_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    rdfs:comment "Competence activation linking Task05 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task05."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C05_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C05_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C07_01 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task05 Competence Activation — C07.01"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C07_01_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    rdfs:comment "Competence activation linking Task05 assessment to competence C07.01. It indicates that developing integrated multi-agent solutions using Turing Machines is a core and mandatory target of the assessment."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C07_01_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Integrated Multi-Agent Solutions Using Turing Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C07_01_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C07_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C07_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Integrated Multi-Agent Solutions Using Turing Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C08_01 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task05 Competence Activation — C08.01"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C08_01_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C08_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    rdfs:comment "Competence activation linking Task05 assessment to competence C08.01. It indicates that analyzing the system-level adequacy of Turing Machine variants is a supporting but mandatory target for informed design decisions in the integrated architecture."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C08_01_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Analyze the System-Level Adequacy of Turing Machine Variants through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C08_01_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C08_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C08_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C08_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Analyze the System-Level Adequacy of Turing Machine Variants through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C09_01 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task05 Competence Activation — C09.01"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C09_01_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C09_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    rdfs:comment "Competence activation linking Task05 assessment to competence C09.01. It indicates that applying and coordinating Turing Machine variants in integrated architectures is a core and mandatory target in the architectural configuration of the system."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C09_01_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Apply and Coordinate Turing Machine Variants in Integrated Architectures through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C09_01_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C09_01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C09_01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C09_01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Apply and Coordinate Turing Machine Variants in Integrated Architectures through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C10 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task05 Competence Activation — C10"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C10_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    rdfs:comment "Competence activation linking Task05 assessment to competence C10. It indicates that testing Turing Machines using simulators is a core and mandatory target of the task."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C10_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test Turing Machines Using Simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:CA_Task05_C10_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task05_C10_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+ontoksd:CA_Task05_C10_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test Turing Machines Using Simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:ER_Task05_Logbook a ontoksd:EducationalResource ;
+    rdfs:label "Task05 logbook"@en ;
+    dcterms:description "Shared document used to record progress, meeting notes, decisions, and challenges encountered during the task."@en ;
+    dcterms:identifier "Task05-ER4"^^xsd:string ;
+    ontoksd:intendedUse "Traceability of collaborative work and process recording."^^xsd:string ;
+    rdfs:comment "Educational resource used to maintain traceability of the development process and collaborative work performed during Task05."@en .
+
+ontoksd:ER_Task05_PBLWhiteboard a ontoksd:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en ;
+    dcterms:description "Collaborative whiteboard used to document questions, facts, ideas or hypotheses, and actions throughout the PBL process."@en ;
+    dcterms:identifier "Task05-ER3"^^xsd:string ;
+    ontoksd:intendedUse "Process documentation and collaborative reasoning support."^^xsd:string ;
+    rdfs:comment "Educational resource used to structure and document collaborative reasoning during the development of the solution."@en .
+
+ontoksd:TA_Task05_ModelIntegrateAndValidateTMMultiAgentSystem a ontoksd:TaskActivity ;
+    rdfs:label "Model, integrate, simulate, validate, and document a multi-agent system using Turing Machines"@en ;
+    rdfs:comment "Core task activity of Task05. It represents the central activity through which learners analyze inter-robot requirements, revise previous modules, design an integrated Turing-Machine-based architecture, simulate the coordinated behavior, and document the resulting system."@en .
+
+ontoksd:TC_Task05_FarmerRobotIdentificationModule a ontoksd:TaskComponent ;
+    rdfs:label "Farmer Robot identification and signaling module"@en ;
+    rdfs:comment "Task component representing the enhanced Farmer Robot module responsible for herd-related identification and food-delivery signaling, including threshold input logic."@en .
+
+ontoksd:TC_Task05_FarmerRobotNavigationModule a ontoksd:TaskComponent ;
+    rdfs:label "Farmer Robot navigation module"@en ;
+    rdfs:comment "Task component representing the Farmer Robot navigation behavior within the integrated system."@en .
+
+ontoksd:TC_Task05_FeederRobotNavigationModule a ontoksd:TaskComponent ;
+    rdfs:label "Feeder Robot navigation module"@en ;
+    rdfs:comment "Task component representing the Feeder Robot navigation behavior driven by communicated path information."@en .
+
+ontoksd:TC_Task05_IntegratedTuringMachineArtifact a ontoksd:TaskComponent ;
+    rdfs:label "Integrated Turing Machine artifact"@en ;
+    rdfs:comment "Task component representing the unified Turing-Machine-based computational artifact covering integrated multi-agent behavior."@en .
+
+ontoksd:TC_Task05_PathEncodingAndCommunication a ontoksd:TaskComponent ;
+    rdfs:label "Path encoding and inter-robot communication"@en ;
+    rdfs:comment "Task component representing the encoding and communication of path information from the Farmer Robot to the Feeder Robot."@en .
+
+ontoksd:TC_Task05_TechnicalReport a ontoksd:TaskComponent ;
+    rdfs:label "Technical report"@en ;
+    rdfs:comment "Task component representing the structured technical report required to explain module interaction, tape and state design, coordination logic, and justification of design choices."@en .
+
+ontoksd:TCons_Task05_CommunicatePathToFeederRobot a ontoksd:TaskConstraint ;
+    rdfs:label "Communicate the path to the Feeder Robot"@en ;
+    rdfs:comment "Constraint stating that the Farmer Robot must communicate the path that the Feeder Robot should follow."@en .
+
+ontoksd:TCons_Task05_CoordinateMultipleAgents a ontoksd:TaskConstraint ;
+    rdfs:label "Coordinate Farmer Robot and Feeder Robot behaviors"@en ;
+    rdfs:comment "Constraint stating that the solution must coordinate the behavior of two interacting robotic agents."@en .
+
+ontoksd:TCons_Task05_ProcessDocumentation a ontoksd:TaskConstraint ;
+    rdfs:label "Document the process through whiteboard and logbook"@en ;
+    rdfs:comment "Constraint stating that the development process must be documented through PBL whiteboard versions and a shared logbook."@en .
+
+ontoksd:TCons_Task05_ReviseHerdThresholdInput a ontoksd:TaskConstraint ;
+    rdfs:label "Allow herd-threshold quantities as input"@en ;
+    rdfs:comment "Constraint stating that the previous signaling logic must be revised so that minimum herd quantities can be provided as machine inputs."@en .
+
+ontoksd:TCons_Task05_SimulatorExecution a ontoksd:TaskConstraint ;
+    rdfs:label "Be executable in JFLAP or equivalent simulator"@en ;
+    rdfs:comment "Constraint stating that the integrated Turing Machine artifact must be representable and executable in JFLAP or an equivalent simulation environment."@en .
+
+ontoksd:TCons_Task05_StandardizeDocumentationAndTraining a ontoksd:TaskConstraint ;
+    rdfs:label "Support standardization of documentation and training"@en ;
+    rdfs:comment "Constraint stating that the solution should support standardization goals related to system documentation and maintenance-team training."@en .
+
+ontoksd:TCons_Task05_UseUnifiedTuringMachineFormalism a ontoksd:TaskConstraint ;
+    rdfs:label "Use a unified Turing Machine formalism"@en ;
+    rdfs:comment "Constraint stating that the same abstract machine model must be used to implement the integrated robot modules."@en .
+
+ontoksd:AC_Task05_FarmerRobotAndFeederRobot a ontoksd:AcquisitionContext ;
+    rdfs:label "Task05 Acquisition Context — The Farmer Robot and the Feeder Robot"@en ;
+    dcterms:identifier "Task05-AC"^^xsd:string ;
+    rdfs:comment "Acquisition context associated with Task05. It represents the pedagogical setting in which learners engage in a problem-based learning activity focused on the integrated modeling, simulation, coordination, and documentation of Farmer Robot and Feeder Robot modules using Turing Machines as a unified formalism. This context includes collaborative work, use of JFLAP, and process documentation through whiteboard and logbook artifacts."@en .
+
+ontoksd:ER_Task05_JFLAP a ontoksd:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en ;
+    dcterms:description "Simulation environment used to test, inspect, and validate Turing Machine behavior."@en ;
+    dcterms:identifier "Task05-ER2"^^xsd:string ;
+    ontoksd:intendedUse "Simulation, execution, debugging, and validation of Turing Machine artifacts."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the simulator used for operational validation of integrated Turing-Machine models developed in Task05."@en .
+
+ontoksd:ER_Task05_ProblemStatement a ontoksd:EducationalResource ;
+    rdfs:label "Task05 problem statement"@en ;
+    dcterms:description "Problem statement describing the Farmer Robot and the Feeder Robot scenario, its requirements, and expected deliverables."@en ;
+    dcterms:identifier "Task05-ER1"^^xsd:string ;
+    ontoksd:intendedUse "Instructional framing and requirement interpretation for the learning task and the assessment."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the formal statement of Task05. It frames the problem, constraints, and deliverables guiding both instructional execution and assessment."@en .
+
+ontoksd:ER_Task05_SBCReportTemplate a ontoksd:EducationalResource ;
+    rdfs:label "SBC article-format report template"@en ;
+    dcterms:description "Template or normative reference for preparing the technical report required as a deliverable."@en ;
+    dcterms:identifier "Task05-ER5"^^xsd:string ;
+    ontoksd:intendedUse "Support for technical writing and report standardization."^^xsd:string ;
+    rdfs:comment "Educational resource supporting the preparation and standardization of the technical report associated with Task05."@en .
+
+ontoksd:Interval_Task05_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Task05 interval — Advanced"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task05_Advanced ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task05_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task05_0_10 ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 ;
+    rdfs:comment "Interval corresponding to the Advanced proficiency level in Task05."@en .
+
+ontoksd:Interval_Task05_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Task05 interval — Competent"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task05_Competent ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task05_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task05_0_10 ;
+    ontoksd:lowerBound 5.0 ;
+    ontoksd:upperBound 9.0 ;
+    rdfs:comment "Interval corresponding to the Competent proficiency level in Task05."@en .
+
+ontoksd:Interval_Task05_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Task05 interval — Novice"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task05_Novice ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task05_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task05_0_10 ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 5.0 ;
+    rdfs:comment "Interval corresponding to the Novice proficiency level in Task05."@en .
+
+ontoksd:PL_Task05_Advanced a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    dcterms:identifier "Task05-PL3"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int ;
+    rdfs:comment "Proficiency level representing integrated, analytically justified, or structurally enriched performance beyond baseline expectations in Task05."@en .
+
+ontoksd:PL_Task05_Competent a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    dcterms:identifier "Task05-PL2"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int ;
+    rdfs:comment "Proficiency level representing correct and coherent performance in the competencies associated with Task05."@en .
+
+ontoksd:PL_Task05_Novice a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    dcterms:identifier "Task05-PL1"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int ;
+    rdfs:comment "Proficiency level representing partial, inconsistent, or incorrect performance in the competencies associated with Task05."@en .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task05_FarmerRobotAndFeederRobot .
+
+ontoksd:C07_01 ontoksd:hasTask ontoksd:Task05_FarmerRobotAndFeederRobot .
+
+ontoksd:C08_01 ontoksd:hasTask ontoksd:Task05_FarmerRobotAndFeederRobot .
+
+ontoksd:C09_01 ontoksd:hasTask ontoksd:Task05_FarmerRobotAndFeederRobot .
+
+ontoksd:C10 ontoksd:hasTask ontoksd:Task05_FarmerRobotAndFeederRobot .
+
+ontoksd:PS_Task05_ProficiencyScheme a ontoksd:ProficiencyScheme ;
+    rdfs:label "Task05 proficiency scheme"@en ;
+    dcterms:identifier "Task05-PS"^^xsd:string ;
+    ontoksd:definesInterval ontoksd:Interval_Task05_Advanced,
+        ontoksd:Interval_Task05_Competent,
+        ontoksd:Interval_Task05_Novice ;
+    ontoksd:definesLevel ontoksd:PL_Task05_Advanced,
+        ontoksd:PL_Task05_Competent,
+        ontoksd:PL_Task05_Novice ;
+    ontoksd:usesScale ontoksd:Scale_Task05_0_10 ;
+    rdfs:comment "Proficiency scheme associated with Task05, defining how intervals in the numeric scale are interpreted as proficiency levels."@en ;
+    skos:scopeNote "Specification-level interpretive assumption recorded in the CSP report, not an observed result or a grading rule contained in the original task statement. The assessment references this planned scheme documentarily; usesProficiencyScheme is reserved for AssessmentOccurrence."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-CSP-Report.md> .
+
+ontoksd:Scale_Task05_0_10 a ontoksd:Scale ;
+    rdfs:label "Task05 proficiency scale 0–10"@en ;
+    dcterms:identifier "Task05-SCALE"^^xsd:string ;
+    ontoksd:hasInterval ontoksd:Interval_Task05_Advanced,
+        ontoksd:Interval_Task05_Competent,
+        ontoksd:Interval_Task05_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 ;
+    ontoksd:step 0.1 ;
+    rdfs:comment "Decimal scoring range from 0 to 10 with a selected granularity of 0.1. For Task04, the reported 5.1/9.1 starts are interpreted on this one-decimal domain. Numeric validation of step adherence is external to OWL."@en .
+
+ontoksd:AS_Task05_FarmerRobotAndFeederRobot a ontoksd:Assessment ;
+    rdfs:label "Assessment — Task05 Farmer Robot and Feeder Robot"@en ;
+    dcterms:description "Assessment specification based on Task05, intended to evaluate learners through the submitted integrated Turing Machine artifact, simulation-supported validation, and technical report."@en ;
+    dcterms:identifier "Task05-AS"^^xsd:string ;
+    dcterms:references ontoksd:PS_Task05_ProficiencyScheme ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentStrategyType,
+        ontoksd:WrittenAssessmentModalityType ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task05_C05,
+        ontoksd:CA_Task05_C07_01,
+        ontoksd:CA_Task05_C08_01,
+        ontoksd:CA_Task05_C09_01,
+        ontoksd:CA_Task05_C10 ;
+    ontoksd:hasInstructionalStatement "Assess the submitted model, technical report and documented PBL process against the task requirements. Individual participation is an assessment design concern; this specification does not assert an assessment occurrence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:usesResource ontoksd:ER_Task05_JFLAP,
+        ontoksd:ER_Task05_ProblemStatement,
+        ontoksd:ER_Task05_SBCReportTemplate ;
+    rdfs:comment "Assessment specification associated with Task05. It represents the evaluative use of the learning task as a basis for judging learner performance through integrated Turing-Machine modeling, multi-agent coordination, simulation, and technical documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:Task05_FarmerRobotAndFeederRobot a ontoksd:Task ;
+    rdfs:label "Task05 — The Farmer Robot and the Feeder Robot"@en ;
+    dcterms:identifier "Task05-TASK"^^xsd:string ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task05_ModelIntegrateAndValidateTMMultiAgentSystem ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task05_FarmerRobotIdentificationModule,
+        ontoksd:TC_Task05_FarmerRobotNavigationModule,
+        ontoksd:TC_Task05_FeederRobotNavigationModule,
+        ontoksd:TC_Task05_IntegratedTuringMachineArtifact,
+        ontoksd:TC_Task05_PathEncodingAndCommunication,
+        ontoksd:TC_Task05_TechnicalReport ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task05_CommunicatePathToFeederRobot,
+        ontoksd:TCons_Task05_CoordinateMultipleAgents,
+        ontoksd:TCons_Task05_ProcessDocumentation,
+        ontoksd:TCons_Task05_ReviseHerdThresholdInput,
+        ontoksd:TCons_Task05_SimulatorExecution,
+        ontoksd:TCons_Task05_StandardizeDocumentationAndTraining,
+        ontoksd:TCons_Task05_UseUnifiedTuringMachineFormalism ;
+    ontoksd:hasTaskStatement "Design, simulate, validate, integrate, and document Farmer Robot and Feeder Robot modules using Turing Machines as a unified computational model, including herd-threshold input logic, path communication, and coordinated multi-agent behavior."@en ;
+    ontoksd:isTaskOf ontoksd:C05,
+        ontoksd:C07_01,
+        ontoksd:C08_01,
+        ontoksd:C09_01,
+        ontoksd:C10 ;
+    rdfs:comment "Specification-level task corresponding to the Farmer Robot and the Feeder Robot PBL case. It represents the problem of integrating identification, signaling, path encoding, and feeder navigation under a unified Turing Machine formalism, with attention to multi-agent coordination, threshold logic, and system-level documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+
+ontoksd:LT_Task05_FarmerRobotAndFeederRobot a ontoksd:LearningTask ;
+    rdfs:label "Learning Task — The Farmer Robot and the Feeder Robot"@en ;
+    dcterms:description "Concrete instructional unit in which learners analyze multi-agent requirements, revise previous modules, integrate Farmer Robot and Feeder Robot behaviors under a unified Turing Machine formalism, test the system in JFLAP, and document the result."@en ;
+    dcterms:identifier "Task05-LT"^^xsd:string ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task05_C05_Learning,
+        ontoksd:CA_Task05_C07_01_Learning,
+        ontoksd:CA_Task05_C08_01_Learning,
+        ontoksd:CA_Task05_C09_01_Learning,
+        ontoksd:CA_Task05_C10_Learning ;
+    ontoksd:hasInstructionalStatement """# **Problem 5 (Task): The Farmer Robot and the Feeder Robot**
+ 
+Authors: Luiz Gavaza &nbsp; Lais Salvador &nbsp; Roberta Oliveira &nbsp; Jessica Santana &nbsp; Otávio Neto
+
+Contributor: Edeyson Gomes
+ 
+## Task: The Farmer Robot and the Feeder Robot
+
+### **1. Introduction**
+
+The company **Farmer Robot** was highly satisfied with the solutions proposed for the problems of signaling food delivery and the robot's return to the starting point. Now, the innovation department is excited about implementing a new functionality and introducing a new robot: the Farmer Robot, while traversing herds and issuing food delivery alerts, must also communicate the path the **Feeder Robot** should follow to deliver the appropriate supplies to the herd. This new robot, the Feeder Robot, is in its prototype phase, with the initial demand focusing on implementing its navigation module.
+
+Meanwhile, the UFBA student team responsible for developing the initial Farmer Robot modules, upon studying the new demands, found in the literature an **abstract machine with sequential read and write access to an unlimited memory device**. This machine can incorporate the Farmer Robot's modules as well as the Feeder Robot's navigation module. This finding was shared with the company's innovation team, which then proposed enhancements to the Farmer Robot modules. For example, upon reviewing the solution proposed for the food delivery signaling problem, the students realized they could improve it by allowing the farmer to specify the minimum quantities of herd members as inputs to the machine. 
+
+Additionally, after several meetings with the innovation team, it was decided—both to standardize documentation and to train the maintenance team—that the same **abstract machine model** should be used to implement both the enhanced Farmer Robot navigation module and the Feeder Robot navigation module.
+
+The suggested tool for simulating the robots' modules is **JFLAP[^1]**.
+
+[^1]: www.jflap.com
+
+
+
+### **2. Process**
+
+The **Problem-Based Learning (PBL)** methodology will be employed during the solution development process. This approach uses real-world problems to stimulate critical thinking, teamwork, and problem-solving skills while fostering knowledge construction around a specific topic.
+
+The process must be documented using the **PBL Whiteboard**, which consists of the columns: QUESTIONS, FACTS, IDEAS/HYPOTHESES, and ACTIONS. In each team meeting, a version of the whiteboard must be created and shared with the tutors, highlighting the evolving process of building the solution. Additionally, each team will maintain a **shared Logbook**, which must include meeting minutes, participant names, discussion points, and challenges encountered. This documentation will be part of the group evaluation. In the PBL approach, each team member's **participation and contribution** is crucial. Thus, each student will also be individually assessed based on tutor observations and peer feedback.
+
+
+
+### **3. Deliverables**
+
+A team member must submit the following by **8:20 PM on May 24, 2021**, via UFBA's virtual learning platform (AVA):  
+
+1. A file for the **JFLAP simulator** containing the Farmer Robot's identification and navigation modules as well as the Feeder Robot's navigation module.  
+2. A **report**, written in the SBC (Brazilian Computing Society) article format, that thoroughly details the design and functionality of the developed modules for the robots.  
+
+The report must include the operations executed by the system and at least **two detailed examples** of the functionality of each developed module.
+
+
+### **4. Knowledge/Concepts Involved**
+
+    1. Turing Machine  
+
+    2. Variations of Turing Machine  
+
+
+
+### **5. Learning Objectives**
+
+#### **5.1 General Objectives**
+
+Develop identification and navigation modules for the Farmer Robot and the Feeder Robot using knowledge of Turing Machines.
+
+
+#### **5.2 Specific Objectives**
+
+1. Understand the new demands and functionalities related to the Farmer Robot and the Feeder Robot.  
+
+2. Investigate the abstract machine with sequential read and write access to an unlimited memory device and its application to the robots' modules.  
+
+3. Revise the solution proposed for the food delivery signaling problem, enabling the farmer to specify the minimum number of herd members as inputs to the machine.  
+
+4. Develop navigation modules for the Farmer Robot and Feeder Robot using the same abstract machine model to standardize documentation and training.  
+
+5. Use the **JFLAP** tool to simulate the processes of the robots' modules.  
+
+### </a> References 
+RAMOS, M. V. M.; JOSE NETO, J.; VEGA, I. S. **Linguagens Formais: Teoria, Modelagem e Implementação**. Editora Bookman, 2009.
+
+MENEZES, Paulo Blauth. **Linguagens formais e autômatos**. 6. ed. Bookman, 2011.
+"""@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task05_JFLAP,
+        ontoksd:ER_Task05_Logbook,
+        ontoksd:ER_Task05_PBLWhiteboard,
+        ontoksd:ER_Task05_ProblemStatement,
+        ontoksd:ER_Task05_SBCReportTemplate ;
+    rdfs:comment "Learning task corresponding to Task05. It captures the executable instructional dimension of the Farmer Robot and Feeder Robot case, in which learners perform a bounded but system-level activity oriented toward competence development and demonstration."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> .
+}

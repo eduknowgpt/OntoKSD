@@ -1,120 +1,165 @@
-PREFIX ontoksd:     <http://purl.org/ontoksd#>
-PREFIX cc2020:      <http://purl.org/cc2020/knowledge#>
+# CC2020 example A: specification data, not an assessment or learner record.
+# Load OntoKSD, the Bloom skill-level module, and the CC2020 knowledge/disposition populations first.
+# KnowledgeSkill uses hasKnowledgeComponent + hasSkillLevel; no Relator instances are created.
+# Atomic is a project granularity choice; the reference Task is explicit to satisfy the current OWL axioms.
+# Only exact conflicting assertions for these example records are removed; unrelated data are preserved.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020: <http://purl.org/cc2020/knowledge#>
 PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
-PREFIX bloom:       <http://purl.org/edu/bloom#>
-PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:         <http://www.w3.org/2002/07/owl#>
-PREFIX skos:        <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
 
 INSERT DATA {
+ontoksd:KS_A_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Architecture and Organization × Creating"@en ;
+    dcterms:description "Source knowledge label: \"Architecture and Organization\". Required source skill level: Creating."@en ;
+    dcterms:identifier "KS_A_01" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020:ArchitectureAndOrganization ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Creating category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Architecture and Organization × Creating"@en .
 
-  #################################################################
-  # Source marker
-  #################################################################
+ontoksd:KS_A_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Digital Design × Creating"@en ;
+    dcterms:description "Source knowledge label: \"Digital Design\". Required source skill level: Creating."@en ;
+    dcterms:identifier "KS_A_02" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020:DigitalDesign ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Creating category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Digital Design × Creating"@en .
 
-  <http://purl.org/ontoksd/source/cc2020-competence-catalog>
-      a owl:NamedIndividual ;
-      rdfs:label "CC2020 competence catalog"@en ;
-      rdfs:comment "Source for competencies instantiated from the CC2020 report."@en .
+ontoksd:KS_A_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Circuits and Electronics × Creating"@en ;
+    dcterms:description "Source knowledge label: \"Circuits and Electronics\". Required source skill level: Creating."@en ;
+    dcterms:identifier "KS_A_03" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020:CircuitsAndElectronics ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Creating category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Circuits and Electronics × Creating"@en .
 
-  #################################################################
-  # Competence
-  #################################################################
+ontoksd:KS_A_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Analytical and Critical Thinking × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Analytical and Critical Thinking\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_A_04" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Analytical and Critical Thinking × Applying"@en .
 
-  ontoksd:CC2020_Competence_A
-      a ontoksd:Competence ;
-      rdfs:label "Manage computer system and digital circuit design"@en ;
-      skos:prefLabel "A"@en ;
-      skos:altLabel "CC2020 Competence A"@en ;
-      skos:definition """Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."""@en ;
-      rdfs:comment """Competence derived from the CC2020 report."""@en ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
-      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+ontoksd:KS_A_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mathematics and Statistics × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Mathematics and Statistics\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_A_05" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:MathematicsAndStatistics ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Mathematics and Statistics × Applying"@en .
 
-      ontoksd:hasDisposition ontoksd:selfDirected ;
-      ontoksd:hasDisposition ontoksd:meticulous ;
-      ontoksd:hasDisposition ontoksd:inventive ;
+ontoksd:KS_A_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Problem Solving and Trouble Shooting × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Problem Solving and Trouble Shooting\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_A_06" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:ProblemSolvingAndTroubleshooting ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Problem Solving and Trouble Shooting × Applying"@en .
 
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_01 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_02 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_03 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_04 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_05 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_06 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_A_07 ;
+ontoksd:KS_A_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Research and Self-Starter/Learner × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Research and Self-Starter/Learner\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_A_07" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:ResearchAndSelfStarterLearner ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence A, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Research and Self-Starter/Learner × Applying"@en .
 
-      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
-	  dcterms:bibliographicCitation "Computing Curricula 2020 (CC2020), pp. 51–52."@en ;	  
-      dcterms:references <http://purl.org/ontoksd/source/cc2020-competence-catalog> .
+ontoksd:Task_CC2020_Competence_A a ontoksd:Task,
+        owl:NamedIndividual ;
+    rdfs:label "Reference task for CC2020 competence A"@en ;
+    dcterms:references ontoksd:CC2020_Source_Example_A ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasTaskStatement "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en ;
+    ontoksd:isTaskOf ontoksd:CC2020_Competence_A ;
+    skos:scopeNote "The source competency statement is reused as a specification-level reference task. This record does not represent a LearningTask, an InstructionalUnit, or an execution event."@en .
 
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
+<http://purl.org/ontoksd/source/cc2020-competence-catalog> a owl:NamedIndividual ;
+    rdfs:label "CC2020 competence examples A-C"@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    rdfs:comment "Source marker for the three illustrative competence examples in section 4.2.5, not a claim of a complete competence catalog."@en .
 
-  ontoksd:KS_A_01
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Architecture and Organization × Creating"@en ;
-      skos:prefLabel "Architecture and Organization × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Architecture and Organization to the required Bloom skill level Creating."@en ;
-      ontoksd:hasKnowledgeComponent cc2020:ArchitectureAndOrganization ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
+<http://purl.org/ontoksd/source/cc2020-competence-excerpt> a owl:NamedIndividual ;
+    dcterms:identifier "sha256:20a8e486ffb1b6600a4c5a5e3135fca5d5c6386c31f4011a2f73730e0d82ce0f" ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "CC2020 instances — supplied excerpt"@en .
 
-  ontoksd:KS_A_02
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Digital Design × Creating"@en ;
-      skos:prefLabel "Digital Design × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Digital Design to the required Bloom skill level Creating."@en ;
-      ontoksd:hasKnowledgeComponent cc2020:DigitalDesign ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
+ontoksd:CC2020_Competence_A a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Manage computer system and digital circuit design"@en ;
+    dcterms:bibliographicCitation "Computing Curricula 2020, section 4.2.5, Example A, printed p. 51 (PDF page 52)."@en ;
+    dcterms:description "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en ;
+    dcterms:identifier "CC2020-A" ;
+    dcterms:references ontoksd:CC2020_Source_Example_A,
+        <http://purl.org/ontoksd/source/cc2020-competence-catalog>,
+        <http://purl.org/ontoksd/source/cc2020-competence-excerpt> ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "Manage computer system and digital circuit design"@en ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_A_01,
+        ontoksd:KS_A_02,
+        ontoksd:KS_A_03,
+        ontoksd:KS_A_04,
+        ontoksd:KS_A_05,
+        ontoksd:KS_A_06,
+        ontoksd:KS_A_07 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task_CC2020_Competence_A ;
+    rdfs:comment "A competence specification instantiating example A in CC2020 section 4.2.5, using knowledge-level constituents and dispositions. It represents expected performance, not learner attainment."@en ;
+    skos:altLabel "CC2020 Competence A"@en ;
+    skos:definition "Manage the design of a computer system for a manufacturer using appropriate tools, design digital circuits including the basic building blocks of Boolean algebra, computer numbering systems, data encoding, combinatorial and sequential elements."@en ;
+    skos:notation "A" ;
+    skos:prefLabel "Manage computer system and digital circuit design"@en ;
+    skos:scopeNote "Atomic is the selected OntoKSD granularity: this specification has no component-competence decomposition. Multiple knowledge-level constituents or action verbs do not by themselves make it a CompositeCompetence. This structural classification is a project modeling choice."@en .
 
-  ontoksd:KS_A_03
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Circuits and Electronics × Creating"@en ;
-      skos:prefLabel "Circuits and Electronics × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Circuits and Electronics to the required Bloom skill level Creating."@en ;
-      ontoksd:hasKnowledgeComponent cc2020:CircuitsAndElectronics ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
-
-  ontoksd:KS_A_04
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Analytical and Critical Thinking × Applying"@en ;
-      skos:prefLabel "Analytical and Critical Thinking × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Analytical and Critical Thinking to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
-
-  ontoksd:KS_A_05
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Mathematics and Statistics × Applying"@en ;
-      skos:prefLabel "Mathematics and Statistics × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Mathematics and Statistics to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:MathematicsAndStatistics ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
-
-  ontoksd:KS_A_06
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Problem Solving and Trouble Shooting × Applying"@en ;
-      skos:prefLabel "Problem Solving and Trouble Shooting × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Problem Solving and Trouble Shooting to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:ProblemSolvingAndTroubleShooting ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
-
-  ontoksd:KS_A_07
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Research and Self-Starter/Learner × Applying"@en ;
-      skos:prefLabel "Research and Self-Starter/Learner × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence A linking the knowledge element Research and Self-Starter/Learner to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:ResearchAndSelfStarterLearner ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_A .
-
+ontoksd:CC2020_Source_Example_A a owl:NamedIndividual ;
+    dcterms:bibliographicCitation "CC2020, section 4.2.5, printed p. 51, PDF page 52."@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "CC2020 Competency Title: A"@en .
 }

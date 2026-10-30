@@ -1,0 +1,479 @@
+# Reviewed CSP cycle-01 Task2
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task02_C05 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task02 Competence Activation — C05"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C05_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    rdfs:comment "Competence activation linking Task02 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative use of the task."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C05_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C05_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C07 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task02 Competence Activation — C07"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C07_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    rdfs:comment "Competence activation linking Task02 assessment to competence C07. It indicates that the development of problem-solving solutions using Turing Machines is a core and mandatory target of the assessment."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C07_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Turing Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C07_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C07_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C07_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Turing Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C08 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task02 Competence Activation — C08"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C08_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    rdfs:comment "Competence activation linking Task02 assessment to competence C08. It indicates that identifying Turing Machine variants functions as a supporting and analytically relevant target within the task."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C08_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Identify Turing Machine Variants through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C08_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C08_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C08_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Identify Turing Machine Variants through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C09 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task02 Competence Activation — C09"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C09_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    rdfs:comment "Competence activation linking Task02 assessment to competence C09. It indicates that applying Turing Machine variants is treated as a conditional or extended target, relevant when the solution employs or discusses such variants."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C09_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "If a provided Turing Machine variant is selected to meet the traffic-control requirements, apply it and document the decision; the source also requires evaluating whether such a variant is needed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C09_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C09_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C09_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "If a provided Turing Machine variant is selected to meet the traffic-control requirements, apply it and document the decision; the source also requires evaluating whether such a variant is needed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C10 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task02 Competence Activation — C10"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C10_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    rdfs:comment "Competence activation linking Task02 assessment to competence C10. It indicates that testing Turing Machines using simulators is a core and mandatory target of the assessment."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C10_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test Turing Machines Using Simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:CA_Task02_C10_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task02_C10_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:CA_Task02_C10_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test Turing Machines Using Simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:ER_Task02_Logbook a ontoksd:EducationalResource ;
+    rdfs:label "Task02 logbook"@en ;
+    dcterms:description "Shared document used to record progress, meeting notes, decisions, and challenges encountered during the task."@en ;
+    dcterms:identifier "Task02-ER4"^^xsd:string ;
+    ontoksd:intendedUse "Traceability of collaborative work and process recording."^^xsd:string ;
+    rdfs:comment "Educational resource used to maintain traceability of the development process and collaborative work performed during Task02."@en .
+
+ontoksd:ER_Task02_PBLWhiteboard a ontoksd:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en ;
+    dcterms:description "Collaborative whiteboard used to document questions, facts, ideas or hypotheses, and actions throughout the PBL process."@en ;
+    dcterms:identifier "Task02-ER3"^^xsd:string ;
+    ontoksd:intendedUse "Process documentation and collaborative reasoning support."^^xsd:string ;
+    rdfs:comment "Educational resource used to structure and document collaborative reasoning during the development of the solution."@en .
+
+ontoksd:TA_Task02_ModelAndValidateTrafficControlTM a ontoksd:TaskActivity ;
+    rdfs:label "Model, simulate, validate, and document a traffic-control solution using Turing Machines"@en ;
+    rdfs:comment "Core task activity of Task02. It represents the central activity through which learners analyze requirements, construct a formal Turing Machine solution, test it using simulation tools, and document the resulting design."@en .
+
+ontoksd:TC_Task02_SensorDataProcessing a ontoksd:TaskComponent ;
+    rdfs:label "Sensor data processing"@en ;
+    rdfs:comment "Task component representing the processing of sensor-derived traffic data used as input to the computational model."@en .
+
+ontoksd:TC_Task02_TechnicalReport a ontoksd:TaskComponent ;
+    rdfs:label "Technical report"@en ;
+    rdfs:comment "Task component representing the structured technical report required as a deliverable for documenting the formal solution, design decisions, and simulation outcomes."@en .
+
+ontoksd:TC_Task02_TrafficClassificationSystem a ontoksd:TaskComponent ;
+    rdfs:label "Traffic classification and counting system"@en ;
+    rdfs:comment "Task component representing the target computational system to be modeled. It includes vehicle classification, counting of occurrences per category, and identification of the most frequent category."@en .
+
+ontoksd:TC_Task02_TuringMachineArtifact a ontoksd:TaskComponent ;
+    rdfs:label "Turing Machine artifact"@en ;
+    rdfs:comment "Task component representing one or more Turing Machine models that formalize the proposed solution to the traffic-control problem."@en .
+
+ontoksd:TCons_Task02_MostFrequentCategoryIdentification a ontoksd:TaskConstraint ;
+    rdfs:label "Identify the most frequent vehicle category"@en ;
+    rdfs:comment "Constraint stating that the solution must determine which vehicle category was the most frequent in the analyzed time period."@en .
+
+ontoksd:TCons_Task02_NightTrafficCounting a ontoksd:TaskConstraint ;
+    rdfs:label "Count category frequencies from the previous night"@en ;
+    rdfs:comment "Constraint stating that the solution must count how many vehicles of each category traveled during the previous night."@en .
+
+ontoksd:TCons_Task02_OptionalVariantComparison a ontoksd:TaskConstraint ;
+    rdfs:label "Evaluate whether a provided Turing Machine variant is needed for this solution"@en ;
+    rdfs:comment "The source requires considering the need for variants. Applying a particular variant is conditional on the chosen solution. This does not require a broader theoretical comparison of computational power."@en .
+
+ontoksd:TCons_Task02_ProcessDocumentation a ontoksd:TaskConstraint ;
+    rdfs:label "Document the process through whiteboard and logbook"@en ;
+    rdfs:comment "Constraint stating that the development process must be documented through PBL whiteboard versions and a shared logbook."@en .
+
+ontoksd:TCons_Task02_SimulatorExecution a ontoksd:TaskConstraint ;
+    rdfs:label "Be executable in JFLAP or equivalent simulator"@en ;
+    rdfs:comment "Constraint stating that the Turing Machine artifact must be representable and executable in JFLAP or an equivalent simulation environment."@en .
+
+ontoksd:TCons_Task02_VehicleClassification a ontoksd:TaskConstraint ;
+    rdfs:label "Classify vehicles into light, heavy, and very heavy categories"@en ;
+    rdfs:comment "Constraint stating that the solution must classify vehicles according to the weight ranges defined in the task specification."@en .
+
+ontoksd:AC_Task02_TrafficControl a ontoksd:AcquisitionContext ;
+    rdfs:label "Task02 Acquisition Context — Traffic Control"@en ;
+    dcterms:identifier "Task02-AC"^^xsd:string ;
+    rdfs:comment "Acquisition context associated with Task02. It represents the pedagogical setting in which learners engage in a problem-based learning activity centered on the modeling, simulation, and documentation of a Turing-Machine-based traffic-control solution. This context includes collaborative work, use of simulation tools such as JFLAP, and process documentation through whiteboard and logbook artifacts."@en .
+
+ontoksd:ER_Task02_JFLAP a ontoksd:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en ;
+    dcterms:description "Simulation environment used to test, inspect, and validate Turing Machine behavior."@en ;
+    dcterms:identifier "Task02-ER2"^^xsd:string ;
+    ontoksd:intendedUse "Simulation, execution, debugging, and validation of Turing Machine artifacts."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the simulator used for the operational validation of Turing Machine models developed in Task02."@en .
+
+ontoksd:ER_Task02_ProblemStatement a ontoksd:EducationalResource ;
+    rdfs:label "Task02 problem statement"@en ;
+    dcterms:description "Problem statement describing the Traffic Control scenario, its requirements, and expected deliverables."@en ;
+    dcterms:identifier "Task02-ER1"^^xsd:string ;
+    ontoksd:intendedUse "Instructional framing and requirement interpretation for the learning task and the assessment."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the formal statement of Task02. It frames the problem, constraints, and deliverables that guide both instructional execution and assessment."@en .
+
+ontoksd:ER_Task02_SBCReportTemplate a ontoksd:EducationalResource ;
+    rdfs:label "SBC article-format report template"@en ;
+    dcterms:description "Template or normative reference for preparing the technical report required as a deliverable."@en ;
+    dcterms:identifier "Task02-ER5"^^xsd:string ;
+    ontoksd:intendedUse "Support for technical writing and report standardization."^^xsd:string ;
+    rdfs:comment "Educational resource supporting the preparation and standardization of the technical report associated with Task02."@en .
+
+ontoksd:Interval_Task02_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Task02 interval — Advanced"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task02_Advanced ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task02_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task02_0_10 ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 ;
+    rdfs:comment "Interval corresponding to the Advanced proficiency level in Task02."@en .
+
+ontoksd:Interval_Task02_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Task02 interval — Competent"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task02_Competent ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task02_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task02_0_10 ;
+    ontoksd:lowerBound 5.0 ;
+    ontoksd:upperBound 9.0 ;
+    rdfs:comment "Interval corresponding to the Competent proficiency level in Task02."@en .
+
+ontoksd:Interval_Task02_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Task02 interval — Novice"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task02_Novice ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task02_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task02_0_10 ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 5.0 ;
+    rdfs:comment "Interval corresponding to the Novice proficiency level in Task02."@en .
+
+ontoksd:PL_Task02_Advanced a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    dcterms:identifier "Task02-PL3"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int ;
+    rdfs:comment "Proficiency level representing performance beyond baseline expectations, including more elaborate or analytically enriched solutions in Task02."@en .
+
+ontoksd:PL_Task02_Competent a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    dcterms:identifier "Task02-PL2"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int ;
+    rdfs:comment "Proficiency level representing adequate and coherent performance in the competencies associated with Task02."@en .
+
+ontoksd:PL_Task02_Novice a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    dcterms:identifier "Task02-PL1"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int ;
+    rdfs:comment "Proficiency level representing initial or insufficient performance in the competencies associated with Task02."@en .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task02_TrafficControl .
+
+ontoksd:C07 ontoksd:hasTask ontoksd:Task02_TrafficControl .
+
+ontoksd:C08 ontoksd:hasTask ontoksd:Task02_TrafficControl .
+
+ontoksd:C09 ontoksd:hasTask ontoksd:Task02_TrafficControl .
+
+ontoksd:C10 ontoksd:hasTask ontoksd:Task02_TrafficControl .
+
+ontoksd:PS_Task02_ProficiencyScheme a ontoksd:ProficiencyScheme ;
+    rdfs:label "Task02 proficiency scheme"@en ;
+    dcterms:identifier "Task02-PS"^^xsd:string ;
+    ontoksd:definesInterval ontoksd:Interval_Task02_Advanced,
+        ontoksd:Interval_Task02_Competent,
+        ontoksd:Interval_Task02_Novice ;
+    ontoksd:definesLevel ontoksd:PL_Task02_Advanced,
+        ontoksd:PL_Task02_Competent,
+        ontoksd:PL_Task02_Novice ;
+    ontoksd:usesScale ontoksd:Scale_Task02_0_10 ;
+    rdfs:comment "Proficiency scheme associated with Task02, defining how intervals in the numeric scale are interpreted as proficiency levels."@en ;
+    skos:scopeNote "Specification-level interpretive assumption recorded in the CSP report, not an observed result or a grading rule contained in the original task statement. The assessment references this planned scheme documentarily; usesProficiencyScheme is reserved for AssessmentOccurrence."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Report.md> .
+
+ontoksd:Scale_Task02_0_10 a ontoksd:Scale ;
+    rdfs:label "Task02 proficiency scale 0–10"@en ;
+    dcterms:identifier "Task02-SCALE"^^xsd:string ;
+    ontoksd:hasInterval ontoksd:Interval_Task02_Advanced,
+        ontoksd:Interval_Task02_Competent,
+        ontoksd:Interval_Task02_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 ;
+    ontoksd:step 0.1 ;
+    rdfs:comment "Decimal scoring range from 0 to 10 with a selected granularity of 0.1. For Task04, the reported 5.1/9.1 starts are interpreted on this one-decimal domain. Numeric validation of step adherence is external to OWL."@en .
+
+ontoksd:AS_Task02_TrafficControl a ontoksd:Assessment ;
+    rdfs:label "Assessment — Task02 Traffic Control"@en ;
+    dcterms:description "Assessment specification based on Task02, intended to evaluate learners through submitted Turing Machine artifacts, simulation-supported validation, and technical report."@en ;
+    dcterms:identifier "Task02-AS"^^xsd:string ;
+    dcterms:references ontoksd:PS_Task02_ProficiencyScheme ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task02_TrafficControl ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentStrategyType,
+        ontoksd:WrittenAssessmentModalityType ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task02_C05,
+        ontoksd:CA_Task02_C07,
+        ontoksd:CA_Task02_C08,
+        ontoksd:CA_Task02_C09,
+        ontoksd:CA_Task02_C10 ;
+    ontoksd:hasInstructionalStatement "Assess the submitted model, technical report and documented PBL process against the task requirements. Individual participation is an assessment design concern; this specification does not assert an assessment occurrence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task02_TrafficControl ;
+    ontoksd:usesResource ontoksd:ER_Task02_JFLAP,
+        ontoksd:ER_Task02_ProblemStatement,
+        ontoksd:ER_Task02_SBCReportTemplate ;
+    rdfs:comment "Assessment specification associated with Task02. It represents the evaluative use of the learning task as a basis for judging learner performance through the submitted formal artifacts and technical documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:Task02_TrafficControl a ontoksd:Task ;
+    rdfs:label "Task02 — Traffic Control"@en ;
+    dcterms:identifier "Task02-TASK"^^xsd:string ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task02_ModelAndValidateTrafficControlTM ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task02_SensorDataProcessing,
+        ontoksd:TC_Task02_TechnicalReport,
+        ontoksd:TC_Task02_TrafficClassificationSystem,
+        ontoksd:TC_Task02_TuringMachineArtifact ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task02_MostFrequentCategoryIdentification,
+        ontoksd:TCons_Task02_NightTrafficCounting,
+        ontoksd:TCons_Task02_OptionalVariantComparison,
+        ontoksd:TCons_Task02_ProcessDocumentation,
+        ontoksd:TCons_Task02_SimulatorExecution,
+        ontoksd:TCons_Task02_VehicleClassification ;
+    ontoksd:hasTaskStatement "Design, simulate, validate, and document a Turing-Machine-based computational solution capable of processing sensor data, classifying vehicles into light, heavy, and very heavy categories, counting category frequencies from the previous night, and identifying the most frequent category."@en ;
+    ontoksd:isTaskOf ontoksd:C05,
+        ontoksd:C07,
+        ontoksd:C08,
+        ontoksd:C09,
+        ontoksd:C10 ;
+    rdfs:comment "Specification-level task corresponding to the Traffic Control PBL case. It represents the computational problem to be addressed, namely the design of a formal solution capable of processing traffic data, classifying vehicles into weight-based categories, counting category frequencies, and identifying the most frequent category."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+
+ontoksd:LT_Task02_TrafficControl a ontoksd:LearningTask ;
+    rdfs:label "Learning Task — Traffic Control"@en ;
+    dcterms:description "Concrete instructional unit in which learners analyze the traffic-control problem, model a Turing-Machine-based solution, test it using a simulator, and document the result."@en ;
+    dcterms:identifier "Task02-LT"^^xsd:string ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task02_TrafficControl ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task02_C05_Learning,
+        ontoksd:CA_Task02_C07_Learning,
+        ontoksd:CA_Task02_C08_Learning,
+        ontoksd:CA_Task02_C09_Learning,
+        ontoksd:CA_Task02_C10_Learning ;
+    ontoksd:hasInstructionalStatement """﻿# **Problem 2 (Task): Traffic Control**
+  
+Authors: Luiz Gavaza &nbsp; Lais Salvador &nbsp;  David Moisés
+
+Contributors: Edeyson Gomes &nbsp;  Jéssica Santana
+
+## **Task: Traffic Control**
+
+### **1. Introduction**
+
+One of the problems affecting Brazilian highways is the **large number of potholes.** There are many causes for this issue: **the alternation between rain and sun** is one of them. Another reason is **the pressure exerted by heavy vehicles** on the roads during the night, a period when these vehicles move more freely on the highways. On the Aratu Road in Salvador, many potholes have been identified by technicians from the **Bahia Department of Transport Infrastructure (DERBA),** causing various incidents and occasionally serious accidents.
+
+The technicians at this department believe it is possible to reduce pressure on the pavement and, consequently, minimize the problem of potholes if they have access to daily reports on the number of vehicles traveling on the road at night.
+
+Based on this data, the idea is to create **a pavement wear prevention plan.** The technicians classify vehicles into three categories: **light, heavy, and very heavy.** Vehicles weighing **up to six (6) tons** are categorized as **light;** those **above six (6) tons but below ten (10) tons** are categorized as **heavy;** and those weighing **ten (10) tons or more** are categorized as **very heavy.**
+
+Additionally, there are already sensors installed at the entrance and exit of the Aratu Road that allow vehicles to be identified and categorized. The technicians would like a solution that, based on the information from these sensors, **can determine how many vehicles from each category traveled during the previous night** and **identify which category had the most vehicles.**
+
+The current cohort of the Theory of Computation class is studying Turing Machines and believes **they can design a system with such functionalities.** As a result, they contacted DERBA technicians **to offer some solutions to this problem.**
+
+### 2. Process
+
+During the solution development process, the **Problem-Based Learning (PBL)** methodology will be employed. This approach uses real-world problems to stimulate the development of critical thinking, teamwork, and problem-solving skills, while also contributing to the construction of knowledge about a specific topic.
+
+The process must be documented using the **PBL whiteboard**, which is structured into the columns: **QUESTIONS, FACTS, IDEAS/HYPOTHESES, and ACTIONS.** At each team meeting, a new version of the whiteboard should be created, documenting the steps taken toward the solution. Additionally, a shared document will be provided for the completion of a **Logbook**, which must include meeting minutes with participant names, discussion points, and challenges encountered. 
+
+The description of this process will be part of the group evaluation. During this process, the participation and contribution of each team member are fundamental. Each student will also be individually assessed based on tutor observations and peer feedback.
+
+### **3. Deliverable**
+
+You are required to upload to Moodle UFBA by **6:00 PM on January 12, 2020**, in the designated area: 
+
+1. One or more files containing **Turing Machines** (in JFLAP format) that provide a solution to the problem.
+
+2. A detailed **report**, formatted according to the SBC article guidelines, thoroughly describing the functionality of the proposed traffic control system.
+
+
+### **4. Knowledge/Concepts Involved**
+
+    1. Turing Machines
+
+    2. Variations of Turing Machines
+
+    3. Church-Turing Thesis
+
+
+### **5. Learning Objectives**
+
+#### **5.1 General Objective**  
+Develop Turing Machines to compute solutions for "real-world" problems, such as the DERBA problem.
+
+#### **5.2 Specific Objectives**  
+1. **Identify** the functionalities required by the system as envisioned by the user.  
+
+2. **Reconcile** the desired user functionalities with the capabilities of the Turing Machine to be developed.  
+
+3. **Evaluate** the need for extensions or variations in the Turing Machine to meet the system's requirements.  
+
+4. **Apply** the Church-Turing thesis by associating the formal concept of a Turing Machine with the intuitive notion of an algorithm.  
+
+
+### </a> References 
+RAMOS, M. V. M.; JOSE NETO, J.; VEGA, I. S. **Linguagens Formais: Teoria, Modelagem e Implementação**. Editora Bookman, 2009.
+
+MENEZES, Paulo Blauth. **Linguagens formais e autômatos**. 6. ed. Bookman, 2011.
+
+
+### Problem reformulated by Laís Salvador in June/2019.
+
+"""@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task02_JFLAP,
+        ontoksd:ER_Task02_Logbook,
+        ontoksd:ER_Task02_PBLWhiteboard,
+        ontoksd:ER_Task02_ProblemStatement,
+        ontoksd:ER_Task02_SBCReportTemplate ;
+    rdfs:comment "Learning task corresponding to Task02. It captures the executable instructional dimension of the case, in which learners are expected to perform a bounded and goal-directed activity oriented toward competence development and demonstration."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> .
+}

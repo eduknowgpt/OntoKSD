@@ -1,0 +1,490 @@
+# Reviewed CSP cycle-01 Task4
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task04_C03 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task04 Competence Activation — C03"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C03_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    rdfs:comment "Competence activation linking Task04 assessment to competence C03. It indicates that testing automata using simulators is a core and mandatory target of the task."@en ;
+    skos:scopeNote "The cited Task04 adjustment explicitly reuses C03 with a PDA simulation target while preserving the C03 reference FSM knowledge pairing. This contextual use does not change C03 or prove that its reference pairing adequately covers PDA-specific simulation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C03_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test automata using simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C03_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test automata using simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C05 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task04 Competence Activation — C05"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C05_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    rdfs:comment "Competence activation linking Task04 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task04."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C05_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C05_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C12 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task04 Competence Activation — C12"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C12_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    rdfs:comment "Competence activation linking Task04 assessment to competence C12. It indicates that developing problem-solving solutions using Pushdown Automata is a core and mandatory target of the assessment."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C12_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Pushdown Automata through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C12_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C12_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C12 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C12_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Pushdown Automata through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C13 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task04 Competence Activation — C13"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C13_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C13 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    rdfs:comment "Competence activation linking Task04 assessment to competence C13. It indicates that interpreting rule-based notation is a core and mandatory target because formal notation is explicitly relevant to location-sequence generation and documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C13_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Interpret Rule-Based Notation through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C13_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C13_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C13 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C13_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Interpret Rule-Based Notation through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C14 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task04 Competence Activation — C14"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C14_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    rdfs:comment "Competence activation linking Task04 assessment to competence C14. It indicates that differentiating classifications of formal grammars is a supporting but instructionally relevant target, especially for conceptual comparison among formalisms associated with navigation modeling."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C14_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Differentiate Classifications of Formal Grammars through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:CA_Task04_C14_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task04_C14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CA_Task04_C14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Differentiate Classifications of Formal Grammars through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:ER_Task04_Logbook a ontoksd:EducationalResource ;
+    rdfs:label "Task04 logbook"@en ;
+    dcterms:description "Shared document used to record progress, meeting notes, decisions, and challenges encountered during the task."@en ;
+    dcterms:identifier "Task04-ER4"^^xsd:string ;
+    ontoksd:intendedUse "Traceability of collaborative work and process recording."^^xsd:string ;
+    rdfs:comment "Educational resource used to maintain traceability of the development process and collaborative work performed during Task04."@en .
+
+ontoksd:ER_Task04_PBLWhiteboard a ontoksd:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en ;
+    dcterms:description "Collaborative whiteboard used to document questions, facts, ideas or hypotheses, and actions throughout the PBL process."@en ;
+    dcterms:identifier "Task04-ER3"^^xsd:string ;
+    ontoksd:intendedUse "Process documentation and collaborative reasoning support."^^xsd:string ;
+    rdfs:comment "Educational resource used to structure and document collaborative reasoning during the development of the solution."@en .
+
+ontoksd:TA_Task04_ModelAndValidatePDANavigation a ontoksd:TaskActivity ;
+    rdfs:label "Model, simulate, validate, and document a return-navigation solution using Pushdown Automata"@en ;
+    rdfs:comment "Core task activity of Task04. It represents the central activity through which learners analyze navigation requirements, model a Pushdown Automaton with stack-based memory, interpret or define rule-based notation for location sequences, validate the solution through simulation, and document the resulting design."@en .
+
+ontoksd:TC_Task04_ModuleIntegrationAnalysis a ontoksd:TaskComponent ;
+    rdfs:label "Module integration or parallel-operation analysis"@en ;
+    rdfs:comment "Task component representing the analysis of whether the navigation module should extend the food-delivery module or operate in parallel with inter-module communication."@en .
+
+ontoksd:TC_Task04_NavigationModule a ontoksd:TaskComponent ;
+    rdfs:label "Robot return-navigation module"@en ;
+    rdfs:comment "Task component representing the computational module responsible for guiding the robot back to its starting point."@en .
+
+ontoksd:TC_Task04_PDAArtifact a ontoksd:TaskComponent ;
+    rdfs:label "Pushdown Automaton artifact"@en ;
+    rdfs:comment "Task component representing the formal Pushdown Automaton model of the robot navigation module."@en .
+
+ontoksd:TC_Task04_RuleBasedNotation a ontoksd:TaskComponent ;
+    rdfs:label "Rule-based notation for location sequences"@en ;
+    rdfs:comment "Task component representing formal notation, such as grammars or transition rules, used to specify valid location sequences and navigation behavior."@en .
+
+ontoksd:TC_Task04_TechnicalReport a ontoksd:TaskComponent ;
+    rdfs:label "Technical report"@en ;
+    rdfs:comment "Task component representing the structured report required to explain design decisions, formal notation, stack behavior, and examples of operation."@en .
+
+ontoksd:TCons_Task04_FoodDeliveryModuleIntegration a ontoksd:TaskConstraint ;
+    rdfs:label "Consider extension or parallel operation with the food-delivery module"@en ;
+    rdfs:comment "Constraint stating that the solution should analyze whether the navigation module extends the previous food-delivery module or operates in parallel with it."@en .
+
+ontoksd:TCons_Task04_PathReversal a ontoksd:TaskConstraint ;
+    rdfs:label "Support reversal of the navigation path"@en ;
+    rdfs:comment "Constraint stating that the module must support reverse navigation based on previously recorded path information."@en .
+
+ontoksd:TCons_Task04_ProcessDocumentation a ontoksd:TaskConstraint ;
+    rdfs:label "Document the process through whiteboard and logbook"@en ;
+    rdfs:comment "Constraint stating that the development process must be documented through PBL whiteboard versions and a shared logbook."@en .
+
+ontoksd:TCons_Task04_ReturnToOrigin a ontoksd:TaskConstraint ;
+    rdfs:label "Return the robot to its starting point"@en ;
+    rdfs:comment "Constraint stating that the solution must enable the robot to return to its initial location after completing the outbound task."@en .
+
+ontoksd:TCons_Task04_RuleNotationSupport a ontoksd:TaskConstraint ;
+    rdfs:label "Support formal rule-based notation for location sequences"@en ;
+    rdfs:comment "Constraint stating that the solution should support or interpret rule-based notation for generating and documenting location sequences."@en .
+
+ontoksd:TCons_Task04_SimulatorExecution a ontoksd:TaskConstraint ;
+    rdfs:label "Be executable in JFLAP or equivalent simulator"@en ;
+    rdfs:comment "Constraint stating that the Pushdown Automaton artifact must be representable and executable in JFLAP or an equivalent simulation environment."@en .
+
+ontoksd:TCons_Task04_StackBasedMemory a ontoksd:TaskConstraint ;
+    rdfs:label "Use stack-based memory"@en ;
+    rdfs:comment "Constraint stating that the solution must rely on auxiliary memory to support path tracking and return behavior."@en .
+
+ontoksd:AC_Task04_ReturnFarmerRobot a ontoksd:AcquisitionContext ;
+    rdfs:label "Task04 Acquisition Context — The Return of the Farmer Robot"@en ;
+    dcterms:identifier "Task04-AC"^^xsd:string ;
+    rdfs:comment "Acquisition context associated with Task04. It represents the pedagogical setting in which learners engage in a problem-based learning activity focused on the modeling, simulation, analysis, and documentation of a robot navigation module based on Pushdown Automata and context-free formalisms. This context includes collaborative work, use of JFLAP, and process documentation through whiteboard and logbook artifacts."@en .
+
+ontoksd:ER_Task04_JFLAP a ontoksd:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en ;
+    dcterms:description "Simulation environment used to test, inspect, and validate Pushdown Automaton behavior."@en ;
+    dcterms:identifier "Task04-ER2"^^xsd:string ;
+    ontoksd:intendedUse "Simulation, execution, debugging, and validation of PDA artifacts."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the simulator used for operational validation of PDA models developed in Task04."@en .
+
+ontoksd:ER_Task04_ProblemStatement a ontoksd:EducationalResource ;
+    rdfs:label "Task04 problem statement"@en ;
+    dcterms:description "Problem statement describing the Return of the Farmer Robot scenario, its requirements, and expected deliverables."@en ;
+    dcterms:identifier "Task04-ER1"^^xsd:string ;
+    ontoksd:intendedUse "Instructional framing and requirement interpretation for the learning task and the assessment."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the formal statement of Task04. It frames the problem, constraints, and deliverables guiding both instructional execution and assessment."@en .
+
+ontoksd:ER_Task04_SBCReportTemplate a ontoksd:EducationalResource ;
+    rdfs:label "SBC article-format report template"@en ;
+    dcterms:description "Template or normative reference for preparing the technical report required as a deliverable."@en ;
+    dcterms:identifier "Task04-ER5"^^xsd:string ;
+    ontoksd:intendedUse "Support for technical writing and report standardization."^^xsd:string ;
+    rdfs:comment "Educational resource supporting the preparation and standardization of the technical report associated with Task04."@en .
+
+ontoksd:Interval_Task04_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Task04 interval — Advanced"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task04_Advanced ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task04_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task04_0_10 ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 ;
+    rdfs:comment "Interval corresponding to the Advanced proficiency level in Task04."@en .
+
+ontoksd:Interval_Task04_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Task04 interval — Competent"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task04_Competent ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task04_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task04_0_10 ;
+    ontoksd:lowerBound 5.0 ;
+    ontoksd:upperBound 9.0 ;
+    rdfs:comment "Interval corresponding to the Competent proficiency level in Task04."@en .
+
+ontoksd:Interval_Task04_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Task04 interval — Novice"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task04_Novice ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task04_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task04_0_10 ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 5.0 ;
+    rdfs:comment "Interval corresponding to the Novice proficiency level in Task04."@en .
+
+ontoksd:PL_Task04_Advanced a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    dcterms:identifier "Task04-PL3"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int ;
+    rdfs:comment "Proficiency level representing structurally stronger or conceptually enriched performance beyond baseline expectations in Task04."@en .
+
+ontoksd:PL_Task04_Competent a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    dcterms:identifier "Task04-PL2"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int ;
+    rdfs:comment "Proficiency level representing accurate and coherent performance in the competencies associated with Task04."@en .
+
+ontoksd:PL_Task04_Novice a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    dcterms:identifier "Task04-PL1"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int ;
+    rdfs:comment "Proficiency level representing incomplete or incorrect performance in the competencies associated with Task04."@en .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task04_ReturnFarmerRobot .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task04_ReturnFarmerRobot .
+
+ontoksd:C12 ontoksd:hasTask ontoksd:Task04_ReturnFarmerRobot .
+
+ontoksd:C13 ontoksd:hasTask ontoksd:Task04_ReturnFarmerRobot .
+
+ontoksd:C14 ontoksd:hasTask ontoksd:Task04_ReturnFarmerRobot .
+
+ontoksd:PS_Task04_ProficiencyScheme a ontoksd:ProficiencyScheme ;
+    rdfs:label "Task04 proficiency scheme"@en ;
+    dcterms:identifier "Task04-PS"^^xsd:string ;
+    ontoksd:definesInterval ontoksd:Interval_Task04_Advanced,
+        ontoksd:Interval_Task04_Competent,
+        ontoksd:Interval_Task04_Novice ;
+    ontoksd:definesLevel ontoksd:PL_Task04_Advanced,
+        ontoksd:PL_Task04_Competent,
+        ontoksd:PL_Task04_Novice ;
+    ontoksd:usesScale ontoksd:Scale_Task04_0_10 ;
+    rdfs:comment "Proficiency scheme associated with Task04, defining how intervals in the numeric scale are interpreted as proficiency levels."@en ;
+    skos:scopeNote "Specification-level interpretive assumption recorded in the CSP report, not an observed result or a grading rule contained in the original task statement. The assessment references this planned scheme documentarily; usesProficiencyScheme is reserved for AssessmentOccurrence."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Report.md> .
+
+ontoksd:Scale_Task04_0_10 a ontoksd:Scale ;
+    rdfs:label "Task04 proficiency scale 0–10"@en ;
+    dcterms:identifier "Task04-SCALE"^^xsd:string ;
+    ontoksd:hasInterval ontoksd:Interval_Task04_Advanced,
+        ontoksd:Interval_Task04_Competent,
+        ontoksd:Interval_Task04_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 ;
+    ontoksd:step 0.1 ;
+    rdfs:comment "Decimal scoring range from 0 to 10 with a selected granularity of 0.1. For Task04, the reported 5.1/9.1 starts are interpreted on this one-decimal domain. Numeric validation of step adherence is external to OWL."@en .
+
+ontoksd:AS_Task04_ReturnFarmerRobot a ontoksd:Assessment ;
+    rdfs:label "Assessment — Task04 Return of the Farmer Robot"@en ;
+    dcterms:description "Assessment specification based on Task04, intended to evaluate learners through the submitted Pushdown Automaton artifact, rule-based notation, simulation-supported validation, and technical report."@en ;
+    dcterms:identifier "Task04-AS"^^xsd:string ;
+    dcterms:references ontoksd:PS_Task04_ProficiencyScheme ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task04_ReturnFarmerRobot ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentStrategyType,
+        ontoksd:WrittenAssessmentModalityType ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task04_C03,
+        ontoksd:CA_Task04_C05,
+        ontoksd:CA_Task04_C12,
+        ontoksd:CA_Task04_C13,
+        ontoksd:CA_Task04_C14 ;
+    ontoksd:hasInstructionalStatement "Assess the submitted model, technical report and documented PBL process against the task requirements. Individual participation is an assessment design concern; this specification does not assert an assessment occurrence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task04_ReturnFarmerRobot ;
+    ontoksd:usesResource ontoksd:ER_Task04_JFLAP,
+        ontoksd:ER_Task04_ProblemStatement,
+        ontoksd:ER_Task04_SBCReportTemplate ;
+    rdfs:comment "Assessment specification associated with Task04. It represents the evaluative use of the learning task as a basis for judging learner performance through PDA modeling, formal notation, simulation, and technical documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:Task04_ReturnFarmerRobot a ontoksd:Task ;
+    rdfs:label "Task04 — The Return of the Farmer Robot"@en ;
+    dcterms:identifier "Task04-TASK"^^xsd:string ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task04_ModelAndValidatePDANavigation ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task04_ModuleIntegrationAnalysis,
+        ontoksd:TC_Task04_NavigationModule,
+        ontoksd:TC_Task04_PDAArtifact,
+        ontoksd:TC_Task04_RuleBasedNotation,
+        ontoksd:TC_Task04_TechnicalReport ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task04_FoodDeliveryModuleIntegration,
+        ontoksd:TCons_Task04_PathReversal,
+        ontoksd:TCons_Task04_ProcessDocumentation,
+        ontoksd:TCons_Task04_ReturnToOrigin,
+        ontoksd:TCons_Task04_RuleNotationSupport,
+        ontoksd:TCons_Task04_SimulatorExecution,
+        ontoksd:TCons_Task04_StackBasedMemory ;
+    ontoksd:hasTaskStatement "Design, simulate, validate, and document a navigation module using Pushdown Automata and, where appropriate, context-free rule-based notation, so that the robot can return to its starting point after completing a food-delivery alert path."@en ;
+    ontoksd:isTaskOf ontoksd:C03,
+        ontoksd:C05,
+        ontoksd:C12,
+        ontoksd:C13,
+        ontoksd:C14 ;
+    rdfs:comment "Specification-level task corresponding to the Return of the Farmer Robot PBL case. It represents the problem of designing a navigation module that enables the robot to return to its starting point after food-delivery signaling, using memory-dependent control, formal rule-based notation, and simulation-supported validation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+
+ontoksd:LT_Task04_ReturnFarmerRobot a ontoksd:LearningTask ;
+    rdfs:label "Learning Task — The Return of the Farmer Robot"@en ;
+    dcterms:description "Concrete instructional unit in which learners analyze navigation requirements, model a Pushdown Automaton with stack-based memory, interpret or define rule-based notation for location sequences, test the model in JFLAP, and document the result."@en ;
+    dcterms:identifier "Task04-LT"^^xsd:string ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task04_ReturnFarmerRobot ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task04_C03_Learning,
+        ontoksd:CA_Task04_C05_Learning,
+        ontoksd:CA_Task04_C12_Learning,
+        ontoksd:CA_Task04_C13_Learning,
+        ontoksd:CA_Task04_C14_Learning ;
+    ontoksd:hasInstructionalStatement """﻿# **Problem 4 (Task): The farmer robot returns**
+ 
+ Authors: Luiz Gavaza &nbsp; Lais Salvador &nbsp; Roberta Oliveira &nbsp; Jessica Santana &nbsp; Otávio Neto
+ 
+ Contributors: Edeyson Gomes
+ 
+## **Task: The Return of the Farmer Robot**
+
+### **1. Introduction**
+
+The company **Farmer Robot** was highly satisfied with the proposed solution for signaling food delivery and is now excited about implementing a new functionality: in addition to navigating through the herd and sending food delivery alerts, the robot must also be capable of returning to its starting point to perform another task. The company already has "external sensor" kits to guide the robot to the herds, but the challenge is figuring out how to make the robot return to its starting point. As previously agreed with the farmer, the robot should still issue food delivery alerts based on the minimum number of herd members detected.
+
+The UFBA student team responsible for developing the initial prototype studied this navigation problem and realized that a simple finite state machine (FSM) is insufficient to solve it. Understanding how they reached this conclusion is an interesting question. Upon further exploration of the problem of returning to the starting point, the students observed that adding an **auxiliary memory device** to the FSM could model a solution to support the robot's navigation.
+
+The students also noted that the **Food Delivery Module** from the original Farmer Robot problem could be extended with the proposed navigation module. Alternatively, the two modules could operate as separate solutions running in parallel, with some form of communication between them. Additionally, the company expressed interest in a **notation system** to specify rules for generating location sequences, to aid in documenting and improving the robot's navigation module.
+
+The suggested tool for simulating the robot's navigation module and generating location sequences is **JFLAP**.
+
+
+
+### **2. Process**
+
+During the solution development process, the **Problem-Based Learning (PBL)** methodology will be employed. This approach uses real-world problems to stimulate critical thinking, teamwork, and problem-solving skills while fostering knowledge construction on a specific topic.
+
+The process must be documented using the **PBL Whiteboard**, which consists of the columns: QUESTIONS, FACTS, IDEAS/HYPOTHESES, and ACTIONS. In each team meeting, a version of the whiteboard must be created to document the steps taken to build the solution. Additionally, a shared document will be provided for filling out the **Logbook**, which must include meeting minutes, participant names, discussion points, and challenges encountered. This documentation will be an integral part of the group’s evaluation. Each team member's participation/contribution is crucial and will also be individually assessed based on observations by the tutors and feedback from peers.
+
+
+
+### **3. Deliverables**
+
+A team member must submit the following by **8:20 PM on April 28, 2021**, via UFBA's virtual learning environment (AVA):  
+
+1. A file for the **JFLAP simulator** containing the robot's navigation module.  
+
+2. A **report**, written in the SBC (Brazilian Computing Society) article format, that thoroughly details the design and functionality of the robot's navigation module.  
+
+The report must describe the system's operations and include at least **two examples** of its functionality. If a rule-based notation system was developed, the report must also include examples of location sequence generation. If not developed, the report should detail the main difficulties encountered.
+
+
+
+### **4. Knowledge/Concepts Involved**
+
+    1. Pushdown Automata 
+    
+    2. Context-Free Grammars  
+
+
+
+### **5. Learning Objectives**
+
+#### **5.1 General Objective**
+
+Develop a navigation module for the Farmer Robot, enabling it to return to its starting point after issuing a food delivery alert.
+
+#### **5.2 Specific Objectives**
+
+1. Understand the functionalities and challenges of the Farmer Robot's navigation problem.  
+
+2. Investigate the use of auxiliary memory devices in a finite state machine to model a solution for returning to the starting point.  
+
+3. Analyze the feasibility of extending the Food Delivery Module with the proposed navigation module or developing parallel solutions capable of communication.  
+
+4. Research and propose a notation system to specify rules for generating location sequences for documentation and module improvement.  
+
+5. Use the **JFLAP** tool to simulate the robot's navigation process and generate location sequences.  
+
+### </a> References 
+RAMOS, M. V. M.; JOSE NETO, J.; VEGA, I. S. **Linguagens Formais: Teoria, Modelagem e Implementação**. Editora Bookman, 2009.
+
+MENEZES, Paulo Blauth. **Linguagens formais e autômatos**. 6. ed. Bookman, 2011."""@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task04_JFLAP,
+        ontoksd:ER_Task04_Logbook,
+        ontoksd:ER_Task04_PBLWhiteboard,
+        ontoksd:ER_Task04_ProblemStatement,
+        ontoksd:ER_Task04_SBCReportTemplate ;
+    rdfs:comment "Learning task corresponding to Task04. It captures the executable instructional dimension of the Return of the Farmer Robot case, in which learners are expected to perform a bounded and goal-directed activity oriented toward competence development and demonstration."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> .
+}

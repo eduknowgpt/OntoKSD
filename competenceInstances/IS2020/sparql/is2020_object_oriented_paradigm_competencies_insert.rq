@@ -1,648 +1,1087 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  #################################################################
-  # Source markers and scheme
-  #################################################################
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Object-Oriented Paradigm competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.3 Competency Area – Object-Oriented Paradigm."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Object-Oriented Paradigm Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Object-Oriented Paradigm Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Object-Oriented Paradigm competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Knowledge elements
-  #################################################################
-
-  is2020k:ModelPropertiesWithinClassDefinitionCreating
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Model the properties of an entity using data types and variables within a class definition"@en ;
-      skos:prefLabel "Model the properties of an entity using data types and variables within a class definition"@en ;
-      skos:definition "Knowledge of modeling the properties of an entity using data types and variables within a class definition."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ModelBehaviorsWithinClassDefinition
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Model the behaviors of an entity using procedures within a class definition"@en ;
-      skos:prefLabel "Model the behaviors of an entity using procedures within a class definition"@en ;
-      skos:definition "Knowledge of modeling the behaviors of an entity using procedures within a class definition."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DistinctionBetweenInstanceAndClassMembers
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Distinction between instance and class members"@en ;
-      skos:prefLabel "Distinction between instance and class members"@en ;
-      skos:definition "Knowledge of the distinction between instance members and class members."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ModelPropertiesWithinClassDefinitionApplying
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Model the properties of an entity using data types and variables within a class definition (applied level)"@en ;
-      skos:prefLabel "Model the properties of an entity using data types and variables within a class definition (applied level)"@en ;
-      skos:definition "Knowledge of applying class-based modeling of entity properties using data types and variables."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ObjectInstantiationOperations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Object instantiation operations"@en ;
-      skos:prefLabel "Object instantiation operations"@en ;
-      skos:definition "Knowledge of object instantiation operations in object-oriented programming."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ClassBasisForObjectInstantiation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Class basis for object instantiation"@en ;
-      skos:prefLabel "Class basis for object instantiation"@en ;
-      skos:definition "Knowledge of classes as the basis for object instantiation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PrototypeBasisForObjectInstantiation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Prototype basis for object instantiation"@en ;
-      skos:prefLabel "Prototype basis for object instantiation"@en ;
-      skos:definition "Knowledge of prototypes as a basis for object instantiation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ObjectInstantiationUsingConstructors
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Object instantiation using constructors and related operators"@en ;
-      skos:prefLabel "Object instantiation using constructors and related operators"@en ;
-      skos:definition "Knowledge of object instantiation using constructors and related operators."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MemoryManagementFeatures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Implementing language features related to memory management (unmanaged vs. managed)"@en ;
-      skos:prefLabel "Implementing language features related to memory management (unmanaged vs. managed)"@en ;
-      skos:definition "Knowledge of language features related to memory management, including unmanaged and managed approaches."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MethodDeclarationAndUse
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Method declaration and use"@en ;
-      skos:prefLabel "Method declaration and use"@en ;
-      skos:definition "Knowledge of method declaration and use in object-oriented programming."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CallsByReferenceAndValue
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Calls by reference and value"@en ;
-      skos:prefLabel "Calls by reference and value"@en ;
-      skos:definition "Knowledge of calls by reference and by value."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MemberVisibilityAndAccessModification
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Member visibility and language-specific access modification"@en ;
-      skos:prefLabel "Member visibility and language-specific access modification"@en ;
-      skos:definition "Knowledge of member visibility and language-specific access modification."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ClassPackagingForReuse
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Class packaging for reuse (namespaces, packages, libraries)"@en ;
-      skos:prefLabel "Class packaging for reuse (namespaces, packages, libraries)"@en ;
-      skos:definition "Knowledge of class packaging for reuse, including namespaces, packages, and libraries."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AccessingPackagedClasses
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Accessing packaged classes"@en ;
-      skos:prefLabel "Accessing packaged classes"@en ;
-      skos:definition "Knowledge of accessing packaged classes."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:LanguageFeaturesForVisibility
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Language features to stratify and organize member visibility and accessibility within a class"@en ;
-      skos:prefLabel "Language features to stratify and organize member visibility and accessibility within a class"@en ;
-      skos:definition "Knowledge of language features that stratify and organize member visibility and accessibility within a class."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EncapsulationForAutonomyAndIntegrity
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design for object autonomy and integrity using encapsulation techniques"@en ;
-      skos:prefLabel "Design for object autonomy and integrity using encapsulation techniques"@en ;
-      skos:definition "Knowledge of designing for object autonomy and integrity using encapsulation techniques."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RefactoringForEncapsulation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Refactoring for encapsulation"@en ;
-      skos:prefLabel "Refactoring for encapsulation"@en ;
-      skos:definition "Knowledge of refactoring for encapsulation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DecouplingUsingEncapsulation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Decoupling using encapsulation"@en ;
-      skos:prefLabel "Decoupling using encapsulation"@en ;
-      skos:definition "Knowledge of decoupling using encapsulation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:InheritanceIsAKindOf
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Object extensibility and reuse through inheritance (is a kind of)"@en ;
-      skos:prefLabel "Object extensibility and reuse through inheritance (is a kind of)"@en ;
-      skos:definition "Knowledge of object extensibility and reuse through inheritance."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SingleAndMultipleInheritance
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Single and multiple inheritance"@en ;
-      skos:prefLabel "Single and multiple inheritance"@en ;
-      skos:definition "Knowledge of single and multiple inheritance."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CompositionHasA
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Object extensibility and reuse through composition (has a)"@en ;
-      skos:prefLabel "Object extensibility and reuse through composition (has a)"@en ;
-      skos:definition "Knowledge of object extensibility and reuse through composition."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DependenciesAndConstructors
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Dependencies and constructors"@en ;
-      skos:prefLabel "Dependencies and constructors"@en ;
-      skos:definition "Knowledge of dependencies and constructors."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DependencyInjectionAndIoC
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Dependency injection and inversion of control"@en ;
-      skos:prefLabel "Dependency injection and inversion of control"@en ;
-      skos:definition "Knowledge of dependency injection and inversion of control."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:InterfacesAndMixins
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Interfaces and mixins as an alternative to multiple inheritance"@en ;
-      skos:prefLabel "Interfaces and mixins as an alternative to multiple inheritance"@en ;
-      skos:definition "Knowledge of interfaces and mixins as alternatives to multiple inheritance."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DelegationKnowsA
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Object extensibility and reuse through delegation (knows a)"@en ;
-      skos:prefLabel "Object extensibility and reuse through delegation (knows a)"@en ;
-      skos:definition "Knowledge of object extensibility and reuse through delegation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AbstractClassLanguageFeatures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Language features that identify a class as abstract - the source of inheritance without instantiability"@en ;
-      skos:prefLabel "Language features that identify a class as abstract - the source of inheritance without instantiability"@en ;
-      skos:definition "Knowledge of language features that identify a class as abstract and support inheritance without instantiation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AbstractInheritanceHierarchies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Refactoring or design of abstract inheritance hierarchies"@en ;
-      skos:prefLabel "Refactoring or design of abstract inheritance hierarchies"@en ;
-      skos:definition "Knowledge of refactoring or designing abstract inheritance hierarchies."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AbstractionVersusInterfaces
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "abstraction vs. interfaces (virtual members)"@en ;
-      skos:prefLabel "abstraction vs. interfaces (virtual members)"@en ;
-      skos:definition "Knowledge of abstraction versus interfaces, including virtual members."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AbstractReferencesForDataStructuring
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Data structuring of related data types through abstract references"@en ;
-      skos:prefLabel "Data structuring of related data types through abstract references"@en ;
-      skos:definition "Knowledge of structuring related data types through abstract references."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BaseReferencesAndDerivedInstances
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Relationship between base/parent class references and derived/child class instances"@en ;
-      skos:prefLabel "Relationship between base/parent class references and derived/child class instances"@en ;
-      skos:definition "Knowledge of the relationship between base or parent class references and derived or child class instances."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OverrideBaseBehaviorsAndAttributes
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Override base/parent class behaviors and attributes in derived/child classes"@en ;
-      skos:prefLabel "Override base/parent class behaviors and attributes in derived/child classes"@en ;
-      skos:definition "Knowledge of overriding base or parent class behaviors and attributes in derived or child classes."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UniqueResponsesToInheritedCalls
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Behaviors that respond uniquely to commonly inherited method calls"@en ;
-      skos:prefLabel "Behaviors that respond uniquely to commonly inherited method calls"@en ;
-      skos:definition "Knowledge of behaviors that respond uniquely to commonly inherited method calls."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SeparationOfConcerns
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Separation of concerns"@en ;
-      skos:prefLabel "Separation of concerns"@en ;
-      skos:definition "Knowledge of separation of concerns in object-oriented design."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CreationalStructuralBehavioralPatterns
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Creational, Structural, and Behavioral patterns"@en ;
-      skos:prefLabel "Creational, Structural, and Behavioral patterns"@en ;
-      skos:definition "Knowledge of creational, structural, and behavioral design patterns."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RelationshipToModelingNotations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Relationship to modeling notations"@en ;
-      skos:prefLabel "Relationship to modeling notations"@en ;
-      skos:definition "Knowledge of the relationship between design patterns and modeling notations."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SolidPrinciples
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "SOLID principles"@en ;
-      skos:prefLabel "SOLID principles"@en ;
-      skos:definition "Knowledge of SOLID principles."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OOPImplementationAndUML
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Relationship between OOP implementation and UML"@en ;
-      skos:prefLabel "Relationship between OOP implementation and UML"@en ;
-      skos:definition "Knowledge of the relationship between object-oriented programming implementation and UML."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:LimitationsInLanguageImplementation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Limitations in language implementation"@en ;
-      skos:prefLabel "Limitations in language implementation"@en ;
-      skos:definition "Knowledge of limitations in programming language implementation."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ObjectRelationalMappingAndPersistence
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Object-Relational Mapping and data persistence"@en ;
-      skos:prefLabel "Object-Relational Mapping and data persistence"@en ;
-      skos:definition "Knowledge of object-relational mapping and data persistence."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ReuseAndLibraries
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Reuse and Libraries"@en ;
-      skos:prefLabel "Reuse and Libraries"@en ;
-      skos:definition "Knowledge of reuse and libraries in object-oriented development."@en ;
-      skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Competencies
-  #################################################################
-
-  is2020c:Competence_ISOOP_1
-      a ontoksd:Competence ;
-      rdfs:label "Apply fundamental elements of objects and classes"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 1"@en ;
-      skos:definition "Apply fundamental elements of objects and classes."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ModelPropertiesWithinClassDefinitionCreating ,
-          is2020k:ModelBehaviorsWithinClassDefinition ,
-          is2020k:DistinctionBetweenInstanceAndClassMembers ,
-          is2020k:ModelPropertiesWithinClassDefinitionApplying ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_1_01 ,
-          is2020c:KS_ISOOP_1_02 ,
-          is2020c:KS_ISOOP_1_03 ,
-          is2020c:KS_ISOOP_1_04 .
-
-  is2020c:Competence_ISOOP_2
-      a ontoksd:Competence ;
-      rdfs:label "Utilize instantiation modalities"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 2"@en ;
-      skos:definition "Utilize instantiation modalities."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ObjectInstantiationOperations ,
-          is2020k:ClassBasisForObjectInstantiation ,
-          is2020k:PrototypeBasisForObjectInstantiation ,
-          is2020k:ObjectInstantiationUsingConstructors ,
-          is2020k:MemoryManagementFeatures ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_2_01 ,
-          is2020c:KS_ISOOP_2_02 ,
-          is2020c:KS_ISOOP_2_03 ,
-          is2020c:KS_ISOOP_2_04 ,
-          is2020c:KS_ISOOP_2_05 .
-
-  is2020c:Competence_ISOOP_3
-      a ontoksd:Competence ;
-      rdfs:label "Utilize intra-entity communication and messaging"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 3"@en ;
-      skos:definition "Utilize intra-entity communication and messaging."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:MethodDeclarationAndUse ,
-          is2020k:CallsByReferenceAndValue ,
-          is2020k:MemberVisibilityAndAccessModification ,
-          is2020k:ClassPackagingForReuse ,
-          is2020k:AccessingPackagedClasses ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_3_01 ,
-          is2020c:KS_ISOOP_3_02 ,
-          is2020c:KS_ISOOP_3_03 ,
-          is2020c:KS_ISOOP_3_04 ,
-          is2020c:KS_ISOOP_3_05 .
-
-  is2020c:Competence_ISOOP_4
-      a ontoksd:Competence ;
-      rdfs:label "Design for encapsulation"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 4"@en ;
-      skos:definition "Design for encapsulation."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:LanguageFeaturesForVisibility ,
-          is2020k:EncapsulationForAutonomyAndIntegrity ,
-          is2020k:RefactoringForEncapsulation ,
-          is2020k:DecouplingUsingEncapsulation ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_4_01 ,
-          is2020c:KS_ISOOP_4_02 ,
-          is2020c:KS_ISOOP_4_03 ,
-          is2020c:KS_ISOOP_4_04 .
-
-  is2020c:Competence_ISOOP_5
-      a ontoksd:Competence ;
-      rdfs:label "Design for inheritance and dependency management"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 5"@en ;
-      skos:definition "Design for inheritance and dependency management."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:InheritanceIsAKindOf ,
-          is2020k:SingleAndMultipleInheritance ,
-          is2020k:CompositionHasA ,
-          is2020k:DependenciesAndConstructors ,
-          is2020k:DependencyInjectionAndIoC ,
-          is2020k:InterfacesAndMixins ,
-          is2020k:DelegationKnowsA ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_5_01 ,
-          is2020c:KS_ISOOP_5_02 ,
-          is2020c:KS_ISOOP_5_03 ,
-          is2020c:KS_ISOOP_5_04 ,
-          is2020c:KS_ISOOP_5_05 ,
-          is2020c:KS_ISOOP_5_06 ,
-          is2020c:KS_ISOOP_5_07 .
-
-  is2020c:Competence_ISOOP_6
-      a ontoksd:Competence ;
-      rdfs:label "Design for abstraction"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 6"@en ;
-      skos:definition "Design for abstraction."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:AbstractClassLanguageFeatures ,
-          is2020k:AbstractInheritanceHierarchies ,
-          is2020k:AbstractionVersusInterfaces ,
-          is2020k:AbstractReferencesForDataStructuring ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_6_01 ,
-          is2020c:KS_ISOOP_6_02 ,
-          is2020c:KS_ISOOP_6_03 ,
-          is2020c:KS_ISOOP_6_04 .
-
-  is2020c:Competence_ISOOP_7
-      a ontoksd:Competence ;
-      rdfs:label "Apply polymorphism"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 7"@en ;
-      skos:definition "Apply polymorphism."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:BaseReferencesAndDerivedInstances ,
-          is2020k:OverrideBaseBehaviorsAndAttributes ,
-          is2020k:UniqueResponsesToInheritedCalls ,
-          is2020k:SeparationOfConcerns ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_7_01 ,
-          is2020c:KS_ISOOP_7_02 ,
-          is2020c:KS_ISOOP_7_03 ,
-          is2020c:KS_ISOOP_7_04 .
-
-  is2020c:Competence_ISOOP_8
-      a ontoksd:Competence ;
-      rdfs:label "Utilize design patterns"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 8"@en ;
-      skos:definition "Utilize design patterns."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:CreationalStructuralBehavioralPatterns ,
-          is2020k:RelationshipToModelingNotations ,
-          is2020k:SolidPrinciples ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_8_01 ,
-          is2020c:KS_ISOOP_8_02 ,
-          is2020c:KS_ISOOP_8_03 .
-
-  is2020c:Competence_ISOOP_9
-      a ontoksd:Competence ;
-      rdfs:label "Utilize objects and classes for entity modeling"@en ;
-      skos:prefLabel "IS Object-Oriented Paradigm Competency 9"@en ;
-      skos:definition "Utilize objects and classes for entity modeling."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
-      dcterms:identifier "ISOOP-9"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:OOPImplementationAndUML ,
-          is2020k:LimitationsInLanguageImplementation ,
-          is2020k:ObjectRelationalMappingAndPersistence ,
-          is2020k:ReuseAndLibraries ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISOOP_9_01 ,
-          is2020c:KS_ISOOP_9_02 ,
-          is2020c:KS_ISOOP_9_03 ,
-          is2020c:KS_ISOOP_9_04 .
-
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
-
-  is2020c:KS_ISOOP_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Model properties in class definition × Creating"@en ; skos:prefLabel "Model properties in class definition × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ModelPropertiesWithinClassDefinitionCreating ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 .
-  is2020c:KS_ISOOP_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Model behaviors in class definition × Creating"@en ; skos:prefLabel "Model behaviors in class definition × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ModelBehaviorsWithinClassDefinition ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 .
-  is2020c:KS_ISOOP_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Instance vs class members × Creating"@en ; skos:prefLabel "Instance vs class members × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DistinctionBetweenInstanceAndClassMembers ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 .
-  is2020c:KS_ISOOP_1_04 a ontoksd:KnowledgeSkill ; rdfs:label "Model properties in class definition × Applying"@en ; skos:prefLabel "Model properties in class definition × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ModelPropertiesWithinClassDefinitionApplying ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 .
-
-  is2020c:KS_ISOOP_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Object instantiation operations × Applying"@en ; skos:prefLabel "Object instantiation operations × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ObjectInstantiationOperations ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 .
-  is2020c:KS_ISOOP_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Class basis for instantiation × Applying"@en ; skos:prefLabel "Class basis for instantiation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ClassBasisForObjectInstantiation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 .
-  is2020c:KS_ISOOP_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Prototype basis for instantiation × Applying"@en ; skos:prefLabel "Prototype basis for instantiation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PrototypeBasisForObjectInstantiation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 .
-  is2020c:KS_ISOOP_2_04 a ontoksd:KnowledgeSkill ; rdfs:label "Constructors for instantiation × Applying"@en ; skos:prefLabel "Constructors for instantiation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ObjectInstantiationUsingConstructors ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 .
-  is2020c:KS_ISOOP_2_05 a ontoksd:KnowledgeSkill ; rdfs:label "Memory management features × Applying"@en ; skos:prefLabel "Memory management features × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MemoryManagementFeatures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 .
-
-  is2020c:KS_ISOOP_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Method declaration and use × Applying"@en ; skos:prefLabel "Method declaration and use × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MethodDeclarationAndUse ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 .
-  is2020c:KS_ISOOP_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Calls by reference and value × Applying"@en ; skos:prefLabel "Calls by reference and value × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CallsByReferenceAndValue ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 .
-  is2020c:KS_ISOOP_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Member visibility and access modification × Applying"@en ; skos:prefLabel "Member visibility and access modification × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MemberVisibilityAndAccessModification ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 .
-  is2020c:KS_ISOOP_3_04 a ontoksd:KnowledgeSkill ; rdfs:label "Class packaging for reuse × Applying"@en ; skos:prefLabel "Class packaging for reuse × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ClassPackagingForReuse ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 .
-  is2020c:KS_ISOOP_3_05 a ontoksd:KnowledgeSkill ; rdfs:label "Access packaged classes × Applying"@en ; skos:prefLabel "Access packaged classes × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AccessingPackagedClasses ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 .
-
-  is2020c:KS_ISOOP_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Visibility language features × Applying"@en ; skos:prefLabel "Visibility language features × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:LanguageFeaturesForVisibility ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 .
-  is2020c:KS_ISOOP_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Encapsulation for autonomy and integrity × Creating"@en ; skos:prefLabel "Encapsulation for autonomy and integrity × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:EncapsulationForAutonomyAndIntegrity ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 .
-  is2020c:KS_ISOOP_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Refactoring for encapsulation × Applying"@en ; skos:prefLabel "Refactoring for encapsulation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:RefactoringForEncapsulation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 .
-  is2020c:KS_ISOOP_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Decoupling using encapsulation × Applying"@en ; skos:prefLabel "Decoupling using encapsulation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DecouplingUsingEncapsulation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 .
-
-  is2020c:KS_ISOOP_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Inheritance × Creating"@en ; skos:prefLabel "Inheritance × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:InheritanceIsAKindOf ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-  is2020c:KS_ISOOP_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Single and multiple inheritance × Applying"@en ; skos:prefLabel "Single and multiple inheritance × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SingleAndMultipleInheritance ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-  is2020c:KS_ISOOP_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Composition × Applying"@en ; skos:prefLabel "Composition × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CompositionHasA ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-  is2020c:KS_ISOOP_5_04 a ontoksd:KnowledgeSkill ; rdfs:label "Dependencies and constructors × Applying"@en ; skos:prefLabel "Dependencies and constructors × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DependenciesAndConstructors ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-  is2020c:KS_ISOOP_5_05 a ontoksd:KnowledgeSkill ; rdfs:label "Dependency injection and IoC × Applying"@en ; skos:prefLabel "Dependency injection and IoC × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DependencyInjectionAndIoC ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-  is2020c:KS_ISOOP_5_06 a ontoksd:KnowledgeSkill ; rdfs:label "Interfaces and mixins × Applying"@en ; skos:prefLabel "Interfaces and mixins × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:InterfacesAndMixins ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-  is2020c:KS_ISOOP_5_07 a ontoksd:KnowledgeSkill ; rdfs:label "Delegation × Applying"@en ; skos:prefLabel "Delegation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DelegationKnowsA ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 .
-
-  is2020c:KS_ISOOP_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Abstract class language features × Applying"@en ; skos:prefLabel "Abstract class language features × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AbstractClassLanguageFeatures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 .
-  is2020c:KS_ISOOP_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Abstract inheritance hierarchies × Creating"@en ; skos:prefLabel "Abstract inheritance hierarchies × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:AbstractInheritanceHierarchies ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 .
-  is2020c:KS_ISOOP_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Abstraction vs interfaces × Applying"@en ; skos:prefLabel "Abstraction vs interfaces × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AbstractionVersusInterfaces ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 .
-  is2020c:KS_ISOOP_6_04 a ontoksd:KnowledgeSkill ; rdfs:label "Abstract references for data structuring × Applying"@en ; skos:prefLabel "Abstract references for data structuring × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AbstractReferencesForDataStructuring ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 .
-
-  is2020c:KS_ISOOP_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Base references and derived instances × Applying"@en ; skos:prefLabel "Base references and derived instances × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BaseReferencesAndDerivedInstances ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 .
-  is2020c:KS_ISOOP_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Override behaviors and attributes × Applying"@en ; skos:prefLabel "Override behaviors and attributes × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:OverrideBaseBehaviorsAndAttributes ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 .
-  is2020c:KS_ISOOP_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Unique responses to inherited calls × Applying"@en ; skos:prefLabel "Unique responses to inherited calls × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UniqueResponsesToInheritedCalls ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 .
-  is2020c:KS_ISOOP_7_04 a ontoksd:KnowledgeSkill ; rdfs:label "Separation of concerns × Applying"@en ; skos:prefLabel "Separation of concerns × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SeparationOfConcerns ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 .
-
-  is2020c:KS_ISOOP_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Design patterns categories × Applying"@en ; skos:prefLabel "Design patterns categories × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CreationalStructuralBehavioralPatterns ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_8 .
-  is2020c:KS_ISOOP_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "Relationship to modeling notations × Applying"@en ; skos:prefLabel "Relationship to modeling notations × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:RelationshipToModelingNotations ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_8 .
-  is2020c:KS_ISOOP_8_03 a ontoksd:KnowledgeSkill ; rdfs:label "SOLID principles × Applying"@en ; skos:prefLabel "SOLID principles × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SolidPrinciples ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_8 .
-
-  is2020c:KS_ISOOP_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "OOP implementation and UML × Applying"@en ; skos:prefLabel "OOP implementation and UML × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:OOPImplementationAndUML ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 .
-  is2020c:KS_ISOOP_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Limitations in language implementation × Applying"@en ; skos:prefLabel "Limitations in language implementation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:LimitationsInLanguageImplementation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 .
-  is2020c:KS_ISOOP_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "ORM and persistence × Applying"@en ; skos:prefLabel "ORM and persistence × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ObjectRelationalMappingAndPersistence ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 .
-  is2020c:KS_ISOOP_9_04 a ontoksd:KnowledgeSkill ; rdfs:label "Reuse and libraries × Applying"@en ; skos:prefLabel "Reuse and libraries × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ReuseAndLibraries ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 .
-
+is2020c:KS_ISOOP_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Model properties in class definition × Creating"@en ;
+    dcterms:description "Source knowledge element: Model the properties of an entity using data types and variables within a class definition; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ModelPropertiesWithinClassDefinitionCreating ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Model properties in class definition × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_1 .
+
+is2020c:KS_ISOOP_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Model behaviors in class definition × Creating"@en ;
+    dcterms:description "Source knowledge element: Model the behaviors of an entity using procedures within a class definition; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ModelBehaviorsWithinClassDefinition ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Model behaviors in class definition × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_1 .
+
+is2020c:KS_ISOOP_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Instance vs class members × Creating"@en ;
+    dcterms:description "Source knowledge element: Distinction between instance and class members; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DistinctionBetweenInstanceAndClassMembers ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Instance vs class members × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_1 .
+
+is2020c:KS_ISOOP_1_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Model properties in class definition × Applying"@en ;
+    dcterms:description "Source knowledge element: Model the properties of an entity using data types and variables within a class definition; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ModelPropertiesWithinClassDefinitionApplying ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Model properties in class definition × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_1 .
+
+is2020c:KS_ISOOP_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Object instantiation operations × Applying"@en ;
+    dcterms:description "Source knowledge element: Object instantiation operations; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ObjectInstantiationOperations ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Object instantiation operations × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_2 .
+
+is2020c:KS_ISOOP_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Class basis for instantiation × Applying"@en ;
+    dcterms:description "Source knowledge element: Class basis for object instantiation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ClassBasisForObjectInstantiation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Class basis for instantiation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_2 .
+
+is2020c:KS_ISOOP_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Prototype basis for instantiation × Applying"@en ;
+    dcterms:description "Source knowledge element: Prototype basis for object instantiation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PrototypeBasisForObjectInstantiation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Prototype basis for instantiation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_2 .
+
+is2020c:KS_ISOOP_2_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Constructors for instantiation × Applying"@en ;
+    dcterms:description "Source knowledge element: Object instantiation using constructors and related operators; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ObjectInstantiationUsingConstructors ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Constructors for instantiation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_2 .
+
+is2020c:KS_ISOOP_2_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Memory management features × Applying"@en ;
+    dcterms:description "Source knowledge element: Implementing language features related to memory management (unmanaged vs. managed); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MemoryManagementFeatures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Memory management features × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_2 .
+
+is2020c:KS_ISOOP_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Method declaration and use × Applying"@en ;
+    dcterms:description "Source knowledge element: Method declaration and use; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MethodDeclarationAndUse ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Method declaration and use × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_3 .
+
+is2020c:KS_ISOOP_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Calls by reference and value × Applying"@en ;
+    dcterms:description "Source knowledge element: Calls by reference and value; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CallsByReferenceAndValue ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Calls by reference and value × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_3 .
+
+is2020c:KS_ISOOP_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Member visibility and access modification × Applying"@en ;
+    dcterms:description "Source knowledge element: Member visibility and language-specific access modification; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MemberVisibilityAndAccessModification ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Member visibility and access modification × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_3 .
+
+is2020c:KS_ISOOP_3_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Class packaging for reuse × Applying"@en ;
+    dcterms:description "Source knowledge element: Class packaging for reuse (namespaces, packages, libraries); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ClassPackagingForReuse ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Class packaging for reuse × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_3 .
+
+is2020c:KS_ISOOP_3_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Access packaged classes × Applying"@en ;
+    dcterms:description "Source knowledge element: Accessing packaged classes; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AccessingPackagedClasses ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Access packaged classes × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_3 .
+
+is2020c:KS_ISOOP_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Visibility language features × Applying"@en ;
+    dcterms:description "Source knowledge element: Language features to stratify and organize member visibility and accessibility within a class; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:LanguageFeaturesForVisibility ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Visibility language features × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_4 .
+
+is2020c:KS_ISOOP_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Encapsulation for autonomy and integrity × Creating"@en ;
+    dcterms:description "Source knowledge element: Design for object autonomy and integrity using encapsulation techniques; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EncapsulationForAutonomyAndIntegrity ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Encapsulation for autonomy and integrity × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_4 .
+
+is2020c:KS_ISOOP_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Refactoring for encapsulation × Applying"@en ;
+    dcterms:description "Source knowledge element: Refactoring for encapsulation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RefactoringForEncapsulation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Refactoring for encapsulation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_4 .
+
+is2020c:KS_ISOOP_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Decoupling using encapsulation × Applying"@en ;
+    dcterms:description "Source knowledge element: Decoupling using encapsulation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DecouplingUsingEncapsulation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Decoupling using encapsulation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_4 .
+
+is2020c:KS_ISOOP_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Inheritance × Creating"@en ;
+    dcterms:description "Source knowledge element: Object extensibility and reuse through inheritance (“is a kind of”); source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InheritanceIsAKindOf ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Inheritance × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Single and multiple inheritance × Applying"@en ;
+    dcterms:description "Source knowledge element: Single and multiple inheritance; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SingleAndMultipleInheritance ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Single and multiple inheritance × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Composition × Applying"@en ;
+    dcterms:description "Source knowledge element: Object extensibility and reuse through composition (“has a”); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CompositionHasA ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Composition × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_5_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Dependencies and constructors × Applying"@en ;
+    dcterms:description "Source knowledge element: Dependencies and constructors; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DependenciesAndConstructors ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Dependencies and constructors × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_5_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Dependency injection and IoC × Applying"@en ;
+    dcterms:description "Source knowledge element: Dependency injection and inversion of control; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DependencyInjectionAndIoC ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Dependency injection and IoC × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_5_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Interfaces and mixins × Applying"@en ;
+    dcterms:description "Source knowledge element: Interfaces and mixins as an alternative to multiple inheritance; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InterfacesAndMixins ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Interfaces and mixins × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_5_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Delegation × Applying"@en ;
+    dcterms:description "Source knowledge element: Object extensibility and reuse through delegation (“knows a”); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DelegationKnowsA ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Delegation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_5 .
+
+is2020c:KS_ISOOP_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract class language features × Applying"@en ;
+    dcterms:description "Source knowledge element: Language features that identify a class as abstract - the source of inheritance without instantiability; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AbstractClassLanguageFeatures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Abstract class language features × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_6 .
+
+is2020c:KS_ISOOP_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract inheritance hierarchies × Creating"@en ;
+    dcterms:description "Source knowledge element: Refactoring or design of abstract inheritance hierarchies; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AbstractInheritanceHierarchies ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Abstract inheritance hierarchies × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_6 .
+
+is2020c:KS_ISOOP_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Abstraction vs interfaces × Applying"@en ;
+    dcterms:description "Source knowledge element: abstraction vs. interfaces (virtual members); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AbstractionVersusInterfaces ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Abstraction vs interfaces × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_6 .
+
+is2020c:KS_ISOOP_6_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Abstract references for data structuring × Applying"@en ;
+    dcterms:description "Source knowledge element: Data structuring of related data types through abstract references; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AbstractReferencesForDataStructuring ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Abstract references for data structuring × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_6 .
+
+is2020c:KS_ISOOP_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Base references and derived instances × Applying"@en ;
+    dcterms:description "Source knowledge element: Relationship between base/parent class references and derived/child class instances; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BaseReferencesAndDerivedInstances ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Base references and derived instances × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_7 .
+
+is2020c:KS_ISOOP_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Override behaviors and attributes × Applying"@en ;
+    dcterms:description "Source knowledge element: Override base/parent class behaviors and attributes in derived/child classes; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OverrideBaseBehaviorsAndAttributes ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Override behaviors and attributes × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_7 .
+
+is2020c:KS_ISOOP_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Unique responses to inherited calls × Applying"@en ;
+    dcterms:description "Source knowledge element: Behaviors that respond uniquely to commonly inherited method calls; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UniqueResponsesToInheritedCalls ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Unique responses to inherited calls × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_7 .
+
+is2020c:KS_ISOOP_7_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Separation of concerns × Applying"@en ;
+    dcterms:description "Source knowledge element: Separation of concerns; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SeparationOfConcerns ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Separation of concerns × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_7 .
+
+is2020c:KS_ISOOP_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design patterns categories × Applying"@en ;
+    dcterms:description "Source knowledge element: Creational, Structural, and Behavioral patterns; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CreationalStructuralBehavioralPatterns ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design patterns categories × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_8 .
+
+is2020c:KS_ISOOP_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Relationship to modeling notations × Applying"@en ;
+    dcterms:description "Source knowledge element: Relationship to modeling notations; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RelationshipToModelingNotations ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Relationship to modeling notations × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_8 .
+
+is2020c:KS_ISOOP_8_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SOLID principles × Applying"@en ;
+    dcterms:description "Source knowledge element: SOLID principles; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SolidPrinciples ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "SOLID principles × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_8 .
+
+is2020c:KS_ISOOP_9_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OOP implementation and UML × Applying"@en ;
+    dcterms:description "Source knowledge element: Relationship between OOP implementation and UML; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OOPImplementationAndUML ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "OOP implementation and UML × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_9 .
+
+is2020c:KS_ISOOP_9_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Limitations in language implementation × Applying"@en ;
+    dcterms:description "Source knowledge element: Limitations in language implementation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:LimitationsInLanguageImplementation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Limitations in language implementation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_9 .
+
+is2020c:KS_ISOOP_9_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "ORM and persistence × Applying"@en ;
+    dcterms:description "Source knowledge element: Object-Relational Mapping and data persistence; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ObjectRelationalMappingAndPersistence ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "ORM and persistence × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_9 .
+
+is2020c:KS_ISOOP_9_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Reuse and libraries × Applying"@en ;
+    dcterms:description "Source knowledge element: Reuse and Libraries; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ReuseAndLibraries ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISOOP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Reuse and libraries × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISOOP_9 .
+
+is2020k:AbstractClassLanguageFeatures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Language features that identify a class as abstract - the source of inheritance without instantiability"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of language features that identify a class as abstract and support inheritance without instantiation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Language features that identify a class as abstract - the source of inheritance without instantiability"@en .
+
+is2020k:AbstractInheritanceHierarchies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Refactoring or design of abstract inheritance hierarchies"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of refactoring or designing abstract inheritance hierarchies."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Refactoring or design of abstract inheritance hierarchies"@en .
+
+is2020k:AbstractReferencesForDataStructuring a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Data structuring of related data types through abstract references"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of structuring related data types through abstract references."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Data structuring of related data types through abstract references"@en .
+
+is2020k:AbstractionVersusInterfaces a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "abstraction vs. interfaces (virtual members)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of abstraction versus interfaces, including virtual members."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "abstraction vs. interfaces (virtual members)"@en .
+
+is2020k:AccessingPackagedClasses a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Accessing packaged classes"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of accessing packaged classes."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Accessing packaged classes"@en .
+
+is2020k:BaseReferencesAndDerivedInstances a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Relationship between base/parent class references and derived/child class instances"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the relationship between base or parent class references and derived or child class instances."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Relationship between base/parent class references and derived/child class instances"@en .
+
+is2020k:CallsByReferenceAndValue a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Calls by reference and value"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of calls by reference and by value."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Calls by reference and value"@en .
+
+is2020k:ClassBasisForObjectInstantiation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Class basis for object instantiation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of classes as the basis for object instantiation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Class basis for object instantiation"@en .
+
+is2020k:ClassPackagingForReuse a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Class packaging for reuse (namespaces, packages, libraries)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of class packaging for reuse, including namespaces, packages, and libraries."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Class packaging for reuse (namespaces, packages, libraries)"@en .
+
+is2020k:CompositionHasA a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Object extensibility and reuse through composition (has a)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of object extensibility and reuse through composition."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Object extensibility and reuse through composition (has a)"@en .
+
+is2020k:CreationalStructuralBehavioralPatterns a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Creational, Structural, and Behavioral patterns"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creational, structural, and behavioral design patterns."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Creational, Structural, and Behavioral patterns"@en .
+
+is2020k:DecouplingUsingEncapsulation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Decoupling using encapsulation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of decoupling using encapsulation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Decoupling using encapsulation"@en .
+
+is2020k:DelegationKnowsA a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Object extensibility and reuse through delegation (knows a)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of object extensibility and reuse through delegation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Object extensibility and reuse through delegation (knows a)"@en .
+
+is2020k:DependenciesAndConstructors a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Dependencies and constructors"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of dependencies and constructors."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Dependencies and constructors"@en .
+
+is2020k:DependencyInjectionAndIoC a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Dependency injection and inversion of control"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of dependency injection and inversion of control."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Dependency injection and inversion of control"@en .
+
+is2020k:DistinctionBetweenInstanceAndClassMembers a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Distinction between instance and class members"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the distinction between instance members and class members."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Distinction between instance and class members"@en .
+
+is2020k:EncapsulationForAutonomyAndIntegrity a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design for object autonomy and integrity using encapsulation techniques"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing for object autonomy and integrity using encapsulation techniques."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Design for object autonomy and integrity using encapsulation techniques"@en .
+
+is2020k:InheritanceIsAKindOf a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Object extensibility and reuse through inheritance (is a kind of)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of object extensibility and reuse through inheritance."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Object extensibility and reuse through inheritance (is a kind of)"@en .
+
+is2020k:InterfacesAndMixins a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Interfaces and mixins as an alternative to multiple inheritance"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of interfaces and mixins as alternatives to multiple inheritance."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Interfaces and mixins as an alternative to multiple inheritance"@en .
+
+is2020k:LanguageFeaturesForVisibility a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Language features to stratify and organize member visibility and accessibility within a class"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of language features that stratify and organize member visibility and accessibility within a class."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Language features to stratify and organize member visibility and accessibility within a class"@en .
+
+is2020k:LimitationsInLanguageImplementation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Limitations in language implementation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of limitations in programming language implementation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Limitations in language implementation"@en .
+
+is2020k:MemberVisibilityAndAccessModification a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Member visibility and language-specific access modification"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of member visibility and language-specific access modification."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Member visibility and language-specific access modification"@en .
+
+is2020k:MemoryManagementFeatures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Implementing language features related to memory management (unmanaged vs. managed)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of language features related to memory management, including unmanaged and managed approaches."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Implementing language features related to memory management (unmanaged vs. managed)"@en .
+
+is2020k:MethodDeclarationAndUse a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Method declaration and use"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of method declaration and use in object-oriented programming."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Method declaration and use"@en .
+
+is2020k:ModelBehaviorsWithinClassDefinition a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Model the behaviors of an entity using procedures within a class definition"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of modeling the behaviors of an entity using procedures within a class definition."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Model the behaviors of an entity using procedures within a class definition"@en .
+
+is2020k:ModelPropertiesWithinClassDefinitionApplying a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Model the properties of an entity using data types and variables within a class definition (applied level)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying class-based modeling of entity properties using data types and variables."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Model the properties of an entity using data types and variables within a class definition (applied level)"@en .
+
+is2020k:ModelPropertiesWithinClassDefinitionCreating a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Model the properties of an entity using data types and variables within a class definition"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of modeling the properties of an entity using data types and variables within a class definition."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Model the properties of an entity using data types and variables within a class definition"@en .
+
+is2020k:OOPImplementationAndUML a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Relationship between OOP implementation and UML"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the relationship between object-oriented programming implementation and UML."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Relationship between OOP implementation and UML"@en .
+
+is2020k:ObjectInstantiationOperations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Object instantiation operations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of object instantiation operations in object-oriented programming."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Object instantiation operations"@en .
+
+is2020k:ObjectInstantiationUsingConstructors a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Object instantiation using constructors and related operators"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of object instantiation using constructors and related operators."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Object instantiation using constructors and related operators"@en .
+
+is2020k:ObjectRelationalMappingAndPersistence a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Object-Relational Mapping and data persistence"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of object-relational mapping and data persistence."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Object-Relational Mapping and data persistence"@en .
+
+is2020k:OverrideBaseBehaviorsAndAttributes a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Override base/parent class behaviors and attributes in derived/child classes"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of overriding base or parent class behaviors and attributes in derived or child classes."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Override base/parent class behaviors and attributes in derived/child classes"@en .
+
+is2020k:PrototypeBasisForObjectInstantiation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Prototype basis for object instantiation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of prototypes as a basis for object instantiation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Prototype basis for object instantiation"@en .
+
+is2020k:RefactoringForEncapsulation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Refactoring for encapsulation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of refactoring for encapsulation."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Refactoring for encapsulation"@en .
+
+is2020k:RelationshipToModelingNotations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Relationship to modeling notations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the relationship between design patterns and modeling notations."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Relationship to modeling notations"@en .
+
+is2020k:ReuseAndLibraries a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Reuse and Libraries"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of reuse and libraries in object-oriented development."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Reuse and Libraries"@en .
+
+is2020k:SeparationOfConcerns a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Separation of concerns"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of separation of concerns in object-oriented design."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Separation of concerns"@en .
+
+is2020k:SingleAndMultipleInheritance a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Single and multiple inheritance"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of single and multiple inheritance."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Single and multiple inheritance"@en .
+
+is2020k:SolidPrinciples a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "SOLID principles"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:altLabel "Apply SOLID Principles for complexity management"@en ;
+    skos:definition "Knowledge of SOLID principles."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "SOLID principles"@en .
+
+is2020k:UniqueResponsesToInheritedCalls a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Behaviors that respond uniquely to commonly inherited method calls"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of behaviors that respond uniquely to commonly inherited method calls."@en ;
+    skos:inScheme is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme ;
+    skos:prefLabel "Behaviors that respond uniquely to commonly inherited method calls"@en .
+
+is2020c:Competence_ISOOP_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize design patterns"@en ;
+    dcterms:identifier "ISOOP-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:CreationalStructuralBehavioralPatterns,
+        is2020k:RelationshipToModelingNotations,
+        is2020k:SolidPrinciples ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_8_01,
+        is2020c:KS_ISOOP_8_02,
+        is2020c:KS_ISOOP_8_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Utilize design patterns"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_8 .
+
+is2020c:Competence_ISOOP_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply fundamental elements of objects and classes"@en ;
+    dcterms:identifier "ISOOP-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DistinctionBetweenInstanceAndClassMembers,
+        is2020k:ModelBehaviorsWithinClassDefinition,
+        is2020k:ModelPropertiesWithinClassDefinitionApplying,
+        is2020k:ModelPropertiesWithinClassDefinitionCreating ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_1_01,
+        is2020c:KS_ISOOP_1_02,
+        is2020c:KS_ISOOP_1_03,
+        is2020c:KS_ISOOP_1_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Apply fundamental elements of objects and classes"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_1 .
+
+is2020c:Competence_ISOOP_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Design for encapsulation"@en ;
+    dcterms:identifier "ISOOP-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:DecouplingUsingEncapsulation,
+        is2020k:EncapsulationForAutonomyAndIntegrity,
+        is2020k:LanguageFeaturesForVisibility,
+        is2020k:RefactoringForEncapsulation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_4_01,
+        is2020c:KS_ISOOP_4_02,
+        is2020c:KS_ISOOP_4_03,
+        is2020c:KS_ISOOP_4_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Design for encapsulation"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_4 .
+
+is2020c:Competence_ISOOP_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Design for abstraction"@en ;
+    dcterms:identifier "ISOOP-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AbstractClassLanguageFeatures,
+        is2020k:AbstractInheritanceHierarchies,
+        is2020k:AbstractReferencesForDataStructuring,
+        is2020k:AbstractionVersusInterfaces ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_6_01,
+        is2020c:KS_ISOOP_6_02,
+        is2020c:KS_ISOOP_6_03,
+        is2020c:KS_ISOOP_6_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Design for abstraction"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_6 .
+
+is2020c:Competence_ISOOP_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply polymorphism"@en ;
+    dcterms:identifier "ISOOP-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:BaseReferencesAndDerivedInstances,
+        is2020k:OverrideBaseBehaviorsAndAttributes,
+        is2020k:SeparationOfConcerns,
+        is2020k:UniqueResponsesToInheritedCalls ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_7_01,
+        is2020c:KS_ISOOP_7_02,
+        is2020c:KS_ISOOP_7_03,
+        is2020c:KS_ISOOP_7_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Apply polymorphism"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_7 .
+
+is2020c:Competence_ISOOP_9 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize objects and classes for entity modeling"@en ;
+    dcterms:identifier "ISOOP-9"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:LimitationsInLanguageImplementation,
+        is2020k:OOPImplementationAndUML,
+        is2020k:ObjectRelationalMappingAndPersistence,
+        is2020k:ReuseAndLibraries ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_9_01,
+        is2020c:KS_ISOOP_9_02,
+        is2020c:KS_ISOOP_9_03,
+        is2020c:KS_ISOOP_9_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Utilize objects and classes for entity modeling"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 9"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_9 .
+
+is2020c:Source_ISOOP_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 138 (PDF page 139)."@en ;
+    dcterms:description "Competency: Utilize design patterns Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISOOP-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISOOP_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize instantiation modalities"@en ;
+    dcterms:identifier "ISOOP-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ClassBasisForObjectInstantiation,
+        is2020k:MemoryManagementFeatures,
+        is2020k:ObjectInstantiationOperations,
+        is2020k:ObjectInstantiationUsingConstructors,
+        is2020k:PrototypeBasisForObjectInstantiation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_2_01,
+        is2020c:KS_ISOOP_2_02,
+        is2020c:KS_ISOOP_2_03,
+        is2020c:KS_ISOOP_2_04,
+        is2020c:KS_ISOOP_2_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Utilize instantiation modalities"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_2 .
+
+is2020c:Competence_ISOOP_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize intra-entity communication and messaging"@en ;
+    dcterms:identifier "ISOOP-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AccessingPackagedClasses,
+        is2020k:CallsByReferenceAndValue,
+        is2020k:ClassPackagingForReuse,
+        is2020k:MemberVisibilityAndAccessModification,
+        is2020k:MethodDeclarationAndUse ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_3_01,
+        is2020c:KS_ISOOP_3_02,
+        is2020c:KS_ISOOP_3_03,
+        is2020c:KS_ISOOP_3_04,
+        is2020c:KS_ISOOP_3_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Utilize intra-entity communication and messaging"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_3 .
+
+is2020c:Source_ISOOP_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 135 (PDF page 136)."@en ;
+    dcterms:description "Competency: Apply fundamental elements of objects and classes Key dispositions: Self-directed, Purpose-driven, Meticulous"@en ;
+    dcterms:identifier "ISOOP-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISOOP_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 136 (PDF page 137)."@en ;
+    dcterms:description "Competency: Design for encapsulation Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISOOP-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISOOP_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 137 (PDF page 138)."@en ;
+    dcterms:description "Competency: Design for abstraction Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISOOP-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISOOP_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 138 (PDF page 139)."@en ;
+    dcterms:description "Competency: Apply polymorphism Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISOOP-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISOOP_9 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 138 (PDF page 139)."@en ;
+    dcterms:description "Competency: Utilize objects and classes for entity modeling Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISOOP-9"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISOOP_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 136 (PDF page 137)."@en ;
+    dcterms:description "Competency: Utilize instantiation modalities Key dispositions: Self-directed, Purpose-driven, Meticulous"@en ;
+    dcterms:identifier "ISOOP-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISOOP_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 136 (PDF page 137)."@en ;
+    dcterms:description "Competency: Utilize intra-entity communication and messaging Key dispositions: Self-directed, Purpose-driven, Meticulous"@en ;
+    dcterms:identifier "ISOOP-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISOOP_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Design for inheritance and dependency management"@en ;
+    dcterms:identifier "ISOOP-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:CompositionHasA,
+        is2020k:DelegationKnowsA,
+        is2020k:DependenciesAndConstructors,
+        is2020k:DependencyInjectionAndIoC,
+        is2020k:InheritanceIsAKindOf,
+        is2020k:InterfacesAndMixins,
+        is2020k:SingleAndMultipleInheritance ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISOOP_5_01,
+        is2020c:KS_ISOOP_5_02,
+        is2020c:KS_ISOOP_5_03,
+        is2020c:KS_ISOOP_5_04,
+        is2020c:KS_ISOOP_5_05,
+        is2020c:KS_ISOOP_5_06,
+        is2020c:KS_ISOOP_5_07 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.3 Object-Oriented Paradigm."@en ;
+    skos:definition "Design for inheritance and dependency management"@en ;
+    skos:prefLabel "IS Object-Oriented Paradigm Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISOOP_5 .
+
+is2020c:Source_ISOOP_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 137 (PDF page 138)."@en ;
+    dcterms:description "Competency: Design for inheritance and dependency management Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISOOP-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-object-oriented-paradigm-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Object-Oriented Paradigm competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.3 Competency Area – Object-Oriented Paradigm."@en .
+
+is2020k:IS2020ObjectOrientedParadigmKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Object-Oriented Paradigm Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Object-Oriented Paradigm competency area."@en ;
+    skos:prefLabel "IS2020 Object-Oriented Paradigm Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

@@ -1,0 +1,363 @@
+# Cycle-02 Task204 and its adjusted instructional/assessment associations.
+# INSERT-only incremental cycle-02 instance data; see README.md for dependencies.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:Options_Task204_C16_activation_constraint a prov:Entity ;
+    dcterms:description "Documented alternative values: optional|conditional. No selected configuration is asserted; these alternatives are not simultaneous qualifier values."@en ;
+    dcterms:identifier "activation_constraint" ;
+    dcterms:references ontoksd:acOptional,
+        ontoksd:conditional ;
+    dcterms:relation ontoksd:CA_Task204_C16_Assessment,
+        ontoksd:CA_Task204_C16_Learning .
+
+ontoksd:Options_Task204_C16_activation_role a prov:Entity ;
+    dcterms:description "Documented alternative values: supporting|extension. No selected configuration is asserted; these alternatives are not simultaneous qualifier values."@en ;
+    dcterms:identifier "activation_role" ;
+    dcterms:references ontoksd:arExtension,
+        ontoksd:arSupporting ;
+    dcterms:relation ontoksd:CA_Task204_C16_Assessment,
+        ontoksd:CA_Task204_C16_Learning .
+
+ontoksd:CA_Task204_C02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Model justification. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C02_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C02_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Model justification. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM simulation. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C03_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C03_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as conditional. Its instructional/assessment emphasis depends on the selected task design; the source does not identify a unique trigger. The original task requirements remain in force."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM simulation. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as conditional. Its instructional/assessment emphasis depends on the selected task design; the source does not identify a unique trigger. The original task requirements remain in force."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Technical reporting as evidence vehicle. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C05_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C05_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Technical reporting as evidence vehicle. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C06_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM representation of OJ outcomes. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C06_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C06_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C06_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM representation of OJ outcomes. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C06_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C06_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C14_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Formal grammar classification. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C14_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C14_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C14_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Formal grammar classification. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C14_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C14 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C14_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C15_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Explanation of the Halting Problem. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C15_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C15_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C15_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Explanation of the Halting Problem. "@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task204_C15_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C15 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C15_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:TA_Task204_analyze a ontoksd:TaskActivity ;
+    rdfs:label "analyze"@en .
+
+ontoksd:TA_Task204_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task204_explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ontoksd:TA_Task204_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TA_Task204_simulate a ontoksd:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ontoksd:TC_Task204_1 a ontoksd:TaskComponent ;
+    rdfs:label "Online Judge outcome model"@en .
+
+ontoksd:TC_Task204_2 a ontoksd:TaskComponent ;
+    rdfs:label "Halting/termination explanation"@en .
+
+ontoksd:TC_Task204_3 a ontoksd:TaskComponent ;
+    rdfs:label "TSP scenario analysis"@en .
+
+ontoksd:TCons_Task204_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Represent the observable AC, WA, TLE, CE and RE outcomes in an FSM."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:TCons_Task204_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Retain TSP analysis, theoretical explanations, JFLAP simulation and connections to the Chomsky Hierarchy from the task statement."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:TCons_Task204_3 a ontoksd:TaskConstraint ;
+    rdfs:label "The adjusted optional/conditional competence labels do not withdraw originally specified activities."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:TCons_Task204_4 a ontoksd:TaskConstraint ;
+    rdfs:label "Deliver an SBC-format report with hypotheses, theoretical explanations, the FSM and concrete examples."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:AC_Task204 a ontoksd:AcquisitionContext ;
+    rdfs:label "Online Judges at Logistic Solutions pedagogical setting"@en ;
+    dcterms:identifier "Task204-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:C02 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:C06 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:C14 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:C15 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:C16 ontoksd:hasTask ontoksd:Task204_Reference .
+
+ontoksd:CA_Task204_C16_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Interpretative support; no independent minimum-task evidence. Distinct identifier retained. Initial title used Apply; adjusted title uses Interpret. Future absorption into C15 is not implemented."@en ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:mediatesCompetence ontoksd:C16 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:CA_Task204_C16_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Source role/function: Interpretative support; no independent minimum-task evidence. Distinct identifier retained. Initial title used Apply; adjusted title uses Interpret. Future absorption into C15 is not implemented."@en ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative ;
+    ontoksd:mediatesCompetence ontoksd:C16 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:AS_Task204 a ontoksd:Assessment ;
+    rdfs:label "Online Judges at Logistic Solutions assessment specification"@en ;
+    dcterms:identifier "Task204-Assessment" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task204 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task204_C02_Assessment,
+        ontoksd:CA_Task204_C03_Assessment,
+        ontoksd:CA_Task204_C05_Assessment,
+        ontoksd:CA_Task204_C06_Assessment,
+        ontoksd:CA_Task204_C14_Assessment,
+        ontoksd:CA_Task204_C15_Assessment,
+        ontoksd:CA_Task204_C16_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task204 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:Task204_Reference a ontoksd:Task ;
+    rdfs:label "Online Judges at Logistic Solutions reference performance"@en ;
+    dcterms:identifier "Task204-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task204_analyze,
+        ontoksd:TA_Task204_document,
+        ontoksd:TA_Task204_explain,
+        ontoksd:TA_Task204_model,
+        ontoksd:TA_Task204_simulate ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task204_1,
+        ontoksd:TC_Task204_2,
+        ontoksd:TC_Task204_3 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task204_1,
+        ontoksd:TCons_Task204_2,
+        ontoksd:TCons_Task204_3,
+        ontoksd:TCons_Task204_4 ;
+    ontoksd:hasTaskStatement "Analyze the Online Judge/TSP scenario, explain the Halting Problem and general termination-decision limits, and construct, simulate and document an FSM of observable judge outcomes."@en ;
+    ontoksd:isTaskOf ontoksd:C02,
+        ontoksd:C03,
+        ontoksd:C05,
+        ontoksd:C06,
+        ontoksd:C14,
+        ontoksd:C15,
+        ontoksd:C16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ontoksd:LT_Task204 a ontoksd:LearningTask ;
+    rdfs:label "Online Judges at Logistic Solutions learning task"@en ;
+    dcterms:identifier "Task204-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task204 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task204_C02_Learning,
+        ontoksd:CA_Task204_C03_Learning,
+        ontoksd:CA_Task204_C05_Learning,
+        ontoksd:CA_Task204_C06_Learning,
+        ontoksd:CA_Task204_C14_Learning,
+        ontoksd:CA_Task204_C15_Learning,
+        ontoksd:CA_Task204_C16_Learning ;
+    ontoksd:hasInstructionalStatement "Analyze the TSP scenario and possible causes of TLE outcomes; discuss the computational difficulty without conflating timeouts with undecidability."@en,
+        "Construct an FSM for observable AC, WA, TLE, CE and RE outcomes and explain its operation."@en,
+        "Explain why no general algorithm can decide termination for every arbitrary program/input and relate this to Online Judge limitations."@en,
+        "Implement and simulate the FSM in JFLAP, retaining the task statement objective despite conditional C03 activation metadata."@en,
+        "Prepare an SBC-format report with hypotheses, responses to the managers, theoretical explanations, the FSM and concrete examples."@en,
+        "Relate model behavior to relevant language/model classifications, retaining the Chomsky-Hierarchy objective despite optional C14 activation metadata."@en,
+        "Use collaborative PBL and document progress with whiteboards/diagrams."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC,
+        ontoksd:CSPResource_Whiteboard ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+}

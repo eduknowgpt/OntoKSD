@@ -1,806 +1,1644 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-web-development-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Web Development competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.4 Competency Area – Web Development."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020WebDevelopmentKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Web Development Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Web Development Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Web Development competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PurposeOfClientFrontend
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Purpose of the client (front-end)"@en ;
-      skos:prefLabel "Purpose of the client (front-end)"@en ;
-      skos:definition "Knowledge of the purpose of the client side in web applications."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PurposeOfServerBackend
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Purpose of the server (backend)"@en ;
-      skos:prefLabel "Purpose of the server (backend)"@en ;
-      skos:definition "Knowledge of the purpose of the server side in web applications."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:InternetServerInteractingWithClient
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "An Internet server interacting with a client"@en ;
-      skos:prefLabel "An Internet server interacting with a client"@en ;
-      skos:definition "Knowledge of interaction between an Internet server and a client."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AlgorithmsAndLogic
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Algorithms and the logic that drives them"@en ;
-      skos:prefLabel "Algorithms and the logic that drives them"@en ;
-      skos:definition "Knowledge of algorithms and the logic that drives them."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SolvingProblemUsingAlgorithm
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Solving a problem using an algorithm"@en ;
-      skos:prefLabel "Solving a problem using an algorithm"@en ;
-      skos:definition "Knowledge of solving a problem using an algorithm."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EfficiencyOfAlgorithm
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Efficiency of an algorithm"@en ;
-      skos:prefLabel "Efficiency of an algorithm"@en ;
-      skos:definition "Knowledge of algorithm efficiency."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DocumentationOfApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Documentation of an application"@en ;
-      skos:prefLabel "Documentation of an application"@en ;
-      skos:definition "Knowledge of documenting an application."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AdvantagesAndDisadvantagesOfDocumentation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Advantages and disadvantages of documenting an application"@en ;
-      skos:prefLabel "Advantages and disadvantages of documenting an application"@en ;
-      skos:definition "Knowledge of the advantages and disadvantages of documenting an application."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PurposeOfReadableSourceCode
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Purpose of readable source code"@en ;
-      skos:prefLabel "Purpose of readable source code"@en ;
-      skos:definition "Knowledge of the purpose of readable source code."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BestPracticesInWritingSourceCode
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Best practices in writing source code"@en ;
-      skos:prefLabel "Best practices in writing source code"@en ;
-      skos:definition "Knowledge of best practices in writing source code."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:StructuredProgram
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Structured program"@en ;
-      skos:prefLabel "Structured program"@en ;
-      skos:definition "Knowledge of producing structured programs."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TeamPersonalities
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Team personalities"@en ;
-      skos:prefLabel "Team personalities"@en ;
-      skos:definition "Knowledge of team personalities in collaborative development contexts."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TeamResponsibilities
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Team responsibilities"@en ;
-      skos:prefLabel "Team responsibilities"@en ;
-      skos:definition "Knowledge of team responsibilities in collaborative development contexts."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UseOfTeamCommunicationTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use of team communication tools"@en ;
-      skos:prefLabel "Use of team communication tools"@en ;
-      skos:definition "Knowledge of using team communication tools."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ProperCommunicationWithTeamMembers
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Proper communication with team members"@en ;
-      skos:prefLabel "Proper communication with team members"@en ;
-      skos:definition "Knowledge of proper communication with team members."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VersionControlStandalone
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Version control software in stand-alone environment"@en ;
-      skos:prefLabel "Version control software in stand-alone environment"@en ;
-      skos:definition "Knowledge of version control software in a stand-alone environment."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VersionControlTeamProject
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Version control software in a team development project"@en ;
-      skos:prefLabel "Version control software in a team development project"@en ;
-      skos:definition "Knowledge of version control software in a team development project."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ClientSideFrontend
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Client-side (Front-end)"@en ;
-      skos:prefLabel "Client-side (Front-end)"@en ;
-      skos:definition "Knowledge of the client-side or front-end of web applications."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ClientSideSkills
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Client-side skills (HTML, CSS, JavaScript)"@en ;
-      skos:prefLabel "Client-side skills (HTML, CSS, JavaScript)"@en ;
-      skos:definition "Knowledge of client-side skills including HTML, CSS, and JavaScript."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DocumentObjectModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Document Object Model (DOM)"@en ;
-      skos:prefLabel "Document Object Model (DOM)"@en ;
-      skos:definition "Knowledge of the Document Object Model."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DomUsedInFrontend
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "DOM being used in Front-end"@en ;
-      skos:prefLabel "DOM being used in Front-end"@en ;
-      skos:definition "Knowledge of using the DOM in front-end development."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ServerSideBackend
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Server-side (back-end)"@en ;
-      skos:prefLabel "Server-side (back-end)"@en ;
-      skos:definition "Knowledge of the server-side or back-end of web applications."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ServerSideLanguage
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Server-side language (i.e., Node/Express, Python/Django, etc.)"@en ;
-      skos:prefLabel "Server-side language (i.e., Node/Express, Python/Django, etc.)"@en ;
-      skos:definition "Knowledge of server-side development languages and frameworks."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:FullStackDevelopment
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Full stack development"@en ;
-      skos:prefLabel "Full stack development"@en ;
-      skos:definition "Knowledge of full stack development."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MeanStackDevelopment
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mean stack development"@en ;
-      skos:prefLabel "Mean stack development"@en ;
-      skos:definition "Knowledge of MEAN stack development."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SkillsForWebApplicationWithCrud
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Skills to create a web application using front- and back-end development along with incorporating database functionality (CRUD)"@en ;
-      skos:prefLabel "Skills to create a web application using front- and back-end development along with incorporating database functionality (CRUD)"@en ;
-      skos:definition "Knowledge of creating a web application using front-end and back-end development with CRUD database functionality."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Json
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "JavaScript Object Notation (JSON)"@en ;
-      skos:prefLabel "JavaScript Object Notation (JSON)"@en ;
-      skos:definition "Knowledge of JavaScript Object Notation."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WebsiteUsingJsonOrDatabase
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Website that uses JSON or a database as both input and output"@en ;
-      skos:prefLabel "Website that uses JSON or a database as both input and output"@en ;
-      skos:definition "Knowledge of building a website that uses JSON or a database as both input and output."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ViewEngineAndHowItIsUsed
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "View engine and how it is used"@en ;
-      skos:prefLabel "View engine and how it is used"@en ;
-      skos:definition "Knowledge of what a view engine is and how it is used."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DifferentWebViewEngines
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Different web view engines"@en ;
-      skos:prefLabel "Different web view engines"@en ;
-      skos:definition "Knowledge of different web view engines."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UseOfViewEngineInWebDevelopment
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use of view engine in web development"@en ;
-      skos:prefLabel "Use of view engine in web development"@en ;
-      skos:definition "Knowledge of using a view engine in web development."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RestfulApiWhenToUse
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "RESTful API, what is it and when to use"@en ;
-      skos:prefLabel "RESTful API, what is it and when to use"@en ;
-      skos:definition "Knowledge of what a RESTful API is and when to use it."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RestfulApi
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "RESTful API"@en ;
-      skos:prefLabel "RESTful API"@en ;
-      skos:definition "Knowledge of implementing a RESTful API."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DesignPattern
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design pattern"@en ;
-      skos:prefLabel "Design pattern"@en ;
-      skos:definition "Knowledge of design patterns in Internet and web system design."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AdvantagesAndDisadvantagesOfDesignPatterns
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Advantages of disadvantages of the different design patterns"@en ;
-      skos:prefLabel "Advantages of disadvantages of the different design patterns"@en ;
-      skos:definition "Knowledge of the advantages and disadvantages of different design patterns."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CurrentDesignLayout
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Current design layout (i.e., cards, grids, magazine, etc.)"@en ;
-      skos:prefLabel "Current design layout (i.e., cards, grids, magazine, etc.)"@en ;
-      skos:definition "Knowledge of current design layouts such as cards, grids, magazine, and similar layouts."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WebsiteLayout
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Website layout"@en ;
-      skos:prefLabel "Website layout"@en ;
-      skos:definition "Knowledge of creating website layouts."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AuthorizationVsAuthentication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Authorization vs Authentication"@en ;
-      skos:prefLabel "Authorization vs Authentication"@en ;
-      skos:definition "Knowledge of the distinction between authorization and authentication."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WhenToUseSecurityAndWhy
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "When to use security and why"@en ;
-      skos:prefLabel "When to use security and why"@en ;
-      skos:definition "Knowledge of when to use security in web applications and why it matters."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WebsiteAuthorization
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Website authorization"@en ;
-      skos:prefLabel "Website authorization"@en ;
-      skos:definition "Knowledge of implementing website authorization."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WebsiteAuthentication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Website authentication"@en ;
-      skos:prefLabel "Website authentication"@en ;
-      skos:definition "Knowledge of implementing website authentication."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Encryption
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Encryption"@en ;
-      skos:prefLabel "Encryption"@en ;
-      skos:definition "Knowledge of encryption."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Decryption
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Decryption"@en ;
-      skos:prefLabel "Decryption"@en ;
-      skos:definition "Knowledge of decryption."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WebsiteDatabaseEncryptionAndDecryption
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Website database encryption and decryption"@en ;
-      skos:prefLabel "Website database encryption and decryption"@en ;
-      skos:definition "Knowledge of implementing website database encryption and decryption."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CipherText
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Cipher Text"@en ;
-      skos:prefLabel "Cipher Text"@en ;
-      skos:definition "Knowledge of cipher text."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PlainText
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Plain Text"@en ;
-      skos:prefLabel "Plain Text"@en ;
-      skos:definition "Knowledge of plain text."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:KeyTypes
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Symmetric Key, Asymmetric Key, Public Key, Private Key"@en ;
-      skos:prefLabel "Symmetric Key, Asymmetric Key, Public Key, Private Key"@en ;
-      skos:definition "Knowledge of symmetric, asymmetric, public, and private keys."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ProcessOfDebuggingWebsiteApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Process of debugging a website application"@en ;
-      skos:prefLabel "Process of debugging a website application"@en ;
-      skos:definition "Knowledge of the process of debugging a website application."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DifferenceBetweenSyntaxAndLogicError
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Difference between syntax and logic error"@en ;
-      skos:prefLabel "Difference between syntax and logic error"@en ;
-      skos:definition "Knowledge of the difference between syntax errors and logic errors."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WebsiteDebugging
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Website debugging"@en ;
-      skos:prefLabel "Website debugging"@en ;
-      skos:definition "Knowledge of applying debugging techniques to website development."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PermissionToPublish
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Permission to publish"@en ;
-      skos:prefLabel "Permission to publish"@en ;
-      skos:definition "Knowledge of permission to publish in the context of Internet copyright laws."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:FreedomOfSpeech
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Freedom of speech"@en ;
-      skos:prefLabel "Freedom of speech"@en ;
-      skos:definition "Knowledge of freedom of speech in relation to Internet copyright laws."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IntellectualPropertyAndOwnership
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Intellectual property and ownership"@en ;
-      skos:prefLabel "Intellectual property and ownership"@en ;
-      skos:definition "Knowledge of intellectual property and ownership."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TheAtSign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "The @ sign"@en ;
-      skos:prefLabel "The @ sign"@en ;
-      skos:definition "Knowledge of the legal or communicative significance of the @ sign in Internet contexts."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AutomaticCopyright
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Automatic copyright"@en ;
-      skos:prefLabel "Automatic copyright"@en ;
-      skos:definition "Knowledge of automatic copyright."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RegisteringCopyright
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Registering a copyright"@en ;
-      skos:prefLabel "Registering a copyright"@en ;
-      skos:definition "Knowledge of registering copyright."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AlternativeCopyrightRegistration
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Alternative copyright registration"@en ;
-      skos:prefLabel "Alternative copyright registration"@en ;
-      skos:definition "Knowledge of alternative copyright registration approaches."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesOfWork
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types of work"@en ;
-      skos:prefLabel "Types of work"@en ;
-      skos:definition "Knowledge of types of work covered by copyright protection."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OtherTypesOfProtection
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Other types of protection"@en ;
-      skos:prefLabel "Other types of protection"@en ;
-      skos:definition "Knowledge of other types of legal protection related to published works and digital content."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ServerHostsFiles
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Server hosts files"@en ;
-      skos:prefLabel "Server hosts files"@en ;
-      skos:definition "Knowledge of how a server hosts files."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DeploymentOfWebsiteAndFiles
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Deployment of website and files"@en ;
-      skos:prefLabel "Deployment of website and files"@en ;
-      skos:definition "Knowledge of deploying a website and its files."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ConfigurationOfHost
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Configuration of host"@en ;
-      skos:prefLabel "Configuration of host"@en ;
-      skos:definition "Knowledge of configuring a host server."@en ;
-      skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020c:Competence_ISWD_1
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate an operational understanding of the protocols that enable the Internet"@en ;
-      skos:prefLabel "IS Web Development Competency 1"@en ;
-      skos:definition "Demonstrate an operational understanding of the protocols that enable the Internet."@en ;
-      dcterms:identifier "ISWD-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:PurposeOfClientFrontend , is2020k:PurposeOfServerBackend , is2020k:InternetServerInteractingWithClient ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_1_01 , is2020c:KS_ISWD_1_02 , is2020c:KS_ISWD_1_03 .
-
-  is2020c:Competence_ISWD_2
-      a ontoksd:Competence ;
-      rdfs:label "Create and analyze an algorithm for effectiveness and efficiency"@en ;
-      skos:prefLabel "IS Web Development Competency 2"@en ;
-      skos:definition "Create and analyze an algorithm for effectiveness and efficiency."@en ;
-      dcterms:identifier "ISWD-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:AlgorithmsAndLogic , is2020k:SolvingProblemUsingAlgorithm , is2020k:EfficiencyOfAlgorithm ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_2_01 , is2020c:KS_ISWD_2_02 , is2020c:KS_ISWD_2_03 .
-
-  is2020c:Competence_ISWD_3
-      a ontoksd:Competence ;
-      rdfs:label "Implement good documentation practices in programming"@en ;
-      skos:prefLabel "IS Web Development Competency 3"@en ;
-      skos:definition "Implement good documentation practices in programming."@en ;
-      dcterms:identifier "ISWD-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:DocumentationOfApplication , is2020k:AdvantagesAndDisadvantagesOfDocumentation , is2020k:PurposeOfReadableSourceCode , is2020k:BestPracticesInWritingSourceCode , is2020k:StructuredProgram ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_3_01 , is2020c:KS_ISWD_3_02 , is2020c:KS_ISWD_3_03 , is2020c:KS_ISWD_3_04 , is2020c:KS_ISWD_3_05 .
-
-  is2020c:Competence_ISWD_4
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate teamwork, interpersonal group skills, and team software development"@en ;
-      skos:prefLabel "IS Web Development Competency 4"@en ;
-      skos:definition "Demonstrate teamwork, interpersonal group skills, and team software development."@en ;
-      dcterms:identifier "ISWD-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:TeamPersonalities , is2020k:TeamResponsibilities , is2020k:UseOfTeamCommunicationTools , is2020k:ProperCommunicationWithTeamMembers , is2020k:VersionControlStandalone , is2020k:VersionControlTeamProject ;
-      ontoksd:hasDisposition ontoksd:collaborative , ontoksd:adaptable , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_4_01 , is2020c:KS_ISWD_4_02 , is2020c:KS_ISWD_4_03 , is2020c:KS_ISWD_4_04 , is2020c:KS_ISWD_4_05 , is2020c:KS_ISWD_4_06 .
-
-  is2020c:Competence_ISWD_5
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate skills in client-side (Front-end) web application development technologies including HTML, CSS, JavaScript, and JavaScript libraries"@en ;
-      skos:prefLabel "IS Web Development Competency 5"@en ;
-      skos:definition "Demonstrate skills in client-side (Front-end) web application development technologies including HTML, CSS, JavaScript, and JavaScript libraries."@en ;
-      dcterms:identifier "ISWD-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ClientSideFrontend , is2020k:ClientSideSkills , is2020k:DocumentObjectModel , is2020k:DomUsedInFrontend ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_5_01 , is2020c:KS_ISWD_5_02 , is2020c:KS_ISWD_5_03 , is2020c:KS_ISWD_5_04 .
-
-  is2020c:Competence_ISWD_6
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.)"@en ;
-      skos:prefLabel "IS Web Development Competency 6"@en ;
-      skos:definition "Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language."@en ;
-      dcterms:identifier "ISWD-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ServerSideBackend , is2020k:ServerSideLanguage ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_6_01 , is2020c:KS_ISWD_6_02 .
-
-  is2020c:Competence_ISWD_7
-      a ontoksd:Competence ;
-      rdfs:label "Create a functioning web application suitable for portfolio presentation including but not limited to skills shown using front-end, back-end, SQL, and current web development tools"@en ;
-      skos:prefLabel "IS Web Development Competency 7"@en ;
-      skos:definition "Create a functioning web application suitable for portfolio presentation including front-end, back-end, SQL, and current web development tools."@en ;
-      dcterms:identifier "ISWD-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:FullStackDevelopment , is2020k:MeanStackDevelopment , is2020k:SkillsForWebApplicationWithCrud , is2020k:Json , is2020k:WebsiteUsingJsonOrDatabase , is2020k:ViewEngineAndHowItIsUsed , is2020k:DifferentWebViewEngines , is2020k:UseOfViewEngineInWebDevelopment , is2020k:RestfulApiWhenToUse , is2020k:RestfulApi ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_7_01 , is2020c:KS_ISWD_7_02 , is2020c:KS_ISWD_7_03 , is2020c:KS_ISWD_7_04 , is2020c:KS_ISWD_7_05 , is2020c:KS_ISWD_7_06 , is2020c:KS_ISWD_7_07 , is2020c:KS_ISWD_7_08 , is2020c:KS_ISWD_7_09 , is2020c:KS_ISWD_7_10 .
-
-  is2020c:Competence_ISWD_8
-      a ontoksd:Competence ;
-      rdfs:label "Explain the different internet design patterns (i.e., MVC, MVVM, etc.) and ability to know advantages and disadvantages of each"@en ;
-      skos:prefLabel "IS Web Development Competency 8"@en ;
-      skos:definition "Explain the different internet design patterns and the advantages and disadvantages of each."@en ;
-      dcterms:identifier "ISWD-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:DesignPattern , is2020k:AdvantagesAndDisadvantagesOfDesignPatterns ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:responsible , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_8_01 , is2020c:KS_ISWD_8_02 .
-
-  is2020c:Competence_ISWD_9
-      a ontoksd:Competence ;
-      rdfs:label "Analyze and explain the different design layouts and pros and cons of each"@en ;
-      skos:prefLabel "IS Web Development Competency 9"@en ;
-      skos:definition "Analyze and explain the different design layouts and their pros and cons."@en ;
-      dcterms:identifier "ISWD-9"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:CurrentDesignLayout , is2020k:AdvantagesAndDisadvantagesOfDesignPatterns , is2020k:WebsiteLayout ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_9_01 , is2020c:KS_ISWD_9_02 , is2020c:KS_ISWD_9_03 .
-
-  is2020c:Competence_ISWD_10
-      a ontoksd:Competence ;
-      rdfs:label "Implement security measures for a website"@en ;
-      skos:prefLabel "IS Web Development Competency 10"@en ;
-      skos:definition "Implement security measures for a website."@en ;
-      dcterms:identifier "ISWD-10"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:AuthorizationVsAuthentication , is2020k:WhenToUseSecurityAndWhy , is2020k:WebsiteAuthorization , is2020k:WebsiteAuthentication , is2020k:Encryption , is2020k:Decryption , is2020k:WebsiteDatabaseEncryptionAndDecryption , is2020k:CipherText , is2020k:PlainText , is2020k:KeyTypes ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_10_01 , is2020c:KS_ISWD_10_02 , is2020c:KS_ISWD_10_03 , is2020c:KS_ISWD_10_04 , is2020c:KS_ISWD_10_05 , is2020c:KS_ISWD_10_06 , is2020c:KS_ISWD_10_07 , is2020c:KS_ISWD_10_08 , is2020c:KS_ISWD_10_09 , is2020c:KS_ISWD_10_10 .
-
-  is2020c:Competence_ISWD_11
-      a ontoksd:Competence ;
-      rdfs:label "Debug syntactical and logical errors"@en ;
-      skos:prefLabel "IS Web Development Competency 11"@en ;
-      skos:definition "Debug syntactical and logical errors."@en ;
-      dcterms:identifier "ISWD-11"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ProcessOfDebuggingWebsiteApplication , is2020k:DifferenceBetweenSyntaxAndLogicError , is2020k:WebsiteDebugging ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_11_01 , is2020c:KS_ISWD_11_02 , is2020c:KS_ISWD_11_03 .
-
-  is2020c:Competence_ISWD_12
-      a ontoksd:Competence ;
-      rdfs:label "Explain the Internet Copyright laws"@en ;
-      skos:prefLabel "IS Web Development Competency 12"@en ;
-      skos:definition "Explain the Internet Copyright laws."@en ;
-      dcterms:identifier "ISWD-12"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:PermissionToPublish , is2020k:FreedomOfSpeech , is2020k:IntellectualPropertyAndOwnership , is2020k:TheAtSign , is2020k:AutomaticCopyright , is2020k:RegisteringCopyright , is2020k:AlternativeCopyrightRegistration , is2020k:TypesOfWork , is2020k:OtherTypesOfProtection ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:professional ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_12_01 , is2020c:KS_ISWD_12_02 , is2020c:KS_ISWD_12_03 , is2020c:KS_ISWD_12_04 , is2020c:KS_ISWD_12_05 , is2020c:KS_ISWD_12_06 , is2020c:KS_ISWD_12_07 , is2020c:KS_ISWD_12_08 , is2020c:KS_ISWD_12_09 .
-
-  is2020c:Competence_ISWD_13
-      a ontoksd:Competence ;
-      rdfs:label "Deploy a website to a host server"@en ;
-      skos:prefLabel "IS Web Development Competency 13"@en ;
-      skos:definition "Deploy a website to a host server."@en ;
-      dcterms:identifier "ISWD-13"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ServerHostsFiles , is2020k:DeploymentOfWebsiteAndFiles , is2020k:ConfigurationOfHost ;
-      ontoksd:hasDisposition ontoksd:collaborative , ontoksd:adaptable , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_13_01 , is2020c:KS_ISWD_13_02 , is2020c:KS_ISWD_13_03 .
-
-  is2020c:KS_ISWD_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Client purpose × Understanding"@en ; skos:prefLabel "Client purpose × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PurposeOfClientFrontend ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_1 .
-  is2020c:KS_ISWD_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Server purpose × Understanding"@en ; skos:prefLabel "Server purpose × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PurposeOfServerBackend ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_1 .
-  is2020c:KS_ISWD_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Server-client interaction × Understanding"@en ; skos:prefLabel "Server-client interaction × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:InternetServerInteractingWithClient ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_1 .
-
-  is2020c:KS_ISWD_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Algorithms and logic × Creating"@en ; skos:prefLabel "Algorithms and logic × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:AlgorithmsAndLogic ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_2 .
-  is2020c:KS_ISWD_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Problem solving with algorithm × Applying"@en ; skos:prefLabel "Problem solving with algorithm × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SolvingProblemUsingAlgorithm ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_2 .
-  is2020c:KS_ISWD_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Algorithm efficiency × Understanding"@en ; skos:prefLabel "Algorithm efficiency × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:EfficiencyOfAlgorithm ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_2 .
-
-  is2020c:KS_ISWD_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Application documentation × Creating"@en ; skos:prefLabel "Application documentation × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DocumentationOfApplication ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 .
-  is2020c:KS_ISWD_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Documentation pros and cons × Understanding"@en ; skos:prefLabel "Documentation pros and cons × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDocumentation ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 .
-  is2020c:KS_ISWD_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Readable source code purpose × Understanding"@en ; skos:prefLabel "Readable source code purpose × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PurposeOfReadableSourceCode ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 .
-  is2020c:KS_ISWD_3_04 a ontoksd:KnowledgeSkill ; rdfs:label "Best practices in source code × Applying"@en ; skos:prefLabel "Best practices in source code × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BestPracticesInWritingSourceCode ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 .
-  is2020c:KS_ISWD_3_05 a ontoksd:KnowledgeSkill ; rdfs:label "Structured program × Creating"@en ; skos:prefLabel "Structured program × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:StructuredProgram ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 .
-
-  is2020c:KS_ISWD_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Team personalities × Understanding"@en ; skos:prefLabel "Team personalities × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TeamPersonalities ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 .
-  is2020c:KS_ISWD_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Team responsibilities × Understanding"@en ; skos:prefLabel "Team responsibilities × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TeamResponsibilities ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 .
-  is2020c:KS_ISWD_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Team communication tools × Applying"@en ; skos:prefLabel "Team communication tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UseOfTeamCommunicationTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 .
-  is2020c:KS_ISWD_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Proper communication × Applying"@en ; skos:prefLabel "Proper communication × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProperCommunicationWithTeamMembers ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 .
-  is2020c:KS_ISWD_4_05 a ontoksd:KnowledgeSkill ; rdfs:label "Version control standalone × Applying"@en ; skos:prefLabel "Version control standalone × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:VersionControlStandalone ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 .
-  is2020c:KS_ISWD_4_06 a ontoksd:KnowledgeSkill ; rdfs:label "Version control team project × Applying"@en ; skos:prefLabel "Version control team project × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:VersionControlTeamProject ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 .
-
-  is2020c:KS_ISWD_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Client-side × Understanding"@en ; skos:prefLabel "Client-side × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ClientSideFrontend ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 .
-  is2020c:KS_ISWD_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Client-side skills × Creating"@en ; skos:prefLabel "Client-side skills × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ClientSideSkills ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 .
-  is2020c:KS_ISWD_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "DOM × Understanding"@en ; skos:prefLabel "DOM × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DocumentObjectModel ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 .
-  is2020c:KS_ISWD_5_04 a ontoksd:KnowledgeSkill ; rdfs:label "DOM in front-end × Creating"@en ; skos:prefLabel "DOM in front-end × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DomUsedInFrontend ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 .
-
-  is2020c:KS_ISWD_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Server-side × Understanding"@en ; skos:prefLabel "Server-side × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ServerSideBackend ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_6 .
-  is2020c:KS_ISWD_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Server-side language × Creating"@en ; skos:prefLabel "Server-side language × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ServerSideLanguage ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_6 .
-
-  is2020c:KS_ISWD_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Full stack development × Understanding"@en ; skos:prefLabel "Full stack development × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:FullStackDevelopment ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "MEAN stack development × Understanding"@en ; skos:prefLabel "MEAN stack development × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MeanStackDevelopment ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Web app with CRUD × Creating"@en ; skos:prefLabel "Web app with CRUD × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:SkillsForWebApplicationWithCrud ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_04 a ontoksd:KnowledgeSkill ; rdfs:label "JSON × Understanding"@en ; skos:prefLabel "JSON × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:Json ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_05 a ontoksd:KnowledgeSkill ; rdfs:label "Website using JSON or database × Creating"@en ; skos:prefLabel "Website using JSON or database × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:WebsiteUsingJsonOrDatabase ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_06 a ontoksd:KnowledgeSkill ; rdfs:label "View engine concept × Understanding"@en ; skos:prefLabel "View engine concept × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ViewEngineAndHowItIsUsed ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_07 a ontoksd:KnowledgeSkill ; rdfs:label "Different web view engines × Understanding"@en ; skos:prefLabel "Different web view engines × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentWebViewEngines ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_08 a ontoksd:KnowledgeSkill ; rdfs:label "Use of view engine × Creating"@en ; skos:prefLabel "Use of view engine × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:UseOfViewEngineInWebDevelopment ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_09 a ontoksd:KnowledgeSkill ; rdfs:label "RESTful API when to use × Understanding"@en ; skos:prefLabel "RESTful API when to use × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RestfulApiWhenToUse ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-  is2020c:KS_ISWD_7_10 a ontoksd:KnowledgeSkill ; rdfs:label "RESTful API × Creating"@en ; skos:prefLabel "RESTful API × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:RestfulApi ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 .
-
-  is2020c:KS_ISWD_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Design pattern × Understanding"@en ; skos:prefLabel "Design pattern × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DesignPattern ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_8 .
-  is2020c:KS_ISWD_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "Pattern advantages and disadvantages × Understanding"@en ; skos:prefLabel "Pattern advantages and disadvantages × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDesignPatterns ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_8 .
-
-  is2020c:KS_ISWD_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Current design layout × Understanding"@en ; skos:prefLabel "Current design layout × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CurrentDesignLayout ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_9 .
-  is2020c:KS_ISWD_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Layout pros and cons × Understanding"@en ; skos:prefLabel "Layout pros and cons × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDesignPatterns ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_9 .
-  is2020c:KS_ISWD_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "Website layout × Creating"@en ; skos:prefLabel "Website layout × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:WebsiteLayout ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_9 .
-
-  is2020c:KS_ISWD_10_01 a ontoksd:KnowledgeSkill ; rdfs:label "Authorization vs authentication × Understanding"@en ; skos:prefLabel "Authorization vs authentication × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AuthorizationVsAuthentication ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_02 a ontoksd:KnowledgeSkill ; rdfs:label "When to use security × Understanding"@en ; skos:prefLabel "When to use security × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:WhenToUseSecurityAndWhy ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_03 a ontoksd:KnowledgeSkill ; rdfs:label "Website authorization × Creating"@en ; skos:prefLabel "Website authorization × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:WebsiteAuthorization ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_04 a ontoksd:KnowledgeSkill ; rdfs:label "Website authentication × Creating"@en ; skos:prefLabel "Website authentication × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:WebsiteAuthentication ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_05 a ontoksd:KnowledgeSkill ; rdfs:label "Encryption × Understanding"@en ; skos:prefLabel "Encryption × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:Encryption ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_06 a ontoksd:KnowledgeSkill ; rdfs:label "Decryption × Understanding"@en ; skos:prefLabel "Decryption × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:Decryption ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_07 a ontoksd:KnowledgeSkill ; rdfs:label "Website DB encryption and decryption × Creating"@en ; skos:prefLabel "Website DB encryption and decryption × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:WebsiteDatabaseEncryptionAndDecryption ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_08 a ontoksd:KnowledgeSkill ; rdfs:label "Cipher text × Understanding"@en ; skos:prefLabel "Cipher text × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CipherText ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_09 a ontoksd:KnowledgeSkill ; rdfs:label "Plain text × Understanding"@en ; skos:prefLabel "Plain text × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PlainText ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-  is2020c:KS_ISWD_10_10 a ontoksd:KnowledgeSkill ; rdfs:label "Key types × Understanding"@en ; skos:prefLabel "Key types × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:KeyTypes ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 .
-
-  is2020c:KS_ISWD_11_01 a ontoksd:KnowledgeSkill ; rdfs:label "Debugging process × Understanding"@en ; skos:prefLabel "Debugging process × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessOfDebuggingWebsiteApplication ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_11 .
-  is2020c:KS_ISWD_11_02 a ontoksd:KnowledgeSkill ; rdfs:label "Syntax vs logic error × Understanding"@en ; skos:prefLabel "Syntax vs logic error × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferenceBetweenSyntaxAndLogicError ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_11 .
-  is2020c:KS_ISWD_11_03 a ontoksd:KnowledgeSkill ; rdfs:label "Website debugging × Applying"@en ; skos:prefLabel "Website debugging × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:WebsiteDebugging ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_11 .
-
-  is2020c:KS_ISWD_12_01 a ontoksd:KnowledgeSkill ; rdfs:label "Permission to publish × Understanding"@en ; skos:prefLabel "Permission to publish × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PermissionToPublish ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_02 a ontoksd:KnowledgeSkill ; rdfs:label "Freedom of speech × Understanding"@en ; skos:prefLabel "Freedom of speech × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:FreedomOfSpeech ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_03 a ontoksd:KnowledgeSkill ; rdfs:label "Intellectual property and ownership × Understanding"@en ; skos:prefLabel "Intellectual property and ownership × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:IntellectualPropertyAndOwnership ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_04 a ontoksd:KnowledgeSkill ; rdfs:label "The @ sign × Understanding"@en ; skos:prefLabel "The @ sign × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TheAtSign ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_05 a ontoksd:KnowledgeSkill ; rdfs:label "Automatic copyright × Understanding"@en ; skos:prefLabel "Automatic copyright × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AutomaticCopyright ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_06 a ontoksd:KnowledgeSkill ; rdfs:label "Registering copyright × Understanding"@en ; skos:prefLabel "Registering copyright × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RegisteringCopyright ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_07 a ontoksd:KnowledgeSkill ; rdfs:label "Alternative copyright registration × Understanding"@en ; skos:prefLabel "Alternative copyright registration × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AlternativeCopyrightRegistration ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_08 a ontoksd:KnowledgeSkill ; rdfs:label "Types of work × Understanding"@en ; skos:prefLabel "Types of work × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TypesOfWork ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-  is2020c:KS_ISWD_12_09 a ontoksd:KnowledgeSkill ; rdfs:label "Other types of protection × Understanding"@en ; skos:prefLabel "Other types of protection × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:OtherTypesOfProtection ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 .
-
-  is2020c:KS_ISWD_13_01 a ontoksd:KnowledgeSkill ; rdfs:label "Server hosts files × Understanding"@en ; skos:prefLabel "Server hosts files × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ServerHostsFiles ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_13 .
-  is2020c:KS_ISWD_13_02 a ontoksd:KnowledgeSkill ; rdfs:label "Website deployment × Applying"@en ; skos:prefLabel "Website deployment × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DeploymentOfWebsiteAndFiles ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_13 .
-  is2020c:KS_ISWD_13_03 a ontoksd:KnowledgeSkill ; rdfs:label "Host configuration × Applying"@en ; skos:prefLabel "Host configuration × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ConfigurationOfHost ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_13 .
-
+is2020c:KS_ISWD_10_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Authorization vs authentication × Understanding"@en ;
+    dcterms:description "Source knowledge element: Authorization vs Authentication; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AuthorizationVsAuthentication ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Authorization vs authentication × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "When to use security × Understanding"@en ;
+    dcterms:description "Source knowledge element: When to use security and why; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WhenToUseSecurityAndWhy ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "When to use security × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website authorization × Creating"@en ;
+    dcterms:description "Source knowledge element: Website authorization; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WebsiteAuthorization ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website authorization × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website authentication × Creating"@en ;
+    dcterms:description "Source knowledge element: Website authentication; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WebsiteAuthentication ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website authentication × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Encryption × Understanding"@en ;
+    dcterms:description "Source knowledge element: Encryption; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Encryption ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Encryption × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Decryption × Understanding"@en ;
+    dcterms:description "Source knowledge element: Decryption; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Decryption ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Decryption × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website DB encryption and decryption × Creating"@en ;
+    dcterms:description "Source knowledge element: Website database encryption and decryption; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WebsiteDatabaseEncryptionAndDecryption ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website DB encryption and decryption × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Cipher text × Understanding"@en ;
+    dcterms:description "Source knowledge element: Cipher Text; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CipherText ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Cipher text × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_09 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Plain text × Understanding"@en ;
+    dcterms:description "Source knowledge element: Plain Text; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PlainText ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Plain text × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_10_10 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Key types × Understanding"@en ;
+    dcterms:description "Source knowledge element: Symmetric Key, Asymmetric Key, Public Key, Private Key; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:KeyTypes ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Key types × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_10 .
+
+is2020c:KS_ISWD_11_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Debugging process × Understanding"@en ;
+    dcterms:description "Source knowledge element: Process of debugging a website application; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProcessOfDebuggingWebsiteApplication ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Debugging process × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_11 .
+
+is2020c:KS_ISWD_11_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Syntax vs logic error × Understanding"@en ;
+    dcterms:description "Source knowledge element: Difference between syntax and logic error; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DifferenceBetweenSyntaxAndLogicError ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Syntax vs logic error × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_11 .
+
+is2020c:KS_ISWD_11_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website debugging × Applying"@en ;
+    dcterms:description "Source knowledge element: Website debugging; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WebsiteDebugging ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website debugging × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_11 .
+
+is2020c:KS_ISWD_12_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Permission to publish × Understanding"@en ;
+    dcterms:description "Source knowledge element: Permission to publish; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PermissionToPublish ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Permission to publish × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Freedom of speech × Understanding"@en ;
+    dcterms:description "Source knowledge element: Freedom of speech; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FreedomOfSpeech ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Freedom of speech × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Intellectual property and ownership × Understanding"@en ;
+    dcterms:description "Source knowledge element: Intellectual property and ownership; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IntellectualPropertyAndOwnership ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Intellectual property and ownership × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "The @ sign × Understanding"@en ;
+    dcterms:description "Source knowledge element: The @ sign; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TheAtSign ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "The @ sign × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Automatic copyright × Understanding"@en ;
+    dcterms:description "Source knowledge element: Automatic copyright; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AutomaticCopyright ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Automatic copyright × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Registering copyright × Understanding"@en ;
+    dcterms:description "Source knowledge element: Registering a copyright; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RegisteringCopyright ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Registering copyright × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Alternative copyright registration × Understanding"@en ;
+    dcterms:description "Source knowledge element: Alternative copyright registration; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AlternativeCopyrightRegistration ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Alternative copyright registration × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types of work × Understanding"@en ;
+    dcterms:description "Source knowledge element: Types of work; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesOfWork ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types of work × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_12_09 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Other types of protection × Understanding"@en ;
+    dcterms:description "Source knowledge element: Other types of protection; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OtherTypesOfProtection ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Other types of protection × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_12 .
+
+is2020c:KS_ISWD_13_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Server hosts files × Understanding"@en ;
+    dcterms:description "Source knowledge element: Server hosts files; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ServerHostsFiles ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Server hosts files × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_13 .
+
+is2020c:KS_ISWD_13_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website deployment × Applying"@en ;
+    dcterms:description "Source knowledge element: Deployment of website and files; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DeploymentOfWebsiteAndFiles ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website deployment × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_13 .
+
+is2020c:KS_ISWD_13_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Host configuration × Applying"@en ;
+    dcterms:description "Source knowledge element: Configuration of host; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConfigurationOfHost ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Host configuration × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_13 .
+
+is2020c:KS_ISWD_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Client purpose × Understanding"@en ;
+    dcterms:description "Source knowledge element: Purpose of the client (front-end); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PurposeOfClientFrontend ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Client purpose × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_1 .
+
+is2020c:KS_ISWD_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Server purpose × Understanding"@en ;
+    dcterms:description "Source knowledge element: Purpose of the server (backend); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PurposeOfServerBackend ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Server purpose × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_1 .
+
+is2020c:KS_ISWD_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Server-client interaction × Understanding"@en ;
+    dcterms:description "Source knowledge element: An Internet server interacting with a client; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InternetServerInteractingWithClient ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Server-client interaction × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_1 .
+
+is2020c:KS_ISWD_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Algorithms and logic × Creating"@en ;
+    dcterms:description "Source knowledge element: Algorithms and the logic that drives them; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AlgorithmsAndLogic ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Algorithms and logic × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_2 .
+
+is2020c:KS_ISWD_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Problem solving with algorithm × Applying"@en ;
+    dcterms:description "Source knowledge element: Solving a problem using an algorithm; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SolvingProblemUsingAlgorithm ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Problem solving with algorithm × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_2 .
+
+is2020c:KS_ISWD_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Algorithm efficiency × Understanding"@en ;
+    dcterms:description "Source knowledge element: Efficiency of an algorithm; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EfficiencyOfAlgorithm ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Algorithm efficiency × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_2 .
+
+is2020c:KS_ISWD_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Application documentation × Creating"@en ;
+    dcterms:description "Source knowledge element: Documentation of an application; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DocumentationOfApplication ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Application documentation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_3 .
+
+is2020c:KS_ISWD_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Documentation pros and cons × Understanding"@en ;
+    dcterms:description "Source knowledge element: Advantages and disadvantages of documenting an application; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDocumentation ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Documentation pros and cons × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_3 .
+
+is2020c:KS_ISWD_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Readable source code purpose × Understanding"@en ;
+    dcterms:description "Source knowledge element: Purpose of readable source code; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PurposeOfReadableSourceCode ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Readable source code purpose × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_3 .
+
+is2020c:KS_ISWD_3_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Best practices in source code × Applying"@en ;
+    dcterms:description "Source knowledge element: Best practices in writing source code; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BestPracticesInWritingSourceCode ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Best practices in source code × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_3 .
+
+is2020c:KS_ISWD_3_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Structured program × Creating"@en ;
+    dcterms:description "Source knowledge element: Structured program; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StructuredProgram ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Structured program × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_3 .
+
+is2020c:KS_ISWD_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team personalities × Understanding"@en ;
+    dcterms:description "Source knowledge element: Team personalities; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TeamPersonalities ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team personalities × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_4 .
+
+is2020c:KS_ISWD_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team responsibilities × Understanding"@en ;
+    dcterms:description "Source knowledge element: Team responsibilities; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TeamResponsibilities ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team responsibilities × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_4 .
+
+is2020c:KS_ISWD_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team communication tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Use of team communication tools; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UseOfTeamCommunicationTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team communication tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_4 .
+
+is2020c:KS_ISWD_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Proper communication × Applying"@en ;
+    dcterms:description "Source knowledge element: Proper communication with team members; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProperCommunicationWithTeamMembers ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Proper communication × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_4 .
+
+is2020c:KS_ISWD_4_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Version control standalone × Applying"@en ;
+    dcterms:description "Source knowledge element: Version control software in stand-alone environment; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VersionControlStandalone ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Version control standalone × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_4 .
+
+is2020c:KS_ISWD_4_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Version control team project × Applying"@en ;
+    dcterms:description "Source knowledge element: Version control software in a team development project; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VersionControlTeamProject ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Version control team project × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_4 .
+
+is2020c:KS_ISWD_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Client-side × Understanding"@en ;
+    dcterms:description "Source knowledge element: Client-side (Front-end); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ClientSideFrontend ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Client-side × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_5 .
+
+is2020c:KS_ISWD_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Client-side skills × Creating"@en ;
+    dcterms:description "Source knowledge element: Client-side skills (HTML, CSS, JavaScript); source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ClientSideSkills ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Client-side skills × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_5 .
+
+is2020c:KS_ISWD_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DOM × Understanding"@en ;
+    dcterms:description "Source knowledge element: Document Object Model (DOM); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DocumentObjectModel ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "DOM × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_5 .
+
+is2020c:KS_ISWD_5_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DOM in front-end × Creating"@en ;
+    dcterms:description "Source knowledge element: DOM being used in Front-end; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DomUsedInFrontend ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "DOM in front-end × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_5 .
+
+is2020c:KS_ISWD_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Server-side × Understanding"@en ;
+    dcterms:description "Source knowledge element: Server-side (back-end); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ServerSideBackend ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Server-side × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_6 .
+
+is2020c:KS_ISWD_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Server-side language × Creating"@en ;
+    dcterms:description "Source knowledge element: Server-side language (i.e., Node/Express, Python/Django, etc.); source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ServerSideLanguage ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Server-side language × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_6 .
+
+is2020c:KS_ISWD_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Full stack development × Understanding"@en ;
+    dcterms:description "Source knowledge element: Full stack development; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FullStackDevelopment ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Full stack development × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "MEAN stack development × Understanding"@en ;
+    dcterms:description "Source knowledge element: Mean stack development; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MeanStackDevelopment ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "MEAN stack development × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Web app with CRUD × Creating"@en ;
+    dcterms:description "Source knowledge element: Skills to create a web application using front- and back-end development along with incorporating database functionality (CRUD); source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SkillsForWebApplicationWithCrud ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Web app with CRUD × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "JSON × Understanding"@en ;
+    dcterms:description "Source knowledge element: JavaScript Object Notation (JSON); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Json ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "JSON × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website using JSON or database × Creating"@en ;
+    dcterms:description "Source knowledge element: Website that uses JSON or a database as both input and output; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WebsiteUsingJsonOrDatabase ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website using JSON or database × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "View engine concept × Understanding"@en ;
+    dcterms:description "Source knowledge element: View engine and how it is used; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ViewEngineAndHowItIsUsed ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "View engine concept × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Different web view engines × Understanding"@en ;
+    dcterms:description "Source knowledge element: Different web view engines; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DifferentWebViewEngines ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Different web view engines × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Use of view engine × Creating"@en ;
+    dcterms:description "Source knowledge element: Use of view engine in web development; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UseOfViewEngineInWebDevelopment ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Use of view engine × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_09 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "RESTful API when to use × Understanding"@en ;
+    dcterms:description "Source knowledge element: RESTful API, what is it and when to use; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RestfulApiWhenToUse ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "RESTful API when to use × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_7_10 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "RESTful API × Creating"@en ;
+    dcterms:description "Source knowledge element: RESTful API; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RestfulApi ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "RESTful API × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_7 .
+
+is2020c:KS_ISWD_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design pattern × Understanding"@en ;
+    dcterms:description "Source knowledge element: Design pattern; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignPattern ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design pattern × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_8 .
+
+is2020c:KS_ISWD_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Pattern advantages and disadvantages × Understanding"@en ;
+    dcterms:description "Source knowledge element: Advantages of disadvantages of the different design patterns; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDesignPatterns ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Pattern advantages and disadvantages × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_8 .
+
+is2020c:KS_ISWD_9_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Current design layout × Understanding"@en ;
+    dcterms:description "Source knowledge element: Current design layout (i.e., cards, grids, magazine, etc.); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CurrentDesignLayout ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Current design layout × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_9 .
+
+is2020c:KS_ISWD_9_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Layout pros and cons × Understanding"@en ;
+    dcterms:description "Source knowledge element: Advantages of disadvantages of the different design patterns; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDesignPatterns ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Layout pros and cons × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_9 .
+
+is2020c:KS_ISWD_9_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Website layout × Creating"@en ;
+    dcterms:description "Source knowledge element: Website layout; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WebsiteLayout ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISWD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Website layout × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISWD_9 .
+
+is2020c:Competence_ISWD_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.)"@en ;
+    dcterms:identifier "ISWD-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ServerSideBackend,
+        is2020k:ServerSideLanguage ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_6_01,
+        is2020c:KS_ISWD_6_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.)"@en ;
+    skos:prefLabel "IS Web Development Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_6 .
+
+is2020c:Competence_ISWD_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Explain the different internet design patterns (i.e., MVC, MVVM, etc.) and ability to know advantages and disadvantages of each"@en ;
+    dcterms:identifier "ISWD-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:AdvantagesAndDisadvantagesOfDesignPatterns,
+        is2020k:DesignPattern ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_8_01,
+        is2020c:KS_ISWD_8_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Explain the different internet design patterns (i.e., MVC, MVVM, etc.) and ability to know advantages and disadvantages of each"@en ;
+    skos:prefLabel "IS Web Development Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_8 .
+
+is2020k:AdvantagesAndDisadvantagesOfDocumentation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Advantages and disadvantages of documenting an application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the advantages and disadvantages of documenting an application."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Advantages and disadvantages of documenting an application"@en .
+
+is2020k:AlgorithmsAndLogic a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Algorithms and the logic that drives them"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of algorithms and the logic that drives them."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Algorithms and the logic that drives them"@en .
+
+is2020k:AlternativeCopyrightRegistration a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Alternative copyright registration"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of alternative copyright registration approaches."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Alternative copyright registration"@en .
+
+is2020k:AuthorizationVsAuthentication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Authorization vs Authentication"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the distinction between authorization and authentication."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Authorization vs Authentication"@en .
+
+is2020k:AutomaticCopyright a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Automatic copyright"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of automatic copyright."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Automatic copyright"@en .
+
+is2020k:BestPracticesInWritingSourceCode a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Best practices in writing source code"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of best practices in writing source code."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Best practices in writing source code"@en .
+
+is2020k:CipherText a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Cipher Text"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of cipher text."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Cipher Text"@en .
+
+is2020k:ClientSideFrontend a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Client-side (Front-end)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the client-side or front-end of web applications."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Client-side (Front-end)"@en .
+
+is2020k:ClientSideSkills a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Client-side skills (HTML, CSS, JavaScript)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of client-side skills including HTML, CSS, and JavaScript."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Client-side skills (HTML, CSS, JavaScript)"@en .
+
+is2020k:ConfigurationOfHost a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Configuration of host"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of configuring a host server."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Configuration of host"@en .
+
+is2020k:CurrentDesignLayout a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Current design layout (i.e., cards, grids, magazine, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of current design layouts such as cards, grids, magazine, and similar layouts."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Current design layout (i.e., cards, grids, magazine, etc.)"@en .
+
+is2020k:Decryption a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Decryption"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of decryption."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Decryption"@en .
+
+is2020k:DeploymentOfWebsiteAndFiles a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Deployment of website and files"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of deploying a website and its files."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Deployment of website and files"@en .
+
+is2020k:DesignPattern a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design pattern"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of design patterns in Internet and web system design."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Design pattern"@en .
+
+is2020k:DifferenceBetweenSyntaxAndLogicError a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Difference between syntax and logic error"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the difference between syntax errors and logic errors."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Difference between syntax and logic error"@en .
+
+is2020k:DifferentWebViewEngines a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Different web view engines"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different web view engines."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Different web view engines"@en .
+
+is2020k:DocumentObjectModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Document Object Model (DOM)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the Document Object Model."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Document Object Model (DOM)"@en .
+
+is2020k:DocumentationOfApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Documentation of an application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of documenting an application."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Documentation of an application"@en .
+
+is2020k:DomUsedInFrontend a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "DOM being used in Front-end"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using the DOM in front-end development."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "DOM being used in Front-end"@en .
+
+is2020k:EfficiencyOfAlgorithm a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Efficiency of an algorithm"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of algorithm efficiency."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Efficiency of an algorithm"@en .
+
+is2020k:Encryption a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Encryption"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of encryption."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Encryption"@en .
+
+is2020k:FreedomOfSpeech a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Freedom of speech"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of freedom of speech in relation to Internet copyright laws."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Freedom of speech"@en .
+
+is2020k:FullStackDevelopment a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Full stack development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of full stack development."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Full stack development"@en .
+
+is2020k:IntellectualPropertyAndOwnership a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Intellectual property and ownership"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of intellectual property and ownership."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Intellectual property and ownership"@en .
+
+is2020k:InternetServerInteractingWithClient a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "An Internet server interacting with a client"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of interaction between an Internet server and a client."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "An Internet server interacting with a client"@en .
+
+is2020k:Json a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "JavaScript Object Notation (JSON)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of JavaScript Object Notation."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "JavaScript Object Notation (JSON)"@en .
+
+is2020k:KeyTypes a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Symmetric Key, Asymmetric Key, Public Key, Private Key"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of symmetric, asymmetric, public, and private keys."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Symmetric Key, Asymmetric Key, Public Key, Private Key"@en .
+
+is2020k:MeanStackDevelopment a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mean stack development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of MEAN stack development."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Mean stack development"@en .
+
+is2020k:OtherTypesOfProtection a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Other types of protection"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of other types of legal protection related to published works and digital content."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Other types of protection"@en .
+
+is2020k:PermissionToPublish a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Permission to publish"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of permission to publish in the context of Internet copyright laws."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Permission to publish"@en .
+
+is2020k:PlainText a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Plain Text"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of plain text."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Plain Text"@en .
+
+is2020k:ProcessOfDebuggingWebsiteApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Process of debugging a website application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the process of debugging a website application."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Process of debugging a website application"@en .
+
+is2020k:ProperCommunicationWithTeamMembers a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Proper communication with team members"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of proper communication with team members."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Proper communication with team members"@en .
+
+is2020k:PurposeOfClientFrontend a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Purpose of the client (front-end)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the purpose of the client side in web applications."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Purpose of the client (front-end)"@en .
+
+is2020k:PurposeOfReadableSourceCode a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Purpose of readable source code"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the purpose of readable source code."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Purpose of readable source code"@en .
+
+is2020k:PurposeOfServerBackend a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Purpose of the server (backend)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the purpose of the server side in web applications."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Purpose of the server (backend)"@en .
+
+is2020k:RegisteringCopyright a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Registering a copyright"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of registering copyright."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Registering a copyright"@en .
+
+is2020k:RestfulApi a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "RESTful API"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of implementing a RESTful API."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "RESTful API"@en .
+
+is2020k:RestfulApiWhenToUse a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "RESTful API, what is it and when to use"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of what a RESTful API is and when to use it."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "RESTful API, what is it and when to use"@en .
+
+is2020k:ServerHostsFiles a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Server hosts files"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of how a server hosts files."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Server hosts files"@en .
+
+is2020k:ServerSideBackend a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Server-side (back-end)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the server-side or back-end of web applications."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Server-side (back-end)"@en .
+
+is2020k:ServerSideLanguage a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Server-side language (i.e., Node/Express, Python/Django, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of server-side development languages and frameworks."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Server-side language (i.e., Node/Express, Python/Django, etc.)"@en .
+
+is2020k:SkillsForWebApplicationWithCrud a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Skills to create a web application using front- and back-end development along with incorporating database functionality (CRUD)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating a web application using front-end and back-end development with CRUD database functionality."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Skills to create a web application using front- and back-end development along with incorporating database functionality (CRUD)"@en .
+
+is2020k:SolvingProblemUsingAlgorithm a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Solving a problem using an algorithm"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of solving a problem using an algorithm."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Solving a problem using an algorithm"@en .
+
+is2020k:StructuredProgram a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Structured program"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of producing structured programs."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Structured program"@en .
+
+is2020k:TeamPersonalities a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Team personalities"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of team personalities in collaborative development contexts."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Team personalities"@en .
+
+is2020k:TeamResponsibilities a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Team responsibilities"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of team responsibilities in collaborative development contexts."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Team responsibilities"@en .
+
+is2020k:TheAtSign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "The @ sign"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the legal or communicative significance of the @ sign in Internet contexts."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "The @ sign"@en .
+
+is2020k:TypesOfWork a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types of work"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of types of work covered by copyright protection."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Types of work"@en .
+
+is2020k:UseOfTeamCommunicationTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use of team communication tools"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using team communication tools."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Use of team communication tools"@en .
+
+is2020k:UseOfViewEngineInWebDevelopment a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use of view engine in web development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using a view engine in web development."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Use of view engine in web development"@en .
+
+is2020k:VersionControlStandalone a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Version control software in stand-alone environment"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:altLabel "Version control software in stand-alone environment"@en ;
+    skos:definition "Knowledge of version control software in a stand-alone environment."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Version control software in standalone environment"@en .
+
+is2020k:VersionControlTeamProject a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Version control software in a team development project"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of version control software in a team development project."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Version control software in a team development project"@en .
+
+is2020k:ViewEngineAndHowItIsUsed a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "View engine and how it is used"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of what a view engine is and how it is used."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "View engine and how it is used"@en .
+
+is2020k:WebsiteAuthentication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Website authentication"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of implementing website authentication."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Website authentication"@en .
+
+is2020k:WebsiteAuthorization a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Website authorization"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of implementing website authorization."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Website authorization"@en .
+
+is2020k:WebsiteDatabaseEncryptionAndDecryption a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Website database encryption and decryption"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of implementing website database encryption and decryption."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Website database encryption and decryption"@en .
+
+is2020k:WebsiteDebugging a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Website debugging"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying debugging techniques to website development."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Website debugging"@en .
+
+is2020k:WebsiteLayout a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Website layout"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating website layouts."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Website layout"@en .
+
+is2020k:WebsiteUsingJsonOrDatabase a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Website that uses JSON or a database as both input and output"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of building a website that uses JSON or a database as both input and output."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Website that uses JSON or a database as both input and output"@en .
+
+is2020k:WhenToUseSecurityAndWhy a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "When to use security and why"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of when to use security in web applications and why it matters."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "When to use security and why"@en .
+
+is2020c:Competence_ISWD_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate an operational understanding of the protocols that enable the Internet"@en ;
+    dcterms:identifier "ISWD-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:InternetServerInteractingWithClient,
+        is2020k:PurposeOfClientFrontend,
+        is2020k:PurposeOfServerBackend ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_1_01,
+        is2020c:KS_ISWD_1_02,
+        is2020c:KS_ISWD_1_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate an operational understanding of the protocols that enable the Internet"@en ;
+    skos:prefLabel "IS Web Development Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_1 .
+
+is2020c:Competence_ISWD_11 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Debug syntactical and logical errors"@en ;
+    dcterms:identifier "ISWD-11"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DifferenceBetweenSyntaxAndLogicError,
+        is2020k:ProcessOfDebuggingWebsiteApplication,
+        is2020k:WebsiteDebugging ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_11_01,
+        is2020c:KS_ISWD_11_02,
+        is2020c:KS_ISWD_11_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Debug syntactical and logical errors"@en ;
+    skos:prefLabel "IS Web Development Competency 11"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_11 .
+
+is2020c:Competence_ISWD_13 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Deploy a website to a host server"@en ;
+    dcterms:identifier "ISWD-13"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:adaptable,
+        ontoksd:collaborative,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:ConfigurationOfHost,
+        is2020k:DeploymentOfWebsiteAndFiles,
+        is2020k:ServerHostsFiles ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_13_01,
+        is2020c:KS_ISWD_13_02,
+        is2020c:KS_ISWD_13_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Deploy a website to a host server"@en ;
+    skos:prefLabel "IS Web Development Competency 13"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_13 .
+
+is2020c:Competence_ISWD_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create and analyze an algorithm for effectiveness and efficiency"@en ;
+    dcterms:identifier "ISWD-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AlgorithmsAndLogic,
+        is2020k:EfficiencyOfAlgorithm,
+        is2020k:SolvingProblemUsingAlgorithm ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_2_01,
+        is2020c:KS_ISWD_2_02,
+        is2020c:KS_ISWD_2_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Create and analyze an algorithm for effectiveness and efficiency."@en ;
+    skos:prefLabel "IS Web Development Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_2 .
+
+is2020c:Competence_ISWD_9 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Analyze and explain the different design layouts and pros and cons of each"@en ;
+    dcterms:identifier "ISWD-9"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AdvantagesAndDisadvantagesOfDesignPatterns,
+        is2020k:CurrentDesignLayout,
+        is2020k:WebsiteLayout ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_9_01,
+        is2020c:KS_ISWD_9_02,
+        is2020c:KS_ISWD_9_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Analyze and explain the different design layouts and pros and cons of each"@en ;
+    skos:prefLabel "IS Web Development Competency 9"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_9 .
+
+is2020c:Source_ISWD_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 142 (PDF page 143)."@en ;
+    dcterms:description "Competency: Demonstrate skills in server-side (back-end) web application development technologies using a back-end programming language (i.e., Node/Express, Python/Django, etc.) Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISWD-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 143 (PDF page 144)."@en ;
+    dcterms:description "Competency: Explain the different internet design patterns (i.e., MVC, MVVM, etc.) and ability to know advantages and disadvantages of each Key dispositions: Purpose-driven, Responsible, Inventive"@en ;
+    dcterms:identifier "ISWD-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISWD_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate skills in client-side (Front-end) web application development technologies including HTML, CSS, JavaScript, and JavaScript libraries"@en ;
+    dcterms:identifier "ISWD-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ClientSideFrontend,
+        is2020k:ClientSideSkills,
+        is2020k:DocumentObjectModel,
+        is2020k:DomUsedInFrontend ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_5_01,
+        is2020c:KS_ISWD_5_02,
+        is2020c:KS_ISWD_5_03,
+        is2020c:KS_ISWD_5_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate skills in client-side (Front-end) web application development technologies including HTML, CSS, JavaScript, and JavaScript libraries."@en ;
+    skos:prefLabel "IS Web Development Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_5 .
+
+is2020c:Source_ISWD_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 140 (PDF page 141)."@en ;
+    dcterms:description "Competency: Demonstrate an operational understanding of the protocols that enable the Internet Key dispositions: Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISWD-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_11 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 144 (PDF page 145)."@en ;
+    dcterms:description "Competency: Debug syntactical and logical errors Key dispositions: Meticulous, Self-Directed, Inventive"@en ;
+    dcterms:identifier "ISWD-11"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_13 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 145 (PDF page 146)."@en ;
+    dcterms:description "Competency: Deploy a website to a host server Key dispositions: Collaborative, Adaptable, Responsible"@en ;
+    dcterms:identifier "ISWD-13"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 140 (PDF page 141)."@en ;
+    dcterms:description "Competency: Create and analyze an algorithm for effectiveness and efficiency. Key dispositions: Self-directed, Purpose-driven, Meticulous"@en ;
+    dcterms:identifier "ISWD-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_9 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 143 (PDF page 144)."@en ;
+    dcterms:description "Competency: Analyze and explain the different design layouts and pros and cons of each Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISWD-9"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020k:AdvantagesAndDisadvantagesOfDesignPatterns a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Advantages of disadvantages of the different design patterns"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the advantages and disadvantages of different design patterns."@en ;
+    skos:inScheme is2020k:IS2020WebDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Advantages of disadvantages of the different design patterns"@en .
+
+is2020c:Competence_ISWD_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Implement good documentation practices in programming"@en ;
+    dcterms:identifier "ISWD-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AdvantagesAndDisadvantagesOfDocumentation,
+        is2020k:BestPracticesInWritingSourceCode,
+        is2020k:DocumentationOfApplication,
+        is2020k:PurposeOfReadableSourceCode,
+        is2020k:StructuredProgram ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_3_01,
+        is2020c:KS_ISWD_3_02,
+        is2020c:KS_ISWD_3_03,
+        is2020c:KS_ISWD_3_04,
+        is2020c:KS_ISWD_3_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Implement good documentation practices in programming"@en ;
+    skos:prefLabel "IS Web Development Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_3 .
+
+is2020c:Source_ISWD_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 142 (PDF page 143)."@en ;
+    dcterms:description "Competency: Demonstrate skills in client-side (Front-end) web application development technologies including HTML, CSS, JavaScript, and JavaScript libraries. Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISWD-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISWD_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate teamwork, interpersonal group skills, and team software development"@en ;
+    dcterms:identifier "ISWD-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:adaptable,
+        ontoksd:collaborative,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:ProperCommunicationWithTeamMembers,
+        is2020k:TeamPersonalities,
+        is2020k:TeamResponsibilities,
+        is2020k:UseOfTeamCommunicationTools,
+        is2020k:VersionControlStandalone,
+        is2020k:VersionControlTeamProject ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_4_01,
+        is2020c:KS_ISWD_4_02,
+        is2020c:KS_ISWD_4_03,
+        is2020c:KS_ISWD_4_04,
+        is2020c:KS_ISWD_4_05,
+        is2020c:KS_ISWD_4_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate teamwork, interpersonal group skills, and team software development"@en ;
+    skos:prefLabel "IS Web Development Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_4 .
+
+is2020c:Source_ISWD_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 141 (PDF page 142)."@en ;
+    dcterms:description "Competency: Implement good documentation practices in programming Key dispositions: Inventive, Self-Directed, Responsible"@en ;
+    dcterms:identifier "ISWD-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 141 (PDF page 142)."@en ;
+    dcterms:description "Competency: Demonstrate teamwork, interpersonal group skills, and team software development Key dispositions: Collaborative, Adaptable, Responsible"@en ;
+    dcterms:identifier "ISWD-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISWD_12 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Explain the Internet Copyright laws"@en ;
+    dcterms:identifier "ISWD-12"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AlternativeCopyrightRegistration,
+        is2020k:AutomaticCopyright,
+        is2020k:FreedomOfSpeech,
+        is2020k:IntellectualPropertyAndOwnership,
+        is2020k:OtherTypesOfProtection,
+        is2020k:PermissionToPublish,
+        is2020k:RegisteringCopyright,
+        is2020k:TheAtSign,
+        is2020k:TypesOfWork ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_12_01,
+        is2020c:KS_ISWD_12_02,
+        is2020c:KS_ISWD_12_03,
+        is2020c:KS_ISWD_12_04,
+        is2020c:KS_ISWD_12_05,
+        is2020c:KS_ISWD_12_06,
+        is2020c:KS_ISWD_12_07,
+        is2020c:KS_ISWD_12_08,
+        is2020c:KS_ISWD_12_09 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Explain the Internet Copyright laws"@en ;
+    skos:prefLabel "IS Web Development Competency 12"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_12 .
+
+is2020c:Competence_ISWD_10 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Implement security measures for a website"@en ;
+    dcterms:identifier "ISWD-10"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AuthorizationVsAuthentication,
+        is2020k:CipherText,
+        is2020k:Decryption,
+        is2020k:Encryption,
+        is2020k:KeyTypes,
+        is2020k:PlainText,
+        is2020k:WebsiteAuthentication,
+        is2020k:WebsiteAuthorization,
+        is2020k:WebsiteDatabaseEncryptionAndDecryption,
+        is2020k:WhenToUseSecurityAndWhy ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_10_01,
+        is2020c:KS_ISWD_10_02,
+        is2020c:KS_ISWD_10_03,
+        is2020c:KS_ISWD_10_04,
+        is2020c:KS_ISWD_10_05,
+        is2020c:KS_ISWD_10_06,
+        is2020c:KS_ISWD_10_07,
+        is2020c:KS_ISWD_10_08,
+        is2020c:KS_ISWD_10_09,
+        is2020c:KS_ISWD_10_10 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Implement security measures for a website"@en ;
+    skos:prefLabel "IS Web Development Competency 10"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_10 .
+
+is2020c:Competence_ISWD_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create a functioning web application suitable for portfolio presentation including but not limited to skills shown using front-end, back-end, SQL, and current web development tools"@en ;
+    dcterms:identifier "ISWD-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-web-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:DifferentWebViewEngines,
+        is2020k:FullStackDevelopment,
+        is2020k:Json,
+        is2020k:MeanStackDevelopment,
+        is2020k:RestfulApi,
+        is2020k:RestfulApiWhenToUse,
+        is2020k:SkillsForWebApplicationWithCrud,
+        is2020k:UseOfViewEngineInWebDevelopment,
+        is2020k:ViewEngineAndHowItIsUsed,
+        is2020k:WebsiteUsingJsonOrDatabase ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISWD_7_01,
+        is2020c:KS_ISWD_7_02,
+        is2020c:KS_ISWD_7_03,
+        is2020c:KS_ISWD_7_04,
+        is2020c:KS_ISWD_7_05,
+        is2020c:KS_ISWD_7_06,
+        is2020c:KS_ISWD_7_07,
+        is2020c:KS_ISWD_7_08,
+        is2020c:KS_ISWD_7_09,
+        is2020c:KS_ISWD_7_10 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Create a functioning web application suitable for portfolio presentation including but not limited to skills shown using front-end, back-end, SQL, and current web development tools"@en ;
+    skos:prefLabel "IS Web Development Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISWD_7 .
+
+is2020c:Source_ISWD_12 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 144 (PDF page 145)."@en ;
+    dcterms:description "Competency: Explain the Internet Copyright laws Key dispositions: Self-Directed, Responsible, Professional"@en ;
+    dcterms:identifier "ISWD-12"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_10 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 143 (PDF page 144)."@en ;
+    dcterms:description "Competency: Implement security measures for a website Key dispositions: Inventive, Self-Directed, Responsible"@en ;
+    dcterms:identifier "ISWD-10"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISWD_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 142 (PDF page 143)."@en ;
+    dcterms:description "Competency: Create a functioning web application suitable for portfolio presentation including but not limited to skills shown using front-end, back-end, SQL, and current web development tools Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISWD-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-web-development-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Web Development competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.4 Competency Area – Web Development."@en .
+
+is2020k:IS2020WebDevelopmentKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Web Development Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Web Development competency area."@en ;
+    skos:prefLabel "IS2020 Web Development Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

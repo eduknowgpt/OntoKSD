@@ -1,0 +1,196 @@
+# CS2023 Software4; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Software4_FPL_Constructs_2_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Constructs × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Constructs ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Constructs at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Constructs × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_Event_Driven_3_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Event-Driven × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Event_Driven ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Event-Driven at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Event-Driven × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_Functional_3_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Functional × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Functional ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Functional at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Functional × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_Logic_13_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Logic × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Logic ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Logic at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Logic × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_OOP_2_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-OOP × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_OOP ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-OOP at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-OOP × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_Pragmatics_3_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Pragmatics × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Pragmatics ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Pragmatics at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Pragmatics × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_Translation_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Translation × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Translation ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Translation at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Translation × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_FPL_Types_18_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Types × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Types ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: FPL-Types at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Types × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:KS_Software4_SPD_Embedded_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SPD-Embedded × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SPD_Embedded ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Local knowledge–level assignment for Software4: SPD-Embedded at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SPD-Embedded × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:TaskActivity_Software4_Analyze a ontoksd:TaskActivity ;
+    rdfs:label "analyze"@en ;
+    rdfs:comment "Task activity capturing the analysis of application requirements and paradigm characteristics."@en ;
+    skos:prefLabel "analyze"@en .
+
+cs2023c:TaskActivity_Software4_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluative judgment required to determine the suitability of a paradigm and language for the target application."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskActivity_Software4_Explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en ;
+    rdfs:comment "Task activity capturing the explanation of strengths, weaknesses, and trade-offs among alternative paradigms and languages."@en ;
+    skos:prefLabel "explain"@en .
+
+cs2023c:TaskActivity_Software4_Select a ontoksd:TaskActivity ;
+    rdfs:label "select"@en ;
+    rdfs:comment "Task activity capturing the selection of an appropriate paradigm and programming language."@en ;
+    skos:prefLabel "select"@en .
+
+cs2023c:TaskComponent_Software4_Application a ontoksd:TaskComponent ;
+    rdfs:label "specific application to be developed"@en ;
+    rdfs:comment "Task component corresponding to the target application whose characteristics and requirements guide the paradigm and language selection."@en ;
+    skos:prefLabel "specific application to be developed"@en .
+
+cs2023c:TaskComponent_Software4_ParadigmAndLanguageSelection a ontoksd:TaskComponent ;
+    rdfs:label "programming paradigm and programming language selection"@en ;
+    rdfs:comment "Task component corresponding to the decision outcome, namely the selected programming paradigm and programming language."@en ;
+    skos:prefLabel "programming paradigm and programming language selection"@en .
+
+cs2023c:TaskConstraint_Software4_ApplicationFitness a ontoksd:TaskConstraint ;
+    rdfs:label "relative to the application to be developed"@en ;
+    rdfs:comment "Task constraint stating that the decision must be justified with respect to the characteristics and needs of the application to be developed."@en ;
+    skos:prefLabel "relative to the application to be developed"@en .
+
+cs2023c:Task_Software4 a ontoksd:Task ;
+    rdfs:label "Software4 task"@en ;
+    dcterms:identifier "Task_Software4"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Software4_Analyze,
+        cs2023c:TaskActivity_Software4_Evaluate,
+        cs2023c:TaskActivity_Software4_Explain,
+        cs2023c:TaskActivity_Software4_Select ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Software4_Application,
+        cs2023c:TaskComponent_Software4_ParadigmAndLanguageSelection ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Software4_ApplicationFitness ;
+    ontoksd:hasTaskStatement "Make an informed decision regarding which programming language/paradigm to select and use for a specific application."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Software4 ;
+    rdfs:comment "Specification-level task associated with Competence_Software4. The task concerns selecting an appropriate programming paradigm and programming language for a specific application on the basis of comparative consideration of strengths, weaknesses, and application needs."@en ;
+    skos:prefLabel "Software4 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software4 .
+
+cs2023c:Competence_Software4 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply knowledge of multiple programming paradigms, including their strengths and weaknesses relative to the application to be developed, and select an appropriate paradigm and programming language"@en ;
+    dcterms:identifier "Software4"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:inventive ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Software4_FPL_Constructs_2_Evaluate,
+        cs2023c:KS_Software4_FPL_Event_Driven_3_Evaluate,
+        cs2023c:KS_Software4_FPL_Functional_3_Evaluate,
+        cs2023c:KS_Software4_FPL_Logic_13_Evaluate,
+        cs2023c:KS_Software4_FPL_OOP_2_Evaluate,
+        cs2023c:KS_Software4_FPL_Pragmatics_3_Evaluate,
+        cs2023c:KS_Software4_FPL_Translation_1_Evaluate,
+        cs2023c:KS_Software4_FPL_Types_18_Evaluate,
+        cs2023c:KS_Software4_SPD_Embedded_1_Evaluate ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Software4 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Software4. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Apply knowledge of multiple programming paradigms, including their strengths and weaknesses relative to the application to be developed, and select an appropriate paradigm and programming language."@en ;
+    skos:prefLabel "Apply knowledge of multiple programming paradigms, including their strengths and weaknesses relative to the application to be developed, and select an appropriate paradigm and programming language"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Software4 .
+
+cs2023c:Source_Software4 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Software4, starting on printed page 399."@en ;
+    dcterms:description "Task: Make an informed decision regarding which programming language/paradigm to select and use for a specific application. Competency statement: Apply knowledge of multiple programming paradigms, including their strengths and weaknesses relative to the application to be developed, and select an appropriate paradigm and programming language. Required knowledge: FPL-OOP, FPL-Functional, FPL-Logic, FPL-Event-Driven, FPL-Types, FPL-Translation, FPL-Pragmatics, SPD-Embedded, FPL-Constructs. Required skills: Explain, Evaluate. Desirable professional dispositions: Inventive."@en ;
+    dcterms:identifier "Software4" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_FPL_Constructs,
+        cs2023:KU_FPL_Event_Driven,
+        cs2023:KU_FPL_Functional,
+        cs2023:KU_FPL_Logic,
+        cs2023:KU_FPL_OOP,
+        cs2023:KU_FPL_Pragmatics,
+        cs2023:KU_FPL_Translation,
+        cs2023:KU_FPL_Types,
+        cs2023:KU_SPD_Embedded,
+        level:Evaluate,
+        level:Explain .
+}

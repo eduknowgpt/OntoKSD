@@ -1,0 +1,172 @@
+# CS2023 Systems3; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems3_DM_Data_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Data × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Data ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: DM-Data at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Data × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:KS_Systems3_DM_Processing_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Processing × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Processing ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: DM-Processing at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Processing × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:KS_Systems3_DM_Relational_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Relational × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Relational ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: DM-Relational at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Relational × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:KS_Systems3_SEC_Foundations_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEC-Foundations × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEC_Foundations ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: SEC-Foundations at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEC-Foundations × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:KS_Systems3_SEP_Privacy_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Privacy × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Privacy ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: SEP-Privacy at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Privacy × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:KS_Systems3_SEP_Professional_Ethics_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Professional-Ethics × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Professional_Ethics ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: SEP-Professional-Ethics at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Professional-Ethics × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:KS_Systems3_SEP_Security_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Security × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Security ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Local knowledge–level assignment for Systems3: SEP-Security at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Security × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:TaskActivity_Systems3_Create a ontoksd:TaskActivity ;
+    rdfs:label "create"@en ;
+    rdfs:comment "Task activity capturing the creation of database views for controlled data access."@en ;
+    skos:prefLabel "create"@en .
+
+cs2023c:TaskActivity_Systems3_Restrict a ontoksd:TaskActivity ;
+    rdfs:label "restrict"@en ;
+    rdfs:comment "Task activity capturing the limitation of data access according to authorization and access-control requirements."@en ;
+    skos:prefLabel "restrict"@en .
+
+cs2023c:TaskActivity_Systems3_Secure a ontoksd:TaskActivity ;
+    rdfs:label "secure"@en ;
+    rdfs:comment "Task activity capturing the protection of data from unauthorized access through database design choices."@en ;
+    skos:prefLabel "secure"@en .
+
+cs2023c:TaskComponent_Systems3_Data a ontoksd:TaskComponent ;
+    rdfs:label "data"@en ;
+    rdfs:comment "Task component corresponding to the data objects whose access must be protected and appropriately limited."@en ;
+    skos:prefLabel "data"@en .
+
+cs2023c:TaskComponent_Systems3_DatabaseViews a ontoksd:TaskComponent ;
+    rdfs:label "database views"@en ;
+    rdfs:comment "Task component corresponding to the database views created as a mechanism for restricting and structuring access to data."@en ;
+    skos:prefLabel "database views"@en .
+
+cs2023c:TaskConstraint_Systems3_AppropriateLimitation a ontoksd:TaskConstraint ;
+    rdfs:label "to ensure data access is appropriately limited"@en ;
+    rdfs:comment "Task constraint stating that access to data must be limited in a justified and appropriate manner rather than merely blocked."@en ;
+    skos:prefLabel "to ensure data access is appropriately limited"@en .
+
+cs2023c:TaskConstraint_Systems3_UnauthorizedAccess a ontoksd:TaskConstraint ;
+    rdfs:label "from unauthorized access"@en ;
+    rdfs:comment "Task constraint stating that the task must prevent access to data by unauthorized actors."@en ;
+    skos:prefLabel "from unauthorized access"@en .
+
+cs2023c:Task_Systems3 a ontoksd:Task ;
+    rdfs:label "Systems3 task"@en ;
+    dcterms:identifier "Task_Systems3"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems3_Create,
+        cs2023c:TaskActivity_Systems3_Restrict,
+        cs2023c:TaskActivity_Systems3_Secure ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems3_Data,
+        cs2023c:TaskComponent_Systems3_DatabaseViews ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems3_AppropriateLimitation,
+        cs2023c:TaskConstraint_Systems3_UnauthorizedAccess ;
+    ontoksd:hasTaskStatement "Secure data from unauthorized access."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems3 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems3. The task concerns designing and implementing database views so that access to data is restricted according to authorization requirements, privacy expectations, and security constraints."@en ;
+    skos:prefLabel "Systems3 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems3 .
+
+cs2023c:Competence_Systems3 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create database views to ensure data access is appropriately limited"@en ;
+    dcterms:identifier "Systems3"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:proactive ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems3_DM_Data_1_Develop,
+        cs2023c:KS_Systems3_DM_Processing_1_Develop,
+        cs2023c:KS_Systems3_DM_Relational_1_Develop,
+        cs2023c:KS_Systems3_SEC_Foundations_1_Develop,
+        cs2023c:KS_Systems3_SEP_Privacy_1_Develop,
+        cs2023c:KS_Systems3_SEP_Professional_Ethics_1_Develop,
+        cs2023c:KS_Systems3_SEP_Security_1_Develop ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems3 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems3. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Create database views to ensure data access is appropriately limited."@en ;
+    skos:prefLabel "Create database views to ensure data access is appropriately limited"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems3 .
+
+cs2023c:Source_Systems3 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems3, starting on printed page 401."@en ;
+    dcterms:description "Task: Secure data from unauthorized access. Competency statement: Create database views to ensure data access is appropriately limited. Required knowledge: DM-Data, DM-Relational, DM-Processing, SEP-Security, SEP-Professional-Ethics, SEP-Privacy, SEC-Foundations. Required skills: Develop. Desirable professional dispositions: Meticulous, Proactive."@en ;
+    dcterms:identifier "Systems3" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_DM_Data,
+        cs2023:KU_DM_Processing,
+        cs2023:KU_DM_Relational,
+        cs2023:KU_SEC_Foundations,
+        cs2023:KU_SEP_Privacy,
+        cs2023:KU_SEP_Professional_Ethics,
+        cs2023:KU_SEP_Security,
+        level:Develop .
+}

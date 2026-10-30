@@ -1,0 +1,19 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+# Record-level comparison only: no missing data = zero, no automatic LearningNeed creation.
+SELECT DISTINCT ?profile ?judgment ?competence ?current ?required ?scheme
+WHERE {
+ ?spec a ontoksd:CourseCompetenceSpecification ;
+  ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+  ontoksd:mediatesCourseCompetence ?competence ; ontoksd:isMandatory true ;
+  ontoksd:requiresMinimumProficiencyLevel ?required ; dcterms:references ?scheme .
+ ?scheme a ontoksd:ProficiencyScheme ; ontoksd:definesLevel ?required, ?current .
+ ?required ontoksd:hasOrdinalPosition ?requiredPosition .
+ ?profile ontoksd:hasEvidencedCompetence ?judgment .
+ ?judgment ontoksd:refersToCompetence ?competence ; ontoksd:hasProficiencyLevel ?current ;
+  ontoksd:interpretedUsingScheme ?scheme .
+ ?current ontoksd:hasOrdinalPosition ?currentPosition .
+ FILTER(?currentPosition < ?requiredPosition)
+ FILTER NOT EXISTS { ?required ontoksd:hasOrdinalPosition ?otherRequired . FILTER(?otherRequired != ?requiredPosition) }
+ FILTER NOT EXISTS { ?current ontoksd:hasOrdinalPosition ?otherCurrent . FILTER(?otherCurrent != ?currentPosition) }
+} ORDER BY ?profile ?competence ?judgment

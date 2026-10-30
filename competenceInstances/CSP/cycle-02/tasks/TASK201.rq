@@ -1,0 +1,325 @@
+# Cycle-02 Task201 and its adjusted instructional/assessment associations.
+# INSERT-only incremental cycle-02 instance data; see README.md for dependencies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task201_C02_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Model justification. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C02_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Model justification. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C03_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and validation. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C03_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and validation. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C04_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Symbolic reasoning supporting FSM modeling. Analytical support retained; no derived competency. A separate RE artifact is not required; the symbolic-documentation objective remains."@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Understanding ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConceptual ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C04_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Symbolic reasoning supporting FSM modeling. Analytical support retained; no derived competency. A separate RE artifact is not required; the symbolic-documentation objective remains."@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Understanding ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConceptual ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C06_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: FSM modeling. "@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C06_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: FSM modeling. "@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C11_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Structural pattern analysis. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:mediatesCompetence ontoksd:C11 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:CA_Task201_C11_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Structural pattern analysis. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical ;
+    ontoksd:mediatesCompetence ontoksd:C11 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:PS_Task201 a ontoksd:ProficiencyScheme ;
+    ontoksd:definesInterval ontoksd:Interval_Task201_Advanced,
+        ontoksd:Interval_Task201_Competent,
+        ontoksd:Interval_Task201_Novice ;
+    ontoksd:definesLevel ontoksd:PL_Task201_Advanced,
+        ontoksd:PL_Task201_Competent,
+        ontoksd:PL_Task201_Novice ;
+    ontoksd:usesScale ontoksd:Scale_Task201_0_10 ;
+    skos:scopeNote "Proficiency specification from the Task201 report only. No step size or learner score is inferred; the Advanced descriptor does not remove structural estimation from minimum task requirements."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-CSP-Report.md> .
+
+ontoksd:TA_Task201_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task201_estimate a ontoksd:TaskActivity ;
+    rdfs:label "estimate"@en .
+
+ontoksd:TA_Task201_model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en .
+
+ontoksd:TA_Task201_simulate a ontoksd:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ontoksd:TA_Task201_validate a ontoksd:TaskActivity ;
+    rdfs:label "validate"@en .
+
+ontoksd:TC_Task201_1 a ontoksd:TaskComponent ;
+    rdfs:label "Drone surveillance module"@en .
+
+ontoksd:TC_Task201_2 a ontoksd:TaskComponent ;
+    rdfs:label "Finite-state representation"@en .
+
+ontoksd:TC_Task201_3 a ontoksd:TaskComponent ;
+    rdfs:label "State/transition estimation rule"@en .
+
+ontoksd:TCons_Task201_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Represent deforestation, river siltation and fires, including sensing, transmission and base-issued control commands."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:TCons_Task201_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Preserve transmitted geolocation, altitude, speed, barometric and temperature information; account for the specified photo/video and repositioning controls."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:TCons_Task201_3 a ontoksd:TaskConstraint ;
+    rdfs:label "Investigate state/transition estimation as part of the expected work, not only as an Advanced-level bonus."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:TCons_Task201_4 a ontoksd:TaskConstraint ;
+    rdfs:label "Provide a JFLAP model and an SBC-format report with at least two execution examples and the requested documentation and budgeting discussion."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:AC_Task201 a ontoksd:AcquisitionContext ;
+    rdfs:label "Surveillance Drone Prototype pedagogical setting"@en ;
+    dcterms:identifier "Task201-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:Interval_Task201_Advanced a ontoksd:ScaleInterval ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task201_Advanced ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task201_0_10 ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 .
+
+ontoksd:Interval_Task201_Competent a ontoksd:ScaleInterval ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task201_Competent ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task201_0_10 ;
+    ontoksd:lowerBound 5.0 ;
+    ontoksd:upperBound 9.0 .
+
+ontoksd:Interval_Task201_Novice a ontoksd:ScaleInterval ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task201_Novice ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task201_0_10 ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 5.0 .
+
+ontoksd:PL_Task201_Advanced a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int .
+
+ontoksd:PL_Task201_Competent a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int .
+
+ontoksd:PL_Task201_Novice a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int .
+
+ontoksd:C02 ontoksd:hasTask ontoksd:Task201_Reference .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task201_Reference .
+
+ontoksd:C04 ontoksd:hasTask ontoksd:Task201_Reference .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task201_Reference .
+
+ontoksd:C06 ontoksd:hasTask ontoksd:Task201_Reference .
+
+ontoksd:C11 ontoksd:hasTask ontoksd:Task201_Reference .
+
+ontoksd:Scale_Task201_0_10 a ontoksd:Scale ;
+    ontoksd:hasInterval ontoksd:Interval_Task201_Advanced,
+        ontoksd:Interval_Task201_Competent,
+        ontoksd:Interval_Task201_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 .
+
+ontoksd:AS_Task201 a ontoksd:Assessment ;
+    rdfs:label "Surveillance Drone Prototype assessment specification"@en ;
+    dcterms:identifier "Task201-Assessment" ;
+    dcterms:references ontoksd:PS_Task201 ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task201 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task201_C02_Assessment,
+        ontoksd:CA_Task201_C03_Assessment,
+        ontoksd:CA_Task201_C04_Assessment,
+        ontoksd:CA_Task201_C05_Assessment,
+        ontoksd:CA_Task201_C06_Assessment,
+        ontoksd:CA_Task201_C11_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task201 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:Task201_Reference a ontoksd:Task ;
+    rdfs:label "Surveillance Drone Prototype reference performance"@en ;
+    dcterms:identifier "Task201-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task201_document,
+        ontoksd:TA_Task201_estimate,
+        ontoksd:TA_Task201_model,
+        ontoksd:TA_Task201_simulate,
+        ontoksd:TA_Task201_validate ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task201_1,
+        ontoksd:TC_Task201_2,
+        ontoksd:TC_Task201_3 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task201_1,
+        ontoksd:TCons_Task201_2,
+        ontoksd:TCons_Task201_3,
+        ontoksd:TCons_Task201_4 ;
+    ontoksd:hasTaskStatement "Model, simulate and document the surveillance drone module with finite-state machines, and investigate a rule for estimating state and transition requirements from the monitored events."@en ;
+    ontoksd:isTaskOf ontoksd:C02,
+        ontoksd:C03,
+        ontoksd:C04,
+        ontoksd:C05,
+        ontoksd:C06,
+        ontoksd:C11 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ontoksd:LT_Task201 a ontoksd:LearningTask ;
+    rdfs:label "Surveillance Drone Prototype learning task"@en ;
+    dcterms:identifier "Task201-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task201 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task201_C02_Learning,
+        ontoksd:CA_Task201_C03_Learning,
+        ontoksd:CA_Task201_C04_Learning,
+        ontoksd:CA_Task201_C05_Learning,
+        ontoksd:CA_Task201_C06_Learning,
+        ontoksd:CA_Task201_C11_Learning ;
+    ontoksd:hasInstructionalStatement "Address symbolic behavior documentation and the estimation of states and transitions required as the monitored event set changes. The adjusted C04 activation does not require a separate regular-expression artifact."@en,
+        "Model drone surveillance events and control actions with an FSM; justify the adopted abstraction."@en,
+        "Prepare an SBC-format report containing operations, at least two execution examples, and documentation/budgeting analysis."@en,
+        "Simulate and validate the FSM with JFLAP across representative scenarios."@en,
+        "Use PBL teamwork and document the process with whiteboard updates and a shared logbook."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_Logbook,
+        ontoksd:CSPResource_SBC,
+        ontoksd:CSPResource_Whiteboard ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+}

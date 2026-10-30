@@ -1,0 +1,13 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?scheme ?score ?level
+WHERE {
+ VALUES ?score { 5.0 5.1 9.0 9.1 }
+ ?scheme a ontoksd:ProficiencyScheme ; ontoksd:definesInterval ?interval .
+ ?interval ontoksd:lowerBound ?lo ; ontoksd:upperBound ?hi ;
+  ontoksd:includesLower ?includeLo ; ontoksd:includesUpper ?includeHi ;
+  ontoksd:correspondsToLevel ?level .
+ FILTER((?score > ?lo || (?includeLo && ?score = ?lo)) &&
+        (?score < ?hi || (?includeHi && ?score = ?hi)))
+} ORDER BY ?scheme ?score

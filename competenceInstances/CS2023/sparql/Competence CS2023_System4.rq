@@ -1,0 +1,257 @@
+# CS2023 Systems4; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems4_DM_Core_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Core × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Core ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: DM-Core at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Core × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_DM_Data_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Data × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Data ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: DM-Data at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Data × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_DM_Internals_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Internals × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Internals ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: DM-Internals at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Internals × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_DM_Modeling_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Modeling × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Modeling ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: DM-Modeling at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Modeling × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_DM_NoSQL_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-NoSQL × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_NoSQL ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: DM-NoSQL at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-NoSQL × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_DM_Relational_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Relational × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Relational ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: DM-Relational at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Relational × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEC_Foundations_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEC-Foundations × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEC_Foundations ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEC-Foundations at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEC-Foundations × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEP_Context_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Context × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Context ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEP-Context at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Context × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEP_DEIA_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-DEIA × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_DEIA ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEP-DEIA at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-DEIA × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEP_Ethical_Analysis_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Ethical-Analysis × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Ethical_Analysis ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEP-Ethical-Analysis at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Ethical-Analysis × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEP_Privacy_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Privacy × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Privacy ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEP-Privacy at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Privacy × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEP_Professional_Ethics_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Professional-Ethics × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Professional_Ethics ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEP-Professional-Ethics at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Professional-Ethics × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:KS_Systems4_SEP_Security_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Security × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Security ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Local knowledge–level assignment for Systems4: SEP-Security at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Security × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:TaskActivity_Systems4_Assess a ontoksd:TaskActivity ;
+    rdfs:label "assess"@en ;
+    rdfs:comment "Task activity capturing the assessment of social and ethical implications of collecting and storing data."@en ;
+    skos:prefLabel "assess"@en .
+
+cs2023c:TaskActivity_Systems4_Create a ontoksd:TaskActivity ;
+    rdfs:label "create"@en ;
+    rdfs:comment "Task activity capturing the creation of the database for the new application."@en ;
+    skos:prefLabel "create"@en .
+
+cs2023c:TaskActivity_Systems4_Determine a ontoksd:TaskActivity ;
+    rdfs:label "determine"@en ;
+    rdfs:comment "Task activity capturing the decision regarding how to store the application's data, including the choice between RDBMS and NoSQL approaches."@en ;
+    skos:prefLabel "determine"@en .
+
+cs2023c:TaskActivity_Systems4_Index a ontoksd:TaskActivity ;
+    rdfs:label "index"@en ;
+    rdfs:comment "Task activity capturing the definition of appropriate indices for efficient and suitable database operation."@en ;
+    skos:prefLabel "index"@en .
+
+cs2023c:TaskActivity_Systems4_Model a ontoksd:TaskActivity ;
+    rdfs:label "model"@en ;
+    rdfs:comment "Task activity capturing the design of data storage needs through data modeling."@en ;
+    skos:prefLabel "model"@en .
+
+cs2023c:TaskComponent_Systems4_ApplicationData a ontoksd:TaskComponent ;
+    rdfs:label "new application's data"@en ;
+    rdfs:comment "Task component corresponding to the data to be modeled, collected, stored, and protected in the new application."@en ;
+    skos:prefLabel "new application's data"@en .
+
+cs2023c:TaskComponent_Systems4_Database a ontoksd:TaskComponent ;
+    rdfs:label "database including appropriate indices"@en ;
+    rdfs:comment "Task component corresponding to the database structure to be created, including indexing decisions appropriate to the application needs."@en ;
+    skos:prefLabel "database including appropriate indices"@en .
+
+cs2023c:TaskConstraint_Systems4_RDBMSvsNoSQL a ontoksd:TaskConstraint ;
+    rdfs:label "with determination of an appropriate storage approach such as RDBMS or NoSQL"@en ;
+    rdfs:comment "Task constraint stating that the database design must include a justified choice of storage approach, such as relational or NoSQL solutions, according to application needs."@en ;
+    skos:prefLabel "with determination of an appropriate storage approach such as RDBMS or NoSQL"@en .
+
+cs2023c:TaskConstraint_Systems4_SocialEthicalImplications a ontoksd:TaskConstraint ;
+    rdfs:label "with assessment of social and ethical implications of collecting and storing data"@en ;
+    rdfs:comment "Task constraint stating that database design must consider the social and ethical implications of collecting and storing application data."@en ;
+    skos:prefLabel "with assessment of social and ethical implications of collecting and storing data"@en .
+
+cs2023c:Task_Systems4 a ontoksd:Task ;
+    rdfs:label "Systems4 task"@en ;
+    dcterms:identifier "Task_Systems4"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems4_Assess,
+        cs2023c:TaskActivity_Systems4_Create,
+        cs2023c:TaskActivity_Systems4_Determine,
+        cs2023c:TaskActivity_Systems4_Index,
+        cs2023c:TaskActivity_Systems4_Model ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems4_ApplicationData,
+        cs2023c:TaskComponent_Systems4_Database ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems4_RDBMSvsNoSQL,
+        cs2023c:TaskConstraint_Systems4_SocialEthicalImplications ;
+    ontoksd:hasTaskStatement "Create a database for a new application."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems4 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems4. The task concerns designing the data storage needs of a new application, evaluating implications of data collection and storage, determining an appropriate storage approach such as RDBMS or NoSQL, and creating the database including suitable indices."@en ;
+    skos:prefLabel "Systems4 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems4 .
+
+cs2023c:Competence_Systems4 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Design the data storage needs, assess the social and ethical implications for collecting and storing the data, determine how to store a new application's data, and create the database, including appropriate indices"@en ;
+    dcterms:identifier "Systems4"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems4_DM_Core_1_Develop,
+        cs2023c:KS_Systems4_DM_Data_1_Develop,
+        cs2023c:KS_Systems4_DM_Internals_1_Develop,
+        cs2023c:KS_Systems4_DM_Modeling_1_Develop,
+        cs2023c:KS_Systems4_DM_NoSQL_1_Develop,
+        cs2023c:KS_Systems4_DM_Relational_1_Develop,
+        cs2023c:KS_Systems4_SEC_Foundations_1_Develop,
+        cs2023c:KS_Systems4_SEP_Context_1_Develop,
+        cs2023c:KS_Systems4_SEP_DEIA_1_Develop,
+        cs2023c:KS_Systems4_SEP_Ethical_Analysis_1_Develop,
+        cs2023c:KS_Systems4_SEP_Privacy_1_Develop,
+        cs2023c:KS_Systems4_SEP_Professional_Ethics_1_Develop,
+        cs2023c:KS_Systems4_SEP_Security_1_Develop ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems4 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems4. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Design the data storage needs (data modeling), assess the social and ethical implications for collecting and storing the data, determine how to store a new application’s data (RDBMS vs NoSQL), and create the database, including appropriate indices."@en ;
+    skos:prefLabel "Design the data storage needs, assess the social and ethical implications for collecting and storing the data, determine how to store a new application's data, and create the database, including appropriate indices"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems4 .
+
+cs2023c:Source_Systems4 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems4, starting on printed page 401."@en ;
+    dcterms:description "Task: Create a database for a new application. Competency statement: Design the data storage needs (data modeling), assess the social and ethical implications for collecting and storing the data, determine how to store a new application’s data (RDBMS vs NoSQL), and create the database, including appropriate indices. Required knowledge: DM-Data, DM-Core, DM-Modeling, DM-Relational, DM-NoSQL, DM-Internals, SEP-Context, SEP-Ethical-Analysis, SEP-Privacy, SEP-Professional-Ethics, SEP-Security, SEP-DEIA, SEC-Foundations. Required skills: Develop. Desirable professional dispositions: Inventive, Meticulous, Responsible."@en ;
+    dcterms:identifier "Systems4" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_DM_Core,
+        cs2023:KU_DM_Data,
+        cs2023:KU_DM_Internals,
+        cs2023:KU_DM_Modeling,
+        cs2023:KU_DM_NoSQL,
+        cs2023:KU_DM_Relational,
+        cs2023:KU_SEC_Foundations,
+        cs2023:KU_SEP_Context,
+        cs2023:KU_SEP_DEIA,
+        cs2023:KU_SEP_Ethical_Analysis,
+        cs2023:KU_SEP_Privacy,
+        cs2023:KU_SEP_Professional_Ethics,
+        cs2023:KU_SEP_Security,
+        level:Develop .
+}

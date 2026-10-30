@@ -1,0 +1,1500 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://purl.org/ontoksd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:CSP_Cycle02_Task202_C13_HistoricalAssociation a prov:Entity ;
+    dcterms:description "C13 was associated with the initial/reviewed Task202 specification. The adjusted set uses C13.01; C13 remains the historical base and is not an additional current task target."@en ;
+    dcterms:references ns1:C13 ;
+    dcterms:relation ns1:C13_01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:Course_FormalLanguagesAndTheoryOfComputation a ns1:Course ;
+    rdfs:label "Introduction to Formal Languages and Theory of Computation"@en ;
+    dcterms:description "Curricular component documented by the UFBA syllabus. The selected cycle-02 instructional units are aggregated here; this does not assert complete course coverage or a semester-specific course offering."@en ;
+    ns1:hasInstructionalUnit ns1:AS_Task201,
+        ns1:AS_Task202,
+        ns1:AS_Task203,
+        ns1:AS_Task204,
+        ns1:LT_Task201,
+        ns1:LT_Task202,
+        ns1:LT_Task203,
+        ns1:LT_Task204 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/syllabus/theoryOfComputation.md> .
+
+ns1:Options_Task203_C09_activation_mode a prov:Entity ;
+    dcterms:description "Documented alternative values: analytical|constructive. No selected configuration is asserted; these alternatives are not simultaneous qualifier values."@en ;
+    dcterms:identifier "activation_mode" ;
+    dcterms:references ns1:amAnalytical,
+        ns1:amConstructive ;
+    dcterms:relation ns1:CA_Task203_C09_Assessment,
+        ns1:CA_Task203_C09_Learning .
+
+ns1:Options_Task204_C16_activation_constraint a prov:Entity ;
+    dcterms:description "Documented alternative values: optional|conditional. No selected configuration is asserted; these alternatives are not simultaneous qualifier values."@en ;
+    dcterms:identifier "activation_constraint" ;
+    dcterms:references ns1:acOptional,
+        ns1:conditional ;
+    dcterms:relation ns1:CA_Task204_C16_Assessment,
+        ns1:CA_Task204_C16_Learning .
+
+ns1:Options_Task204_C16_activation_role a prov:Entity ;
+    dcterms:description "Documented alternative values: supporting|extension. No selected configuration is asserted; these alternatives are not simultaneous qualifier values."@en ;
+    dcterms:identifier "activation_role" ;
+    dcterms:references ns1:arExtension,
+        ns1:arSupporting ;
+    dcterms:relation ns1:CA_Task204_C16_Assessment,
+        ns1:CA_Task204_C16_Learning .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Competency-Lifecycle.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:aad52723e35f62484d81b7e2f14c738a3f647fe984abe7a4f67ca39863423e43" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Competency-Lifecycle.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Competency-Registry.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:e365c514eb9bf9e6620700b085af3f6dfd07f03af6853f19fde1509deff8433e" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Competency-Registry.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Competency-Task-Matrix.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:d64ad36d72cdd5b3dccb315064802246a30e302c768f46e167b19d8638733c07" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Competency-Task-Matrix.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Data-Dictionary.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:fae1e9515fd3ddd5480c4c748edf44086d15057e49d5a993548982dc2877d335" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Data-Dictionary.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Task-Competency-Mapping.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:40a374fbddfc1bb2361d1928b40d16407fdb083b21741aea1a5e58841909604c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Task-Competency-Mapping.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/README.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:0e3c2a5caf2136765a51cefbeae91c67affa5f5b8c923d4475e07f846fdfc487" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "README.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ab6b7e7a3c71370cce900405afd19fe62ebd296ba322adde0ca8229c232ade5b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK201-CSP-Review-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:0c87f1d519f7ed06402a4da3345d214d0fa3ac42932df3c50d6eb5f6fff715dd" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK202-CSP-Review-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:197d5f537f24f6205b257758ba525efe6efbbc36e01f5a0b7dc73575f8ee729a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task202-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:209d0519063a754335db506bfb6518337e309ac223a53058e9dd0debf9221f4c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK203-CSP-Review-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ec6e9c6172cf9e7faecb4c219a30ae5b7cdc7c43a5c199539431743395153a55" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task203-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSRP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ce8dcbad1724d35908ee28707eddc853f2c6d1aac18de3e2bec7b3b84d98ff94" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK204-CSRP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:614dc34b893a471ec108b8b5b7b676ada54b8eccdabaa4289674488050928dd3" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task204-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/syllabus/theoryOfComputation.pt.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:02bbd6dcc060889a4ffe0914700ec33bedf9d835ca88f8be05f8cb0078b89e94" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "theoryOfComputation.pt.md"@en .
+
+ns1:CA_Task201_C02_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Model justification. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C02_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Model justification. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C03_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and validation. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C03_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and validation. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C04_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Symbolic reasoning supporting FSM modeling. Analytical support retained; no derived competency. A separate RE artifact is not required; the symbolic-documentation objective remains."@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Understanding> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amConceptual ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C04 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C04_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Symbolic reasoning supporting FSM modeling. Analytical support retained; no derived competency. A separate RE artifact is not required; the symbolic-documentation objective remains."@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Understanding> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amConceptual ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C04 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C05_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented,
+        ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C05_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented,
+        ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C06_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: FSM modeling. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C06_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: FSM modeling. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C11_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Structural pattern analysis. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:mediatesCompetence ns1:C11 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task201_C11_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Structural pattern analysis. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:mediatesCompetence ns1:C11 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:CA_Task202_C03_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA simulation. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C03_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA simulation. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C05_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C05_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C12_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA modeling. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C12 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C12_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: PDA modeling. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C12 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C13_01_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Interpretation of formal grammar-based rules. Created by controlled specialization of C13. Understand/Analyze and the detailed disposition list are retained."@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Understanding> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amInterpretative ;
+    ns1:mediatesCompetence ns1:C13_01 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C13_01_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Understand;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Interpretation of formal grammar-based rules. Created by controlled specialization of C13. Understand/Analyze and the detailed disposition list are retained."@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Understanding> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amInterpretative ;
+    ns1:mediatesCompetence ns1:C13_01 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C14_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Formal model justification. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task202_C14_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Formal model justification. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CA_Task203_C05_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C05_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C07_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: TM-based parking control. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C07 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C07_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: TM-based parking control. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C07 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C08_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Comparison and justification of TM variants. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:mediatesCompetence ns1:C08 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C08_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Comparison and justification of TM variants. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:mediatesCompetence ns1:C08 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C09_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C09_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C10_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and testing. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C10 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C10_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and testing. "@en ;
+    dcterms:references <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C10 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C02_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Model justification. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C02_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C02_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C02_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Model justification. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C02_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C02 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C02_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C03_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM simulation. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C03_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C03_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as conditional. Its instructional/assessment emphasis depends on the selected task design; the source does not identify a unique trigger. The original task requirements remain in force."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C03_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM simulation. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C03_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C03 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C03_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as conditional. Its instructional/assessment emphasis depends on the selected task design; the source does not identify a unique trigger. The original task requirements remain in force."@en ;
+    ns1:hasActivationConstraintType ns1:conditional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C05_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Technical reporting as evidence vehicle. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C05_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C05_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C05_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Technical reporting as evidence vehicle. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C05_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amArtifactOriented ;
+    ns1:hasActivationRole ns1:arTransversal ;
+    ns1:mediatesCompetence ns1:C05 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C05_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C06_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM representation of OJ outcomes. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C06_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C06_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C06_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: FSM representation of OJ outcomes. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C06_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amConstructive ;
+    ns1:hasActivationRole ns1:arSupporting ;
+    ns1:mediatesCompetence ns1:C06 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C06_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C14_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Formal grammar classification. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C14_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C14_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C14_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Formal grammar classification. Adjusted activation classification does not withdraw simulation or Chomsky-Hierarchy objectives from the task statement."@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C14_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C14 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C14_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C15_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Explanation of the Halting Problem. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C15_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C15 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C15_Assessment_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C15_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Explanation of the Halting Problem. "@en ;
+    ns1:hasActivationConstraint ns1:CA_Task204_C15_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amAnalytical,
+        ns1:amJustificatory ;
+    ns1:hasActivationRole ns1:arCore ;
+    ns1:mediatesCompetence ns1:C15 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C15_Learning_Constraint a ns1:ActivationConstraint ;
+    ns1:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as mandatory. Address the stated role within the planned unit and preserve the task requirements."@en ;
+    ns1:hasActivationConstraintType ns1:acMandatory ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C13_01_ContextFreeGrammars_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Context-Free Grammars x Understanding"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#explain>,
+        <http://purl.org/edu/bloom#interpret> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_2_b> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_CSP_ContextFreeGrammars ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Understanding> ;
+    ns1:isKnowledgeSkillOf ns1:C13_01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:KS_C13_01_FormalReasoning_Analyzing a ns1:KnowledgeSkill ;
+    rdfs:label "Formal Reasoning in Computation Theory x Analyzing"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#analyze>,
+        <http://purl.org/edu/bloom#examine> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_C13_01_FormalReasoningInComputationTheory ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:isKnowledgeSkillOf ns1:C13_01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:KS_C13_01_PushdownAutomata_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Pushdown Automata x Analyzing"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#analyze>,
+        <http://purl.org/edu/bloom#relate> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_1_b> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_b> ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Analyzing> ;
+    ns1:isKnowledgeSkillOf ns1:C13_01 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:KS_C15_AnalyticalThinking_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking x Applying"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#argue>,
+        <http://purl.org/edu/bloom#evaluate>,
+        <http://purl.org/edu/bloom#structure> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Applying> ;
+    ns1:isKnowledgeSkillOf ns1:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C15_Computability_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Computability x Understanding"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#classify>,
+        <http://purl.org/edu/bloom#explain>,
+        <http://purl.org/edu/bloom#recognize> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_4> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_C15_Computability ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Understanding> ;
+    ns1:isKnowledgeSkillOf ns1:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C15_HaltingProblem_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Halting Problem x Understanding"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#describe>,
+        <http://purl.org/edu/bloom#explain>,
+        <http://purl.org/edu/bloom#justify> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_4> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_C15_HaltingProblem ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Understanding> ;
+    ns1:isKnowledgeSkillOf ns1:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C15_TuringMachines_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Turing Machines x Understanding"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#explain>,
+        <http://purl.org/edu/bloom#relate> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_1_d> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_d> ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Understanding> ;
+    ns1:isKnowledgeSkillOf ns1:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C16_AnalyticalThinking_Applying a ns1:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking x Applying"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#analyze>,
+        <http://purl.org/edu/bloom#justify>,
+        <http://purl.org/edu/bloom#structure> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cc2020/foundational#AnalyticalThinking> ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Applying> ;
+    ns1:isKnowledgeSkillOf ns1:C16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C16_Computability_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Computability Theory x Understanding"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#classify>,
+        <http://purl.org/edu/bloom#distinguish>,
+        <http://purl.org/edu/bloom#explain> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_4> ;
+    ns1:hasKnowledgeComponent ns1:Knowledge_C16_ComputabilityTheory ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Understanding> ;
+    ns1:isKnowledgeSkillOf ns1:C16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:KS_C16_TuringMachines_Understanding a ns1:KnowledgeSkill ;
+    rdfs:label "Turing Machines x Understanding"@en ;
+    ns1:hasBloomLevelJustificationVerb <http://purl.org/edu/bloom#explain>,
+        <http://purl.org/edu/bloom#interpret>,
+        <http://purl.org/edu/bloom#relate> ;
+    ns1:hasCurricularKnowledgeReference <http://purl.org/cs2023#Topic_AL_Models_1_d> ;
+    ns1:hasKnowledgeComponent <http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_d> ;
+    ns1:hasSkillLevel <http://purl.org/edu/bloom#Understanding> ;
+    ns1:isKnowledgeSkillOf ns1:C16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:Knowledge_C13_01_FormalReasoningInComputationTheory a ns1:Knowledge ;
+    rdfs:label "Formal Reasoning in Computation Theory"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Grammatical derivations, symbolic rules and automaton transitions as a basis for explaining, specifying and checking structured computational behavior."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:Knowledge_C15_Computability a ns1:Knowledge ;
+    rdfs:label "Computability"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Conceptual distinctions among decidable, semi-decidable and undecidable problems, and limits on algorithmic automation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:Knowledge_C15_HaltingProblem a ns1:Knowledge ;
+    rdfs:label "Halting Problem"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "The impossibility of a general algorithm that decides whether an arbitrary program halts on a given input, and its implications for automated program analysis."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:Knowledge_C16_ComputabilityTheory a ns1:Knowledge ;
+    rdfs:label "Computability Theory"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "Conceptual foundations for interpreting decidability, semi-decidability and computational-system limitations without requiring formal proofs."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:Knowledge_C16_UniversalTuringMachine a ns1:Knowledge ;
+    rdfs:label "Universal Turing Machine"@en ;
+    ns1:hasKnowledgeType ns1:computingSpecificKnowledgeType ;
+    skos:definition "The conceptual notion of programmable universal computation and simulation of other machines, used as explanatory background for system capabilities and limitations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:PS_Task201 a ns1:ProficiencyScheme ;
+    ns1:definesInterval ns1:Interval_Task201_Advanced,
+        ns1:Interval_Task201_Competent,
+        ns1:Interval_Task201_Novice ;
+    ns1:definesLevel ns1:PL_Task201_Advanced,
+        ns1:PL_Task201_Competent,
+        ns1:PL_Task201_Novice ;
+    ns1:usesScale ns1:Scale_Task201_0_10 ;
+    skos:scopeNote "Proficiency specification from the Task201 report only. No step size or learner score is inferred; the Advanced descriptor does not remove structural estimation from minimum task requirements."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-CSP-Report.md> .
+
+ns1:TA_Task201_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task201_estimate a ns1:TaskActivity ;
+    rdfs:label "estimate"@en .
+
+ns1:TA_Task201_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task201_simulate a ns1:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ns1:TA_Task201_validate a ns1:TaskActivity ;
+    rdfs:label "validate"@en .
+
+ns1:TA_Task202_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task202_interpret a ns1:TaskActivity ;
+    rdfs:label "interpret"@en .
+
+ns1:TA_Task202_justify a ns1:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ns1:TA_Task202_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task202_validate a ns1:TaskActivity ;
+    rdfs:label "validate"@en .
+
+ns1:TA_Task203_design a ns1:TaskActivity ;
+    rdfs:label "design"@en .
+
+ns1:TA_Task203_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task203_implement a ns1:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ns1:TA_Task203_justify a ns1:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ns1:TA_Task203_simulate a ns1:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ns1:TA_Task204_analyze a ns1:TaskActivity ;
+    rdfs:label "analyze"@en .
+
+ns1:TA_Task204_document a ns1:TaskActivity ;
+    rdfs:label "document"@en .
+
+ns1:TA_Task204_explain a ns1:TaskActivity ;
+    rdfs:label "explain"@en .
+
+ns1:TA_Task204_model a ns1:TaskActivity ;
+    rdfs:label "model"@en .
+
+ns1:TA_Task204_simulate a ns1:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ns1:TC_Task201_1 a ns1:TaskComponent ;
+    rdfs:label "Drone surveillance module"@en .
+
+ns1:TC_Task201_2 a ns1:TaskComponent ;
+    rdfs:label "Finite-state representation"@en .
+
+ns1:TC_Task201_3 a ns1:TaskComponent ;
+    rdfs:label "State/transition estimation rule"@en .
+
+ns1:TC_Task202_1 a ns1:TaskComponent ;
+    rdfs:label "Team-composition control module"@en .
+
+ns1:TC_Task202_2 a ns1:TaskComponent ;
+    rdfs:label "Pushdown automaton representation"@en .
+
+ns1:TC_Task202_3 a ns1:TaskComponent ;
+    rdfs:label "Formal team-generation rules"@en .
+
+ns1:TC_Task203_1 a ns1:TaskComponent ;
+    rdfs:label "Parking-control system"@en .
+
+ns1:TC_Task203_2 a ns1:TaskComponent ;
+    rdfs:label "Category-specific occupancy counters"@en .
+
+ns1:TC_Task203_3 a ns1:TaskComponent ;
+    rdfs:label "Daily rejection counters"@en .
+
+ns1:TC_Task204_1 a ns1:TaskComponent ;
+    rdfs:label "Online Judge outcome model"@en .
+
+ns1:TC_Task204_2 a ns1:TaskComponent ;
+    rdfs:label "Halting/termination explanation"@en .
+
+ns1:TC_Task204_3 a ns1:TaskComponent ;
+    rdfs:label "TSP scenario analysis"@en .
+
+ns1:TCons_Task201_1 a ns1:TaskConstraint ;
+    rdfs:label "Represent deforestation, river siltation and fires, including sensing, transmission and base-issued control commands."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:TCons_Task201_2 a ns1:TaskConstraint ;
+    rdfs:label "Preserve transmitted geolocation, altitude, speed, barometric and temperature information; account for the specified photo/video and repositioning controls."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:TCons_Task201_3 a ns1:TaskConstraint ;
+    rdfs:label "Investigate state/transition estimation as part of the expected work, not only as an Advanced-level bonus."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:TCons_Task201_4 a ns1:TaskConstraint ;
+    rdfs:label "Provide a JFLAP model and an SBC-format report with at least two execution examples and the requested documentation and budgeting discussion."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:TCons_Task202_1 a ns1:TaskConstraint ;
+    rdfs:label "Check Vi >= ni * NVi with ni > 0 for each event type. Equality satisfies the requirement."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:TCons_Task202_2 a ns1:TaskConstraint ;
+    rdfs:label "Identify team members from location, unique identification and volunteer-status signals; alert the base when the ratio is not satisfied."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:TCons_Task202_3 a ns1:TaskConstraint ;
+    rdfs:label "Adopt the documented memory-based instructional model; do not treat the ratio alone as a proof that every bounded encoding excludes finite-state computation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:TCons_Task202_4 a ns1:TaskConstraint ;
+    rdfs:label "Provide surveillance/team-control JFLAP modules and an SBC report with operations, at least two examples, and the documentation/budgeting discussion."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:TCons_Task203_1 a ns1:TaskConstraint ;
+    rdfs:label "Keep daily-user, monthly-subscriber and rotating-customer spaces category-specific."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:TCons_Task203_2 a ns1:TaskConstraint ;
+    rdfs:label "Update occupancy and release spaces on departures; count denied requests per category each day."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:TCons_Task203_3 a ns1:TaskConstraint ;
+    rdfs:label "A rejected request must not interfere with subsequent service."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:TCons_Task203_4 a ns1:TaskConstraint ;
+    rdfs:label "Justify the selected machine or variant and deliver the machine model and SBC-format report."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:TCons_Task204_1 a ns1:TaskConstraint ;
+    rdfs:label "Represent the observable AC, WA, TLE, CE and RE outcomes in an FSM."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:TCons_Task204_2 a ns1:TaskConstraint ;
+    rdfs:label "Retain TSP analysis, theoretical explanations, JFLAP simulation and connections to the Chomsky Hierarchy from the task statement."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:TCons_Task204_3 a ns1:TaskConstraint ;
+    rdfs:label "The adjusted optional/conditional competence labels do not withdraw originally specified activities."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:TCons_Task204_4 a ns1:TaskConstraint ;
+    rdfs:label "Deliver an SBC-format report with hypotheses, theoretical explanations, the FSM and concrete examples."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:cspAnalyticalRigor a ns1:Disposition ;
+    rdfs:label "Analytical Rigor"@en ;
+    skos:definition "An orientation toward precision and correctness when interpreting formal grammatical descriptions, as specified for C13.01."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:f03949b4279cf678202c1c3bf44d9bc85d8e66c341348085b9bcfaecf84edab1" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task201-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/syllabus/theoryOfComputation.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:5cfd5e845899beeeb45f19216d8a00df91d988fc23788a1566bc1adb1a42ff4c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "theoryOfComputation.md"@en .
+
+ns1:AC_Task201 a ns1:AcquisitionContext ;
+    rdfs:label "Surveillance Drone Prototype pedagogical setting"@en ;
+    dcterms:identifier "Task201-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:AC_Task202 a ns1:AcquisitionContext ;
+    rdfs:label "Team Control pedagogical setting"@en ;
+    dcterms:identifier "Task202-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:AC_Task203 a ns1:AcquisitionContext ;
+    rdfs:label "Parking Control pedagogical setting"@en ;
+    dcterms:identifier "Task203-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:AC_Task204 a ns1:AcquisitionContext ;
+    rdfs:label "Online Judges at Logistic Solutions pedagogical setting"@en ;
+    dcterms:identifier "Task204-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:C13 ns1:hasSpecialization ns1:C13_01 .
+
+ns1:CA_Task203_C09_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Optional variant use; analytical by default and constructive when implemented. No specialization. Analytical evidence can overlap with C08; no independent assessment criterion is inferred."@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationConstraint ns1:CA_Task203_C09_Assessment_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C09 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CA_Task203_C09_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Optional variant use; analytical by default and constructive when implemented. No specialization. Analytical evidence can overlap with C08; no independent assessment criterion is inferred."@en ;
+    dcterms:references <http://purl.org/edu/bloom#Analyzing>,
+        <http://purl.org/edu/bloom#Applying> ;
+    ns1:hasActivationConstraint ns1:CA_Task203_C09_Learning_Constraint ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationRole ns1:arExtension ;
+    ns1:mediatesCompetence ns1:C09 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ns1:CSPResource_Logbook a ns1:EducationalResource ;
+    rdfs:label "Shared PBL logbook"@en .
+
+ns1:Interval_Task201_Advanced a ns1:ScaleInterval ;
+    ns1:correspondsToLevel ns1:PL_Task201_Advanced ;
+    ns1:includesLower false ;
+    ns1:includesUpper true ;
+    ns1:isIntervalOf ns1:Scale_Task201_0_10 ;
+    ns1:lowerBound 9.0 ;
+    ns1:upperBound 10.0 .
+
+ns1:Interval_Task201_Competent a ns1:ScaleInterval ;
+    ns1:correspondsToLevel ns1:PL_Task201_Competent ;
+    ns1:includesLower false ;
+    ns1:includesUpper true ;
+    ns1:isIntervalOf ns1:Scale_Task201_0_10 ;
+    ns1:lowerBound 5.0 ;
+    ns1:upperBound 9.0 .
+
+ns1:Interval_Task201_Novice a ns1:ScaleInterval ;
+    ns1:correspondsToLevel ns1:PL_Task201_Novice ;
+    ns1:includesLower true ;
+    ns1:includesUpper true ;
+    ns1:isIntervalOf ns1:Scale_Task201_0_10 ;
+    ns1:lowerBound 0.0 ;
+    ns1:upperBound 5.0 .
+
+ns1:PL_Task201_Advanced a ns1:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    ns1:hasOrdinalPosition "3"^^xsd:int .
+
+ns1:PL_Task201_Competent a ns1:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    ns1:hasOrdinalPosition "2"^^xsd:int .
+
+ns1:PL_Task201_Novice a ns1:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    ns1:hasOrdinalPosition "1"^^xsd:int .
+
+ns1:amConceptual a ns1:ActivationMode,
+        owl:NamedIndividual ;
+    rdfs:label "conceptual"@en ;
+    skos:definition "A contextual activation mode emphasizing interpretation of concepts and symbolic/structural relationships without requiring a separate constructed artifact."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ns1:C04 ns1:hasTask ns1:Task201_Reference .
+
+ns1:C07 ns1:hasTask ns1:Task203_Reference .
+
+ns1:C08 ns1:hasTask ns1:Task203_Reference .
+
+ns1:C09 ns1:hasTask ns1:Task203_Reference .
+
+ns1:C10 ns1:hasTask ns1:Task203_Reference .
+
+ns1:C11 ns1:hasTask ns1:Task201_Reference .
+
+ns1:C12 ns1:hasTask ns1:Task202_Reference .
+
+ns1:CA_Task204_C16_Assessment a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Interpretative support; no independent minimum-task evidence. Distinct identifier retained. Initial title used Apply; adjusted title uses Interpret. Future absorption into C15 is not implemented."@en ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amInterpretative ;
+    ns1:mediatesCompetence ns1:C16 ;
+    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CA_Task204_C16_Learning a ns1:CompetenceActivation ;
+    dcterms:description "Source role/function: Interpretative support; no independent minimum-task evidence. Distinct identifier retained. Initial title used Apply; adjusted title uses Interpret. Future absorption into C15 is not implemented."@en ;
+    ns1:hasActivationFunction ns1:targetFunction ;
+    ns1:hasActivationMode ns1:amInterpretative ;
+    ns1:mediatesCompetence ns1:C16 ;
+    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:CSPResource_Whiteboard a ns1:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en .
+
+ns1:Scale_Task201_0_10 a ns1:Scale ;
+    ns1:hasInterval ns1:Interval_Task201_Advanced,
+        ns1:Interval_Task201_Competent,
+        ns1:Interval_Task201_Novice ;
+    ns1:maxValue 10.0 ;
+    ns1:minValue 0.0 .
+
+ns1:Task202_Reference a ns1:Task ;
+    rdfs:label "Team Control reference performance"@en ;
+    dcterms:identifier "Task202-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task202_document,
+        ns1:TA_Task202_interpret,
+        ns1:TA_Task202_justify,
+        ns1:TA_Task202_model,
+        ns1:TA_Task202_validate ;
+    ns1:hasTaskComponent ns1:TC_Task202_1,
+        ns1:TC_Task202_2,
+        ns1:TC_Task202_3 ;
+    ns1:hasTaskConstraint ns1:TCons_Task202_1,
+        ns1:TCons_Task202_2,
+        ns1:TCons_Task202_3,
+        ns1:TCons_Task202_4 ;
+    ns1:hasTaskStatement "Model, simulate and document memory-based control of volunteer/non-volunteer team composition, checking Vi >= ni * NVi for each event type, where ni > 0, and explaining the adopted PDA/grammar representation."@en ;
+    ns1:isTaskOf ns1:C03,
+        ns1:C05,
+        ns1:C12,
+        ns1:C13_01,
+        ns1:C14 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:Task203_Reference a ns1:Task ;
+    rdfs:label "Parking Control reference performance"@en ;
+    dcterms:identifier "Task203-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task203_design,
+        ns1:TA_Task203_document,
+        ns1:TA_Task203_implement,
+        ns1:TA_Task203_justify,
+        ns1:TA_Task203_simulate ;
+    ns1:hasTaskComponent ns1:TC_Task203_1,
+        ns1:TC_Task203_2,
+        ns1:TC_Task203_3 ;
+    ns1:hasTaskConstraint ns1:TCons_Task203_1,
+        ns1:TCons_Task203_2,
+        ns1:TCons_Task203_3,
+        ns1:TCons_Task203_4 ;
+    ns1:hasTaskStatement "Design, simulate and document the adopted Turing-Machine-based parking control model, updating category occupancy on arrivals/departures and daily denied-request counters while continuing service after rejection."@en ;
+    ns1:isTaskOf ns1:C05,
+        ns1:C07,
+        ns1:C08,
+        ns1:C09,
+        ns1:C10 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:AS_Task202 a ns1:Assessment ;
+    rdfs:label "Team Control assessment specification"@en ;
+    dcterms:identifier "Task202-Assessment" ;
+    ns1:hasAcquisitionContext ns1:AC_Task202 ;
+    ns1:hasCompetenceActivation ns1:CA_Task202_C03_Assessment,
+        ns1:CA_Task202_C05_Assessment,
+        ns1:CA_Task202_C12_Assessment,
+        ns1:CA_Task202_C13_01_Assessment,
+        ns1:CA_Task202_C14_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task202 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:AS_Task203 a ns1:Assessment ;
+    rdfs:label "Parking Control assessment specification"@en ;
+    dcterms:identifier "Task203-Assessment" ;
+    ns1:hasAcquisitionContext ns1:AC_Task203 ;
+    ns1:hasCompetenceActivation ns1:CA_Task203_C05_Assessment,
+        ns1:CA_Task203_C07_Assessment,
+        ns1:CA_Task203_C08_Assessment,
+        ns1:CA_Task203_C09_Assessment,
+        ns1:CA_Task203_C10_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task203 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:C02 ns1:hasTask ns1:Task201_Reference,
+        ns1:Task204_Reference .
+
+ns1:C06 ns1:hasTask ns1:Task201_Reference,
+        ns1:Task204_Reference .
+
+ns1:C14 ns1:hasTask ns1:Task202_Reference,
+        ns1:Task204_Reference .
+
+ns1:C16 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Interpret Turing Machine Concepts to Analyze Computational System Capabilities"@en ;
+    dcterms:identifier "C16"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:collaborative,
+        ns1:creative,
+        ns1:proactive,
+        ns1:responsible ;
+    ns1:hasKnowledge ns1:Knowledge_C16_UniversalTuringMachine ;
+    ns1:hasKnowledgeSkill ns1:KS_C16_AnalyticalThinking_Applying,
+        ns1:KS_C16_Computability_Understanding,
+        ns1:KS_C16_TuringMachines_Understanding ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task204_Reference ;
+    skos:altLabel "Apply Turing Machine Concepts to Analyze Computational System Capabilities"@en ;
+    skos:definition "Interpret Turing Machine Concepts to Analyze Computational System Capabilities"@en ;
+    skos:scopeNote "Universal Turing Machine remains explicit in the detailed source knowledge specification. The source does not give it a separate skill-level assignment; it is preserved as direct Knowledge without inventing a fourth pairing. C16 remains distinct from C15 and does not establish an independent assessment outcome."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:Task201_Reference a ns1:Task ;
+    rdfs:label "Surveillance Drone Prototype reference performance"@en ;
+    dcterms:identifier "Task201-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task201_document,
+        ns1:TA_Task201_estimate,
+        ns1:TA_Task201_model,
+        ns1:TA_Task201_simulate,
+        ns1:TA_Task201_validate ;
+    ns1:hasTaskComponent ns1:TC_Task201_1,
+        ns1:TC_Task201_2,
+        ns1:TC_Task201_3 ;
+    ns1:hasTaskConstraint ns1:TCons_Task201_1,
+        ns1:TCons_Task201_2,
+        ns1:TCons_Task201_3,
+        ns1:TCons_Task201_4 ;
+    ns1:hasTaskStatement "Model, simulate and document the surveillance drone module with finite-state machines, and investigate a rule for estimating state and transition requirements from the monitored events."@en ;
+    ns1:isTaskOf ns1:C02,
+        ns1:C03,
+        ns1:C04,
+        ns1:C05,
+        ns1:C06,
+        ns1:C11 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:AS_Task201 a ns1:Assessment ;
+    rdfs:label "Surveillance Drone Prototype assessment specification"@en ;
+    dcterms:identifier "Task201-Assessment" ;
+    dcterms:references ns1:PS_Task201 ;
+    ns1:hasAcquisitionContext ns1:AC_Task201 ;
+    ns1:hasCompetenceActivation ns1:CA_Task201_C02_Assessment,
+        ns1:CA_Task201_C03_Assessment,
+        ns1:CA_Task201_C04_Assessment,
+        ns1:CA_Task201_C05_Assessment,
+        ns1:CA_Task201_C06_Assessment,
+        ns1:CA_Task201_C11_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task201 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+ns1:C15 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Understand the Halting Problem and its Implications"@en ;
+    dcterms:identifier "C15"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:collaborative,
+        ns1:creative,
+        ns1:proactive,
+        ns1:responsible ;
+    ns1:hasKnowledgeSkill ns1:KS_C15_AnalyticalThinking_Applying,
+        ns1:KS_C15_Computability_Understanding,
+        ns1:KS_C15_HaltingProblem_Understanding,
+        ns1:KS_C15_TuringMachines_Understanding ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task204_Reference ;
+    skos:definition "Understand the Halting Problem and its Implications"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ns1:LT_Task202 a ns1:LearningTask ;
+    rdfs:label "Team Control learning task"@en ;
+    dcterms:identifier "Task202-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task202 ;
+    ns1:hasCompetenceActivation ns1:CA_Task202_C03_Learning,
+        ns1:CA_Task202_C05_Learning,
+        ns1:CA_Task202_C12_Learning,
+        ns1:CA_Task202_C13_01_Learning,
+        ns1:CA_Task202_C14_Learning ;
+    ns1:hasInstructionalStatement "Check the event-specific team-composition regulation Vi >= ni * NVi, with ni > 0; issue an alert when it is violated."@en,
+        "Consider extension of the surveillance module or communicating parallel modules, and justify representation/design choices."@en,
+        "Develop and simulate the memory-based control model in JFLAP, explaining its grammar/PDA relationships and model adequacy."@en,
+        "Provide JFLAP modules and an SBC-format report with all operations, at least two examples and the requested documentation and budgeting analysis."@en,
+        "Use PBL, whiteboard versions and a shared logbook to document the team process."@en,
+        "Use the members location, unique identification and volunteer/non-volunteer signals as model inputs."@en ;
+    ns1:isTeamBased true ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_Logbook,
+        ns1:CSPResource_SBC,
+        ns1:CSPResource_Whiteboard ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> .
+
+ns1:LT_Task203 a ns1:LearningTask ;
+    rdfs:label "Parking Control learning task"@en ;
+    dcterms:identifier "Task203-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task203 ;
+    ns1:hasCompetenceActivation ns1:CA_Task203_C05_Learning,
+        ns1:CA_Task203_C07_Learning,
+        ns1:CA_Task203_C08_Learning,
+        ns1:CA_Task203_C09_Learning,
+        ns1:CA_Task203_C10_Learning ;
+    ns1:hasInstructionalStatement "Account for arrivals and departures, freeing occupied spaces on exit."@en,
+        "Continue servicing later customers after a rejected request."@en,
+        "Develop and simulate the adopted machine model with JFLAP and justify the machine or variant choice."@en,
+        "Manage category-specific parking availability for daily users, monthly subscribers and rotating customers."@en,
+        "Reject requests when the relevant category has no space; maintain daily denied-request counters independently by category."@en,
+        "Submit the machine-model file and an SBC-format report containing operations, examples, daily rejection information and theoretical justification."@en,
+        "Use PBL teamwork and document project progress."@en ;
+    ns1:isTeamBased true ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ns1:Task204_Reference a ns1:Task ;
+    rdfs:label "Online Judges at Logistic Solutions reference performance"@en ;
+    dcterms:identifier "Task204-Task" ;
+    ns1:hasTaskActivity ns1:TA_Task204_analyze,
+        ns1:TA_Task204_document,
+        ns1:TA_Task204_explain,
+        ns1:TA_Task204_model,
+        ns1:TA_Task204_simulate ;
+    ns1:hasTaskComponent ns1:TC_Task204_1,
+        ns1:TC_Task204_2,
+        ns1:TC_Task204_3 ;
+    ns1:hasTaskConstraint ns1:TCons_Task204_1,
+        ns1:TCons_Task204_2,
+        ns1:TCons_Task204_3,
+        ns1:TCons_Task204_4 ;
+    ns1:hasTaskStatement "Analyze the Online Judge/TSP scenario, explain the Halting Problem and general termination-decision limits, and construct, simulate and document an FSM of observable judge outcomes."@en ;
+    ns1:isTaskOf ns1:C02,
+        ns1:C03,
+        ns1:C05,
+        ns1:C06,
+        ns1:C14,
+        ns1:C15,
+        ns1:C16 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:AS_Task204 a ns1:Assessment ;
+    rdfs:label "Online Judges at Logistic Solutions assessment specification"@en ;
+    dcterms:identifier "Task204-Assessment" ;
+    ns1:hasAcquisitionContext ns1:AC_Task204 ;
+    ns1:hasCompetenceActivation ns1:CA_Task204_C02_Assessment,
+        ns1:CA_Task204_C03_Assessment,
+        ns1:CA_Task204_C05_Assessment,
+        ns1:CA_Task204_C06_Assessment,
+        ns1:CA_Task204_C14_Assessment,
+        ns1:CA_Task204_C15_Assessment,
+        ns1:CA_Task204_C16_Assessment ;
+    ns1:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ns1:isBasedOnActivity ns1:LT_Task204 ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:C13_01 a ns1:AtomicCompetence,
+        ns1:CC2020Competence,
+        ns1:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Interpret Formal Grammar-Based Rules"@en ;
+    dcterms:identifier "C13.01"^^xsd:string ;
+    ns1:hasCompetenceScope ns1:computingSpecificCompetenceScope ;
+    ns1:hasDisposition ns1:collaborative,
+        ns1:cspAnalyticalRigor,
+        ns1:reflective,
+        ns1:responsible ;
+    ns1:hasKnowledgeSkill ns1:KS_C13_01_ContextFreeGrammars_Understanding,
+        ns1:KS_C13_01_FormalReasoning_Analyzing,
+        ns1:KS_C13_01_PushdownAutomata_Understanding ;
+    ns1:hasSpecializationDescription "C13.01 directly specializes the preserved C13 identity by restricting rule interpretation to formal grammatical systems and their correspondence with memory-based automata. This records the Task202 adjustment; it does not redefine the inherited C13 specification or automatically inherit its property values."@en ;
+    ns1:hasSpecificationPattern ns1:CC2020SpecificationPattern ;
+    ns1:hasStructureType ns1:Atomic ;
+    ns1:hasTask ns1:Task202_Reference ;
+    ns1:isSpecializationOf ns1:C13 ;
+    skos:definition "Interpret Formal Grammar-Based Rules"@en ;
+    skos:scopeNote "Source disposition details are Analytical Rigor, Responsibility to Formal Consistency, Reflective Reasoning and Collaborative Reasoning. The last three are represented by the existing responsible, reflective and collaborative orientations in this formal-grammar context. Verb allocation to individual pairings is a local interpretation of the source action list."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ns1:CSPResource_JFLAP a ns1:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en .
+
+ns1:CSPResource_SBC a ns1:EducationalResource ;
+    rdfs:label "SBC article-format guidance"@en .
+
+ns1:LT_Task201 a ns1:LearningTask ;
+    rdfs:label "Surveillance Drone Prototype learning task"@en ;
+    dcterms:identifier "Task201-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task201 ;
+    ns1:hasCompetenceActivation ns1:CA_Task201_C02_Learning,
+        ns1:CA_Task201_C03_Learning,
+        ns1:CA_Task201_C04_Learning,
+        ns1:CA_Task201_C05_Learning,
+        ns1:CA_Task201_C06_Learning,
+        ns1:CA_Task201_C11_Learning ;
+    ns1:hasInstructionalStatement "Address symbolic behavior documentation and the estimation of states and transitions required as the monitored event set changes. The adjusted C04 activation does not require a separate regular-expression artifact."@en,
+        "Model drone surveillance events and control actions with an FSM; justify the adopted abstraction."@en,
+        "Prepare an SBC-format report containing operations, at least two execution examples, and documentation/budgeting analysis."@en,
+        "Simulate and validate the FSM with JFLAP across representative scenarios."@en,
+        "Use PBL teamwork and document the process with whiteboard updates and a shared logbook."@en ;
+    ns1:isTeamBased true ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_Logbook,
+        ns1:CSPResource_SBC,
+        ns1:CSPResource_Whiteboard ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:89d79bd230c2d6e3516f6979a7f4d17fa5f8d890ad61fdfc648a1b0de31d2065" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task201-DroneMonitoring.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:723bb21c5aea0343d67ffd3923aa81e06ec1d8efb5dc88581289169a51222dd6" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task202-TeamControl.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:cce2ad1272a4fac4acb3be797a8f76741de34d3714a28d7207d3a7be8f624e30" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task203-ParkingControl.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:5a819a32f6d940df4a5bf3370ff3c1a6b8bf5b15cc316d2dcf4c5cf2b87a0937" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task204-OnlineJudges.md"@en .
+
+ns1:C03 ns1:hasTask ns1:Task201_Reference,
+        ns1:Task202_Reference,
+        ns1:Task204_Reference .
+
+ns1:LT_Task204 a ns1:LearningTask ;
+    rdfs:label "Online Judges at Logistic Solutions learning task"@en ;
+    dcterms:identifier "Task204-LearningTask" ;
+    ns1:hasAcquisitionContext ns1:AC_Task204 ;
+    ns1:hasCompetenceActivation ns1:CA_Task204_C02_Learning,
+        ns1:CA_Task204_C03_Learning,
+        ns1:CA_Task204_C05_Learning,
+        ns1:CA_Task204_C06_Learning,
+        ns1:CA_Task204_C14_Learning,
+        ns1:CA_Task204_C15_Learning,
+        ns1:CA_Task204_C16_Learning ;
+    ns1:hasInstructionalStatement "Analyze the TSP scenario and possible causes of TLE outcomes; discuss the computational difficulty without conflating timeouts with undecidability."@en,
+        "Construct an FSM for observable AC, WA, TLE, CE and RE outcomes and explain its operation."@en,
+        "Explain why no general algorithm can decide termination for every arbitrary program/input and relate this to Online Judge limitations."@en,
+        "Implement and simulate the FSM in JFLAP, retaining the task statement objective despite conditional C03 activation metadata."@en,
+        "Prepare an SBC-format report with hypotheses, responses to the managers, theoretical explanations, the FSM and concrete examples."@en,
+        "Relate model behavior to relevant language/model classifications, retaining the Chomsky-Hierarchy objective despite optional C14 activation metadata."@en,
+        "Use collaborative PBL and document progress with whiteboards/diagrams."@en ;
+    ns1:isTeamBased true ;
+    ns1:usesResource ns1:CSPResource_JFLAP,
+        ns1:CSPResource_SBC,
+        ns1:CSPResource_Whiteboard ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> .
+
+ns1:C05 ns1:hasTask ns1:Task201_Reference,
+        ns1:Task202_Reference,
+        ns1:Task203_Reference,
+        ns1:Task204_Reference .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:f29329fa29a55fd53e7bc215056e91413a105f66bd7d51552cc114ab313b07d8" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK203-CSP-Adjustments.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:47e5acc1aa7b580611f5dac0d09c13f42816772fed96e80a80d0c84a72c52446" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK201-CSP-Adjustment.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:86e1a6c5f159c07599297fc5975eac611a0cb9867a02a1888793c253773cfd9c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK202-CSP-Adustments.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:90e27d240e9e4cf20995fbbebffb19e25038f9d56d65a131ddfe3a13fedcd450" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK204-CSP-Adjustments.md"@en .
+

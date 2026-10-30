@@ -1,0 +1,210 @@
+# CS2023 Applications9; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Applications9_AR_Performance_Energy_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "AR-Performance-Energy × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_AR_Performance_Energy ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: AR-Performance-Energy at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "AR-Performance-Energy × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_NC_Security_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "NC-Security × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_NC_Security ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: NC-Security at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "NC-Security × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_OS_Protection_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Protection × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Protection ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: OS-Protection at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Protection × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_SEP_Privacy_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Privacy × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Privacy ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: SEP-Privacy at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Privacy × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_SE_Design_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Design × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SE_Design ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: SE-Design at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SE-Design × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_SE_Tools_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Tools × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SE_Tools ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: SE-Tools at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SE-Tools × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_SF_Security_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Security × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SF_Security ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: SF-Security at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SF-Security × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_SPD_Common_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SPD-Common × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SPD_Common ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: SPD-Common at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SPD-Common × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:KS_Applications9_SPD_Mobile_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SPD-Mobile × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SPD_Mobile ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Local knowledge–level assignment for Applications9: SPD-Mobile at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SPD-Mobile × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:TaskActivity_Applications9_Apply a ontoksd:TaskActivity ;
+    rdfs:label "apply"@en ;
+    rdfs:comment "Task activity capturing the application of optimization and security-related techniques during implementation."@en ;
+    skos:prefLabel "apply"@en .
+
+cs2023c:TaskActivity_Applications9_Build a ontoksd:TaskActivity ;
+    rdfs:label "build"@en ;
+    rdfs:comment "Task activity capturing the construction of the web page."@en ;
+    skos:prefLabel "build"@en .
+
+cs2023c:TaskActivity_Applications9_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluation of potential security hazards and technical trade-offs."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskActivity_Applications9_Optimize a ontoksd:TaskActivity ;
+    rdfs:label "optimize"@en ;
+    rdfs:comment "Task activity capturing the application of optimization techniques to improve the web page."@en ;
+    skos:prefLabel "optimize"@en .
+
+cs2023c:TaskActivity_Applications9_Secure a ontoksd:TaskActivity ;
+    rdfs:label "secure"@en ;
+    rdfs:comment "Task activity capturing the implementation of measures to reduce or prevent security hazards in the web page."@en ;
+    skos:prefLabel "secure"@en .
+
+cs2023c:TaskComponent_Applications9_BusinessNeeds a ontoksd:TaskComponent ;
+    rdfs:label "evolving business needs"@en ;
+    rdfs:comment "Task component corresponding to the changing business requirements that shape the design and evolution of the web page."@en ;
+    skos:prefLabel "evolving business needs"@en .
+
+cs2023c:TaskComponent_Applications9_SecureWebPage a ontoksd:TaskComponent ;
+    rdfs:label "secure web page"@en ;
+    rdfs:comment "Task component corresponding to the web page to be built, secured, and optimized."@en ;
+    skos:prefLabel "secure web page"@en .
+
+cs2023c:TaskConstraint_Applications9_AppropriateProgrammingLanguages a ontoksd:TaskConstraint ;
+    rdfs:label "using a variety of appropriate programming languages"@en ;
+    rdfs:comment "Task constraint stating that implementation must use programming languages appropriate to the requirements and technical context."@en ;
+    skos:prefLabel "using a variety of appropriate programming languages"@en .
+
+cs2023c:TaskConstraint_Applications9_EvolvingBusinessNeeds a ontoksd:TaskConstraint ;
+    rdfs:label "for evolving business needs"@en ;
+    rdfs:comment "Task constraint stating that the web page must support changing business requirements over time."@en ;
+    skos:prefLabel "for evolving business needs"@en .
+
+cs2023c:Task_Applications9 a ontoksd:Task ;
+    rdfs:label "Applications9 task"@en ;
+    dcterms:identifier "Task_Applications9"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Applications9_Apply,
+        cs2023c:TaskActivity_Applications9_Build,
+        cs2023c:TaskActivity_Applications9_Evaluate,
+        cs2023c:TaskActivity_Applications9_Optimize,
+        cs2023c:TaskActivity_Applications9_Secure ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Applications9_BusinessNeeds,
+        cs2023c:TaskComponent_Applications9_SecureWebPage ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Applications9_AppropriateProgrammingLanguages,
+        cs2023c:TaskConstraint_Applications9_EvolvingBusinessNeeds ;
+    ontoksd:hasTaskStatement "Build and optimize a secure web page for evolving business needs using a variety of appropriate programming languages."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Applications9 ;
+    rdfs:comment "Specification-level task associated with Competence_Applications9. The task concerns building and optimizing a secure web page that responds to evolving business needs, using appropriate programming languages while considering security hazards, optimization opportunities, and platform-related constraints."@en ;
+    skos:prefLabel "Applications9 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Applications9 .
+
+cs2023c:Competence_Applications9 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluate potential security hazards and apply optimization techniques"@en ;
+    dcterms:identifier "Applications9"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:adaptable,
+        ontoksd:meticulous,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Applications9_AR_Performance_Energy_1_Develop,
+        cs2023c:KS_Applications9_NC_Security_1_Develop,
+        cs2023c:KS_Applications9_OS_Protection_1_Develop,
+        cs2023c:KS_Applications9_SEP_Privacy_1_Develop,
+        cs2023c:KS_Applications9_SE_Design_1_Develop,
+        cs2023c:KS_Applications9_SE_Tools_1_Develop,
+        cs2023c:KS_Applications9_SF_Security_1_Develop,
+        cs2023c:KS_Applications9_SPD_Common_1_Develop,
+        cs2023c:KS_Applications9_SPD_Mobile_1_Develop ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Applications9 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Applications9. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Evaluate potential security hazards and apply optimization techniques."@en ;
+    skos:prefLabel "Evaluate potential security hazards and apply optimization techniques"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Applications9 .
+
+cs2023c:Source_Applications9 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Applications9, starting on printed page 406."@en ;
+    dcterms:description "Task: Build and optimize a secure web page for evolving business needs using a variety of appropriate programming languages. Competency statement: Evaluate potential security hazards and apply optimization techniques. Required knowledge: AR-Performance-Energy, NC-Security, OS-Protection, SF-Security, SE-Design, SE-Tools, SPD-Common, SPD-Mobile, SEP-Privacy. Required skills: Develop. Desirable professional dispositions: Adaptable, Meticulous, Proactive, Responsible."@en ;
+    dcterms:identifier "Applications9" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_AR_Performance_Energy,
+        cs2023:KU_NC_Security,
+        cs2023:KU_OS_Protection,
+        cs2023:KU_SEP_Privacy,
+        cs2023:KU_SE_Design,
+        cs2023:KU_SE_Tools,
+        cs2023:KU_SF_Security,
+        cs2023:KU_SPD_Common,
+        cs2023:KU_SPD_Mobile,
+        level:Develop .
+}

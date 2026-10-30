@@ -1,0 +1,507 @@
+# Reviewed CSP cycle-01 Task1
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task01_C01 a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C01_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C01_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop problem solutions using Automata through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C01_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C01_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C01 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C01_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop problem solutions using Automata through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C02 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task01 Assessment Activation — C02"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C02_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C02_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Justify the use of Deterministic Finite Automata (DFAs) through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C02_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C02_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C02 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C02_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Justify the use of Deterministic Finite Automata (DFAs) through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C03 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task01 Assessment Activation — C03"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C03_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C03_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test automata using simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C03_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test automata using simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C04 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task01 Assessment Activation — C04"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C04_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C04_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "When a regular-expression representation is feasible for the selected automaton fragment, provide it and explain its construction; otherwise explain why it could not be produced, as required by the source deliverable."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C04_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amInterpretative,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "When a regular-expression representation is feasible for the selected automaton fragment, provide it and explain its construction; otherwise explain why it could not be produced, as required by the source deliverable."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:conditional ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C05 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task01 Assessment Activation — C05"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C05_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C05_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C05_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C06 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task01 Assessment Activation — C06"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C06_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C06_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Finite State Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:CA_Task01_C06_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task01_C06_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:CA_Task01_C06_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Finite State Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:ER_Task01_Logbook a ontoksd:EducationalResource ;
+    rdfs:label "Task01 logbook"@en ;
+    dcterms:description "Shared document used to register progress, decisions, and development history during the task."@en ;
+    dcterms:identifier "Task01-ER4"^^xsd:string ;
+    ontoksd:intendedUse "Traceability of collaborative work and process recording."^^xsd:string .
+
+ontoksd:ER_Task01_PBLWhiteboard a ontoksd:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en ;
+    dcterms:description "Collaborative whiteboard structure used to document questions, facts, ideas/hypotheses, and actions during the PBL process."@en ;
+    dcterms:identifier "Task01-ER3"^^xsd:string ;
+    ontoksd:intendedUse "Process documentation and collaborative reasoning support."^^xsd:string .
+
+ontoksd:TaskActivity_Task01_ModelAndValidateFSM a ontoksd:TaskActivity ;
+    rdfs:label "Model, simulate, validate, and document a vending-machine FSM solution"@en ;
+    rdfs:comment "Central task activity of Task01, involving formal modeling, simulation-based validation, and technical documentation."@en .
+
+ontoksd:TaskComponent_Task01_FSMArtifact a ontoksd:TaskComponent ;
+    rdfs:label "Finite-state-machine artifact"@en ;
+    rdfs:comment "Formal automaton artifact representing the vending machine behavior."@en .
+
+ontoksd:TaskComponent_Task01_RegexFragment a ontoksd:TaskComponent ;
+    rdfs:label "Regular-expression fragment"@en ;
+    rdfs:comment "Optional or conditional representational component relating a portion of the automaton to a regular expression."@en .
+
+ontoksd:TaskComponent_Task01_TechnicalReport a ontoksd:TaskComponent ;
+    rdfs:label "Technical report"@en ;
+    rdfs:comment "Structured report describing design decisions, formal representation, validation results, and system behavior."@en .
+
+ontoksd:TaskComponent_Task01_VendingMachineSystem a ontoksd:TaskComponent ;
+    rdfs:label "Vending machine computational system"@en ;
+    rdfs:comment "Domain object to be modeled, including product selection, payment processing, change calculation, and dispensing behavior."@en .
+
+ontoksd:TaskConstraint_Task01_OptionalBonusChange a ontoksd:TaskConstraint ;
+    rdfs:label "Optional bonus-change behavior"@en ;
+    rdfs:comment "Optional challenge requiring random bonus change of R$1.00 under exact-payment conditions."@en .
+
+ontoksd:TaskConstraint_Task01_PaymentAndChange a ontoksd:TaskConstraint ;
+    rdfs:label "Accept R$1.00 and R$2.00 and provide change"@en ;
+    rdfs:comment "The modeled machine must process specified payments and return change correctly."@en .
+
+ontoksd:TaskConstraint_Task01_ProcessDocumentation a ontoksd:TaskConstraint ;
+    rdfs:label "Document the PBL process using whiteboard versions and a shared logbook"@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:TaskConstraint_Task01_SimulatorSupport a ontoksd:TaskConstraint ;
+    rdfs:label "Be testable in JFLAP or equivalent"@en ;
+    rdfs:comment "The automaton artifact must be suitable for simulation and testing in JFLAP or equivalent tool."@en .
+
+ontoksd:TaskConstraint_Task01_ThreeProductsMinimum a ontoksd:TaskConstraint ;
+    rdfs:label "Support at least three products"@en ;
+    rdfs:comment "The solution must represent a machine configured to sell at least three products."@en .
+
+ontoksd:AC_Task01_VendingMachine_PBLContext a ontoksd:AcquisitionContext ;
+    rdfs:label "Task01 Acquisition Context — PBL Automata Modeling and Evaluation"@en ;
+    dcterms:identifier "Task01-AC"^^xsd:string ;
+    rdfs:comment "Pedagogically relevant context for Task01, characterized by problem-based learning, collaborative work, use of JFLAP or equivalent simulator, documentation through whiteboard and logbook, and evaluation based on submitted formal artifacts and technical documentation."@en .
+
+ontoksd:ER_Task01_JFLAP a ontoksd:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en ;
+    dcterms:description "Automata simulator used to test, inspect, and validate finite-state-machine behavior."@en ;
+    dcterms:identifier "Task01-ER2"^^xsd:string ;
+    ontoksd:intendedUse "Simulation, execution, debugging, and validation of finite-state-machine artifacts."^^xsd:string .
+
+ontoksd:ER_Task01_ProblemStatement a ontoksd:EducationalResource ;
+    rdfs:label "Task01 problem statement"@en ;
+    dcterms:description "Problem statement describing the vending-machine scenario, its operational requirements, and expected deliverables."@en ;
+    dcterms:identifier "Task01-ER1"^^xsd:string ;
+    ontoksd:intendedUse "Instructional framing and requirement interpretation for the learning task and the assessment."^^xsd:string .
+
+ontoksd:ER_Task01_SBCReportTemplate a ontoksd:EducationalResource ;
+    rdfs:label "SBC article-format report template"@en ;
+    dcterms:description "Template or normative reference for the preparation of the technical report required as a deliverable."@en ;
+    dcterms:identifier "Task01-ER5"^^xsd:string ;
+    ontoksd:intendedUse "Support for technical writing and report standardization."^^xsd:string .
+
+ontoksd:Interval_Task01_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Task01 interval — Advanced"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task01_Advanced ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task01_0_10 ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task01_0_10 ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 .
+
+ontoksd:Interval_Task01_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Task01 interval — Competent"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task01_Competent ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task01_0_10 ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task01_0_10 ;
+    ontoksd:lowerBound 5.0 ;
+    ontoksd:upperBound 9.0 .
+
+ontoksd:Interval_Task01_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Task01 interval — Novice"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task01_Novice ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task01_0_10 ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task01_0_10 ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 5.0 .
+
+ontoksd:PL_Task01_Advanced a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    dcterms:identifier "Task01-PL3"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int .
+
+ontoksd:PL_Task01_Competent a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    dcterms:identifier "Task01-PL2"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int .
+
+ontoksd:PL_Task01_Novice a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    dcterms:identifier "Task01-PL1"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int .
+
+ontoksd:C01 ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+ontoksd:C02 ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+ontoksd:C04 ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+ontoksd:C06 ontoksd:hasTask ontoksd:Task01_VendingMachine_Task .
+
+ontoksd:PS_Task01_0_10 a ontoksd:ProficiencyScheme ;
+    rdfs:label "Task01 proficiency scheme"@en ;
+    dcterms:identifier "Task01-PS"^^xsd:string ;
+    ontoksd:definesInterval ontoksd:Interval_Task01_Advanced,
+        ontoksd:Interval_Task01_Competent,
+        ontoksd:Interval_Task01_Novice ;
+    ontoksd:definesLevel ontoksd:PL_Task01_Advanced,
+        ontoksd:PL_Task01_Competent,
+        ontoksd:PL_Task01_Novice ;
+    ontoksd:usesScale ontoksd:Scale_Task01_0_10 ;
+    skos:scopeNote "Specification-level interpretive assumption recorded in the CSP report, not an observed result or a grading rule contained in the original task statement. The assessment references this planned scheme documentarily; usesProficiencyScheme is reserved for AssessmentOccurrence."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-CSP-Report.md> .
+
+ontoksd:Scale_Task01_0_10 a ontoksd:Scale ;
+    rdfs:label "Task01 proficiency scale 0–10"@en ;
+    dcterms:identifier "Task01-SCALE"^^xsd:string ;
+    ontoksd:hasInterval ontoksd:Interval_Task01_Advanced,
+        ontoksd:Interval_Task01_Competent,
+        ontoksd:Interval_Task01_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 ;
+    ontoksd:step 0.1 ;
+    rdfs:comment "Decimal scoring range from 0 to 10 with a selected granularity of 0.1. For Task04, the reported 5.1/9.1 starts are interpreted on this one-decimal domain. Numeric validation of step adherence is external to OWL."@en .
+
+ontoksd:AS_Task01_VendingMachineAssessment a ontoksd:Assessment ;
+    rdfs:label "Assessment — Task01 Vending Machine Solution"@en ;
+    dcterms:description "Assessment specification based on the Task01 PBL case, intended to evaluate learners through the submitted vending-machine automaton, simulation-supported validation, and technical report."@en ;
+    dcterms:identifier "Task01-AS"^^xsd:string ;
+    dcterms:references ontoksd:PS_Task01_0_10 ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task01_VendingMachine_PBLContext ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentStrategyType,
+        ontoksd:WrittenAssessmentModalityType ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task01_C01,
+        ontoksd:CA_Task01_C02,
+        ontoksd:CA_Task01_C03,
+        ontoksd:CA_Task01_C04,
+        ontoksd:CA_Task01_C05,
+        ontoksd:CA_Task01_C06 ;
+    ontoksd:hasInstructionalStatement "Assess the submitted model, technical report and documented PBL process against the task requirements. Individual participation is an assessment design concern; this specification does not assert an assessment occurrence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:usesResource ontoksd:ER_Task01_JFLAP,
+        ontoksd:ER_Task01_ProblemStatement,
+        ontoksd:ER_Task01_SBCReportTemplate ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:Task01_VendingMachine_Task a ontoksd:Task ;
+    rdfs:label "Task01 — The Vending Machine for Sodas and Snacks"@en ;
+    dcterms:identifier "Task01-TASK"^^xsd:string ;
+    ontoksd:hasTaskActivity ontoksd:TaskActivity_Task01_ModelAndValidateFSM ;
+    ontoksd:hasTaskComponent ontoksd:TaskComponent_Task01_FSMArtifact,
+        ontoksd:TaskComponent_Task01_RegexFragment,
+        ontoksd:TaskComponent_Task01_TechnicalReport,
+        ontoksd:TaskComponent_Task01_VendingMachineSystem ;
+    ontoksd:hasTaskConstraint ontoksd:TaskConstraint_Task01_OptionalBonusChange,
+        ontoksd:TaskConstraint_Task01_PaymentAndChange,
+        ontoksd:TaskConstraint_Task01_ProcessDocumentation,
+        ontoksd:TaskConstraint_Task01_SimulatorSupport,
+        ontoksd:TaskConstraint_Task01_ThreeProductsMinimum ;
+    ontoksd:hasTaskStatement "Design, validate, and document a vending-machine solution based on finite-state representations, including payment handling, change calculation, and product dispensing, with optional treatment of a bonus-change behavior and optional regular-expression documentation for part of the model."@en ;
+    ontoksd:isTaskOf ontoksd:C01,
+        ontoksd:C02,
+        ontoksd:C03,
+        ontoksd:C04,
+        ontoksd:C05,
+        ontoksd:C06 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+
+ontoksd:LT_Task01_VendingMachine a ontoksd:LearningTask ;
+    rdfs:label "Learning Task — The Vending Machine for Sodas and Snacks"@en ;
+    dcterms:description "Concrete PBL learning task in which learners analyze requirements, model vending-machine behavior as a finite-state machine, test the model with simulator support, and document the solution."@en ;
+    dcterms:identifier "Task01-LT"^^xsd:string ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task01_VendingMachine_PBLContext ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task01_C01_Learning,
+        ontoksd:CA_Task01_C02_Learning,
+        ontoksd:CA_Task01_C03_Learning,
+        ontoksd:CA_Task01_C04_Learning,
+        ontoksd:CA_Task01_C05_Learning,
+        ontoksd:CA_Task01_C06_Learning ;
+    ontoksd:hasInstructionalStatement """# **Problem 1 (Task): The vending machine for sodas and snacks**
+
+Authors: Luiz Gavaza,  Lais Salvador,  David Moises,    Roberta Oliveira
+
+Contributors: Edeyson Gomes,  Jéssica Santana
+
+Year: 2020/2021
+
+## Task: Machine for sodas and snacks
+
+### 1.  Problem
+
+The company **Refrigerantes e Salgados S.A.** decided to develop new solutions for their vending machines for soft drinks and snacks, based on well-structured hardware and software designs, accompanied by precise and user-friendly documentation.
+
+The idea emerged during a conversation between one of the company’s IT technicians and a group of students from the Department of Computer Science at UFBA. They realized that certain state machines, known as automata, can support the functionalities of vending machines while requiring minimal memory and being simple to configure.
+
+The company’s machines need to be configured to sell at least three (3) products, accept coins and banknotes of R$1.00 and R$2.00, and provide change. The company’s product portfolio includes soft drinks priced at R$3.00 and R$5.00, as well as snacks priced at R$5.00 and R$7.00.
+
+The students also mentioned a tool called **JFLAP** for testing/simulating solutions that use these automata. They explained that JFLAP provides a graphical interface that could contribute to the documentation of these new vending machine solutions. Another interesting point is that the IT technician, who has worked with regular expressions before, had heard that regular expressions are related to some types of automata. He would like to verify if this information is correct (investigate); if so, he would appreciate at least one example of how this could work for a portion of the automaton constructed for one of the vending machines. He also believes that regular expressions could help document these machines and future projects.
+
+**CHALLENGE**: The IT technician promised an additional bonus if the students could help promote the new machines by implementing a modification that allows the machines to randomly provide a bonus change of R$1.00 if the amount inserted by the customer matches the exact price of the selected product.
+
+
+### 2. Process
+
+The solution will be developed using the **Problem-Based Learning (PBL)** methodology, which leverages real-world problems to stimulate critical thinking, teamwork, and problem-solving skills. This approach also aids in the construction of knowledge on a specific topic. 
+
+The process must be documented using the **PBL Whiteboard**, composed of the following columns: **QUESTIONS**, **FACTS**, **IDEAS/HYPOTHESES**, and **ACTIONS**. During each team meeting, a new version of the whiteboard should be created, providing a step-by-step documentation of the solution development. The description of this process will be part of the group’s evaluation. 
+
+Additionally, a shared document will be provided to record the **Logbook**, as demonstrated during a synchronous session. This log will serve as a complementary record of the team’s progress and decisions throughout the project.
+
+
+### 3. Deliverable
+
+You must submit your deliverable on the **UFBA LMS (Moodle)** platform by **20:20 on October 13, 2020**, in the designated space. The submission should include:
+
+1. **Automaton File**:  
+   An automaton representing a vending machine for soft drinks and snacks that can be tested/simulated using JFLAP. The automaton must reflect the intended functionalities and operations of the vending machine.
+
+2. **Detailed Report**:  
+   A report following the **Sociedade Brasileira de Computação (SBC)** article format, describing in detail the design and functionality of the vending machine system. The report should include:
+   - A clear explanation of the operations performed by the system to process payments and deliver the selected product.
+   - At least two examples illustrating the vending machine’s functionality.
+   - If applicable, the report should also include a **regular expression** for a portion of the automaton, along with the method used to construct this expression.
+   - If it is not feasible to include the regular expression, the report must provide a detailed justification explaining the reason for this limitation.
+
+By fulfilling these requirements, the submission will provide the necessary tools for the company’s technology team to evaluate and simulate the vending machine system effectively.
+
+
+
+
+### 4 Knowledge/Concepts Involved 
+    1. Deterministic Finite Automata (DFA)
+
+    2. Non-Deterministic Finite Automata  (NFA ou NDFA)
+
+    3. Regular Expressions (RE)
+
+
+
+### 5. Learning objectives 
+
+#### 5.1 General objective 
+Develop finite automata and regular expressions to solve “real” problems, as is the case with the machine project of the he company **Refrigerantes e Salgados S.A.*** 
+
+#### 5.2 Specific objectives 
+
+
+   1. **Identify** the functionalities of the system designed by the user.
+
+   2. **Reconcile** the functionalities desired by the user with the functionalities of the automaton to be developed.
+
+   3. **Evaluate** the use of non-determinism in the developed automaton.
+
+   4. **Associate** machine options, coins, notes with symbols of an alphabet.
+
+   5. **Specify** technical reports.
+
+   6. **Use** simulation tools for AF
+
+
+### References 
+
+This problem is based on the lecture notes by Prof. Martin Musicante, Department of Informatics and Applied Mathematics (DIMAp), Federal University of Rio Grande do Norte (UFRN). 
+
+RAMOS, M. V. M.; JOSE NETO, J.; VEGA, I. S. **Linguagens Formais: Teoria, Modelagem e Implementação**. Editora Bookman, 2009.
+
+MENEZES, Paulo Blauth. **Linguagens formais e autômatos**. 6. ed. Bookman, 2011.
+"""@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task01_JFLAP,
+        ontoksd:ER_Task01_Logbook,
+        ontoksd:ER_Task01_PBLWhiteboard,
+        ontoksd:ER_Task01_ProblemStatement,
+        ontoksd:ER_Task01_SBCReportTemplate ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> .
+}

@@ -1,415 +1,695 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
+is2020c:KS_ISDI_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Emerging digital technology areas × Remembering"@en ;
+    dcterms:description "Source knowledge element: Emerging digital technology areas; source skill-level cell: 1 – Remember."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EmergingDigitalTechnologyAreas ;
+    ontoksd:hasSkillLevel bloom:Remembering ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Emerging digital technology areas × Remembering"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_1 .
 
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+is2020c:KS_ISDI_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Methods to learn emerging technology areas × Applying"@en ;
+    dcterms:description "Source knowledge element: Methods to learn about emerging technology areas; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MethodsToLearnEmergingTechnologyAreas ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Methods to learn emerging technology areas × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_1 .
 
-  <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Digital Innovation competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.5.3 Competency Area – Digital Innovation."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Methods to articulate and reflect offerings × Applying"@en ;
+    dcterms:description "Source knowledge element: Methods to articulate and critically reflect offerings of a particular new digital technology; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MethodsToArticulateAndReflectOfferings ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Methods to articulate and reflect offerings × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_1 .
 
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+is2020c:KS_ISDI_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Social applications of technology × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Social applications of technology; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SocialApplicationsOfTechnology ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Social applications of technology × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_2 .
 
-  is2020k:IS2020DigitalInnovationKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Digital Innovation Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Digital Innovation Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Digital Innovation competency area."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mobile applications of technology × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Mobile applications of technology; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MobileApplicationsOfTechnology ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mobile applications of technology × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_2 .
 
-  is2020k:EmergingDigitalTechnologyAreas
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Emerging digital technology areas"@en ;
-      skos:prefLabel "Emerging digital technology areas"@en ;
-      skos:definition "Knowledge of emerging digital technology areas."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Business applications of technology × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Business Applications of Technology; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BusinessApplicationsOfTechnology ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Business applications of technology × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_2 .
 
-  is2020k:MethodsToLearnEmergingTechnologyAreas
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Methods to learn about emerging technology areas"@en ;
-      skos:prefLabel "Methods to learn about emerging technology areas"@en ;
-      skos:definition "Knowledge of methods used to learn about emerging technology areas."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Conditions for digital innovation × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Conditions for digital innovation; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConditionsForDigitalInnovation ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Conditions for digital innovation × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_3 .
 
-  is2020k:MethodsToArticulateAndReflectOfferings
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Methods to articulate and critically reflect offerings of a particular new digital technology"@en ;
-      skos:prefLabel "Methods to articulate and critically reflect offerings of a particular new digital technology"@en ;
-      skos:definition "Knowledge of methods to articulate and critically reflect on the offerings of a particular new digital technology."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Domains of digital innovation × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Domains of digital innovation; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DomainsOfDigitalInnovation ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Domains of digital innovation × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_3 .
 
-  is2020k:SocialApplicationsOfTechnology
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Social applications of technology"@en ;
-      skos:prefLabel "Social applications of technology"@en ;
-      skos:definition "Knowledge of social applications of technology."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Applications of digital innovations × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Applications of digital innovations; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ApplicationsOfDigitalInnovations ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Applications of digital innovations × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_3 .
 
-  is2020k:MobileApplicationsOfTechnology
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mobile applications of technology"@en ;
-      skos:prefLabel "Mobile applications of technology"@en ;
-      skos:definition "Knowledge of mobile applications of technology."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Digital business models × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Digital business models; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DigitalBusinessModels ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Digital business models × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_4 .
 
-  is2020k:BusinessApplicationsOfTechnology
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Business Applications of Technology"@en ;
-      skos:prefLabel "Business Applications of Technology"@en ;
-      skos:definition "Knowledge of business applications of technology."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Digital business innovation elements × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Digital business innovation elements; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DigitalBusinessInnovationElements ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Digital business innovation elements × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_4 .
 
-  is2020k:ConditionsForDigitalInnovation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Conditions for digital innovation"@en ;
-      skos:prefLabel "Conditions for digital innovation"@en ;
-      skos:definition "Knowledge of conditions necessary for digital innovation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Criteria for new digital business models × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Criteria necessary for new digital business models; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CriteriaForNewDigitalBusinessModels ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Criteria for new digital business models × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_4 .
 
-  is2020k:DomainsOfDigitalInnovation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Domains of digital innovation"@en ;
-      skos:prefLabel "Domains of digital innovation"@en ;
-      skos:definition "Knowledge of domains of digital innovation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Validation criteria for new digital business model × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Validation criteria for a new digital business model; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ValidationCriteriaForNewDigitalBusinessModel ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Validation criteria for new digital business model × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_4 .
 
-  is2020k:ApplicationsOfDigitalInnovations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Applications of digital innovations"@en ;
-      skos:prefLabel "Applications of digital innovations"@en ;
-      skos:definition "Knowledge of applications of digital innovations."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Implementation criteria × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Implementation criteria (Scrum or SDLC); source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ImplementationCriteriaScrumOrSDLC ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Implementation criteria × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_5 .
 
-  is2020k:DigitalBusinessModels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Digital business models"@en ;
-      skos:prefLabel "Digital business models"@en ;
-      skos:definition "Knowledge of digital business models."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Infrastructure elements × Creating"@en ;
+    dcterms:description "Source knowledge element: Infrastructure elements for implementation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InfrastructureElementsForImplementation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Infrastructure elements × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_5 .
 
-  is2020k:DigitalBusinessInnovationElements
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Digital business innovation elements"@en ;
-      skos:prefLabel "Digital business innovation elements"@en ;
-      skos:definition "Knowledge of digital business innovation elements."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Criteria for continuing or stopping implementation × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Key criteria for continuing or stopping implementation; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CriteriaForContinuingOrStoppingImplementation ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Criteria for continuing or stopping implementation × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_5 .
 
-  is2020k:CriteriaForNewDigitalBusinessModels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Criteria necessary for new digital business models"@en ;
-      skos:prefLabel "Criteria necessary for new digital business models"@en ;
-      skos:definition "Knowledge of criteria necessary for new digital business models."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Ideation for new business model × Creating"@en ;
+    dcterms:description "Source knowledge element: Ideation for a new business model; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IdeationForNewBusinessModel ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Ideation for new business model × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_6 .
 
-  is2020k:ValidationCriteriaForNewDigitalBusinessModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Validation criteria for a new digital business model"@en ;
-      skos:prefLabel "Validation criteria for a new digital business model"@en ;
-      skos:definition "Knowledge of validation criteria for a new digital business model."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Resource identification × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Resource identification; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ResourceIdentification ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Resource identification × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_6 .
 
-  is2020k:ImplementationCriteriaScrumOrSDLC
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Implementation criteria (Scrum or SDLC)"@en ;
-      skos:prefLabel "Implementation criteria (Scrum or SDLC)"@en ;
-      skos:definition "Knowledge of implementation criteria such as Scrum or SDLC."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Project planning × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Project planning; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProjectPlanning ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Project planning × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_6 .
 
-  is2020k:InfrastructureElementsForImplementation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Infrastructure elements for implementation"@en ;
-      skos:prefLabel "Infrastructure elements for implementation"@en ;
-      skos:definition "Knowledge of infrastructure elements needed for implementation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_6_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Collaboration × Creating"@en ;
+    dcterms:description "Source knowledge element: Collaboration; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Collaboration ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Collaboration × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_6 .
 
-  is2020k:CriteriaForContinuingOrStoppingImplementation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Key criteria for continuing or stopping implementation"@en ;
-      skos:prefLabel "Key criteria for continuing or stopping implementation"@en ;
-      skos:definition "Knowledge of key criteria for continuing or stopping implementation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_6_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Negotiation × Creating"@en ;
+    dcterms:description "Source knowledge element: Negotiation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Negotiation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Negotiation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_6 .
 
-  is2020k:IdeationForNewBusinessModel
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Ideation for a new business model"@en ;
-      skos:prefLabel "Ideation for a new business model"@en ;
-      skos:definition "Knowledge of ideation for a new business model."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Project implementation × Creating"@en ;
+    dcterms:description "Source knowledge element: Project implementation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProjectImplementation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Project implementation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_7 .
 
-  is2020k:ResourceIdentification
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Resource identification"@en ;
-      skos:prefLabel "Resource identification"@en ;
-      skos:definition "Knowledge of resource identification for digital innovation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluation criteria for successful application × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Evaluation criteria for a successful application; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EvaluationCriteriaForSuccessfulApplication ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Evaluation criteria for successful application × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_7 .
 
-  is2020k:ProjectPlanning
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Project planning"@en ;
-      skos:prefLabel "Project planning"@en ;
-      skos:definition "Knowledge of project planning for digital innovation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDI_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Pitch presentation × Creating"@en ;
+    dcterms:description "Source knowledge element: Pitch presentation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PitchPresentation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Pitch presentation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDI_7 .
 
-  is2020k:Collaboration
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Collaboration"@en ;
-      skos:prefLabel "Collaboration"@en ;
-      skos:definition "Knowledge of collaboration in bringing a digital business model to fruition."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:ApplicationsOfDigitalInnovations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Applications of digital innovations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applications of digital innovations."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Applications of digital innovations"@en .
 
-  is2020k:Negotiation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Negotiation"@en ;
-      skos:prefLabel "Negotiation"@en ;
-      skos:definition "Knowledge of negotiation in bringing a digital business model to fruition."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:BusinessApplicationsOfTechnology a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Business Applications of Technology"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of business applications of technology."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Business Applications of Technology"@en .
 
-  is2020k:ProjectImplementation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Project implementation"@en ;
-      skos:prefLabel "Project implementation"@en ;
-      skos:definition "Knowledge of project implementation for digital innovation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:Collaboration a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Collaboration"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of collaboration in bringing a digital business model to fruition."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Collaboration"@en .
 
-  is2020k:EvaluationCriteriaForSuccessfulApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Evaluation criteria for a successful application"@en ;
-      skos:prefLabel "Evaluation criteria for a successful application"@en ;
-      skos:definition "Knowledge of evaluation criteria for a successful innovation application."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:ConditionsForDigitalInnovation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Conditions for digital innovation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of conditions necessary for digital innovation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Conditions for digital innovation"@en .
 
-  is2020k:PitchPresentation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Pitch presentation"@en ;
-      skos:prefLabel "Pitch presentation"@en ;
-      skos:definition "Knowledge of preparing and delivering a pitch presentation."@en ;
-      skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:CriteriaForContinuingOrStoppingImplementation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Key criteria for continuing or stopping implementation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of key criteria for continuing or stopping implementation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Key criteria for continuing or stopping implementation"@en .
 
-  is2020c:Competence_ISDI_1
-      a ontoksd:Competence ;
-      rdfs:label "Articulate and critically reflect on the unique features that an application of emerging technology may offer"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 1"@en ;
-      skos:definition "Articulate and critically reflect on the unique features that an application of emerging technology may offer."@en ;
-      dcterms:identifier "ISDI-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:EmergingDigitalTechnologyAreas ,
-          is2020k:MethodsToLearnEmergingTechnologyAreas ,
-          is2020k:MethodsToArticulateAndReflectOfferings ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_1_01 ,
-          is2020c:KS_ISDI_1_02 ,
-          is2020c:KS_ISDI_1_03 .
+is2020k:CriteriaForNewDigitalBusinessModels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Criteria necessary for new digital business models"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of criteria necessary for new digital business models."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Criteria necessary for new digital business models"@en .
 
-  is2020c:Competence_ISDI_2
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate knowledge of the role of digital business technologies in social and mobile domains"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 2"@en ;
-      skos:definition "Demonstrate knowledge of the role of digital business technologies in social and mobile domains."@en ;
-      dcterms:identifier "ISDI-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:SocialApplicationsOfTechnology ,
-          is2020k:MobileApplicationsOfTechnology ,
-          is2020k:BusinessApplicationsOfTechnology ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_2_01 ,
-          is2020c:KS_ISDI_2_02 ,
-          is2020c:KS_ISDI_2_03 .
+is2020k:DigitalBusinessInnovationElements a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Digital business innovation elements"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of digital business innovation elements."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Digital business innovation elements"@en .
 
-  is2020c:Competence_ISDI_3
-      a ontoksd:Competence ;
-      rdfs:label "Identify and critique characteristics necessary for digital innovation"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 3"@en ;
-      skos:definition "Identify and critique characteristics necessary for digital innovation."@en ;
-      dcterms:identifier "ISDI-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ConditionsForDigitalInnovation ,
-          is2020k:DomainsOfDigitalInnovation ,
-          is2020k:ApplicationsOfDigitalInnovations ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_3_01 ,
-          is2020c:KS_ISDI_3_02 ,
-          is2020c:KS_ISDI_3_03 .
+is2020k:DigitalBusinessModels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Digital business models"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of digital business models."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Digital business models"@en .
 
-  is2020c:Competence_ISDI_4
-      a ontoksd:Competence ;
-      rdfs:label "Identify and validate an opportunity to develop a new digital business model"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 4"@en ;
-      skos:definition "Identify and validate an opportunity to develop a new digital business model."@en ;
-      dcterms:identifier "ISDI-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:DigitalBusinessModels ,
-          is2020k:DigitalBusinessInnovationElements ,
-          is2020k:CriteriaForNewDigitalBusinessModels ,
-          is2020k:ValidationCriteriaForNewDigitalBusinessModel ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_4_01 ,
-          is2020c:KS_ISDI_4_02 ,
-          is2020c:KS_ISDI_4_03 ,
-          is2020c:KS_ISDI_4_04 .
+is2020k:DomainsOfDigitalInnovation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Domains of digital innovation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of domains of digital innovation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Domains of digital innovation"@en .
 
-  is2020c:Competence_ISDI_5
-      a ontoksd:Competence ;
-      rdfs:label "Identify and evaluate key issues related to implementation and infrastructure issues"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 5"@en ;
-      skos:definition "Identify and evaluate key issues related to implementation and infrastructure issues."@en ;
-      dcterms:identifier "ISDI-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ImplementationCriteriaScrumOrSDLC ,
-          is2020k:InfrastructureElementsForImplementation ,
-          is2020k:CriteriaForContinuingOrStoppingImplementation ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_5_01 ,
-          is2020c:KS_ISDI_5_02 ,
-          is2020c:KS_ISDI_5_03 .
+is2020k:EmergingDigitalTechnologyAreas a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Emerging digital technology areas"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of emerging digital technology areas."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Emerging digital technology areas"@en .
 
-  is2020c:Competence_ISDI_6
-      a ontoksd:Competence ;
-      rdfs:label "Identify and assemble the required resources, processes, and partners to bring a digital business model to fruition"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 6"@en ;
-      skos:definition "Identify and assemble the required resources, processes, and partners to bring a digital business model to fruition."@en ;
-      dcterms:identifier "ISDI-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:IdeationForNewBusinessModel ,
-          is2020k:ResourceIdentification ,
-          is2020k:ProjectPlanning ,
-          is2020k:Collaboration ,
-          is2020k:Negotiation ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_6_01 ,
-          is2020c:KS_ISDI_6_02 ,
-          is2020c:KS_ISDI_6_03 ,
-          is2020c:KS_ISDI_6_04 ,
-          is2020c:KS_ISDI_6_05 .
+is2020k:EvaluationCriteriaForSuccessfulApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Evaluation criteria for a successful application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of evaluation criteria for a successful innovation application."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Evaluation criteria for a successful application"@en .
 
-  is2020c:Competence_ISDI_7
-      a ontoksd:Competence ;
-      rdfs:label "Practically demonstrate the investigation and application of a new innovation"@en ;
-      skos:prefLabel "IS Digital Innovation Competency 7"@en ;
-      skos:definition "Practically demonstrate the investigation and application of a new innovation."@en ;
-      dcterms:identifier "ISDI-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ProjectImplementation ,
-          is2020k:EvaluationCriteriaForSuccessfulApplication ,
-          is2020k:PitchPresentation ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDI_7_01 ,
-          is2020c:KS_ISDI_7_02 ,
-          is2020c:KS_ISDI_7_03 .
+is2020k:IdeationForNewBusinessModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Ideation for a new business model"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of ideation for a new business model."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Ideation for a new business model"@en .
 
-  is2020c:KS_ISDI_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Emerging digital technology areas × Remembering"@en ; skos:prefLabel "Emerging digital technology areas × Remembering"@en ; ontoksd:hasKnowledgeComponent is2020k:EmergingDigitalTechnologyAreas ; ontoksd:hasRequiredSkillLevel bloom:Remembering ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_1 .
-  is2020c:KS_ISDI_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Methods to learn emerging technology areas × Applying"@en ; skos:prefLabel "Methods to learn emerging technology areas × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MethodsToLearnEmergingTechnologyAreas ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_1 .
-  is2020c:KS_ISDI_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Methods to articulate and reflect offerings × Applying"@en ; skos:prefLabel "Methods to articulate and reflect offerings × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MethodsToArticulateAndReflectOfferings ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_1 .
+is2020k:ImplementationCriteriaScrumOrSDLC a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Implementation criteria (Scrum or SDLC)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of implementation criteria such as Scrum or SDLC."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Implementation criteria (Scrum or SDLC)"@en .
 
-  is2020c:KS_ISDI_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Social applications of technology × Evaluating"@en ; skos:prefLabel "Social applications of technology × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:SocialApplicationsOfTechnology ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_2 .
-  is2020c:KS_ISDI_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Mobile applications of technology × Evaluating"@en ; skos:prefLabel "Mobile applications of technology × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:MobileApplicationsOfTechnology ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_2 .
-  is2020c:KS_ISDI_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Business applications of technology × Evaluating"@en ; skos:prefLabel "Business applications of technology × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:BusinessApplicationsOfTechnology ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_2 .
+is2020k:InfrastructureElementsForImplementation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Infrastructure elements for implementation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of infrastructure elements needed for implementation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Infrastructure elements for implementation"@en .
 
-  is2020c:KS_ISDI_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Conditions for digital innovation × Evaluating"@en ; skos:prefLabel "Conditions for digital innovation × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ConditionsForDigitalInnovation ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_3 .
-  is2020c:KS_ISDI_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Domains of digital innovation × Evaluating"@en ; skos:prefLabel "Domains of digital innovation × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:DomainsOfDigitalInnovation ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_3 .
-  is2020c:KS_ISDI_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Applications of digital innovations × Evaluating"@en ; skos:prefLabel "Applications of digital innovations × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ApplicationsOfDigitalInnovations ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_3 .
+is2020k:MethodsToArticulateAndReflectOfferings a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Methods to articulate and critically reflect offerings of a particular new digital technology"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods to articulate and critically reflect on the offerings of a particular new digital technology."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Methods to articulate and critically reflect offerings of a particular new digital technology"@en .
 
-  is2020c:KS_ISDI_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Digital business models × Evaluating"@en ; skos:prefLabel "Digital business models × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:DigitalBusinessModels ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 .
-  is2020c:KS_ISDI_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Digital business innovation elements × Evaluating"@en ; skos:prefLabel "Digital business innovation elements × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:DigitalBusinessInnovationElements ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 .
-  is2020c:KS_ISDI_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Criteria for new digital business models × Evaluating"@en ; skos:prefLabel "Criteria for new digital business models × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:CriteriaForNewDigitalBusinessModels ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 .
-  is2020c:KS_ISDI_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Validation criteria for new digital business model × Evaluating"@en ; skos:prefLabel "Validation criteria for new digital business model × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ValidationCriteriaForNewDigitalBusinessModel ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_4 .
+is2020k:MethodsToLearnEmergingTechnologyAreas a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Methods to learn about emerging technology areas"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods used to learn about emerging technology areas."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Methods to learn about emerging technology areas"@en .
 
-  is2020c:KS_ISDI_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Implementation criteria × Evaluating"@en ; skos:prefLabel "Implementation criteria × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ImplementationCriteriaScrumOrSDLC ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_5 .
-  is2020c:KS_ISDI_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Infrastructure elements × Creating"@en ; skos:prefLabel "Infrastructure elements × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:InfrastructureElementsForImplementation ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_5 .
-  is2020c:KS_ISDI_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Criteria for continuing or stopping implementation × Evaluating"@en ; skos:prefLabel "Criteria for continuing or stopping implementation × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:CriteriaForContinuingOrStoppingImplementation ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_5 .
+is2020k:MobileApplicationsOfTechnology a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mobile applications of technology"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of mobile applications of technology."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Mobile applications of technology"@en .
 
-  is2020c:KS_ISDI_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Ideation for new business model × Creating"@en ; skos:prefLabel "Ideation for new business model × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:IdeationForNewBusinessModel ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 .
-  is2020c:KS_ISDI_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Resource identification × Evaluating"@en ; skos:prefLabel "Resource identification × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ResourceIdentification ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 .
-  is2020c:KS_ISDI_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Project planning × Evaluating"@en ; skos:prefLabel "Project planning × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectPlanning ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 .
-  is2020c:KS_ISDI_6_04 a ontoksd:KnowledgeSkill ; rdfs:label "Collaboration × Creating"@en ; skos:prefLabel "Collaboration × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:Collaboration ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 .
-  is2020c:KS_ISDI_6_05 a ontoksd:KnowledgeSkill ; rdfs:label "Negotiation × Creating"@en ; skos:prefLabel "Negotiation × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:Negotiation ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_6 .
+is2020k:Negotiation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Negotiation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of negotiation in bringing a digital business model to fruition."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Negotiation"@en .
 
-  is2020c:KS_ISDI_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Project implementation × Creating"@en ; skos:prefLabel "Project implementation × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ProjectImplementation ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_7 .
-  is2020c:KS_ISDI_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Evaluation criteria for successful application × Evaluating"@en ; skos:prefLabel "Evaluation criteria for successful application × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:EvaluationCriteriaForSuccessfulApplication ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_7 .
-  is2020c:KS_ISDI_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Pitch presentation × Creating"@en ; skos:prefLabel "Pitch presentation × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:PitchPresentation ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDI_7 .
+is2020k:PitchPresentation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Pitch presentation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of preparing and delivering a pitch presentation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Pitch presentation"@en .
 
+is2020k:ProjectImplementation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Project implementation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of project implementation for digital innovation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Project implementation"@en .
+
+is2020k:ProjectPlanning a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Project planning"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of project planning for digital innovation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Project planning"@en .
+
+is2020k:ResourceIdentification a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Resource identification"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of resource identification for digital innovation."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Resource identification"@en .
+
+is2020k:SocialApplicationsOfTechnology a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Social applications of technology"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of social applications of technology."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Social applications of technology"@en .
+
+is2020k:ValidationCriteriaForNewDigitalBusinessModel a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Validation criteria for a new digital business model"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of validation criteria for a new digital business model."@en ;
+    skos:inScheme is2020k:IS2020DigitalInnovationKnowledgeScheme ;
+    skos:prefLabel "Validation criteria for a new digital business model"@en .
+
+is2020c:Competence_ISDI_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Articulate and critically reflect on the unique features that an application of emerging technology may offer"@en ;
+    dcterms:identifier "ISDI-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:EmergingDigitalTechnologyAreas,
+        is2020k:MethodsToArticulateAndReflectOfferings,
+        is2020k:MethodsToLearnEmergingTechnologyAreas ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_1_01,
+        is2020c:KS_ISDI_1_02,
+        is2020c:KS_ISDI_1_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Articulate and critically reflect on the unique features that an application of emerging technology may offer"@en ;
+    skos:prefLabel "IS Digital Innovation Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_1 .
+
+is2020c:Competence_ISDI_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate knowledge of the role of digital business technologies in social and mobile domains"@en ;
+    dcterms:identifier "ISDI-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BusinessApplicationsOfTechnology,
+        is2020k:MobileApplicationsOfTechnology,
+        is2020k:SocialApplicationsOfTechnology ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_2_01,
+        is2020c:KS_ISDI_2_02,
+        is2020c:KS_ISDI_2_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate knowledge of the role of digital business technologies in social and mobile domains"@en ;
+    skos:prefLabel "IS Digital Innovation Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_2 .
+
+is2020c:Competence_ISDI_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and critique characteristics necessary for digital innovation"@en ;
+    dcterms:identifier "ISDI-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ApplicationsOfDigitalInnovations,
+        is2020k:ConditionsForDigitalInnovation,
+        is2020k:DomainsOfDigitalInnovation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_3_01,
+        is2020c:KS_ISDI_3_02,
+        is2020c:KS_ISDI_3_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Identify and critique characteristics necessary for digital innovation"@en ;
+    skos:prefLabel "IS Digital Innovation Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_3 .
+
+is2020c:Competence_ISDI_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and evaluate key issues related to implementation and infrastructure issues"@en ;
+    dcterms:identifier "ISDI-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:CriteriaForContinuingOrStoppingImplementation,
+        is2020k:ImplementationCriteriaScrumOrSDLC,
+        is2020k:InfrastructureElementsForImplementation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_5_01,
+        is2020c:KS_ISDI_5_02,
+        is2020c:KS_ISDI_5_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Identify and evaluate key issues related to implementation and infrastructure issues."@en ;
+    skos:prefLabel "IS Digital Innovation Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_5 .
+
+is2020c:Competence_ISDI_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Practically demonstrate the investigation and application of a new innovation"@en ;
+    dcterms:identifier "ISDI-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:EvaluationCriteriaForSuccessfulApplication,
+        is2020k:PitchPresentation,
+        is2020k:ProjectImplementation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_7_01,
+        is2020c:KS_ISDI_7_02,
+        is2020c:KS_ISDI_7_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Practically demonstrate the investigation and application of a new innovation."@en ;
+    skos:prefLabel "IS Digital Innovation Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_7 .
+
+is2020c:Competence_ISDI_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and validate an opportunity to develop a new digital business model"@en ;
+    dcterms:identifier "ISDI-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:CriteriaForNewDigitalBusinessModels,
+        is2020k:DigitalBusinessInnovationElements,
+        is2020k:DigitalBusinessModels,
+        is2020k:ValidationCriteriaForNewDigitalBusinessModel ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_4_01,
+        is2020c:KS_ISDI_4_02,
+        is2020c:KS_ISDI_4_03,
+        is2020c:KS_ISDI_4_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Identify and validate an opportunity to develop a new digital business model"@en ;
+    skos:prefLabel "IS Digital Innovation Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_4 .
+
+is2020c:Source_ISDI_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 164 (PDF page 165)."@en ;
+    dcterms:description "Competency: Articulate and critically reflect on the unique features that an application of emerging technology may offer Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDI-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISDI_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 164 (PDF page 165)."@en ;
+    dcterms:description "Competency: Demonstrate knowledge of the role of digital business technologies in social and mobile domains Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISDI-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISDI_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 165 (PDF page 166)."@en ;
+    dcterms:description "Competency: Identify and critique characteristics necessary for digital innovation Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDI-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISDI_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 165 (PDF page 166)."@en ;
+    dcterms:description "Competency: Identify and evaluate key issues related to implementation and infrastructure issues. Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDI-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISDI_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 166 (PDF page 167)."@en ;
+    dcterms:description "Competency: Practically demonstrate the investigation and application of a new innovation. Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDI-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISDI_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and assemble the required resources, processes, and partners to bring a digital business model to fruition"@en ;
+    dcterms:identifier "ISDI-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:Collaboration,
+        is2020k:IdeationForNewBusinessModel,
+        is2020k:Negotiation,
+        is2020k:ProjectPlanning,
+        is2020k:ResourceIdentification ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDI_6_01,
+        is2020c:KS_ISDI_6_02,
+        is2020c:KS_ISDI_6_03,
+        is2020c:KS_ISDI_6_04,
+        is2020c:KS_ISDI_6_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Identify and assemble the required resources, processes, and partners to bring a digital business model to fruition."@en ;
+    skos:prefLabel "IS Digital Innovation Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDI_6 .
+
+is2020c:Source_ISDI_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 165 (PDF page 166)."@en ;
+    dcterms:description "Competency: Identify and validate an opportunity to develop a new digital business model Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDI-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISDI_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 166 (PDF page 167)."@en ;
+    dcterms:description "Competency: Identify and assemble the required resources, processes, and partners to bring a digital business model to fruition. Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDI-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-digital-innovation-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Digital Innovation competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.5.3 Competency Area – Digital Innovation."@en .
+
+is2020k:IS2020DigitalInnovationKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Digital Innovation Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Digital Innovation competency area."@en ;
+    skos:prefLabel "IS2020 Digital Innovation Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

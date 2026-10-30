@@ -1,90 +1,127 @@
-PREFIX ontoksd:     <http://purl.org/ontoksd#>
-PREFIX cc2020:      <http://purl.org/cc2020/knowledge#>
+# CC2020 example C: specification data, not an assessment or learner record.
+# Load OntoKSD, the Bloom skill-level module, and the CC2020 knowledge/disposition populations first.
+# KnowledgeSkill uses hasKnowledgeComponent + hasSkillLevel; no Relator instances are created.
+# Atomic is a project granularity choice; the reference Task is explicit to satisfy the current OWL axioms.
+# Only exact conflicting assertions for these example records are removed; unrelated data are preserved.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020: <http://purl.org/cc2020/knowledge#>
 PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
-PREFIX bloom:       <http://purl.org/edu/bloom#>
-PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:         <http://www.w3.org/2002/07/owl#>
-PREFIX skos:        <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+
 
 INSERT DATA {
-
-  #################################################################
-  # Source marker
-  #################################################################
-
-  <http://purl.org/ontoksd/source/cc2020-competence-catalog>
-      a owl:NamedIndividual ;
-      rdfs:label "CC2020 competence catalog"@en ;
-      rdfs:comment "Source for competencies instantiated from the CC2020 report."@en .
-
-  #################################################################
-  # Competence
-  #################################################################
-
-  ontoksd:CC2020_Competence_C
-      a ontoksd:Competence ;
-      rdfs:label "Identify and document system requirements with stakeholders"@en ;
-      skos:prefLabel "C"@en ;
-      skos:altLabel "CC2020 Competence C"@en ;
-      skos:definition """Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."""@en ;
-      rdfs:comment """Competence derived from the CC2020 report."""@en ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
-      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
-
-      ontoksd:hasDisposition ontoksd:purposeDriven ;
-      ontoksd:hasDisposition ontoksd:responsible ;
-      ontoksd:hasDisposition ontoksd:collaborative ;
-
-      ontoksd:hasKnowledgeSkill ontoksd:KS_C_01 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_C_02 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_C_03 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_C_04 ;
-
-      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
-	  dcterms:bibliographicCitation "Computing Curricula 2020 (CC2020), pp. 51–52."@en ;
-      dcterms:references <http://purl.org/ontoksd/source/cc2020-competence-catalog> .
-
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
-
-  ontoksd:KS_C_01
-    a ontoksd:KnowledgeSkill ;
+ontoksd:KS_C_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
     rdfs:label "Requirements Analysis and Specifications × Evaluating"@en ;
-    skos:prefLabel "Requirements Analysis and Specifications × Evaluating"@en ;
-    rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Requirements Analysis and Specifications to the required Bloom skill level Evaluating."@en ;
+    dcterms:description "Source knowledge label: \"Requirements Analysis\". Required source skill level: Evaluating."@en ;
+    dcterms:identifier "KS_C_01" ;
+    dcterms:references ontoksd:CC2020_Source_Example_C ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
     ontoksd:hasKnowledgeComponent cc2020:RequirementsAnalysisAndSpecifications ;
-    ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence C, pairing the referenced Knowledge with the required Evaluating category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Requirements Analysis and Specifications × Evaluating"@en ;
+    skos:scopeNote "The source label \"Requirements Analysis\" is mapped to the project Knowledge entry \"Requirements Analysis and Specifications\" for curricular traceability. This documented label alignment is not an owl:sameAs assertion or a general claim of complete equivalence."@en .
 
-  ontoksd:KS_C_02
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Oral Communication × Applying"@en ;
-      skos:prefLabel "Oral Communication × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Oral Communication to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:OralCommunication ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+ontoksd:KS_C_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Oral Communication and Presentation × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Oral Communication\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_C_02" ;
+    dcterms:references ontoksd:CC2020_Source_Example_C ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:OralCommunication ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence C, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Oral Communication and Presentation × Applying"@en ;
+    skos:scopeNote "The source label \"Oral Communication\" is mapped to the project Knowledge entry \"Oral Communication and Presentation\" for curricular traceability. This documented label alignment is not an owl:sameAs assertion or a general claim of complete equivalence."@en .
 
-  ontoksd:KS_C_03
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Written Communication × Applying"@en ;
-      skos:prefLabel "Written Communication × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Written Communication to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+ontoksd:KS_C_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Written Communication × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Written Communication\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_C_03" ;
+    dcterms:references ontoksd:CC2020_Source_Example_C ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:WrittenCommunication ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence C, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Written Communication × Applying"@en .
 
-  ontoksd:KS_C_04
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Collaboration and Teamwork × Applying"@en ;
-      skos:prefLabel "Collaboration and Teamwork × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence C linking the knowledge element Collaboration and Teamwork to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:Collaboration ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C .
+ontoksd:KS_C_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Collaboration and Teamwork × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Teamwork and Collaboration\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_C_04" ;
+    dcterms:references ontoksd:CC2020_Source_Example_C ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:Collaboration ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_C ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence C, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Collaboration and Teamwork × Applying"@en ;
+    skos:scopeNote "The source label \"Teamwork and Collaboration\" is mapped to the project Knowledge entry \"Collaboration and Teamwork\" for curricular traceability. This documented label alignment is not an owl:sameAs assertion or a general claim of complete equivalence."@en .
 
+ontoksd:Task_CC2020_Competence_C a ontoksd:Task,
+        owl:NamedIndividual ;
+    rdfs:label "Reference task for CC2020 competence C"@en ;
+    dcterms:references ontoksd:CC2020_Source_Example_C ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasTaskStatement "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en ;
+    ontoksd:isTaskOf ontoksd:CC2020_Competence_C ;
+    skos:scopeNote "The source competency statement is reused as a specification-level reference task. This record does not represent a LearningTask, an InstructionalUnit, or an execution event."@en .
+
+<http://purl.org/ontoksd/source/cc2020-competence-catalog> a owl:NamedIndividual ;
+    rdfs:label "CC2020 competence examples A-C"@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    rdfs:comment "Source marker for the three illustrative competence examples in section 4.2.5, not a claim of a complete competence catalog."@en .
+
+<http://purl.org/ontoksd/source/cc2020-competence-excerpt> a owl:NamedIndividual ;
+    dcterms:identifier "sha256:20a8e486ffb1b6600a4c5a5e3135fca5d5c6386c31f4011a2f73730e0d82ce0f" ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "CC2020 instances — supplied excerpt"@en .
+
+ontoksd:CC2020_Competence_C a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and document system requirements with stakeholders"@en ;
+    dcterms:bibliographicCitation "Computing Curricula 2020, section 4.2.5, Example C, printed p. 52 (PDF page 53)."@en ;
+    dcterms:description "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en ;
+    dcterms:identifier "CC2020-C" ;
+    dcterms:references ontoksd:CC2020_Source_Example_C,
+        <http://purl.org/ontoksd/source/cc2020-competence-catalog>,
+        <http://purl.org/ontoksd/source/cc2020-competence-excerpt> ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "Identify and document system requirements with stakeholders"@en ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:purposeDriven,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C_01,
+        ontoksd:KS_C_02,
+        ontoksd:KS_C_03,
+        ontoksd:KS_C_04 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task_CC2020_Competence_C ;
+    rdfs:comment "A competence specification instantiating example C in CC2020 section 4.2.5, using knowledge-level constituents and dispositions. It represents expected performance, not learner attainment."@en ;
+    skos:altLabel "CC2020 Competence C"@en ;
+    skos:definition "Identify and document system requirements by applying a known requirements elicitation technique in work sessions with stakeholders, using facilitative skills, as a contributing member of a requirements team."@en ;
+    skos:notation "C" ;
+    skos:prefLabel "Identify and document system requirements with stakeholders"@en ;
+    skos:scopeNote "Atomic is the selected OntoKSD granularity: this specification has no component-competence decomposition. Multiple knowledge-level constituents or action verbs do not by themselves make it a CompositeCompetence. This structural classification is a project modeling choice."@en .
+
+ontoksd:CC2020_Source_Example_C a owl:NamedIndividual ;
+    dcterms:bibliographicCitation "CC2020, section 4.2.5, printed p. 52, PDF page 53."@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "CC2020 Competency Title: C"@en .
 }

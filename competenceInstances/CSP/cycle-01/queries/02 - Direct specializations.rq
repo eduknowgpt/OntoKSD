@@ -1,0 +1,8 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?specialized ?base ?description
+WHERE {
+ ?specialized ontoksd:isSpecializationOf ?base ;
+  ontoksd:hasSpecializationDescription ?description .
+} ORDER BY ?specialized

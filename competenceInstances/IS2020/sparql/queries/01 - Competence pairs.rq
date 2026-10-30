@@ -1,0 +1,11 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?competence ?identifier ?pair ?knowledge ?level
+WHERE {
+ ?competence a ontoksd:Competence ;
+  ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+  dcterms:identifier ?identifier ; ontoksd:hasKnowledgeSkill ?pair .
+ ?pair ontoksd:hasKnowledgeComponent ?knowledge ; ontoksd:hasSkillLevel ?level .
+} ORDER BY ?identifier ?pair

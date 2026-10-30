@@ -1,0 +1,6 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+SELECT DISTINCT ?competence ?pair ?level ?verb
+WHERE {
+ ?competence ontoksd:hasKnowledgeSkill ?pair .
+ ?pair ontoksd:hasSkillLevel ?level ; ontoksd:hasBloomLevelJustificationVerb ?verb .
+} ORDER BY ?competence ?pair ?verb

@@ -1,0 +1,461 @@
+{
+  "new_competences": [
+    {
+      "id": "C13.01",
+      "iri": "http://purl.org/ontoksd#C13_01",
+      "title": "Interpret Formal Grammar-Based Rules",
+      "dispositions": [
+        "http://purl.org/ontoksd#cspAnalyticalRigor",
+        "http://purl.org/ontoksd#responsible",
+        "http://purl.org/ontoksd#reflective",
+        "http://purl.org/ontoksd#collaborative"
+      ],
+      "rows": [
+        {
+          "pair": "http://purl.org/ontoksd#KS_C13_01_ContextFreeGrammars_Understanding",
+          "knowledge": "http://purl.org/ontoksd#Knowledge_CSP_ContextFreeGrammars",
+          "knowledge_label": "Context-Free Grammars",
+          "level": "http://purl.org/edu/bloom#Understanding",
+          "verbs": [
+            "interpret",
+            "explain"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C13_01_PushdownAutomata_Understanding",
+          "knowledge": "http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_b",
+          "knowledge_label": "Pushdown Automata",
+          "level": "http://purl.org/edu/bloom#Analyzing",
+          "verbs": [
+            "relate",
+            "analyze"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C13_01_FormalReasoning_Analyzing",
+          "knowledge": "http://purl.org/ontoksd#Knowledge_C13_01_FormalReasoningInComputationTheory",
+          "knowledge_label": "Formal Reasoning in Computation Theory",
+          "level": "http://purl.org/edu/bloom#Analyzing",
+          "verbs": [
+            "analyze",
+            "examine"
+          ]
+        }
+      ],
+      "source": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md"
+    },
+    {
+      "id": "C15",
+      "iri": "http://purl.org/ontoksd#C15",
+      "title": "Understand the Halting Problem and its Implications",
+      "dispositions": [
+        "http://purl.org/ontoksd#collaborative",
+        "http://purl.org/ontoksd#responsible",
+        "http://purl.org/ontoksd#proactive",
+        "http://purl.org/ontoksd#creative"
+      ],
+      "rows": [
+        {
+          "pair": "http://purl.org/ontoksd#KS_C15_HaltingProblem_Understanding",
+          "knowledge": "http://purl.org/ontoksd#Knowledge_C15_HaltingProblem",
+          "knowledge_label": "Halting Problem",
+          "level": "http://purl.org/edu/bloom#Understanding",
+          "verbs": [
+            "describe",
+            "explain",
+            "justify"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C15_Computability_Understanding",
+          "knowledge": "http://purl.org/ontoksd#Knowledge_C15_Computability",
+          "knowledge_label": "Computability",
+          "level": "http://purl.org/edu/bloom#Understanding",
+          "verbs": [
+            "classify",
+            "recognize",
+            "explain"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C15_TuringMachines_Understanding",
+          "knowledge": "http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_d",
+          "knowledge_label": "Turing Machines",
+          "level": "http://purl.org/edu/bloom#Understanding",
+          "verbs": [
+            "explain",
+            "relate"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C15_AnalyticalThinking_Applying",
+          "knowledge": "http://purl.org/cc2020/foundational#AnalyticalThinking",
+          "knowledge_label": "Analytical and Critical Thinking",
+          "level": "http://purl.org/edu/bloom#Applying",
+          "verbs": [
+            "evaluate",
+            "structure",
+            "argue"
+          ]
+        }
+      ],
+      "source": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md"
+    },
+    {
+      "id": "C16",
+      "iri": "http://purl.org/ontoksd#C16",
+      "title": "Interpret Turing Machine Concepts to Analyze Computational System Capabilities",
+      "dispositions": [
+        "http://purl.org/ontoksd#collaborative",
+        "http://purl.org/ontoksd#responsible",
+        "http://purl.org/ontoksd#proactive",
+        "http://purl.org/ontoksd#creative"
+      ],
+      "rows": [
+        {
+          "pair": "http://purl.org/ontoksd#KS_C16_TuringMachines_Understanding",
+          "knowledge": "http://purl.org/cs2023/knowledge#Knowledge_AL_Models_1_d",
+          "knowledge_label": "Turing Machines",
+          "level": "http://purl.org/edu/bloom#Understanding",
+          "verbs": [
+            "explain",
+            "relate",
+            "interpret"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C16_Computability_Understanding",
+          "knowledge": "http://purl.org/ontoksd#Knowledge_C16_ComputabilityTheory",
+          "knowledge_label": "Computability Theory",
+          "level": "http://purl.org/edu/bloom#Understanding",
+          "verbs": [
+            "classify",
+            "distinguish",
+            "explain"
+          ]
+        },
+        {
+          "pair": "http://purl.org/ontoksd#KS_C16_AnalyticalThinking_Applying",
+          "knowledge": "http://purl.org/cc2020/foundational#AnalyticalThinking",
+          "knowledge_label": "Analytical and Critical Thinking",
+          "level": "http://purl.org/edu/bloom#Applying",
+          "verbs": [
+            "analyze",
+            "structure",
+            "justify"
+          ]
+        }
+      ],
+      "source": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md"
+    }
+  ],
+  "tasks": [
+    {
+      "task": 201,
+      "reference_task": "http://purl.org/ontoksd#Task201_Reference",
+      "learning_task": "http://purl.org/ontoksd#LT_Task201",
+      "assessment": "http://purl.org/ontoksd#AS_Task201",
+      "source_problem": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md",
+      "source_adjustments": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md",
+      "competences": [
+        "C06",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C11"
+      ]
+    },
+    {
+      "task": 202,
+      "reference_task": "http://purl.org/ontoksd#Task202_Reference",
+      "learning_task": "http://purl.org/ontoksd#LT_Task202",
+      "assessment": "http://purl.org/ontoksd#AS_Task202",
+      "source_problem": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md",
+      "source_adjustments": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md",
+      "competences": [
+        "C12",
+        "C03",
+        "C13.01",
+        "C05",
+        "C14"
+      ]
+    },
+    {
+      "task": 203,
+      "reference_task": "http://purl.org/ontoksd#Task203_Reference",
+      "learning_task": "http://purl.org/ontoksd#LT_Task203",
+      "assessment": "http://purl.org/ontoksd#AS_Task203",
+      "source_problem": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md",
+      "source_adjustments": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md",
+      "competences": [
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C05"
+      ]
+    },
+    {
+      "task": 204,
+      "reference_task": "http://purl.org/ontoksd#Task204_Reference",
+      "learning_task": "http://purl.org/ontoksd#LT_Task204",
+      "assessment": "http://purl.org/ontoksd#AS_Task204",
+      "source_problem": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md",
+      "source_adjustments": "https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md",
+      "competences": [
+        "C06",
+        "C02",
+        "C03",
+        "C14",
+        "C05",
+        "C15",
+        "C16"
+      ]
+    }
+  ],
+  "current_associations": [
+    {
+      "task": "task-201",
+      "competence": "C06",
+      "usage": "reused",
+      "mode": "constructive;analytical",
+      "role": "core",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply;Analyze"
+    },
+    {
+      "task": "task-201",
+      "competence": "C02",
+      "usage": "reused",
+      "mode": "justificatory;analytical",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Analyze"
+    },
+    {
+      "task": "task-201",
+      "competence": "C03",
+      "usage": "reused",
+      "mode": "artifact-oriented",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply"
+    },
+    {
+      "task": "task-201",
+      "competence": "C04",
+      "usage": "reused",
+      "mode": "analytical;conceptual",
+      "role": "supporting",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Understand;Analyze"
+    },
+    {
+      "task": "task-201",
+      "competence": "C05",
+      "usage": "reused",
+      "mode": "artifact-oriented;justificatory",
+      "role": "transversal",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply"
+    },
+    {
+      "task": "task-201",
+      "competence": "C11",
+      "usage": "reused",
+      "mode": "analytical",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Analyze"
+    },
+    {
+      "task": "task-202",
+      "competence": "C12",
+      "usage": "reused",
+      "mode": "constructive",
+      "role": "core",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply;Analyze"
+    },
+    {
+      "task": "task-202",
+      "competence": "C03",
+      "usage": "reused",
+      "mode": "artifact-oriented",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply"
+    },
+    {
+      "task": "task-202",
+      "competence": "C13.01",
+      "usage": "created",
+      "mode": "interpretative;analytical",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Understand;Analyze"
+    },
+    {
+      "task": "task-202",
+      "competence": "C05",
+      "usage": "reused",
+      "mode": "not_specified",
+      "role": "transversal",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply"
+    },
+    {
+      "task": "task-202",
+      "competence": "C14",
+      "usage": "reused",
+      "mode": "analytical;justificatory",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Analyze"
+    },
+    {
+      "task": "task-203",
+      "competence": "C07",
+      "usage": "reused",
+      "mode": "constructive",
+      "role": "core",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply;Analyze"
+    },
+    {
+      "task": "task-203",
+      "competence": "C08",
+      "usage": "reused",
+      "mode": "analytical;justificatory",
+      "role": "not_specified",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Analyze"
+    },
+    {
+      "task": "task-203",
+      "competence": "C09",
+      "usage": "reused",
+      "mode": "analytical|constructive",
+      "role": "extension",
+      "constraint": "optional",
+      "predominant_bloom_levels": "Apply;Analyze"
+    },
+    {
+      "task": "task-203",
+      "competence": "C10",
+      "usage": "reused",
+      "mode": "artifact-oriented",
+      "role": "transversal",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply"
+    },
+    {
+      "task": "task-203",
+      "competence": "C05",
+      "usage": "reused",
+      "mode": "artifact-oriented",
+      "role": "transversal",
+      "constraint": "not_specified",
+      "predominant_bloom_levels": "Apply"
+    },
+    {
+      "task": "task-204",
+      "competence": "C06",
+      "usage": "reused",
+      "mode": "constructive",
+      "role": "supporting",
+      "constraint": "mandatory",
+      "predominant_bloom_levels": ""
+    },
+    {
+      "task": "task-204",
+      "competence": "C02",
+      "usage": "reused",
+      "mode": "justificatory",
+      "role": "extension",
+      "constraint": "optional",
+      "predominant_bloom_levels": ""
+    },
+    {
+      "task": "task-204",
+      "competence": "C03",
+      "usage": "reused",
+      "mode": "artifact-oriented",
+      "role": "supporting",
+      "constraint": "conditional",
+      "predominant_bloom_levels": ""
+    },
+    {
+      "task": "task-204",
+      "competence": "C14",
+      "usage": "reused",
+      "mode": "analytical",
+      "role": "extension",
+      "constraint": "optional",
+      "predominant_bloom_levels": ""
+    },
+    {
+      "task": "task-204",
+      "competence": "C05",
+      "usage": "reused",
+      "mode": "artifact-oriented",
+      "role": "transversal",
+      "constraint": "mandatory",
+      "predominant_bloom_levels": ""
+    },
+    {
+      "task": "task-204",
+      "competence": "C15",
+      "usage": "created",
+      "mode": "analytical;justificatory",
+      "role": "core",
+      "constraint": "mandatory",
+      "predominant_bloom_levels": ""
+    },
+    {
+      "task": "task-204",
+      "competence": "C16",
+      "usage": "created",
+      "mode": "interpretative",
+      "role": "supporting|extension",
+      "constraint": "optional|conditional",
+      "predominant_bloom_levels": ""
+    }
+  ],
+  "qualifier_options": [
+    {
+      "task": 203,
+      "competence": "C09",
+      "field": "activation_mode",
+      "source_value": "analytical|constructive",
+      "values": [
+        "http://purl.org/ontoksd#amAnalytical",
+        "http://purl.org/ontoksd#amConstructive"
+      ],
+      "record": "http://purl.org/ontoksd#Options_Task203_C09_activation_mode"
+    },
+    {
+      "task": 204,
+      "competence": "C16",
+      "field": "activation_role",
+      "source_value": "supporting|extension",
+      "values": [
+        "http://purl.org/ontoksd#arSupporting",
+        "http://purl.org/ontoksd#arExtension"
+      ],
+      "record": "http://purl.org/ontoksd#Options_Task204_C16_activation_role"
+    },
+    {
+      "task": 204,
+      "competence": "C16",
+      "field": "activation_constraint",
+      "source_value": "optional|conditional",
+      "values": [
+        "http://purl.org/ontoksd#acOptional",
+        "http://purl.org/ontoksd#conditional"
+      ],
+      "record": "http://purl.org/ontoksd#Options_Task204_C16_activation_constraint"
+    }
+  ]
+}

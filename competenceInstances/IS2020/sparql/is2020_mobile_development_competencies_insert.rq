@@ -1,715 +1,1422 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Mobile Development competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.5 Competency Area – Mobile Development."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020MobileDevelopmentKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Mobile Development Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Mobile Development Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Mobile Development competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IoTChangingMobileDevelopment
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IoT is changing mobile development (i.e., Smart Home devices)"@en ;
-      skos:prefLabel "IoT is changing mobile development (i.e., Smart Home devices)"@en ;
-      skos:definition "Knowledge of how the Internet of Things is changing mobile development, including smart home device scenarios."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DesignOfMobileApplicationForIoTExperience
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design of mobile application for the IoT experience"@en ;
-      skos:prefLabel "Design of mobile application for the IoT experience"@en ;
-      skos:definition "Knowledge of designing mobile applications for IoT experiences."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IoTComponentsAndChallenges
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IoT components and challenges"@en ;
-      skos:prefLabel "IoT components and challenges"@en ;
-      skos:definition "Knowledge of IoT components and challenges relevant to mobile development."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AlgorithmsAndLogic
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Algorithms and the logic that drives them"@en ;
-      skos:prefLabel "Algorithms and the logic that drives them"@en ;
-      skos:definition "Knowledge of algorithms and the logic that drives them."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SolvingProblemUsingAlgorithm
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Solving a problem using an algorithm"@en ;
-      skos:prefLabel "Solving a problem using an algorithm"@en ;
-      skos:definition "Knowledge of solving a problem using an algorithm."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EfficiencyOfAlgorithm
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Efficiency of an algorithm"@en ;
-      skos:prefLabel "Efficiency of an algorithm"@en ;
-      skos:definition "Knowledge of algorithm efficiency."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DocumentationOfApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Documentation of an application"@en ;
-      skos:prefLabel "Documentation of an application"@en ;
-      skos:definition "Knowledge of documenting an application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AdvantagesAndDisadvantagesOfDocumentation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Advantages and disadvantages of documenting an application"@en ;
-      skos:prefLabel "Advantages and disadvantages of documenting an application"@en ;
-      skos:definition "Knowledge of the advantages and disadvantages of documenting an application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PurposeOfReadableSourceCode
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Purpose of readable source code"@en ;
-      skos:prefLabel "Purpose of readable source code"@en ;
-      skos:definition "Knowledge of the purpose of readable source code."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BestPracticesInWritingSourceCode
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Best practices in writing source code"@en ;
-      skos:prefLabel "Best practices in writing source code"@en ;
-      skos:definition "Knowledge of best practices in writing source code."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:StructuredProgram
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Structured program"@en ;
-      skos:prefLabel "Structured program"@en ;
-      skos:definition "Knowledge of structured programming."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TeamPersonalities
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Team personalities"@en ;
-      skos:prefLabel "Team personalities"@en ;
-      skos:definition "Knowledge of team personalities in collaborative development contexts."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TeamResponsibilities
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Team responsibilities"@en ;
-      skos:prefLabel "Team responsibilities"@en ;
-      skos:definition "Knowledge of team responsibilities in collaborative development contexts."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UseOfTeamCommunicationTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use of team communication tools"@en ;
-      skos:prefLabel "Use of team communication tools"@en ;
-      skos:definition "Knowledge of using team communication tools."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ProperCommunicationWithTeamMembers
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Proper communication with team members"@en ;
-      skos:prefLabel "Proper communication with team members"@en ;
-      skos:definition "Knowledge of proper communication with team members."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VersionControlStandalone
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Version control software in standalone environment"@en ;
-      skos:prefLabel "Version control software in standalone environment"@en ;
-      skos:definition "Knowledge of version control software in a standalone environment."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VersionControlTeamProject
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Version control software in a team development project"@en ;
-      skos:prefLabel "Version control software in a team development project"@en ;
-      skos:definition "Knowledge of version control software in a team development project."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MobileDevelopmentProgrammingLanguage
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mobile development programming language"@en ;
-      skos:prefLabel "Mobile development programming language"@en ;
-      skos:definition "Knowledge of a mobile development programming language."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:JsonOrDatabaseAsInputOutput
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "JSON and/or database used as both input and output"@en ;
-      skos:prefLabel "JSON and/or database used as both input and output"@en ;
-      skos:definition "Knowledge of using JSON and or a database as both input and output in mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CrossPlatformMobileApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Cross-platform mobile application"@en ;
-      skos:prefLabel "Cross-platform mobile application"@en ;
-      skos:definition "Knowledge of creating cross-platform mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CloudBasedDataDrivingMobileApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Cloud-based data driving mobile application"@en ;
-      skos:prefLabel "Cloud-based data driving mobile application"@en ;
-      skos:definition "Knowledge of cloud-based data driving mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BenefitsOfMobileDevelopmentApis
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Benefits of mobile development APIs (i.e., Google Maps, YouTube, etc.)"@en ;
-      skos:prefLabel "Benefits of mobile development APIs (i.e., Google Maps, YouTube, etc.)"@en ;
-      skos:definition "Knowledge of the benefits of mobile development APIs such as Google Maps and YouTube."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ApisUsedWithinMobileApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "APIs used within mobile application"@en ;
-      skos:prefLabel "APIs used within mobile application"@en ;
-      skos:definition "Knowledge of using APIs within a mobile application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DifferentMobileDevelopmentTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Different mobile development tools"@en ;
-      skos:prefLabel "Different mobile development tools"@en ;
-      skos:definition "Knowledge of different mobile development tools."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:HardwareIssues
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Hardware issues (i.e., resolutions, different devices, etc.)"@en ;
-      skos:prefLabel "Hardware issues (i.e., resolutions, different devices, etc.)"@en ;
-      skos:definition "Knowledge of hardware issues such as resolution and device differences."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DifferentMobilePlatforms
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Different mobile platforms"@en ;
-      skos:prefLabel "Different mobile platforms"@en ;
-      skos:definition "Knowledge of different mobile platforms."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CrossPlatformDevelopmentTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Tools that allow cross-platform development"@en ;
-      skos:prefLabel "Tools that allow cross-platform development"@en ;
-      skos:definition "Knowledge of tools that allow cross-platform development."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SeamlessExperienceAcrossDevices
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Seamless experience across multiple devices"@en ;
-      skos:prefLabel "Seamless experience across multiple devices"@en ;
-      skos:definition "Knowledge of designing a seamless experience across multiple devices."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EndUserPersonalizationOfApp
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "End user personalization of app"@en ;
-      skos:prefLabel "End user personalization of app"@en ;
-      skos:definition "Knowledge of end user personalization of a mobile application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MobileApplicationLayout
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mobile application layout"@en ;
-      skos:prefLabel "Mobile application layout"@en ;
-      skos:definition "Knowledge of creating mobile application layouts."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BestPractices
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Best practices"@en ;
-      skos:prefLabel "Best practices"@en ;
-      skos:definition "Knowledge of best practices in mobile user interface design and user experience."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SecurityIssues
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Security issues (i.e., app store security, malware, IoT hardware, etc.)"@en ;
-      skos:prefLabel "Security issues (i.e., app store security, malware, IoT hardware, etc.)"@en ;
-      skos:definition "Knowledge of security issues such as app store security, malware, and IoT hardware concerns."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Authentication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Authentication"@en ;
-      skos:prefLabel "Authentication"@en ;
-      skos:definition "Knowledge of authentication in mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Encryption
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Encryption"@en ;
-      skos:prefLabel "Encryption"@en ;
-      skos:definition "Knowledge of encryption in mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Decryption
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Decryption"@en ;
-      skos:prefLabel "Decryption"@en ;
-      skos:definition "Knowledge of decryption in mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MobileApplicationDataEncryptionAndDecryption
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mobile application data encryption and decryption"@en ;
-      skos:prefLabel "Mobile application data encryption and decryption"@en ;
-      skos:definition "Knowledge of implementing data encryption and decryption in mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MemoryManagement
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Memory management (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.)"@en ;
-      skos:prefLabel "Memory management (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.)"@en ;
-      skos:definition "Knowledge of memory management, including garbage collection and allocation, reclamation, and sharing of app memory."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ProcessOfDebuggingMobileApplication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Process of debugging a mobile application"@en ;
-      skos:prefLabel "Process of debugging a mobile application"@en ;
-      skos:definition "Knowledge of the process of debugging a mobile application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DifferenceBetweenSyntaxAndLogicError
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Difference between syntax and logic error"@en ;
-      skos:prefLabel "Difference between syntax and logic error"@en ;
-      skos:definition "Knowledge of the difference between syntax errors and logic errors."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MobileApplicationDebugging
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mobile application debugging"@en ;
-      skos:prefLabel "Mobile application debugging"@en ;
-      skos:definition "Knowledge of applying debugging techniques to mobile applications."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PermissionToPublish
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Permission to publish"@en ;
-      skos:prefLabel "Permission to publish"@en ;
-      skos:definition "Knowledge of permission to publish in copyright contexts."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:FreedomOfSpeech
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Freedom of speech"@en ;
-      skos:prefLabel "Freedom of speech"@en ;
-      skos:definition "Knowledge of freedom of speech in copyright contexts."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IntellectualPropertyAndOwnership
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Intellectual property and ownership"@en ;
-      skos:prefLabel "Intellectual property and ownership"@en ;
-      skos:definition "Knowledge of intellectual property and ownership."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TheAtSign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "The @ sign"@en ;
-      skos:prefLabel "The @ sign"@en ;
-      skos:definition "Knowledge of the communicative or legal significance of the @ sign in digital publication contexts."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AutomaticCopyright
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Automatic copyright"@en ;
-      skos:prefLabel "Automatic copyright"@en ;
-      skos:definition "Knowledge of automatic copyright."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RegisteringCopyright
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Registering a copyright"@en ;
-      skos:prefLabel "Registering a copyright"@en ;
-      skos:definition "Knowledge of registering copyright."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AlternativeCopyrightRegistration
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Alternative copyright registration"@en ;
-      skos:prefLabel "Alternative copyright registration"@en ;
-      skos:definition "Knowledge of alternative copyright registration approaches."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesOfWork
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types of work"@en ;
-      skos:prefLabel "Types of work"@en ;
-      skos:definition "Knowledge of types of work covered by copyright protection."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OtherTypesOfProtection
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Other types of protection"@en ;
-      skos:prefLabel "Other types of protection"@en ;
-      skos:definition "Knowledge of other types of legal protection related to digital works."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MarketingPlan
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Marketing plan (i.e., release date, competitive analysis, website or landing page for downloading app, social media, etc.)"@en ;
-      skos:prefLabel "Marketing plan (i.e., release date, competitive analysis, website or landing page for downloading app, social media, etc.)"@en ;
-      skos:definition "Knowledge of a marketing plan for releasing and promoting a mobile application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MobileAppStores
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mobile app stores"@en ;
-      skos:prefLabel "Mobile app stores"@en ;
-      skos:definition "Knowledge of mobile app stores."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PublishingTheApp
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Publishing the app"@en ;
-      skos:prefLabel "Publishing the app"@en ;
-      skos:definition "Knowledge of publishing a mobile application."@en ;
-      skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020c:Competence_ISMD_1
-      a ontoksd:Competence ;
-      rdfs:label "Describe the Internet of Things (IoT) enabled devices and the mobile industry"@en ;
-      skos:prefLabel "IS Mobile Development Competency 1"@en ;
-      skos:definition "Describe the Internet of Things (IoT) enabled devices and the mobile industry."@en ;
-      dcterms:identifier "ISMD-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:IoTChangingMobileDevelopment , is2020k:DesignOfMobileApplicationForIoTExperience , is2020k:IoTComponentsAndChallenges ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_1_01 , is2020c:KS_ISMD_1_02 , is2020c:KS_ISMD_1_03 .
-
-  is2020c:Competence_ISMD_2
-      a ontoksd:Competence ;
-      rdfs:label "Create and analyze an algorithm for effectiveness and efficiency"@en ;
-      skos:prefLabel "IS Mobile Development Competency 2"@en ;
-      skos:definition "Create and analyze an algorithm for effectiveness and efficiency."@en ;
-      dcterms:identifier "ISMD-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:AlgorithmsAndLogic , is2020k:SolvingProblemUsingAlgorithm , is2020k:EfficiencyOfAlgorithm ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_2_01 , is2020c:KS_ISMD_2_02 , is2020c:KS_ISMD_2_03 .
-
-  is2020c:Competence_ISMD_3
-      a ontoksd:Competence ;
-      rdfs:label "Implement good documentation practices in programming"@en ;
-      skos:prefLabel "IS Mobile Development Competency 3"@en ;
-      skos:definition "Implement good documentation practices in programming."@en ;
-      dcterms:identifier "ISMD-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:DocumentationOfApplication , is2020k:AdvantagesAndDisadvantagesOfDocumentation , is2020k:PurposeOfReadableSourceCode , is2020k:BestPracticesInWritingSourceCode , is2020k:StructuredProgram ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:purposeDriven , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_3_01 , is2020c:KS_ISMD_3_02 , is2020c:KS_ISMD_3_03 , is2020c:KS_ISMD_3_04 , is2020c:KS_ISMD_3_05 .
-
-  is2020c:Competence_ISMD_4
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate teamwork, interpersonal group skills, and team software development"@en ;
-      skos:prefLabel "IS Mobile Development Competency 4"@en ;
-      skos:definition "Demonstrate teamwork, interpersonal group skills, and team software development."@en ;
-      dcterms:identifier "ISMD-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:TeamPersonalities , is2020k:TeamResponsibilities , is2020k:UseOfTeamCommunicationTools , is2020k:ProperCommunicationWithTeamMembers , is2020k:VersionControlStandalone , is2020k:VersionControlTeamProject ;
-      ontoksd:hasDisposition ontoksd:collaborative , ontoksd:selfDirected , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_4_01 , is2020c:KS_ISMD_4_02 , is2020c:KS_ISMD_4_03 , is2020c:KS_ISMD_4_04 , is2020c:KS_ISMD_4_05 , is2020c:KS_ISMD_4_06 .
-
-  is2020c:Competence_ISMD_5
-      a ontoksd:Competence ;
-      rdfs:label "Utilize a contemporary mobile application development framework"@en ;
-      skos:prefLabel "IS Mobile Development Competency 5"@en ;
-      skos:definition "Utilize a contemporary mobile application development framework."@en ;
-      dcterms:identifier "ISMD-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:MobileDevelopmentProgrammingLanguage ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_5_01 .
-
-  is2020c:Competence_ISMD_6
-      a ontoksd:Competence ;
-      rdfs:label "Create a functioning mobile application suitable for portfolio presentation including but not limited to skills shown using database management, hardware interaction, APIs, cross platform development and current mobile development tools"@en ;
-      skos:prefLabel "IS Mobile Development Competency 6"@en ;
-      skos:definition "Create a functioning mobile application suitable for portfolio presentation including database management, hardware interaction, APIs, cross platform development and current mobile development tools."@en ;
-      dcterms:identifier "ISMD-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:JsonOrDatabaseAsInputOutput , is2020k:CrossPlatformMobileApplication , is2020k:CloudBasedDataDrivingMobileApplication , is2020k:BenefitsOfMobileDevelopmentApis , is2020k:ApisUsedWithinMobileApplication , is2020k:DifferentMobileDevelopmentTools , is2020k:HardwareIssues ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_6_01 , is2020c:KS_ISMD_6_02 , is2020c:KS_ISMD_6_03 , is2020c:KS_ISMD_6_04 , is2020c:KS_ISMD_6_05 , is2020c:KS_ISMD_6_06 , is2020c:KS_ISMD_6_07 .
-
-  is2020c:Competence_ISMD_7
-      a ontoksd:Competence ;
-      rdfs:label "Describe and distinguish different mobile development platforms"@en ;
-      skos:prefLabel "IS Mobile Development Competency 7"@en ;
-      skos:definition "Describe and distinguish different mobile development platforms."@en ;
-      dcterms:identifier "ISMD-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:DifferentMobilePlatforms , is2020k:CrossPlatformDevelopmentTools ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_7_01 , is2020c:KS_ISMD_7_02 .
-
-  is2020c:Competence_ISMD_8
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate mobile user interface design and the user experience"@en ;
-      skos:prefLabel "IS Mobile Development Competency 8"@en ;
-      skos:definition "Demonstrate mobile user interface design and the user experience."@en ;
-      dcterms:identifier "ISMD-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:SeamlessExperienceAcrossDevices , is2020k:EndUserPersonalizationOfApp , is2020k:MobileApplicationLayout , is2020k:BestPractices ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:professional ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_8_01 , is2020c:KS_ISMD_8_02 , is2020c:KS_ISMD_8_03 , is2020c:KS_ISMD_8_04 .
-
-  is2020c:Competence_ISMD_9
-      a ontoksd:Competence ;
-      rdfs:label "Implement cyber security measures for a mobile application"@en ;
-      skos:prefLabel "IS Mobile Development Competency 9"@en ;
-      skos:definition "Implement cyber security measures for a mobile application."@en ;
-      dcterms:identifier "ISMD-9"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:SecurityIssues , is2020k:Authentication , is2020k:Encryption , is2020k:Decryption , is2020k:MobileApplicationDataEncryptionAndDecryption ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_9_01 , is2020c:KS_ISMD_9_02 , is2020c:KS_ISMD_9_03 , is2020c:KS_ISMD_9_04 , is2020c:KS_ISMD_9_05 .
-
-  is2020c:Competence_ISMD_10
-      a ontoksd:Competence ;
-      rdfs:label "Explain memory allocation and management"@en ;
-      skos:prefLabel "IS Mobile Development Competency 10"@en ;
-      skos:definition "Explain memory allocation and management."@en ;
-      dcterms:identifier "ISMD-10"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:MemoryManagement ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_10_01 .
-
-  is2020c:Competence_ISMD_11
-      a ontoksd:Competence ;
-      rdfs:label "Debug syntactical and logical errors"@en ;
-      skos:prefLabel "IS Mobile Development Competency 11"@en ;
-      skos:definition "Debug syntactical and logical errors."@en ;
-      dcterms:identifier "ISMD-11"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ProcessOfDebuggingMobileApplication , is2020k:DifferenceBetweenSyntaxAndLogicError , is2020k:MobileApplicationDebugging ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_11_01 , is2020c:KS_ISMD_11_02 , is2020c:KS_ISMD_11_03 .
-
-  is2020c:Competence_ISMD_12
-      a ontoksd:Competence ;
-      rdfs:label "Explain the importance of Copyright laws"@en ;
-      skos:prefLabel "IS Mobile Development Competency 12"@en ;
-      skos:definition "Explain the importance of Copyright laws."@en ;
-      dcterms:identifier "ISMD-12"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:PermissionToPublish , is2020k:FreedomOfSpeech , is2020k:IntellectualPropertyAndOwnership , is2020k:TheAtSign , is2020k:AutomaticCopyright , is2020k:RegisteringCopyright , is2020k:AlternativeCopyrightRegistration , is2020k:TypesOfWork , is2020k:OtherTypesOfProtection ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:responsible , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_12_01 , is2020c:KS_ISMD_12_02 , is2020c:KS_ISMD_12_03 , is2020c:KS_ISMD_12_04 , is2020c:KS_ISMD_12_05 , is2020c:KS_ISMD_12_06 , is2020c:KS_ISMD_12_07 , is2020c:KS_ISMD_12_08 , is2020c:KS_ISMD_12_09 .
-
-  is2020c:Competence_ISMD_13
-      a ontoksd:Competence ;
-      rdfs:label "Market and publish a mobile application"@en ;
-      skos:prefLabel "IS Mobile Development Competency 13"@en ;
-      skos:definition "Market and publish a mobile application."@en ;
-      dcterms:identifier "ISMD-13"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:MarketingPlan , is2020k:MobileAppStores , is2020k:PublishingTheApp ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:meticulous ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_13_01 , is2020c:KS_ISMD_13_02 , is2020c:KS_ISMD_13_03 .
-
-  is2020c:KS_ISMD_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "IoT changing mobile development × Understanding"@en ; skos:prefLabel "IoT changing mobile development × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:IoTChangingMobileDevelopment ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_1 .
-  is2020c:KS_ISMD_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Design mobile app for IoT × Understanding"@en ; skos:prefLabel "Design mobile app for IoT × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DesignOfMobileApplicationForIoTExperience ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_1 .
-  is2020c:KS_ISMD_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "IoT components and challenges × Understanding"@en ; skos:prefLabel "IoT components and challenges × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:IoTComponentsAndChallenges ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_1 .
-
-  is2020c:KS_ISMD_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Algorithms and logic × Creating"@en ; skos:prefLabel "Algorithms and logic × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:AlgorithmsAndLogic ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_2 .
-  is2020c:KS_ISMD_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Solving problem using algorithm × Applying"@en ; skos:prefLabel "Solving problem using algorithm × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SolvingProblemUsingAlgorithm ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_2 .
-  is2020c:KS_ISMD_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Efficiency of algorithm × Understanding"@en ; skos:prefLabel "Efficiency of algorithm × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:EfficiencyOfAlgorithm ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_2 .
-
-  is2020c:KS_ISMD_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Documentation of application × Creating"@en ; skos:prefLabel "Documentation of application × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DocumentationOfApplication ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 .
-  is2020c:KS_ISMD_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Documentation pros and cons × Understanding"@en ; skos:prefLabel "Documentation pros and cons × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDocumentation ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 .
-  is2020c:KS_ISMD_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Readable source code purpose × Understanding"@en ; skos:prefLabel "Readable source code purpose × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PurposeOfReadableSourceCode ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 .
-  is2020c:KS_ISMD_3_04 a ontoksd:KnowledgeSkill ; rdfs:label "Best practices in source code × Applying"@en ; skos:prefLabel "Best practices in source code × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BestPracticesInWritingSourceCode ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 .
-  is2020c:KS_ISMD_3_05 a ontoksd:KnowledgeSkill ; rdfs:label "Structured program × Creating"@en ; skos:prefLabel "Structured program × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:StructuredProgram ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 .
-
-  is2020c:KS_ISMD_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Team personalities × Understanding"@en ; skos:prefLabel "Team personalities × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TeamPersonalities ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 .
-  is2020c:KS_ISMD_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Team responsibilities × Understanding"@en ; skos:prefLabel "Team responsibilities × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TeamResponsibilities ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 .
-  is2020c:KS_ISMD_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Team communication tools × Applying"@en ; skos:prefLabel "Team communication tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UseOfTeamCommunicationTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 .
-  is2020c:KS_ISMD_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Proper communication with team members × Applying"@en ; skos:prefLabel "Proper communication with team members × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ProperCommunicationWithTeamMembers ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 .
-  is2020c:KS_ISMD_4_05 a ontoksd:KnowledgeSkill ; rdfs:label "Version control standalone × Applying"@en ; skos:prefLabel "Version control standalone × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:VersionControlStandalone ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 .
-  is2020c:KS_ISMD_4_06 a ontoksd:KnowledgeSkill ; rdfs:label "Version control team project × Applying"@en ; skos:prefLabel "Version control team project × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:VersionControlTeamProject ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 .
-
-  is2020c:KS_ISMD_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Mobile development programming language × Applying"@en ; skos:prefLabel "Mobile development programming language × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MobileDevelopmentProgrammingLanguage ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_5 .
-
-  is2020c:KS_ISMD_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "JSON and/or database as input/output × Creating"@en ; skos:prefLabel "JSON and/or database as input/output × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:JsonOrDatabaseAsInputOutput ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-  is2020c:KS_ISMD_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Cross-platform mobile application × Creating"@en ; skos:prefLabel "Cross-platform mobile application × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:CrossPlatformMobileApplication ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-  is2020c:KS_ISMD_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Cloud-based data driving mobile application × Creating"@en ; skos:prefLabel "Cloud-based data driving mobile application × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:CloudBasedDataDrivingMobileApplication ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-  is2020c:KS_ISMD_6_04 a ontoksd:KnowledgeSkill ; rdfs:label "Benefits of mobile APIs × Understanding"@en ; skos:prefLabel "Benefits of mobile APIs × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:BenefitsOfMobileDevelopmentApis ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-  is2020c:KS_ISMD_6_05 a ontoksd:KnowledgeSkill ; rdfs:label "APIs within mobile application × Applying"@en ; skos:prefLabel "APIs within mobile application × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ApisUsedWithinMobileApplication ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-  is2020c:KS_ISMD_6_06 a ontoksd:KnowledgeSkill ; rdfs:label "Different mobile development tools × Applying"@en ; skos:prefLabel "Different mobile development tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentMobileDevelopmentTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-  is2020c:KS_ISMD_6_07 a ontoksd:KnowledgeSkill ; rdfs:label "Hardware issues × Understanding"@en ; skos:prefLabel "Hardware issues × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:HardwareIssues ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 .
-
-  is2020c:KS_ISMD_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Different mobile platforms × Understanding"@en ; skos:prefLabel "Different mobile platforms × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferentMobilePlatforms ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_7 .
-  is2020c:KS_ISMD_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Cross-platform development tools × Applying"@en ; skos:prefLabel "Cross-platform development tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CrossPlatformDevelopmentTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_7 .
-
-  is2020c:KS_ISMD_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Seamless experience across devices × Applying"@en ; skos:prefLabel "Seamless experience across devices × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SeamlessExperienceAcrossDevices ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 .
-  is2020c:KS_ISMD_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "End user personalization × Applying"@en ; skos:prefLabel "End user personalization × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:EndUserPersonalizationOfApp ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 .
-  is2020c:KS_ISMD_8_03 a ontoksd:KnowledgeSkill ; rdfs:label "Mobile application layout × Creating"@en ; skos:prefLabel "Mobile application layout × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:MobileApplicationLayout ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 .
-  is2020c:KS_ISMD_8_04 a ontoksd:KnowledgeSkill ; rdfs:label "Best practices × Applying"@en ; skos:prefLabel "Best practices × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BestPractices ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 .
-
-  is2020c:KS_ISMD_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Security issues × Understanding"@en ; skos:prefLabel "Security issues × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SecurityIssues ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 .
-  is2020c:KS_ISMD_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Authentication × Applying"@en ; skos:prefLabel "Authentication × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:Authentication ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 .
-  is2020c:KS_ISMD_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "Encryption × Understanding"@en ; skos:prefLabel "Encryption × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:Encryption ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 .
-  is2020c:KS_ISMD_9_04 a ontoksd:KnowledgeSkill ; rdfs:label "Decryption × Understanding"@en ; skos:prefLabel "Decryption × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:Decryption ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 .
-  is2020c:KS_ISMD_9_05 a ontoksd:KnowledgeSkill ; rdfs:label "Mobile app data encryption and decryption × Creating"@en ; skos:prefLabel "Mobile app data encryption and decryption × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:MobileApplicationDataEncryptionAndDecryption ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 .
-
-  is2020c:KS_ISMD_10_01 a ontoksd:KnowledgeSkill ; rdfs:label "Memory management × Applying"@en ; skos:prefLabel "Memory management × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MemoryManagement ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_10 .
-
-  is2020c:KS_ISMD_11_01 a ontoksd:KnowledgeSkill ; rdfs:label "Debugging mobile app process × Understanding"@en ; skos:prefLabel "Debugging mobile app process × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcessOfDebuggingMobileApplication ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_11 .
-  is2020c:KS_ISMD_11_02 a ontoksd:KnowledgeSkill ; rdfs:label "Syntax vs logic error × Understanding"@en ; skos:prefLabel "Syntax vs logic error × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DifferenceBetweenSyntaxAndLogicError ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_11 .
-  is2020c:KS_ISMD_11_03 a ontoksd:KnowledgeSkill ; rdfs:label "Mobile app debugging × Applying"@en ; skos:prefLabel "Mobile app debugging × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:MobileApplicationDebugging ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_11 .
-
-  is2020c:KS_ISMD_12_01 a ontoksd:KnowledgeSkill ; rdfs:label "Permission to publish × Understanding"@en ; skos:prefLabel "Permission to publish × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:PermissionToPublish ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_02 a ontoksd:KnowledgeSkill ; rdfs:label "Freedom of speech × Understanding"@en ; skos:prefLabel "Freedom of speech × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:FreedomOfSpeech ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_03 a ontoksd:KnowledgeSkill ; rdfs:label "Intellectual property and ownership × Understanding"@en ; skos:prefLabel "Intellectual property and ownership × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:IntellectualPropertyAndOwnership ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_04 a ontoksd:KnowledgeSkill ; rdfs:label "The @ sign × Understanding"@en ; skos:prefLabel "The @ sign × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TheAtSign ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_05 a ontoksd:KnowledgeSkill ; rdfs:label "Automatic copyright × Understanding"@en ; skos:prefLabel "Automatic copyright × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AutomaticCopyright ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_06 a ontoksd:KnowledgeSkill ; rdfs:label "Registering copyright × Understanding"@en ; skos:prefLabel "Registering copyright × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:RegisteringCopyright ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_07 a ontoksd:KnowledgeSkill ; rdfs:label "Alternative copyright registration × Understanding"@en ; skos:prefLabel "Alternative copyright registration × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:AlternativeCopyrightRegistration ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_08 a ontoksd:KnowledgeSkill ; rdfs:label "Types of work × Understanding"@en ; skos:prefLabel "Types of work × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TypesOfWork ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-  is2020c:KS_ISMD_12_09 a ontoksd:KnowledgeSkill ; rdfs:label "Other types of protection × Understanding"@en ; skos:prefLabel "Other types of protection × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:OtherTypesOfProtection ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 .
-
-  is2020c:KS_ISMD_13_01 a ontoksd:KnowledgeSkill ; rdfs:label "Marketing plan × Understanding"@en ; skos:prefLabel "Marketing plan × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MarketingPlan ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_13 .
-  is2020c:KS_ISMD_13_02 a ontoksd:KnowledgeSkill ; rdfs:label "Mobile app stores × Understanding"@en ; skos:prefLabel "Mobile app stores × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MobileAppStores ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_13 .
-  is2020c:KS_ISMD_13_03 a ontoksd:KnowledgeSkill ; rdfs:label "Publishing the app × Applying"@en ; skos:prefLabel "Publishing the app × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PublishingTheApp ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_13 .
-
+is2020c:Competence_ISMD_10 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Explain memory allocation and management"@en ;
+    dcterms:identifier "ISMD-10"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:MemoryManagement ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_10_01 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Explain memory allocation and management"@en ;
+    skos:prefLabel "IS Mobile Development Competency 10"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_10 .
+
+is2020c:Competence_ISMD_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize a contemporary mobile application development framework"@en ;
+    dcterms:identifier "ISMD-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:MobileDevelopmentProgrammingLanguage ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_5_01 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Utilize a contemporary mobile application development framework"@en ;
+    skos:prefLabel "IS Mobile Development Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_5 .
+
+is2020c:KS_ISMD_10_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Memory management × Applying"@en ;
+    dcterms:description "Source knowledge element: Memory management (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MemoryManagement ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Memory management × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_10 .
+
+is2020c:KS_ISMD_11_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Debugging mobile app process × Understanding"@en ;
+    dcterms:description "Source knowledge element: Process of debugging a mobile application; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProcessOfDebuggingMobileApplication ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Debugging mobile app process × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_11 .
+
+is2020c:KS_ISMD_11_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Syntax vs logic error × Understanding"@en ;
+    dcterms:description "Source knowledge element: Difference between syntax and logic error; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DifferenceBetweenSyntaxAndLogicError ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Syntax vs logic error × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_11 .
+
+is2020c:KS_ISMD_11_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mobile app debugging × Applying"@en ;
+    dcterms:description "Source knowledge element: Mobile application debugging; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MobileApplicationDebugging ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mobile app debugging × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_11 .
+
+is2020c:KS_ISMD_12_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Permission to publish × Understanding"@en ;
+    dcterms:description "Source knowledge element: Permission to publish; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PermissionToPublish ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Permission to publish × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Freedom of speech × Understanding"@en ;
+    dcterms:description "Source knowledge element: Freedom of speech; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FreedomOfSpeech ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Freedom of speech × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Intellectual property and ownership × Understanding"@en ;
+    dcterms:description "Source knowledge element: Intellectual property and ownership; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IntellectualPropertyAndOwnership ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Intellectual property and ownership × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "The @ sign × Understanding"@en ;
+    dcterms:description "Source knowledge element: The @ sign; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TheAtSign ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "The @ sign × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Automatic copyright × Understanding"@en ;
+    dcterms:description "Source knowledge element: Automatic copyright; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AutomaticCopyright ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Automatic copyright × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Registering copyright × Understanding"@en ;
+    dcterms:description "Source knowledge element: Registering a copyright; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RegisteringCopyright ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Registering copyright × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Alternative copyright registration × Understanding"@en ;
+    dcterms:description "Source knowledge element: Alternative copyright registration; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AlternativeCopyrightRegistration ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Alternative copyright registration × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types of work × Understanding"@en ;
+    dcterms:description "Source knowledge element: Types of work; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesOfWork ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types of work × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_12_09 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Other types of protection × Understanding"@en ;
+    dcterms:description "Source knowledge element: Other types of protection; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OtherTypesOfProtection ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Other types of protection × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_12 .
+
+is2020c:KS_ISMD_13_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Marketing plan × Understanding"@en ;
+    dcterms:description "Source knowledge element: Marketing plan (i.e., release date, competitive analysis, website or landing page for downloading app, social media, etc.); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MarketingPlan ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Marketing plan × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_13 .
+
+is2020c:KS_ISMD_13_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mobile app stores × Understanding"@en ;
+    dcterms:description "Source knowledge element: Mobile app stores; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MobileAppStores ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mobile app stores × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_13 .
+
+is2020c:KS_ISMD_13_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Publishing the app × Applying"@en ;
+    dcterms:description "Source knowledge element: Publishing the app; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PublishingTheApp ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Publishing the app × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_13 .
+
+is2020c:KS_ISMD_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IoT changing mobile development × Understanding"@en ;
+    dcterms:description "Source knowledge element: IoT is changing mobile development (i.e., Smart Home devices); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IoTChangingMobileDevelopment ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IoT changing mobile development × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_1 .
+
+is2020c:KS_ISMD_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design mobile app for IoT × Understanding"@en ;
+    dcterms:description "Source knowledge element: Design of mobile application for the IoT experience; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignOfMobileApplicationForIoTExperience ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design mobile app for IoT × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_1 .
+
+is2020c:KS_ISMD_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IoT components and challenges × Understanding"@en ;
+    dcterms:description "Source knowledge element: IoT components and challenges; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IoTComponentsAndChallenges ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IoT components and challenges × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_1 .
+
+is2020c:KS_ISMD_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Algorithms and logic × Creating"@en ;
+    dcterms:description "Source knowledge element: Algorithms and the logic that drives them; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AlgorithmsAndLogic ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Algorithms and logic × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_2 .
+
+is2020c:KS_ISMD_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Solving problem using algorithm × Applying"@en ;
+    dcterms:description "Source knowledge element: Solving a problem using an algorithm; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SolvingProblemUsingAlgorithm ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Solving problem using algorithm × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_2 .
+
+is2020c:KS_ISMD_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Efficiency of algorithm × Understanding"@en ;
+    dcterms:description "Source knowledge element: Efficiency of an algorithm; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EfficiencyOfAlgorithm ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Efficiency of algorithm × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_2 .
+
+is2020c:KS_ISMD_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Documentation of application × Creating"@en ;
+    dcterms:description "Source knowledge element: Documentation of an application; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DocumentationOfApplication ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Documentation of application × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_3 .
+
+is2020c:KS_ISMD_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Documentation pros and cons × Understanding"@en ;
+    dcterms:description "Source knowledge element: Advantages and disadvantages of documenting an application; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AdvantagesAndDisadvantagesOfDocumentation ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Documentation pros and cons × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_3 .
+
+is2020c:KS_ISMD_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Readable source code purpose × Understanding"@en ;
+    dcterms:description "Source knowledge element: Purpose of readable source code; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PurposeOfReadableSourceCode ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Readable source code purpose × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_3 .
+
+is2020c:KS_ISMD_3_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Best practices in source code × Applying"@en ;
+    dcterms:description "Source knowledge element: Best practices in writing source code; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BestPracticesInWritingSourceCode ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Best practices in source code × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_3 .
+
+is2020c:KS_ISMD_3_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Structured program × Creating"@en ;
+    dcterms:description "Source knowledge element: Structured program; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StructuredProgram ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Structured program × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_3 .
+
+is2020c:KS_ISMD_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team personalities × Understanding"@en ;
+    dcterms:description "Source knowledge element: Team personalities; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TeamPersonalities ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team personalities × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_4 .
+
+is2020c:KS_ISMD_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team responsibilities × Understanding"@en ;
+    dcterms:description "Source knowledge element: Team responsibilities; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TeamResponsibilities ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team responsibilities × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_4 .
+
+is2020c:KS_ISMD_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team communication tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Use of team communication tools; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UseOfTeamCommunicationTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team communication tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_4 .
+
+is2020c:KS_ISMD_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Proper communication with team members × Applying"@en ;
+    dcterms:description "Source knowledge element: Proper communication with team members; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProperCommunicationWithTeamMembers ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Proper communication with team members × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_4 .
+
+is2020c:KS_ISMD_4_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Version control standalone × Applying"@en ;
+    dcterms:description "Source knowledge element: Version control software in standalone environment; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VersionControlStandalone ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Version control standalone × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_4 .
+
+is2020c:KS_ISMD_4_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Version control team project × Applying"@en ;
+    dcterms:description "Source knowledge element: Version control software in a team development project; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VersionControlTeamProject ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Version control team project × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_4 .
+
+is2020c:KS_ISMD_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mobile development programming language × Applying"@en ;
+    dcterms:description "Source knowledge element: Mobile development programming language; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MobileDevelopmentProgrammingLanguage ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mobile development programming language × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_5 .
+
+is2020c:KS_ISMD_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "JSON and/or database as input/output × Creating"@en ;
+    dcterms:description "Source knowledge element: JSON and/or database used as both input and output; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:JsonOrDatabaseAsInputOutput ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "JSON and/or database as input/output × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Cross-platform mobile application × Creating"@en ;
+    dcterms:description "Source knowledge element: Cross-platform mobile application; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CrossPlatformMobileApplication ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Cross-platform mobile application × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Cloud-based data driving mobile application × Creating"@en ;
+    dcterms:description "Source knowledge element: Cloud-based data driving mobile application; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CloudBasedDataDrivingMobileApplication ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Cloud-based data driving mobile application × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_6_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Benefits of mobile APIs × Understanding"@en ;
+    dcterms:description "Source knowledge element: Benefits of mobile development APIs (i.e., Google Maps, YouTube, etc.); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BenefitsOfMobileDevelopmentApis ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Benefits of mobile APIs × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_6_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "APIs within mobile application × Applying"@en ;
+    dcterms:description "Source knowledge element: APIs used within mobile application; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ApisUsedWithinMobileApplication ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "APIs within mobile application × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_6_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Different mobile development tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Different mobile development tools; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DifferentMobileDevelopmentTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Different mobile development tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_6_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Hardware issues × Understanding"@en ;
+    dcterms:description "Source knowledge element: Hardware issues (i.e., resolutions, different devices, etc.); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HardwareIssues ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Hardware issues × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_6 .
+
+is2020c:KS_ISMD_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Different mobile platforms × Understanding"@en ;
+    dcterms:description "Source knowledge element: Different mobile platforms; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DifferentMobilePlatforms ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Different mobile platforms × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_7 .
+
+is2020c:KS_ISMD_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Cross-platform development tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Tools that allow cross-platform development; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CrossPlatformDevelopmentTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Cross-platform development tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_7 .
+
+is2020c:KS_ISMD_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Seamless experience across devices × Applying"@en ;
+    dcterms:description "Source knowledge element: Seamless experience across multiple devices; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SeamlessExperienceAcrossDevices ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Seamless experience across devices × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_8 .
+
+is2020c:KS_ISMD_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "End user personalization × Applying"@en ;
+    dcterms:description "Source knowledge element: End user personalization of app; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EndUserPersonalizationOfApp ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "End user personalization × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_8 .
+
+is2020c:KS_ISMD_8_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mobile application layout × Creating"@en ;
+    dcterms:description "Source knowledge element: Mobile application layout; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MobileApplicationLayout ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mobile application layout × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_8 .
+
+is2020c:KS_ISMD_8_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Best practices × Applying"@en ;
+    dcterms:description "Source knowledge element: Best practices; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BestPractices ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Best practices × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_8 .
+
+is2020c:KS_ISMD_9_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Security issues × Understanding"@en ;
+    dcterms:description "Source knowledge element: Security issues (i.e., app store security, malware, IoT hardware, etc.); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SecurityIssues ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Security issues × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_9 .
+
+is2020c:KS_ISMD_9_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Authentication × Applying"@en ;
+    dcterms:description "Source knowledge element: Authentication; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Authentication ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Authentication × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_9 .
+
+is2020c:KS_ISMD_9_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Encryption × Understanding"@en ;
+    dcterms:description "Source knowledge element: Encryption; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Encryption ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Encryption × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_9 .
+
+is2020c:KS_ISMD_9_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Decryption × Understanding"@en ;
+    dcterms:description "Source knowledge element: Decryption; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Decryption ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Decryption × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_9 .
+
+is2020c:KS_ISMD_9_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mobile app data encryption and decryption × Creating"@en ;
+    dcterms:description "Source knowledge element: Mobile application data encryption and decryption; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MobileApplicationDataEncryptionAndDecryption ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMD_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mobile app data encryption and decryption × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMD_9 .
+
+is2020c:Competence_ISMD_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Describe and distinguish different mobile development platforms"@en ;
+    dcterms:identifier "ISMD-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:CrossPlatformDevelopmentTools,
+        is2020k:DifferentMobilePlatforms ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_7_01,
+        is2020c:KS_ISMD_7_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Describe and distinguish different mobile development platforms"@en ;
+    skos:prefLabel "IS Mobile Development Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_7 .
+
+is2020c:Source_ISMD_10 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 149 (PDF page 150)."@en ;
+    dcterms:description "Competency: Explain memory allocation and management Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISMD-10"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMD_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 148 (PDF page 149)."@en ;
+    dcterms:description "Competency: Utilize a contemporary mobile application development framework Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISMD-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020k:AdvantagesAndDisadvantagesOfDocumentation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Advantages and disadvantages of documenting an application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the advantages and disadvantages of documenting an application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Advantages and disadvantages of documenting an application"@en .
+
+is2020k:AlgorithmsAndLogic a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Algorithms and the logic that drives them"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of algorithms and the logic that drives them."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Algorithms and the logic that drives them"@en .
+
+is2020k:AlternativeCopyrightRegistration a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Alternative copyright registration"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of alternative copyright registration approaches."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Alternative copyright registration"@en .
+
+is2020k:ApisUsedWithinMobileApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "APIs used within mobile application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using APIs within a mobile application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "APIs used within mobile application"@en .
+
+is2020k:Authentication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Authentication"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of authentication in mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Authentication"@en .
+
+is2020k:AutomaticCopyright a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Automatic copyright"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of automatic copyright."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Automatic copyright"@en .
+
+is2020k:BenefitsOfMobileDevelopmentApis a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Benefits of mobile development APIs (i.e., Google Maps, YouTube, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the benefits of mobile development APIs such as Google Maps and YouTube."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Benefits of mobile development APIs (i.e., Google Maps, YouTube, etc.)"@en .
+
+is2020k:BestPractices a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Best practices"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of best practices in mobile user interface design and user experience."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Best practices"@en .
+
+is2020k:BestPracticesInWritingSourceCode a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Best practices in writing source code"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of best practices in writing source code."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Best practices in writing source code"@en .
+
+is2020k:CloudBasedDataDrivingMobileApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Cloud-based data driving mobile application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of cloud-based data driving mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Cloud-based data driving mobile application"@en .
+
+is2020k:CrossPlatformDevelopmentTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Tools that allow cross-platform development"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of tools that allow cross-platform development."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Tools that allow cross-platform development"@en .
+
+is2020k:CrossPlatformMobileApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Cross-platform mobile application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating cross-platform mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Cross-platform mobile application"@en .
+
+is2020k:Decryption a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Decryption"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of decryption in mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Decryption"@en .
+
+is2020k:DesignOfMobileApplicationForIoTExperience a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design of mobile application for the IoT experience"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing mobile applications for IoT experiences."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Design of mobile application for the IoT experience"@en .
+
+is2020k:DifferenceBetweenSyntaxAndLogicError a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Difference between syntax and logic error"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the difference between syntax errors and logic errors."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Difference between syntax and logic error"@en .
+
+is2020k:DifferentMobileDevelopmentTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Different mobile development tools"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different mobile development tools."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Different mobile development tools"@en .
+
+is2020k:DifferentMobilePlatforms a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Different mobile platforms"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different mobile platforms."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Different mobile platforms"@en .
+
+is2020k:DocumentationOfApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Documentation of an application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of documenting an application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Documentation of an application"@en .
+
+is2020k:EfficiencyOfAlgorithm a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Efficiency of an algorithm"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of algorithm efficiency."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Efficiency of an algorithm"@en .
+
+is2020k:Encryption a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Encryption"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of encryption in mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Encryption"@en .
+
+is2020k:EndUserPersonalizationOfApp a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "End user personalization of app"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of end user personalization of a mobile application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "End user personalization of app"@en .
+
+is2020k:FreedomOfSpeech a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Freedom of speech"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of freedom of speech in copyright contexts."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Freedom of speech"@en .
+
+is2020k:HardwareIssues a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Hardware issues (i.e., resolutions, different devices, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of hardware issues such as resolution and device differences."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Hardware issues (i.e., resolutions, different devices, etc.)"@en .
+
+is2020k:IntellectualPropertyAndOwnership a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Intellectual property and ownership"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of intellectual property and ownership."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Intellectual property and ownership"@en .
+
+is2020k:IoTChangingMobileDevelopment a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IoT is changing mobile development (i.e., Smart Home devices)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of how the Internet of Things is changing mobile development, including smart home device scenarios."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "IoT is changing mobile development (i.e., Smart Home devices)"@en .
+
+is2020k:IoTComponentsAndChallenges a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IoT components and challenges"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of IoT components and challenges relevant to mobile development."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "IoT components and challenges"@en .
+
+is2020k:JsonOrDatabaseAsInputOutput a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "JSON and/or database used as both input and output"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using JSON and or a database as both input and output in mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "JSON and/or database used as both input and output"@en .
+
+is2020k:MarketingPlan a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Marketing plan (i.e., release date, competitive analysis, website or landing page for downloading app, social media, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of a marketing plan for releasing and promoting a mobile application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Marketing plan (i.e., release date, competitive analysis, website or landing page for downloading app, social media, etc.)"@en .
+
+is2020k:MemoryManagement a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Memory management (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of memory management, including garbage collection and allocation, reclamation, and sharing of app memory."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Memory management (i.e., garbage collection, allocate and reclaim app memory, share memory, etc.)"@en .
+
+is2020k:MobileAppStores a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mobile app stores"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of mobile app stores."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Mobile app stores"@en .
+
+is2020k:MobileApplicationDataEncryptionAndDecryption a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mobile application data encryption and decryption"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of implementing data encryption and decryption in mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Mobile application data encryption and decryption"@en .
+
+is2020k:MobileApplicationDebugging a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mobile application debugging"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying debugging techniques to mobile applications."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Mobile application debugging"@en .
+
+is2020k:MobileApplicationLayout a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mobile application layout"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating mobile application layouts."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Mobile application layout"@en .
+
+is2020k:MobileDevelopmentProgrammingLanguage a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mobile development programming language"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of a mobile development programming language."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Mobile development programming language"@en .
+
+is2020k:OtherTypesOfProtection a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Other types of protection"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of other types of legal protection related to digital works."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Other types of protection"@en .
+
+is2020k:PermissionToPublish a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Permission to publish"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of permission to publish in copyright contexts."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Permission to publish"@en .
+
+is2020k:ProcessOfDebuggingMobileApplication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Process of debugging a mobile application"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the process of debugging a mobile application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Process of debugging a mobile application"@en .
+
+is2020k:ProperCommunicationWithTeamMembers a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Proper communication with team members"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of proper communication with team members."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Proper communication with team members"@en .
+
+is2020k:PublishingTheApp a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Publishing the app"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of publishing a mobile application."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Publishing the app"@en .
+
+is2020k:PurposeOfReadableSourceCode a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Purpose of readable source code"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the purpose of readable source code."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Purpose of readable source code"@en .
+
+is2020k:RegisteringCopyright a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Registering a copyright"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of registering copyright."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Registering a copyright"@en .
+
+is2020k:SeamlessExperienceAcrossDevices a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Seamless experience across multiple devices"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing a seamless experience across multiple devices."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Seamless experience across multiple devices"@en .
+
+is2020k:SecurityIssues a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Security issues (i.e., app store security, malware, IoT hardware, etc.)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of security issues such as app store security, malware, and IoT hardware concerns."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Security issues (i.e., app store security, malware, IoT hardware, etc.)"@en .
+
+is2020k:SolvingProblemUsingAlgorithm a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Solving a problem using an algorithm"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of solving a problem using an algorithm."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Solving a problem using an algorithm"@en .
+
+is2020k:StructuredProgram a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Structured program"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of structured programming."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Structured program"@en .
+
+is2020k:TeamPersonalities a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Team personalities"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of team personalities in collaborative development contexts."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Team personalities"@en .
+
+is2020k:TeamResponsibilities a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Team responsibilities"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of team responsibilities in collaborative development contexts."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Team responsibilities"@en .
+
+is2020k:TheAtSign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "The @ sign"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the communicative or legal significance of the @ sign in digital publication contexts."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "The @ sign"@en .
+
+is2020k:TypesOfWork a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types of work"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of types of work covered by copyright protection."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Types of work"@en .
+
+is2020k:UseOfTeamCommunicationTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use of team communication tools"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using team communication tools."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Use of team communication tools"@en .
+
+is2020k:VersionControlStandalone a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Version control software in standalone environment"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:altLabel "Version control software in stand-alone environment"@en ;
+    skos:definition "Knowledge of version control software in a standalone environment."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Version control software in standalone environment"@en .
+
+is2020k:VersionControlTeamProject a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Version control software in a team development project"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of version control software in a team development project."@en ;
+    skos:inScheme is2020k:IS2020MobileDevelopmentKnowledgeScheme ;
+    skos:prefLabel "Version control software in a team development project"@en .
+
+is2020c:Competence_ISMD_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Describe the Internet of Things (IoT) enabled devices and the mobile industry"@en ;
+    dcterms:identifier "ISMD-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DesignOfMobileApplicationForIoTExperience,
+        is2020k:IoTChangingMobileDevelopment,
+        is2020k:IoTComponentsAndChallenges ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_1_01,
+        is2020c:KS_ISMD_1_02,
+        is2020c:KS_ISMD_1_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Describe the Internet of Things (IoT) enabled devices and the mobile industry"@en ;
+    skos:prefLabel "IS Mobile Development Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_1 .
+
+is2020c:Competence_ISMD_11 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Debug syntactical and logical errors"@en ;
+    dcterms:identifier "ISMD-11"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DifferenceBetweenSyntaxAndLogicError,
+        is2020k:MobileApplicationDebugging,
+        is2020k:ProcessOfDebuggingMobileApplication ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_11_01,
+        is2020c:KS_ISMD_11_02,
+        is2020c:KS_ISMD_11_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Debug syntactical and logical errors"@en ;
+    skos:prefLabel "IS Mobile Development Competency 11"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_11 .
+
+is2020c:Competence_ISMD_13 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Market and publish a mobile application"@en ;
+    dcterms:identifier "ISMD-13"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:MarketingPlan,
+        is2020k:MobileAppStores,
+        is2020k:PublishingTheApp ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_13_01,
+        is2020c:KS_ISMD_13_02,
+        is2020c:KS_ISMD_13_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Market and publish a mobile application"@en ;
+    skos:prefLabel "IS Mobile Development Competency 13"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_13 .
+
+is2020c:Competence_ISMD_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create and analyze an algorithm for effectiveness and efficiency"@en ;
+    dcterms:identifier "ISMD-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AlgorithmsAndLogic,
+        is2020k:EfficiencyOfAlgorithm,
+        is2020k:SolvingProblemUsingAlgorithm ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_2_01,
+        is2020c:KS_ISMD_2_02,
+        is2020c:KS_ISMD_2_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Create and analyze an algorithm for effectiveness and efficiency"@en ;
+    skos:prefLabel "IS Mobile Development Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_2 .
+
+is2020c:Source_ISMD_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 148 (PDF page 149)."@en ;
+    dcterms:description "Competency: Describe and distinguish different mobile development platforms Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISMD-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMD_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate mobile user interface design and the user experience"@en ;
+    dcterms:identifier "ISMD-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BestPractices,
+        is2020k:EndUserPersonalizationOfApp,
+        is2020k:MobileApplicationLayout,
+        is2020k:SeamlessExperienceAcrossDevices ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_8_01,
+        is2020c:KS_ISMD_8_02,
+        is2020c:KS_ISMD_8_03,
+        is2020c:KS_ISMD_8_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate mobile user interface design and the user experience"@en ;
+    skos:prefLabel "IS Mobile Development Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_8 .
+
+is2020c:Source_ISMD_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 146 (PDF page 147)."@en ;
+    dcterms:description "Competency: Describe the Internet of Things (IoT) enabled devices and the mobile industry Key dispositions: Purpose-driven, Self-Directed, Inventive"@en ;
+    dcterms:identifier "ISMD-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMD_11 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 149 (PDF page 150)."@en ;
+    dcterms:description "Competency: Debug syntactical and logical errors Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISMD-11"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMD_13 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 150 (PDF page 151)."@en ;
+    dcterms:description "Competency: Market and publish a mobile application Key dispositions: Purpose-driven, Self-Directed, Meticulous"@en ;
+    dcterms:identifier "ISMD-13"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMD_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 146 (PDF page 147)."@en ;
+    dcterms:description "Competency: Create and analyze an algorithm for effectiveness and efficiency Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISMD-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMD_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Implement good documentation practices in programming"@en ;
+    dcterms:identifier "ISMD-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AdvantagesAndDisadvantagesOfDocumentation,
+        is2020k:BestPracticesInWritingSourceCode,
+        is2020k:DocumentationOfApplication,
+        is2020k:PurposeOfReadableSourceCode,
+        is2020k:StructuredProgram ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_3_01,
+        is2020c:KS_ISMD_3_02,
+        is2020c:KS_ISMD_3_03,
+        is2020c:KS_ISMD_3_04,
+        is2020c:KS_ISMD_3_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Implement good documentation practices in programming"@en ;
+    skos:prefLabel "IS Mobile Development Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_3 .
+
+is2020c:Competence_ISMD_9 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Implement cyber security measures for a mobile application"@en ;
+    dcterms:identifier "ISMD-9"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:Authentication,
+        is2020k:Decryption,
+        is2020k:Encryption,
+        is2020k:MobileApplicationDataEncryptionAndDecryption,
+        is2020k:SecurityIssues ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_9_01,
+        is2020c:KS_ISMD_9_02,
+        is2020c:KS_ISMD_9_03,
+        is2020c:KS_ISMD_9_04,
+        is2020c:KS_ISMD_9_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Implement cyber security measures for a mobile application"@en ;
+    skos:prefLabel "IS Mobile Development Competency 9"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_9 .
+
+is2020c:Source_ISMD_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 148 (PDF page 149)."@en ;
+    dcterms:description "Competency: Demonstrate mobile user interface design and the user experience Key dispositions: Purpose-driven, Self-Directed, Professional"@en ;
+    dcterms:identifier "ISMD-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMD_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate teamwork, interpersonal group skills, and team software development"@en ;
+    dcterms:identifier "ISMD-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ProperCommunicationWithTeamMembers,
+        is2020k:TeamPersonalities,
+        is2020k:TeamResponsibilities,
+        is2020k:UseOfTeamCommunicationTools,
+        is2020k:VersionControlStandalone,
+        is2020k:VersionControlTeamProject ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_4_01,
+        is2020c:KS_ISMD_4_02,
+        is2020c:KS_ISMD_4_03,
+        is2020c:KS_ISMD_4_04,
+        is2020c:KS_ISMD_4_05,
+        is2020c:KS_ISMD_4_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Demonstrate teamwork, interpersonal group skills, and team software development"@en ;
+    skos:prefLabel "IS Mobile Development Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_4 .
+
+is2020c:Source_ISMD_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 147 (PDF page 148)."@en ;
+    dcterms:description "Competency: Implement good documentation practices in programming Key dispositions: Meticulous, Purpose-driven, Self-Directed"@en ;
+    dcterms:identifier "ISMD-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMD_9 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 149 (PDF page 150)."@en ;
+    dcterms:description "Competency: Implement cyber security measures for a mobile application Key dispositions: Meticulous, Self-Directed, Responsible"@en ;
+    dcterms:identifier "ISMD-9"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMD_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create a functioning mobile application suitable for portfolio presentation including but not limited to skills shown using database management, hardware interaction, APIs, cross platform development and current mobile development tools"@en ;
+    dcterms:identifier "ISMD-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ApisUsedWithinMobileApplication,
+        is2020k:BenefitsOfMobileDevelopmentApis,
+        is2020k:CloudBasedDataDrivingMobileApplication,
+        is2020k:CrossPlatformMobileApplication,
+        is2020k:DifferentMobileDevelopmentTools,
+        is2020k:HardwareIssues,
+        is2020k:JsonOrDatabaseAsInputOutput ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_6_01,
+        is2020c:KS_ISMD_6_02,
+        is2020c:KS_ISMD_6_03,
+        is2020c:KS_ISMD_6_04,
+        is2020c:KS_ISMD_6_05,
+        is2020c:KS_ISMD_6_06,
+        is2020c:KS_ISMD_6_07 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Create a functioning mobile application suitable for portfolio presentation including but not limited to skills shown using database management, hardware interaction, APIs, cross platform development and current mobile development tools"@en ;
+    skos:prefLabel "IS Mobile Development Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_6 .
+
+is2020c:Source_ISMD_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 147 (PDF page 148)."@en ;
+    dcterms:description "Competency: Demonstrate teamwork, interpersonal group skills, and team software development Key dispositions: Collaborative, Self-Directed, Responsible"@en ;
+    dcterms:identifier "ISMD-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMD_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 148 (PDF page 149)."@en ;
+    dcterms:description "Competency: Create a functioning mobile application suitable for portfolio presentation including but not limited to skills shown using database management, hardware interaction, APIs, cross platform development and current mobile development tools Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISMD-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMD_12 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Explain the importance of Copyright laws"@en ;
+    dcterms:identifier "ISMD-12"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:purposeDriven,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AlternativeCopyrightRegistration,
+        is2020k:AutomaticCopyright,
+        is2020k:FreedomOfSpeech,
+        is2020k:IntellectualPropertyAndOwnership,
+        is2020k:OtherTypesOfProtection,
+        is2020k:PermissionToPublish,
+        is2020k:RegisteringCopyright,
+        is2020k:TheAtSign,
+        is2020k:TypesOfWork ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMD_12_01,
+        is2020c:KS_ISMD_12_02,
+        is2020c:KS_ISMD_12_03,
+        is2020c:KS_ISMD_12_04,
+        is2020c:KS_ISMD_12_05,
+        is2020c:KS_ISMD_12_06,
+        is2020c:KS_ISMD_12_07,
+        is2020c:KS_ISMD_12_08,
+        is2020c:KS_ISMD_12_09 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Explain the importance of Copyright laws"@en ;
+    skos:prefLabel "IS Mobile Development Competency 12"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMD_12 .
+
+is2020c:Source_ISMD_12 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 150 (PDF page 151)."@en ;
+    dcterms:description "Competency: Explain the importance of Copyright laws Key dispositions: Self-Directed, Responsible, Purpose-driven"@en ;
+    dcterms:identifier "ISMD-12"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-mobile-development-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Mobile Development competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.5 Competency Area – Mobile Development."@en .
+
+is2020k:IS2020MobileDevelopmentKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Mobile Development Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Mobile Development competency area."@en ;
+    skos:prefLabel "IS2020 Mobile Development Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

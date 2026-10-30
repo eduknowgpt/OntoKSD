@@ -1,503 +1,955 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
+is2020c:Competence_ISMS_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Ensure organizational information systems comply with policies, applicable laws, and regulations"@en ;
+    dcterms:identifier "ISMS-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:RegulatoryStandardsAndRegulations ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_6_01 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Ensure organizational information systems comply with policies, applicable laws, and regulations"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_6 .
 
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+is2020c:KS_ISMS_10_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "ITIL × Applying"@en ;
+    dcterms:description "Source knowledge element: IT Infrastructure Library (ITIL); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ITIL ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "ITIL × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_10 .
 
-  <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 IS Management and Strategy competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.5.2 Competency Area – IS Management and Strategy."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_10_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "CMMI × Applying"@en ;
+    dcterms:description "Source knowledge element: Capability Maturity Model Integration (CMMI); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CMMI ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "CMMI × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_10 .
 
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+is2020c:KS_ISMS_11_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "COBIT × Applying"@en ;
+    dcterms:description "Source knowledge element: Control Objectives for Information and Related Technologies (COBIT); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:COBIT ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "COBIT × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_11 .
 
-  is2020k:IS2020ISManagementAndStrategyKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 IS Management and Strategy Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 IS Management and Strategy Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IS Management and Strategy competency area."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_11_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "TOGAF × Applying"@en ;
+    dcterms:description "Source knowledge element: Open Group Architecture Framework (TOGAF); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TOGAF ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "TOGAF × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_11 .
 
-  is2020k:ConceptualSkills
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Conceptual skills in the ability for abstract thinking and turning an entire concept into a creative solution"@en ;
-      skos:prefLabel "Conceptual skills in the ability for abstract thinking and turning an entire concept into a creative solution"@en ;
-      skos:definition "Knowledge of conceptual skills involving abstract thinking and turning an entire concept into a creative solution."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Conceptual skills × Understanding"@en ;
+    dcterms:description "Source knowledge element: Conceptual skills in the ability for abstract thinking and turning an entire concept into a creative solution; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConceptualSkills ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Conceptual skills × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_1 .
 
-  is2020k:InterpersonalSkills
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Interpersonal skills in leading teams and workgroups"@en ;
-      skos:prefLabel "Interpersonal skills in leading teams and workgroups"@en ;
-      skos:definition "Knowledge of interpersonal skills for leading teams and workgroups."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Interpersonal skills × Understanding"@en ;
+    dcterms:description "Source knowledge element: Interpersonal skills in leading teams and workgroups; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InterpersonalSkills ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Interpersonal skills × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_1 .
 
-  is2020k:ManagementSkills
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Management skills including planning, communicating, problem-solving, delegating, and making decisions"@en ;
-      skos:prefLabel "Management skills including planning, communicating, problem-solving, delegating, and making decisions"@en ;
-      skos:definition "Knowledge of management skills including planning, communicating, problem-solving, delegating, and decision making."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Management skills × Applying"@en ;
+    dcterms:description "Source knowledge element: Management skills including planning, communicating, problem-solving, delegating, and making decisions; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ManagementSkills ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Management skills × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_1 .
 
-  is2020k:EfficiencyInITServiceDelivery
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Efficiency: an enterprise’s capability to deliver IT services to its customers using the most cost-efficient methods with the highest quality of service"@en ;
-      skos:prefLabel "Efficiency: an enterprise’s capability to deliver IT services to its customers using the most cost-efficient methods with the highest quality of service"@en ;
-      skos:definition "Knowledge of efficiency as the enterprise capability to deliver IT services cost-efficiently with high quality of service."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Efficiency in service delivery × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Efficiency: an enterprise’s capability to deliver IT services to its customers using the most cost-efficient methods with the highest quality of service; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EfficiencyInITServiceDelivery ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Efficiency in service delivery × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_2 .
 
-  is2020k:EffectivenessInITServiceDelivery
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Effectiveness: best operating practices for resource optimization in delivering organization IT strategic goals"@en ;
-      skos:prefLabel "Effectiveness: best operating practices for resource optimization in delivering organization IT strategic goals"@en ;
-      skos:definition "Knowledge of effectiveness as best operating practices for resource optimization in delivering organizational IT strategic goals."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Effectiveness in service delivery × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Effectiveness: best operating practices for resource optimization in delivering organization IT strategic goals; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EffectivenessInITServiceDelivery ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Effectiveness in service delivery × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_2 .
 
-  is2020k:InformationManagementTechniques
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Information management techniques used to add value to products and services utilizing appropriate organizational data"@en ;
-      skos:prefLabel "Information management techniques used to add value to products and services utilizing appropriate organizational data"@en ;
-      skos:definition "Knowledge of information management techniques used to add value to products and services through appropriate organizational data."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Information management techniques × Applying"@en ;
+    dcterms:description "Source knowledge element: Information management techniques used to add value to products and services utilizing appropriate organizational data; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InformationManagementTechniques ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Information management techniques × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_3 .
 
-  is2020k:PoliciesAndPracticesForInformationResources
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Policies and practices for the use of information resources"@en ;
-      skos:prefLabel "Policies and practices for the use of information resources"@en ;
-      skos:definition "Knowledge of policies and practices governing the use of information resources."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Policies and practices for information resources × Creating"@en ;
+    dcterms:description "Source knowledge element: Policies and practices for the use of information resources; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PoliciesAndPracticesForInformationResources ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Policies and practices for information resources × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_3 .
 
-  is2020k:TechnologicalSolutionsForCompetitiveAdvantage
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Appropriate technological solutions for increasing competitive advantages in alignment with enterprise strategic goals"@en ;
-      skos:prefLabel "Appropriate technological solutions for increasing competitive advantages in alignment with enterprise strategic goals"@en ;
-      skos:definition "Knowledge of appropriate technological solutions for increasing competitive advantage in alignment with enterprise strategic goals."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Technological solutions for competitive advantage × Creating"@en ;
+    dcterms:description "Source knowledge element: Appropriate technological solutions for increasing competitive advantages in alignment with enterprise strategic goals; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TechnologicalSolutionsForCompetitiveAdvantage ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Technological solutions for competitive advantage × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_3 .
 
-  is2020k:AdministrativeOversightAndAccountability
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Administrative oversight and accountability best practices"@en ;
-      skos:prefLabel "Administrative oversight and accountability best practices"@en ;
-      skos:definition "Knowledge of best practices for administrative oversight and accountability."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Administrative oversight and accountability × Applying"@en ;
+    dcterms:description "Source knowledge element: Administrative oversight and accountability best practices; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AdministrativeOversightAndAccountability ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Administrative oversight and accountability × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_4 .
 
-  is2020k:DecisionRightsAndDecisionMakingPractices
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Decision rights and decision-making practices"@en ;
-      skos:prefLabel "Decision rights and decision-making practices"@en ;
-      skos:definition "Knowledge of decision rights and IT decision-making practices."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Decision rights and decision-making practices × Applying"@en ;
+    dcterms:description "Source knowledge element: Decision rights and decision-making practices; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DecisionRightsAndDecisionMakingPractices ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Decision rights and decision-making practices × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_4 .
 
-  is2020k:EvaluationAndMonitoringTechniquesForITOperations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Evaluation and monitoring techniques for IT operations"@en ;
-      skos:prefLabel "Evaluation and monitoring techniques for IT operations"@en ;
-      skos:definition "Knowledge of evaluation and monitoring techniques for IT operations."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluation and monitoring techniques × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Evaluation and monitoring techniques for IT operations; source skill-level cell: 4 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EvaluationAndMonitoringTechniquesForITOperations ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately. The source cell is internally inconsistent (4 – Evaluate). This representation follows the textual label; the original number is preserved in the documentary annotation. It is not an official correction."@en ;
+    skos:prefLabel "Evaluation and monitoring techniques × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_4 .
 
-  is2020k:SystematicProcessForLongRangeISPlans
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Systematic process for creating long-range plans for IS to meet the organization's overall strategic plan"@en ;
-      skos:prefLabel "Systematic process for creating long-range plans for IS to meet the organization's overall strategic plan"@en ;
-      skos:definition "Knowledge of the systematic process for creating long-range IS plans aligned with the organization's strategic plan."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Long-range IS plans process × Understanding"@en ;
+    dcterms:description "Source knowledge element: Systematic process for creating long-range plans for IS to meet the organization's overall strategic plan; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SystematicProcessForLongRangeISPlans ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Long-range IS plans process × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_5 .
 
-  is2020k:SequenceOfStepsInISStrategicPlanning
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Sequence of steps in planning, designing, and communicating the IS strategic plans"@en ;
-      skos:prefLabel "Sequence of steps in planning, designing, and communicating the IS strategic plans"@en ;
-      skos:definition "Knowledge of the sequence of steps in planning, designing, and communicating IS strategic plans."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IS strategic planning steps × Understanding"@en ;
+    dcterms:description "Source knowledge element: Sequence of steps in planning, designing, and communicating the IS strategic plans; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SequenceOfStepsInISStrategicPlanning ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IS strategic planning steps × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_5 .
 
-  is2020k:StrategicPlanningMethodologiesTechniquesAndTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Methodologies, techniques, and tools used in applying strategic planning"@en ;
-      skos:prefLabel "Methodologies, techniques, and tools used in applying strategic planning"@en ;
-      skos:definition "Knowledge of methodologies, techniques, and tools used in strategic planning."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Strategic planning methods and tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Methodologies, techniques, and tools used in applying strategic planning; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StrategicPlanningMethodologiesTechniquesAndTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Strategic planning methods and tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_5 .
 
-  is2020k:RegulatoryStandardsAndRegulations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Regulatory standards and regulations including ISO, SOX, COBIT, HIPAA, PCI-DSS, and GDPR"@en ;
-      skos:prefLabel "Regulatory standards and regulations including ISO, SOX, COBIT, HIPAA, PCI-DSS, and GDPR"@en ;
-      skos:definition "Knowledge of regulatory standards and regulations such as ISO, Sarbanes-Oxley, COBIT, HIPAA, PCI-DSS, and GDPR."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Regulatory standards and regulations × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Regulatory standards and regulations. For example, ISO (International Organization for Standardization), SarbanesOxley Act (SOX), Control Objectives for Information and Related Technologies (COBIT), HIPAA (Health Insurance Portability and Accountability Act), PCI-DSS (The Payment Card Industry Data Security Standard), GDPR (General Data Protection Regulation); source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RegulatoryStandardsAndRegulations ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Regulatory standards and regulations × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_6 .
 
-  is2020k:ThreatsVulnerabilitiesAndRisks
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Potential threats, vulnerabilities, and risks associated with an information technology system"@en ;
-      skos:prefLabel "Potential threats, vulnerabilities, and risks associated with an information technology system"@en ;
-      skos:definition "Knowledge of potential threats, vulnerabilities, and risks associated with an information technology system."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Threats vulnerabilities and risks × Understanding"@en ;
+    dcterms:description "Source knowledge element: Potential threats, vulnerabilities, and risks associated with an information technology system; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ThreatsVulnerabilitiesAndRisks ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Threats vulnerabilities and risks × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_7 .
 
-  is2020k:ControlsForReducingOrEliminatingRisk
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Controls for reducing or eliminating risk"@en ;
-      skos:prefLabel "Controls for reducing or eliminating risk"@en ;
-      skos:definition "Knowledge of controls for reducing or eliminating risk."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Controls for risk reduction × Understanding"@en ;
+    dcterms:description "Source knowledge element: Controls for reducing or eliminating risk; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ControlsForReducingOrEliminatingRisk ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Controls for risk reduction × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_7 .
 
-  is2020k:RiskManagementIdentifyingAndAssessing
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Risk Management: identifying and assessing risk"@en ;
-      skos:prefLabel "Risk Management: identifying and assessing risk"@en ;
-      skos:definition "Knowledge of risk management focused on identifying and assessing risk."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Risk management × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Risk Management: identifying and assessing risk; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RiskManagementIdentifyingAndAssessing ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Risk management × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_7 .
 
-  is2020k:RiskMitigationReducingRisk
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Risk Mitigation: steps to reduce risk to an acceptable level"@en ;
-      skos:prefLabel "Risk Mitigation: steps to reduce risk to an acceptable level"@en ;
-      skos:definition "Knowledge of risk mitigation steps used to reduce risk to an acceptable level."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_7_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Risk mitigation × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Risk Mitigation: steps to reduce risk to an acceptable level; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RiskMitigationReducingRisk ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Risk mitigation × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_7 .
 
-  is2020k:ProcurementProcessesAndConfidentiality
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Procurement processes and confidentiality"@en ;
-      skos:prefLabel "Procurement processes and confidentiality"@en ;
-      skos:definition "Knowledge of procurement processes and confidentiality."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Procurement processes and confidentiality × Remembering"@en ;
+    dcterms:description "Source knowledge element: Procurement processes and confidentiality; source skill-level cell: 1 – Remember."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProcurementProcessesAndConfidentiality ;
+    ontoksd:hasSkillLevel bloom:Remembering ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Procurement processes and confidentiality × Remembering"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_8 .
 
-  is2020k:DelegationOfPurchasingAuthorityLevels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Delegation of purchasing authority levels"@en ;
-      skos:prefLabel "Delegation of purchasing authority levels"@en ;
-      skos:definition "Knowledge of delegation of purchasing authority levels."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Purchasing authority delegation × Applying"@en ;
+    dcterms:description "Source knowledge element: Delegation of purchasing authority levels; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DelegationOfPurchasingAuthorityLevels ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Purchasing authority delegation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_8 .
 
-  is2020k:BidsProposalsAndRFP
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Bids, proposals and RFP forms and processes"@en ;
-      skos:prefLabel "Bids, proposals and RFP forms and processes"@en ;
-      skos:definition "Knowledge of bids, proposals, and RFP forms and processes."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_8_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Bids proposals and RFP × Applying"@en ;
+    dcterms:description "Source knowledge element: Bids, proposals and RFP forms and processes; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BidsProposalsAndRFP ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Bids proposals and RFP × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_8 .
 
-  is2020k:NonDisclosureAgreements
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Non-disclosure agreements (NDA)"@en ;
-      skos:prefLabel "Non-disclosure agreements (NDA)"@en ;
-      skos:definition "Knowledge of non-disclosure agreements."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_8_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "NDA × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Non-disclosure agreements (NDA); source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NonDisclosureAgreements ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "NDA × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_8 .
 
-  is2020k:SpecificationsAndRequirements
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Specifications and requirements"@en ;
-      skos:prefLabel "Specifications and requirements"@en ;
-      skos:definition "Knowledge of specifications and requirements used in IT procurement and contracting."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_8_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Specifications and requirements × Creating"@en ;
+    dcterms:description "Source knowledge element: Specifications and requirements.; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SpecificationsAndRequirements ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Specifications and requirements × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_8 .
 
-  is2020k:MaintenanceAndSupportContracts
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Maintenance and support contracts"@en ;
-      skos:prefLabel "Maintenance and support contracts"@en ;
-      skos:definition "Knowledge of maintenance and support contracts."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_8_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Maintenance and support contracts × Creating"@en ;
+    dcterms:description "Source knowledge element: Maintenance and support contracts.; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MaintenanceAndSupportContracts ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Maintenance and support contracts × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_8 .
 
-  is2020k:TalentAcquisition
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Talent acquisition: defining, identifying, and attracting appropriate IT skills and dispositions to hire the right person from the start"@en ;
-      skos:prefLabel "Talent acquisition: defining, identifying, and attracting appropriate IT skills and dispositions to hire the right person from the start"@en ;
-      skos:definition "Knowledge of talent acquisition through defining, identifying, and attracting appropriate IT skills and dispositions."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_9_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Talent acquisition × Applying"@en ;
+    dcterms:description "Source knowledge element: Talent acquisition: defining, identifying, and attracting appropriate IT skills and dispositions to hire the right person from the start; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TalentAcquisition ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Talent acquisition × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_9 .
 
-  is2020k:WorkforceDevelopmentAndTraining
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Workforce development and training"@en ;
-      skos:prefLabel "Workforce development and training"@en ;
-      skos:definition "Knowledge of workforce development and training, such as in-house workshops, external bootcamps, and employee education."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_9_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Workforce development and training × Applying"@en ;
+    dcterms:description "Source knowledge element: Workforce development and training (e.g., in-house workshops, external bootcamps and employee education); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WorkforceDevelopmentAndTraining ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Workforce development and training × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_9 .
 
-  is2020k:ITTalentRetention
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IT talent retention; creating policies for salaries and benefits, providing appropriate career path development, matching employee skills with organizational needs"@en ;
-      skos:prefLabel "IT talent retention; creating policies for salaries and benefits, providing appropriate career path development, matching employee skills with organizational needs"@en ;
-      skos:definition "Knowledge of IT talent retention through salary and benefits policies, career path development, and matching employee skills with organizational needs."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISMS_9_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IT talent retention × Applying"@en ;
+    dcterms:description "Source knowledge element: IT talent retention; creating policies for salaries and benefits, providing appropriate career path development, matching employee skills with organizational needs; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ITTalentRetention ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IT talent retention × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISMS_9 .
 
-  is2020k:ITIL
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IT Infrastructure Library (ITIL)"@en ;
-      skos:prefLabel "IT Infrastructure Library (ITIL)"@en ;
-      skos:definition "Knowledge of the IT Infrastructure Library framework."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISMS_10 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply leading service management frameworks, such as ITIL and CMMI"@en ;
+    dcterms:identifier "ISMS-10"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:professional,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:CMMI,
+        is2020k:ITIL ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_10_01,
+        is2020c:KS_ISMS_10_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply leading service management frameworks, such as ITIL and CMMI"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 10"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_10 .
 
-  is2020k:CMMI
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Capability Maturity Model Integration (CMMI)"@en ;
-      skos:prefLabel "Capability Maturity Model Integration (CMMI)"@en ;
-      skos:definition "Knowledge of Capability Maturity Model Integration."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISMS_11 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify commonly used governance frameworks, such as COBIT and TOGAF, to align IS with organizational requirements"@en ;
+    dcterms:identifier "ISMS-11"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:COBIT,
+        is2020k:TOGAF ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_11_01,
+        is2020c:KS_ISMS_11_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Identify commonly used governance frameworks, such as COBIT and TOGAF, to align IS with organizational requirements."@en ;
+    skos:prefLabel "IS Management and Strategy Competency 11"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_11 .
 
-  is2020k:COBIT
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Control Objectives for Information and Related Technologies (COBIT)"@en ;
-      skos:prefLabel "Control Objectives for Information and Related Technologies (COBIT)"@en ;
-      skos:definition "Knowledge of the COBIT governance framework."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISMS_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Ensure operational efficiency and effectiveness in service delivery of organizational information"@en ;
+    dcterms:identifier "ISMS-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:EffectivenessInITServiceDelivery,
+        is2020k:EfficiencyInITServiceDelivery ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_2_01,
+        is2020c:KS_ISMS_2_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Ensure operational efficiency and effectiveness in service delivery of organizational information"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_2 .
 
-  is2020k:TOGAF
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Open Group Architecture Framework (TOGAF)"@en ;
-      skos:prefLabel "Open Group Architecture Framework (TOGAF)"@en ;
-      skos:definition "Knowledge of the TOGAF governance and architecture framework."@en ;
-      skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Source_ISMS_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 161 (PDF page 162)."@en ;
+    dcterms:description "Competency: Ensure organizational information systems comply with policies, applicable laws, and regulations Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISMS-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:Competence_ISMS_1
-      a ontoksd:Competence ;
-      rdfs:label "Apply professional managerial skills to design and manage an effective IS organization"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 1"@en ;
-      skos:definition "Apply professional managerial skills to design and manage an effective IS organization."@en ;
-      dcterms:identifier "ISMS-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ConceptualSkills , is2020k:InterpersonalSkills , is2020k:ManagementSkills ;
-      ontoksd:hasDisposition ontoksd:collaborative , ontoksd:professional , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_1_01 , is2020c:KS_ISMS_1_02 , is2020c:KS_ISMS_1_03 .
+is2020k:AdministrativeOversightAndAccountability a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Administrative oversight and accountability best practices"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of best practices for administrative oversight and accountability."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Administrative oversight and accountability best practices"@en .
 
-  is2020c:Competence_ISMS_2
-      a ontoksd:Competence ;
-      rdfs:label "Ensure operational efficiency and effectiveness in service delivery of organizational information"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 2"@en ;
-      skos:definition "Ensure operational efficiency and effectiveness in service delivery of organizational information."@en ;
-      dcterms:identifier "ISMS-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:EfficiencyInITServiceDelivery , is2020k:EffectivenessInITServiceDelivery ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_2_01 , is2020c:KS_ISMS_2_02 .
+is2020k:BidsProposalsAndRFP a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Bids, proposals and RFP forms and processes"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of bids, proposals, and RFP forms and processes."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Bids, proposals and RFP forms and processes"@en .
 
-  is2020c:Competence_ISMS_3
-      a ontoksd:Competence ;
-      rdfs:label "Manage the information resources in coordination with line management"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 3"@en ;
-      skos:definition "Manage the information resources in coordination with line management."@en ;
-      dcterms:identifier "ISMS-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:InformationManagementTechniques , is2020k:PoliciesAndPracticesForInformationResources , is2020k:TechnologicalSolutionsForCompetitiveAdvantage ;
-      ontoksd:hasDisposition ontoksd:collaborative , ontoksd:adaptable , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_3_01 , is2020c:KS_ISMS_3_02 , is2020c:KS_ISMS_3_03 .
+is2020k:CMMI a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Capability Maturity Model Integration (CMMI)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of Capability Maturity Model Integration."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Capability Maturity Model Integration (CMMI)"@en .
 
-  is2020c:Competence_ISMS_4
-      a ontoksd:Competence ;
-      rdfs:label "Create and manage the oversight mechanisms by which an organization evaluates, directs, and monitors organizational information technology - managing decision rights and organizational information technology decision-making practices"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 4"@en ;
-      skos:definition "Create and manage the oversight mechanisms by which an organization evaluates, directs, and monitors organizational information technology, including decision rights and IT decision-making practices."@en ;
-      dcterms:identifier "ISMS-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:AdministrativeOversightAndAccountability , is2020k:DecisionRightsAndDecisionMakingPractices , is2020k:EvaluationAndMonitoringTechniquesForITOperations ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:proactive , ontoksd:collaborative ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_4_01 , is2020c:KS_ISMS_4_02 , is2020c:KS_ISMS_4_03 .
+is2020k:COBIT a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Control Objectives for Information and Related Technologies (COBIT)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the COBIT governance framework."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Control Objectives for Information and Related Technologies (COBIT)"@en .
 
-  is2020c:Competence_ISMS_5
-      a ontoksd:Competence ;
-      rdfs:label "Implement strategic plans that have been created for the delivery and use of organizational information systems"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 5"@en ;
-      skos:definition "Implement strategic plans created for the delivery and use of organizational information systems."@en ;
-      dcterms:identifier "ISMS-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:SystematicProcessForLongRangeISPlans , is2020k:SequenceOfStepsInISStrategicPlanning , is2020k:StrategicPlanningMethodologiesTechniquesAndTools ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_5_01 , is2020c:KS_ISMS_5_02 , is2020c:KS_ISMS_5_03 .
+is2020k:ConceptualSkills a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Conceptual skills in the ability for abstract thinking and turning an entire concept into a creative solution"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of conceptual skills involving abstract thinking and turning an entire concept into a creative solution."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Conceptual skills in the ability for abstract thinking and turning an entire concept into a creative solution"@en .
 
-  is2020c:Competence_ISMS_6
-      a ontoksd:Competence ;
-      rdfs:label "Ensure organizational information systems comply with policies, applicable laws, and regulations"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 6"@en ;
-      skos:definition "Ensure organizational information systems comply with policies, applicable laws, and regulations."@en ;
-      dcterms:identifier "ISMS-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:RegulatoryStandardsAndRegulations ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_6_01 .
+is2020k:ControlsForReducingOrEliminatingRisk a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Controls for reducing or eliminating risk"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of controls for reducing or eliminating risk."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Controls for reducing or eliminating risk"@en .
 
-  is2020c:Competence_ISMS_7
-      a ontoksd:Competence ;
-      rdfs:label "Manage organizational risk and develop risk mitigation plans"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 7"@en ;
-      skos:definition "Manage organizational risk and develop risk mitigation plans."@en ;
-      dcterms:identifier "ISMS-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ThreatsVulnerabilitiesAndRisks , is2020k:ControlsForReducingOrEliminatingRisk , is2020k:RiskManagementIdentifyingAndAssessing , is2020k:RiskMitigationReducingRisk ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:purposeDriven , ontoksd:proactive ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_7_01 , is2020c:KS_ISMS_7_02 , is2020c:KS_ISMS_7_03 , is2020c:KS_ISMS_7_04 .
+is2020k:DecisionRightsAndDecisionMakingPractices a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Decision rights and decision-making practices"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of decision rights and IT decision-making practices."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Decision rights and decision-making practices"@en .
 
-  is2020c:Competence_ISMS_8
-      a ontoksd:Competence ;
-      rdfs:label "Create IT procurement policies and understand and negotiate IT contracts"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 8"@en ;
-      skos:definition "Create IT procurement policies and understand and negotiate IT contracts."@en ;
-      dcterms:identifier "ISMS-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ProcurementProcessesAndConfidentiality , is2020k:DelegationOfPurchasingAuthorityLevels , is2020k:BidsProposalsAndRFP , is2020k:NonDisclosureAgreements , is2020k:SpecificationsAndRequirements , is2020k:MaintenanceAndSupportContracts ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_8_01 , is2020c:KS_ISMS_8_02 , is2020c:KS_ISMS_8_03 , is2020c:KS_ISMS_8_04 , is2020c:KS_ISMS_8_05 , is2020c:KS_ISMS_8_06 .
+is2020k:DelegationOfPurchasingAuthorityLevels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Delegation of purchasing authority levels"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of delegation of purchasing authority levels."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Delegation of purchasing authority levels"@en .
 
-  is2020c:Competence_ISMS_9
-      a ontoksd:Competence ;
-      rdfs:label "Develop plans for workforce development, training, talent acquisition, and employee retention"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 9"@en ;
-      skos:definition "Develop plans for workforce development, training, talent acquisition, and employee retention."@en ;
-      dcterms:identifier "ISMS-9"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:TalentAcquisition , is2020k:WorkforceDevelopmentAndTraining , is2020k:ITTalentRetention ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_9_01 , is2020c:KS_ISMS_9_02 , is2020c:KS_ISMS_9_03 .
+is2020k:EffectivenessInITServiceDelivery a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Effectiveness: best operating practices for resource optimization in delivering organization IT strategic goals"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of effectiveness as best operating practices for resource optimization in delivering organizational IT strategic goals."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Effectiveness: best operating practices for resource optimization in delivering organization IT strategic goals"@en .
 
-  is2020c:Competence_ISMS_10
-      a ontoksd:Competence ;
-      rdfs:label "Apply leading service management frameworks, such as ITIL and CMMI"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 10"@en ;
-      skos:definition "Apply leading service management frameworks such as ITIL and CMMI."@en ;
-      dcterms:identifier "ISMS-10"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:ITIL , is2020k:CMMI ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:inventive , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_10_01 , is2020c:KS_ISMS_10_02 .
+is2020k:EfficiencyInITServiceDelivery a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Efficiency: an enterprise’s capability to deliver IT services to its customers using the most cost-efficient methods with the highest quality of service"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of efficiency as the enterprise capability to deliver IT services cost-efficiently with high quality of service."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Efficiency: an enterprise’s capability to deliver IT services to its customers using the most cost-efficient methods with the highest quality of service"@en .
 
-  is2020c:Competence_ISMS_11
-      a ontoksd:Competence ;
-      rdfs:label "Identify commonly used governance frameworks, such as COBIT and TOGAF, to align IS with organizational requirements"@en ;
-      skos:prefLabel "IS Management and Strategy Competency 11"@en ;
-      skos:definition "Identify commonly used governance frameworks such as COBIT and TOGAF to align IS with organizational requirements."@en ;
-      dcterms:identifier "ISMS-11"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge is2020k:COBIT , is2020k:TOGAF ;
-      ontoksd:hasDisposition ontoksd:professional , ontoksd:collaborative , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_11_01 , is2020c:KS_ISMS_11_02 .
+is2020k:EvaluationAndMonitoringTechniquesForITOperations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Evaluation and monitoring techniques for IT operations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of evaluation and monitoring techniques for IT operations."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Evaluation and monitoring techniques for IT operations"@en .
 
-  is2020c:KS_ISMS_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Conceptual skills × Understanding"@en ; skos:prefLabel "Conceptual skills × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ConceptualSkills ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_1 .
-  is2020c:KS_ISMS_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Interpersonal skills × Understanding"@en ; skos:prefLabel "Interpersonal skills × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:InterpersonalSkills ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_1 .
-  is2020c:KS_ISMS_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Management skills × Applying"@en ; skos:prefLabel "Management skills × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ManagementSkills ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_1 .
+is2020k:ITIL a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IT Infrastructure Library (ITIL)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the IT Infrastructure Library framework."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "IT Infrastructure Library (ITIL)"@en .
 
-  is2020c:KS_ISMS_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Efficiency in service delivery × Evaluating"@en ; skos:prefLabel "Efficiency in service delivery × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:EfficiencyInITServiceDelivery ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_2 .
-  is2020c:KS_ISMS_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Effectiveness in service delivery × Evaluating"@en ; skos:prefLabel "Effectiveness in service delivery × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:EffectivenessInITServiceDelivery ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_2 .
+is2020k:ITTalentRetention a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IT talent retention; creating policies for salaries and benefits, providing appropriate career path development, matching employee skills with organizational needs"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of IT talent retention through salary and benefits policies, career path development, and matching employee skills with organizational needs."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "IT talent retention; creating policies for salaries and benefits, providing appropriate career path development, matching employee skills with organizational needs"@en .
 
-  is2020c:KS_ISMS_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Information management techniques × Applying"@en ; skos:prefLabel "Information management techniques × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:InformationManagementTechniques ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_3 .
-  is2020c:KS_ISMS_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Policies and practices for information resources × Creating"@en ; skos:prefLabel "Policies and practices for information resources × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:PoliciesAndPracticesForInformationResources ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_3 .
-  is2020c:KS_ISMS_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Technological solutions for competitive advantage × Creating"@en ; skos:prefLabel "Technological solutions for competitive advantage × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:TechnologicalSolutionsForCompetitiveAdvantage ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_3 .
+is2020k:InformationManagementTechniques a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Information management techniques used to add value to products and services utilizing appropriate organizational data"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of information management techniques used to add value to products and services through appropriate organizational data."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Information management techniques used to add value to products and services utilizing appropriate organizational data"@en .
 
-  is2020c:KS_ISMS_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Administrative oversight and accountability × Applying"@en ; skos:prefLabel "Administrative oversight and accountability × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AdministrativeOversightAndAccountability ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_4 .
-  is2020c:KS_ISMS_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Decision rights and decision-making practices × Applying"@en ; skos:prefLabel "Decision rights and decision-making practices × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DecisionRightsAndDecisionMakingPractices ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_4 .
-  is2020c:KS_ISMS_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Evaluation and monitoring techniques × Evaluating"@en ; skos:prefLabel "Evaluation and monitoring techniques × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:EvaluationAndMonitoringTechniquesForITOperations ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_4 .
+is2020k:InterpersonalSkills a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Interpersonal skills in leading teams and workgroups"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of interpersonal skills for leading teams and workgroups."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Interpersonal skills in leading teams and workgroups"@en .
 
-  is2020c:KS_ISMS_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Long-range IS plans process × Understanding"@en ; skos:prefLabel "Long-range IS plans process × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SystematicProcessForLongRangeISPlans ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_5 .
-  is2020c:KS_ISMS_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "IS strategic planning steps × Understanding"@en ; skos:prefLabel "IS strategic planning steps × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:SequenceOfStepsInISStrategicPlanning ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_5 .
-  is2020c:KS_ISMS_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Strategic planning methods and tools × Applying"@en ; skos:prefLabel "Strategic planning methods and tools × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:StrategicPlanningMethodologiesTechniquesAndTools ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_5 .
+is2020k:MaintenanceAndSupportContracts a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Maintenance and support contracts"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of maintenance and support contracts."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Maintenance and support contracts"@en .
 
-  is2020c:KS_ISMS_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Regulatory standards and regulations × Evaluating"@en ; skos:prefLabel "Regulatory standards and regulations × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:RegulatoryStandardsAndRegulations ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_6 .
+is2020k:ManagementSkills a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Management skills including planning, communicating, problem-solving, delegating, and making decisions"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of management skills including planning, communicating, problem-solving, delegating, and decision making."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Management skills including planning, communicating, problem-solving, delegating, and making decisions"@en .
 
-  is2020c:KS_ISMS_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Threats vulnerabilities and risks × Understanding"@en ; skos:prefLabel "Threats vulnerabilities and risks × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ThreatsVulnerabilitiesAndRisks ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 .
-  is2020c:KS_ISMS_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Controls for risk reduction × Understanding"@en ; skos:prefLabel "Controls for risk reduction × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ControlsForReducingOrEliminatingRisk ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 .
-  is2020c:KS_ISMS_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Risk management × Evaluating"@en ; skos:prefLabel "Risk management × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:RiskManagementIdentifyingAndAssessing ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 .
-  is2020c:KS_ISMS_7_04 a ontoksd:KnowledgeSkill ; rdfs:label "Risk mitigation × Evaluating"@en ; skos:prefLabel "Risk mitigation × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:RiskMitigationReducingRisk ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_7 .
+is2020k:NonDisclosureAgreements a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Non-disclosure agreements (NDA)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of non-disclosure agreements."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Non-disclosure agreements (NDA)"@en .
 
-  is2020c:KS_ISMS_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Procurement processes and confidentiality × Remembering"@en ; skos:prefLabel "Procurement processes and confidentiality × Remembering"@en ; ontoksd:hasKnowledgeComponent is2020k:ProcurementProcessesAndConfidentiality ; ontoksd:hasRequiredSkillLevel bloom:Remembering ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 .
-  is2020c:KS_ISMS_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "Purchasing authority delegation × Applying"@en ; skos:prefLabel "Purchasing authority delegation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DelegationOfPurchasingAuthorityLevels ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 .
-  is2020c:KS_ISMS_8_03 a ontoksd:KnowledgeSkill ; rdfs:label "Bids proposals and RFP × Applying"@en ; skos:prefLabel "Bids proposals and RFP × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BidsProposalsAndRFP ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 .
-  is2020c:KS_ISMS_8_04 a ontoksd:KnowledgeSkill ; rdfs:label "NDA × Analyzing"@en ; skos:prefLabel "NDA × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:NonDisclosureAgreements ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 .
-  is2020c:KS_ISMS_8_05 a ontoksd:KnowledgeSkill ; rdfs:label "Specifications and requirements × Creating"@en ; skos:prefLabel "Specifications and requirements × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:SpecificationsAndRequirements ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 .
-  is2020c:KS_ISMS_8_06 a ontoksd:KnowledgeSkill ; rdfs:label "Maintenance and support contracts × Creating"@en ; skos:prefLabel "Maintenance and support contracts × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:MaintenanceAndSupportContracts ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_8 .
+is2020k:PoliciesAndPracticesForInformationResources a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Policies and practices for the use of information resources"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of policies and practices governing the use of information resources."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Policies and practices for the use of information resources"@en .
 
-  is2020c:KS_ISMS_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Talent acquisition × Applying"@en ; skos:prefLabel "Talent acquisition × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:TalentAcquisition ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_9 .
-  is2020c:KS_ISMS_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Workforce development and training × Applying"@en ; skos:prefLabel "Workforce development and training × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:WorkforceDevelopmentAndTraining ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_9 .
-  is2020c:KS_ISMS_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "IT talent retention × Applying"@en ; skos:prefLabel "IT talent retention × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ITTalentRetention ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_9 .
+is2020k:ProcurementProcessesAndConfidentiality a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Procurement processes and confidentiality"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of procurement processes and confidentiality."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Procurement processes and confidentiality"@en .
 
-  is2020c:KS_ISMS_10_01 a ontoksd:KnowledgeSkill ; rdfs:label "ITIL × Applying"@en ; skos:prefLabel "ITIL × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ITIL ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_10 .
-  is2020c:KS_ISMS_10_02 a ontoksd:KnowledgeSkill ; rdfs:label "CMMI × Applying"@en ; skos:prefLabel "CMMI × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CMMI ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_10 .
+is2020k:RegulatoryStandardsAndRegulations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Regulatory standards and regulations including ISO, SOX, COBIT, HIPAA, PCI-DSS, and GDPR"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of regulatory standards and regulations such as ISO, Sarbanes-Oxley, COBIT, HIPAA, PCI-DSS, and GDPR."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Regulatory standards and regulations including ISO, SOX, COBIT, HIPAA, PCI-DSS, and GDPR"@en .
 
-  is2020c:KS_ISMS_11_01 a ontoksd:KnowledgeSkill ; rdfs:label "COBIT × Applying"@en ; skos:prefLabel "COBIT × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:COBIT ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_11 .
-  is2020c:KS_ISMS_11_02 a ontoksd:KnowledgeSkill ; rdfs:label "TOGAF × Applying"@en ; skos:prefLabel "TOGAF × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:TOGAF ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISMS_11 .
+is2020k:RiskManagementIdentifyingAndAssessing a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Risk Management: identifying and assessing risk"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of risk management focused on identifying and assessing risk."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Risk Management: identifying and assessing risk"@en .
 
+is2020k:RiskMitigationReducingRisk a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Risk Mitigation: steps to reduce risk to an acceptable level"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of risk mitigation steps used to reduce risk to an acceptable level."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Risk Mitigation: steps to reduce risk to an acceptable level"@en .
+
+is2020k:SequenceOfStepsInISStrategicPlanning a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Sequence of steps in planning, designing, and communicating the IS strategic plans"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the sequence of steps in planning, designing, and communicating IS strategic plans."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Sequence of steps in planning, designing, and communicating the IS strategic plans"@en .
+
+is2020k:SpecificationsAndRequirements a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Specifications and requirements"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of specifications and requirements used in IT procurement and contracting."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Specifications and requirements"@en .
+
+is2020k:StrategicPlanningMethodologiesTechniquesAndTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Methodologies, techniques, and tools used in applying strategic planning"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methodologies, techniques, and tools used in strategic planning."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Methodologies, techniques, and tools used in applying strategic planning"@en .
+
+is2020k:SystematicProcessForLongRangeISPlans a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Systematic process for creating long-range plans for IS to meet the organization's overall strategic plan"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the systematic process for creating long-range IS plans aligned with the organization's strategic plan."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Systematic process for creating long-range plans for IS to meet the organization's overall strategic plan"@en .
+
+is2020k:TOGAF a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Open Group Architecture Framework (TOGAF)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the TOGAF governance and architecture framework."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Open Group Architecture Framework (TOGAF)"@en .
+
+is2020k:TalentAcquisition a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Talent acquisition: defining, identifying, and attracting appropriate IT skills and dispositions to hire the right person from the start"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of talent acquisition through defining, identifying, and attracting appropriate IT skills and dispositions."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Talent acquisition: defining, identifying, and attracting appropriate IT skills and dispositions to hire the right person from the start"@en .
+
+is2020k:TechnologicalSolutionsForCompetitiveAdvantage a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Appropriate technological solutions for increasing competitive advantages in alignment with enterprise strategic goals"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of appropriate technological solutions for increasing competitive advantage in alignment with enterprise strategic goals."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Appropriate technological solutions for increasing competitive advantages in alignment with enterprise strategic goals"@en .
+
+is2020k:ThreatsVulnerabilitiesAndRisks a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Potential threats, vulnerabilities, and risks associated with an information technology system"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of potential threats, vulnerabilities, and risks associated with an information technology system."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Potential threats, vulnerabilities, and risks associated with an information technology system"@en .
+
+is2020k:WorkforceDevelopmentAndTraining a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Workforce development and training"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of workforce development and training, such as in-house workshops, external bootcamps, and employee education."@en ;
+    skos:inScheme is2020k:IS2020ISManagementAndStrategyKnowledgeScheme ;
+    skos:prefLabel "Workforce development and training"@en .
+
+is2020c:Competence_ISMS_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply professional managerial skills to design and manage an effective IS organization"@en ;
+    dcterms:identifier "ISMS-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ConceptualSkills,
+        is2020k:InterpersonalSkills,
+        is2020k:ManagementSkills ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_1_01,
+        is2020c:KS_ISMS_1_02,
+        is2020c:KS_ISMS_1_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply professional managerial skills to design and manage an effective IS organization"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_1 .
+
+is2020c:Competence_ISMS_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Manage the information resources in coordination with line management"@en ;
+    dcterms:identifier "ISMS-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:adaptable,
+        ontoksd:collaborative,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:InformationManagementTechniques,
+        is2020k:PoliciesAndPracticesForInformationResources,
+        is2020k:TechnologicalSolutionsForCompetitiveAdvantage ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_3_01,
+        is2020c:KS_ISMS_3_02,
+        is2020c:KS_ISMS_3_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Manage the information resources in coordination with line management"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_3 .
+
+is2020c:Competence_ISMS_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create and manage the oversight mechanisms by which an organization evaluates, directs, and monitors organizational information technology - managing decision rights and organizational information technology decision-making practices"@en ;
+    dcterms:identifier "ISMS-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:proactive,
+        ontoksd:professional ;
+    ontoksd:hasKnowledge is2020k:AdministrativeOversightAndAccountability,
+        is2020k:DecisionRightsAndDecisionMakingPractices,
+        is2020k:EvaluationAndMonitoringTechniquesForITOperations ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_4_01,
+        is2020c:KS_ISMS_4_02,
+        is2020c:KS_ISMS_4_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Create and manage the oversight mechanisms by which an organization evaluates, directs, and monitors organizational information technology - managing decision rights and organizational information technology decision-making practices"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_4 .
+
+is2020c:Competence_ISMS_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Implement strategic plans that have been created for the delivery and use of organizational information systems"@en ;
+    dcterms:identifier "ISMS-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:SequenceOfStepsInISStrategicPlanning,
+        is2020k:StrategicPlanningMethodologiesTechniquesAndTools,
+        is2020k:SystematicProcessForLongRangeISPlans ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_5_01,
+        is2020c:KS_ISMS_5_02,
+        is2020c:KS_ISMS_5_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Implement strategic plans that have been created for the delivery and use of organizational information systems"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_5 .
+
+is2020c:Competence_ISMS_9 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Develop plans for workforce development, training, talent acquisition, and employee retention"@en ;
+    dcterms:identifier "ISMS-9"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:ITTalentRetention,
+        is2020k:TalentAcquisition,
+        is2020k:WorkforceDevelopmentAndTraining ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_9_01,
+        is2020c:KS_ISMS_9_02,
+        is2020c:KS_ISMS_9_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Develop plans for workforce development, training, talent acquisition, and employee retention"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 9"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_9 .
+
+is2020c:Source_ISMS_10 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 163 (PDF page 164)."@en ;
+    dcterms:description "Competency: Apply leading service management frameworks, such as ITIL and CMMI Key dispositions: Professional, Inventive, Self-Directed"@en ;
+    dcterms:identifier "ISMS-10"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_11 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 163 (PDF page 164)."@en ;
+    dcterms:description "Competency: Identify commonly used governance frameworks, such as COBIT and TOGAF, to align IS with organizational requirements. Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISMS-11"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 160 (PDF page 161)."@en ;
+    dcterms:description "Competency: Ensure operational efficiency and effectiveness in service delivery of organizational information Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISMS-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMS_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Manage organizational risk and develop risk mitigation plans"@en ;
+    dcterms:identifier "ISMS-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:proactive,
+        ontoksd:professional,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ControlsForReducingOrEliminatingRisk,
+        is2020k:RiskManagementIdentifyingAndAssessing,
+        is2020k:RiskMitigationReducingRisk,
+        is2020k:ThreatsVulnerabilitiesAndRisks ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_7_01,
+        is2020c:KS_ISMS_7_02,
+        is2020c:KS_ISMS_7_03,
+        is2020c:KS_ISMS_7_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Manage organizational risk and develop risk mitigation plans"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_7 .
+
+is2020c:Source_ISMS_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 159 (PDF page 160)."@en ;
+    dcterms:description "Competency: Apply professional managerial skills to design and manage an effective IS organization Key dispositions: Collaborative, Professional, Self-Directed"@en ;
+    dcterms:identifier "ISMS-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 160 (PDF page 161)."@en ;
+    dcterms:description "Competency: Manage the information resources in coordination with line management Key dispositions: Collaborative, Adaptable, Responsible"@en ;
+    dcterms:identifier "ISMS-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 160 (PDF page 161)."@en ;
+    dcterms:description "Competency: Create and manage the oversight mechanisms by which an organization evaluates, directs, and monitors organizational information technology - managing decision rights and organizational information technology decision-making practices Key dispositions: Professional, Proactive, Collaborative"@en ;
+    dcterms:identifier "ISMS-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 161 (PDF page 162)."@en ;
+    dcterms:description "Competency: Implement strategic plans that have been created for the delivery and use of organizational information systems Key dispositions: Professional, Collaborative, Self-Directed"@en ;
+    dcterms:identifier "ISMS-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_9 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 162 (PDF page 163)."@en ;
+    dcterms:description "Competency: Develop plans for workforce development, training, talent acquisition, and employee retention Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISMS-9"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISMS_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 161 (PDF page 162)."@en ;
+    dcterms:description "Competency: Manage organizational risk and develop risk mitigation plans Key dispositions: Professional, Purpose-driven, Proactive"@en ;
+    dcterms:identifier "ISMS-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISMS_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Create IT procurement policies and understand and negotiate IT contracts"@en ;
+    dcterms:identifier "ISMS-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledge is2020k:BidsProposalsAndRFP,
+        is2020k:DelegationOfPurchasingAuthorityLevels,
+        is2020k:MaintenanceAndSupportContracts,
+        is2020k:NonDisclosureAgreements,
+        is2020k:ProcurementProcessesAndConfidentiality,
+        is2020k:SpecificationsAndRequirements ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISMS_8_01,
+        is2020c:KS_ISMS_8_02,
+        is2020c:KS_ISMS_8_03,
+        is2020c:KS_ISMS_8_04,
+        is2020c:KS_ISMS_8_05,
+        is2020c:KS_ISMS_8_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Create IT procurement policies and understand and negotiate IT contracts"@en ;
+    skos:prefLabel "IS Management and Strategy Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISMS_8 .
+
+is2020c:Source_ISMS_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 162 (PDF page 163)."@en ;
+    dcterms:description "Competency: Create IT procurement policies and understand and negotiate IT contracts Key dispositions: Professional, Collaborative, Responsible"@en ;
+    dcterms:identifier "ISMS-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-is-management-and-strategy-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 IS Management and Strategy competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.5.2 Competency Area – IS Management and Strategy."@en .
+
+is2020k:IS2020ISManagementAndStrategyKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 IS Management and Strategy Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 IS Management and Strategy competency area."@en ;
+    skos:prefLabel "IS2020 IS Management and Strategy Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

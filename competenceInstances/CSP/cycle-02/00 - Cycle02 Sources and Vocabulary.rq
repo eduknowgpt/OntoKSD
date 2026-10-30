@@ -1,0 +1,196 @@
+# External CSP references, local knowledge and controlled vocabulary values. No source documents are bundled.
+# INSERT-only incremental cycle-02 instance data; see README.md for dependencies.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:CSPResource_JFLAP a ontoksd:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en .
+
+ontoksd:CSPResource_Logbook a ontoksd:EducationalResource ;
+    rdfs:label "Shared PBL logbook"@en .
+
+ontoksd:CSPResource_SBC a ontoksd:EducationalResource ;
+    rdfs:label "SBC article-format guidance"@en .
+
+ontoksd:CSPResource_Whiteboard a ontoksd:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en .
+
+ontoksd:Course_FormalLanguagesAndTheoryOfComputation a ontoksd:Course ;
+    rdfs:label "Introduction to Formal Languages and Theory of Computation"@en ;
+    dcterms:description "Curricular component documented by the UFBA syllabus. The selected cycle-02 instructional units are aggregated here; this does not assert complete course coverage or a semester-specific course offering."@en ;
+    ontoksd:hasInstructionalUnit ontoksd:AS_Task201,
+        ontoksd:AS_Task202,
+        ontoksd:AS_Task203,
+        ontoksd:AS_Task204,
+        ontoksd:LT_Task201,
+        ontoksd:LT_Task202,
+        ontoksd:LT_Task203,
+        ontoksd:LT_Task204 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/syllabus/theoryOfComputation.md> .
+
+ontoksd:Knowledge_C13_01_FormalReasoningInComputationTheory a ontoksd:Knowledge ;
+    rdfs:label "Formal Reasoning in Computation Theory"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Grammatical derivations, symbolic rules and automaton transitions as a basis for explaining, specifying and checking structured computational behavior."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+ontoksd:Knowledge_C15_Computability a ontoksd:Knowledge ;
+    rdfs:label "Computability"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Conceptual distinctions among decidable, semi-decidable and undecidable problems, and limits on algorithmic automation."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:Knowledge_C15_HaltingProblem a ontoksd:Knowledge ;
+    rdfs:label "Halting Problem"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "The impossibility of a general algorithm that decides whether an arbitrary program halts on a given input, and its implications for automated program analysis."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:Knowledge_C16_ComputabilityTheory a ontoksd:Knowledge ;
+    rdfs:label "Computability Theory"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Conceptual foundations for interpreting decidability, semi-decidability and computational-system limitations without requiring formal proofs."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:Knowledge_C16_UniversalTuringMachine a ontoksd:Knowledge ;
+    rdfs:label "Universal Turing Machine"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "The conceptual notion of programmable universal computation and simulation of other machines, used as explanatory background for system capabilities and limitations."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:amConceptual a ontoksd:ActivationMode,
+        owl:NamedIndividual ;
+    rdfs:label "conceptual"@en ;
+    skos:definition "A contextual activation mode emphasizing interpretation of concepts and symbolic/structural relationships without requiring a separate constructed artifact."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
+
+ontoksd:cspAnalyticalRigor a ontoksd:Disposition ;
+    rdfs:label "Analytical Rigor"@en ;
+    skos:definition "An orientation toward precision and correctness when interpreting formal grammatical descriptions, as specified for C13.01."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Competency-Lifecycle.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:aad52723e35f62484d81b7e2f14c738a3f647fe984abe7a4f67ca39863423e43" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Competency-Lifecycle.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Competency-Registry.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:e365c514eb9bf9e6620700b085af3f6dfd07f03af6853f19fde1509deff8433e" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Competency-Registry.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Competency-Task-Matrix.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:d64ad36d72cdd5b3dccb315064802246a30e302c768f46e167b19d8638733c07" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Competency-Task-Matrix.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Data-Dictionary.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:fae1e9515fd3ddd5480c4c748edf44086d15057e49d5a993548982dc2877d335" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Data-Dictionary.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/CSP-Task-Competency-Mapping.csv> a prov:Entity ;
+    dcterms:identifier "archive-sha256:40a374fbddfc1bb2361d1928b40d16407fdb083b21741aea1a5e58841909604c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "CSP-Task-Competency-Mapping.csv"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/README.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:0e3c2a5caf2136765a51cefbeae91c67affa5f5b8c923d4475e07f846fdfc487" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "README.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ab6b7e7a3c71370cce900405afd19fe62ebd296ba322adde0ca8229c232ade5b" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK201-CSP-Review-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:f03949b4279cf678202c1c3bf44d9bc85d8e66c341348085b9bcfaecf84edab1" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task201-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/Task201-DroneMonitoring.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:89d79bd230c2d6e3516f6979a7f4d17fa5f8d890ad61fdfc648a1b0de31d2065" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task201-DroneMonitoring.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:0c87f1d519f7ed06402a4da3345d214d0fa3ac42932df3c50d6eb5f6fff715dd" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK202-CSP-Review-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:197d5f537f24f6205b257758ba525efe6efbbc36e01f5a0b7dc73575f8ee729a" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task202-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/Task202-TeamControl.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:723bb21c5aea0343d67ffd3923aa81e06ec1d8efb5dc88581289169a51222dd6" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task202-TeamControl.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:f29329fa29a55fd53e7bc215056e91413a105f66bd7d51552cc114ab313b07d8" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK203-CSP-Adjustments.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:209d0519063a754335db506bfb6518337e309ac223a53058e9dd0debf9221f4c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK203-CSP-Review-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ec6e9c6172cf9e7faecb4c219a30ae5b7cdc7c43a5c199539431743395153a55" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task203-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:cce2ad1272a4fac4acb3be797a8f76741de34d3714a28d7207d3a7be8f624e30" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task203-ParkingControl.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSRP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:ce8dcbad1724d35908ee28707eddc853f2c6d1aac18de3e2bec7b3b84d98ff94" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK204-CSRP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-CSP-Report.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:614dc34b893a471ec108b8b5b7b676ada54b8eccdabaa4289674488050928dd3" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task204-CSP-Report.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/Task204-OnlineJudges.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:5a819a32f6d940df4a5bf3370ff3c1a6b8bf5b15cc316d2dcf4c5cf2b87a0937" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "Task204-OnlineJudges.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/syllabus/theoryOfComputation.pt.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:02bbd6dcc060889a4ffe0914700ec33bedf9d835ca88f8be05f8cb0078b89e94" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "theoryOfComputation.pt.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:47e5acc1aa7b580611f5dac0d09c13f42816772fed96e80a80d0c84a72c52446" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK201-CSP-Adjustment.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/syllabus/theoryOfComputation.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:5cfd5e845899beeeb45f19216d8a00df91d988fc23788a1566bc1adb1a42ff4c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "theoryOfComputation.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:86e1a6c5f159c07599297fc5975eac611a0cb9867a02a1888793c253773cfd9c" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK202-CSP-Adustments.md"@en .
+
+<https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:identifier "archive-sha256:90e27d240e9e4cf20995fbbebffb19e25038f9d56d65a131ddfe3a13fedcd450" ;
+    dcterms:isPartOf <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> ;
+    dcterms:title "TASK204-CSP-Adjustments.md"@en .
+}

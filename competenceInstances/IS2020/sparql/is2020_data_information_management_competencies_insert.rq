@@ -1,439 +1,510 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
+is2020c:KS_ISDIM_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Relations, tuples, fields, and relational modeling × Applying"@en ;
+    dcterms:description "Source knowledge element: Relations, tuples, and fields. Model data using tables, rows, columns, keys.; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RelationsTuplesFieldsAndRelationalModeling ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Relations, tuples, fields, and relational modeling × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_1 .
 
-  #################################################################
-  # Source markers and scheme
-  #################################################################
+is2020c:KS_ISDIM_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "User stories, business requirements, and SQL translation × Creating"@en ;
+    dcterms:description "Source knowledge element: User stories and business requirements. Translate user stories to SQL statements using (SELECT, FROM, WHERE, ORDER BY, DISTINCT, LIKE, BETWEEN, IN, JOIN, GROUP BY, HAVING, sub-queries, ANY, ALL, UNION).; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UserStoriesBusinessRequirementsAndSQLTranslation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "User stories, business requirements, and SQL translation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_1 .
 
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+is2020c:KS_ISDIM_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Integrity constraints × Applying"@en ;
+    dcterms:description "Source knowledge element: Integrity, entity, referential and check constraints; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IntegrityEntityReferentialAndCheckConstraints ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Integrity constraints × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_2 .
 
-  <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Data / Information Management competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.2.1 Competency Area – Data / Information Management."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Normalization and BCNF × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AnomaliesFunctionalDependenciesNormalizationNormalFormsAndBCNF ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Normalization and BCNF × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_2 .
 
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+is2020c:KS_ISDIM_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Conceptual, logical, and physical models × Creating"@en ;
+    dcterms:description "Source knowledge element: Conceptual, logical models, and physical models; Transform a conceptual model to a logical model and a logical model to a physical model; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConceptualLogicalPhysicalModelsAndTransformations ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Conceptual, logical, and physical models × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_2 .
 
-  is2020k:IS2020DataInformationManagementKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Data / Information Management Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Data / Information Management Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Data / Information Management competency area."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SQL procedural language × Creating"@en ;
+    dcterms:description "Source knowledge element: SQL procedural language; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SQLProceduralLanguage ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "SQL procedural language × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_3 .
 
-  #################################################################
-  # Knowledge elements
-  #################################################################
+is2020c:KS_ISDIM_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Functions and triggers × Creating"@en ;
+    dcterms:description "Source knowledge element: Functions and triggers; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FunctionsAndTriggers ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Functions and triggers × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_3 .
 
-  is2020k:RelationsTuplesFieldsAndRelationalModeling
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Relations, tuples, fields, and relational modeling with tables, rows, columns, and keys"@en ;
-      skos:prefLabel "Relations, tuples, fields, and relational modeling with tables, rows, columns, and keys"@en ;
-      skos:definition "Knowledge of relations, tuples, and fields, including modeling data using tables, rows, columns, and keys."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Views and authorization × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Views and authorization; source skill-level cell: 4 – Analysis."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ViewsAndAuthorization ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately. Source spelling Analysis is normalized to Analyzing."@en ;
+    skos:prefLabel "Views and authorization × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_4 .
 
-  is2020k:UserStoriesBusinessRequirementsAndSQLTranslation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "User stories, business requirements, and translation to SQL statements"@en ;
-      skos:prefLabel "User stories, business requirements, and translation to SQL statements"@en ;
-      skos:definition "Knowledge of user stories and business requirements and of their translation into SQL statements using clauses and operators such as SELECT, FROM, WHERE, ORDER BY, DISTINCT, LIKE, BETWEEN, IN, JOIN, GROUP BY, HAVING, subqueries, ANY, ALL, and UNION."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SQL injection prevention × Understanding"@en ;
+    dcterms:description "Source knowledge element: Identify potential for and prevent SQL injections; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PotentialForAndPreventionOfSQLInjections ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "SQL injection prevention × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_4 .
 
-  is2020k:IntegrityEntityReferentialAndCheckConstraints
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Integrity, entity, referential, and check constraints"@en ;
-      skos:prefLabel "Integrity, entity, referential, and check constraints"@en ;
-      skos:definition "Knowledge of integrity constraints in relational databases, including entity, referential, and check constraints."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Access control models × Applying"@en ;
+    dcterms:description "Source knowledge element: Access control: DAC, MAC, RBAC, ABAC; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AccessControlDACMACRBACABAC ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Access control models × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_4 .
 
-  is2020k:AnomaliesFunctionalDependenciesNormalizationNormalFormsAndBCNF
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF"@en ;
-      skos:prefLabel "Anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF"@en ;
-      skos:definition "Knowledge of anomalies, functional dependencies, normalization, normal forms, and conversion to Boyce-Codd Normal Form."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Concurrency and recovery × Applying"@en ;
+    dcterms:description "Source knowledge element: Concurrency and Recovery; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConcurrencyAndRecovery ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Concurrency and recovery × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_5 .
 
-  is2020k:ConceptualLogicalPhysicalModelsAndTransformations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Conceptual, logical, and physical models and their transformations"@en ;
-      skos:prefLabel "Conceptual, logical, and physical models and their transformations"@en ;
-      skos:definition "Knowledge of conceptual, logical, and physical data models and of the transformations from conceptual to logical models and from logical to physical models."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "ACID transaction properties × Applying"@en ;
+    dcterms:description "Source knowledge element: ACID database transaction properties (atomicity, consistency, isolation, and durability); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ACIDDatabaseTransactionProperties ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "ACID transaction properties × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_5 .
 
-  is2020k:SQLProceduralLanguage
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "SQL procedural language"@en ;
-      skos:prefLabel "SQL procedural language"@en ;
-      skos:definition "Knowledge of procedural extensions of SQL used to program database systems."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Transaction levels × Applying"@en ;
+    dcterms:description "Source knowledge element: Transaction levels; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TransactionLevels ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Transaction levels × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_5 .
 
-  is2020k:FunctionsAndTriggers
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Functions and triggers"@en ;
-      skos:prefLabel "Functions and triggers"@en ;
-      skos:definition "Knowledge of database functions and triggers and their role in database programming and automation."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Need for non-relational models × Understanding"@en ;
+    dcterms:description "Source knowledge element: Explain the need for non-relational models; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NeedForNonRelationalModels ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Need for non-relational models × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_6 .
 
-  is2020k:ViewsAndAuthorization
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Views and authorization"@en ;
-      skos:prefLabel "Views and authorization"@en ;
-      skos:definition "Knowledge of database views and authorization mechanisms used to secure database access."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Key-value stores × Creating"@en ;
+    dcterms:description "Source knowledge element: Design and build Key-value stores; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignAndBuildKeyValueStores ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Key-value stores × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_6 .
 
-  is2020k:PotentialForAndPreventionOfSQLInjections
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Potential for and prevention of SQL injections"@en ;
-      skos:prefLabel "Potential for and prevention of SQL injections"@en ;
-      skos:definition "Knowledge of the potential for SQL injection attacks and of techniques to prevent them."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIM_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Document stores × Creating"@en ;
+    dcterms:description "Source knowledge element: Design and build document stores; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignAndBuildDocumentStores ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Document stores × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIM_6 .
 
-  is2020k:AccessControlDACMACRBACABAC
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Access control: DAC, MAC, RBAC, and ABAC"@en ;
-      skos:prefLabel "Access control: DAC, MAC, RBAC, and ABAC"@en ;
-      skos:definition "Knowledge of access control approaches, including discretionary, mandatory, role-based, and attribute-based access control."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIM_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Query the relational model"@en ;
+    dcterms:identifier "ISDIM-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:RelationsTuplesFieldsAndRelationalModeling,
+        is2020k:UserStoriesBusinessRequirementsAndSQLTranslation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIM_1_01,
+        is2020c:KS_ISDIM_1_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+    skos:definition "Query the relational model"@en ;
+    skos:prefLabel "IS Data / Information Management Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIM_1 .
 
-  is2020k:ConcurrencyAndRecovery
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Concurrency and recovery"@en ;
-      skos:prefLabel "Concurrency and recovery"@en ;
-      skos:definition "Knowledge of concurrency control and recovery mechanisms in database systems."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIM_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Program database systems using functions and triggers"@en ;
+    dcterms:identifier "ISDIM-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:FunctionsAndTriggers,
+        is2020k:SQLProceduralLanguage ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIM_3_01,
+        is2020c:KS_ISDIM_3_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
+    skos:definition "Program database systems using functions and triggers"@en ;
+    skos:prefLabel "IS Data / Information Management Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIM_3 .
 
-  is2020k:ACIDDatabaseTransactionProperties
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "ACID database transaction properties"@en ;
-      skos:prefLabel "ACID database transaction properties"@en ;
-      skos:definition "Knowledge of the ACID properties of database transactions: atomicity, consistency, isolation, and durability."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:ACIDDatabaseTransactionProperties a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "ACID database transaction properties"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the ACID properties of database transactions: atomicity, consistency, isolation, and durability."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "ACID database transaction properties"@en .
 
-  is2020k:TransactionLevels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Transaction levels"@en ;
-      skos:prefLabel "Transaction levels"@en ;
-      skos:definition "Knowledge of transaction levels relevant to database concurrency behavior."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:AccessControlDACMACRBACABAC a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Access control: DAC, MAC, RBAC, and ABAC"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of access control approaches, including discretionary, mandatory, role-based, and attribute-based access control."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Access control: DAC, MAC, RBAC, and ABAC"@en .
 
-  is2020k:NeedForNonRelationalModels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Need for non-relational models"@en ;
-      skos:prefLabel "Need for non-relational models"@en ;
-      skos:definition "Knowledge of why non-relational models are needed in response to evolving functional and non-functional organizational requirements."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:AnomaliesFunctionalDependenciesNormalizationNormalFormsAndBCNF a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of anomalies, functional dependencies, normalization, normal forms, and conversion to Boyce-Codd Normal Form."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF"@en .
 
-  is2020k:DesignAndBuildKeyValueStores
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design and build key-value stores"@en ;
-      skos:prefLabel "Design and build key-value stores"@en ;
-      skos:definition "Knowledge of the principles and structures needed to design and build key-value stores."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:ConceptualLogicalPhysicalModelsAndTransformations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Conceptual, logical, and physical models and their transformations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of conceptual, logical, and physical data models and of the transformations from conceptual to logical models and from logical to physical models."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Conceptual, logical, and physical models and their transformations"@en .
 
-  is2020k:DesignAndBuildDocumentStores
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design and build document stores"@en ;
-      skos:prefLabel "Design and build document stores"@en ;
-      skos:definition "Knowledge of the principles and structures needed to design and build document stores."@en ;
-      skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:ConcurrencyAndRecovery a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Concurrency and recovery"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of concurrency control and recovery mechanisms in database systems."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Concurrency and recovery"@en .
 
-  #################################################################
-  # Competencies
-  #################################################################
+is2020k:DesignAndBuildDocumentStores a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design and build document stores"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the principles and structures needed to design and build document stores."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Design and build document stores"@en .
 
-  is2020c:Competence_ISDIM_1
-      a ontoksd:Competence ;
-      rdfs:label "Query the relational model"@en ;
-      skos:prefLabel "IS Data / Information Management Competency 1"@en ;
-      skos:definition "Query the relational model."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
-      dcterms:identifier "ISDIM-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:RelationsTuplesFieldsAndRelationalModeling ,
-          is2020k:UserStoriesBusinessRequirementsAndSQLTranslation ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIM_1_01 ,
-          is2020c:KS_ISDIM_1_02 .
+is2020k:DesignAndBuildKeyValueStores a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design and build key-value stores"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the principles and structures needed to design and build key-value stores."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Design and build key-value stores"@en .
 
-  is2020c:Competence_ISDIM_2
-      a ontoksd:Competence ;
-      rdfs:label "Design relational databases"@en ;
-      skos:prefLabel "IS Data / Information Management Competency 2"@en ;
-      skos:definition "Design relational databases."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
-      dcterms:identifier "ISDIM-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:IntegrityEntityReferentialAndCheckConstraints ,
-          is2020k:AnomaliesFunctionalDependenciesNormalizationNormalFormsAndBCNF ,
-          is2020k:ConceptualLogicalPhysicalModelsAndTransformations ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:meticulous ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIM_2_01 ,
-          is2020c:KS_ISDIM_2_02 ,
-          is2020c:KS_ISDIM_2_03 .
+is2020k:FunctionsAndTriggers a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Functions and triggers"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of database functions and triggers and their role in database programming and automation."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Functions and triggers"@en .
 
-  is2020c:Competence_ISDIM_3
-      a ontoksd:Competence ;
-      rdfs:label "Program database systems using functions and triggers"@en ;
-      skos:prefLabel "IS Data / Information Management Competency 3"@en ;
-      skos:definition "Program database systems using functions and triggers."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
-      dcterms:identifier "ISDIM-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:SQLProceduralLanguage ,
-          is2020k:FunctionsAndTriggers ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIM_3_01 ,
-          is2020c:KS_ISDIM_3_02 .
+is2020k:IntegrityEntityReferentialAndCheckConstraints a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Integrity, entity, referential, and check constraints"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of integrity constraints in relational databases, including entity, referential, and check constraints."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Integrity, entity, referential, and check constraints"@en .
 
-  is2020c:Competence_ISDIM_4
-      a ontoksd:Competence ;
-      rdfs:label "Secure a database"@en ;
-      skos:prefLabel "IS Data / Information Management Competency 4"@en ;
-      skos:definition "Secure a database."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
-      dcterms:identifier "ISDIM-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ViewsAndAuthorization ,
-          is2020k:PotentialForAndPreventionOfSQLInjections ,
-          is2020k:AccessControlDACMACRBACABAC ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIM_4_01 ,
-          is2020c:KS_ISDIM_4_02 ,
-          is2020c:KS_ISDIM_4_03 .
+is2020k:NeedForNonRelationalModels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Need for non-relational models"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of why non-relational models are needed in response to evolving functional and non-functional organizational requirements."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Need for non-relational models"@en .
 
-  is2020c:Competence_ISDIM_5
-      a ontoksd:Competence ;
-      rdfs:label "Compare tradeoffs of different concurrency modes"@en ;
-      skos:prefLabel "IS Data / Information Management Competency 5"@en ;
-      skos:definition "Compare tradeoffs of different concurrency modes."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
-      dcterms:identifier "ISDIM-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ConcurrencyAndRecovery ,
-          is2020k:ACIDDatabaseTransactionProperties ,
-          is2020k:TransactionLevels ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIM_5_01 ,
-          is2020c:KS_ISDIM_5_02 ,
-          is2020c:KS_ISDIM_5_03 .
+is2020k:PotentialForAndPreventionOfSQLInjections a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Potential for and prevention of SQL injections"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the potential for SQL injection attacks and of techniques to prevent them."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Potential for and prevention of SQL injections"@en .
 
-  is2020c:Competence_ISDIM_6
-      a ontoksd:Competence ;
-      rdfs:label "Develop non-relational models"@en ;
-      skos:prefLabel "IS Data / Information Management Competency 6"@en ;
-      skos:definition "Develop non-relational models."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
-      dcterms:identifier "ISDIM-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:NeedForNonRelationalModels ,
-          is2020k:DesignAndBuildKeyValueStores ,
-          is2020k:DesignAndBuildDocumentStores ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIM_6_01 ,
-          is2020c:KS_ISDIM_6_02 ,
-          is2020c:KS_ISDIM_6_03 .
+is2020k:RelationsTuplesFieldsAndRelationalModeling a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Relations, tuples, fields, and relational modeling with tables, rows, columns, and keys"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of relations, tuples, and fields, including modeling data using tables, rows, columns, and keys."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Relations, tuples, fields, and relational modeling with tables, rows, columns, and keys"@en .
 
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
+is2020k:SQLProceduralLanguage a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "SQL procedural language"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of procedural extensions of SQL used to program database systems."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "SQL procedural language"@en .
 
-  is2020c:KS_ISDIM_1_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Relations, tuples, fields, and relational modeling × Applying"@en ;
-      skos:prefLabel "Relations, tuples, fields, and relational modeling × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 1 linking relations, tuples, fields, and relational modeling to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:RelationsTuplesFieldsAndRelationalModeling ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_1 .
+is2020k:TransactionLevels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Transaction levels"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of transaction levels relevant to database concurrency behavior."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Transaction levels"@en .
 
-  is2020c:KS_ISDIM_1_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "User stories, business requirements, and SQL translation × Creating"@en ;
-      skos:prefLabel "User stories, business requirements, and SQL translation × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 1 linking user stories, business requirements, and translation to SQL statements to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:UserStoriesBusinessRequirementsAndSQLTranslation ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_1 .
+is2020k:UserStoriesBusinessRequirementsAndSQLTranslation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "User stories, business requirements, and translation to SQL statements"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of user stories and business requirements and of their translation into SQL statements using clauses and operators such as SELECT, FROM, WHERE, ORDER BY, DISTINCT, LIKE, BETWEEN, IN, JOIN, GROUP BY, HAVING, subqueries, ANY, ALL, and UNION."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "User stories, business requirements, and translation to SQL statements"@en .
 
-  is2020c:KS_ISDIM_2_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Integrity constraints × Applying"@en ;
-      skos:prefLabel "Integrity constraints × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 2 linking integrity, entity, referential, and check constraints to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:IntegrityEntityReferentialAndCheckConstraints ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_2 .
+is2020k:ViewsAndAuthorization a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Views and authorization"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of database views and authorization mechanisms used to secure database access."@en ;
+    skos:inScheme is2020k:IS2020DataInformationManagementKnowledgeScheme ;
+    skos:prefLabel "Views and authorization"@en .
 
-  is2020c:KS_ISDIM_2_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Normalization and BCNF × Evaluating"@en ;
-      skos:prefLabel "Normalization and BCNF × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 2 linking anomalies, functional dependencies, normalization, normal forms, and conversion to BCNF to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:AnomaliesFunctionalDependenciesNormalizationNormalFormsAndBCNF ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_2 .
+is2020c:Competence_ISDIM_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Design relational databases"@en ;
+    dcterms:identifier "ISDIM-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AnomaliesFunctionalDependenciesNormalizationNormalFormsAndBCNF,
+        is2020k:ConceptualLogicalPhysicalModelsAndTransformations,
+        is2020k:IntegrityEntityReferentialAndCheckConstraints ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIM_2_01,
+        is2020c:KS_ISDIM_2_02,
+        is2020c:KS_ISDIM_2_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
+    skos:definition "Design relational databases"@en ;
+    skos:prefLabel "IS Data / Information Management Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIM_2 .
 
-  is2020c:KS_ISDIM_2_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Conceptual, logical, and physical models × Creating"@en ;
-      skos:prefLabel "Conceptual, logical, and physical models × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 2 linking conceptual, logical, and physical models and their transformations to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ConceptualLogicalPhysicalModelsAndTransformations ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_2 .
+is2020c:Competence_ISDIM_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Secure a database"@en ;
+    dcterms:identifier "ISDIM-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AccessControlDACMACRBACABAC,
+        is2020k:PotentialForAndPreventionOfSQLInjections,
+        is2020k:ViewsAndAuthorization ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIM_4_01,
+        is2020c:KS_ISDIM_4_02,
+        is2020c:KS_ISDIM_4_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
+    skos:definition "Secure a database"@en ;
+    skos:prefLabel "IS Data / Information Management Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIM_4 .
 
-  is2020c:KS_ISDIM_3_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "SQL procedural language × Creating"@en ;
-      skos:prefLabel "SQL procedural language × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 3 linking SQL procedural language to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SQLProceduralLanguage ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_3 .
+is2020c:Competence_ISDIM_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Compare tradeoffs of different concurrency modes"@en ;
+    dcterms:identifier "ISDIM-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ACIDDatabaseTransactionProperties,
+        is2020k:ConcurrencyAndRecovery,
+        is2020k:TransactionLevels ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIM_5_01,
+        is2020c:KS_ISDIM_5_02,
+        is2020c:KS_ISDIM_5_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
+    skos:definition "Compare tradeoffs of different concurrency modes"@en ;
+    skos:prefLabel "IS Data / Information Management Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIM_5 .
 
-  is2020c:KS_ISDIM_3_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Functions and triggers × Creating"@en ;
-      skos:prefLabel "Functions and triggers × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 3 linking functions and triggers to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:FunctionsAndTriggers ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_3 .
+is2020c:Competence_ISDIM_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Develop non-relational models"@en ;
+    dcterms:identifier "ISDIM-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DesignAndBuildDocumentStores,
+        is2020k:DesignAndBuildKeyValueStores,
+        is2020k:NeedForNonRelationalModels ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIM_6_01,
+        is2020c:KS_ISDIM_6_02,
+        is2020c:KS_ISDIM_6_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.1 Data / Information Management."@en ;
+    skos:definition "Develop non-relational models"@en ;
+    skos:prefLabel "IS Data / Information Management Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIM_6 .
 
-  is2020c:KS_ISDIM_4_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Views and authorization × Analyzing"@en ;
-      skos:prefLabel "Views and authorization × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 4 linking views and authorization to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ViewsAndAuthorization ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_4 .
+is2020c:Source_ISDIM_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 102 (PDF page 103)."@en ;
+    dcterms:description "Competency: Query the relational model Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDIM-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIM_4_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "SQL injection prevention × Understanding"@en ;
-      skos:prefLabel "SQL injection prevention × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 4 linking the potential for and prevention of SQL injections to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:PotentialForAndPreventionOfSQLInjections ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_4 .
+is2020c:Source_ISDIM_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 103 (PDF page 104)."@en ;
+    dcterms:description "Competency: Program database systems using functions and triggers Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDIM-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIM_4_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Access control models × Applying"@en ;
-      skos:prefLabel "Access control models × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 4 linking DAC, MAC, RBAC, and ABAC access control models to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:AccessControlDACMACRBACABAC ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_4 .
+is2020c:Source_ISDIM_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 103 (PDF page 104)."@en ;
+    dcterms:description "Competency: Design relational databases Key dispositions: Self-Directed, Purpose-driven, Meticulous"@en ;
+    dcterms:identifier "ISDIM-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIM_5_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Concurrency and recovery × Applying"@en ;
-      skos:prefLabel "Concurrency and recovery × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 5 linking concurrency and recovery to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ConcurrencyAndRecovery ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_5 .
+is2020c:Source_ISDIM_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 103 (PDF page 104)."@en ;
+    dcterms:description "Competency: Secure a database Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDIM-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIM_5_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "ACID transaction properties × Applying"@en ;
-      skos:prefLabel "ACID transaction properties × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 5 linking ACID transaction properties to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ACIDDatabaseTransactionProperties ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_5 .
+is2020c:Source_ISDIM_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 103 (PDF page 104)."@en ;
+    dcterms:description "Competency: Compare tradeoffs of different concurrency modes Key dispositions: Self-Directed, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISDIM-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIM_5_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Transaction levels × Applying"@en ;
-      skos:prefLabel "Transaction levels × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 5 linking transaction levels to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TransactionLevels ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_5 .
+is2020c:Source_ISDIM_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 104 (PDF page 105)."@en ;
+    dcterms:description "Competency: Develop non-relational models Key dispositions: Meticulous, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDIM-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIM_6_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Need for non-relational models × Understanding"@en ;
-      skos:prefLabel "Need for non-relational models × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 6 linking the need for non-relational models to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:NeedForNonRelationalModels ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_6 .
+<http://purl.org/ontoksd/source/is2020-data-information-management-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Data / Information Management competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.2.1 Competency Area – Data / Information Management."@en .
 
-  is2020c:KS_ISDIM_6_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Key-value stores × Creating"@en ;
-      skos:prefLabel "Key-value stores × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 6 linking design and build of key-value stores to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DesignAndBuildKeyValueStores ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_6 .
+is2020k:IS2020DataInformationManagementKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Data / Information Management Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Data / Information Management competency area."@en ;
+    skos:prefLabel "IS2020 Data / Information Management Knowledge Scheme"@en .
 
-  is2020c:KS_ISDIM_6_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Document stores × Creating"@en ;
-      skos:prefLabel "Document stores × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Management Competency 6 linking design and build of document stores to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DesignAndBuildDocumentStores ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIM_6 .
-
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

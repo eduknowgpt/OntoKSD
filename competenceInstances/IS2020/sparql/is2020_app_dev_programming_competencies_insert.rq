@@ -1,980 +1,1654 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  #################################################################
-  # Source markers and scheme
-  #################################################################
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Application Development and Programming competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.2 Competency Area – Application Development and Programming."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Application Development and Programming Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Application Development and Programming Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Application Development and Programming competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Knowledge elements
-  #################################################################
-
-  is2020k:AppropriatePrimitiveDataTypes
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data"@en ;
-      skos:prefLabel "Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data"@en ;
-      skos:definition "Knowledge of selecting appropriate primitive data types to store and recall numeric, string or character, and Boolean data."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DerivativeDataTypes
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Define new derivative data types used to compose complex types from primitive types"@en ;
-      skos:prefLabel "Define new derivative data types used to compose complex types from primitive types"@en ;
-      skos:definition "Knowledge of defining derivative data types to compose complex types from primitive data types."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PrimitiveTypesForFractionalPrecision
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select from primitive data types according to the precision in the storage of fractional numeric information"@en ;
-      skos:prefLabel "Select from primitive data types according to the precision in the storage of fractional numeric information"@en ;
-      skos:definition "Knowledge of selecting primitive data types according to the precision required for storing fractional numeric information."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:PrimitiveTypesForIntegralMagnitude
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select from primitive data types according to the magnitude of the integral value relative to available volatile memory"@en ;
-      skos:prefLabel "Select from primitive data types according to the magnitude of the integral value relative to available volatile memory"@en ;
-      skos:definition "Knowledge of selecting primitive data types according to the magnitude of integral values relative to available volatile memory."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:NumericBaseExpressions
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Define the relationship between binary, octal, decimal, and hexadecimal expressions of numeric values"@en ;
-      skos:prefLabel "Define the relationship between binary, octal, decimal, and hexadecimal expressions of numeric values"@en ;
-      skos:definition "Knowledge of the relationship between binary, octal, decimal, and hexadecimal representations of numeric values."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BinaryNatureOfComputerStorage
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Explain the importance of the binary nature of computer storage"@en ;
-      skos:prefLabel "Explain the importance of the binary nature of computer storage"@en ;
-      skos:definition "Knowledge of the importance of the binary nature of computer storage."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ArithmeticOperatorsForDataTransformation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Apply arithmetic operators for data transformation"@en ;
-      skos:prefLabel "Apply arithmetic operators for data transformation"@en ;
-      skos:definition "Knowledge of applying arithmetic operators for data transformation."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AssignmentOperatorsForVariables
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize assignment operators to set the values to be stored in variables associated with volatile memory"@en ;
-      skos:prefLabel "Utilize assignment operators to set the values to be stored in variables associated with volatile memory"@en ;
-      skos:definition "Knowledge of utilizing assignment operators to set values in variables associated with volatile memory."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OperatorPrecedence
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use operator precedence and its impact on the specification and validation of operations"@en ;
-      skos:prefLabel "Use operator precedence and its impact on the specification and validation of operations"@en ;
-      skos:definition "Knowledge of operator precedence and its impact on the specification and validation of operations."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:UnaryAndTranspositionalOperators
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Apply unary and transpositional operators that modify values stored in volatile memory"@en ;
-      skos:prefLabel "Apply unary and transpositional operators that modify values stored in volatile memory"@en ;
-      skos:definition "Knowledge of applying unary and transpositional operators that modify values stored in volatile memory."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:LanguageSpecificKeywordsForValues
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Apply any language-specific keywords that modify the availability or use of values stored in volatile memory"@en ;
-      skos:prefLabel "Apply any language-specific keywords that modify the availability or use of values stored in volatile memory"@en ;
-      skos:definition "Knowledge of language-specific keywords that modify the availability or use of values stored in volatile memory."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MathematicalExpressionsSingleValue
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mathematical expressions resolve multiple operations to a single value"@en ;
-      skos:prefLabel "Mathematical expressions resolve multiple operations to a single value"@en ;
-      skos:definition "Knowledge that mathematical expressions resolve multiple operations to a single value."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BooleanPredicatesWithRelationalOperators
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Develop Boolean predicates utilize relational operators"@en ;
-      skos:prefLabel "Develop Boolean predicates utilize relational operators"@en ;
-      skos:definition "Knowledge of developing Boolean predicates using relational operators."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CompoundPredicateExpressionsWithLogicalOperators
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Develop compound predicate expressions using logical operators"@en ;
-      skos:prefLabel "Develop compound predicate expressions using logical operators"@en ;
-      skos:definition "Knowledge of developing compound predicate expressions using logical operators."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:LogicalOperationsAndProcessorArchitectures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "The relationship between logical operations and computer processor architectures"@en ;
-      skos:prefLabel "The relationship between logical operations and computer processor architectures"@en ;
-      skos:definition "Knowledge of the relationship between logical operations and computer processor architectures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:StatementAsUnitOfComputingWork
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Statement as a unit of computing work"@en ;
-      skos:prefLabel "Statement as a unit of computing work"@en ;
-      skos:definition "Knowledge of statements as units of computing work."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SequenceStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Structure program progression using sequence structures"@en ;
-      skos:prefLabel "Structure program progression using sequence structures"@en ;
-      skos:definition "Knowledge of structuring program progression using sequence structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RepetitionStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Structure iterative program evaluation using repetition structures"@en ;
-      skos:prefLabel "Structure iterative program evaluation using repetition structures"@en ;
-      skos:definition "Knowledge of structuring iterative program evaluation using repetition structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SelectionStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Structure decisive program evaluation using selection structures"@en ;
-      skos:prefLabel "Structure decisive program evaluation using selection structures"@en ;
-      skos:definition "Knowledge of structuring decisive program evaluation using selection structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MathematicalFunctionConcept
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Basic algebraic concept of a mathematical function"@en ;
-      skos:prefLabel "Basic algebraic concept of a mathematical function"@en ;
-      skos:definition "Knowledge of the basic algebraic concept of a mathematical function."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ModularityForOrganizationAndComplexity
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Modularity as a strategy for organization and complexity management"@en ;
-      skos:prefLabel "Modularity as a strategy for organization and complexity management"@en ;
-      skos:definition "Knowledge of modularity as a strategy for organization and complexity management."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DefineSubroutineMethodFunction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Define a subroutine/method/function"@en ;
-      skos:prefLabel "Define a subroutine/method/function"@en ;
-      skos:definition "Knowledge of defining a subroutine, method, or function."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DefineParametersForSubroutineMethodFunction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Define a subroutine/method/function that defines parameters to be passed as arguments"@en ;
-      skos:prefLabel "Define a subroutine/method/function that defines parameters to be passed as arguments"@en ;
-      skos:definition "Knowledge of defining a subroutine, method, or function with parameters to be passed as arguments."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DefineReturnValueForSubroutineMethodFunction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Define a functional return value for a subroutine/method/function"@en ;
-      skos:prefLabel "Define a functional return value for a subroutine/method/function"@en ;
-      skos:definition "Knowledge of defining a functional return value for a subroutine, method, or function."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CallSubroutineMethodFunction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize (call) a subroutine/method/function from elsewhere in code"@en ;
-      skos:prefLabel "Utilize (call) a subroutine/method/function from elsewhere in code"@en ;
-      skos:definition "Knowledge of calling a subroutine, method, or function from elsewhere in code."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:WellNamedFunctionsBenefits
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Apply the benefits of well-named subroutines/methods/functions that express processes or outcomes as actions or behaviors (verb)"@en ;
-      skos:prefLabel "Apply the benefits of well-named subroutines/methods/functions that express processes or outcomes as actions or behaviors (verb)"@en ;
-      skos:definition "Knowledge of the benefits of well-named subroutines, methods, or functions that express processes or outcomes as actions or behaviors."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:LanguageSpecificKeywordsForFunctions
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize any language-specific keywords that modify the availability, persistence, or visibility of a subroutine/method/function"@en ;
-      skos:prefLabel "Utilize any language-specific keywords that modify the availability, persistence, or visibility of a subroutine/method/function"@en ;
-      skos:definition "Knowledge of language-specific keywords that modify the availability, persistence, or visibility of a subroutine, method, or function."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:NeedForRelatedValuesInSingleStructure
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Understand the necessity of storing and accessing a set of related values from a single logical or physical memory structure"@en ;
-      skos:prefLabel "Understand the necessity of storing and accessing a set of related values from a single logical or physical memory structure"@en ;
-      skos:definition "Knowledge of the necessity of storing and accessing a set of related values from a single logical or physical memory structure."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ContiguousLinearDataStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Contiguous linear data structures"@en ;
-      skos:prefLabel "Contiguous linear data structures"@en ;
-      skos:definition "Knowledge of contiguous linear data structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DynamicallySizedNonContiguousLinearStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Appropriate use of dynamically sized and non-contiguous linear data structures"@en ;
-      skos:prefLabel "Appropriate use of dynamically sized and non-contiguous linear data structures"@en ;
-      skos:definition "Knowledge of the appropriate use of dynamically sized and non-contiguous linear data structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:NeedForNonLinearDataStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Understand the necessity of non-linear data structures"@en ;
-      skos:prefLabel "Understand the necessity of non-linear data structures"@en ;
-      skos:definition "Knowledge of the necessity of non-linear data structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BasicElementsOfGraphs
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Understand basic elements of graphs"@en ;
-      skos:prefLabel "Understand basic elements of graphs"@en ;
-      skos:definition "Knowledge of the basic elements of graphs."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:HashingPrinciples
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Understand the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory"@en ;
-      skos:prefLabel "Understand the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory"@en ;
-      skos:definition "Knowledge of the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CollectionsLibraries
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Identify and utilize language-specific collections libraries as tested implementations of linear and non-linear data structures"@en ;
-      skos:prefLabel "Identify and utilize language-specific collections libraries as tested implementations of linear and non-linear data structures"@en ;
-      skos:definition "Knowledge of identifying and utilizing language-specific collections libraries as tested implementations of linear and non-linear data structures."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DesignObjectsAndClassesFromDomainDescriptions
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design objects and classes from domain descriptions"@en ;
-      skos:prefLabel "Design objects and classes from domain descriptions"@en ;
-      skos:definition "Knowledge of designing objects and classes from domain descriptions."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OpportunitiesForAbstractionAndSpecialization
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Identify opportunities for abstraction and specialization"@en ;
-      skos:prefLabel "Identify opportunities for abstraction and specialization"@en ;
-      skos:definition "Knowledge of identifying opportunities for abstraction and specialization."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DependencyManagementWithInheritanceAndComposition
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design for dependency management using inheritance and composition"@en ;
-      skos:prefLabel "Design for dependency management using inheritance and composition"@en ;
-      skos:definition "Knowledge of designing for dependency management using inheritance and composition."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ElicitationAndProcessDocumentation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Apply principles of elicitation and process documentation"@en ;
-      skos:prefLabel "Apply principles of elicitation and process documentation"@en ;
-      skos:definition "Knowledge of applying principles of elicitation and process documentation."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ToolsForStructuralAspects
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize tools to structural aspects of the problem"@en ;
-      skos:prefLabel "Utilize tools to structural aspects of the problem"@en ;
-      skos:definition "Knowledge of utilizing tools to represent or analyze structural aspects of the problem."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ToolsForBehaviorAspects
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize tools to behavior aspects of the problem"@en ;
-      skos:prefLabel "Utilize tools to behavior aspects of the problem"@en ;
-      skos:definition "Knowledge of utilizing tools to represent or analyze behavior aspects of the problem."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:KnownDesignParadigmForRequirements
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Work within a known design paradigm to express requirements"@en ;
-      skos:prefLabel "Work within a known design paradigm to express requirements"@en ;
-      skos:definition "Knowledge of working within a known design paradigm to express requirements."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IterativelyMaintainSpecification
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Iteratively maintain a specification"@en ;
-      skos:prefLabel "Iteratively maintain a specification"@en ;
-      skos:definition "Knowledge of iteratively maintaining a specification."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:IncrementGoalsForDevelopmentAndValidation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Develop increment goals for development and validation"@en ;
-      skos:prefLabel "Develop increment goals for development and validation"@en ;
-      skos:definition "Knowledge of developing increment goals for development and validation."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BasicDesignPatterns
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select and apply basic design patterns"@en ;
-      skos:prefLabel "Select and apply basic design patterns"@en ;
-      skos:definition "Knowledge of selecting and applying basic design patterns."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ArchitecturalPatterns
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select and apply architectural patterns"@en ;
-      skos:prefLabel "Select and apply architectural patterns"@en ;
-      skos:definition "Knowledge of selecting and applying architectural patterns."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SolidPrinciples
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Apply SOLID Principles for complexity management"@en ;
-      skos:prefLabel "Apply SOLID Principles for complexity management"@en ;
-      skos:definition "Knowledge of applying SOLID principles for complexity management."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EndogenousLibraries
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform"@en ;
-      skos:prefLabel "Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform"@en ;
-      skos:definition "Knowledge of identifying and implementing relevant aspects of libraries endogenous to the programming language or development platform."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ExogenousLibraries
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform"@en ;
-      skos:prefLabel "Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform"@en ;
-      skos:definition "Knowledge of identifying and implementing relevant aspects of libraries exogenous to the programming language or development platform."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SemanticVersioningForDependencySpecification
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize semantic versioning for dependency specification"@en ;
-      skos:prefLabel "Utilize semantic versioning for dependency specification"@en ;
-      skos:definition "Knowledge of utilizing semantic versioning for dependency specification."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AppropriateApis
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select, develop, and utilize appropriate application programming interfaces"@en ;
-      skos:prefLabel "Select, develop, and utilize appropriate application programming interfaces"@en ;
-      skos:definition "Knowledge of selecting, developing, and utilizing appropriate application programming interfaces."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SourceCodeManagement
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Maintain code integrity using source code management"@en ;
-      skos:prefLabel "Maintain code integrity using source code management"@en ;
-      skos:definition "Knowledge of maintaining code integrity using source code management."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TestingStrategies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select from appropriate unit, acceptance, and integration testing strategies"@en ;
-      skos:prefLabel "Select from appropriate unit, acceptance, and integration testing strategies"@en ;
-      skos:definition "Knowledge of selecting appropriate unit, acceptance, and integration testing strategies."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TechnicalDebt
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Explain how technical debt is accrued and paid"@en ;
-      skos:prefLabel "Explain how technical debt is accrued and paid"@en ;
-      skos:definition "Knowledge of how technical debt is accrued and repaid."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ContinuousIntegrationAndDeploymentStrategies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize continuous integration and deployment strategies"@en ;
-      skos:prefLabel "Utilize continuous integration and deployment strategies"@en ;
-      skos:definition "Knowledge of utilizing continuous integration and deployment strategies."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AdaptiveIterativeSoftwareProcess
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize a software process paradigm that is adaptive and iterative"@en ;
-      skos:prefLabel "Utilize a software process paradigm that is adaptive and iterative"@en ;
-      skos:definition "Knowledge of utilizing a software process paradigm that is adaptive and iterative."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:StakeholderInteractionStructures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Utilize structures for stakeholder interaction specified with a selected software process model"@en ;
-      skos:prefLabel "Utilize structures for stakeholder interaction specified with a selected software process model"@en ;
-      skos:definition "Knowledge of utilizing structures for stakeholder interaction specified with a selected software process model."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:GoalsAndAcceptanceCriteriaForProductIncrement
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Establish goals and acceptance criteria for each product increment"@en ;
-      skos:prefLabel "Establish goals and acceptance criteria for each product increment"@en ;
-      skos:definition "Knowledge of establishing goals and acceptance criteria for each product increment."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Competencies
-  #################################################################
-
-  is2020c:Competence_ISADP_1
-      a ontoksd:Competence ;
-      rdfs:label "Develop data storage strategies using elemental data types in a computer’s volatile memory"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 1"@en ;
-      skos:definition "Develop data storage strategies using elemental data types in a computer’s volatile memory."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:AppropriatePrimitiveDataTypes ,
-          is2020k:DerivativeDataTypes ,
-          is2020k:PrimitiveTypesForFractionalPrecision ,
-          is2020k:PrimitiveTypesForIntegralMagnitude ,
-          is2020k:NumericBaseExpressions ,
-          is2020k:BinaryNatureOfComputerStorage ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_1_01 ,
-          is2020c:KS_ISADP_1_02 ,
-          is2020c:KS_ISADP_1_03 ,
-          is2020c:KS_ISADP_1_04 ,
-          is2020c:KS_ISADP_1_05 ,
-          is2020c:KS_ISADP_1_06 .
-
-  is2020c:Competence_ISADP_2
-      a ontoksd:Competence ;
-      rdfs:label "Apply data transformations using arithmetic, assignment, and transpositional operators"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 2"@en ;
-      skos:definition "Apply data transformations using arithmetic, assignment, and transpositional operators."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ArithmeticOperatorsForDataTransformation ,
-          is2020k:AssignmentOperatorsForVariables ,
-          is2020k:OperatorPrecedence ,
-          is2020k:UnaryAndTranspositionalOperators ,
-          is2020k:LanguageSpecificKeywordsForValues ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_2_01 ,
-          is2020c:KS_ISADP_2_02 ,
-          is2020c:KS_ISADP_2_03 ,
-          is2020c:KS_ISADP_2_04 ,
-          is2020c:KS_ISADP_2_05 .
-
-  is2020c:Competence_ISADP_3
-      a ontoksd:Competence ;
-      rdfs:label "Develop predicate expressions using relational and logical operators"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 3"@en ;
-      skos:definition "Develop predicate expressions using relational and logical operators."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:MathematicalExpressionsSingleValue ,
-          is2020k:BooleanPredicatesWithRelationalOperators ,
-          is2020k:CompoundPredicateExpressionsWithLogicalOperators ,
-          is2020k:LogicalOperationsAndProcessorArchitectures ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_3_01 ,
-          is2020c:KS_ISADP_3_02 ,
-          is2020c:KS_ISADP_3_03 ,
-          is2020c:KS_ISADP_3_04 .
-
-  is2020c:Competence_ISADP_4
-      a ontoksd:Competence ;
-      rdfs:label "Express algorithmic problem-solving using sequence, selection, and repetition structures"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 4"@en ;
-      skos:definition "Express algorithmic problem-solving using sequence, selection, and repetition structures."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:StatementAsUnitOfComputingWork ,
-          is2020k:SequenceStructures ,
-          is2020k:RepetitionStructures ,
-          is2020k:SelectionStructures ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_4_01 ,
-          is2020c:KS_ISADP_4_02 ,
-          is2020c:KS_ISADP_4_03 ,
-          is2020c:KS_ISADP_4_04 .
-
-  is2020c:Competence_ISADP_5
-      a ontoksd:Competence ;
-      rdfs:label "Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 5"@en ;
-      skos:definition "Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:MathematicalFunctionConcept ,
-          is2020k:ModularityForOrganizationAndComplexity ,
-          is2020k:DefineSubroutineMethodFunction ,
-          is2020k:DefineParametersForSubroutineMethodFunction ,
-          is2020k:DefineReturnValueForSubroutineMethodFunction ,
-          is2020k:CallSubroutineMethodFunction ,
-          is2020k:WellNamedFunctionsBenefits ,
-          is2020k:LanguageSpecificKeywordsForFunctions ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_5_01 ,
-          is2020c:KS_ISADP_5_02 ,
-          is2020c:KS_ISADP_5_03 ,
-          is2020c:KS_ISADP_5_04 ,
-          is2020c:KS_ISADP_5_05 ,
-          is2020c:KS_ISADP_5_06 ,
-          is2020c:KS_ISADP_5_07 ,
-          is2020c:KS_ISADP_5_08 .
-
-  is2020c:Competence_ISADP_6
-      a ontoksd:Competence ;
-      rdfs:label "Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 6"@en ;
-      skos:definition "Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:NeedForRelatedValuesInSingleStructure ,
-          is2020k:ContiguousLinearDataStructures ,
-          is2020k:DynamicallySizedNonContiguousLinearStructures ,
-          is2020k:NeedForNonLinearDataStructures ,
-          is2020k:BasicElementsOfGraphs ,
-          is2020k:HashingPrinciples ,
-          is2020k:CollectionsLibraries ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_6_01 ,
-          is2020c:KS_ISADP_6_02 ,
-          is2020c:KS_ISADP_6_03 ,
-          is2020c:KS_ISADP_6_04 ,
-          is2020c:KS_ISADP_6_05 ,
-          is2020c:KS_ISADP_6_06 ,
-          is2020c:KS_ISADP_6_07 .
-
-  is2020c:Competence_ISADP_7
-      a ontoksd:Competence ;
-      rdfs:label "Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 7"@en ;
-      skos:definition "Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:DesignObjectsAndClassesFromDomainDescriptions ,
-          is2020k:OpportunitiesForAbstractionAndSpecialization ,
-          is2020k:DependencyManagementWithInheritanceAndComposition ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_7_01 ,
-          is2020c:KS_ISADP_7_02 ,
-          is2020c:KS_ISADP_7_03 .
-
-  is2020c:Competence_ISADP_8
-      a ontoksd:Competence ;
-      rdfs:label "Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 8"@en ;
-      skos:definition "Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ElicitationAndProcessDocumentation ,
-          is2020k:ToolsForStructuralAspects ,
-          is2020k:ToolsForBehaviorAspects ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_8_01 ,
-          is2020c:KS_ISADP_8_02 ,
-          is2020c:KS_ISADP_8_03 .
-
-  is2020c:Competence_ISADP_9
-      a ontoksd:Competence ;
-      rdfs:label "Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 9"@en ;
-      skos:definition "Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-9"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:KnownDesignParadigmForRequirements ,
-          is2020k:IterativelyMaintainSpecification ,
-          is2020k:IncrementGoalsForDevelopmentAndValidation ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_9_01 ,
-          is2020c:KS_ISADP_9_02 ,
-          is2020c:KS_ISADP_9_03 .
-
-  is2020c:Competence_ISADP_10
-      a ontoksd:Competence ;
-      rdfs:label "Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 10"@en ;
-      skos:definition "Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-10"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:BasicDesignPatterns ,
-          is2020k:ArchitecturalPatterns ,
-          is2020k:SolidPrinciples ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_10_01 ,
-          is2020c:KS_ISADP_10_02 ,
-          is2020c:KS_ISADP_10_03 .
-
-  is2020c:Competence_ISADP_11
-      a ontoksd:Competence ;
-      rdfs:label "Identify the lateral components and libraries that the designed and developed system will depend on"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 11"@en ;
-      skos:definition "Identify the lateral components and libraries that the designed and developed system will depend on."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-11"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:EndogenousLibraries ,
-          is2020k:ExogenousLibraries ,
-          is2020k:SemanticVersioningForDependencySpecification ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_11_01 ,
-          is2020c:KS_ISADP_11_02 ,
-          is2020c:KS_ISADP_11_03 .
-
-  is2020c:Competence_ISADP_12
-      a ontoksd:Competence ;
-      rdfs:label "Develop the programming code implementation that realizes the system architecture and design"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 12"@en ;
-      skos:definition "Develop the programming code implementation that realizes the system architecture and design."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-12"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:AppropriateApis ,
-          is2020k:SourceCodeManagement ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_12_01 ,
-          is2020c:KS_ISADP_12_02 .
-
-  is2020c:Competence_ISADP_13
-      a ontoksd:Competence ;
-      rdfs:label "Test all developed programming code components to ensure fidelity, consistency, and fit"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 13"@en ;
-      skos:definition "Test all developed programming code components to ensure fidelity, consistency, and fit."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-13"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:TestingStrategies ,
-          is2020k:TechnicalDebt ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_13_01 ,
-          is2020c:KS_ISADP_13_02 .
-
-  is2020c:Competence_ISADP_14
-      a ontoksd:Competence ;
-      rdfs:label "Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 14"@en ;
-      skos:definition "Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-14"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ContinuousIntegrationAndDeploymentStrategies ,
-          is2020k:AdaptiveIterativeSoftwareProcess ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_14_01 ,
-          is2020c:KS_ISADP_14_02 .
-
-  is2020c:Competence_ISADP_15
-      a ontoksd:Competence ;
-      rdfs:label "Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 15"@en ;
-      skos:definition "Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-15"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:SoftwareProcessMethodologies ,
-          is2020k:ReviewAndAdjustSoftwareProcessModels ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_15_01 ,
-          is2020c:KS_ISADP_15_02 .
-
-  is2020c:Competence_ISADP_16
-      a ontoksd:Competence ;
-      rdfs:label "Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system"@en ;
-      skos:prefLabel "IS Application Development and Programming Competency 16"@en ;
-      skos:definition "Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
-      dcterms:identifier "ISADP-16"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:StakeholderInteractionStructures ,
-          is2020k:GoalsAndAcceptanceCriteriaForProductIncrement ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:meticulous , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISADP_16_01 ,
-          is2020c:KS_ISADP_16_02 .
-
-  #################################################################
-  # Additional knowledge elements for competencies 15 and 16
-  #################################################################
-
-  is2020k:SoftwareProcessMethodologies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Select from available software process methodologies as is appropriate to the problem domain and context"@en ;
-      skos:prefLabel "Select from available software process methodologies as is appropriate to the problem domain and context"@en ;
-      skos:definition "Knowledge of selecting from available software process methodologies as appropriate to the problem domain and context."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ReviewAndAdjustSoftwareProcessModels
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Regularly review and adjust software process models in response to changing conditions"@en ;
-      skos:prefLabel "Regularly review and adjust software process models in response to changing conditions"@en ;
-      skos:definition "Knowledge of regularly reviewing and adjusting software process models in response to changing conditions."@en ;
-      skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
-
-  is2020c:KS_ISADP_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Primitive data types × Applying"@en ; skos:prefLabel "Primitive data types × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AppropriatePrimitiveDataTypes ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 .
-  is2020c:KS_ISADP_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "Derivative data types × Applying"@en ; skos:prefLabel "Derivative data types × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DerivativeDataTypes ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 .
-  is2020c:KS_ISADP_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Primitive types for fractional precision × Applying"@en ; skos:prefLabel "Primitive types for fractional precision × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PrimitiveTypesForFractionalPrecision ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 .
-  is2020c:KS_ISADP_1_04 a ontoksd:KnowledgeSkill ; rdfs:label "Primitive types for integral magnitude × Applying"@en ; skos:prefLabel "Primitive types for integral magnitude × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:PrimitiveTypesForIntegralMagnitude ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 .
-  is2020c:KS_ISADP_1_05 a ontoksd:KnowledgeSkill ; rdfs:label "Numeric base expressions × Applying"@en ; skos:prefLabel "Numeric base expressions × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:NumericBaseExpressions ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 .
-  is2020c:KS_ISADP_1_06 a ontoksd:KnowledgeSkill ; rdfs:label "Binary nature of storage × Applying"@en ; skos:prefLabel "Binary nature of storage × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BinaryNatureOfComputerStorage ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 .
-
-  is2020c:KS_ISADP_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Arithmetic operators × Applying"@en ; skos:prefLabel "Arithmetic operators × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ArithmeticOperatorsForDataTransformation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 .
-  is2020c:KS_ISADP_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Assignment operators × Applying"@en ; skos:prefLabel "Assignment operators × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AssignmentOperatorsForVariables ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 .
-  is2020c:KS_ISADP_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Operator precedence × Applying"@en ; skos:prefLabel "Operator precedence × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:OperatorPrecedence ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 .
-  is2020c:KS_ISADP_2_04 a ontoksd:KnowledgeSkill ; rdfs:label "Unary and transpositional operators × Applying"@en ; skos:prefLabel "Unary and transpositional operators × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:UnaryAndTranspositionalOperators ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 .
-  is2020c:KS_ISADP_2_05 a ontoksd:KnowledgeSkill ; rdfs:label "Language-specific keywords for values × Applying"@en ; skos:prefLabel "Language-specific keywords for values × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:LanguageSpecificKeywordsForValues ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 .
-
-  is2020c:KS_ISADP_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Mathematical expressions × Understanding"@en ; skos:prefLabel "Mathematical expressions × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MathematicalExpressionsSingleValue ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 .
-  is2020c:KS_ISADP_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Boolean predicates with relational operators × Applying"@en ; skos:prefLabel "Boolean predicates with relational operators × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:BooleanPredicatesWithRelationalOperators ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 .
-  is2020c:KS_ISADP_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Compound predicate expressions × Applying"@en ; skos:prefLabel "Compound predicate expressions × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CompoundPredicateExpressionsWithLogicalOperators ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 .
-  is2020c:KS_ISADP_3_04 a ontoksd:KnowledgeSkill ; rdfs:label "Logical operations and processor architectures × Understanding"@en ; skos:prefLabel "Logical operations and processor architectures × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:LogicalOperationsAndProcessorArchitectures ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 .
-
-  is2020c:KS_ISADP_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Statement as unit of work × Understanding"@en ; skos:prefLabel "Statement as unit of work × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:StatementAsUnitOfComputingWork ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 .
-  is2020c:KS_ISADP_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Sequence structures × Applying"@en ; skos:prefLabel "Sequence structures × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SequenceStructures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 .
-  is2020c:KS_ISADP_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Repetition structures × Applying"@en ; skos:prefLabel "Repetition structures × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:RepetitionStructures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 .
-  is2020c:KS_ISADP_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "Selection structures × Applying"@en ; skos:prefLabel "Selection structures × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SelectionStructures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 .
-
-  is2020c:KS_ISADP_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Mathematical function concept × Understanding"@en ; skos:prefLabel "Mathematical function concept × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MathematicalFunctionConcept ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "Modularity × Understanding"@en ; skos:prefLabel "Modularity × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ModularityForOrganizationAndComplexity ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Define function × Applying"@en ; skos:prefLabel "Define function × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DefineSubroutineMethodFunction ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_04 a ontoksd:KnowledgeSkill ; rdfs:label "Define function parameters × Applying"@en ; skos:prefLabel "Define function parameters × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DefineParametersForSubroutineMethodFunction ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_05 a ontoksd:KnowledgeSkill ; rdfs:label "Define return value × Applying"@en ; skos:prefLabel "Define return value × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DefineReturnValueForSubroutineMethodFunction ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_06 a ontoksd:KnowledgeSkill ; rdfs:label "Call function × Applying"@en ; skos:prefLabel "Call function × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CallSubroutineMethodFunction ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_07 a ontoksd:KnowledgeSkill ; rdfs:label "Well-named functions benefits × Applying"@en ; skos:prefLabel "Well-named functions benefits × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:WellNamedFunctionsBenefits ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-  is2020c:KS_ISADP_5_08 a ontoksd:KnowledgeSkill ; rdfs:label "Language-specific keywords for functions × Applying"@en ; skos:prefLabel "Language-specific keywords for functions × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:LanguageSpecificKeywordsForFunctions ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 .
-
-  is2020c:KS_ISADP_6_01 a ontoksd:KnowledgeSkill ; rdfs:label "Need for related values in single structure × Applying"@en ; skos:prefLabel "Need for related values in single structure × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:NeedForRelatedValuesInSingleStructure ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-  is2020c:KS_ISADP_6_02 a ontoksd:KnowledgeSkill ; rdfs:label "Contiguous linear data structures × Applying"@en ; skos:prefLabel "Contiguous linear data structures × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ContiguousLinearDataStructures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-  is2020c:KS_ISADP_6_03 a ontoksd:KnowledgeSkill ; rdfs:label "Dynamic non-contiguous linear structures × Applying"@en ; skos:prefLabel "Dynamic non-contiguous linear structures × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:DynamicallySizedNonContiguousLinearStructures ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-  is2020c:KS_ISADP_6_04 a ontoksd:KnowledgeSkill ; rdfs:label "Need for non-linear data structures × Understanding"@en ; skos:prefLabel "Need for non-linear data structures × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:NeedForNonLinearDataStructures ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-  is2020c:KS_ISADP_6_05 a ontoksd:KnowledgeSkill ; rdfs:label "Basic elements of graphs × Understanding"@en ; skos:prefLabel "Basic elements of graphs × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:BasicElementsOfGraphs ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-  is2020c:KS_ISADP_6_06 a ontoksd:KnowledgeSkill ; rdfs:label "Hashing principles × Understanding"@en ; skos:prefLabel "Hashing principles × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:HashingPrinciples ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-  is2020c:KS_ISADP_6_07 a ontoksd:KnowledgeSkill ; rdfs:label "Collections libraries × Applying"@en ; skos:prefLabel "Collections libraries × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CollectionsLibraries ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 .
-
-  is2020c:KS_ISADP_7_01 a ontoksd:KnowledgeSkill ; rdfs:label "Design objects and classes × Creating"@en ; skos:prefLabel "Design objects and classes × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DesignObjectsAndClassesFromDomainDescriptions ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_7 .
-  is2020c:KS_ISADP_7_02 a ontoksd:KnowledgeSkill ; rdfs:label "Abstraction and specialization × Evaluating"@en ; skos:prefLabel "Abstraction and specialization × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:OpportunitiesForAbstractionAndSpecialization ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_7 .
-  is2020c:KS_ISADP_7_03 a ontoksd:KnowledgeSkill ; rdfs:label "Inheritance and composition × Creating"@en ; skos:prefLabel "Inheritance and composition × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DependencyManagementWithInheritanceAndComposition ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_7 .
-
-  is2020c:KS_ISADP_8_01 a ontoksd:KnowledgeSkill ; rdfs:label "Elicitation and process documentation × Applying"@en ; skos:prefLabel "Elicitation and process documentation × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ElicitationAndProcessDocumentation ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_8 .
-  is2020c:KS_ISADP_8_02 a ontoksd:KnowledgeSkill ; rdfs:label "Tools for structural aspects × Applying"@en ; skos:prefLabel "Tools for structural aspects × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ToolsForStructuralAspects ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_8 .
-  is2020c:KS_ISADP_8_03 a ontoksd:KnowledgeSkill ; rdfs:label "Tools for behavior aspects × Applying"@en ; skos:prefLabel "Tools for behavior aspects × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:ToolsForBehaviorAspects ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_8 .
-
-  is2020c:KS_ISADP_9_01 a ontoksd:KnowledgeSkill ; rdfs:label "Known design paradigm × Analyzing"@en ; skos:prefLabel "Known design paradigm × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:KnownDesignParadigmForRequirements ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_9 .
-  is2020c:KS_ISADP_9_02 a ontoksd:KnowledgeSkill ; rdfs:label "Iteratively maintain specification × Evaluating"@en ; skos:prefLabel "Iteratively maintain specification × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:IterativelyMaintainSpecification ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_9 .
-  is2020c:KS_ISADP_9_03 a ontoksd:KnowledgeSkill ; rdfs:label "Increment goals × Creating"@en ; skos:prefLabel "Increment goals × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:IncrementGoalsForDevelopmentAndValidation ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_9 .
-
-  is2020c:KS_ISADP_10_01 a ontoksd:KnowledgeSkill ; rdfs:label "Basic design patterns × Analyzing"@en ; skos:prefLabel "Basic design patterns × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:BasicDesignPatterns ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_10 .
-  is2020c:KS_ISADP_10_02 a ontoksd:KnowledgeSkill ; rdfs:label "Architectural patterns × Analyzing"@en ; skos:prefLabel "Architectural patterns × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:ArchitecturalPatterns ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_10 .
-  is2020c:KS_ISADP_10_03 a ontoksd:KnowledgeSkill ; rdfs:label "SOLID principles × Applying"@en ; skos:prefLabel "SOLID principles × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SolidPrinciples ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_10 .
-
-  is2020c:KS_ISADP_11_01 a ontoksd:KnowledgeSkill ; rdfs:label "Endogenous libraries × Evaluating"@en ; skos:prefLabel "Endogenous libraries × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:EndogenousLibraries ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_11 .
-  is2020c:KS_ISADP_11_02 a ontoksd:KnowledgeSkill ; rdfs:label "Exogenous libraries × Evaluating"@en ; skos:prefLabel "Exogenous libraries × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ExogenousLibraries ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_11 .
-  is2020c:KS_ISADP_11_03 a ontoksd:KnowledgeSkill ; rdfs:label "Semantic versioning × Applying"@en ; skos:prefLabel "Semantic versioning × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:SemanticVersioningForDependencySpecification ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_11 .
-
-  is2020c:KS_ISADP_12_01 a ontoksd:KnowledgeSkill ; rdfs:label "Appropriate APIs × Analyzing"@en ; skos:prefLabel "Appropriate APIs × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:AppropriateApis ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_12 .
-  is2020c:KS_ISADP_12_02 a ontoksd:KnowledgeSkill ; rdfs:label "Source code management × Evaluating"@en ; skos:prefLabel "Source code management × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:SourceCodeManagement ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_12 .
-
-  is2020c:KS_ISADP_13_01 a ontoksd:KnowledgeSkill ; rdfs:label "Testing strategies × Analyzing"@en ; skos:prefLabel "Testing strategies × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:TestingStrategies ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_13 .
-  is2020c:KS_ISADP_13_02 a ontoksd:KnowledgeSkill ; rdfs:label "Technical debt × Understanding"@en ; skos:prefLabel "Technical debt × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:TechnicalDebt ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_13 .
-
-  is2020c:KS_ISADP_14_01 a ontoksd:KnowledgeSkill ; rdfs:label "Continuous integration and deployment × Evaluating"@en ; skos:prefLabel "Continuous integration and deployment × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ContinuousIntegrationAndDeploymentStrategies ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_14 .
-  is2020c:KS_ISADP_14_02 a ontoksd:KnowledgeSkill ; rdfs:label "Adaptive iterative software process × Evaluating"@en ; skos:prefLabel "Adaptive iterative software process × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:AdaptiveIterativeSoftwareProcess ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_14 .
-
-  is2020c:KS_ISADP_15_01 a ontoksd:KnowledgeSkill ; rdfs:label "Software process methodologies × Analyzing"@en ; skos:prefLabel "Software process methodologies × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:SoftwareProcessMethodologies ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_15 .
-  is2020c:KS_ISADP_15_02 a ontoksd:KnowledgeSkill ; rdfs:label "Review and adjust process models × Analyzing"@en ; skos:prefLabel "Review and adjust process models × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:ReviewAndAdjustSoftwareProcessModels ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_15 .
-
-  is2020c:KS_ISADP_16_01 a ontoksd:KnowledgeSkill ; rdfs:label "Stakeholder interaction structures × Evaluating"@en ; skos:prefLabel "Stakeholder interaction structures × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:StakeholderInteractionStructures ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_16 .
-  is2020c:KS_ISADP_16_02 a ontoksd:KnowledgeSkill ; rdfs:label "Goals and acceptance criteria × Analyzing"@en ; skos:prefLabel "Goals and acceptance criteria × Analyzing"@en ; ontoksd:hasKnowledgeComponent is2020k:GoalsAndAcceptanceCriteriaForProductIncrement ; ontoksd:hasRequiredSkillLevel bloom:Analyzing ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_16 .
-
+is2020c:KS_ISADP_10_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Basic design patterns × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Select and apply basic design patterns; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BasicDesignPatterns ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Basic design patterns × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_10 .
+
+is2020c:KS_ISADP_10_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Architectural patterns × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Select and apply architectural patterns; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ArchitecturalPatterns ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Architectural patterns × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_10 .
+
+is2020c:KS_ISADP_10_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SOLID principles × Applying"@en ;
+    dcterms:description "Source knowledge element: Apply SOLID Principles for complexity management; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SolidPrinciples ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_10 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "SOLID principles × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_10 .
+
+is2020c:KS_ISADP_11_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Endogenous libraries × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EndogenousLibraries ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Endogenous libraries × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_11 .
+
+is2020c:KS_ISADP_11_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Exogenous libraries × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ExogenousLibraries ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Exogenous libraries × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_11 .
+
+is2020c:KS_ISADP_11_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Semantic versioning × Applying"@en ;
+    dcterms:description "Source knowledge element: Utilize semantic versioning for dependency specification; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SemanticVersioningForDependencySpecification ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_11 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Semantic versioning × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_11 .
+
+is2020c:KS_ISADP_12_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Appropriate APIs × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Select, develop, and utilize appropriate application programming interfaces; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AppropriateApis ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Appropriate APIs × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_12 .
+
+is2020c:KS_ISADP_12_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Source code management × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Maintain code integrity using source code management; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SourceCodeManagement ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_12 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Source code management × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_12 .
+
+is2020c:KS_ISADP_13_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Testing strategies × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Select from appropriate unit, acceptance, and integration testing strategies; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TestingStrategies ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Testing strategies × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_13 .
+
+is2020c:KS_ISADP_13_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Technical debt × Understanding"@en ;
+    dcterms:description "Source knowledge element: Explain how technical debt is accrued and paid; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TechnicalDebt ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_13 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Technical debt × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_13 .
+
+is2020c:KS_ISADP_14_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Continuous integration and deployment × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Utilize continuous integration and deployment strategies; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ContinuousIntegrationAndDeploymentStrategies ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_14 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Continuous integration and deployment × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_14 .
+
+is2020c:KS_ISADP_14_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Adaptive iterative software process × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Utilize a software process paradigm that is adaptive and iterative; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AdaptiveIterativeSoftwareProcess ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_14 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Adaptive iterative software process × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_14 .
+
+is2020c:KS_ISADP_15_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Software process methodologies × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Select from available software process methodologies as is appropriate to the problem domain and context; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SoftwareProcessMethodologies ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_15 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Software process methodologies × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_15 .
+
+is2020c:KS_ISADP_15_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Review and adjust process models × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Regularly review and adjust software process models in response to changing conditions; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ReviewAndAdjustSoftwareProcessModels ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_15 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Review and adjust process models × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_15 .
+
+is2020c:KS_ISADP_16_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Stakeholder interaction structures × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Utilize structures for stakeholder interaction specified with a selected software process model; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StakeholderInteractionStructures ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_16 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Stakeholder interaction structures × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_16 .
+
+is2020c:KS_ISADP_16_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Goals and acceptance criteria × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Establish goals and acceptance criteria for each product increment; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:GoalsAndAcceptanceCriteriaForProductIncrement ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_16 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Goals and acceptance criteria × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_16 .
+
+is2020c:KS_ISADP_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Primitive data types × Applying"@en ;
+    dcterms:description "Source knowledge element: Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AppropriatePrimitiveDataTypes ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Primitive data types × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_1 .
+
+is2020c:KS_ISADP_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Derivative data types × Applying"@en ;
+    dcterms:description "Source knowledge element: Define new derivative data types used to compose complex types from primitive types; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DerivativeDataTypes ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Derivative data types × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_1 .
+
+is2020c:KS_ISADP_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Primitive types for fractional precision × Applying"@en ;
+    dcterms:description "Source knowledge element: Select from primitive data types according to the precision in the storage of fractional numeric information; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PrimitiveTypesForFractionalPrecision ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Primitive types for fractional precision × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_1 .
+
+is2020c:KS_ISADP_1_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Primitive types for integral magnitude × Applying"@en ;
+    dcterms:description "Source knowledge element: Select from primitive data types according to the magnitude of the integral value relative to available volatile memory; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:PrimitiveTypesForIntegralMagnitude ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Primitive types for integral magnitude × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_1 .
+
+is2020c:KS_ISADP_1_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Numeric base expressions × Applying"@en ;
+    dcterms:description "Source knowledge element: Define the relationship between binary, octal, decimal, and hexagonal expressions of numeric values; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NumericBaseExpressions ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Numeric base expressions × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_1 .
+
+is2020c:KS_ISADP_1_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Binary nature of storage × Applying"@en ;
+    dcterms:description "Source knowledge element: Explain the importance of the binary nature of computer storage; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BinaryNatureOfComputerStorage ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Binary nature of storage × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_1 .
+
+is2020c:KS_ISADP_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Arithmetic operators × Applying"@en ;
+    dcterms:description "Source knowledge element: Apply arithmetic operators for data transformation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ArithmeticOperatorsForDataTransformation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Arithmetic operators × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_2 .
+
+is2020c:KS_ISADP_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Assignment operators × Applying"@en ;
+    dcterms:description "Source knowledge element: Utilize assignment operators to set the values to be stored in variables associated with volatile memory; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AssignmentOperatorsForVariables ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Assignment operators × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_2 .
+
+is2020c:KS_ISADP_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Operator precedence × Applying"@en ;
+    dcterms:description "Source knowledge element: Use operator precedence and its impact on the specification and validation of operations; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OperatorPrecedence ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Operator precedence × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_2 .
+
+is2020c:KS_ISADP_2_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Unary and transpositional operators × Applying"@en ;
+    dcterms:description "Source knowledge element: Apply unary and transpositional operators that modify values stored in volatile memory; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UnaryAndTranspositionalOperators ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Unary and transpositional operators × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_2 .
+
+is2020c:KS_ISADP_2_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Language-specific keywords for values × Applying"@en ;
+    dcterms:description "Source knowledge element: Apply any language-specific keywords that modify the availability or use of values stored in volatile memory; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:LanguageSpecificKeywordsForValues ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Language-specific keywords for values × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_2 .
+
+is2020c:KS_ISADP_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mathematical expressions × Understanding"@en ;
+    dcterms:description "Source knowledge element: Mathematical expressions resolve multiple operations to a single value; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MathematicalExpressionsSingleValue ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mathematical expressions × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_3 .
+
+is2020c:KS_ISADP_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Boolean predicates with relational operators × Applying"@en ;
+    dcterms:description "Source knowledge element: Develop Boolean predicates utilize relational operators; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BooleanPredicatesWithRelationalOperators ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Boolean predicates with relational operators × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_3 .
+
+is2020c:KS_ISADP_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Compound predicate expressions × Applying"@en ;
+    dcterms:description "Source knowledge element: Develop compound predicate expressions using logical operators; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CompoundPredicateExpressionsWithLogicalOperators ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Compound predicate expressions × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_3 .
+
+is2020c:KS_ISADP_3_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Logical operations and processor architectures × Understanding"@en ;
+    dcterms:description "Source knowledge element: The relationship between logical operations and computer processor architectures; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:LogicalOperationsAndProcessorArchitectures ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Logical operations and processor architectures × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_3 .
+
+is2020c:KS_ISADP_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Statement as unit of work × Understanding"@en ;
+    dcterms:description "Source knowledge element: Statement as a unit of computing work; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StatementAsUnitOfComputingWork ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Statement as unit of work × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_4 .
+
+is2020c:KS_ISADP_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Sequence structures × Applying"@en ;
+    dcterms:description "Source knowledge element: Structure program progression using sequence structures; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SequenceStructures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Sequence structures × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_4 .
+
+is2020c:KS_ISADP_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Repetition structures × Applying"@en ;
+    dcterms:description "Source knowledge element: Structure iterative program evaluation using repetition structures; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RepetitionStructures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Repetition structures × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_4 .
+
+is2020c:KS_ISADP_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Selection structures × Applying"@en ;
+    dcterms:description "Source knowledge element: Structure decisive program evaluation using selection structures; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SelectionStructures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Selection structures × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_4 .
+
+is2020c:KS_ISADP_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mathematical function concept × Understanding"@en ;
+    dcterms:description "Source knowledge element: Basic algebraic concept of a mathematical function; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MathematicalFunctionConcept ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mathematical function concept × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Modularity × Understanding"@en ;
+    dcterms:description "Source knowledge element: Modularity as a strategy for organization and complexity management; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ModularityForOrganizationAndComplexity ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Modularity × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Define function × Applying"@en ;
+    dcterms:description "Source knowledge element: Define a subroutine/method/function; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DefineSubroutineMethodFunction ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Define function × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Define function parameters × Applying"@en ;
+    dcterms:description "Source knowledge element: Define a subroutine/method/function that defines parameters to be passed as arguments; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DefineParametersForSubroutineMethodFunction ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Define function parameters × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Define return value × Applying"@en ;
+    dcterms:description "Source knowledge element: Define a functional return value for a subroutine/method/function; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DefineReturnValueForSubroutineMethodFunction ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Define return value × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Call function × Applying"@en ;
+    dcterms:description "Source knowledge element: Utilize (call) a subroutine/method/function from elsewhere in code; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CallSubroutineMethodFunction ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Call function × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Well-named functions benefits × Applying"@en ;
+    dcterms:description "Source knowledge element: Apply the benefits of well-named subroutines/methods/functions that express processes or outcomes as actions or behaviors (verb); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:WellNamedFunctionsBenefits ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Well-named functions benefits × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_5_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Language-specific keywords for functions × Applying"@en ;
+    dcterms:description "Source knowledge element: Utilize any language-specific keywords that modify the availability, persistence, or visibility of a subroutine/method/function; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:LanguageSpecificKeywordsForFunctions ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Language-specific keywords for functions × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_5 .
+
+is2020c:KS_ISADP_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Need for related values in single structure × Applying"@en ;
+    dcterms:description "Source knowledge element: Understand the necessity of storing and accessing a set of related values from a single logical or physical memory structure; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NeedForRelatedValuesInSingleStructure ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Need for related values in single structure × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Contiguous linear data structures × Applying"@en ;
+    dcterms:description "Source knowledge element: Contiguous linear data structures; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ContiguousLinearDataStructures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Contiguous linear data structures × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Dynamic non-contiguous linear structures × Applying"@en ;
+    dcterms:description "Source knowledge element: Appropriate use of dynamically sized and non-contiguous linear data structures; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DynamicallySizedNonContiguousLinearStructures ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Dynamic non-contiguous linear structures × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_6_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Need for non-linear data structures × Understanding"@en ;
+    dcterms:description "Source knowledge element: Understand the necessity of non-linear data structures; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NeedForNonLinearDataStructures ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Need for non-linear data structures × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_6_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Basic elements of graphs × Understanding"@en ;
+    dcterms:description "Source knowledge element: Understand basic elements of graphs; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BasicElementsOfGraphs ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Basic elements of graphs × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_6_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Hashing principles × Understanding"@en ;
+    dcterms:description "Source knowledge element: Understand the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HashingPrinciples ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Hashing principles × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_6_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Collections libraries × Applying"@en ;
+    dcterms:description "Source knowledge element: Identify and utilize language-specific collections libraries as tested implementations of linear and non-linear data structures; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CollectionsLibraries ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Collections libraries × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_6 .
+
+is2020c:KS_ISADP_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design objects and classes × Creating"@en ;
+    dcterms:description "Source knowledge element: Design objects and classes from domain descriptions; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignObjectsAndClassesFromDomainDescriptions ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design objects and classes × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_7 .
+
+is2020c:KS_ISADP_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Abstraction and specialization × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Identify opportunities for abstraction and specialization; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OpportunitiesForAbstractionAndSpecialization ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Abstraction and specialization × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_7 .
+
+is2020c:KS_ISADP_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Inheritance and composition × Creating"@en ;
+    dcterms:description "Source knowledge element: Design for dependency management using inheritance and composition; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DependencyManagementWithInheritanceAndComposition ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Inheritance and composition × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_7 .
+
+is2020c:KS_ISADP_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Elicitation and process documentation × Applying"@en ;
+    dcterms:description "Source knowledge element: Apply principles of elicitation and process documentation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ElicitationAndProcessDocumentation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Elicitation and process documentation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_8 .
+
+is2020c:KS_ISADP_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Tools for structural aspects × Applying"@en ;
+    dcterms:description "Source knowledge element: Utilize tools to structural aspects of the problem; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ToolsForStructuralAspects ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Tools for structural aspects × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_8 .
+
+is2020c:KS_ISADP_8_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Tools for behavior aspects × Applying"@en ;
+    dcterms:description "Source knowledge element: Utilize tools to behavior aspects of the problem; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ToolsForBehaviorAspects ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Tools for behavior aspects × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_8 .
+
+is2020c:KS_ISADP_9_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Known design paradigm × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Work within a known design paradigm to express requirements; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:KnownDesignParadigmForRequirements ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Known design paradigm × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_9 .
+
+is2020c:KS_ISADP_9_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Iteratively maintain specification × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Iteratively maintain a specification; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IterativelyMaintainSpecification ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Iteratively maintain specification × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_9 .
+
+is2020c:KS_ISADP_9_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Increment goals × Creating"@en ;
+    dcterms:description "Source knowledge element: Develop increment goals for development and validation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IncrementGoalsForDevelopmentAndValidation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISADP_9 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Increment goals × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISADP_9 .
+
+is2020c:Competence_ISADP_12 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Develop the programming code implementation that realizes the system architecture and design"@en ;
+    dcterms:identifier "ISADP-12"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AppropriateApis,
+        is2020k:SourceCodeManagement ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_12_01,
+        is2020c:KS_ISADP_12_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Develop the programming code implementation that realizes the system architecture and design"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 12"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_12 .
+
+is2020c:Competence_ISADP_13 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Test all developed programming code components to ensure fidelity, consistency, and fit"@en ;
+    dcterms:identifier "ISADP-13"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:TechnicalDebt,
+        is2020k:TestingStrategies ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_13_01,
+        is2020c:KS_ISADP_13_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Test all developed programming code components to ensure fidelity, consistency, and fit"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 13"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_13 .
+
+is2020c:Competence_ISADP_14 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function"@en ;
+    dcterms:identifier "ISADP-14"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AdaptiveIterativeSoftwareProcess,
+        is2020k:ContinuousIntegrationAndDeploymentStrategies ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_14_01,
+        is2020c:KS_ISADP_14_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 14"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_14 .
+
+is2020c:Competence_ISADP_15 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility"@en ;
+    dcterms:identifier "ISADP-15"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ReviewAndAdjustSoftwareProcessModels,
+        is2020k:SoftwareProcessMethodologies ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_15_01,
+        is2020c:KS_ISADP_15_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 15"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_15 .
+
+is2020c:Competence_ISADP_16 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system"@en ;
+    dcterms:identifier "ISADP-16"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:GoalsAndAcceptanceCriteriaForProductIncrement,
+        is2020k:StakeholderInteractionStructures ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_16_01,
+        is2020c:KS_ISADP_16_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 16"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_16 .
+
+is2020k:AdaptiveIterativeSoftwareProcess a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize a software process paradigm that is adaptive and iterative"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing a software process paradigm that is adaptive and iterative."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize a software process paradigm that is adaptive and iterative"@en .
+
+is2020k:AppropriateApis a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select, develop, and utilize appropriate application programming interfaces"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting, developing, and utilizing appropriate application programming interfaces."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select, develop, and utilize appropriate application programming interfaces"@en .
+
+is2020k:AppropriatePrimitiveDataTypes a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting appropriate primitive data types to store and recall numeric, string or character, and Boolean data."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select appropriate primitive data types to store and recall numeric, string/character, and Boolean data"@en .
+
+is2020k:ArchitecturalPatterns a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select and apply architectural patterns"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting and applying architectural patterns."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select and apply architectural patterns"@en .
+
+is2020k:ArithmeticOperatorsForDataTransformation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Apply arithmetic operators for data transformation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying arithmetic operators for data transformation."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Apply arithmetic operators for data transformation"@en .
+
+is2020k:AssignmentOperatorsForVariables a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize assignment operators to set the values to be stored in variables associated with volatile memory"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing assignment operators to set values in variables associated with volatile memory."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize assignment operators to set the values to be stored in variables associated with volatile memory"@en .
+
+is2020k:BasicDesignPatterns a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select and apply basic design patterns"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting and applying basic design patterns."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select and apply basic design patterns"@en .
+
+is2020k:BasicElementsOfGraphs a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Understand basic elements of graphs"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the basic elements of graphs."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Understand basic elements of graphs"@en .
+
+is2020k:BinaryNatureOfComputerStorage a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Explain the importance of the binary nature of computer storage"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the importance of the binary nature of computer storage."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Explain the importance of the binary nature of computer storage"@en .
+
+is2020k:BooleanPredicatesWithRelationalOperators a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Develop Boolean predicates utilize relational operators"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of developing Boolean predicates using relational operators."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Develop Boolean predicates utilize relational operators"@en .
+
+is2020k:CallSubroutineMethodFunction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize (call) a subroutine/method/function from elsewhere in code"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of calling a subroutine, method, or function from elsewhere in code."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize (call) a subroutine/method/function from elsewhere in code"@en .
+
+is2020k:CollectionsLibraries a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Identify and utilize language-specific collections libraries as tested implementations of linear and non-linear data structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of identifying and utilizing language-specific collections libraries as tested implementations of linear and non-linear data structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Identify and utilize language-specific collections libraries as tested implementations of linear and non-linear data structures"@en .
+
+is2020k:CompoundPredicateExpressionsWithLogicalOperators a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Develop compound predicate expressions using logical operators"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of developing compound predicate expressions using logical operators."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Develop compound predicate expressions using logical operators"@en .
+
+is2020k:ContiguousLinearDataStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Contiguous linear data structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of contiguous linear data structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Contiguous linear data structures"@en .
+
+is2020k:ContinuousIntegrationAndDeploymentStrategies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize continuous integration and deployment strategies"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing continuous integration and deployment strategies."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize continuous integration and deployment strategies"@en .
+
+is2020k:DefineParametersForSubroutineMethodFunction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Define a subroutine/method/function that defines parameters to be passed as arguments"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of defining a subroutine, method, or function with parameters to be passed as arguments."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Define a subroutine/method/function that defines parameters to be passed as arguments"@en .
+
+is2020k:DefineReturnValueForSubroutineMethodFunction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Define a functional return value for a subroutine/method/function"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of defining a functional return value for a subroutine, method, or function."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Define a functional return value for a subroutine/method/function"@en .
+
+is2020k:DefineSubroutineMethodFunction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Define a subroutine/method/function"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of defining a subroutine, method, or function."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Define a subroutine/method/function"@en .
+
+is2020k:DependencyManagementWithInheritanceAndComposition a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design for dependency management using inheritance and composition"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing for dependency management using inheritance and composition."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Design for dependency management using inheritance and composition"@en .
+
+is2020k:DerivativeDataTypes a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Define new derivative data types used to compose complex types from primitive types"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of defining derivative data types to compose complex types from primitive data types."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Define new derivative data types used to compose complex types from primitive types"@en .
+
+is2020k:DesignObjectsAndClassesFromDomainDescriptions a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design objects and classes from domain descriptions"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing objects and classes from domain descriptions."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Design objects and classes from domain descriptions"@en .
+
+is2020k:DynamicallySizedNonContiguousLinearStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Appropriate use of dynamically sized and non-contiguous linear data structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the appropriate use of dynamically sized and non-contiguous linear data structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Appropriate use of dynamically sized and non-contiguous linear data structures"@en .
+
+is2020k:ElicitationAndProcessDocumentation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Apply principles of elicitation and process documentation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying principles of elicitation and process documentation."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Apply principles of elicitation and process documentation"@en .
+
+is2020k:EndogenousLibraries a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of identifying and implementing relevant aspects of libraries endogenous to the programming language or development platform."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Identify and implement relevant aspects of libraries that are endogenous to the programming language or development platform"@en .
+
+is2020k:ExogenousLibraries a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of identifying and implementing relevant aspects of libraries exogenous to the programming language or development platform."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Identify and implement relevant aspects of libraries that are exogenous to the programming language or development platform"@en .
+
+is2020k:GoalsAndAcceptanceCriteriaForProductIncrement a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Establish goals and acceptance criteria for each product increment"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of establishing goals and acceptance criteria for each product increment."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Establish goals and acceptance criteria for each product increment"@en .
+
+is2020k:HashingPrinciples a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Understand the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Understand the mathematical principles behind hashing algorithms for data storage and retrieval from volatile memory"@en .
+
+is2020k:IncrementGoalsForDevelopmentAndValidation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Develop increment goals for development and validation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of developing increment goals for development and validation."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Develop increment goals for development and validation"@en .
+
+is2020k:IterativelyMaintainSpecification a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Iteratively maintain a specification"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of iteratively maintaining a specification."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Iteratively maintain a specification"@en .
+
+is2020k:KnownDesignParadigmForRequirements a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Work within a known design paradigm to express requirements"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of working within a known design paradigm to express requirements."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Work within a known design paradigm to express requirements"@en .
+
+is2020k:LanguageSpecificKeywordsForFunctions a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize any language-specific keywords that modify the availability, persistence, or visibility of a subroutine/method/function"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of language-specific keywords that modify the availability, persistence, or visibility of a subroutine, method, or function."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize any language-specific keywords that modify the availability, persistence, or visibility of a subroutine/method/function"@en .
+
+is2020k:LanguageSpecificKeywordsForValues a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Apply any language-specific keywords that modify the availability or use of values stored in volatile memory"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of language-specific keywords that modify the availability or use of values stored in volatile memory."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Apply any language-specific keywords that modify the availability or use of values stored in volatile memory"@en .
+
+is2020k:LogicalOperationsAndProcessorArchitectures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "The relationship between logical operations and computer processor architectures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the relationship between logical operations and computer processor architectures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "The relationship between logical operations and computer processor architectures"@en .
+
+is2020k:MathematicalExpressionsSingleValue a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mathematical expressions resolve multiple operations to a single value"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge that mathematical expressions resolve multiple operations to a single value."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Mathematical expressions resolve multiple operations to a single value"@en .
+
+is2020k:MathematicalFunctionConcept a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Basic algebraic concept of a mathematical function"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the basic algebraic concept of a mathematical function."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Basic algebraic concept of a mathematical function"@en .
+
+is2020k:ModularityForOrganizationAndComplexity a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Modularity as a strategy for organization and complexity management"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of modularity as a strategy for organization and complexity management."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Modularity as a strategy for organization and complexity management"@en .
+
+is2020k:NeedForNonLinearDataStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Understand the necessity of non-linear data structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the necessity of non-linear data structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Understand the necessity of non-linear data structures"@en .
+
+is2020k:NeedForRelatedValuesInSingleStructure a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Understand the necessity of storing and accessing a set of related values from a single logical or physical memory structure"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the necessity of storing and accessing a set of related values from a single logical or physical memory structure."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Understand the necessity of storing and accessing a set of related values from a single logical or physical memory structure"@en .
+
+is2020k:NumericBaseExpressions a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Define the relationship between binary, octal, decimal, and hexadecimal expressions of numeric values"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the relationship between binary, octal, decimal, and hexadecimal representations of numeric values."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Define the relationship between binary, octal, decimal, and hexadecimal expressions of numeric values"@en .
+
+is2020k:OperatorPrecedence a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use operator precedence and its impact on the specification and validation of operations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of operator precedence and its impact on the specification and validation of operations."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Use operator precedence and its impact on the specification and validation of operations"@en .
+
+is2020k:OpportunitiesForAbstractionAndSpecialization a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Identify opportunities for abstraction and specialization"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of identifying opportunities for abstraction and specialization."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Identify opportunities for abstraction and specialization"@en .
+
+is2020k:PrimitiveTypesForFractionalPrecision a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select from primitive data types according to the precision in the storage of fractional numeric information"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting primitive data types according to the precision required for storing fractional numeric information."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select from primitive data types according to the precision in the storage of fractional numeric information"@en .
+
+is2020k:PrimitiveTypesForIntegralMagnitude a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select from primitive data types according to the magnitude of the integral value relative to available volatile memory"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting primitive data types according to the magnitude of integral values relative to available volatile memory."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select from primitive data types according to the magnitude of the integral value relative to available volatile memory"@en .
+
+is2020k:RepetitionStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Structure iterative program evaluation using repetition structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of structuring iterative program evaluation using repetition structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Structure iterative program evaluation using repetition structures"@en .
+
+is2020k:ReviewAndAdjustSoftwareProcessModels a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Regularly review and adjust software process models in response to changing conditions"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of regularly reviewing and adjusting software process models in response to changing conditions."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Regularly review and adjust software process models in response to changing conditions"@en .
+
+is2020k:SelectionStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Structure decisive program evaluation using selection structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of structuring decisive program evaluation using selection structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Structure decisive program evaluation using selection structures"@en .
+
+is2020k:SemanticVersioningForDependencySpecification a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize semantic versioning for dependency specification"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing semantic versioning for dependency specification."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize semantic versioning for dependency specification"@en .
+
+is2020k:SequenceStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Structure program progression using sequence structures"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of structuring program progression using sequence structures."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Structure program progression using sequence structures"@en .
+
+is2020k:SoftwareProcessMethodologies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select from available software process methodologies as is appropriate to the problem domain and context"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting from available software process methodologies as appropriate to the problem domain and context."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select from available software process methodologies as is appropriate to the problem domain and context"@en .
+
+is2020k:SolidPrinciples a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Apply SOLID Principles for complexity management"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:altLabel "Apply SOLID Principles for complexity management"@en ;
+    skos:definition "Knowledge of applying SOLID principles for complexity management."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "SOLID principles"@en .
+
+is2020k:SourceCodeManagement a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Maintain code integrity using source code management"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of maintaining code integrity using source code management."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Maintain code integrity using source code management"@en .
+
+is2020k:StakeholderInteractionStructures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize structures for stakeholder interaction specified with a selected software process model"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing structures for stakeholder interaction specified with a selected software process model."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize structures for stakeholder interaction specified with a selected software process model"@en .
+
+is2020k:StatementAsUnitOfComputingWork a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Statement as a unit of computing work"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of statements as units of computing work."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Statement as a unit of computing work"@en .
+
+is2020k:TechnicalDebt a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Explain how technical debt is accrued and paid"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of how technical debt is accrued and repaid."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Explain how technical debt is accrued and paid"@en .
+
+is2020k:TestingStrategies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Select from appropriate unit, acceptance, and integration testing strategies"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of selecting appropriate unit, acceptance, and integration testing strategies."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Select from appropriate unit, acceptance, and integration testing strategies"@en .
+
+is2020k:ToolsForBehaviorAspects a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize tools to behavior aspects of the problem"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing tools to represent or analyze behavior aspects of the problem."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize tools to behavior aspects of the problem"@en .
+
+is2020k:ToolsForStructuralAspects a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Utilize tools to structural aspects of the problem"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of utilizing tools to represent or analyze structural aspects of the problem."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Utilize tools to structural aspects of the problem"@en .
+
+is2020k:UnaryAndTranspositionalOperators a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Apply unary and transpositional operators that modify values stored in volatile memory"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of applying unary and transpositional operators that modify values stored in volatile memory."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Apply unary and transpositional operators that modify values stored in volatile memory"@en .
+
+is2020k:WellNamedFunctionsBenefits a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Apply the benefits of well-named subroutines/methods/functions that express processes or outcomes as actions or behaviors (verb)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the benefits of well-named subroutines, methods, or functions that express processes or outcomes as actions or behaviors."@en ;
+    skos:inScheme is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme ;
+    skos:prefLabel "Apply the benefits of well-named subroutines/methods/functions that express processes or outcomes as actions or behaviors (verb)"@en .
+
+is2020c:Competence_ISADP_10 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction"@en ;
+    dcterms:identifier "ISADP-10"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ArchitecturalPatterns,
+        is2020k:BasicDesignPatterns,
+        is2020k:SolidPrinciples ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_10_01,
+        is2020c:KS_ISADP_10_02,
+        is2020c:KS_ISADP_10_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 10"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_10 .
+
+is2020c:Competence_ISADP_11 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify the lateral components and libraries that the designed and developed system will depend on"@en ;
+    dcterms:identifier "ISADP-11"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:EndogenousLibraries,
+        is2020k:ExogenousLibraries,
+        is2020k:SemanticVersioningForDependencySpecification ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_11_01,
+        is2020c:KS_ISADP_11_02,
+        is2020c:KS_ISADP_11_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Identify the lateral components and libraries that the designed and developed system will depend on"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 11"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_11 .
+
+is2020c:Competence_ISADP_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management"@en ;
+    dcterms:identifier "ISADP-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:DependencyManagementWithInheritanceAndComposition,
+        is2020k:DesignObjectsAndClassesFromDomainDescriptions,
+        is2020k:OpportunitiesForAbstractionAndSpecialization ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_7_01,
+        is2020c:KS_ISADP_7_02,
+        is2020c:KS_ISADP_7_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_7 .
+
+is2020c:Competence_ISADP_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal"@en ;
+    dcterms:identifier "ISADP-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ElicitationAndProcessDocumentation,
+        is2020k:ToolsForBehaviorAspects,
+        is2020k:ToolsForStructuralAspects ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_8_01,
+        is2020c:KS_ISADP_8_02,
+        is2020c:KS_ISADP_8_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_8 .
+
+is2020c:Competence_ISADP_9 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system"@en ;
+    dcterms:identifier "ISADP-9"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:IncrementGoalsForDevelopmentAndValidation,
+        is2020k:IterativelyMaintainSpecification,
+        is2020k:KnownDesignParadigmForRequirements ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_9_01,
+        is2020c:KS_ISADP_9_02,
+        is2020c:KS_ISADP_9_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system"@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 9"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_9 .
+
+is2020c:Source_ISADP_12 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 132 (PDF page 133)."@en ;
+    dcterms:description "Competency: Develop the programming code implementation that realizes the system architecture and design Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-12"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_13 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 132 (PDF page 133)."@en ;
+    dcterms:description "Competency: Test all developed programming code components to ensure fidelity, consistency, and fit Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-13"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_14 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 133 (PDF page 134)."@en ;
+    dcterms:description "Competency: Maintain software throughout deployment and utilization such that extant or new intentions and requirements are accommodated such that the intended purpose will function Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-14"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_15 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 133 (PDF page 134)."@en ;
+    dcterms:description "Competency: Adopt, or adapt, an appropriate software systems process methodology such that people, resources, design requirements and other dynamic considerations allow for correctness and utility Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-15"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_16 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 133 (PDF page 134)."@en ;
+    dcterms:description "Competency: Establish and maintain the appropriate dialog among stakeholders that ensure a degree of communication and information transparency to maintain the viability of the software system Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-16"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISADP_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Develop predicate expressions using relational and logical operators"@en ;
+    dcterms:identifier "ISADP-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BooleanPredicatesWithRelationalOperators,
+        is2020k:CompoundPredicateExpressionsWithLogicalOperators,
+        is2020k:LogicalOperationsAndProcessorArchitectures,
+        is2020k:MathematicalExpressionsSingleValue ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_3_01,
+        is2020c:KS_ISADP_3_02,
+        is2020c:KS_ISADP_3_03,
+        is2020c:KS_ISADP_3_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Develop predicate expressions using relational and logical operators."@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_3 .
+
+is2020c:Competence_ISADP_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Express algorithmic problem-solving using sequence, selection, and repetition structures"@en ;
+    dcterms:identifier "ISADP-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:RepetitionStructures,
+        is2020k:SelectionStructures,
+        is2020k:SequenceStructures,
+        is2020k:StatementAsUnitOfComputingWork ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_4_01,
+        is2020c:KS_ISADP_4_02,
+        is2020c:KS_ISADP_4_03,
+        is2020c:KS_ISADP_4_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Express algorithmic problem-solving using sequence, selection, and repetition structures."@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_4 .
+
+is2020c:Source_ISADP_10 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 131 (PDF page 132)."@en ;
+    dcterms:description "Competency: Specify the software system architecture such that the principal components and dependencies of the system are visible and comprehensible for all involved in shaping the materials of design and construction Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-10"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_11 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 132 (PDF page 133)."@en ;
+    dcterms:description "Competency: Identify the lateral components and libraries that the designed and developed system will depend on Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-11"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 130 (PDF page 131)."@en ;
+    dcterms:description "Competency: Utilize Object-Oriented concepts in the organization and structuring of programs for behavior and concept management Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 131 (PDF page 132)."@en ;
+    dcterms:description "Competency: Conduct a systematic requirements analysis to determine the basic facts used to organize the application of programming effort to solve a problem or reach a goal Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_9 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 131 (PDF page 132)."@en ;
+    dcterms:description "Competency: Formalize and communicate requirements in a manner that is comprehensible for all stakeholders that will determine the success of the software system Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-9"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISADP_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply data transformations using arithmetic, assignment, and transpositional operators"@en ;
+    dcterms:identifier "ISADP-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:ArithmeticOperatorsForDataTransformation,
+        is2020k:AssignmentOperatorsForVariables,
+        is2020k:LanguageSpecificKeywordsForValues,
+        is2020k:OperatorPrecedence,
+        is2020k:UnaryAndTranspositionalOperators ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_2_01,
+        is2020c:KS_ISADP_2_02,
+        is2020c:KS_ISADP_2_03,
+        is2020c:KS_ISADP_2_04,
+        is2020c:KS_ISADP_2_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Apply data transformations using arithmetic, assignment, and transpositional operators."@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_2 .
+
+is2020c:Source_ISADP_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 128 (PDF page 129)."@en ;
+    dcterms:description "Competency: Develop predicate expressions using relational and logical operators. Key dispositions: Purpose-driven, Meticulous, Self-Directed"@en ;
+    dcterms:identifier "ISADP-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 129 (PDF page 130)."@en ;
+    dcterms:description "Competency: Express algorithmic problem-solving using sequence, selection, and repetition structures. Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISADP_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Develop data storage strategies using elemental data types in a computer’s volatile memory"@en ;
+    dcterms:identifier "ISADP-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AppropriatePrimitiveDataTypes,
+        is2020k:BinaryNatureOfComputerStorage,
+        is2020k:DerivativeDataTypes,
+        is2020k:NumericBaseExpressions,
+        is2020k:PrimitiveTypesForFractionalPrecision,
+        is2020k:PrimitiveTypesForIntegralMagnitude ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_1_01,
+        is2020c:KS_ISADP_1_02,
+        is2020c:KS_ISADP_1_03,
+        is2020c:KS_ISADP_1_04,
+        is2020c:KS_ISADP_1_05,
+        is2020c:KS_ISADP_1_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Develop data storage strategies using elemental data types in a computer’s volatile memory."@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_1 .
+
+is2020c:Source_ISADP_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 128 (PDF page 129)."@en ;
+    dcterms:description "Competency: Apply data transformations using arithmetic, assignment, and transpositional operators. Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISADP_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory"@en ;
+    dcterms:identifier "ISADP-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:BasicElementsOfGraphs,
+        is2020k:CollectionsLibraries,
+        is2020k:ContiguousLinearDataStructures,
+        is2020k:DynamicallySizedNonContiguousLinearStructures,
+        is2020k:HashingPrinciples,
+        is2020k:NeedForNonLinearDataStructures,
+        is2020k:NeedForRelatedValuesInSingleStructure ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_6_01,
+        is2020c:KS_ISADP_6_02,
+        is2020c:KS_ISADP_6_03,
+        is2020c:KS_ISADP_6_04,
+        is2020c:KS_ISADP_6_05,
+        is2020c:KS_ISADP_6_06,
+        is2020c:KS_ISADP_6_07 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory."@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_6 .
+
+is2020c:Source_ISADP_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 127 (PDF page 128)."@en ;
+    dcterms:description "Competency: Develop data storage strategies using elemental data types in a computer’s volatile memory. Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISADP_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures"@en ;
+    dcterms:identifier "ISADP-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:CallSubroutineMethodFunction,
+        is2020k:DefineParametersForSubroutineMethodFunction,
+        is2020k:DefineReturnValueForSubroutineMethodFunction,
+        is2020k:DefineSubroutineMethodFunction,
+        is2020k:LanguageSpecificKeywordsForFunctions,
+        is2020k:MathematicalFunctionConcept,
+        is2020k:ModularityForOrganizationAndComplexity,
+        is2020k:WellNamedFunctionsBenefits ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISADP_5_01,
+        is2020c:KS_ISADP_5_02,
+        is2020c:KS_ISADP_5_03,
+        is2020c:KS_ISADP_5_04,
+        is2020c:KS_ISADP_5_05,
+        is2020c:KS_ISADP_5_06,
+        is2020c:KS_ISADP_5_07,
+        is2020c:KS_ISADP_5_08 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.4.2 Application Development and Programming."@en ;
+    skos:definition "Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures."@en ;
+    skos:prefLabel "IS Application Development and Programming Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISADP_5 .
+
+is2020c:Source_ISADP_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 130 (PDF page 131)."@en ;
+    dcterms:description "Competency: Select and utilize appropriate linear and non-linear data structures to maintain and manage sets of related data in non-volatile memory. Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISADP_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 129 (PDF page 130)."@en ;
+    dcterms:description "Competency: Modularize the algorithmic and operating capabilities of a program using functions, methods, subroutines or similar organizing structures. Key dispositions: Purpose-driven, Meticulous, Inventive"@en ;
+    dcterms:identifier "ISADP-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-application-development-and-programming-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Application Development and Programming competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.2 Competency Area – Application Development and Programming."@en .
+
+is2020k:IS2020ApplicationDevelopmentAndProgrammingKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Application Development and Programming Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Application Development and Programming competency area."@en ;
+    skos:prefLabel "IS2020 Application Development and Programming Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

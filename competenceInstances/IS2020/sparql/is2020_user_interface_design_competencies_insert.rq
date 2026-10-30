@@ -1,394 +1,670 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
+is2020c:KS_ISUID_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Users tasks and environments × Understanding"@en ;
+    dcterms:description "Source knowledge element: Understanding of users, tasks, and environments; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UnderstandingOfUsersTasksAndEnvironments ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Users tasks and environments × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_1 .
 
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+is2020c:KS_ISUID_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "User feedback for design × Understanding"@en ;
+    dcterms:description "Source knowledge element: Gathering user feedback to define requirements and design.; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:GatheringUserFeedbackForRequirementsAndDesign ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "User feedback for design × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_1 .
 
-  <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 User Interface Design competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.6 Competency Area – User Interface Design."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Involve user in design × Understanding"@en ;
+    dcterms:description "Source knowledge element: Involve user in the design process; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InvolveUserInDesignProcess ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Involve user in design × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_1 .
 
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+is2020c:KS_ISUID_1_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Iterative user design process × Understanding"@en ;
+    dcterms:description "Source knowledge element: Implement an iterative user design process; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ImplementIterativeUserDesignProcess ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Iterative user design process × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_1 .
 
-  is2020k:IS2020UserInterfaceDesignKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 User Interface Design Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 User Interface Design Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 User Interface Design competency area."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_1_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Essential UCD elements × Understanding"@en ;
+    dcterms:description "Source knowledge element: Essential elements of user centered design; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EssentialElementsOfUserCenteredDesign ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Essential UCD elements × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_1 .
 
-  is2020k:UnderstandingOfUsersTasksAndEnvironments
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Understanding of users, tasks, and environments"@en ;
-      skos:prefLabel "Understanding of users, tasks, and environments"@en ;
-      skos:definition "Knowledge of users, their tasks, and the environments in which interaction occurs."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_1_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Human capabilities × Understanding"@en ;
+    dcterms:description "Source knowledge element: Human capabilities that motivate them, including motor skills, attention, and human error; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HumanCapabilitiesMotorSkillsAttentionHumanError ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Human capabilities × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_1 .
 
-  is2020k:GatheringUserFeedbackForRequirementsAndDesign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Gathering user feedback to define requirements and design"@en ;
-      skos:prefLabel "Gathering user feedback to define requirements and design"@en ;
-      skos:definition "Knowledge of gathering user feedback to define requirements and design decisions."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Direct manipulation × Understanding"@en ;
+    dcterms:description "Source knowledge element: Direct manipulation objects of interest in the UI are visible and can be acted upon; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DirectManipulation ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Direct manipulation × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_2 .
 
-  is2020k:InvolveUserInDesignProcess
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Involve user in the design process"@en ;
-      skos:prefLabel "Involve user in the design process"@en ;
-      skos:definition "Knowledge of involving users directly in the design process."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Menu based systems × Understanding"@en ;
+    dcterms:description "Source knowledge element: Menu based systems where users work their way through a series of screens or menus; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MenuBasedSystems ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Menu based systems × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_2 .
 
-  is2020k:ImplementIterativeUserDesignProcess
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Implement an iterative user design process"@en ;
-      skos:prefLabel "Implement an iterative user design process"@en ;
-      skos:definition "Knowledge of iterative user-centered design processes."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Form fill-in × Understanding"@en ;
+    dcterms:description "Source knowledge element: Form fill-in where a user needs to enter the necessary information in order to complete a specific task for requirement; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FormFillInInteraction ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Form fill-in × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_2 .
 
-  is2020k:EssentialElementsOfUserCenteredDesign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Essential elements of user centered design"@en ;
-      skos:prefLabel "Essential elements of user centered design"@en ;
-      skos:definition "Knowledge of the essential elements of user-centered design."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_2_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Command line interaction × Understanding"@en ;
+    dcterms:description "Source knowledge element: Command line interaction with operating systems; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CommandLineInteraction ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Command line interaction × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_2 .
 
-  is2020k:HumanCapabilitiesMotorSkillsAttentionHumanError
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Human capabilities that motivate them, including motor skills, attention, and human error"@en ;
-      skos:prefLabel "Human capabilities that motivate them, including motor skills, attention, and human error"@en ;
-      skos:definition "Knowledge of human capabilities relevant to interaction, including motor skills, attention, and human error."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_2_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Natural language interaction × Understanding"@en ;
+    dcterms:description "Source knowledge element: Natural language allowing a user to interact with the computer using a human language; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NaturalLanguageInteraction ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Natural language interaction × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_2 .
 
-  is2020k:DirectManipulation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Direct manipulation objects of interest in the UI are visible and can be acted upon"@en ;
-      skos:prefLabel "Direct manipulation objects of interest in the UI are visible and can be acted upon"@en ;
-      skos:definition "Knowledge of direct manipulation interaction where UI objects are visible and can be acted upon."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Construct navigation × Creating"@en ;
+    dcterms:description "Source knowledge element: Construct navigation enabling users to easily accomplish tasks; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConstructNavigation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Construct navigation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_3 .
 
-  is2020k:MenuBasedSystems
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Menu based systems where users work their way through a series of screens or menus"@en ;
-      skos:prefLabel "Menu based systems where users work their way through a series of screens or menus"@en ;
-      skos:definition "Knowledge of menu-based systems in which users navigate through screens or menus."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Create intuitive forms × Creating"@en ;
+    dcterms:description "Source knowledge element: Create intuitive forms used for gathering required data; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CreateIntuitiveForms ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Create intuitive forms × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_3 .
 
-  is2020k:FormFillInInteraction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Form fill-in where a user needs to enter the necessary information in order to complete a specific task or requirement"@en ;
-      skos:prefLabel "Form fill-in where a user needs to enter the necessary information in order to complete a specific task or requirement"@en ;
-      skos:definition "Knowledge of form fill-in interaction where users enter information to complete tasks."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Create app or template mobile-first × Creating"@en ;
+    dcterms:description "Source knowledge element: Create a working application or web page template appropriate for various devices using mobile-first design principles.; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CreateWorkingApplicationOrTemplateMobileFirst ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Create app or template mobile-first × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_3 .
 
-  is2020k:CommandLineInteraction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Command line interaction with operating systems"@en ;
-      skos:prefLabel "Command line interaction with operating systems"@en ;
-      skos:definition "Knowledge of command line interaction with operating systems."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_3_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Audience-appropriate design × Creating"@en ;
+    dcterms:description "Source knowledge element: Identify an application’s target audience and create an audience-appropriate design; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:IdentifyTargetAudienceAndAudienceAppropriateDesign ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Audience-appropriate design × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_3 .
 
-  is2020k:NaturalLanguageInteraction
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Natural language allowing a user to interact with the computer using a human language"@en ;
-      skos:prefLabel "Natural language allowing a user to interact with the computer using a human language"@en ;
-      skos:definition "Knowledge of natural language interaction in which users interact with computers using human language."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_3_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Revise based on feedback × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Use critical thinking skills to revise application based on feedback; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ReviseApplicationBasedOnFeedback ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Revise based on feedback × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_3 .
 
-  is2020k:ConstructNavigation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Construct navigation enabling users to easily accomplish tasks"@en ;
-      skos:prefLabel "Construct navigation enabling users to easily accomplish tasks"@en ;
-      skos:definition "Knowledge of constructing navigation that enables users to accomplish tasks easily."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Perception simplicity clarity consistency hierarchy × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Study perception, simplicity, clarity, consistency, hierarchy (visual and temporal); source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StudyPerceptionSimplicityClarityConsistencyHierarchy ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Perception simplicity clarity consistency hierarchy × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_4 .
 
-  is2020k:CreateIntuitiveForms
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Create intuitive forms used for gathering required data"@en ;
-      skos:prefLabel "Create intuitive forms used for gathering required data"@en ;
-      skos:definition "Knowledge of creating intuitive forms for gathering required data."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Achieve personalized experience × Creating"@en ;
+    dcterms:description "Source knowledge element: Achieve a personalized experience; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AchievePersonalizedExperience ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Achieve personalized experience × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_4 .
 
-  is2020k:CreateWorkingApplicationOrTemplateMobileFirst
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Create a working application or web page template appropriate for various devices using mobile-first design principles"@en ;
-      skos:prefLabel "Create a working application or web page template appropriate for various devices using mobile-first design principles"@en ;
-      skos:definition "Knowledge of creating a working application or web page template for various devices using mobile-first design principles."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design and align information architecture × Creating"@en ;
+    dcterms:description "Source knowledge element: Design and align the information architecture of the application environment to support usability, comprehensibility, and search; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignAndAlignInformationArchitecture ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design and align information architecture × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_4 .
 
-  is2020k:IdentifyTargetAudienceAndAudienceAppropriateDesign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Identify an application's target audience and create an audience-appropriate design"@en ;
-      skos:prefLabel "Identify an application's target audience and create an audience-appropriate design"@en ;
-      skos:definition "Knowledge of identifying an application's target audience and producing an appropriate design for that audience."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "HCI principles and issues × Applying"@en ;
+    dcterms:description "Source knowledge element: Familiarity with human-computer interface principles and issues; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HumanComputerInterfacePrinciplesAndIssues ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "HCI principles and issues × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_4 .
 
-  is2020k:ReviseApplicationBasedOnFeedback
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Use critical thinking skills to revise application based on feedback"@en ;
-      skos:prefLabel "Use critical thinking skills to revise application based on feedback"@en ;
-      skos:definition "Knowledge of critically revising an application based on feedback."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_4_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "User testing strategies × Creating"@en ;
+    dcterms:description "Source knowledge element: Design and implement user testing strategies to include usability testing, A/B testing, and user flow validation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignAndImplementUserTestingStrategies ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "User testing strategies × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_4 .
 
-  is2020k:StudyPerceptionSimplicityClarityConsistencyHierarchy
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Study perception, simplicity, clarity, consistency, hierarchy (visual and temporal)"@en ;
-      skos:prefLabel "Study perception, simplicity, clarity, consistency, hierarchy (visual and temporal)"@en ;
-      skos:definition "Knowledge of perception, simplicity, clarity, consistency, and hierarchy, both visual and temporal."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Cooperative and participatory design × Applying"@en ;
+    dcterms:description "Source knowledge element: Cooperative and Participatory design to align designer and users in a partnership; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CooperativeAndParticipatoryDesign ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Cooperative and participatory design × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_5 .
 
-  is2020k:AchievePersonalizedExperience
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Achieve a personalized experience"@en ;
-      skos:prefLabel "Achieve a personalized experience"@en ;
-      skos:definition "Knowledge of achieving a personalized user experience."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "UX purpose audience context history × Understanding"@en ;
+    dcterms:description "Source knowledge element: Establish UX purpose, audience, context, and history; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EstablishUxPurposeAudienceContextHistory ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "UX purpose audience context history × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_5 .
 
-  is2020k:DesignAndAlignInformationArchitecture
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design and align the information architecture of the application environment to support usability, comprehensibility, and search"@en ;
-      skos:prefLabel "Design and align the information architecture of the application environment to support usability, comprehensibility, and search"@en ;
-      skos:definition "Knowledge of designing and aligning information architecture to support usability, comprehensibility, and search."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Analysis tools and techniques × Applying"@en ;
+    dcterms:description "Source knowledge element: Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AnalysisToolsAndTechniques ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Analysis tools and techniques × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_5 .
 
-  is2020k:HumanComputerInterfacePrinciplesAndIssues
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Familiarity with human-computer interface principles and issues"@en ;
-      skos:prefLabel "Familiarity with human-computer interface principles and issues"@en ;
-      skos:definition "Knowledge of human-computer interface principles and issues."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISUID_5_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Underlying philosophies × Understanding"@en ;
+    dcterms:description "Source knowledge element: Awareness of underlying philosophies such as actionorientation, design thinking, human-centrism, information architecture, and socio-technical perspectives; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UnderlyingPhilosophies ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Underlying philosophies × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISUID_5 .
 
-  is2020k:DesignAndImplementUserTestingStrategies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design and implement user testing strategies to include usability testing, A/B testing, and user flow validation"@en ;
-      skos:prefLabel "Design and implement user testing strategies to include usability testing, A/B testing, and user flow validation"@en ;
-      skos:definition "Knowledge of designing and implementing user testing strategies including usability testing, A/B testing, and user flow validation."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:AchievePersonalizedExperience a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Achieve a personalized experience"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of achieving a personalized user experience."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Achieve a personalized experience"@en .
 
-  is2020k:CooperativeAndParticipatoryDesign
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Cooperative and Participatory design to align designer and users in a partnership"@en ;
-      skos:prefLabel "Cooperative and Participatory design to align designer and users in a partnership"@en ;
-      skos:definition "Knowledge of cooperative and participatory design that aligns designers and users in a partnership."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:AnalysisToolsAndTechniques a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of analysis tools and techniques such as personas, scenarios, use cases, user stories, storyboards, and wireframes."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes"@en .
 
-  is2020k:EstablishUxPurposeAudienceContextHistory
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Establish UX purpose, audience, context, and history"@en ;
-      skos:prefLabel "Establish UX purpose, audience, context, and history"@en ;
-      skos:definition "Knowledge of establishing UX purpose, audience, context, and history."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:CommandLineInteraction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Command line interaction with operating systems"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of command line interaction with operating systems."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Command line interaction with operating systems"@en .
 
-  is2020k:AnalysisToolsAndTechniques
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes"@en ;
-      skos:prefLabel "Analysis tools and techniques such as Personas, Scenarios, Use Cases, User Stories, Storyboards, and Wireframes"@en ;
-      skos:definition "Knowledge of analysis tools and techniques such as personas, scenarios, use cases, user stories, storyboards, and wireframes."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:ConstructNavigation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Construct navigation enabling users to easily accomplish tasks"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of constructing navigation that enables users to accomplish tasks easily."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Construct navigation enabling users to easily accomplish tasks"@en .
 
-  is2020k:UnderlyingPhilosophies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Awareness of underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives"@en ;
-      skos:prefLabel "Awareness of underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives"@en ;
-      skos:definition "Knowledge of underlying philosophies including action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives."@en ;
-      skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020k:CooperativeAndParticipatoryDesign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Cooperative and Participatory design to align designer and users in a partnership"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of cooperative and participatory design that aligns designers and users in a partnership."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Cooperative and Participatory design to align designer and users in a partnership"@en .
 
-  is2020c:Competence_ISUID_1
-      a ontoksd:Competence ;
-      rdfs:label "Apply principles of user-Centered design (UCD)"@en ;
-      skos:prefLabel "IS User Interface Design Competency 1"@en ;
-      skos:definition "Apply principles of user-Centered design (UCD)."@en ;
-      dcterms:identifier "ISUID-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:UnderstandingOfUsersTasksAndEnvironments ,
-          is2020k:GatheringUserFeedbackForRequirementsAndDesign ,
-          is2020k:InvolveUserInDesignProcess ,
-          is2020k:ImplementIterativeUserDesignProcess ,
-          is2020k:EssentialElementsOfUserCenteredDesign ,
-          is2020k:HumanCapabilitiesMotorSkillsAttentionHumanError ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:collaborative ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISUID_1_01 ,
-          is2020c:KS_ISUID_1_02 ,
-          is2020c:KS_ISUID_1_03 ,
-          is2020c:KS_ISUID_1_04 ,
-          is2020c:KS_ISUID_1_05 ,
-          is2020c:KS_ISUID_1_06 .
+is2020k:CreateIntuitiveForms a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Create intuitive forms used for gathering required data"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating intuitive forms for gathering required data."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Create intuitive forms used for gathering required data"@en .
 
-  is2020c:Competence_ISUID_2
-      a ontoksd:Competence ;
-      rdfs:label "Apply user-system interaction principles"@en ;
-      skos:prefLabel "IS User Interface Design Competency 2"@en ;
-      skos:definition "Apply user-system interaction principles."@en ;
-      dcterms:identifier "ISUID-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:DirectManipulation ,
-          is2020k:MenuBasedSystems ,
-          is2020k:FormFillInInteraction ,
-          is2020k:CommandLineInteraction ,
-          is2020k:NaturalLanguageInteraction ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:collaborative ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISUID_2_01 ,
-          is2020c:KS_ISUID_2_02 ,
-          is2020c:KS_ISUID_2_03 ,
-          is2020c:KS_ISUID_2_04 ,
-          is2020c:KS_ISUID_2_05 .
+is2020k:CreateWorkingApplicationOrTemplateMobileFirst a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Create a working application or web page template appropriate for various devices using mobile-first design principles"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating a working application or web page template for various devices using mobile-first design principles."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Create a working application or web page template appropriate for various devices using mobile-first design principles"@en .
 
-  is2020c:Competence_ISUID_3
-      a ontoksd:Competence ;
-      rdfs:label "Design and create effective user-centered user interaction with an application"@en ;
-      skos:prefLabel "IS User Interface Design Competency 3"@en ;
-      skos:definition "Design and create effective user-centered user interaction with an application."@en ;
-      dcterms:identifier "ISUID-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ConstructNavigation ,
-          is2020k:CreateIntuitiveForms ,
-          is2020k:CreateWorkingApplicationOrTemplateMobileFirst ,
-          is2020k:IdentifyTargetAudienceAndAudienceAppropriateDesign ,
-          is2020k:ReviseApplicationBasedOnFeedback ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:inventive , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISUID_3_01 ,
-          is2020c:KS_ISUID_3_02 ,
-          is2020c:KS_ISUID_3_03 ,
-          is2020c:KS_ISUID_3_04 ,
-          is2020c:KS_ISUID_3_05 .
+is2020k:DesignAndAlignInformationArchitecture a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design and align the information architecture of the application environment to support usability, comprehensibility, and search"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing and aligning information architecture to support usability, comprehensibility, and search."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Design and align the information architecture of the application environment to support usability, comprehensibility, and search"@en .
 
-  is2020c:Competence_ISUID_4
-      a ontoksd:Competence ;
-      rdfs:label "Identify and evaluate attributes of effective UX"@en ;
-      skos:prefLabel "IS User Interface Design Competency 4"@en ;
-      skos:definition "Identify and evaluate attributes of effective UX."@en ;
-      dcterms:identifier "ISUID-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:StudyPerceptionSimplicityClarityConsistencyHierarchy ,
-          is2020k:AchievePersonalizedExperience ,
-          is2020k:DesignAndAlignInformationArchitecture ,
-          is2020k:HumanComputerInterfacePrinciplesAndIssues ,
-          is2020k:DesignAndImplementUserTestingStrategies ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:inventive , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISUID_4_01 ,
-          is2020c:KS_ISUID_4_02 ,
-          is2020c:KS_ISUID_4_03 ,
-          is2020c:KS_ISUID_4_04 ,
-          is2020c:KS_ISUID_4_05 .
+is2020k:DesignAndImplementUserTestingStrategies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design and implement user testing strategies to include usability testing, A/B testing, and user flow validation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of designing and implementing user testing strategies including usability testing, A/B testing, and user flow validation."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Design and implement user testing strategies to include usability testing, A/B testing, and user flow validation"@en .
 
-  is2020c:Competence_ISUID_5
-      a ontoksd:Competence ;
-      rdfs:label "Evaluate the influence user centered design has on user experience (UX)"@en ;
-      skos:prefLabel "IS User Interface Design Competency 5"@en ;
-      skos:definition "Evaluate the influence user centered design has on user experience (UX)."@en ;
-      dcterms:identifier "ISUID-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:CooperativeAndParticipatoryDesign ,
-          is2020k:EstablishUxPurposeAudienceContextHistory ,
-          is2020k:AnalysisToolsAndTechniques ,
-          is2020k:UnderlyingPhilosophies ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISUID_5_01 ,
-          is2020c:KS_ISUID_5_02 ,
-          is2020c:KS_ISUID_5_03 ,
-          is2020c:KS_ISUID_5_04 .
+is2020k:DirectManipulation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Direct manipulation objects of interest in the UI are visible and can be acted upon"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of direct manipulation interaction where UI objects are visible and can be acted upon."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Direct manipulation objects of interest in the UI are visible and can be acted upon"@en .
 
-  is2020c:KS_ISUID_1_01 a ontoksd:KnowledgeSkill ; rdfs:label "Users tasks and environments × Understanding"@en ; skos:prefLabel "Users tasks and environments × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:UnderstandingOfUsersTasksAndEnvironments ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 .
-  is2020c:KS_ISUID_1_02 a ontoksd:KnowledgeSkill ; rdfs:label "User feedback for design × Understanding"@en ; skos:prefLabel "User feedback for design × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:GatheringUserFeedbackForRequirementsAndDesign ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 .
-  is2020c:KS_ISUID_1_03 a ontoksd:KnowledgeSkill ; rdfs:label "Involve user in design × Understanding"@en ; skos:prefLabel "Involve user in design × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:InvolveUserInDesignProcess ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 .
-  is2020c:KS_ISUID_1_04 a ontoksd:KnowledgeSkill ; rdfs:label "Iterative user design process × Understanding"@en ; skos:prefLabel "Iterative user design process × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:ImplementIterativeUserDesignProcess ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 .
-  is2020c:KS_ISUID_1_05 a ontoksd:KnowledgeSkill ; rdfs:label "Essential UCD elements × Understanding"@en ; skos:prefLabel "Essential UCD elements × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:EssentialElementsOfUserCenteredDesign ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 .
-  is2020c:KS_ISUID_1_06 a ontoksd:KnowledgeSkill ; rdfs:label "Human capabilities × Understanding"@en ; skos:prefLabel "Human capabilities × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:HumanCapabilitiesMotorSkillsAttentionHumanError ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_1 .
+is2020k:EssentialElementsOfUserCenteredDesign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Essential elements of user centered design"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the essential elements of user-centered design."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Essential elements of user centered design"@en .
 
-  is2020c:KS_ISUID_2_01 a ontoksd:KnowledgeSkill ; rdfs:label "Direct manipulation × Understanding"@en ; skos:prefLabel "Direct manipulation × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:DirectManipulation ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 .
-  is2020c:KS_ISUID_2_02 a ontoksd:KnowledgeSkill ; rdfs:label "Menu based systems × Understanding"@en ; skos:prefLabel "Menu based systems × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:MenuBasedSystems ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 .
-  is2020c:KS_ISUID_2_03 a ontoksd:KnowledgeSkill ; rdfs:label "Form fill-in × Understanding"@en ; skos:prefLabel "Form fill-in × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:FormFillInInteraction ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 .
-  is2020c:KS_ISUID_2_04 a ontoksd:KnowledgeSkill ; rdfs:label "Command line interaction × Understanding"@en ; skos:prefLabel "Command line interaction × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:CommandLineInteraction ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 .
-  is2020c:KS_ISUID_2_05 a ontoksd:KnowledgeSkill ; rdfs:label "Natural language interaction × Understanding"@en ; skos:prefLabel "Natural language interaction × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:NaturalLanguageInteraction ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_2 .
+is2020k:EstablishUxPurposeAudienceContextHistory a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Establish UX purpose, audience, context, and history"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of establishing UX purpose, audience, context, and history."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Establish UX purpose, audience, context, and history"@en .
 
-  is2020c:KS_ISUID_3_01 a ontoksd:KnowledgeSkill ; rdfs:label "Construct navigation × Creating"@en ; skos:prefLabel "Construct navigation × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:ConstructNavigation ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 .
-  is2020c:KS_ISUID_3_02 a ontoksd:KnowledgeSkill ; rdfs:label "Create intuitive forms × Creating"@en ; skos:prefLabel "Create intuitive forms × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:CreateIntuitiveForms ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 .
-  is2020c:KS_ISUID_3_03 a ontoksd:KnowledgeSkill ; rdfs:label "Create app or template mobile-first × Creating"@en ; skos:prefLabel "Create app or template mobile-first × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:CreateWorkingApplicationOrTemplateMobileFirst ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 .
-  is2020c:KS_ISUID_3_04 a ontoksd:KnowledgeSkill ; rdfs:label "Audience-appropriate design × Creating"@en ; skos:prefLabel "Audience-appropriate design × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:IdentifyTargetAudienceAndAudienceAppropriateDesign ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 .
-  is2020c:KS_ISUID_3_05 a ontoksd:KnowledgeSkill ; rdfs:label "Revise based on feedback × Evaluating"@en ; skos:prefLabel "Revise based on feedback × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:ReviseApplicationBasedOnFeedback ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_3 .
+is2020k:FormFillInInteraction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Form fill-in where a user needs to enter the necessary information in order to complete a specific task or requirement"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of form fill-in interaction where users enter information to complete tasks."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Form fill-in where a user needs to enter the necessary information in order to complete a specific task or requirement"@en .
 
-  is2020c:KS_ISUID_4_01 a ontoksd:KnowledgeSkill ; rdfs:label "Perception simplicity clarity consistency hierarchy × Evaluating"@en ; skos:prefLabel "Perception simplicity clarity consistency hierarchy × Evaluating"@en ; ontoksd:hasKnowledgeComponent is2020k:StudyPerceptionSimplicityClarityConsistencyHierarchy ; ontoksd:hasRequiredSkillLevel bloom:Evaluating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 .
-  is2020c:KS_ISUID_4_02 a ontoksd:KnowledgeSkill ; rdfs:label "Achieve personalized experience × Creating"@en ; skos:prefLabel "Achieve personalized experience × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:AchievePersonalizedExperience ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 .
-  is2020c:KS_ISUID_4_03 a ontoksd:KnowledgeSkill ; rdfs:label "Design and align information architecture × Creating"@en ; skos:prefLabel "Design and align information architecture × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DesignAndAlignInformationArchitecture ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 .
-  is2020c:KS_ISUID_4_04 a ontoksd:KnowledgeSkill ; rdfs:label "HCI principles and issues × Applying"@en ; skos:prefLabel "HCI principles and issues × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:HumanComputerInterfacePrinciplesAndIssues ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 .
-  is2020c:KS_ISUID_4_05 a ontoksd:KnowledgeSkill ; rdfs:label "User testing strategies × Creating"@en ; skos:prefLabel "User testing strategies × Creating"@en ; ontoksd:hasKnowledgeComponent is2020k:DesignAndImplementUserTestingStrategies ; ontoksd:hasRequiredSkillLevel bloom:Creating ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_4 .
+is2020k:GatheringUserFeedbackForRequirementsAndDesign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Gathering user feedback to define requirements and design"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of gathering user feedback to define requirements and design decisions."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Gathering user feedback to define requirements and design"@en .
 
-  is2020c:KS_ISUID_5_01 a ontoksd:KnowledgeSkill ; rdfs:label "Cooperative and participatory design × Applying"@en ; skos:prefLabel "Cooperative and participatory design × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:CooperativeAndParticipatoryDesign ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 .
-  is2020c:KS_ISUID_5_02 a ontoksd:KnowledgeSkill ; rdfs:label "UX purpose audience context history × Understanding"@en ; skos:prefLabel "UX purpose audience context history × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:EstablishUxPurposeAudienceContextHistory ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 .
-  is2020c:KS_ISUID_5_03 a ontoksd:KnowledgeSkill ; rdfs:label "Analysis tools and techniques × Applying"@en ; skos:prefLabel "Analysis tools and techniques × Applying"@en ; ontoksd:hasKnowledgeComponent is2020k:AnalysisToolsAndTechniques ; ontoksd:hasRequiredSkillLevel bloom:Applying ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 .
-  is2020c:KS_ISUID_5_04 a ontoksd:KnowledgeSkill ; rdfs:label "Underlying philosophies × Understanding"@en ; skos:prefLabel "Underlying philosophies × Understanding"@en ; ontoksd:hasKnowledgeComponent is2020k:UnderlyingPhilosophies ; ontoksd:hasRequiredSkillLevel bloom:Understanding ; ontoksd:isKnowledgeSkillOf is2020c:Competence_ISUID_5 .
+is2020k:HumanCapabilitiesMotorSkillsAttentionHumanError a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Human capabilities that motivate them, including motor skills, attention, and human error"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of human capabilities relevant to interaction, including motor skills, attention, and human error."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Human capabilities that motivate them, including motor skills, attention, and human error"@en .
 
+is2020k:HumanComputerInterfacePrinciplesAndIssues a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Familiarity with human-computer interface principles and issues"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of human-computer interface principles and issues."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Familiarity with human-computer interface principles and issues"@en .
+
+is2020k:IdentifyTargetAudienceAndAudienceAppropriateDesign a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Identify an application's target audience and create an audience-appropriate design"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of identifying an application's target audience and producing an appropriate design for that audience."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Identify an application's target audience and create an audience-appropriate design"@en .
+
+is2020k:ImplementIterativeUserDesignProcess a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Implement an iterative user design process"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of iterative user-centered design processes."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Implement an iterative user design process"@en .
+
+is2020k:InvolveUserInDesignProcess a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Involve user in the design process"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of involving users directly in the design process."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Involve user in the design process"@en .
+
+is2020k:MenuBasedSystems a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Menu based systems where users work their way through a series of screens or menus"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of menu-based systems in which users navigate through screens or menus."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Menu based systems where users work their way through a series of screens or menus"@en .
+
+is2020k:NaturalLanguageInteraction a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Natural language allowing a user to interact with the computer using a human language"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of natural language interaction in which users interact with computers using human language."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Natural language allowing a user to interact with the computer using a human language"@en .
+
+is2020k:ReviseApplicationBasedOnFeedback a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Use critical thinking skills to revise application based on feedback"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of critically revising an application based on feedback."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Use critical thinking skills to revise application based on feedback"@en .
+
+is2020k:StudyPerceptionSimplicityClarityConsistencyHierarchy a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Study perception, simplicity, clarity, consistency, hierarchy (visual and temporal)"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of perception, simplicity, clarity, consistency, and hierarchy, both visual and temporal."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Study perception, simplicity, clarity, consistency, hierarchy (visual and temporal)"@en .
+
+is2020k:UnderlyingPhilosophies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Awareness of underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of underlying philosophies including action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Awareness of underlying philosophies such as action-orientation, design thinking, human-centrism, information architecture, and socio-technical perspectives"@en .
+
+is2020k:UnderstandingOfUsersTasksAndEnvironments a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Understanding of users, tasks, and environments"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of users, their tasks, and the environments in which interaction occurs."@en ;
+    skos:inScheme is2020k:IS2020UserInterfaceDesignKnowledgeScheme ;
+    skos:prefLabel "Understanding of users, tasks, and environments"@en .
+
+is2020c:Competence_ISUID_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluate the influence user centered design has on user experience (UX)"@en ;
+    dcterms:identifier "ISUID-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:professional,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AnalysisToolsAndTechniques,
+        is2020k:CooperativeAndParticipatoryDesign,
+        is2020k:EstablishUxPurposeAudienceContextHistory,
+        is2020k:UnderlyingPhilosophies ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISUID_5_01,
+        is2020c:KS_ISUID_5_02,
+        is2020c:KS_ISUID_5_03,
+        is2020c:KS_ISUID_5_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Evaluate the influence user centered design has on user experience (UX)"@en ;
+    skos:prefLabel "IS User Interface Design Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISUID_5 .
+
+is2020c:Competence_ISUID_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply user-system interaction principles"@en ;
+    dcterms:identifier "ISUID-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:CommandLineInteraction,
+        is2020k:DirectManipulation,
+        is2020k:FormFillInInteraction,
+        is2020k:MenuBasedSystems,
+        is2020k:NaturalLanguageInteraction ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISUID_2_01,
+        is2020c:KS_ISUID_2_02,
+        is2020c:KS_ISUID_2_03,
+        is2020c:KS_ISUID_2_04,
+        is2020c:KS_ISUID_2_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply user-system interaction principles"@en ;
+    skos:prefLabel "IS User Interface Design Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISUID_2 .
+
+is2020c:Competence_ISUID_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Design and create effective user-centered user interaction with an application"@en ;
+    dcterms:identifier "ISUID-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ConstructNavigation,
+        is2020k:CreateIntuitiveForms,
+        is2020k:CreateWorkingApplicationOrTemplateMobileFirst,
+        is2020k:IdentifyTargetAudienceAndAudienceAppropriateDesign,
+        is2020k:ReviseApplicationBasedOnFeedback ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISUID_3_01,
+        is2020c:KS_ISUID_3_02,
+        is2020c:KS_ISUID_3_03,
+        is2020c:KS_ISUID_3_04,
+        is2020c:KS_ISUID_3_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Design and create effective user-centered user interaction with an application"@en ;
+    skos:prefLabel "IS User Interface Design Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISUID_3 .
+
+is2020c:Competence_ISUID_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and evaluate attributes of effective UX"@en ;
+    dcterms:identifier "ISUID-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AchievePersonalizedExperience,
+        is2020k:DesignAndAlignInformationArchitecture,
+        is2020k:DesignAndImplementUserTestingStrategies,
+        is2020k:HumanComputerInterfacePrinciplesAndIssues,
+        is2020k:StudyPerceptionSimplicityClarityConsistencyHierarchy ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISUID_4_01,
+        is2020c:KS_ISUID_4_02,
+        is2020c:KS_ISUID_4_03,
+        is2020c:KS_ISUID_4_04,
+        is2020c:KS_ISUID_4_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Identify and evaluate attributes of effective UX"@en ;
+    skos:prefLabel "IS User Interface Design Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISUID_4 .
+
+is2020c:Source_ISUID_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 153 (PDF page 154)."@en ;
+    dcterms:description "Competency: Evaluate the influence user centered design has on user experience (UX) Key dispositions: Purpose-driven, Professional, Inventive"@en ;
+    dcterms:identifier "ISUID-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 User Interface Design competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.4.6 Competency Area – User Interface Design."@en .
+
+is2020c:Competence_ISUID_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply principles of user-Centered design (UCD)"@en ;
+    dcterms:identifier "ISUID-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-user-interface-design-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:professional,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:EssentialElementsOfUserCenteredDesign,
+        is2020k:GatheringUserFeedbackForRequirementsAndDesign,
+        is2020k:HumanCapabilitiesMotorSkillsAttentionHumanError,
+        is2020k:ImplementIterativeUserDesignProcess,
+        is2020k:InvolveUserInDesignProcess,
+        is2020k:UnderstandingOfUsersTasksAndEnvironments ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISUID_1_01,
+        is2020c:KS_ISUID_1_02,
+        is2020c:KS_ISUID_1_03,
+        is2020c:KS_ISUID_1_04,
+        is2020c:KS_ISUID_1_05,
+        is2020c:KS_ISUID_1_06 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Apply principles of user-Centered design (UCD)"@en ;
+    skos:prefLabel "IS User Interface Design Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISUID_1 .
+
+is2020c:Source_ISUID_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 151 (PDF page 152)."@en ;
+    dcterms:description "Competency: Apply user-system interaction principles Key dispositions: Purpose-driven, Professional, Collaborative"@en ;
+    dcterms:identifier "ISUID-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISUID_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 152 (PDF page 153)."@en ;
+    dcterms:description "Competency: Design and create effective user-centered user interaction with an application Key dispositions: Purpose-driven, Inventive, Self-Directed"@en ;
+    dcterms:identifier "ISUID-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISUID_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 152 (PDF page 153)."@en ;
+    dcterms:description "Competency: Identify and evaluate attributes of effective UX Key dispositions: Purpose-driven, Inventive, Self-Directed"@en ;
+    dcterms:identifier "ISUID-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISUID_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 151 (PDF page 152)."@en ;
+    dcterms:description "Competency: Apply principles of user-Centered design (UCD) Key dispositions: Purpose-driven, Professional, Collaborative"@en ;
+    dcterms:identifier "ISUID-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020k:IS2020UserInterfaceDesignKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 User Interface Design Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 User Interface Design competency area."@en ;
+    skos:prefLabel "IS2020 User Interface Design Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

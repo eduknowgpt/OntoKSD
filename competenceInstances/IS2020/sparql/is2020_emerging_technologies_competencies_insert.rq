@@ -1,650 +1,766 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  #################################################################
-  # Source markers and scheme
-  #################################################################
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Emerging Technologies competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.3.3 Competency Area – Emerging Technologies."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020EmergingTechnologiesKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Emerging Technologies Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Emerging Technologies Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Emerging Technologies competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Knowledge elements
-  #################################################################
-
-  is2020k:ResearchMethodsAndTheories
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Research methods and theories"@en ;
-      skos:prefLabel "Research methods and theories"@en ;
-      skos:definition "Knowledge of research methods and theories used to investigate current and emerging technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EmergingTechnologyTypesFeaturesAndImpact
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Emerging technology types, features, and impact"@en ;
-      skos:prefLabel "Emerging technology types, features, and impact"@en ;
-      skos:definition "Knowledge of types of emerging technologies, their features, and their potential impact."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BusinessRequirementsAnalysis
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Business requirements analysis"@en ;
-      skos:prefLabel "Business requirements analysis"@en ;
-      skos:definition "Knowledge of business requirements analysis for evaluating technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EmergingTechnologyTypes
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Emerging technology types"@en ;
-      skos:prefLabel "Emerging technology types"@en ;
-      skos:definition "Knowledge of different types of emerging technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EvaluationMethods
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Evaluation methods"@en ;
-      skos:prefLabel "Evaluation methods"@en ;
-      skos:definition "Knowledge of methods used to evaluate technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BusinessNeedsClassification
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Business needs classification"@en ;
-      skos:prefLabel "Business needs classification"@en ;
-      skos:definition "Knowledge of business needs classification for technology evaluation and selection."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RecommenderFrameworks
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Recommender frameworks"@en ;
-      skos:prefLabel "Recommender frameworks"@en ;
-      skos:definition "Knowledge of recommender frameworks used to support recommendations about technology usage."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DecisionMaking
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Decision making"@en ;
-      skos:prefLabel "Decision making"@en ;
-      skos:definition "Knowledge of decision making processes relevant to recommending technology usage."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Simulations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Simulations"@en ;
-      skos:prefLabel "Simulations"@en ;
-      skos:definition "Knowledge of simulations used to analyze or evaluate technology usage scenarios."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AppropriateTheoriesRelatedToTechnologyImplementationAndUse
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Appropriate theories related to technology implementation and use"@en ;
-      skos:prefLabel "Appropriate theories related to technology implementation and use"@en ;
-      skos:definition "Knowledge of relevant theories for investigating technologies through a theoretical lens, including implementation and use."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EvaluationFrameworks
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Evaluation frameworks"@en ;
-      skos:prefLabel "Evaluation frameworks"@en ;
-      skos:definition "Knowledge of evaluation frameworks used in the theoretical investigation of technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EthicsFundamentals
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Ethics fundamentals"@en ;
-      skos:prefLabel "Ethics fundamentals"@en ;
-      skos:definition "Knowledge of ethics fundamentals used to evaluate technologies from an ethical perspective."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SustainabilityFundamentals
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Sustainability fundamentals"@en ;
-      skos:prefLabel "Sustainability fundamentals"@en ;
-      skos:definition "Knowledge of sustainability fundamentals used to evaluate technologies from a sustainability perspective."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OrganizationalBehavior
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Organizational behavior"@en ;
-      skos:prefLabel "Organizational behavior"@en ;
-      skos:definition "Knowledge of organizational behavior relevant to identifying the impact of technologies on society and business."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BusinessImpactOfTechnology
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Business impact of technology"@en ;
-      skos:prefLabel "Business impact of technology"@en ;
-      skos:definition "Knowledge of the business impact of technology."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ImpactIdentification
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Impact identification"@en ;
-      skos:prefLabel "Impact identification"@en ;
-      skos:definition "Knowledge of methods for identifying technological impact on society and business."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DesignMethods
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Design methods"@en ;
-      skos:prefLabel "Design methods"@en ;
-      skos:definition "Knowledge of design methods used to apply technologies to business problems."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Prototyping
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Prototyping"@en ;
-      skos:prefLabel "Prototyping"@en ;
-      skos:definition "Knowledge of prototyping for practical technology design and application."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:AnalysisMethods
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Analysis methods"@en ;
-      skos:prefLabel "Analysis methods"@en ;
-      skos:definition "Knowledge of analysis methods used in technology design and application."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BusinessProblemAnalysis
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Business problem analysis"@en ;
-      skos:prefLabel "Business problem analysis"@en ;
-      skos:definition "Knowledge of business problem analysis for applying technologies to business contexts."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SolutionCreation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Solution creation"@en ;
-      skos:prefLabel "Solution creation"@en ;
-      skos:definition "Knowledge of creating solutions through the practical design and application of technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Communication
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Communication"@en ;
-      skos:prefLabel "Communication"@en ;
-      skos:definition "Knowledge of communication in teamwork scenarios involving emerging technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TeamWorking
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Team working"@en ;
-      skos:prefLabel "Team working"@en ;
-      skos:definition "Knowledge of team working in collaborative scenarios involving emerging technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:Timekeeping
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Timekeeping"@en ;
-      skos:prefLabel "Timekeeping"@en ;
-      skos:definition "Knowledge of timekeeping in teamwork scenarios involving emerging technologies."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:NoteTaking
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Note-taking"@en ;
-      skos:prefLabel "Note-taking"@en ;
-      skos:definition "Knowledge of note-taking in collaborative technology application scenarios."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ProjectManagement
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Project management"@en ;
-      skos:prefLabel "Project management"@en ;
-      skos:definition "Knowledge of project management for applying emerging technologies in teamwork scenarios."@en ;
-      skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Competencies
-  #################################################################
-
-  is2020c:Competence_ISET_1
-      a ontoksd:Competence ;
-      rdfs:label "Research and identify a selection of current and emerging technologies"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 1"@en ;
-      skos:definition "Research and identify a selection of current and emerging technologies."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
-      dcterms:identifier "ISET-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ResearchMethodsAndTheories ,
-          is2020k:EmergingTechnologyTypesFeaturesAndImpact ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_1_01 ,
-          is2020c:KS_ISET_1_02 .
-
-  is2020c:Competence_ISET_2
-      a ontoksd:Competence ;
-      rdfs:label "Evaluate technologies based on a range of business requirements"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 2"@en ;
-      skos:definition "Evaluate technologies based on a range of business requirements."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:BusinessRequirementsAnalysis ,
-          is2020k:EmergingTechnologyTypes ,
-          is2020k:EvaluationMethods ,
-          is2020k:BusinessNeedsClassification ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_2_01 ,
-          is2020c:KS_ISET_2_02 ,
-          is2020c:KS_ISET_2_03 ,
-          is2020c:KS_ISET_2_04 .
-
-  is2020c:Competence_ISET_3
-      a ontoksd:Competence ;
-      rdfs:label "Make recommendations about the usage of technologies"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 3"@en ;
-      skos:definition "Make recommendations about the usage of technologies."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:RecommenderFrameworks ,
-          is2020k:DecisionMaking ,
-          is2020k:Simulations ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_3_01 ,
-          is2020c:KS_ISET_3_02 ,
-          is2020c:KS_ISET_3_03 .
-
-  is2020c:Competence_ISET_4
-      a ontoksd:Competence ;
-      rdfs:label "Investigate technologies through a theoretical lens"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 4"@en ;
-      skos:definition "Investigate technologies through a theoretical lens."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:AppropriateTheoriesRelatedToTechnologyImplementationAndUse ,
-          is2020k:EvaluationFrameworks ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_4_01 ,
-          is2020c:KS_ISET_4_02 .
-
-  is2020c:Competence_ISET_5
-      a ontoksd:Competence ;
-      rdfs:label "Evaluate technologies from an ethical and sustainability perspective"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 5"@en ;
-      skos:definition "Evaluate technologies from an ethical and sustainability perspective."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:EthicsFundamentals ,
-          is2020k:SustainabilityFundamentals ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_5_01 ,
-          is2020c:KS_ISET_5_02 .
-
-  is2020c:Competence_ISET_6
-      a ontoksd:Competence ;
-      rdfs:label "Identify the impact of technologies on society and business"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 6"@en ;
-      skos:definition "Identify the impact of technologies on society and business."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:OrganizationalBehavior ,
-          is2020k:BusinessImpactOfTechnology ,
-          is2020k:ImpactIdentification ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_6_01 ,
-          is2020c:KS_ISET_6_02 ,
-          is2020c:KS_ISET_6_03 .
-
-  is2020c:Competence_ISET_7
-      a ontoksd:Competence ;
-      rdfs:label "Practically design and apply technologies to a business problem"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 7"@en ;
-      skos:definition "Practically design and apply technologies to a business problem."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:DesignMethods ,
-          is2020k:Prototyping ,
-          is2020k:AnalysisMethods ,
-          is2020k:BusinessProblemAnalysis ,
-          is2020k:SolutionCreation ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_7_01 ,
-          is2020c:KS_ISET_7_02 ,
-          is2020c:KS_ISET_7_03 ,
-          is2020c:KS_ISET_7_04 ,
-          is2020c:KS_ISET_7_05 .
-
-  is2020c:Competence_ISET_8
-      a ontoksd:Competence ;
-      rdfs:label "Apply emerging technologies in a teamwork scenario"@en ;
-      skos:prefLabel "IS Emerging Technologies Competency 8"@en ;
-      skos:definition "Apply emerging technologies in a teamwork scenario."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
-      dcterms:identifier "ISET-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:Communication ,
-          is2020k:TeamWorking ,
-          is2020k:Timekeeping ,
-          is2020k:NoteTaking ,
-          is2020k:ProjectManagement ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISET_8_01 ,
-          is2020c:KS_ISET_8_02 ,
-          is2020c:KS_ISET_8_03 ,
-          is2020c:KS_ISET_8_04 ,
-          is2020c:KS_ISET_8_05 .
-
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
-
-  is2020c:KS_ISET_1_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Research methods and theories × Analyzing"@en ;
-      skos:prefLabel "Research methods and theories × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 1 linking research methods and theories to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ResearchMethodsAndTheories ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_1 .
-
-  is2020c:KS_ISET_1_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Emerging technology types, features, and impact × Evaluating"@en ;
-      skos:prefLabel "Emerging technology types, features, and impact × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 1 linking emerging technology types, features, and impact to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:EmergingTechnologyTypesFeaturesAndImpact ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_1 .
-
-  is2020c:KS_ISET_2_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Business requirements analysis × Analyzing"@en ;
-      skos:prefLabel "Business requirements analysis × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 2 linking business requirements analysis to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BusinessRequirementsAnalysis ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 .
-
-  is2020c:KS_ISET_2_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Emerging technology types × Evaluating"@en ;
-      skos:prefLabel "Emerging technology types × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 2 linking emerging technology types to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:EmergingTechnologyTypes ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 .
-
-  is2020c:KS_ISET_2_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Evaluation methods × Evaluating"@en ;
-      skos:prefLabel "Evaluation methods × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 2 linking evaluation methods to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:EvaluationMethods ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 .
-
-  is2020c:KS_ISET_2_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Business needs classification × Analyzing"@en ;
-      skos:prefLabel "Business needs classification × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 2 linking business needs classification to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BusinessNeedsClassification ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 .
-
-  is2020c:KS_ISET_3_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Recommender frameworks × Evaluating"@en ;
-      skos:prefLabel "Recommender frameworks × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 3 linking recommender frameworks to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:RecommenderFrameworks ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_3 .
-
-  is2020c:KS_ISET_3_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Decision making × Evaluating"@en ;
-      skos:prefLabel "Decision making × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 3 linking decision making to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DecisionMaking ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_3 .
-
-  is2020c:KS_ISET_3_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Simulations × Analyzing"@en ;
-      skos:prefLabel "Simulations × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 3 linking simulations to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:Simulations ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_3 .
-
-  is2020c:KS_ISET_4_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Appropriate theories related to technology implementation and use × Evaluating"@en ;
-      skos:prefLabel "Appropriate theories related to technology implementation and use × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 4 linking appropriate theories related to technology implementation and use to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:AppropriateTheoriesRelatedToTechnologyImplementationAndUse ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_4 .
-
-  is2020c:KS_ISET_4_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Evaluation frameworks × Evaluating"@en ;
-      skos:prefLabel "Evaluation frameworks × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 4 linking evaluation frameworks to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:EvaluationFrameworks ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_4 .
-
-  is2020c:KS_ISET_5_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Ethics fundamentals × Analyzing"@en ;
-      skos:prefLabel "Ethics fundamentals × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 5 linking ethics fundamentals to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:EthicsFundamentals ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_5 .
-
-  is2020c:KS_ISET_5_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Sustainability fundamentals × Analyzing"@en ;
-      skos:prefLabel "Sustainability fundamentals × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 5 linking sustainability fundamentals to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SustainabilityFundamentals ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_5 .
-
-  is2020c:KS_ISET_6_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Organizational behavior × Understanding"@en ;
-      skos:prefLabel "Organizational behavior × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 6 linking organizational behavior to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:OrganizationalBehavior ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_6 .
-
-  is2020c:KS_ISET_6_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Business impact of technology × Evaluating"@en ;
-      skos:prefLabel "Business impact of technology × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 6 linking business impact of technology to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BusinessImpactOfTechnology ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_6 .
-
-  is2020c:KS_ISET_6_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Impact identification × Analyzing"@en ;
-      skos:prefLabel "Impact identification × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 6 linking impact identification to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ImpactIdentification ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_6 .
-
-  is2020c:KS_ISET_7_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Design methods × Applying"@en ;
-      skos:prefLabel "Design methods × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 7 linking design methods to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DesignMethods ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 .
-
-  is2020c:KS_ISET_7_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Prototyping × Evaluating"@en ;
-      skos:prefLabel "Prototyping × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 7 linking prototyping to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:Prototyping ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 .
-
-  is2020c:KS_ISET_7_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Analysis methods × Analyzing"@en ;
-      skos:prefLabel "Analysis methods × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 7 linking analysis methods to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:AnalysisMethods ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 .
-
-  is2020c:KS_ISET_7_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Business problem analysis × Analyzing"@en ;
-      skos:prefLabel "Business problem analysis × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 7 linking business problem analysis to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BusinessProblemAnalysis ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 .
-
-  is2020c:KS_ISET_7_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Solution creation × Creating"@en ;
-      skos:prefLabel "Solution creation × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 7 linking solution creation to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SolutionCreation ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 .
-
-  is2020c:KS_ISET_8_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Communication × Evaluating"@en ;
-      skos:prefLabel "Communication × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 8 linking communication to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:Communication ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 .
-
-  is2020c:KS_ISET_8_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Team working × Evaluating"@en ;
-      skos:prefLabel "Team working × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 8 linking team working to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TeamWorking ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 .
-
-  is2020c:KS_ISET_8_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Timekeeping × Evaluating"@en ;
-      skos:prefLabel "Timekeeping × Evaluating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 8 linking timekeeping to the required Bloom level Evaluating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:Timekeeping ;
-      ontoksd:hasRequiredSkillLevel bloom:Evaluating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 .
-
-  is2020c:KS_ISET_8_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Note-taking × Applying"@en ;
-      skos:prefLabel "Note-taking × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 8 linking note-taking to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:NoteTaking ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 .
-
-  is2020c:KS_ISET_8_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Project management × Applying"@en ;
-      skos:prefLabel "Project management × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Emerging Technologies Competency 8 linking project management to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ProjectManagement ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 .
-
+is2020c:KS_ISET_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Research methods and theories × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Research methods and theories; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ResearchMethodsAndTheories ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Research methods and theories × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_1 .
+
+is2020c:KS_ISET_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Emerging technology types, features, and impact × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Emerging technology types, features, and impact; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EmergingTechnologyTypesFeaturesAndImpact ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Emerging technology types, features, and impact × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_1 .
+
+is2020c:KS_ISET_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Business requirements analysis × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Business requirements analysis; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BusinessRequirementsAnalysis ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Business requirements analysis × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_2 .
+
+is2020c:KS_ISET_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Emerging technology types × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Emerging technology types; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EmergingTechnologyTypes ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Emerging technology types × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_2 .
+
+is2020c:KS_ISET_2_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluation methods × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Evaluate methods; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EvaluationMethods ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Evaluation methods × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_2 .
+
+is2020c:KS_ISET_2_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Business needs classification × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Business needs classification; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BusinessNeedsClassification ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Business needs classification × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_2 .
+
+is2020c:KS_ISET_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Recommender frameworks × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Recommender frameworks; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RecommenderFrameworks ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Recommender frameworks × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_3 .
+
+is2020c:KS_ISET_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Decision making × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Decision making; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DecisionMaking ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Decision making × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_3 .
+
+is2020c:KS_ISET_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Simulations × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Simulations; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Simulations ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Simulations × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_3 .
+
+is2020c:KS_ISET_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Appropriate theories related to technology implementation and use × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Appropriate theories related to technology implementation and use; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AppropriateTheoriesRelatedToTechnologyImplementationAndUse ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Appropriate theories related to technology implementation and use × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_4 .
+
+is2020c:KS_ISET_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluation frameworks × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Evaluation frameworks; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EvaluationFrameworks ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Evaluation frameworks × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_4 .
+
+is2020c:KS_ISET_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Ethics fundamentals × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Ethics fundamentals; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EthicsFundamentals ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Ethics fundamentals × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_5 .
+
+is2020c:KS_ISET_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Sustainability fundamentals × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Sustainability fundamentals; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SustainabilityFundamentals ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Sustainability fundamentals × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_5 .
+
+is2020c:KS_ISET_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Organizational behavior × Understanding"@en ;
+    dcterms:description "Source knowledge element: Organizational behavior; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OrganizationalBehavior ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Organizational behavior × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_6 .
+
+is2020c:KS_ISET_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Business impact of technology × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Business impact of technology; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BusinessImpactOfTechnology ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Business impact of technology × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_6 .
+
+is2020c:KS_ISET_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Impact identification × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Impact identification; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ImpactIdentification ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Impact identification × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_6 .
+
+is2020c:KS_ISET_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Design methods × Applying"@en ;
+    dcterms:description "Source knowledge element: Design methods; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DesignMethods ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Design methods × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_7 .
+
+is2020c:KS_ISET_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Prototyping × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Prototyping; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Prototyping ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Prototyping × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_7 .
+
+is2020c:KS_ISET_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Analysis methods × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Analysis methods; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AnalysisMethods ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Analysis methods × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_7 .
+
+is2020c:KS_ISET_7_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Business problem analysis × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Business problem analysis; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BusinessProblemAnalysis ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Business problem analysis × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_7 .
+
+is2020c:KS_ISET_7_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Solution creation × Creating"@en ;
+    dcterms:description "Source knowledge element: Solution creation; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SolutionCreation ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Solution creation × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_7 .
+
+is2020c:KS_ISET_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Communication × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Communication; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Communication ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Communication × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_8 .
+
+is2020c:KS_ISET_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Team working × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Team working; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TeamWorking ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Team working × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_8 .
+
+is2020c:KS_ISET_8_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Timekeeping × Evaluating"@en ;
+    dcterms:description "Source knowledge element: Timekeeping; source skill-level cell: 5 – Evaluate."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:Timekeeping ;
+    ontoksd:hasSkillLevel bloom:Evaluating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Timekeeping × Evaluating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_8 .
+
+is2020c:KS_ISET_8_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Note-taking × Applying"@en ;
+    dcterms:description "Source knowledge element: Note-taking; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NoteTaking ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Note-taking × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_8 .
+
+is2020c:KS_ISET_8_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Project management × Applying"@en ;
+    dcterms:description "Source knowledge element: Project management; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ProjectManagement ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISET_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Project management × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISET_8 .
+
+is2020c:Competence_ISET_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Research and identify a selection of current and emerging technologies"@en ;
+    dcterms:identifier "ISET-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:EmergingTechnologyTypesFeaturesAndImpact,
+        is2020k:ResearchMethodsAndTheories ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_1_01,
+        is2020c:KS_ISET_1_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+    skos:definition "Research and identify a selection of current and emerging technologies."@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_1 .
+
+is2020c:Competence_ISET_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Investigate technologies through a theoretical lens"@en ;
+    dcterms:identifier "ISET-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AppropriateTheoriesRelatedToTechnologyImplementationAndUse,
+        is2020k:EvaluationFrameworks ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_4_01,
+        is2020c:KS_ISET_4_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Investigate technologies through a theoretical lens"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_4 .
+
+is2020c:Competence_ISET_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluate technologies from an ethical and sustainability perspective"@en ;
+    dcterms:identifier "ISET-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:EthicsFundamentals,
+        is2020k:SustainabilityFundamentals ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_5_01,
+        is2020c:KS_ISET_5_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Evaluate technologies from an ethical and sustainability perspective"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_5 .
+
+is2020k:AnalysisMethods a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Analysis methods"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of analysis methods used in technology design and application."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Analysis methods"@en .
+
+is2020k:AppropriateTheoriesRelatedToTechnologyImplementationAndUse a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Appropriate theories related to technology implementation and use"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of relevant theories for investigating technologies through a theoretical lens, including implementation and use."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Appropriate theories related to technology implementation and use"@en .
+
+is2020k:BusinessImpactOfTechnology a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Business impact of technology"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the business impact of technology."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Business impact of technology"@en .
+
+is2020k:BusinessNeedsClassification a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Business needs classification"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of business needs classification for technology evaluation and selection."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Business needs classification"@en .
+
+is2020k:BusinessProblemAnalysis a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Business problem analysis"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of business problem analysis for applying technologies to business contexts."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Business problem analysis"@en .
+
+is2020k:BusinessRequirementsAnalysis a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Business requirements analysis"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of business requirements analysis for evaluating technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Business requirements analysis"@en .
+
+is2020k:Communication a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Communication"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of communication in teamwork scenarios involving emerging technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Communication"@en .
+
+is2020k:DecisionMaking a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Decision making"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of decision making processes relevant to recommending technology usage."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Decision making"@en .
+
+is2020k:DesignMethods a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Design methods"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of design methods used to apply technologies to business problems."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Design methods"@en .
+
+is2020k:EmergingTechnologyTypes a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Emerging technology types"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different types of emerging technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Emerging technology types"@en .
+
+is2020k:EmergingTechnologyTypesFeaturesAndImpact a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Emerging technology types, features, and impact"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of types of emerging technologies, their features, and their potential impact."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Emerging technology types, features, and impact"@en .
+
+is2020k:EthicsFundamentals a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Ethics fundamentals"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of ethics fundamentals used to evaluate technologies from an ethical perspective."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Ethics fundamentals"@en .
+
+is2020k:EvaluationFrameworks a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Evaluation frameworks"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of evaluation frameworks used in the theoretical investigation of technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Evaluation frameworks"@en .
+
+is2020k:EvaluationMethods a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Evaluation methods"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods used to evaluate technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Evaluation methods"@en .
+
+is2020k:ImpactIdentification a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Impact identification"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods for identifying technological impact on society and business."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Impact identification"@en .
+
+is2020k:NoteTaking a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Note-taking"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of note-taking in collaborative technology application scenarios."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Note-taking"@en .
+
+is2020k:OrganizationalBehavior a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Organizational behavior"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of organizational behavior relevant to identifying the impact of technologies on society and business."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Organizational behavior"@en .
+
+is2020k:ProjectManagement a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Project management"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of project management for applying emerging technologies in teamwork scenarios."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Project management"@en .
+
+is2020k:Prototyping a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Prototyping"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of prototyping for practical technology design and application."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Prototyping"@en .
+
+is2020k:RecommenderFrameworks a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Recommender frameworks"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of recommender frameworks used to support recommendations about technology usage."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Recommender frameworks"@en .
+
+is2020k:ResearchMethodsAndTheories a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Research methods and theories"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of research methods and theories used to investigate current and emerging technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Research methods and theories"@en .
+
+is2020k:Simulations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Simulations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of simulations used to analyze or evaluate technology usage scenarios."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Simulations"@en .
+
+is2020k:SolutionCreation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Solution creation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of creating solutions through the practical design and application of technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Solution creation"@en .
+
+is2020k:SustainabilityFundamentals a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Sustainability fundamentals"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of sustainability fundamentals used to evaluate technologies from a sustainability perspective."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Sustainability fundamentals"@en .
+
+is2020k:TeamWorking a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Team working"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of team working in collaborative scenarios involving emerging technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Team working"@en .
+
+is2020k:Timekeeping a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Timekeeping"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of timekeeping in teamwork scenarios involving emerging technologies."@en ;
+    skos:inScheme is2020k:IS2020EmergingTechnologiesKnowledgeScheme ;
+    skos:prefLabel "Timekeeping"@en .
+
+is2020c:Competence_ISET_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Make recommendations about the usage of technologies"@en ;
+    dcterms:identifier "ISET-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasKnowledge is2020k:DecisionMaking,
+        is2020k:RecommenderFrameworks,
+        is2020k:Simulations ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_3_01,
+        is2020c:KS_ISET_3_02,
+        is2020c:KS_ISET_3_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Make recommendations about the usage of technologies"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 3"@en ;
+    skos:scopeNote "No key dispositions are stated for this competency in its IS2020 table. Their absence is not an assertion that no disposition is relevant."@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_3 .
+
+is2020c:Competence_ISET_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify the impact of technologies on society and business"@en ;
+    dcterms:identifier "ISET-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BusinessImpactOfTechnology,
+        is2020k:ImpactIdentification,
+        is2020k:OrganizationalBehavior ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_6_01,
+        is2020c:KS_ISET_6_02,
+        is2020c:KS_ISET_6_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Identify the impact of technologies on society and business"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_6 .
+
+is2020c:Source_ISET_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 119 (PDF page 120)."@en ;
+    dcterms:description "Competency: Research and identify a selection of current and emerging technologies. Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISET_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 120 (PDF page 121)."@en ;
+    dcterms:description "Competency: Investigate technologies through a theoretical lens Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISET_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 120 (PDF page 121)."@en ;
+    dcterms:description "Competency: Evaluate technologies from an ethical and sustainability perspective Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISET_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluate technologies based on a range of business requirements"@en ;
+    dcterms:identifier "ISET-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BusinessNeedsClassification,
+        is2020k:BusinessRequirementsAnalysis,
+        is2020k:EmergingTechnologyTypes,
+        is2020k:EvaluationMethods ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_2_01,
+        is2020c:KS_ISET_2_02,
+        is2020c:KS_ISET_2_03,
+        is2020c:KS_ISET_2_04 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Evaluate technologies based on a range of business requirements"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_2 .
+
+is2020c:Source_ISET_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 120 (PDF page 121)."@en ;
+    dcterms:description "Competency: Make recommendations about the usage of technologies Key dispositions: Not stated in the source competency table."@en ;
+    dcterms:identifier "ISET-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISET_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 120 (PDF page 121)."@en ;
+    dcterms:description "Competency: Identify the impact of technologies on society and business Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISET_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Practically design and apply technologies to a business problem"@en ;
+    dcterms:identifier "ISET-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:AnalysisMethods,
+        is2020k:BusinessProblemAnalysis,
+        is2020k:DesignMethods,
+        is2020k:Prototyping,
+        is2020k:SolutionCreation ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_7_01,
+        is2020c:KS_ISET_7_02,
+        is2020c:KS_ISET_7_03,
+        is2020c:KS_ISET_7_04,
+        is2020c:KS_ISET_7_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Practically design and apply technologies to a business problem"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_7 .
+
+is2020c:Competence_ISET_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply emerging technologies in a teamwork scenario"@en ;
+    dcterms:identifier "ISET-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:Communication,
+        is2020k:NoteTaking,
+        is2020k:ProjectManagement,
+        is2020k:TeamWorking,
+        is2020k:Timekeeping ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISET_8_01,
+        is2020c:KS_ISET_8_02,
+        is2020c:KS_ISET_8_03,
+        is2020c:KS_ISET_8_04,
+        is2020c:KS_ISET_8_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.3.3 Emerging Technologies."@en ;
+    skos:definition "Apply emerging technologies in a teamwork scenario"@en ;
+    skos:prefLabel "IS Emerging Technologies Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISET_8 .
+
+is2020c:Source_ISET_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 119 (PDF page 120)."@en ;
+    dcterms:description "Competency: Evaluate technologies based on a range of business requirements Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISET_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 121 (PDF page 122)."@en ;
+    dcterms:description "Competency: Practically design and apply technologies to a business problem Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISET_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 121 (PDF page 122)."@en ;
+    dcterms:description "Competency: Apply emerging technologies in a teamwork scenario Key dispositions: Self-Directed, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISET-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+<http://purl.org/ontoksd/source/is2020-emerging-technologies-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Emerging Technologies competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.3.3 Competency Area – Emerging Technologies."@en .
+
+is2020k:IS2020EmergingTechnologiesKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Emerging Technologies Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Emerging Technologies competency area."@en ;
+    skos:prefLabel "IS2020 Emerging Technologies Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

@@ -1,100 +1,138 @@
-PREFIX ontoksd:     <http://purl.org/ontoksd#>
-PREFIX cc2020:      <http://purl.org/cc2020/knowledge#>
+# CC2020 example B: specification data, not an assessment or learner record.
+# Load OntoKSD, the Bloom skill-level module, and the CC2020 knowledge/disposition populations first.
+# KnowledgeSkill uses hasKnowledgeComponent + hasSkillLevel; no Relator instances are created.
+# Atomic is a project granularity choice; the reference Task is explicit to satisfy the current OWL axioms.
+# Only exact conflicting assertions for these example records are removed; unrelated data are preserved.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020: <http://purl.org/cc2020/knowledge#>
 PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
-PREFIX bloom:       <http://purl.org/edu/bloom#>
-PREFIX rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:        <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:         <http://www.w3.org/2002/07/owl#>
-PREFIX skos:        <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:     <http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
 
 INSERT DATA {
+ontoksd:KS_B_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Computer Networks × Analyzing"@en ;
+    dcterms:description "Source knowledge label: \"Computer Networks\". Required source skill level: Analyzing."@en ;
+    dcterms:identifier "KS_B_01" ;
+    dcterms:references ontoksd:CC2020_Source_Example_B ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020:ComputerNetworks ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence B, pairing the referenced Knowledge with the required Analyzing category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Computer Networks × Analyzing"@en .
 
-  #################################################################
-  # Source marker
-  #################################################################
+ontoksd:KS_B_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Platform Technologies × Analyzing"@en ;
+    dcterms:description "Source knowledge label: \"Platform Technologies\". Required source skill level: Analyzing."@en ;
+    dcterms:identifier "KS_B_02" ;
+    dcterms:references ontoksd:CC2020_Source_Example_B ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020:PlatformTechnologies ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence B, pairing the referenced Knowledge with the required Analyzing category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Platform Technologies × Analyzing"@en .
 
-  <http://purl.org/ontoksd/source/cc2020-competence-catalog>
-      a owl:NamedIndividual ;
-      rdfs:label "CC2020 competence catalog"@en ;
-      rdfs:comment "Source for competencies instantiated from the CC2020 report."@en .
+ontoksd:KS_B_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Analytical and Critical Thinking × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Analytical and Critical Thinking\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_B_03" ;
+    dcterms:references ontoksd:CC2020_Source_Example_B ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence B, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Analytical and Critical Thinking × Applying"@en .
 
-  #################################################################
-  # Competence
-  #################################################################
+ontoksd:KS_B_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mathematics and Statistics × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Mathematics and Statistics\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_B_04" ;
+    dcterms:references ontoksd:CC2020_Source_Example_B ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:MathematicsAndStatistics ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence B, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Mathematics and Statistics × Applying"@en .
 
-  ontoksd:CC2020_Competence_B
-      a ontoksd:Competence ;
-      rdfs:label "Analyze enterprise cloud networking topologies"@en ;
-      skos:prefLabel "B"@en ;
-      skos:altLabel "CC2020 Competence B"@en ;
-      skos:definition """Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."""@en ;
-      rdfs:comment """Competence derived from the CC2020 report."""@en ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
-      ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+ontoksd:KS_B_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Quality Assurance / Control × Applying"@en ;
+    dcterms:description "Source knowledge label: \"Quality Assurance\". Required source skill level: Applying."@en ;
+    dcterms:identifier "KS_B_05" ;
+    dcterms:references ontoksd:CC2020_Source_Example_B ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasKnowledgeComponent cc2020found:QualityAssuranceControl ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B ;
+    rdfs:comment "A knowledge-level specification constituent of CC2020 competence B, pairing the referenced Knowledge with the required Applying category. It is not modeled as a Relator or an explicit Skill."@en ;
+    skos:prefLabel "Quality Assurance / Control × Applying"@en ;
+    skos:scopeNote "The source label \"Quality Assurance\" is mapped to the project Knowledge entry \"Quality Assurance / Control\" for curricular traceability. This documented label alignment is not an owl:sameAs assertion or a general claim of complete equivalence."@en .
 
-      ontoksd:hasDisposition ontoksd:selfDirected ;
-      ontoksd:hasDisposition ontoksd:purposeDriven ;
-      ontoksd:hasDisposition ontoksd:responsible ;
+ontoksd:Task_CC2020_Competence_B a ontoksd:Task,
+        owl:NamedIndividual ;
+    rdfs:label "Reference task for CC2020 competence B"@en ;
+    dcterms:references ontoksd:CC2020_Source_Example_B ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    ontoksd:hasTaskStatement "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."@en ;
+    ontoksd:isTaskOf ontoksd:CC2020_Competence_B ;
+    skos:scopeNote "The source competency statement is reused as a specification-level reference task. This record does not represent a LearningTask, an InstructionalUnit, or an execution event."@en .
 
-      ontoksd:hasKnowledgeSkill ontoksd:KS_B_01 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_B_02 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_B_03 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_B_04 ;
-      ontoksd:hasKnowledgeSkill ontoksd:KS_B_05 ;
+<http://purl.org/ontoksd/source/cc2020-competence-catalog> a owl:NamedIndividual ;
+    rdfs:label "CC2020 competence examples A-C"@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    rdfs:comment "Source marker for the three illustrative competence examples in section 4.2.5, not a claim of a complete competence catalog."@en .
 
-      dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
-	  dcterms:bibliographicCitation "Computing Curricula 2020 (CC2020), pp. 51–52."@en ;	  
-      dcterms:references <http://purl.org/ontoksd/source/cc2020-competence-catalog> .
+<http://purl.org/ontoksd/source/cc2020-competence-excerpt> a owl:NamedIndividual ;
+    dcterms:identifier "sha256:20a8e486ffb1b6600a4c5a5e3135fca5d5c6386c31f4011a2f73730e0d82ce0f" ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "CC2020 instances — supplied excerpt"@en .
 
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
+ontoksd:CC2020_Competence_B a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Analyze enterprise cloud networking topologies"@en ;
+    dcterms:bibliographicCitation "Computing Curricula 2020, section 4.2.5, Example B, printed p. 52 (PDF page 53)."@en ;
+    dcterms:description "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."@en ;
+    dcterms:identifier "CC2020-B" ;
+    dcterms:references ontoksd:CC2020_Source_Example_B,
+        <http://purl.org/ontoksd/source/cc2020-competence-catalog>,
+        <http://purl.org/ontoksd/source/cc2020-competence-excerpt> ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "Analyze enterprise cloud networking topologies"@en ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:purposeDriven,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_B_01,
+        ontoksd:KS_B_02,
+        ontoksd:KS_B_03,
+        ontoksd:KS_B_04,
+        ontoksd:KS_B_05 ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    ontoksd:hasTask ontoksd:Task_CC2020_Competence_B ;
+    rdfs:comment "A competence specification instantiating example B in CC2020 section 4.2.5, using knowledge-level constituents and dispositions. It represents expected performance, not learner attainment."@en ;
+    skos:altLabel "CC2020 Competence B"@en ;
+    skos:definition "Analyze and compare several networking topologies in terms of robustness, expandability, and throughput used within a cloud enterprise."@en ;
+    skos:notation "B" ;
+    skos:prefLabel "Analyze enterprise cloud networking topologies"@en ;
+    skos:scopeNote "Atomic is the selected OntoKSD granularity: this specification has no component-competence decomposition. Multiple knowledge-level constituents or action verbs do not by themselves make it a CompositeCompetence. This structural classification is a project modeling choice."@en .
 
-  ontoksd:KS_B_01
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Computer Networks × Analyzing"@en ;
-      skos:prefLabel "Computer Networks × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence B linking the knowledge element Computer Networks to the required Bloom skill level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent cc2020:ComputerNetworks ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B .
-
-  ontoksd:KS_B_02
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Platform Technologies × Analyzing"@en ;
-      skos:prefLabel "Platform Technologies × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence B linking the knowledge element Platform Technologies to the required Bloom skill level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent cc2020:PlatformTechnologies ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B .
-
-  ontoksd:KS_B_03
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Analytical and Critical Thinking × Applying"@en ;
-      skos:prefLabel "Analytical and Critical Thinking × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence B linking the knowledge element Analytical and Critical Thinking to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B .
-
-  ontoksd:KS_B_04
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Mathematics and Statistics × Applying"@en ;
-      skos:prefLabel "Mathematics and Statistics × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence B linking the knowledge element Mathematics and Statistics to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:MathematicsAndStatistics ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B .
-
-  ontoksd:KS_B_05
-      a ontoksd:KnowledgeSkill ;
-      rdfs:label "Quality Assurance / Control × Applying"@en ;
-      skos:prefLabel "Quality Assurance / Control × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for CC2020 Competence B linking the knowledge element Quality Assurance / Control to the required Bloom skill level Applying."@en ;
-      ontoksd:hasKnowledgeComponent cc2020found:QualityAssuranceControl ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf ontoksd:CC2020_Competence_B .
-
+ontoksd:CC2020_Source_Example_B a owl:NamedIndividual ;
+    dcterms:bibliographicCitation "CC2020, section 4.2.5, printed p. 52, PDF page 53."@en ;
+    dcterms:source <https://www.acm.org/binaries/content/assets/education/curricula-recommendations/cc2020.pdf> ;
+    dcterms:title "CC2020 Competency Title: B"@en .
 }

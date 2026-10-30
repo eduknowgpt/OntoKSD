@@ -1,0 +1,152 @@
+# CSP cycle-01 source records and locally curated knowledge.
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+ontoksd:Knowledge_CSP_ContextFreeGrammars a ontoksd:Knowledge ;
+    rdfs:label "Context-Free Grammars"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Context-free production rules, nonterminal and terminal symbols, derivations, generated symbol sequences, and their relation to pushdown computation."@en ;
+    skos:scopeNote "Locally curated semantic content from cycle-01 records. Curricular links, when present on a pairing, are alignment anchors and do not identify a broader curricular concept with this knowledge instance."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:Knowledge_CSP_DeterministicFiniteAutomata a ontoksd:Knowledge ;
+    rdfs:label "Deterministic Finite Automata"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Finite-state models with exactly one applicable transition for each state/input-symbol pair, including states, alphabets, transition functions, acceptance and deterministic behavior."@en ;
+    skos:scopeNote "Locally curated semantic content from cycle-01 records. Curricular links, when present on a pairing, are alignment anchors and do not identify a broader curricular concept with this knowledge instance."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:Knowledge_CSP_ModelingAndSimulation a ontoksd:Knowledge ;
+    rdfs:label "Modeling and Simulation"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Formal model construction and interpretation, simulator execution, execution traces, test scenarios, and comparison of observed model behavior with specified behavior."@en ;
+    skos:scopeNote "Locally curated semantic content from cycle-01 records. Curricular links, when present on a pairing, are alignment anchors and do not identify a broader curricular concept with this knowledge instance."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+ontoksd:Knowledge_CSP_RequirementsEngineering a ontoksd:Knowledge ;
+    rdfs:label "Requirements Engineering"@en ;
+    ontoksd:hasKnowledgeType ontoksd:computingSpecificKnowledgeType ;
+    skos:definition "Elicitation, interpretation, specification, organization and validation of requirements and constraints used to guide a computational model or system solution."@en ;
+    skos:scopeNote "Locally curated semantic content from cycle-01 records. Curricular links, when present on a pairing, are alignment anchors and do not identify a broader curricular concept with this knowledge instance."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Review-Report-v2.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task01-TheVendingMachine/Review2/Task01-CSP-Review-Report-v2.md"@en ;
+    dcterms:identifier "sha256:436e006e886d2a4b00908932e3c85ab4293affc38c9ad4ed9353af2516765938" ;
+    dcterms:title "Task01-CSP-Review-Report-v2.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task01-TheVendingMachine/Task01-CSP-Adjustments.md"@en ;
+    dcterms:identifier "sha256:2048b54d4bc80276ca61822e141591ed8757f190e2efa823a63a38a571bd1b07" ;
+    dcterms:title "Task01-CSP-Adjustments.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-CSP-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task01-TheVendingMachine/Task01-CSP-Report.md"@en ;
+    dcterms:identifier "sha256:cceb5dad8db321033edc54229757244281940e36dd179f787a21cf9a184259fd" ;
+    dcterms:title "Task01-CSP-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task01-TheVendingMachine/Task01-CSP-Review-Report.md"@en ;
+    dcterms:identifier "sha256:4878c8cf462063fb455f3e9afd5684386e7ea4ebf2732371ba7d10c8818cfd48" ;
+    dcterms:title "Task01-CSP-Review-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Task01-TheVendingMachine.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task01-TheVendingMachine/Task01-TheVendingMachine.md"@en ;
+    dcterms:identifier "sha256:52f2b602d9693fb71b0cf0c89fe9c1fd9e0e3b0881fa04d293498ebec7694e12" ;
+    dcterms:title "Task01-TheVendingMachine.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task02-TrafficControl/Task02-CSP-Report.md"@en ;
+    dcterms:identifier "sha256:5cd7ae3018627f4e2ce45200e68136cd9ca3b44e1780a653f4a691c417a798fe" ;
+    dcterms:title "Task02-CSP-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task02-TrafficControl/Task02-CSP-Review-Report.md"@en ;
+    dcterms:identifier "sha256:8b186eb09fda61d38f9aafd3a775876977c2031f1b71ded2e6be310c8a056594" ;
+    dcterms:title "Task02-CSP-Review-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-TrafficControl.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task02-TrafficControl/Task02-TrafficControl.md"@en ;
+    dcterms:identifier "sha256:938ccbf9878cfefd7ca38b1ed1b34551b5dd8b07d07db75cbd1ba114e7c392eb" ;
+    dcterms:title "Task02-TrafficControl.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task03-FarmingRobot/Task03-CSP-Report.md"@en ;
+    dcterms:identifier "sha256:d0f2bca2e17f54d13af2feb45a5817fad8e4ebb6e735a4b1a3c9a79aa79dc384" ;
+    dcterms:title "Task03-CSP-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task03-FarmingRobot/Task03-CSP-Review-Report.md"@en ;
+    dcterms:identifier "sha256:aa619b8a0a7579390ab1ab951c7c8e34fbe430d018701bdac6ec8a9a040c373e" ;
+    dcterms:title "Task03-CSP-Review-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task03-FarmingRobot/Task03-FarmingRobot.md"@en ;
+    dcterms:identifier "sha256:4e2cdab3bcaf78e28b88157cad9fe521a3787095f22bda84531c2b735440e297" ;
+    dcterms:title "Task03-FarmingRobot.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task04-TheReturnFarmingRobot/Task04-CSP-Report.md"@en ;
+    dcterms:identifier "sha256:7a06abb22269f7e22accc1fb791e6626a93629b8ca6ce6254762dafb9381b86a" ;
+    dcterms:title "Task04-CSP-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task04-TheReturnFarmingRobot/Task04-CSP-Review-Report.md"@en ;
+    dcterms:identifier "sha256:48091e2d6bd44e7557caaeae06ab2d4a8d289fef43c551a3b2f436bbdb62537e" ;
+    dcterms:title "Task04-CSP-Review-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task04-TheReturnFarmingRobot/Task04-TheReturnFarmingRobot.md"@en ;
+    dcterms:identifier "sha256:b022554fab6f106edc0fc321f609342f0667f08f6e199f7c784b41637b827295" ;
+    dcterms:title "Task04-TheReturnFarmingRobot.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-CSP-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task05-TheFarmingRobotAndFeedingRobot/Task05-CSP-Report.md"@en ;
+    dcterms:identifier "sha256:e31d164146e027c22a455ddb4d2f6293486c56d3faa64abbd1354baa937cc8ed" ;
+    dcterms:title "Task05-CSP-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-CSP-Review-Report.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task05-TheFarmingRobotAndFeedingRobot/Task05-CSP-Review-Report.md"@en ;
+    dcterms:identifier "sha256:821562e4e936151663744b4d5710a54a19cc030d1172a0310e65072d536c47f4" ;
+    dcterms:title "Task05-CSP-Review-Report.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task05-TheFarmingRobotAndFeedingRobot/Task05-TheFarmingRobotAndFeedingRobot.md"@en ;
+    dcterms:identifier "sha256:b9bd052ffc1d759b6f22d670236b6c6fb657fe810c5d7d7420adc5be23850422" ;
+    dcterms:title "Task05-TheFarmingRobotAndFeedingRobot.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task03-FarmingRobot/Task03-CSP-Adjustments.md"@en ;
+    dcterms:identifier "sha256:734d488f2f013c4af372c00387f93ff62bb5a0872fc005e91fb0081fce76ae71" ;
+    dcterms:title "Task03-CSP-Adjustments.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md"@en ;
+    dcterms:identifier "sha256:5bf5dcd1724268074e0f3cc3d99716f97db97ee98524eb9b87c25c25341d2c50" ;
+    dcterms:title "TASK05-CSP-Adjustments.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task02-TrafficControl/Task02-CSP-Adjustments.md"@en ;
+    dcterms:identifier "sha256:44286a32b951fd00832de68946daffa96be4910bd424e3787c31e765db3f7c71" ;
+    dcterms:title "Task02-CSP-Adjustments.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md"@en ;
+    dcterms:identifier "sha256:2b6e5b8bbac22df47a6a108f9a683b39254d5e09d4149248ddcedcc9895e723b" ;
+    dcterms:title "Task04-CSP-Adjustments.md"@en .
+
+<http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> a prov:Entity ;
+    dcterms:description "Source file: sources/en/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md"@en ;
+    dcterms:identifier "sha256:e007defee4fc4a86052a23acefbffd4a7eef807579ac46bc1c38f4a6930229d6" ;
+    dcterms:title "Task01-CSP-Report-v2.md"@en .
+}

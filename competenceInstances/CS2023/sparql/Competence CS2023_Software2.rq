@@ -1,0 +1,113 @@
+# CS2023 Software2; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Software2_SDF_Practices_3_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SDF-Practices × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SDF_Practices ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software2 ;
+    rdfs:comment "Local knowledge–level assignment for Software2: SDF-Practices at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SDF-Practices × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software2 .
+
+cs2023c:KS_Software2_SE_Teamwork_3_b_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Teamwork × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SE_Teamwork ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software2 ;
+    rdfs:comment "Local knowledge–level assignment for Software2: SE-Teamwork at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SE-Teamwork × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software2 .
+
+cs2023c:KS_Software2_SE_Validation_10_a_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Validation × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SE_Validation ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software2 ;
+    rdfs:comment "Local knowledge–level assignment for Software2: SE-Validation at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SE-Validation × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software2 .
+
+cs2023c:TaskActivity_Software2_Communicate a ontoksd:TaskActivity ;
+    rdfs:label "communicate"@en ;
+    rdfs:comment "Task activity capturing the need to express observations and judgments clearly to another team member."@en ;
+    skos:prefLabel "communicate"@en .
+
+cs2023c:TaskActivity_Software2_ProvideFeedback a ontoksd:TaskActivity ;
+    rdfs:label "provide feedback"@en ;
+    rdfs:comment "Task activity capturing the act of offering constructive and actionable feedback about the reviewed code."@en ;
+    skos:prefLabel "provide feedback"@en .
+
+cs2023c:TaskActivity_Software2_Review a ontoksd:TaskActivity ;
+    rdfs:label "review"@en ;
+    rdfs:comment "Task activity capturing the examination of a code artifact with the aim of identifying issues, strengths, and opportunities for improvement."@en ;
+    skos:prefLabel "review"@en .
+
+cs2023c:TaskComponent_Software2_CodeArtifact a ontoksd:TaskComponent ;
+    rdfs:label "a piece of code"@en ;
+    rdfs:comment "Task component corresponding to the code artifact that is examined and discussed in the review process."@en ;
+    skos:prefLabel "a piece of code"@en .
+
+cs2023c:TaskConstraint_Software2_TeammateContext a ontoksd:TaskConstraint ;
+    rdfs:label "to a teammate, clearly and collaboratively"@en ;
+    rdfs:comment "Task constraint that qualifies the social and interactional context of the task: the review is addressed to a teammate and must be conducted through clear and collaborative communication."@en ;
+    skos:prefLabel "to a teammate, clearly and collaboratively"@en .
+
+cs2023c:Task_Software2 a ontoksd:Task ;
+    rdfs:label "Software2 task"@en ;
+    dcterms:identifier "Task_Software2"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Software2_Communicate,
+        cs2023c:TaskActivity_Software2_ProvideFeedback,
+        cs2023c:TaskActivity_Software2_Review ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Software2_CodeArtifact ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Software2_TeammateContext ;
+    ontoksd:hasTaskStatement "Perform code review for a teammate."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Software2 ;
+    rdfs:comment "Specification-level task associated with Competence_Software2. The task is centered on reviewing a teammate's code and communicating feedback in a clear and collaborative manner."@en ;
+    skos:prefLabel "Software2 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software2 .
+
+cs2023c:Competence_Software2 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Communicate clearly and collaboratively to provide feedback to a teammate about a piece of code"@en ;
+    dcterms:identifier "Software2"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:communicative,
+        ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Software2_SDF_Practices_3_Apply,
+        cs2023c:KS_Software2_SE_Teamwork_3_b_Apply,
+        cs2023c:KS_Software2_SE_Validation_10_a_Apply ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Software2 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Software2. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Communicate clearly and collaboratively to provide feedback to a teammate about a piece of code."@en ;
+    skos:prefLabel "Communicate clearly and collaboratively to provide feedback to a teammate about a piece of code"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Software2 .
+
+cs2023c:Source_Software2 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Software2, starting on printed page 399."@en ;
+    dcterms:description "Task: Perform code review for a teammate. Competency statement: Communicate clearly and collaboratively to provide feedback to a teammate about a piece of code. Required knowledge: SDF-Practices, SE-Teamwork, SE-Validation. Required skills: Apply. Desirable professional dispositions: Collaborative, Communicative, Meticulous."@en ;
+    dcterms:identifier "Software2" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_SDF_Practices,
+        cs2023:KU_SE_Teamwork,
+        cs2023:KU_SE_Validation,
+        level:Apply .
+}

@@ -1,0 +1,101 @@
+# CS2023 Software3; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Software3_SE_Teamwork_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Teamwork × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SE_Teamwork ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software3 ;
+    rdfs:comment "Local knowledge–level assignment for Software3: SE-Teamwork at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SE-Teamwork × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software3 .
+
+cs2023c:KS_Software3_SE_Teamwork_5_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Teamwork × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SE_Teamwork ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software3 ;
+    rdfs:comment "Local knowledge–level assignment for Software3: SE-Teamwork at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SE-Teamwork × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software3 .
+
+cs2023c:TaskActivity_Software3_Collaborate a ontoksd:TaskActivity ;
+    rdfs:label "collaborate"@en ;
+    rdfs:comment "Task activity capturing active participation in shared team work."@en ;
+    skos:prefLabel "collaborate"@en .
+
+cs2023c:TaskActivity_Software3_Communicate a ontoksd:TaskActivity ;
+    rdfs:label "communicate"@en ;
+    rdfs:comment "Task activity capturing the need to communicate effectively with other team members."@en ;
+    skos:prefLabel "communicate"@en .
+
+cs2023c:TaskActivity_Software3_Coordinate a ontoksd:TaskActivity ;
+    rdfs:label "coordinate"@en ;
+    rdfs:comment "Task activity capturing the organization and alignment of individual contributions within ongoing team processes."@en ;
+    skos:prefLabel "coordinate"@en .
+
+cs2023c:TaskComponent_Software3_TeamworkContext a ontoksd:TaskComponent ;
+    rdfs:label "team-based work context"@en ;
+    rdfs:comment "Task component corresponding to the collaborative context in which the individual works as part of a team over time."@en ;
+    skos:prefLabel "team-based work context"@en .
+
+cs2023c:TaskConstraint_Software3_LongTermDynamics a ontoksd:TaskConstraint ;
+    rdfs:label "with focus on long-term team dynamics and effective communication"@en ;
+    rdfs:comment "Task constraint that qualifies the task in terms of sustained team functioning, including communication quality, coordination over time, and attention to ongoing team dynamics."@en ;
+    skos:prefLabel "with focus on long-term team dynamics and effective communication"@en .
+
+cs2023c:Task_Software3 a ontoksd:Task ;
+    rdfs:label "Software3 task"@en ;
+    dcterms:identifier "Task_Software3"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Software3_Collaborate,
+        cs2023c:TaskActivity_Software3_Communicate,
+        cs2023c:TaskActivity_Software3_Coordinate ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Software3_TeamworkContext ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Software3_LongTermDynamics ;
+    ontoksd:hasTaskStatement "Work on a team effectively."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Software3 ;
+    rdfs:comment "Specification-level task associated with Competence_Software3. The task emphasizes sustained and effective participation in team-based work, with attention both to communication and to the long-term dynamics that shape collaborative performance."@en ;
+    skos:prefLabel "Software3 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software3 .
+
+cs2023c:Competence_Software3 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Focus on long-term team dynamics and communicate effectively"@en ;
+    dcterms:identifier "Software3"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:communicative,
+        ontoksd:proactive,
+        ontoksd:responsive ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Software3_SE_Teamwork_1_Apply,
+        cs2023c:KS_Software3_SE_Teamwork_5_Apply ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Software3 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Software3. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Focus on long-term team dynamics and communicate effectively."@en ;
+    skos:prefLabel "Focus on long-term team dynamics and communicate effectively"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Software3 .
+
+cs2023c:Source_Software3 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Software3, starting on printed page 399."@en ;
+    dcterms:description "Task: Work on a team effectively. Competency statement: Focus on long-term team dynamics and communicate effectively. Required knowledge: SE-Teamwork. Required skills: Apply. Desirable professional dispositions: Collaborative, Communicative, Proactive, Responsive."@en ;
+    dcterms:identifier "Software3" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_SE_Teamwork,
+        level:Apply .
+}

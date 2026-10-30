@@ -1,0 +1,12 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?pair ?sourceCell ?note ?level
+WHERE {
+ ?pair a ontoksd:KnowledgeSkill ;
+  dcterms:description ?sourceCell ;
+  <http://www.w3.org/2000/01/rdf-schema#comment> ?note ;
+  ontoksd:hasSkillLevel ?level .
+ FILTER(CONTAINS(STR(?note), "internally inconsistent"))
+} ORDER BY ?pair

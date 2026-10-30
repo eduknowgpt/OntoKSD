@@ -1,0 +1,38 @@
+{
+  "scenario": "http://purl.org/ontoksd#SecondCycle_OperationalScenario",
+  "course": "http://purl.org/ontoksd#Course_FormalLanguagesAndTheoryOfComputation",
+  "scheme": "http://purl.org/ontoksd#SecondCycle_ProficiencyScheme",
+  "scope": "optional user-defined operational layer",
+  "course_expectations": {
+    "mandatory": true,
+    "minimum_level": "http://purl.org/ontoksd#SecondCycle_CompetentLevel",
+    "selected_competences": 15
+  },
+  "intervals": [
+    {
+      "level": "Novice",
+      "lower": 0,
+      "upper": 7,
+      "includesLower": true,
+      "includesUpper": false
+    },
+    {
+      "level": "Competent",
+      "lower": 7,
+      "upper": 9,
+      "includesLower": true,
+      "includesUpper": false
+    },
+    {
+      "level": "Advanced",
+      "lower": 9,
+      "upper": 10,
+      "includesLower": true,
+      "includesUpper": true
+    }
+  ],
+  "input_sha256": {
+    "second_cycle_shared_proficiency_scheme.rq": "4738127f37c443614e1742e3e00d2972facc5416cbd77f8c34dc4ef31778a2fc",
+    "task201_204_course_layer.rq": "7f6effdc3cd09526b5d4243f8d15719bccfb7b9497f8ff15e74ae3abd42b13fb"
+  }
+}

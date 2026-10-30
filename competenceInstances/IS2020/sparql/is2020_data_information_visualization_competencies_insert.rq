@@ -1,419 +1,492 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
+is2020c:KS_ISDIV_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Human vision × Understanding"@en ;
+    dcterms:description "Source knowledge element: Human vision; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HumanVision ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Human vision × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_1 .
 
-  #################################################################
-  # Source markers and scheme
-  #################################################################
+is2020c:KS_ISDIV_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Human perception × Understanding"@en ;
+    dcterms:description "Source knowledge element: Human perception; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HumanPerception ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Human perception × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_1 .
 
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
+is2020c:KS_ISDIV_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types of data × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Types of data; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesOfData ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types of data × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_2 .
 
-  <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Data / Information Visualization competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.2.3 Competency Area – Data / Information Visualization."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Numerical versus categorical data × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Numerical vs. Categorical; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:NumericalVersusCategoricalData ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Numerical versus categorical data × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_2 .
 
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
+is2020c:KS_ISDIV_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Different types of plots × Analyzing"@en ;
+    dcterms:description "Source knowledge element: Different types of plots; source skill-level cell: 4 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DifferentTypesOfPlots ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Different types of plots × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_3 .
 
-  is2020k:IS2020DataInformationVisualizationKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Data / Information Visualization Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Data / Information Visualization Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Data / Information Visualization competency area."@en ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Mapping data to plot aesthetics × Creating"@en ;
+    dcterms:description "Source knowledge element: Mapping data to plot aesthetics; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MappingDataToPlotAesthetics ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Mapping data to plot aesthetics × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_3 .
 
-  #################################################################
-  # Knowledge elements
-  #################################################################
+is2020c:KS_ISDIV_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Algorithmic processing of data × Creating"@en ;
+    dcterms:description "Source knowledge element: Algorithmic processing of data; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:AlgorithmicProcessingOfData ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Algorithmic processing of data × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_4 .
 
-  is2020k:HumanVision
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Human vision"@en ;
-      skos:prefLabel "Human vision"@en ;
-      skos:definition "Knowledge of human vision relevant to information visualization and visual interpretation."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Relational operations on data sets × Creating"@en ;
+    dcterms:description "Source knowledge element: Relational operations on data sets; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RelationalOperationsOnDataSets ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Relational operations on data sets × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_4 .
 
-  is2020k:HumanPerception
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Human perception"@en ;
-      skos:prefLabel "Human perception"@en ;
-      skos:definition "Knowledge of human perception relevant to the design and interpretation of visual representations of information."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Using plotting libraries × Creating"@en ;
+    dcterms:description "Source knowledge element: Using plotting libraries (ggplot or plotnine); source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:UsingPlottingLibraries ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Using plotting libraries × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_5 .
 
-  is2020k:TypesOfData
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types of data"@en ;
-      skos:prefLabel "Types of data"@en ;
-      skos:definition "Knowledge of different types of data relevant to selecting effective ways of displaying numeric data, counts, and proportions."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Basics of scales, geoms, and coordinates × Understanding"@en ;
+    dcterms:description "Source knowledge element: Basics of scales, geoms, coordinates; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BasicsOfScalesGeomsAndCoordinates ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Basics of scales, geoms, and coordinates × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_5 .
 
-  is2020k:NumericalVersusCategoricalData
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Numerical versus categorical data"@en ;
-      skos:prefLabel "Numerical versus categorical data"@en ;
-      skos:definition "Knowledge of the distinction between numerical and categorical data for choosing appropriate visual representations."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Hypothesis generation × Applying"@en ;
+    dcterms:description "Source knowledge element: Hypothesis generation; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HypothesisGeneration ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Hypothesis generation × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_6 .
 
-  is2020k:DifferentTypesOfPlots
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Different types of plots"@en ;
-      skos:prefLabel "Different types of plots"@en ;
-      skos:definition "Knowledge of different types of plots used to explain ideas and analyze data."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Interactive visualizations × Creating"@en ;
+    dcterms:description "Source knowledge element: Interactive visualizations; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InteractiveVisualizations ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Interactive visualizations × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_6 .
 
-  is2020k:MappingDataToPlotAesthetics
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Mapping data to plot aesthetics"@en ;
-      skos:prefLabel "Mapping data to plot aesthetics"@en ;
-      skos:definition "Knowledge of mapping data attributes to plot aesthetics for understandable, efficient, effective, and aesthetic visual presentation."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Art of the narrative × Analyzing"@en ;
+    dcterms:description "Source knowledge element: The art of the narrative; source skill-level cell: 5 – Analyze."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ArtOfNarrative ;
+    ontoksd:hasSkillLevel bloom:Analyzing ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately. The source cell is internally inconsistent (5 – Analyze). This representation follows the textual label; the original number is preserved in the documentary annotation. It is not an official correction."@en ;
+    skos:prefLabel "Art of the narrative × Analyzing"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_7 .
 
-  is2020k:AlgorithmicProcessingOfData
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Algorithmic processing of data"@en ;
-      skos:prefLabel "Algorithmic processing of data"@en ;
-      skos:definition "Knowledge of algorithmic processing of data for basic manipulation tasks such as filtering, aggregating, and organizing data sets."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:KS_ISDIV_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Exploratory versus explanatory expositions × Creating"@en ;
+    dcterms:description "Source knowledge element: Exploratory vs. Explanatory expositions; source skill-level cell: 6 – Create."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ExploratoryVersusExplanatoryExpositions ;
+    ontoksd:hasSkillLevel bloom:Creating ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Exploratory versus explanatory expositions × Creating"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISDIV_7 .
 
-  is2020k:RelationalOperationsOnDataSets
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Relational operations on data sets"@en ;
-      skos:prefLabel "Relational operations on data sets"@en ;
-      skos:definition "Knowledge of relational operations on data sets used in basic data manipulation."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Explain the fundamentals of human perception and vision"@en ;
+    dcterms:identifier "ISDIV-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:purposeDriven,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:HumanPerception,
+        is2020k:HumanVision ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_1_01,
+        is2020c:KS_ISDIV_1_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+    skos:definition "Explain the fundamentals of human perception and vision"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_1 .
 
-  is2020k:UsingPlottingLibraries
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Using plotting libraries such as ggplot or plotnine"@en ;
-      skos:prefLabel "Using plotting libraries such as ggplot or plotnine"@en ;
-      skos:definition "Knowledge of using plotting libraries such as ggplot or plotnine to produce graphics with visualization tools."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate effective ways of displaying numeric data, counts, and proportions"@en ;
+    dcterms:identifier "ISDIV-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:NumericalVersusCategoricalData,
+        is2020k:TypesOfData ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_2_01,
+        is2020c:KS_ISDIV_2_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
+    skos:definition "Demonstrate effective ways of displaying numeric data, counts, and proportions"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_2 .
 
-  is2020k:BasicsOfScalesGeomsAndCoordinates
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Basics of scales, geoms, and coordinates"@en ;
-      skos:prefLabel "Basics of scales, geoms, and coordinates"@en ;
-      skos:definition "Knowledge of the basics of scales, geoms, and coordinates in visualization tools."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data"@en ;
+    dcterms:identifier "ISDIV-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:purposeDriven,
+        ontoksd:responsible,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DifferentTypesOfPlots,
+        is2020k:MappingDataToPlotAesthetics ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_3_01,
+        is2020c:KS_ISDIV_3_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
+    skos:definition "Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_3 .
 
-  is2020k:HypothesisGeneration
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Hypothesis generation"@en ;
-      skos:prefLabel "Hypothesis generation"@en ;
-      skos:definition "Knowledge of hypothesis generation in the exploration of data and in checking assumptions."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets"@en ;
+    dcterms:identifier "ISDIV-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:AlgorithmicProcessingOfData,
+        is2020k:RelationalOperationsOnDataSets ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_4_01,
+        is2020c:KS_ISDIV_4_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
+    skos:definition "Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_4 .
 
-  is2020k:InteractiveVisualizations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Interactive visualizations"@en ;
-      skos:prefLabel "Interactive visualizations"@en ;
-      skos:definition "Knowledge of interactive visualizations used to fit, explore, and check assumptions about data."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Produce graphics using a visualization tool"@en ;
+    dcterms:identifier "ISDIV-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:purposeDriven ;
+    ontoksd:hasKnowledge is2020k:BasicsOfScalesGeomsAndCoordinates,
+        is2020k:UsingPlottingLibraries ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_5_01,
+        is2020c:KS_ISDIV_5_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
+    skos:definition "Produce graphics using a visualization tool"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_5 .
 
-  is2020k:ArtOfNarrative
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Art of the narrative"@en ;
-      skos:prefLabel "Art of the narrative"@en ;
-      skos:definition "Knowledge of the art of narrative for expressing the story of data in a compelling way."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Develop transformations and model to fit, explore and check assumptions about data"@en ;
+    dcterms:identifier "ISDIV-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:HypothesisGeneration,
+        is2020k:InteractiveVisualizations ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_6_01,
+        is2020c:KS_ISDIV_6_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
+    skos:definition "Develop transformations and model to fit, explore and check assumptions about data"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_6 .
 
-  is2020k:ExploratoryVersusExplanatoryExpositions
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Exploratory versus explanatory expositions"@en ;
-      skos:prefLabel "Exploratory versus explanatory expositions"@en ;
-      skos:definition "Knowledge of the distinction between exploratory and explanatory expositions in data storytelling."@en ;
-      skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
+is2020c:Competence_ISDIV_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Express the story of the data in a compelling narrative"@en ;
+    dcterms:identifier "ISDIV-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ArtOfNarrative,
+        is2020k:ExploratoryVersusExplanatoryExpositions ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISDIV_7_01,
+        is2020c:KS_ISDIV_7_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
+    skos:definition "Express the story of the data in a compelling narrative"@en ;
+    skos:prefLabel "IS Data / Information Visualization Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISDIV_7 .
 
-  #################################################################
-  # Competencies
-  #################################################################
+is2020k:AlgorithmicProcessingOfData a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Algorithmic processing of data"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of algorithmic processing of data for basic manipulation tasks such as filtering, aggregating, and organizing data sets."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Algorithmic processing of data"@en .
 
-  is2020c:Competence_ISDIV_1
-      a ontoksd:Competence ;
-      rdfs:label "Explain the fundamentals of human perception and vision"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 1"@en ;
-      skos:definition "Explain the fundamentals of human perception and vision."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
-      dcterms:identifier "ISDIV-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:HumanVision ,
-          is2020k:HumanPerception ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_1_01 ,
-          is2020c:KS_ISDIV_1_02 .
+is2020k:ArtOfNarrative a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Art of the narrative"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the art of narrative for expressing the story of data in a compelling way."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Art of the narrative"@en .
 
-  is2020c:Competence_ISDIV_2
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate effective ways of displaying numeric data, counts, and proportions"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 2"@en ;
-      skos:definition "Demonstrate effective ways of displaying numeric data, counts, and proportions."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
-      dcterms:identifier "ISDIV-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:TypesOfData ,
-          is2020k:NumericalVersusCategoricalData ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:inventive , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_2_01 ,
-          is2020c:KS_ISDIV_2_02 .
+is2020k:BasicsOfScalesGeomsAndCoordinates a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Basics of scales, geoms, and coordinates"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the basics of scales, geoms, and coordinates in visualization tools."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Basics of scales, geoms, and coordinates"@en .
 
-  is2020c:Competence_ISDIV_3
-      a ontoksd:Competence ;
-      rdfs:label "Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 3"@en ;
-      skos:definition "Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
-      dcterms:identifier "ISDIV-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:DifferentTypesOfPlots ,
-          is2020k:MappingDataToPlotAesthetics ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:responsible ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_3_01 ,
-          is2020c:KS_ISDIV_3_02 .
+is2020k:DifferentTypesOfPlots a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Different types of plots"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different types of plots used to explain ideas and analyze data."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Different types of plots"@en .
 
-  is2020c:Competence_ISDIV_4
-      a ontoksd:Competence ;
-      rdfs:label "Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 4"@en ;
-      skos:definition "Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
-      dcterms:identifier "ISDIV-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:AlgorithmicProcessingOfData ,
-          is2020k:RelationalOperationsOnDataSets ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_4_01 ,
-          is2020c:KS_ISDIV_4_02 .
+is2020k:ExploratoryVersusExplanatoryExpositions a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Exploratory versus explanatory expositions"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the distinction between exploratory and explanatory expositions in data storytelling."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Exploratory versus explanatory expositions"@en .
 
-  is2020c:Competence_ISDIV_5
-      a ontoksd:Competence ;
-      rdfs:label "Produce graphics using a visualization tool"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 5"@en ;
-      skos:definition "Produce graphics using a visualization tool."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
-      dcterms:identifier "ISDIV-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:UsingPlottingLibraries ,
-          is2020k:BasicsOfScalesGeomsAndCoordinates ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:purposeDriven , ontoksd:inventive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_5_01 ,
-          is2020c:KS_ISDIV_5_02 .
+is2020k:HumanPerception a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Human perception"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of human perception relevant to the design and interpretation of visual representations of information."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Human perception"@en .
 
-  is2020c:Competence_ISDIV_6
-      a ontoksd:Competence ;
-      rdfs:label "Develop transformations and model to fit, explore and check assumptions about data"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 6"@en ;
-      skos:definition "Develop transformations and model to fit, explore and check assumptions about data."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
-      dcterms:identifier "ISDIV-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:HypothesisGeneration ,
-          is2020k:InteractiveVisualizations ;
-      ontoksd:hasDisposition ontoksd:meticulous , ontoksd:inventive , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_6_01 ,
-          is2020c:KS_ISDIV_6_02 .
+is2020k:HumanVision a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Human vision"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of human vision relevant to information visualization and visual interpretation."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Human vision"@en .
 
-  is2020c:Competence_ISDIV_7
-      a ontoksd:Competence ;
-      rdfs:label "Express the story of the data in a compelling narrative"@en ;
-      skos:prefLabel "IS Data / Information Visualization Competency 7"@en ;
-      skos:definition "Express the story of the data in a compelling narrative."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.2.3 Data / Information Visualization."@en ;
-      dcterms:identifier "ISDIV-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ArtOfNarrative ,
-          is2020k:ExploratoryVersusExplanatoryExpositions ;
-      ontoksd:hasDisposition ontoksd:inventive , ontoksd:selfDirected , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISDIV_7_01 ,
-          is2020c:KS_ISDIV_7_02 .
+is2020k:HypothesisGeneration a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Hypothesis generation"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of hypothesis generation in the exploration of data and in checking assumptions."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Hypothesis generation"@en .
 
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
+is2020k:InteractiveVisualizations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Interactive visualizations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of interactive visualizations used to fit, explore, and check assumptions about data."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Interactive visualizations"@en .
 
-  is2020c:KS_ISDIV_1_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Human vision × Understanding"@en ;
-      skos:prefLabel "Human vision × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 1 linking human vision to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:HumanVision ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_1 .
+is2020k:MappingDataToPlotAesthetics a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Mapping data to plot aesthetics"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of mapping data attributes to plot aesthetics for understandable, efficient, effective, and aesthetic visual presentation."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Mapping data to plot aesthetics"@en .
 
-  is2020c:KS_ISDIV_1_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Human perception × Understanding"@en ;
-      skos:prefLabel "Human perception × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 1 linking human perception to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:HumanPerception ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_1 .
+is2020k:NumericalVersusCategoricalData a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Numerical versus categorical data"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the distinction between numerical and categorical data for choosing appropriate visual representations."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Numerical versus categorical data"@en .
 
-  is2020c:KS_ISDIV_2_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Types of data × Analyzing"@en ;
-      skos:prefLabel "Types of data × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 2 linking types of data to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TypesOfData ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_2 .
+is2020k:RelationalOperationsOnDataSets a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Relational operations on data sets"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of relational operations on data sets used in basic data manipulation."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Relational operations on data sets"@en .
 
-  is2020c:KS_ISDIV_2_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Numerical versus categorical data × Analyzing"@en ;
-      skos:prefLabel "Numerical versus categorical data × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 2 linking numerical versus categorical data to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:NumericalVersusCategoricalData ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_2 .
+is2020k:TypesOfData a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types of data"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different types of data relevant to selecting effective ways of displaying numeric data, counts, and proportions."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Types of data"@en .
 
-  is2020c:KS_ISDIV_3_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Different types of plots × Analyzing"@en ;
-      skos:prefLabel "Different types of plots × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 3 linking different types of plots to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DifferentTypesOfPlots ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_3 .
+is2020k:UsingPlottingLibraries a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Using plotting libraries such as ggplot or plotnine"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of using plotting libraries such as ggplot or plotnine to produce graphics with visualization tools."@en ;
+    skos:inScheme is2020k:IS2020DataInformationVisualizationKnowledgeScheme ;
+    skos:prefLabel "Using plotting libraries such as ggplot or plotnine"@en .
 
-  is2020c:KS_ISDIV_3_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Mapping data to plot aesthetics × Creating"@en ;
-      skos:prefLabel "Mapping data to plot aesthetics × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 3 linking mapping data to plot aesthetics to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:MappingDataToPlotAesthetics ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_3 .
+is2020c:Source_ISDIV_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 109 (PDF page 110)."@en ;
+    dcterms:description "Competency: Explain the fundamentals of human perception and vision Key dispositions: Purpose-driven, Self-Directed, Responsible"@en ;
+    dcterms:identifier "ISDIV-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_4_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Algorithmic processing of data × Creating"@en ;
-      skos:prefLabel "Algorithmic processing of data × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 4 linking algorithmic processing of data to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:AlgorithmicProcessingOfData ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_4 .
+is2020c:Source_ISDIV_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 109 (PDF page 110)."@en ;
+    dcterms:description "Competency: Demonstrate effective ways of displaying numeric data, counts, and proportions Key dispositions: Meticulous, Inventive, Self-Directed"@en ;
+    dcterms:identifier "ISDIV-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_4_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Relational operations on data sets × Creating"@en ;
-      skos:prefLabel "Relational operations on data sets × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 4 linking relational operations on data sets to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:RelationalOperationsOnDataSets ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_4 .
+is2020c:Source_ISDIV_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 110 (PDF page 111)."@en ;
+    dcterms:description "Competency: Present information in an understandable, efficient, effective, and aesthetic manner, for the purposes of explaining ideas and analyzing data Key dispositions: Purpose-driven, Self-Directed, Responsible"@en ;
+    dcterms:identifier "ISDIV-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_5_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Using plotting libraries × Creating"@en ;
-      skos:prefLabel "Using plotting libraries × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 5 linking the use of plotting libraries to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:UsingPlottingLibraries ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_5 .
+is2020c:Source_ISDIV_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 110 (PDF page 111)."@en ;
+    dcterms:description "Competency: Use a tool such as R (or Python) to perform basic data manipulation such as filtering, aggregating, and organizing data sets Key dispositions: Meticulous, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISDIV-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_5_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Basics of scales, geoms, and coordinates × Understanding"@en ;
-      skos:prefLabel "Basics of scales, geoms, and coordinates × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 5 linking basics of scales, geoms, and coordinates to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BasicsOfScalesGeomsAndCoordinates ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_5 .
+is2020c:Source_ISDIV_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 110 (PDF page 111)."@en ;
+    dcterms:description "Competency: Produce graphics using a visualization tool Key dispositions: Meticulous, Purpose-driven, Inventive"@en ;
+    dcterms:identifier "ISDIV-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_6_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Hypothesis generation × Applying"@en ;
-      skos:prefLabel "Hypothesis generation × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 6 linking hypothesis generation to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:HypothesisGeneration ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_6 .
+is2020c:Source_ISDIV_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 111 (PDF page 112)."@en ;
+    dcterms:description "Competency: Develop transformations and model to fit, explore and check assumptions about data Key dispositions: Meticulous, Inventive, Self-Directed"@en ;
+    dcterms:identifier "ISDIV-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_6_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Interactive visualizations × Creating"@en ;
-      skos:prefLabel "Interactive visualizations × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 6 linking interactive visualizations to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:InteractiveVisualizations ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_6 .
+is2020c:Source_ISDIV_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 111 (PDF page 112)."@en ;
+    dcterms:description "Competency: Express the story of the data in a compelling narrative Key dispositions: Inventive, Self-Directed, Purpose-driven"@en ;
+    dcterms:identifier "ISDIV-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
 
-  is2020c:KS_ISDIV_7_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Art of the narrative × Analyzing"@en ;
-      skos:prefLabel "Art of the narrative × Analyzing"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 7 linking the art of the narrative to the required Bloom level Analyzing."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ArtOfNarrative ;
-      ontoksd:hasRequiredSkillLevel bloom:Analyzing ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_7 .
+<http://purl.org/ontoksd/source/is2020-data-information-visualization-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Data / Information Visualization competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.2.3 Competency Area – Data / Information Visualization."@en .
 
-  is2020c:KS_ISDIV_7_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Exploratory versus explanatory expositions × Creating"@en ;
-      skos:prefLabel "Exploratory versus explanatory expositions × Creating"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Data / Information Visualization Competency 7 linking exploratory versus explanatory expositions to the required Bloom level Creating."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ExploratoryVersusExplanatoryExpositions ;
-      ontoksd:hasRequiredSkillLevel bloom:Creating ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISDIV_7 .
+is2020k:IS2020DataInformationVisualizationKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Data / Information Visualization Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Data / Information Visualization competency area."@en ;
+    skos:prefLabel "IS2020 Data / Information Visualization Knowledge Scheme"@en .
 
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

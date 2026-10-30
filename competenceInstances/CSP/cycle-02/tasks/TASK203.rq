@@ -1,0 +1,256 @@
+# Cycle-02 Task203 and its adjusted instructional/assessment associations.
+# INSERT-only incremental cycle-02 instance data; see README.md for dependencies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:Options_Task203_C09_activation_mode a prov:Entity ;
+    dcterms:description "Documented alternative values: analytical|constructive. No selected configuration is asserted; these alternatives are not simultaneous qualifier values."@en ;
+    dcterms:identifier "activation_mode" ;
+    dcterms:references ontoksd:amAnalytical,
+        ontoksd:amConstructive ;
+    dcterms:relation ontoksd:CA_Task203_C09_Assessment,
+        ontoksd:CA_Task203_C09_Learning .
+
+ontoksd:CA_Task203_C05_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C05_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Technical reporting. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C07_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: TM-based parking control. "@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C07_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: TM-based parking control. "@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C07 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C08_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Comparison and justification of TM variants. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:mediatesCompetence ontoksd:C08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C08_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Comparison and justification of TM variants. "@en ;
+    dcterms:references bloom:Analyzing ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amJustificatory ;
+    ontoksd:mediatesCompetence ontoksd:C08 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C09_Assessment_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C09_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "The adjusted configuration classifies this competence association as optional. It may provide enrichment or support; this status does not authorize dropping independent task-statement requirements."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acOptional ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C10_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and testing. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C10_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Simulation and testing. "@en ;
+    dcterms:references bloom:Applying ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arTransversal ;
+    ontoksd:mediatesCompetence ontoksd:C10 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:TA_Task203_design a ontoksd:TaskActivity ;
+    rdfs:label "design"@en .
+
+ontoksd:TA_Task203_document a ontoksd:TaskActivity ;
+    rdfs:label "document"@en .
+
+ontoksd:TA_Task203_implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en .
+
+ontoksd:TA_Task203_justify a ontoksd:TaskActivity ;
+    rdfs:label "justify"@en .
+
+ontoksd:TA_Task203_simulate a ontoksd:TaskActivity ;
+    rdfs:label "simulate"@en .
+
+ontoksd:TC_Task203_1 a ontoksd:TaskComponent ;
+    rdfs:label "Parking-control system"@en .
+
+ontoksd:TC_Task203_2 a ontoksd:TaskComponent ;
+    rdfs:label "Category-specific occupancy counters"@en .
+
+ontoksd:TC_Task203_3 a ontoksd:TaskComponent ;
+    rdfs:label "Daily rejection counters"@en .
+
+ontoksd:TCons_Task203_1 a ontoksd:TaskConstraint ;
+    rdfs:label "Keep daily-user, monthly-subscriber and rotating-customer spaces category-specific."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:TCons_Task203_2 a ontoksd:TaskConstraint ;
+    rdfs:label "Update occupancy and release spaces on departures; count denied requests per category each day."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:TCons_Task203_3 a ontoksd:TaskConstraint ;
+    rdfs:label "A rejected request must not interfere with subsequent service."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:TCons_Task203_4 a ontoksd:TaskConstraint ;
+    rdfs:label "Justify the selected machine or variant and deliver the machine model and SBC-format report."@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:AC_Task203 a ontoksd:AcquisitionContext ;
+    rdfs:label "Parking Control pedagogical setting"@en ;
+    dcterms:identifier "Task203-AcquisitionContext" ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:CA_Task203_C09_Assessment a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Optional variant use; analytical by default and constructive when implemented. No specialization. Analytical evidence can overlap with C08; no independent assessment criterion is inferred."@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task203_C09_Assessment_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:CA_Task203_C09_Learning a ontoksd:CompetenceActivation ;
+    dcterms:description "Contextual predominant Bloom levels recorded by the source: Apply;Analyze. These qualify documented activation and do not replace reference KnowledgeSkill levels."@en,
+        "Source role/function: Optional variant use; analytical by default and constructive when implemented. No specialization. Analytical evidence can overlap with C08; no independent assessment criterion is inferred."@en ;
+    dcterms:references bloom:Analyzing,
+        bloom:Applying ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task203_C09_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationRole ontoksd:arExtension ;
+    ontoksd:mediatesCompetence ontoksd:C09 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task203 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task203_Reference .
+
+ontoksd:C07 ontoksd:hasTask ontoksd:Task203_Reference .
+
+ontoksd:C08 ontoksd:hasTask ontoksd:Task203_Reference .
+
+ontoksd:C09 ontoksd:hasTask ontoksd:Task203_Reference .
+
+ontoksd:C10 ontoksd:hasTask ontoksd:Task203_Reference .
+
+ontoksd:AS_Task203 a ontoksd:Assessment ;
+    rdfs:label "Parking Control assessment specification"@en ;
+    dcterms:identifier "Task203-Assessment" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task203 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task203_C05_Assessment,
+        ontoksd:CA_Task203_C07_Assessment,
+        ontoksd:CA_Task203_C08_Assessment,
+        ontoksd:CA_Task203_C09_Assessment,
+        ontoksd:CA_Task203_C10_Assessment ;
+    ontoksd:hasInstructionalStatement "Interpret the submitted report, model and documented reasoning against the task requirements and the adjusted activation configuration. No actual assessment event, score, evidence production or individual attainment is asserted."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task203 ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:Task203_Reference a ontoksd:Task ;
+    rdfs:label "Parking Control reference performance"@en ;
+    dcterms:identifier "Task203-Task" ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task203_design,
+        ontoksd:TA_Task203_document,
+        ontoksd:TA_Task203_implement,
+        ontoksd:TA_Task203_justify,
+        ontoksd:TA_Task203_simulate ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task203_1,
+        ontoksd:TC_Task203_2,
+        ontoksd:TC_Task203_3 ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task203_1,
+        ontoksd:TCons_Task203_2,
+        ontoksd:TCons_Task203_3,
+        ontoksd:TCons_Task203_4 ;
+    ontoksd:hasTaskStatement "Design, simulate and document the adopted Turing-Machine-based parking control model, updating category occupancy on arrivals/departures and daily denied-request counters while continuing service after rejection."@en ;
+    ontoksd:isTaskOf ontoksd:C05,
+        ontoksd:C07,
+        ontoksd:C08,
+        ontoksd:C09,
+        ontoksd:C10 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+
+ontoksd:LT_Task203 a ontoksd:LearningTask ;
+    rdfs:label "Parking Control learning task"@en ;
+    dcterms:identifier "Task203-LearningTask" ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task203 ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task203_C05_Learning,
+        ontoksd:CA_Task203_C07_Learning,
+        ontoksd:CA_Task203_C08_Learning,
+        ontoksd:CA_Task203_C09_Learning,
+        ontoksd:CA_Task203_C10_Learning ;
+    ontoksd:hasInstructionalStatement "Account for arrivals and departures, freeing occupied spaces on exit."@en,
+        "Continue servicing later customers after a rejected request."@en,
+        "Develop and simulate the adopted machine model with JFLAP and justify the machine or variant choice."@en,
+        "Manage category-specific parking availability for daily users, monthly subscribers and rotating customers."@en,
+        "Reject requests when the relevant category has no space; maintain daily denied-request counters independently by category."@en,
+        "Submit the machine-model file and an SBC-format report containing operations, examples, daily rejection information and theoretical justification."@en,
+        "Use PBL teamwork and document project progress."@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:CSPResource_JFLAP,
+        ontoksd:CSPResource_SBC ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/Task203-ParkingControl.md> .
+}

@@ -1,0 +1,120 @@
+# CS2023 Systems7; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems7_FPL_Parallel_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Parallel × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Parallel ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems7 ;
+    rdfs:comment "Local knowledge–level assignment for Systems7: FPL-Parallel at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Parallel × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems7 .
+
+cs2023c:KS_Systems7_PDC_Evaluation_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "PDC-Evaluation × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_PDC_Evaluation ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems7 ;
+    rdfs:comment "Local knowledge–level assignment for Systems7: PDC-Evaluation at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "PDC-Evaluation × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems7 .
+
+cs2023c:TaskActivity_Systems7_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluation of whether, when, and how parallelism can improve performance."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskActivity_Systems7_Identify a ontoksd:TaskActivity ;
+    rdfs:label "identify"@en ;
+    rdfs:comment "Task activity capturing the identification of opportunities for introducing parallelism."@en ;
+    skos:prefLabel "identify"@en .
+
+cs2023c:TaskActivity_Systems7_Implement a ontoksd:TaskActivity ;
+    rdfs:label "implement"@en ;
+    rdfs:comment "Task activity capturing the implementation of parallelism in the application or component."@en ;
+    skos:prefLabel "implement"@en .
+
+cs2023c:TaskActivity_Systems7_Measure a ontoksd:TaskActivity ;
+    rdfs:label "measure"@en ;
+    rdfs:comment "Task activity capturing the measurement of the performance results obtained after introducing parallelism."@en ;
+    skos:prefLabel "measure"@en .
+
+cs2023c:TaskComponent_Systems7_ParallelizedVersion a ontoksd:TaskComponent ;
+    rdfs:label "parallelized version of the application or component"@en ;
+    rdfs:comment "Task component corresponding to the new version created by introducing parallelism in order to improve performance."@en ;
+    skos:prefLabel "parallelized version of the application or component"@en .
+
+cs2023c:TaskComponent_Systems7_SequentialApplication a ontoksd:TaskComponent ;
+    rdfs:label "sequential application or component"@en ;
+    rdfs:comment "Task component corresponding to the original sequential application or component whose performance is to be analyzed and improved."@en ;
+    skos:prefLabel "sequential application or component"@en .
+
+cs2023c:TaskConstraint_Systems7_ParallelismOpportunity a ontoksd:TaskConstraint ;
+    rdfs:label "where and when parallelism can improve or not improve performance"@en ;
+    rdfs:comment "Task constraint stating that the task must consider both situations in which parallelism is beneficial and situations in which it does not sufficiently improve performance."@en ;
+    skos:prefLabel "where and when parallelism can improve or not improve performance"@en .
+
+cs2023c:TaskConstraint_Systems7_PerformanceImprovement a ontoksd:TaskConstraint ;
+    rdfs:label "by introducing parallelism to improve performance"@en ;
+    rdfs:comment "Task constraint stating that the task is oriented toward performance improvement through the introduction of parallelism."@en ;
+    skos:prefLabel "by introducing parallelism to improve performance"@en .
+
+cs2023c:Task_Systems7 a ontoksd:Task ;
+    rdfs:label "Systems7 task"@en ;
+    dcterms:identifier "Task_Systems7"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems7_Evaluate,
+        cs2023c:TaskActivity_Systems7_Identify,
+        cs2023c:TaskActivity_Systems7_Implement,
+        cs2023c:TaskActivity_Systems7_Measure ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems7_ParallelizedVersion,
+        cs2023c:TaskComponent_Systems7_SequentialApplication ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems7_ParallelismOpportunity,
+        cs2023c:TaskConstraint_Systems7_PerformanceImprovement ;
+    ontoksd:hasTaskStatement "Improve the performance of a sequential application or component by introducing parallelism."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems7 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems7. The task concerns analyzing a sequential application or component to determine whether parallelism can improve performance, implementing appropriate forms of parallelism, and measuring the resulting performance effects."@en ;
+    skos:prefLabel "Systems7 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems7 .
+
+cs2023c:Competence_Systems7 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Evaluate how and when parallelism can improve (or not improve) performance well enough to identify opportunities, as well as implement them and measure the results"@en ;
+    dcterms:identifier "Systems7"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:persistent,
+        ontoksd:proactive ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems7_FPL_Parallel_1_Develop,
+        cs2023c:KS_Systems7_PDC_Evaluation_1_Evaluate ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems7 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems7. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Evaluate how and when parallelism can improve (or not improve) performance well enough to identify opportunities, as well as implement them and measure the results."@en ;
+    skos:prefLabel "Evaluate how and when parallelism can improve (or not improve) performance well enough to identify opportunities, as well as implement them and measure the results"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems7 .
+
+cs2023c:Source_Systems7 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems7, starting on printed page 402."@en ;
+    dcterms:description "Task: Improve the performance of a sequential application or component by introducing parallelism. Competency statement: Evaluate how and when parallelism can improve (or not improve) performance well enough to identify opportunities, as well as implement them and measure the results. Required knowledge: PDC-Evaluation, FPL-Parallel. Required skills: Evaluate, Develop. Desirable professional dispositions: Meticulous, Persistent, Proactive."@en ;
+    dcterms:identifier "Systems7" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_FPL_Parallel,
+        cs2023:KU_PDC_Evaluation,
+        level:Develop,
+        level:Evaluate .
+}

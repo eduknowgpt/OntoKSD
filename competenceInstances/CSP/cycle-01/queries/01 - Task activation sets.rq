@@ -1,0 +1,13 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?referenceTask ?unit ?activation ?competence ?role
+WHERE {
+ ?activation a ontoksd:CompetenceActivation ;
+  ontoksd:mediatesInstructionalUnit ?unit ; ontoksd:mediatesCompetence ?competence .
+ ?competence ontoksd:hasTask ?referenceTask .
+ ?unit dcterms:identifier ?unitId .
+ ?referenceTask dcterms:identifier ?taskId .
+ FILTER(SUBSTR(STR(?unitId),1,6)=SUBSTR(STR(?taskId),1,6))
+ OPTIONAL { ?activation ontoksd:hasActivationRole ?role }
+} ORDER BY ?referenceTask ?unit ?competence

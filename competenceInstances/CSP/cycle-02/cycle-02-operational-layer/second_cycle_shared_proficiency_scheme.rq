@@ -1,0 +1,90 @@
+# Operational 0–10 scheme: [0,7) Novice; [7,9) Competent; [9,10] Advanced.
+# Optional user-defined operational scenario; not additional documentary CSP requirements.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:AS_Task201 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:AS_Task202 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:AS_Task203 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:AS_Task204 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:SecondCycle_OperationalScenario a prov:Entity ;
+    rdfs:label "Second-cycle curricular/proficiency operational scenario"@en ;
+    dcterms:description "User-defined operational assumptions: the 15 selected cycle-02 competences are mandatory within the course, with Competent as the minimum expected level; classification uses [0,7) Novice, [7,9) Competent, and [9,10] Advanced. This is a modeling scenario, not a conclusion that the CSP imposed those course expectations or applied these cutoffs in every task."@en ;
+    dcterms:references ontoksd:AS_Task201,
+        ontoksd:AS_Task202,
+        ontoksd:AS_Task203,
+        ontoksd:AS_Task204,
+        ontoksd:SecondCycle_ProficiencyScheme,
+        <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> .
+
+ontoksd:SecondCycle_AdvancedLevel a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int .
+
+ontoksd:SecondCycle_CompetentLevel a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int .
+
+ontoksd:SecondCycle_Interval_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Operational Advanced score interval"@en ;
+    ontoksd:correspondsToLevel ontoksd:SecondCycle_AdvancedLevel ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:SecondCycle_TenPointScale ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 .
+
+ontoksd:SecondCycle_Interval_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Operational Competent score interval"@en ;
+    ontoksd:correspondsToLevel ontoksd:SecondCycle_CompetentLevel ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper false ;
+    ontoksd:intervalDefinedInScheme ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:SecondCycle_TenPointScale ;
+    ontoksd:lowerBound 7.0 ;
+    ontoksd:upperBound 9.0 .
+
+ontoksd:SecondCycle_Interval_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Operational Novice score interval"@en ;
+    ontoksd:correspondsToLevel ontoksd:SecondCycle_NoviceLevel ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper false ;
+    ontoksd:intervalDefinedInScheme ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:SecondCycle_TenPointScale ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 7.0 .
+
+ontoksd:SecondCycle_NoviceLevel a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int .
+
+ontoksd:SecondCycle_TenPointScale a ontoksd:Scale ;
+    rdfs:label "Second-cycle operational scale, 0 to 10"@en ;
+    ontoksd:hasInterval ontoksd:SecondCycle_Interval_Advanced,
+        ontoksd:SecondCycle_Interval_Competent,
+        ontoksd:SecondCycle_Interval_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 .
+
+ontoksd:SecondCycle_ProficiencyScheme a ontoksd:ProficiencyScheme ;
+    rdfs:label "Second CSP cycle shared operational proficiency scheme"@en ;
+    ontoksd:definesInterval ontoksd:SecondCycle_Interval_Advanced,
+        ontoksd:SecondCycle_Interval_Competent,
+        ontoksd:SecondCycle_Interval_Novice ;
+    ontoksd:definesLevel ontoksd:SecondCycle_AdvancedLevel,
+        ontoksd:SecondCycle_CompetentLevel,
+        ontoksd:SecondCycle_NoviceLevel ;
+    ontoksd:usesScale ontoksd:SecondCycle_TenPointScale ;
+    skos:scopeNote "Operational policy preserving the numeric data in the supplied shared-scheme file. Task201 documents different boundaries: [0,5], (5,9], (9,10]. Shared use here is a selected scenario and does not establish a source-documented policy for Task202–Task204 or a course approval threshold."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+}

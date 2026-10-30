@@ -1,0 +1,15 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?competence ?sourceLevel
+WHERE {
+  ?competence a ontoksd:CS2023Competence ; prov:wasDerivedFrom ?source .
+  ?source dcterms:requires ?sourceLevel .
+  ?sourceLevel a level:CS2023SkillLevel .
+  FILTER NOT EXISTS {
+    ?competence ontoksd:hasKnowledgeSkill/ontoksd:hasSkillLevel ?sourceLevel .
+  }
+}
+ORDER BY ?competence ?sourceLevel

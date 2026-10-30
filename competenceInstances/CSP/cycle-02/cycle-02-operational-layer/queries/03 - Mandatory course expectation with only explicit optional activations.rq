@@ -1,0 +1,25 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?competence
+WHERE {
+ ?spec a ontoksd:CourseCompetenceSpecification ;
+  ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+  ontoksd:mediatesCourseCompetence ?competence ; ontoksd:isMandatory true .
+ ontoksd:Course_FormalLanguagesAndTheoryOfComputation ontoksd:hasInstructionalUnit ?someUnit .
+ ?someActivation ontoksd:mediatesInstructionalUnit ?someUnit ; ontoksd:mediatesCompetence ?competence ;
+  ontoksd:hasActivationConstraint/ontoksd:hasActivationConstraintType ontoksd:acOptional .
+ FILTER NOT EXISTS {
+  ontoksd:Course_FormalLanguagesAndTheoryOfComputation ontoksd:hasInstructionalUnit ?unit .
+  ?activation ontoksd:mediatesInstructionalUnit ?unit ; ontoksd:mediatesCompetence ?competence .
+  FILTER NOT EXISTS {
+   ?activation ontoksd:hasActivationConstraint/ontoksd:hasActivationConstraintType ontoksd:acOptional .
+  }
+ }
+ FILTER NOT EXISTS {
+  ontoksd:Course_FormalLanguagesAndTheoryOfComputation ontoksd:hasInstructionalUnit ?otherUnit .
+  ?otherActivation ontoksd:mediatesInstructionalUnit ?otherUnit ;
+   ontoksd:mediatesCompetence ?competence ;
+   ontoksd:hasActivationConstraint/ontoksd:hasActivationConstraintType ?otherStatus .
+  FILTER(?otherStatus != ontoksd:acOptional)
+ }
+} ORDER BY ?competence

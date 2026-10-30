@@ -1,0 +1,16 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?competence ?taskStatement ?pair ?unit ?knowledge ?level
+WHERE {
+  ?competence a ontoksd:CS2023Competence ;
+      ontoksd:hasTask/ontoksd:hasTaskStatement ?taskStatement ;
+      ontoksd:hasKnowledgeSkill ?pair .
+  ?pair ontoksd:hasKnowledgeComponent ?knowledge ;
+      ontoksd:hasSkillLevel ?level .
+  ?knowledge ontoksd:isCurricularlyRepresentedBy ?unit .
+}
+ORDER BY ?competence ?unit ?level
+

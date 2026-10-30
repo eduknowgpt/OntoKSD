@@ -1,0 +1,162 @@
+# CS2023 Systems8; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems8_SF_Design_1_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Design × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SF_Design ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems8 ;
+    rdfs:comment "Local knowledge–level assignment for Systems8: SF-Design at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SF-Design × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems8 .
+
+cs2023c:KS_Systems8_SF_Evaluation_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Evaluation × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SF_Evaluation ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems8 ;
+    rdfs:comment "Local knowledge–level assignment for Systems8: SF-Evaluation at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SF-Evaluation × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems8 .
+
+cs2023c:KS_Systems8_SF_Overview_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Overview × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SF_Overview ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems8 ;
+    rdfs:comment "Local knowledge–level assignment for Systems8: SF-Overview at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SF-Overview × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems8 .
+
+cs2023c:KS_Systems8_SF_Performance_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Performance × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SF_Performance ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems8 ;
+    rdfs:comment "Local knowledge–level assignment for Systems8: SF-Performance at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SF-Performance × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems8 .
+
+cs2023c:TaskActivity_Systems8_Analyze a ontoksd:TaskActivity ;
+    rdfs:label "analyze"@en ;
+    rdfs:comment "Task activity capturing the analysis of system behavior and performance characteristics."@en ;
+    skos:prefLabel "analyze"@en .
+
+cs2023c:TaskActivity_Systems8_Apply a ontoksd:TaskActivity ;
+    rdfs:label "apply"@en ;
+    rdfs:comment "Task activity capturing the application of systems knowledge to interpret performance evidence in the deployment context."@en ;
+    skos:prefLabel "apply"@en .
+
+cs2023c:TaskActivity_Systems8_Develop a ontoksd:TaskActivity ;
+    rdfs:label "develop"@en ;
+    rdfs:comment "Task activity capturing the development of an analytical derivation or experimental study suitable for bottleneck identification."@en ;
+    skos:prefLabel "develop"@en .
+
+cs2023c:TaskActivity_Systems8_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluative judgment required to determine the principal performance bottleneck."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskActivity_Systems8_Identify a ontoksd:TaskActivity ;
+    rdfs:label "identify"@en ;
+    rdfs:comment "Task activity capturing the identification of the system's performance bottleneck."@en ;
+    skos:prefLabel "identify"@en .
+
+cs2023c:TaskComponent_Systems8_DeploymentEnvironment a ontoksd:TaskComponent ;
+    rdfs:label "target deployment environment"@en ;
+    rdfs:comment "Task component corresponding to the deployment environment in which performance behavior must be interpreted."@en ;
+    skos:prefLabel "target deployment environment"@en .
+
+cs2023c:TaskComponent_Systems8_PerformanceBottleneck a ontoksd:TaskComponent ;
+    rdfs:label "performance bottleneck"@en ;
+    rdfs:comment "Task component corresponding to the limiting factor in system performance, such as memory, CPU, or networking."@en ;
+    skos:prefLabel "performance bottleneck"@en .
+
+cs2023c:TaskComponent_Systems8_System a ontoksd:TaskComponent ;
+    rdfs:label "given system"@en ;
+    rdfs:comment "Task component corresponding to the system whose performance behavior is to be investigated."@en ;
+    skos:prefLabel "given system"@en .
+
+cs2023c:TaskConstraint_Systems8_AnalyticalDerivation a ontoksd:TaskConstraint ;
+    rdfs:label "through analytical derivation"@en ;
+    rdfs:comment "Task constraint stating that bottleneck identification may be performed through analytical derivation."@en ;
+    skos:prefLabel "through analytical derivation"@en .
+
+cs2023c:TaskConstraint_Systems8_ExperimentalStudy a ontoksd:TaskConstraint ;
+    rdfs:label "through experimental study"@en ;
+    rdfs:comment "Task constraint stating that bottleneck identification may be performed through experimental study."@en ;
+    skos:prefLabel "through experimental study"@en .
+
+cs2023c:TaskConstraint_Systems8_TargetDeploymentEnvironment a ontoksd:TaskConstraint ;
+    rdfs:label "relative to the target deployment environment"@en ;
+    rdfs:comment "Task constraint stating that system performance and bottlenecks must be interpreted with respect to the target deployment environment."@en ;
+    skos:prefLabel "relative to the target deployment environment"@en .
+
+cs2023c:Task_Systems8 a ontoksd:Task ;
+    rdfs:label "Systems8 task"@en ;
+    dcterms:identifier "Task_Systems8"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems8_Analyze,
+        cs2023c:TaskActivity_Systems8_Apply,
+        cs2023c:TaskActivity_Systems8_Develop,
+        cs2023c:TaskActivity_Systems8_Evaluate,
+        cs2023c:TaskActivity_Systems8_Identify ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems8_DeploymentEnvironment,
+        cs2023c:TaskComponent_Systems8_PerformanceBottleneck,
+        cs2023c:TaskComponent_Systems8_System ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems8_AnalyticalDerivation,
+        cs2023c:TaskConstraint_Systems8_ExperimentalStudy,
+        cs2023c:TaskConstraint_Systems8_TargetDeploymentEnvironment ;
+    ontoksd:hasTaskStatement "Find the performance bottleneck of a given system."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems8 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems8. The task concerns analyzing a system in relation to its target deployment environment in order to identify its principal performance bottleneck, such as memory, CPU, or networking, through analytical derivation or experimental study."@en ;
+    skos:prefLabel "Systems8 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems8 .
+
+cs2023c:Competence_Systems8 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Given a system and its target deployment environment, find its performance bottleneck through analytical derivation or experimental study"@en ;
+    dcterms:identifier "Systems8"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:persistent ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems8_SF_Design_1_Develop,
+        cs2023c:KS_Systems8_SF_Evaluation_1_Evaluate,
+        cs2023c:KS_Systems8_SF_Overview_1_Apply,
+        cs2023c:KS_Systems8_SF_Performance_1_Apply ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems8 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems8. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Given a system and its target deployment environment, find its performance bottleneck (e.g., memory, CPU, networking) through analytical derivation or experimental study."@en ;
+    skos:prefLabel "Given a system and its target deployment environment, find its performance bottleneck through analytical derivation or experimental study"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems8 .
+
+cs2023c:Source_Systems8 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems8, starting on printed page 403."@en ;
+    dcterms:description "Task: Find the performance bottleneck of a given system. Competency statement: Given a system and its target deployment environment, find its performance bottleneck (e.g., memory, CPU, networking) through analytical derivation or experimental study. Required knowledge: SF-Performance, SF-Evaluation, SF-Design, SF-Overview. Required skills: Apply, Evaluate, Develop. Desirable professional dispositions: Meticulous, Persistent."@en ;
+    dcterms:identifier "Systems8" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_SF_Design,
+        cs2023:KU_SF_Evaluation,
+        cs2023:KU_SF_Overview,
+        cs2023:KU_SF_Performance,
+        level:Apply,
+        level:Develop,
+        level:Evaluate .
+}

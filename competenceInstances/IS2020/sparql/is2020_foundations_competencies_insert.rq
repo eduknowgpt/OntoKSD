@@ -1,933 +1,1138 @@
+# IS2020 Appendix 3; source knowledge–level pairs and key dispositions.
+# INSERT-only instance data; see README.md for dependencies and source policies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX is2020c: <http://purl.org/is2020/competency#>
+PREFIX is2020k: <http://purl.org/is2020/knowledge#>
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX is2020:   <http://purl.org/is2020#>
-PREFIX is2020k:  <http://purl.org/is2020/knowledge#>
-PREFIX is2020c:  <http://purl.org/is2020/competency#>
-PREFIX bloom:    <http://purl.org/edu/bloom#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:      <http://www.w3.org/2002/07/owl#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
-PREFIX dcterms:  <http://purl.org/dc/terms/>
-PREFIX xsd:      <http://www.w3.org/2001/XMLSchema#>
-PREFIX prov:     <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 INSERT DATA {
-
-  #################################################################
-  # Source markers and scheme
-  #################################################################
-
-  is2020:IS2020Document
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 report"@en ;
-      rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
-
-  <http://purl.org/ontoksd/source/is2020-foundations-competency-area>
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Foundations of Information Systems competency area"@en ;
-      rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.1.1 Competency Area – Foundations of Information Systems."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020:IS2020SpecificationPattern
-      a owl:NamedIndividual ;
-      rdfs:label "IS2020 Specification Pattern"@en ;
-      rdfs:comment "Specification pattern used for competencies derived from the IS2020 curriculum report and represented in OntoKSD through explicit dispositions and KnowledgeSkill relations."@en .
-
-  is2020k:IS2020FoundationsKnowledgeScheme
-      a skos:ConceptScheme ;
-      rdfs:label "IS2020 Foundations of Information Systems Knowledge Scheme"@en ;
-      skos:prefLabel "IS2020 Foundations Knowledge Scheme"@en ;
-      rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Foundations of Information Systems competency area."@en ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Knowledge elements
-  #################################################################
-
-  is2020k:ComponentsOfISTechnologyDataPeopleProcedures
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Components of IS: technology, data, people, and procedures/processes"@en ;
-      skos:prefLabel "Components of IS: technology, data, people, and procedures/processes"@en ;
-      skos:definition "Knowledge of the main components of information systems, including hardware, software, communication media, data, people, and procedures or processes."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OperationsOfISProcessingCycle
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Operations of IS and the information processing cycle"@en ;
-      skos:prefLabel "Operations of IS and the information processing cycle"@en ;
-      skos:definition "Knowledge of the operations of information systems, including input, processing, storage, output, and control."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:HowISHelpsDealWithInformation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Ways in which IS helps deal with information"@en ;
-      skos:prefLabel "Ways in which IS helps deal with information"@en ;
-      skos:definition "Knowledge of how information systems support the acquisition, processing, organization, and use of information."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:FunctionsOperationsImpactOfISOnOrganizationalChange
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Functions and operations of IS and their impact on organizational change"@en ;
-      skos:prefLabel "Functions and operations of IS and their impact on organizational change"@en ;
-      skos:definition "Knowledge of the functions and operations of information systems and their impact in facilitating organizational change."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CommonTypesOfIS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Common types of information systems"@en ;
-      skos:prefLabel "Common types of information systems"@en ;
-      skos:definition "Knowledge of common types of information systems, such as transaction processing systems and enterprise systems."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DimensionsOfInformationQualityAndEvaluationMethods
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Dimensions of information quality and information evaluation methods"@en ;
-      skos:prefLabel "Dimensions of information quality and information evaluation methods"@en ;
-      skos:definition "Knowledge of dimensions of information quality and methods used to evaluate information."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:VirtualValueChain
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Virtual value chain"@en ;
-      skos:prefLabel "Virtual value chain"@en ;
-      skos:definition "Knowledge of the virtual value chain and its relevance to information value creation."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RolesAndResponsibilitiesOfISProfessional
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Roles and responsibilities of the IS professional"@en ;
-      skos:prefLabel "Roles and responsibilities of the IS professional"@en ;
-      skos:definition "Knowledge of the roles and responsibilities associated with professional practice in information systems."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:CharacteristicsOfISProfessional
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Characteristics of the IS professional"@en ;
-      skos:prefLabel "Characteristics of the IS professional"@en ;
-      skos:definition "Knowledge of the characteristics expected of an information systems professional."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:EthicalStandardsForISProfessional
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Ethical standards for the IS professional"@en ;
-      skos:prefLabel "Ethical standards for the IS professional"@en ;
-      skos:definition "Knowledge of ethical standards relevant to information systems professional practice."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ISAndValueOfInformation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IS and the value of information"@en ;
-      skos:prefLabel "IS and the value of information"@en ;
-      skos:definition "Knowledge of the role of information systems in generating, supporting, and leveraging the value of information."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MethodsForStoringAndOrganizingInformation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Methods for storing and organizing information"@en ;
-      skos:prefLabel "Methods for storing and organizing information"@en ;
-      skos:definition "Knowledge of methods used to store and organize information for business use."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:RoleOfInformationInDecisionMaking
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Role of information in decision making"@en ;
-      skos:prefLabel "Role of information in decision making"@en ;
-      skos:definition "Knowledge of how information supports business decision making."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesOfDecisionsAndDecisionMakingTechniques
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types of decisions and techniques for decision making"@en ;
-      skos:prefLabel "Types of decisions and techniques for decision making"@en ;
-      skos:definition "Knowledge of different types of decisions and the techniques used to support decision making."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:StagesOfDecisionMakingAndISTools
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Stages of decision making and appropriate IS tools"@en ;
-      skos:prefLabel "Stages of decision making and appropriate IS tools"@en ;
-      skos:definition "Knowledge of the stages of decision making and the information system tools appropriate to each stage."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:KeyITIssuesTrendsAndBusinessAlignment
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Key IT issues, trends, and alignment of IT with business"@en ;
-      skos:prefLabel "Key IT issues, trends, and alignment of IT with business"@en ;
-      skos:definition "Knowledge of major information technology issues and trends and of alignment between IT and business strategy."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ISStrategicPlanningProcess
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IS strategic planning process"@en ;
-      skos:prefLabel "IS strategic planning process"@en ;
-      skos:definition "Knowledge of the strategic planning process for information systems."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:InformationAndKnowledgeForBusinessDecisionMakingAndStrategicValue
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Information and knowledge for business decision making and strategic value"@en ;
-      skos:prefLabel "Information and knowledge for business decision making and strategic value"@en ;
-      skos:definition "Knowledge of how information and knowledge contribute to business decision making and strategic value creation."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:DecisionSupportSystems
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Decision support systems"@en ;
-      skos:prefLabel "Decision support systems"@en ;
-      skos:definition "Knowledge of decision support systems and their role in organizational decision processes."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ComponentsOfIS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Components of IS"@en ;
-      skos:prefLabel "Components of IS"@en ;
-      skos:definition "Knowledge of the components that constitute an information system."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ElementsOfIS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Elements of IS"@en ;
-      skos:prefLabel "Elements of IS"@en ;
-      skos:definition "Knowledge of the elements of information systems, including data, hardware, software, communication, and processes."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesAndUtilityOfIS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types and utility of IS"@en ;
-      skos:prefLabel "Types and utility of IS"@en ;
-      skos:definition "Knowledge of types of information systems and their utility in business contexts."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ISSolutionsAndToolsForBusinessContextsAndProcesses
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "IS solutions and tools for different business contexts and processes"@en ;
-      skos:prefLabel "IS solutions and tools for different business contexts and processes"@en ;
-      skos:definition "Knowledge of information system solutions and tools suitable for different business contexts and processes."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BusinessProcessModellingAndOptimization
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Business processes modelling and optimization"@en ;
-      skos:prefLabel "Business processes modelling and optimization"@en ;
-      skos:definition "Knowledge of modelling and optimization of business processes."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ComponentsOfEnterpriseSystem
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Components of an enterprise system"@en ;
-      skos:prefLabel "Components of an enterprise system"@en ;
-      skos:definition "Knowledge of the components that make up an enterprise system."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesAndFunctionsOfEnterpriseSystems
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types and functions of enterprise systems"@en ;
-      skos:prefLabel "Types and functions of enterprise systems"@en ;
-      skos:definition "Knowledge of types and functions of enterprise systems, including ERP and BI."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MethodsForTransmittingInformationUsingNetworks
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Methods for transmitting information using networks"@en ;
-      skos:prefLabel "Methods for transmitting information using networks"@en ;
-      skos:definition "Knowledge of methods for transmitting information using networks, including communication applications, Web 2.0 and Web 3.0 applications, IoT, and crowdsourcing."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:KeyComponentsOfNetworks
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Key components of networks"@en ;
-      skos:prefLabel "Key components of networks"@en ;
-      skos:definition "Knowledge of the key components of computer and communication networks."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesOfInformationSecurityThreats
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types of information security threats"@en ;
-      skos:prefLabel "Types of information security threats"@en ;
-      skos:definition "Knowledge of different types of threats to information security."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SecurityTechnologiesAndSolutions
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Security technologies and solutions"@en ;
-      skos:prefLabel "Security technologies and solutions"@en ;
-      skos:definition "Knowledge of technologies and solutions used to secure information."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TypesOfInformationPrivacyThreats
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Types of information privacy threats"@en ;
-      skos:prefLabel "Types of information privacy threats"@en ;
-      skos:definition "Knowledge of different threats to information privacy."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ConsequencesOfInformationPrivacyViolations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Consequences of information privacy violations"@en ;
-      skos:prefLabel "Consequences of information privacy violations"@en ;
-      skos:definition "Knowledge of the consequences of information privacy violations."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:TechnologiesAndSolutionsForInformationPrivacy
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Technologies and solutions for information privacy"@en ;
-      skos:prefLabel "Technologies and solutions for information privacy"@en ;
-      skos:definition "Knowledge of technologies and solutions for protecting information privacy."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:FairInformationPracticesAndPrivacyPolicies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Fair information practices and privacy policies"@en ;
-      skos:prefLabel "Fair information practices and privacy policies"@en ;
-      skos:definition "Knowledge of fair information practices and organizational privacy policies."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:GovernmentInformationPrivacyRegulations
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Government information privacy regulations"@en ;
-      skos:prefLabel "Government information privacy regulations"@en ;
-      skos:definition "Knowledge of government regulations related to information privacy."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:MethodsAndToolsForUsingInformation
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Methods and tools for using information"@en ;
-      skos:prefLabel "Methods and tools for using information"@en ;
-      skos:definition "Knowledge of methods and tools for using information in IS development and problem solving."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:BuyVersusBuildDecision
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Buy versus build decision"@en ;
-      skos:prefLabel "Buy versus build decision"@en ;
-      skos:definition "Knowledge of the decision between buying and building an information systems solution."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:OutsourcingPossibilitiesAndModelsForIS
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Outsourcing possibilities and models for IS"@en ;
-      skos:prefLabel "Outsourcing possibilities and models for IS"@en ;
-      skos:definition "Knowledge of outsourcing possibilities and models relevant to information systems."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:ComputationalMethods
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Computational methods"@en ;
-      skos:prefLabel "Computational methods"@en ;
-      skos:definition "Knowledge of computational methods used to solve basic computational and design problems."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SoftwareToolsAndComputationalMethods
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Software tools and computational methods"@en ;
-      skos:prefLabel "Software tools and computational methods"@en ;
-      skos:definition "Knowledge of software tools and computational methods used in IS development."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SoftwareDevelopmentMethodologies
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Software development methodologies"@en ;
-      skos:prefLabel "Software development methodologies"@en ;
-      skos:definition "Knowledge of software development methodologies relevant to IS development."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:SystemsDevelopmentLifecycle
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Systems development lifecycle"@en ;
-      skos:prefLabel "Systems development lifecycle"@en ;
-      skos:definition "Knowledge of the systems development lifecycle and its phases."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  is2020k:InnovationAndDesignTechniques
-      a ontoksd:Knowledge , skos:Concept ;
-      rdfs:label "Innovation and design techniques"@en ;
-      skos:prefLabel "Innovation and design techniques"@en ;
-      skos:definition "Knowledge of innovation and design techniques for improving processes and organizational change."@en ;
-      skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
-      dcterms:source is2020:IS2020Document .
-
-  #################################################################
-  # Competencies
-  #################################################################
-
-  is2020c:Competence_ISF_1
-      a ontoksd:Competence ;
-      rdfs:label "Classify the components, elements, operations, and impact of IS"@en ;
-      skos:prefLabel "IS Foundations Competency 1"@en ;
-      skos:definition "Classify the components, elements, operations, and impact of IS."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
-      dcterms:identifier "ISF-1"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ComponentsOfISTechnologyDataPeopleProcedures ,
-          is2020k:OperationsOfISProcessingCycle ,
-          is2020k:HowISHelpsDealWithInformation ,
-          is2020k:FunctionsOperationsImpactOfISOnOrganizationalChange ,
-          is2020k:CommonTypesOfIS ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:inventive , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_1_01 ,
-          is2020c:KS_ISF_1_02 ,
-          is2020c:KS_ISF_1_03 ,
-          is2020c:KS_ISF_1_04 ,
-          is2020c:KS_ISF_1_05 .
-
-  is2020c:Competence_ISF_2
-      a ontoksd:Competence ;
-      rdfs:label "Interpret the dimensions, characteristics, and value of quality information"@en ;
-      skos:prefLabel "IS Foundations Competency 2"@en ;
-      skos:definition "Interpret the dimensions, characteristics, and value of quality information."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
-      dcterms:identifier "ISF-2"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:DimensionsOfInformationQualityAndEvaluationMethods ,
-          is2020k:VirtualValueChain ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:responsive ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_2_01 ,
-          is2020c:KS_ISF_2_02 .
-
-  is2020c:Competence_ISF_3
-      a ontoksd:Competence ;
-      rdfs:label "Explain the roles, responsibilities, and characteristics of the IS professional"@en ;
-      skos:prefLabel "IS Foundations Competency 3"@en ;
-      skos:definition "Explain the roles, responsibilities, and characteristics of the IS professional."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
-      dcterms:identifier "ISF-3"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:RolesAndResponsibilitiesOfISProfessional ,
-          is2020k:CharacteristicsOfISProfessional ,
-          is2020k:EthicalStandardsForISProfessional ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:inventive , ontoksd:purposeDriven ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_3_01 ,
-          is2020c:KS_ISF_3_02 ,
-          is2020c:KS_ISF_3_03 .
-
-  is2020c:Competence_ISF_4
-      a ontoksd:Competence ;
-      rdfs:label "Recommend techniques for using information and knowledge for business decision making and strategic value"@en ;
-      skos:prefLabel "IS Foundations Competency 4"@en ;
-      skos:definition "Recommend techniques for using information and knowledge for business decision making and strategic value."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
-      dcterms:identifier "ISF-4"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ISAndValueOfInformation ,
-          is2020k:MethodsForStoringAndOrganizingInformation ,
-          is2020k:RoleOfInformationInDecisionMaking ,
-          is2020k:TypesOfDecisionsAndDecisionMakingTechniques ,
-          is2020k:StagesOfDecisionMakingAndISTools ,
-          is2020k:KeyITIssuesTrendsAndBusinessAlignment ,
-          is2020k:ISStrategicPlanningProcess ,
-          is2020k:InformationAndKnowledgeForBusinessDecisionMakingAndStrategicValue ,
-          is2020k:DecisionSupportSystems ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:professional ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_4_01 ,
-          is2020c:KS_ISF_4_02 ,
-          is2020c:KS_ISF_4_03 ,
-          is2020c:KS_ISF_4_04 ,
-          is2020c:KS_ISF_4_05 ,
-          is2020c:KS_ISF_4_06 ,
-          is2020c:KS_ISF_4_07 ,
-          is2020c:KS_ISF_4_08 ,
-          is2020c:KS_ISF_4_09 .
-
-  is2020c:Competence_ISF_5
-      a ontoksd:Competence ;
-      rdfs:label "Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS"@en ;
-      skos:prefLabel "IS Foundations Competency 5"@en ;
-      skos:definition "Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
-      dcterms:identifier "ISF-5"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:ComponentsOfIS ,
-          is2020k:OperationsOfISProcessingCycle ,
-          is2020k:ElementsOfIS ,
-          is2020k:TypesAndUtilityOfIS ,
-          is2020k:ISSolutionsAndToolsForBusinessContextsAndProcesses ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:professional ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_5_01 ,
-          is2020c:KS_ISF_5_02 ,
-          is2020c:KS_ISF_5_03 ,
-          is2020c:KS_ISF_5_04 ,
-          is2020c:KS_ISF_5_05 .
-
-  is2020c:Competence_ISF_6
-      a ontoksd:Competence ;
-      rdfs:label "Critique and recommend Enterprise Systems for a given business problem and processes"@en ;
-      skos:prefLabel "IS Foundations Competency 6"@en ;
-      skos:definition "Critique and recommend Enterprise Systems for a given business problem and processes."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
-      dcterms:identifier "ISF-6"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:BusinessProcessModellingAndOptimization ,
-          is2020k:ComponentsOfEnterpriseSystem ,
-          is2020k:TypesAndFunctionsOfEnterpriseSystems ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:professional , ontoksd:selfDirected ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_6_01 ,
-          is2020c:KS_ISF_6_02 ,
-          is2020c:KS_ISF_6_03 .
-
-  is2020c:Competence_ISF_7
-      a ontoksd:Competence ;
-      rdfs:label "Identify techniques for transmitting and securing information in an organization"@en ;
-      skos:prefLabel "IS Foundations Competency 7"@en ;
-      skos:definition "Identify techniques for transmitting and securing information in an organization."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems. The repeated source entry for methods for transmitting information using networks was normalized as a single knowledge element and a single KnowledgeSkill relation in this insertion."@en ;
-      dcterms:identifier "ISF-7"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:MethodsForTransmittingInformationUsingNetworks ,
-          is2020k:KeyComponentsOfNetworks ,
-          is2020k:TypesOfInformationSecurityThreats ,
-          is2020k:SecurityTechnologiesAndSolutions ,
-          is2020k:TypesOfInformationPrivacyThreats ,
-          is2020k:ConsequencesOfInformationPrivacyViolations ,
-          is2020k:TechnologiesAndSolutionsForInformationPrivacy ,
-          is2020k:FairInformationPracticesAndPrivacyPolicies ,
-          is2020k:GovernmentInformationPrivacyRegulations ;
-      ontoksd:hasDisposition ontoksd:purposeDriven , ontoksd:selfDirected , ontoksd:professional ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_7_01 ,
-          is2020c:KS_ISF_7_02 ,
-          is2020c:KS_ISF_7_03 ,
-          is2020c:KS_ISF_7_04 ,
-          is2020c:KS_ISF_7_05 ,
-          is2020c:KS_ISF_7_06 ,
-          is2020c:KS_ISF_7_07 ,
-          is2020c:KS_ISF_7_08 ,
-          is2020c:KS_ISF_7_09 .
-
-  is2020c:Competence_ISF_8
-      a ontoksd:Competence ;
-      rdfs:label "Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change"@en ;
-      skos:prefLabel "IS Foundations Competency 8"@en ;
-      skos:definition "Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change."@en ;
-      rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
-      dcterms:identifier "ISF-8"^^xsd:string ;
-      dcterms:source is2020:IS2020Document ;
-      dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
-      prov:wasDerivedFrom is2020:IS2020Document ;
-      ontoksd:hasStructureType ontoksd:Atomic ;
-      ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
-      ontoksd:hasKnowledge
-          is2020k:MethodsAndToolsForUsingInformation ,
-          is2020k:BuyVersusBuildDecision ,
-          is2020k:OutsourcingPossibilitiesAndModelsForIS ,
-          is2020k:ComputationalMethods ,
-          is2020k:SoftwareToolsAndComputationalMethods ,
-          is2020k:SoftwareDevelopmentMethodologies ,
-          is2020k:SystemsDevelopmentLifecycle ,
-          is2020k:InnovationAndDesignTechniques ;
-      ontoksd:hasDisposition ontoksd:selfDirected , ontoksd:purposeDriven , ontoksd:professional ;
-      ontoksd:hasKnowledgeSkill
-          is2020c:KS_ISF_8_01 ,
-          is2020c:KS_ISF_8_02 ,
-          is2020c:KS_ISF_8_03 ,
-          is2020c:KS_ISF_8_04 ,
-          is2020c:KS_ISF_8_05 ,
-          is2020c:KS_ISF_8_06 ,
-          is2020c:KS_ISF_8_07 ,
-          is2020c:KS_ISF_8_08 .
-
-  #################################################################
-  # KnowledgeSkill relators
-  #################################################################
-
-  is2020c:KS_ISF_1_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Components of IS × Understanding"@en ;
-      skos:prefLabel "Components of IS × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 1 linking components of IS to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ComponentsOfISTechnologyDataPeopleProcedures ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 .
-
-  is2020c:KS_ISF_1_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Operations of IS × Applying"@en ;
-      skos:prefLabel "Operations of IS × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 1 linking operations of IS to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:OperationsOfISProcessingCycle ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 .
-
-  is2020c:KS_ISF_1_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Ways in which IS helps deal with information × Applying"@en ;
-      skos:prefLabel "Ways in which IS helps deal with information × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 1 linking the ways in which IS helps deal with information to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:HowISHelpsDealWithInformation ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 .
-
-  is2020c:KS_ISF_1_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Functions and operations of IS and their impact on organizational change × Applying"@en ;
-      skos:prefLabel "Functions and operations of IS and their impact on organizational change × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 1 linking functions and operations of IS and their impact on organizational change to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:FunctionsOperationsImpactOfISOnOrganizationalChange ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 .
-
-  is2020c:KS_ISF_1_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Common types of IS × Understanding"@en ;
-      skos:prefLabel "Common types of IS × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 1 linking common types of IS to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:CommonTypesOfIS ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 .
-
-  is2020c:KS_ISF_2_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Dimensions of information quality and information evaluation methods × Applying"@en ;
-      skos:prefLabel "Dimensions of information quality and information evaluation methods × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 2 linking information quality dimensions and evaluation methods to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DimensionsOfInformationQualityAndEvaluationMethods ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_2 .
-
-  is2020c:KS_ISF_2_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Virtual value chain × Understanding"@en ;
-      skos:prefLabel "Virtual value chain × Understanding"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 2 linking the virtual value chain to the required Bloom level Understanding."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:VirtualValueChain ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_2 .
-
-  is2020c:KS_ISF_3_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Roles and responsibilities of the IS professional × Applying"@en ;
-      skos:prefLabel "Roles and responsibilities of the IS professional × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 3 linking roles and responsibilities of the IS professional to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:RolesAndResponsibilitiesOfISProfessional ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_3 .
-
-  is2020c:KS_ISF_3_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Characteristics of the IS professional × Applying"@en ;
-      skos:prefLabel "Characteristics of the IS professional × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 3 linking characteristics of the IS professional to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:CharacteristicsOfISProfessional ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_3 .
-
-  is2020c:KS_ISF_3_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Ethical standards for the IS professional × Applying"@en ;
-      skos:prefLabel "Ethical standards for the IS professional × Applying"@en ;
-      rdfs:comment "KnowledgeSkill relation for IS Foundations Competency 3 linking ethical standards for the IS professional to the required Bloom level Applying."@en ;
-      ontoksd:hasKnowledgeComponent is2020k:EthicalStandardsForISProfessional ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_3 .
-
-  is2020c:KS_ISF_4_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "IS and the value of information × Understanding"@en ;
-      skos:prefLabel "IS and the value of information × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ISAndValueOfInformation ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Methods for storing and organizing information × Applying"@en ;
-      skos:prefLabel "Methods for storing and organizing information × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:MethodsForStoringAndOrganizingInformation ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Role of information in decision making × Understanding"@en ;
-      skos:prefLabel "Role of information in decision making × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:RoleOfInformationInDecisionMaking ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Types of decisions and techniques for decision making × Applying"@en ;
-      skos:prefLabel "Types of decisions and techniques for decision making × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TypesOfDecisionsAndDecisionMakingTechniques ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Stages of decision making and appropriate IS tools × Applying"@en ;
-      skos:prefLabel "Stages of decision making and appropriate IS tools × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:StagesOfDecisionMakingAndISTools ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_06 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Key IT issues, trends, and alignment of IT with business × Understanding"@en ;
-      skos:prefLabel "Key IT issues, trends, and alignment of IT with business × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:KeyITIssuesTrendsAndBusinessAlignment ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_07 a ontoksd:KnowledgeSkill ;
-      rdfs:label "IS strategic planning process × Understanding"@en ;
-      skos:prefLabel "IS strategic planning process × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ISStrategicPlanningProcess ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_08 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Information and knowledge for business decision making and strategic value × Understanding"@en ;
-      skos:prefLabel "Information and knowledge for business decision making and strategic value × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:InformationAndKnowledgeForBusinessDecisionMakingAndStrategicValue ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_4_09 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Decision support systems × Understanding"@en ;
-      skos:prefLabel "Decision support systems × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:DecisionSupportSystems ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 .
-
-  is2020c:KS_ISF_5_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Components of IS × Applying"@en ;
-      skos:prefLabel "Components of IS × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ComponentsOfIS ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 .
-
-  is2020c:KS_ISF_5_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Operations of IS or information processing cycle × Applying"@en ;
-      skos:prefLabel "Operations of IS or information processing cycle × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:OperationsOfISProcessingCycle ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 .
-
-  is2020c:KS_ISF_5_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Elements of IS × Applying"@en ;
-      skos:prefLabel "Elements of IS × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ElementsOfIS ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 .
-
-  is2020c:KS_ISF_5_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Types and utility of IS × Applying"@en ;
-      skos:prefLabel "Types and utility of IS × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TypesAndUtilityOfIS ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 .
-
-  is2020c:KS_ISF_5_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "IS solutions and tools for different business contexts and processes × Applying"@en ;
-      skos:prefLabel "IS solutions and tools for different business contexts and processes × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ISSolutionsAndToolsForBusinessContextsAndProcesses ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 .
-
-  is2020c:KS_ISF_6_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Business processes modelling and optimization × Applying"@en ;
-      skos:prefLabel "Business processes modelling and optimization × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BusinessProcessModellingAndOptimization ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_6 .
-
-  is2020c:KS_ISF_6_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Components of an enterprise system × Applying"@en ;
-      skos:prefLabel "Components of an enterprise system × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ComponentsOfEnterpriseSystem ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_6 .
-
-  is2020c:KS_ISF_6_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Types and functions of enterprise systems × Applying"@en ;
-      skos:prefLabel "Types and functions of enterprise systems × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TypesAndFunctionsOfEnterpriseSystems ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_6 .
-
-  is2020c:KS_ISF_7_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Methods for transmitting information using networks × Understanding"@en ;
-      skos:prefLabel "Methods for transmitting information using networks × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:MethodsForTransmittingInformationUsingNetworks ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Key components of networks × Understanding"@en ;
-      skos:prefLabel "Key components of networks × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:KeyComponentsOfNetworks ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Types of information security threats × Understanding"@en ;
-      skos:prefLabel "Types of information security threats × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TypesOfInformationSecurityThreats ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Security technologies and solutions × Understanding"@en ;
-      skos:prefLabel "Security technologies and solutions × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SecurityTechnologiesAndSolutions ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Types of information privacy threats × Understanding"@en ;
-      skos:prefLabel "Types of information privacy threats × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TypesOfInformationPrivacyThreats ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_06 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Consequences of information privacy violations × Understanding"@en ;
-      skos:prefLabel "Consequences of information privacy violations × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ConsequencesOfInformationPrivacyViolations ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_07 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Technologies and solutions for information privacy × Understanding"@en ;
-      skos:prefLabel "Technologies and solutions for information privacy × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:TechnologiesAndSolutionsForInformationPrivacy ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_08 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Fair information practices and privacy policies × Understanding"@en ;
-      skos:prefLabel "Fair information practices and privacy policies × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:FairInformationPracticesAndPrivacyPolicies ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_7_09 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Government information privacy regulations × Understanding"@en ;
-      skos:prefLabel "Government information privacy regulations × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:GovernmentInformationPrivacyRegulations ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 .
-
-  is2020c:KS_ISF_8_01 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Methods and tools for using information × Applying"@en ;
-      skos:prefLabel "Methods and tools for using information × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:MethodsAndToolsForUsingInformation ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_02 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Buy versus build decision × Understanding"@en ;
-      skos:prefLabel "Buy versus build decision × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:BuyVersusBuildDecision ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_03 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Outsourcing possibilities and models for IS × Understanding"@en ;
-      skos:prefLabel "Outsourcing possibilities and models for IS × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:OutsourcingPossibilitiesAndModelsForIS ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_04 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Computational methods × Understanding"@en ;
-      skos:prefLabel "Computational methods × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:ComputationalMethods ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_05 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Software tools and computational methods × Applying"@en ;
-      skos:prefLabel "Software tools and computational methods × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SoftwareToolsAndComputationalMethods ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_06 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Software development methodologies × Understanding"@en ;
-      skos:prefLabel "Software development methodologies × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SoftwareDevelopmentMethodologies ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_07 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Systems development lifecycle × Understanding"@en ;
-      skos:prefLabel "Systems development lifecycle × Understanding"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:SystemsDevelopmentLifecycle ;
-      ontoksd:hasRequiredSkillLevel bloom:Understanding ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
-  is2020c:KS_ISF_8_08 a ontoksd:KnowledgeSkill ;
-      rdfs:label "Innovation and design techniques × Applying"@en ;
-      skos:prefLabel "Innovation and design techniques × Applying"@en ;
-      ontoksd:hasKnowledgeComponent is2020k:InnovationAndDesignTechniques ;
-      ontoksd:hasRequiredSkillLevel bloom:Applying ;
-      ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 .
-
+is2020c:KS_ISF_1_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Components of IS × Understanding"@en ;
+    dcterms:description "Source knowledge element: Components of IS - technology (hardware, software, communication media), data, people, and procedures/processes.; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ComponentsOfISTechnologyDataPeopleProcedures ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Components of IS × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_1 .
+
+is2020c:KS_ISF_1_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Operations of IS × Applying"@en ;
+    dcterms:description "Source knowledge element: Operations of IS (the processing cycle of input, processing, storage, output, control); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OperationsOfISProcessingCycle ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Operations of IS × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_1 .
+
+is2020c:KS_ISF_1_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Ways in which IS helps deal with information × Applying"@en ;
+    dcterms:description "Source knowledge element: The ways in which IS helps us deal with information; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:HowISHelpsDealWithInformation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Ways in which IS helps deal with information × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_1 .
+
+is2020c:KS_ISF_1_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Functions and operations of IS and their impact on organizational change × Applying"@en ;
+    dcterms:description "Source knowledge element: Functions (and operations) of IS and their impact on facilitating organizational change; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FunctionsOperationsImpactOfISOnOrganizationalChange ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Functions and operations of IS and their impact on organizational change × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_1 .
+
+is2020c:KS_ISF_1_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Common types of IS × Understanding"@en ;
+    dcterms:description "Source knowledge element: Common types of IS (e.g., Transaction Processing Systems, Enterprise Systems); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CommonTypesOfIS ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_1 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Common types of IS × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_1 .
+
+is2020c:KS_ISF_2_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Dimensions of information quality and information evaluation methods × Applying"@en ;
+    dcterms:description "Source knowledge element: Dimensions of information quality and information evaluation methods; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DimensionsOfInformationQualityAndEvaluationMethods ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Dimensions of information quality and information evaluation methods × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_2 .
+
+is2020c:KS_ISF_2_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Virtual value chain × Understanding"@en ;
+    dcterms:description "Source knowledge element: The virtual value chain; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:VirtualValueChain ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_2 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Virtual value chain × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_2 .
+
+is2020c:KS_ISF_3_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Roles and responsibilities of the IS professional × Applying"@en ;
+    dcterms:description "Source knowledge element: Roles and responsibilities of the IS professional; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RolesAndResponsibilitiesOfISProfessional ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Roles and responsibilities of the IS professional × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_3 .
+
+is2020c:KS_ISF_3_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Characteristics of the IS professional × Applying"@en ;
+    dcterms:description "Source knowledge element: Characteristics of the IS professional; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:CharacteristicsOfISProfessional ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Characteristics of the IS professional × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_3 .
+
+is2020c:KS_ISF_3_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Ethical standards for the IS professional × Applying"@en ;
+    dcterms:description "Source knowledge element: Ethical standards for the IS professional; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:EthicalStandardsForISProfessional ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_3 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Ethical standards for the IS professional × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_3 .
+
+is2020c:KS_ISF_4_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IS and the value of information × Understanding"@en ;
+    dcterms:description "Source knowledge element: IS and the value of information; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ISAndValueOfInformation ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IS and the value of information × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Methods for storing and organizing information × Applying"@en ;
+    dcterms:description "Source knowledge element: Methods for storing and organizing information; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MethodsForStoringAndOrganizingInformation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Methods for storing and organizing information × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Role of information in decision making × Understanding"@en ;
+    dcterms:description "Source knowledge element: Role of information in decision making; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:RoleOfInformationInDecisionMaking ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Role of information in decision making × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types of decisions and techniques for decision making × Applying"@en ;
+    dcterms:description "Source knowledge element: Types of decisions and techniques for decision making; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesOfDecisionsAndDecisionMakingTechniques ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types of decisions and techniques for decision making × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Stages of decision making and appropriate IS tools × Applying"@en ;
+    dcterms:description "Source knowledge element: Stages of decision making and appropriate information system tools; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:StagesOfDecisionMakingAndISTools ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Stages of decision making and appropriate IS tools × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Key IT issues, trends, and alignment of IT with business × Understanding"@en ;
+    dcterms:description "Source knowledge element: Key IT issues, trends, and alignment of IT with business; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:KeyITIssuesTrendsAndBusinessAlignment ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Key IT issues, trends, and alignment of IT with business × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IS strategic planning process × Understanding"@en ;
+    dcterms:description "Source knowledge element: IS strategic planning process; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ISStrategicPlanningProcess ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IS strategic planning process × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Information and knowledge for business decision making and strategic value × Understanding"@en ;
+    dcterms:description "Source knowledge element: Information and knowledge for business decision making and strategic value; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InformationAndKnowledgeForBusinessDecisionMakingAndStrategicValue ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Information and knowledge for business decision making and strategic value × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_4_09 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Decision support systems × Understanding"@en ;
+    dcterms:description "Source knowledge element: Decision support systems; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:DecisionSupportSystems ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_4 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Decision support systems × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_4 .
+
+is2020c:KS_ISF_5_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Components of IS × Applying"@en ;
+    dcterms:description "Source knowledge element: Components of IS; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ComponentsOfIS ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Components of IS × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_5 .
+
+is2020c:KS_ISF_5_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Operations of IS or information processing cycle × Applying"@en ;
+    dcterms:description "Source knowledge element: Operations of an IS or information processing cycle (input, processing, storage, output, control); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OperationsOfISProcessingCycle ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Operations of IS or information processing cycle × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_5 .
+
+is2020c:KS_ISF_5_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Elements of IS × Applying"@en ;
+    dcterms:description "Source knowledge element: Elements of IS (data, hardware, software, communication, and processes); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ElementsOfIS ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Elements of IS × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_5 .
+
+is2020c:KS_ISF_5_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types and utility of IS × Applying"@en ;
+    dcterms:description "Source knowledge element: Types and utility of IS; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesAndUtilityOfIS ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types and utility of IS × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_5 .
+
+is2020c:KS_ISF_5_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "IS solutions and tools for different business contexts and processes × Applying"@en ;
+    dcterms:description "Source knowledge element: IS solutions and tools for different business contexts and processes; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ISSolutionsAndToolsForBusinessContextsAndProcesses ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_5 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "IS solutions and tools for different business contexts and processes × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_5 .
+
+is2020c:KS_ISF_6_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Business processes modelling and optimization × Applying"@en ;
+    dcterms:description "Source knowledge element: Business processes modelling and optimization; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BusinessProcessModellingAndOptimization ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Business processes modelling and optimization × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_6 .
+
+is2020c:KS_ISF_6_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Components of an enterprise system × Applying"@en ;
+    dcterms:description "Source knowledge element: Components of an enterprise system; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ComponentsOfEnterpriseSystem ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Components of an enterprise system × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_6 .
+
+is2020c:KS_ISF_6_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types and functions of enterprise systems × Applying"@en ;
+    dcterms:description "Source knowledge element: Types and functions of Enterprise systems (including ERP and BI); source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesAndFunctionsOfEnterpriseSystems ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_6 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types and functions of enterprise systems × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_6 .
+
+is2020c:KS_ISF_7_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Methods for transmitting information using networks × Understanding"@en ;
+    dcterms:description "Source knowledge element: Methods for transmitting information using networks (including communication, Web 2.0 and Web 3.0 applications, IoT, crowdsourcing); source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MethodsForTransmittingInformationUsingNetworks ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Methods for transmitting information using networks × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Key components of networks × Understanding"@en ;
+    dcterms:description "Source knowledge element: Key components of networks; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:KeyComponentsOfNetworks ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Key components of networks × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types of information security threats × Understanding"@en ;
+    dcterms:description "Source knowledge element: Types of information security threats; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesOfInformationSecurityThreats ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types of information security threats × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Security technologies and solutions × Understanding"@en ;
+    dcterms:description "Source knowledge element: Security technologies and solutions; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SecurityTechnologiesAndSolutions ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Security technologies and solutions × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Types of information privacy threats × Understanding"@en ;
+    dcterms:description "Source knowledge element: Types of information privacy threats; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TypesOfInformationPrivacyThreats ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Types of information privacy threats × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Consequences of information privacy violations × Understanding"@en ;
+    dcterms:description "Source knowledge element: Consequences of information privacy violations; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ConsequencesOfInformationPrivacyViolations ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Consequences of information privacy violations × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Technologies and solutions for information privacy × Understanding"@en ;
+    dcterms:description "Source knowledge element: Technologies and solutions for information privacy; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:TechnologiesAndSolutionsForInformationPrivacy ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Technologies and solutions for information privacy × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Fair information practices and privacy policies × Understanding"@en ;
+    dcterms:description "Source knowledge element: Fair information practices and privacy policies; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:FairInformationPracticesAndPrivacyPolicies ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Fair information practices and privacy policies × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_7_09 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Government information privacy regulations × Understanding"@en ;
+    dcterms:description "Source knowledge element: Government information privacy regulations; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:GovernmentInformationPrivacyRegulations ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_7 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Government information privacy regulations × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_7 .
+
+is2020c:KS_ISF_8_01 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Methods and tools for using information × Applying"@en ;
+    dcterms:description "Source knowledge element: Methods and tools for using information; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:MethodsAndToolsForUsingInformation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Methods and tools for using information × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_02 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Buy versus build decision × Understanding"@en ;
+    dcterms:description "Source knowledge element: Buy versus build decision; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:BuyVersusBuildDecision ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Buy versus build decision × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_03 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Outsourcing possibilities and models for IS × Understanding"@en ;
+    dcterms:description "Source knowledge element: Outsourcing possibilities and models for IS; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:OutsourcingPossibilitiesAndModelsForIS ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Outsourcing possibilities and models for IS × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_04 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Computational methods × Understanding"@en ;
+    dcterms:description "Source knowledge element: Computational methods; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:ComputationalMethods ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Computational methods × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_05 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Software tools and computational methods × Applying"@en ;
+    dcterms:description "Source knowledge element: Software tools and computational methods; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SoftwareToolsAndComputationalMethods ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Software tools and computational methods × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_06 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Software development methodologies × Understanding"@en ;
+    dcterms:description "Source knowledge element: Software development methodologies; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SoftwareDevelopmentMethodologies ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Software development methodologies × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_07 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Systems development lifecycle × Understanding"@en ;
+    dcterms:description "Source knowledge element: Systems development lifecycle; source skill-level cell: 2 – Understand."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:SystemsDevelopmentLifecycle ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Systems development lifecycle × Understanding"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:KS_ISF_8_08 a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "Innovation and design techniques × Applying"@en ;
+    dcterms:description "Source knowledge element: Innovation and design techniques; source skill-level cell: 3 – Apply."@en ;
+    ontoksd:hasKnowledgeComponent is2020k:InnovationAndDesignTechniques ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf is2020c:Competence_ISF_8 ;
+    rdfs:comment "Source knowledge–level pairing from the IS2020 competency table. Knowledge labels and definitions are curated descriptions; the exact source row is recorded separately."@en ;
+    skos:prefLabel "Innovation and design techniques × Applying"@en ;
+    prov:wasDerivedFrom is2020c:Source_ISF_8 .
+
+is2020c:Competence_ISF_2 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Interpret the dimensions, characteristics, and value of quality information"@en ;
+    dcterms:identifier "ISF-2"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:purposeDriven,
+        ontoksd:responsive,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DimensionsOfInformationQualityAndEvaluationMethods,
+        is2020k:VirtualValueChain ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_2_01,
+        is2020c:KS_ISF_2_02 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
+    skos:definition "Interpret the dimensions, characteristics, and value of quality information"@en ;
+    skos:prefLabel "IS Foundations Competency 2"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_2 .
+
+is2020k:BusinessProcessModellingAndOptimization a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Business processes modelling and optimization"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of modelling and optimization of business processes."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Business processes modelling and optimization"@en .
+
+is2020k:BuyVersusBuildDecision a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Buy versus build decision"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the decision between buying and building an information systems solution."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Buy versus build decision"@en .
+
+is2020k:CharacteristicsOfISProfessional a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Characteristics of the IS professional"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the characteristics expected of an information systems professional."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Characteristics of the IS professional"@en .
+
+is2020k:CommonTypesOfIS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Common types of information systems"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of common types of information systems, such as transaction processing systems and enterprise systems."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Common types of information systems"@en .
+
+is2020k:ComponentsOfEnterpriseSystem a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Components of an enterprise system"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the components that make up an enterprise system."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Components of an enterprise system"@en .
+
+is2020k:ComponentsOfIS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Components of IS"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the components that constitute an information system."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Components of IS"@en .
+
+is2020k:ComponentsOfISTechnologyDataPeopleProcedures a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Components of IS: technology, data, people, and procedures/processes"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the main components of information systems, including hardware, software, communication media, data, people, and procedures or processes."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Components of IS: technology, data, people, and procedures/processes"@en .
+
+is2020k:ComputationalMethods a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Computational methods"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of computational methods used to solve basic computational and design problems."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Computational methods"@en .
+
+is2020k:ConsequencesOfInformationPrivacyViolations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Consequences of information privacy violations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the consequences of information privacy violations."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Consequences of information privacy violations"@en .
+
+is2020k:DecisionSupportSystems a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Decision support systems"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of decision support systems and their role in organizational decision processes."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Decision support systems"@en .
+
+is2020k:DimensionsOfInformationQualityAndEvaluationMethods a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Dimensions of information quality and information evaluation methods"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of dimensions of information quality and methods used to evaluate information."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Dimensions of information quality and information evaluation methods"@en .
+
+is2020k:ElementsOfIS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Elements of IS"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the elements of information systems, including data, hardware, software, communication, and processes."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Elements of IS"@en .
+
+is2020k:EthicalStandardsForISProfessional a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Ethical standards for the IS professional"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of ethical standards relevant to information systems professional practice."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Ethical standards for the IS professional"@en .
+
+is2020k:FairInformationPracticesAndPrivacyPolicies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Fair information practices and privacy policies"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of fair information practices and organizational privacy policies."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Fair information practices and privacy policies"@en .
+
+is2020k:FunctionsOperationsImpactOfISOnOrganizationalChange a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Functions and operations of IS and their impact on organizational change"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the functions and operations of information systems and their impact in facilitating organizational change."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Functions and operations of IS and their impact on organizational change"@en .
+
+is2020k:GovernmentInformationPrivacyRegulations a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Government information privacy regulations"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of government regulations related to information privacy."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Government information privacy regulations"@en .
+
+is2020k:HowISHelpsDealWithInformation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Ways in which IS helps deal with information"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of how information systems support the acquisition, processing, organization, and use of information."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Ways in which IS helps deal with information"@en .
+
+is2020k:ISAndValueOfInformation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IS and the value of information"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the role of information systems in generating, supporting, and leveraging the value of information."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "IS and the value of information"@en .
+
+is2020k:ISSolutionsAndToolsForBusinessContextsAndProcesses a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IS solutions and tools for different business contexts and processes"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of information system solutions and tools suitable for different business contexts and processes."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "IS solutions and tools for different business contexts and processes"@en .
+
+is2020k:ISStrategicPlanningProcess a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "IS strategic planning process"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the strategic planning process for information systems."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "IS strategic planning process"@en .
+
+is2020k:InformationAndKnowledgeForBusinessDecisionMakingAndStrategicValue a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Information and knowledge for business decision making and strategic value"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of how information and knowledge contribute to business decision making and strategic value creation."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Information and knowledge for business decision making and strategic value"@en .
+
+is2020k:InnovationAndDesignTechniques a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Innovation and design techniques"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of innovation and design techniques for improving processes and organizational change."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Innovation and design techniques"@en .
+
+is2020k:KeyComponentsOfNetworks a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Key components of networks"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the key components of computer and communication networks."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Key components of networks"@en .
+
+is2020k:KeyITIssuesTrendsAndBusinessAlignment a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Key IT issues, trends, and alignment of IT with business"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of major information technology issues and trends and of alignment between IT and business strategy."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Key IT issues, trends, and alignment of IT with business"@en .
+
+is2020k:MethodsAndToolsForUsingInformation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Methods and tools for using information"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods and tools for using information in IS development and problem solving."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Methods and tools for using information"@en .
+
+is2020k:MethodsForStoringAndOrganizingInformation a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Methods for storing and organizing information"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods used to store and organize information for business use."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Methods for storing and organizing information"@en .
+
+is2020k:MethodsForTransmittingInformationUsingNetworks a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Methods for transmitting information using networks"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of methods for transmitting information using networks, including communication applications, Web 2.0 and Web 3.0 applications, IoT, and crowdsourcing."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Methods for transmitting information using networks"@en .
+
+is2020k:OutsourcingPossibilitiesAndModelsForIS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Outsourcing possibilities and models for IS"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of outsourcing possibilities and models relevant to information systems."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Outsourcing possibilities and models for IS"@en .
+
+is2020k:RoleOfInformationInDecisionMaking a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Role of information in decision making"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of how information supports business decision making."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Role of information in decision making"@en .
+
+is2020k:RolesAndResponsibilitiesOfISProfessional a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Roles and responsibilities of the IS professional"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the roles and responsibilities associated with professional practice in information systems."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Roles and responsibilities of the IS professional"@en .
+
+is2020k:SecurityTechnologiesAndSolutions a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Security technologies and solutions"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of technologies and solutions used to secure information."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Security technologies and solutions"@en .
+
+is2020k:SoftwareDevelopmentMethodologies a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Software development methodologies"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of software development methodologies relevant to IS development."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Software development methodologies"@en .
+
+is2020k:SoftwareToolsAndComputationalMethods a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Software tools and computational methods"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of software tools and computational methods used in IS development."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Software tools and computational methods"@en .
+
+is2020k:StagesOfDecisionMakingAndISTools a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Stages of decision making and appropriate IS tools"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the stages of decision making and the information system tools appropriate to each stage."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Stages of decision making and appropriate IS tools"@en .
+
+is2020k:SystemsDevelopmentLifecycle a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Systems development lifecycle"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the systems development lifecycle and its phases."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Systems development lifecycle"@en .
+
+is2020k:TechnologiesAndSolutionsForInformationPrivacy a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Technologies and solutions for information privacy"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of technologies and solutions for protecting information privacy."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Technologies and solutions for information privacy"@en .
+
+is2020k:TypesAndFunctionsOfEnterpriseSystems a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types and functions of enterprise systems"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of types and functions of enterprise systems, including ERP and BI."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Types and functions of enterprise systems"@en .
+
+is2020k:TypesAndUtilityOfIS a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types and utility of IS"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of types of information systems and their utility in business contexts."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Types and utility of IS"@en .
+
+is2020k:TypesOfDecisionsAndDecisionMakingTechniques a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types of decisions and techniques for decision making"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different types of decisions and the techniques used to support decision making."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Types of decisions and techniques for decision making"@en .
+
+is2020k:TypesOfInformationPrivacyThreats a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types of information privacy threats"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different threats to information privacy."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Types of information privacy threats"@en .
+
+is2020k:TypesOfInformationSecurityThreats a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Types of information security threats"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of different types of threats to information security."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Types of information security threats"@en .
+
+is2020k:VirtualValueChain a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Virtual value chain"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the virtual value chain and its relevance to information value creation."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Virtual value chain"@en .
+
+is2020c:Competence_ISF_3 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Explain the roles, responsibilities, and characteristics of the IS professional"@en ;
+    dcterms:identifier "ISF-3"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:CharacteristicsOfISProfessional,
+        is2020k:EthicalStandardsForISProfessional,
+        is2020k:RolesAndResponsibilitiesOfISProfessional ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_3_01,
+        is2020c:KS_ISF_3_02,
+        is2020c:KS_ISF_3_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
+    skos:definition "Explain the roles, responsibilities, and characteristics of the IS professional"@en ;
+    skos:prefLabel "IS Foundations Competency 3"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_3 .
+
+is2020c:Competence_ISF_6 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Critique and recommend Enterprise Systems for a given business problem and processes"@en ;
+    dcterms:identifier "ISF-6"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BusinessProcessModellingAndOptimization,
+        is2020k:ComponentsOfEnterpriseSystem,
+        is2020k:TypesAndFunctionsOfEnterpriseSystems ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_6_01,
+        is2020c:KS_ISF_6_02,
+        is2020c:KS_ISF_6_03 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
+    skos:definition "Critique and recommend Enterprise Systems for a given business problem and processes"@en ;
+    skos:prefLabel "IS Foundations Competency 6"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_6 .
+
+is2020c:Source_ISF_2 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 98 (PDF page 99)."@en ;
+    dcterms:description "Competency: Interpret the dimensions, characteristics, and value of quality information Key dispositions: Purpose-driven, Self-Directed, Responsive"@en ;
+    dcterms:identifier "ISF-2"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISF_3 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 98 (PDF page 99)."@en ;
+    dcterms:description "Competency: Explain the roles, responsibilities, and characteristics of the IS professional Key dispositions: Self-Directed, Inventive, Purpose-Driven"@en ;
+    dcterms:identifier "ISF-3"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISF_6 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 100 (PDF page 101)."@en ;
+    dcterms:description "Competency: Critique and recommend Enterprise Systems for a given business problem and processes Key dispositions: Purpose-driven, Professional, Self-Directed"@en ;
+    dcterms:identifier "ISF-6"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020k:OperationsOfISProcessingCycle a ontoksd:Knowledge,
+        skos:Concept ;
+    rdfs:label "Operations of IS and the information processing cycle"@en ;
+    dcterms:source is2020:IS2020Document ;
+    skos:definition "Knowledge of the operations of information systems, including input, processing, storage, output, and control."@en ;
+    skos:inScheme is2020k:IS2020FoundationsKnowledgeScheme ;
+    skos:prefLabel "Operations of IS and the information processing cycle"@en .
+
+is2020c:Competence_ISF_1 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Classify the components, elements, operations, and impact of IS"@en ;
+    dcterms:identifier "ISF-1"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:CommonTypesOfIS,
+        is2020k:ComponentsOfISTechnologyDataPeopleProcedures,
+        is2020k:FunctionsOperationsImpactOfISOnOrganizationalChange,
+        is2020k:HowISHelpsDealWithInformation,
+        is2020k:OperationsOfISProcessingCycle ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_1_01,
+        is2020c:KS_ISF_1_02,
+        is2020c:KS_ISF_1_03,
+        is2020c:KS_ISF_1_04,
+        is2020c:KS_ISF_1_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems. It is represented through explicit dispositions and KnowledgeSkill relations."@en ;
+    skos:definition "Classify the components, elements, operations, and impact of IS"@en ;
+    skos:prefLabel "IS Foundations Competency 1"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_1 .
+
+is2020c:Competence_ISF_5 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS"@en ;
+    dcterms:identifier "ISF-5"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ComponentsOfIS,
+        is2020k:ElementsOfIS,
+        is2020k:ISSolutionsAndToolsForBusinessContextsAndProcesses,
+        is2020k:OperationsOfISProcessingCycle,
+        is2020k:TypesAndUtilityOfIS ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_5_01,
+        is2020c:KS_ISF_5_02,
+        is2020c:KS_ISF_5_03,
+        is2020c:KS_ISF_5_04,
+        is2020c:KS_ISF_5_05 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
+    skos:definition "Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS"@en ;
+    skos:prefLabel "IS Foundations Competency 5"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_5 .
+
+is2020c:Source_ISF_1 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 98 (PDF page 99)."@en ;
+    dcterms:description "Competency: Classify the components, elements, operations, and impact of IS Key dispositions: Self-Directed, Inventive, Purpose-driven"@en ;
+    dcterms:identifier "ISF-1"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISF_5 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 99 (PDF page 100)."@en ;
+    dcterms:description "Competency: Analyze a business case and critique appropriate IS solutions to common business problems, based on the different components, elements, types, and levels of IS Key dispositions: Self-Directed, Purpose-driven, Professional"@en ;
+    dcterms:identifier "ISF-5"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Competence_ISF_8 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change"@en ;
+    dcterms:identifier "ISF-8"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:BuyVersusBuildDecision,
+        is2020k:ComputationalMethods,
+        is2020k:InnovationAndDesignTechniques,
+        is2020k:MethodsAndToolsForUsingInformation,
+        is2020k:OutsourcingPossibilitiesAndModelsForIS,
+        is2020k:SoftwareDevelopmentMethodologies,
+        is2020k:SoftwareToolsAndComputationalMethods,
+        is2020k:SystemsDevelopmentLifecycle ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_8_01,
+        is2020c:KS_ISF_8_02,
+        is2020c:KS_ISF_8_03,
+        is2020c:KS_ISF_8_04,
+        is2020c:KS_ISF_8_05,
+        is2020c:KS_ISF_8_06,
+        is2020c:KS_ISF_8_07,
+        is2020c:KS_ISF_8_08 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
+    skos:definition "Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change"@en ;
+    skos:prefLabel "IS Foundations Competency 8"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_8 .
+
+<http://purl.org/ontoksd/source/is2020-foundations-competency-area> a owl:NamedIndividual ;
+    rdfs:label "IS2020 Foundations of Information Systems competency area"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Source marker for competencies instantiated from Appendix 3, A3.1.1 Competency Area – Foundations of Information Systems."@en .
+
+is2020c:Competence_ISF_4 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Recommend techniques for using information and knowledge for business decision making and strategic value"@en ;
+    dcterms:identifier "ISF-4"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:DecisionSupportSystems,
+        is2020k:ISAndValueOfInformation,
+        is2020k:ISStrategicPlanningProcess,
+        is2020k:InformationAndKnowledgeForBusinessDecisionMakingAndStrategicValue,
+        is2020k:KeyITIssuesTrendsAndBusinessAlignment,
+        is2020k:MethodsForStoringAndOrganizingInformation,
+        is2020k:RoleOfInformationInDecisionMaking,
+        is2020k:StagesOfDecisionMakingAndISTools,
+        is2020k:TypesOfDecisionsAndDecisionMakingTechniques ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_4_01,
+        is2020c:KS_ISF_4_02,
+        is2020c:KS_ISF_4_03,
+        is2020c:KS_ISF_4_04,
+        is2020c:KS_ISF_4_05,
+        is2020c:KS_ISF_4_06,
+        is2020c:KS_ISF_4_07,
+        is2020c:KS_ISF_4_08,
+        is2020c:KS_ISF_4_09 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems."@en ;
+    skos:definition "Recommend techniques for using information and knowledge for business decision making and strategic value"@en ;
+    skos:prefLabel "IS Foundations Competency 4"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_4 .
+
+is2020c:Competence_ISF_7 a ontoksd:AtomicCompetence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify techniques for transmitting and securing information in an organization"@en ;
+    dcterms:identifier "ISF-7"^^xsd:string ;
+    dcterms:references <http://purl.org/ontoksd/source/is2020-foundations-competency-area> ;
+    dcterms:source is2020:IS2020Document ;
+    ontoksd:hasDisposition ontoksd:professional,
+        ontoksd:purposeDriven,
+        ontoksd:selfDirected ;
+    ontoksd:hasKnowledge is2020k:ConsequencesOfInformationPrivacyViolations,
+        is2020k:FairInformationPracticesAndPrivacyPolicies,
+        is2020k:GovernmentInformationPrivacyRegulations,
+        is2020k:KeyComponentsOfNetworks,
+        is2020k:MethodsForTransmittingInformationUsingNetworks,
+        is2020k:SecurityTechnologiesAndSolutions,
+        is2020k:TechnologiesAndSolutionsForInformationPrivacy,
+        is2020k:TypesOfInformationPrivacyThreats,
+        is2020k:TypesOfInformationSecurityThreats ;
+    ontoksd:hasKnowledgeSkill is2020c:KS_ISF_7_01,
+        is2020c:KS_ISF_7_02,
+        is2020c:KS_ISF_7_03,
+        is2020c:KS_ISF_7_04,
+        is2020c:KS_ISF_7_05,
+        is2020c:KS_ISF_7_06,
+        is2020c:KS_ISF_7_07,
+        is2020c:KS_ISF_7_08,
+        is2020c:KS_ISF_7_09 ;
+    ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    rdfs:comment "Competence derived from IS2020 Appendix 3, A3.1.1 Foundations of Information Systems. The repeated source entry for methods for transmitting information using networks was normalized as a single knowledge element and a single KnowledgeSkill relation in this insertion."@en ;
+    skos:definition "Identify techniques for transmitting and securing information in an organization"@en ;
+    skos:prefLabel "IS Foundations Competency 7"@en ;
+    prov:wasDerivedFrom is2020:IS2020Document,
+        is2020c:Source_ISF_7 .
+
+is2020c:Source_ISF_8 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 101 (PDF page 102)."@en ;
+    dcterms:description "Competency: Demonstrate an ability to solve basic computational and design problems using IS development with appropriate methodologies, software tools and innovative methods for improving processes and organizational change Key dispositions: Self-Directed, Purpose-driven, Professional"@en ;
+    dcterms:identifier "ISF-8"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISF_4 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 99 (PDF page 100)."@en ;
+    dcterms:description "Competency: Recommend techniques for using information and knowledge for business decision making and strategic value Key dispositions: Self-Directed, Purpose-driven, Professional"@en ;
+    dcterms:identifier "ISF-4"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020c:Source_ISF_7 a prov:Entity ;
+    dcterms:bibliographicCitation "IS2020 Appendix 3; competency table begins on printed page 100 (PDF page 101)."@en ;
+    dcterms:description "Competency: Identify techniques for transmitting and securing information in an organization Key dispositions: Purpose-driven, Self-Directed, Professional"@en ;
+    dcterms:identifier "ISF-7"^^xsd:string ;
+    dcterms:isPartOf is2020:IS2020Document .
+
+is2020k:IS2020FoundationsKnowledgeScheme a skos:ConceptScheme ;
+    rdfs:label "IS2020 Foundations of Information Systems Knowledge Scheme"@en ;
+    dcterms:source is2020:IS2020Document ;
+    rdfs:comment "Concept scheme containing knowledge elements curated from the textual competency descriptions of the IS2020 Foundations of Information Systems competency area."@en ;
+    skos:prefLabel "IS2020 Foundations Knowledge Scheme"@en .
+
+is2020:IS2020Document a owl:NamedIndividual ;
+    rdfs:label "IS2020 report"@en ;
+    rdfs:comment "Source marker for competencies instantiated from the IS2020 report."@en .
 }

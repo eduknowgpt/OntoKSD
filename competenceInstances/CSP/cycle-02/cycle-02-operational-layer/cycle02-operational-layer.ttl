@@ -1,0 +1,266 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ontoksd: <http://purl.org/ontoksd#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ontoksd:TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C02 - justify use of deterministic finite automata"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C02 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C03 - test automata using simulators"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C03 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C04 - define regular expressions for finite automata"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C04 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C05 - write a technical report"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C05 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C06 - develop solutions using finite state machines"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C06 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C07 - develop solutions using Turing machines"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C07 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C08 - identify Turing machine variants"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C08 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C09 - apply Turing machine variants"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C09 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C10 - test Turing machines using simulators"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C10 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C11 - identify patterns in finite state machines"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C11 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C12 - develop solutions using pushdown automata"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C12 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C13.01 - interpret formal grammar-based rules"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C13_01 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C14 - differentiate classifications of formal grammars"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C14 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C15 - understand the Halting Problem and its implications"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C15 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification a ontoksd:CourseCompetenceSpecification ;
+    rdfs:label "TOC course specification for C16 - interpret Turing machine concepts to analyze computational system capabilities"@en ;
+    dcterms:references ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isMandatory true ;
+    ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+    ontoksd:mediatesCourseCompetence ontoksd:C16 ;
+    ontoksd:requiresMinimumProficiencyLevel ontoksd:SecondCycle_CompetentLevel ;
+    rdfs:comment "Operational scenario expectation: this competence is mandatory within the selected course scope, with Competent as the minimum expected proficiency under SecondCycle_ProficiencyScheme. It is not a source-derived obligation, an admission prerequisite, a learner result or a course approval rule."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+
+ontoksd:AS_Task201 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:AS_Task202 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:AS_Task203 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:AS_Task204 dcterms:references ontoksd:SecondCycle_ProficiencyScheme .
+
+ontoksd:SecondCycle_AdvancedLevel a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int .
+
+ontoksd:SecondCycle_Interval_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Operational Advanced score interval"@en ;
+    ontoksd:correspondsToLevel ontoksd:SecondCycle_AdvancedLevel ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:SecondCycle_TenPointScale ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 .
+
+ontoksd:SecondCycle_Interval_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Operational Competent score interval"@en ;
+    ontoksd:correspondsToLevel ontoksd:SecondCycle_CompetentLevel ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper false ;
+    ontoksd:intervalDefinedInScheme ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:SecondCycle_TenPointScale ;
+    ontoksd:lowerBound 7.0 ;
+    ontoksd:upperBound 9.0 .
+
+ontoksd:SecondCycle_Interval_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Operational Novice score interval"@en ;
+    ontoksd:correspondsToLevel ontoksd:SecondCycle_NoviceLevel ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper false ;
+    ontoksd:intervalDefinedInScheme ontoksd:SecondCycle_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:SecondCycle_TenPointScale ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 7.0 .
+
+ontoksd:SecondCycle_NoviceLevel a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int .
+
+ontoksd:SecondCycle_TenPointScale a ontoksd:Scale ;
+    rdfs:label "Second-cycle operational scale, 0 to 10"@en ;
+    ontoksd:hasInterval ontoksd:SecondCycle_Interval_Advanced,
+        ontoksd:SecondCycle_Interval_Competent,
+        ontoksd:SecondCycle_Interval_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 .
+
+ontoksd:Course_FormalLanguagesAndTheoryOfComputation a ontoksd:Course ;
+    rdfs:label "Introduction to Formal Languages and Theory of Computation"@en ;
+    dcterms:identifier "TOC"^^xsd:string ;
+    ontoksd:hasInstructionalUnit ontoksd:AS_Task201,
+        ontoksd:AS_Task202,
+        ontoksd:AS_Task203,
+        ontoksd:AS_Task204,
+        ontoksd:LT_Task201,
+        ontoksd:LT_Task202,
+        ontoksd:LT_Task203,
+        ontoksd:LT_Task204 ;
+    rdfs:comment "The curricular component already used by the cycle-02 dataset. This optional layer adds the user-defined expectations for the selected competence subset; it does not define a new course offering or establish full curriculum coverage."@en .
+
+ontoksd:SecondCycle_OperationalScenario a prov:Entity ;
+    rdfs:label "Second-cycle curricular/proficiency operational scenario"@en ;
+    dcterms:description "User-defined operational assumptions: the 15 selected cycle-02 competences are mandatory within the course, with Competent as the minimum expected level; classification uses [0,7) Novice, [7,9) Competent, and [9,10] Advanced. This is a modeling scenario, not a conclusion that the CSP imposed those course expectations or applied these cutoffs in every task."@en ;
+    dcterms:references ontoksd:AS_Task201,
+        ontoksd:AS_Task202,
+        ontoksd:AS_Task203,
+        ontoksd:AS_Task204,
+        ontoksd:Course_FormalLanguagesAndTheoryOfComputation,
+        ontoksd:SecondCycle_ProficiencyScheme,
+        ontoksd:TOC_C02_JustifyUseOfDFA_CourseCompetenceSpecification,
+        ontoksd:TOC_C03_TestAutomataUsingSimulators_CourseCompetenceSpecification,
+        ontoksd:TOC_C04_DefineRegularExpressionsForFiniteAutomata_CourseCompetenceSpecification,
+        ontoksd:TOC_C05_WriteATechnicalReport_CourseCompetenceSpecification,
+        ontoksd:TOC_C06_DevelopSolutionsUsingFSM_CourseCompetenceSpecification,
+        ontoksd:TOC_C07_DevelopSolutionsUsingTuringMachines_CourseCompetenceSpecification,
+        ontoksd:TOC_C08_IdentifyTuringMachineVariants_CourseCompetenceSpecification,
+        ontoksd:TOC_C09_ApplyTuringMachineVariants_CourseCompetenceSpecification,
+        ontoksd:TOC_C10_TestTuringMachinesUsingSimulators_CourseCompetenceSpecification,
+        ontoksd:TOC_C11_IdentifyPatternsInFSM_CourseCompetenceSpecification,
+        ontoksd:TOC_C12_DevelopSolutionsUsingPushdownAutomata_CourseCompetenceSpecification,
+        ontoksd:TOC_C13_01_InterpretFormalGrammarBasedRules_CourseCompetenceSpecification,
+        ontoksd:TOC_C14_DifferentiateClassificationsOfFormalGrammars_CourseCompetenceSpecification,
+        ontoksd:TOC_C15_UnderstandHaltingProblem_CourseCompetenceSpecification,
+        ontoksd:TOC_C16_InterpretTuringMachineConcepts_CourseCompetenceSpecification,
+        <https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02> .
+
+ontoksd:SecondCycle_CompetentLevel a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int .
+
+ontoksd:SecondCycle_ProficiencyScheme a ontoksd:ProficiencyScheme ;
+    rdfs:label "Second CSP cycle shared operational proficiency scheme"@en ;
+    ontoksd:definesInterval ontoksd:SecondCycle_Interval_Advanced,
+        ontoksd:SecondCycle_Interval_Competent,
+        ontoksd:SecondCycle_Interval_Novice ;
+    ontoksd:definesLevel ontoksd:SecondCycle_AdvancedLevel,
+        ontoksd:SecondCycle_CompetentLevel,
+        ontoksd:SecondCycle_NoviceLevel ;
+    ontoksd:usesScale ontoksd:SecondCycle_TenPointScale ;
+    skos:scopeNote "Operational policy preserving the numeric data in the supplied shared-scheme file. Task201 documents different boundaries: [0,5], (5,9], (9,10]. Shared use here is a selected scenario and does not establish a source-documented policy for Task202–Task204 or a course approval threshold."@en ;
+    prov:wasDerivedFrom ontoksd:SecondCycle_OperationalScenario .
+

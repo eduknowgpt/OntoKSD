@@ -1,0 +1,8 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?task ?competence
+WHERE {
+ VALUES ?task { ontoksd:Task201_Reference ontoksd:Task202_Reference ontoksd:Task203_Reference ontoksd:Task204_Reference }
+ ?task ontoksd:isTaskOf ?competence .
+} ORDER BY ?task ?competence

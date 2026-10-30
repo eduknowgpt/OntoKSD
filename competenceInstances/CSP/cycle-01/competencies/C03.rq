@@ -1,0 +1,64 @@
+# Reviewed CSP cycle-01 competence C03
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C03_FiniteStateMachines_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Finite State Machines × Applying"@en ;
+    dcterms:description "Recorded cycle-01 mapping: Finite State Machines at Applying."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:experiment,
+        bloom:relate,
+        bloom:simulate ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_SF_Foundations_5 ;
+    ontoksd:hasKnowledgeComponent cs2023k:Knowledge_SF_Foundations_5 ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C03 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:KS_C03_ProblemSolvingAndTroubleshooting_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Problem Solving and Troubleshooting × Applying"@en ;
+    dcterms:description "Recorded cycle-01 mapping: Problem Solving and Troubleshooting at Applying."@en ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#ProblemSolvingAndTroubleshooting> ;
+    ontoksd:hasKnowledgeComponent cc2020found:ProblemSolvingAndTroubleshooting ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C03 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:KS_C03_TestTooling_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Modeling and Simulation × Applying"@en ;
+    dcterms:description "Recorded cycle-01 mapping: Modeling and Simulation at Applying."@en ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_ModelingAndSimulation ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C03 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:C03 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Test automata using simulators"@en ;
+    dcterms:identifier "C03"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:creative,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C03_FiniteStateMachines_Applying,
+        ontoksd:KS_C03_ProblemSolvingAndTroubleshooting_Applying,
+        ontoksd:KS_C03_TestTooling_Applying ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Test automata using simulators"@en ;
+    skos:scopeNote "Cycle-01 specification snapshot grounded in the cited reviewed/adjusted CSP records. It must not be conflated with later specification states using the same repository identifier."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+}

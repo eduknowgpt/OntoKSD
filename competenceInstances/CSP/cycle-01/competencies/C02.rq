@@ -1,0 +1,64 @@
+# Reviewed CSP cycle-01 competence C02
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C02_AnalyticalThinking_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking × Applying"@en ;
+    dcterms:description "Recorded cycle-01 mapping: Analytical and Critical Thinking at Applying."@en ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C02 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:KS_C02_DFA_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Deterministic Finite Automata × Understanding"@en ;
+    dcterms:description "Recorded cycle-01 mapping: Deterministic Finite Automata at Understanding."@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain,
+        bloom:interpret ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_7 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_DeterministicFiniteAutomata ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C02 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:KS_C02_RequirementsElicitation_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Requirements Engineering × Applying"@en ;
+    dcterms:description "Recorded cycle-01 mapping: Requirements Engineering at Applying."@en ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:KU_SE_Requirements ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_CSP_RequirementsEngineering ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C02 ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+ontoksd:C02 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Justify the use of Deterministic Finite Automata (DFAs)"@en ;
+    dcterms:identifier "C02"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:creative,
+        ontoksd:investigative,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C02_AnalyticalThinking_Applying,
+        ontoksd:KS_C02_DFA_Understanding,
+        ontoksd:KS_C02_RequirementsElicitation_Applying ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Justify the use of Deterministic Finite Automata (DFAs)"@en ;
+    skos:scopeNote "Cycle-01 specification snapshot grounded in the cited reviewed/adjusted CSP records. It must not be conflated with later specification states using the same repository identifier."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+}

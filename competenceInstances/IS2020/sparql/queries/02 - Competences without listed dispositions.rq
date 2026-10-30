@@ -1,0 +1,12 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX is2020: <http://purl.org/is2020#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?competence ?identifier ?note
+WHERE {
+ ?competence a ontoksd:Competence ;
+  ontoksd:hasSpecificationPattern is2020:IS2020SpecificationPattern ;
+  dcterms:identifier ?identifier .
+ FILTER NOT EXISTS { ?competence ontoksd:hasDisposition ?disposition }
+ OPTIONAL { ?competence <http://www.w3.org/2004/02/skos/core#scopeNote> ?note }
+} ORDER BY ?identifier

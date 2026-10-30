@@ -1,0 +1,100 @@
+# Supplemental declarations for recorded CSP action verbs not populated in the external vocabulary.
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+bloom:align a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "align"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+bloom:constrain a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "constrain"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+bloom:coordinate a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "coordinate"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+bloom:diagnose a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "diagnose"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+bloom:elicit a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "elicit"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+bloom:formalize a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "formalize"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+bloom:refine a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "refine"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
+
+bloom:relate a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "relate"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Analyzing,
+        bloom:Applying,
+        bloom:Understanding ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
+
+bloom:revise a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "revise"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
+
+bloom:specify a bloom:ActionVerb,
+        owl:NamedIndividual ;
+    rdfs:label "specify"@en ;
+    bloom:hasActionVerbType ontoksd:CSPRecordedActionVerbType ;
+    bloom:isActionVerbFor bloom:Applying ;
+    skos:scopeNote "Supplemental verb declaration grounded in reviewed CSP records. The level association records a use in this dataset; it is not an official or exclusive taxonomic placement. Pair-specific justification is expressed with hasBloomLevelJustificationVerb."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
+
+ontoksd:CSPRecordedActionVerbType a bloom:ActionVerbType ;
+    rdfs:label "CSP-recorded justification verb"@en ;
+    skos:definition "An action verb recorded in a reviewed CSP knowledge-level assignment. Its documented use supports that contextual assignment and does not assert an official Bloom verb-list classification."@en .
+}

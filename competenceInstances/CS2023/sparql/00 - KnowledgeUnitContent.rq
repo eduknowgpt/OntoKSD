@@ -1,0 +1,681 @@
+# Shared unit-level Knowledge constituents for CS2023 sample competencies.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+cs2023:KU_AI_KRR ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AI_KRR .
+
+cs2023:KU_AI_ML ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AI_ML .
+
+cs2023:KU_AI_SEP ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AI_SEP .
+
+cs2023:KU_AI_Search ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AI_Search .
+
+cs2023:KU_AR_Assembly ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AR_Assembly .
+
+cs2023:KU_AR_Heterogeneity ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AR_Heterogeneity .
+
+cs2023:KU_AR_Performance_Energy ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_AR_Performance_Energy .
+
+cs2023:KU_DM_Core ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_Core .
+
+cs2023:KU_DM_Data ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_Data .
+
+cs2023:KU_DM_Internals ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_Internals .
+
+cs2023:KU_DM_Modeling ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_Modeling .
+
+cs2023:KU_DM_NoSQL ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_NoSQL .
+
+cs2023:KU_DM_Processing ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_Processing .
+
+cs2023:KU_DM_Relational ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_DM_Relational .
+
+cs2023:KU_FPL_Constructs ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Constructs .
+
+cs2023:KU_FPL_Event_Driven ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Event_Driven .
+
+cs2023:KU_FPL_Functional ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Functional .
+
+cs2023:KU_FPL_Logic ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Logic .
+
+cs2023:KU_FPL_OOP ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_OOP .
+
+cs2023:KU_FPL_Parallel ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Parallel .
+
+cs2023:KU_FPL_Pragmatics ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Pragmatics .
+
+cs2023:KU_FPL_Scripting ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Scripting .
+
+cs2023:KU_FPL_Translation ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Translation .
+
+cs2023:KU_FPL_Types ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_FPL_Types .
+
+cs2023:KU_GIT_Fundamentals ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_GIT_Fundamentals .
+
+cs2023:KU_GIT_Rendering ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_GIT_Rendering .
+
+cs2023:KU_GIT_Visualization ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_GIT_Visualization .
+
+cs2023:KU_HCI_Accessibility ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_HCI_Accessibility .
+
+cs2023:KU_HCI_Accountability ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_HCI_Accountability .
+
+cs2023:KU_HCI_Design ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_HCI_Design .
+
+cs2023:KU_HCI_Evaluation ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_HCI_Evaluation .
+
+cs2023:KU_HCI_SEP ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_HCI_SEP .
+
+cs2023:KU_HCI_User ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_HCI_User .
+
+cs2023:KU_NC_Applications ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_NC_Applications .
+
+cs2023:KU_NC_Routing ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_NC_Routing .
+
+cs2023:KU_NC_Security ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_NC_Security .
+
+cs2023:KU_OS_Concurrency ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Concurrency .
+
+cs2023:KU_OS_Memory ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Memory .
+
+cs2023:KU_OS_Principles ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Principles .
+
+cs2023:KU_OS_Process ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Process .
+
+cs2023:KU_OS_Protection ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Protection .
+
+cs2023:KU_OS_Purpose ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Purpose .
+
+cs2023:KU_OS_Scheduling ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_OS_Scheduling .
+
+cs2023:KU_PDC_Evaluation ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_PDC_Evaluation .
+
+cs2023:KU_PDC_Programs ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_PDC_Programs .
+
+cs2023:KU_SDF_Practices ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SDF_Practices .
+
+cs2023:KU_SEC_Foundations ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEC_Foundations .
+
+cs2023:KU_SEP_Communication ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_Communication .
+
+cs2023:KU_SEP_Context ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_Context .
+
+cs2023:KU_SEP_DEIA ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_DEIA .
+
+cs2023:KU_SEP_Ethical_Analysis ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_Ethical_Analysis .
+
+cs2023:KU_SEP_IP ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_IP .
+
+cs2023:KU_SEP_Privacy ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_Privacy .
+
+cs2023:KU_SEP_Professional_Ethics ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_Professional_Ethics .
+
+cs2023:KU_SEP_Security ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SEP_Security .
+
+cs2023:KU_SE_Design ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SE_Design .
+
+cs2023:KU_SE_Teamwork ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SE_Teamwork .
+
+cs2023:KU_SE_Tools ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SE_Tools .
+
+cs2023:KU_SE_Validation ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SE_Validation .
+
+cs2023:KU_SF_Design ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SF_Design .
+
+cs2023:KU_SF_Evaluation ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SF_Evaluation .
+
+cs2023:KU_SF_Overview ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SF_Overview .
+
+cs2023:KU_SF_Performance ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SF_Performance .
+
+cs2023:KU_SF_Security ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SF_Security .
+
+cs2023:KU_SPD_Common ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SPD_Common .
+
+cs2023:KU_SPD_Embedded ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SPD_Embedded .
+
+cs2023:KU_SPD_Mobile ontoksd:curricularlyRepresentsKnowledge cs2023c:KnowledgeUnitContent_SPD_Mobile .
+
+cs2023c:KnowledgeUnitContent_AI_KRR a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AI-KRR — Fundamental Knowledge Representation and Reasoning"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AI_KRR ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AI-KRR (Fundamental Knowledge Representation and Reasoning), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_AI_ML a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AI-ML — Machine Learning"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AI_ML ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AI-ML (Machine Learning), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_AI_SEP a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AI-SEP — Applications and Societal Impact"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AI_SEP ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AI-SEP (Applications and Societal Impact), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_AI_Search a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AI-Search — Search"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AI_Search ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AI-Search (Search), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_AR_Assembly a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AR-Assembly — Assembly Level Machine Organization"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AR_Assembly ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AR-Assembly (Assembly Level Machine Organization), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_AR_Heterogeneity a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AR-Heterogeneity — Heterogeneous Architectures"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AR_Heterogeneity ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AR-Heterogeneity (Heterogeneous Architectures), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_AR_Performance_Energy a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "AR-Performance-Energy — Performance and Energy Efficiency"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_AR_Performance_Energy ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit AR-Performance-Energy (Performance and Energy Efficiency), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_Core a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Core — Core Database System Concepts"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_Core ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-Core (Core Database System Concepts), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_Data a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Data — The Role of Data and the Data Life Cycle"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_Data ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-Data (The Role of Data and the Data Life Cycle), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_Internals a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Internals — DBMS Internals"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_Internals ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-Internals (DBMS Internals), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_Modeling a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Modeling — Data Modeling"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_Modeling ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-Modeling (Data Modeling), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_NoSQL a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-NoSQL — NoSQL Systems"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_NoSQL ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-NoSQL (NoSQL Systems), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_Processing a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Processing — Query Processing"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_Processing ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-Processing (Query Processing), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_DM_Relational a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Relational — Relational Databases"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_DM_Relational ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit DM-Relational (Relational Databases), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Constructs a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Constructs — Advanced Programming Constructs"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Constructs ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Constructs (Advanced Programming Constructs), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Event_Driven a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Event-Driven — Event-Driven and Reactive Programming"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Event_Driven ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Event-Driven (Event-Driven and Reactive Programming), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Functional a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Functional — Functional Programming"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Functional ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Functional (Functional Programming), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Logic a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Logic — Logic Programming"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Logic ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Logic (Logic Programming), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_OOP a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-OOP — Object-Oriented Programming"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_OOP ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-OOP (Object-Oriented Programming), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Parallel a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Parallel — Parallel and Distributed Computing"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Parallel ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Parallel (Parallel and Distributed Computing), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Pragmatics a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Pragmatics — Language Pragmatics"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Pragmatics ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Pragmatics (Language Pragmatics), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Scripting a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Scripting — Shell Scripting"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Scripting ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Scripting (Shell Scripting), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Translation a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Translation — Language Translation and Execution"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Translation ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Translation (Language Translation and Execution), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_FPL_Types a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Types — Type Systems"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_FPL_Types ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit FPL-Types (Type Systems), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_GIT_Fundamentals a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "GIT-Fundamentals — Fundamental Concepts"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_GIT_Fundamentals ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit GIT-Fundamentals (Fundamental Concepts), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_GIT_Rendering a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "GIT-Rendering — Applied Rendering and Techniques"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_GIT_Rendering ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit GIT-Rendering (Applied Rendering and Techniques), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_GIT_Visualization a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "GIT-Visualization — Visualization"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_GIT_Visualization ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit GIT-Visualization (Visualization), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_HCI_Accessibility a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "HCI-Accessibility — Accessibility and Inclusive Design"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_HCI_Accessibility ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit HCI-Accessibility (Accessibility and Inclusive Design), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_HCI_Accountability a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "HCI-Accountability — Accountability and Responsibility in Design"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_HCI_Accountability ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit HCI-Accountability (Accountability and Responsibility in Design), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_HCI_Design a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "HCI-Design — System Design"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_HCI_Design ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit HCI-Design (System Design), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_HCI_Evaluation a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "HCI-Evaluation — Evaluating the Design"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_HCI_Evaluation ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit HCI-Evaluation (Evaluating the Design), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_HCI_SEP a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "HCI-SEP — Society, Ethics, and the Profession"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_HCI_SEP ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit HCI-SEP (Society, Ethics, and the Profession), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_HCI_User a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "HCI-User — Understanding the User: Individual goals and interactions with others"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_HCI_User ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit HCI-User (Understanding the User: Individual goals and interactions with others), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_NC_Applications a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "NC-Applications — Networked Applications"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_NC_Applications ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit NC-Applications (Networked Applications), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_NC_Routing a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "NC-Routing — Routing and Forwarding"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_NC_Routing ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit NC-Routing (Routing and Forwarding), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_NC_Security a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "NC-Security — Network Security"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_NC_Security ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit NC-Security (Network Security), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Concurrency a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Concurrency — Concurrency"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Concurrency ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Concurrency (Concurrency), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Memory a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Memory — Memory Management"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Memory ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Memory (Memory Management), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Principles a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Principles — Principles of Operating System"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Principles ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Principles (Principles of Operating System), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Process a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Process — Process Model"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Process ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Process (Process Model), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Protection a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Protection — Protection and Safety"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Protection ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Protection (Protection and Safety), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Purpose a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Purpose — Role and Purpose of Operating Systems"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Purpose ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Purpose (Role and Purpose of Operating Systems), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_OS_Scheduling a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Scheduling — Scheduling"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_OS_Scheduling ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit OS-Scheduling (Scheduling), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_PDC_Evaluation a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "PDC-Evaluation — Evaluation"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_PDC_Evaluation ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit PDC-Evaluation (Evaluation), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_PDC_Programs a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "PDC-Programs — Programs"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_PDC_Programs ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit PDC-Programs (Programs), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SDF_Practices a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SDF-Practices — Software Development Practices"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SDF_Practices ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SDF-Practices (Software Development Practices), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEC_Foundations a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEC-Foundations — Foundational Security"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEC_Foundations ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEC-Foundations (Foundational Security), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_Communication a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Communication — Communication"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_Communication ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-Communication (Communication), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_Context a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Context — Social Context"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_Context ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-Context (Social Context), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_DEIA a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-DEIA — Diversity, Equity, Inclusion, and Accessibility"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_DEIA ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-DEIA (Diversity, Equity, Inclusion, and Accessibility), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_Ethical_Analysis a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Ethical-Analysis — Methods for Ethical Analysis"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_Ethical_Analysis ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-Ethical-Analysis (Methods for Ethical Analysis), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_IP a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-IP — Intellectual Property"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_IP ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-IP (Intellectual Property), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_Privacy a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Privacy — Privacy and Civil Liberties"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_Privacy ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-Privacy (Privacy and Civil Liberties), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_Professional_Ethics a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Professional-Ethics — Professional Ethics"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_Professional_Ethics ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-Professional-Ethics (Professional Ethics), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SEP_Security a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Security — Security Policies, Laws and Computer Crimes"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SEP_Security ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SEP-Security (Security Policies, Laws and Computer Crimes), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SE_Design a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Design — Software Design"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SE_Design ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SE-Design (Software Design), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SE_Teamwork a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Teamwork — Teamwork"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SE_Teamwork ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SE-Teamwork (Teamwork), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SE_Tools a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Tools — Tools and Environments"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SE_Tools ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SE-Tools (Tools and Environments), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SE_Validation a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SE-Validation — Software Verification and Validation"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SE_Validation ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SE-Validation (Software Verification and Validation), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SF_Design a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Design — System Design"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SF_Design ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SF-Design (System Design), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SF_Evaluation a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Evaluation — Performance Evaluation"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SF_Evaluation ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SF-Evaluation (Performance Evaluation), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SF_Overview a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Overview — Overview of Computer Systems"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SF_Overview ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SF-Overview (Overview of Computer Systems), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SF_Performance a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Performance — System Performance"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SF_Performance ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SF-Performance (System Performance), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SF_Security a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SF-Security — System Security"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SF_Security ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SF-Security (System Security), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SPD_Common a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SPD-Common — Common Aspects/Shared Concerns"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SPD_Common ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SPD-Common (Common Aspects/Shared Concerns), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SPD_Embedded a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SPD-Embedded — Embedded Platforms"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SPD_Embedded ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SPD-Embedded (Embedded Platforms), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+
+cs2023c:KnowledgeUnitContent_SPD_Mobile a ontoksd:Knowledge,
+        owl:NamedIndividual ;
+    rdfs:label "SPD-Mobile — Mobile Platforms"@en ;
+    ontoksd:isCurricularlyRepresentedBy cs2023:KU_SPD_Mobile ;
+    skos:definition "Knowledge content addressed by the CS2023 knowledge unit SPD-Mobile (Mobile Platforms), used at unit-level granularity in the sample competency specifications."@en ;
+    skos:scopeNote "This content reference preserves the unit-level granularity of the example. It does not assert that every topic in the unit is required, nor identify this content with a single topic or learning outcome."@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document .
+}

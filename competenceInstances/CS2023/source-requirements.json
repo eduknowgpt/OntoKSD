@@ -1,0 +1,454 @@
+[
+  {
+    "id": "Software1",
+    "task": "Develop test cases to determine if a program is functionally correct.",
+    "statement": "Develop test cases and test a given program.",
+    "knowledge": [
+      "SDF-Practices"
+    ],
+    "levels": [
+      "Develop"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Persistent",
+      "Responsible"
+    ],
+    "page": 398
+  },
+  {
+    "id": "Software2",
+    "task": "Perform code review for a teammate.",
+    "statement": "Communicate clearly and collaboratively to provide feedback to a teammate about a piece of code.",
+    "knowledge": [
+      "SDF-Practices",
+      "SE-Teamwork",
+      "SE-Validation"
+    ],
+    "levels": [
+      "Apply"
+    ],
+    "dispositions": [
+      "Collaborative",
+      "Communicative",
+      "Meticulous"
+    ],
+    "page": 399
+  },
+  {
+    "id": "Software3",
+    "task": "Work on a team effectively.",
+    "statement": "Focus on long-term team dynamics and communicate effectively.",
+    "knowledge": [
+      "SE-Teamwork"
+    ],
+    "levels": [
+      "Apply"
+    ],
+    "dispositions": [
+      "Collaborative",
+      "Communicative",
+      "Proactive",
+      "Responsive"
+    ],
+    "page": 399
+  },
+  {
+    "id": "Software4",
+    "task": "Make an informed decision regarding which programming language/paradigm to select and use for a specific application.",
+    "statement": "Apply knowledge of multiple programming paradigms, including their strengths and weaknesses relative to the application to be developed, and select an appropriate paradigm and programming language.",
+    "knowledge": [
+      "FPL-OOP",
+      "FPL-Functional",
+      "FPL-Logic",
+      "FPL-Event-Driven",
+      "FPL-Types",
+      "FPL-Translation",
+      "FPL-Pragmatics",
+      "SPD-Embedded",
+      "FPL-Constructs"
+    ],
+    "levels": [
+      "Explain",
+      "Evaluate"
+    ],
+    "dispositions": [
+      "Inventive"
+    ],
+    "page": 399
+  },
+  {
+    "id": "Software5",
+    "task": "Effectively use a programming language’s type system to develop safe and secure software.",
+    "statement": "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct.",
+    "knowledge": [
+      "FPL-Types"
+    ],
+    "levels": [
+      "Develop"
+    ],
+    "dispositions": [
+      "Inventive",
+      "Meticulous"
+    ],
+    "page": 400
+  },
+  {
+    "id": "Systems1",
+    "task": "Develop a version of a CPU-based application to run on a hardware accelerator (GPU, TPU, NPU).",
+    "statement": "Apply knowledge from systems design to accelerate an application code and evaluate the code speed-up.",
+    "knowledge": [
+      "AR-Heterogeneity",
+      "PDC-Programs",
+      "SF-Design"
+    ],
+    "levels": [
+      "Evaluate",
+      "Develop"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Inventive"
+    ],
+    "page": 400
+  },
+  {
+    "id": "Systems2",
+    "task": "Produce a white paper assessing the social and ethical implications of collecting and storing data from a new (or existing) application.",
+    "statement": "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects. Consider both potential harm from unintended data use and from data breaches.",
+    "knowledge": [
+      "SEP-Context",
+      "SEP-Ethical-Analysis",
+      "SEP-Privacy",
+      "SEP-Professional-Ethics",
+      "SEP-Security",
+      "SEP-DEIA",
+      "DM-Data",
+      "SEC-Foundations"
+    ],
+    "levels": [
+      "Evaluate",
+      "Explain"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Responsible",
+      "Proactive"
+    ],
+    "page": 400
+  },
+  {
+    "id": "Systems3",
+    "task": "Secure data from unauthorized access.",
+    "statement": "Create database views to ensure data access is appropriately limited.",
+    "knowledge": [
+      "DM-Data",
+      "DM-Relational",
+      "DM-Processing",
+      "SEP-Security",
+      "SEP-Professional-Ethics",
+      "SEP-Privacy",
+      "SEC-Foundations"
+    ],
+    "levels": [
+      "Develop"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Proactive"
+    ],
+    "page": 401
+  },
+  {
+    "id": "Systems4",
+    "task": "Create a database for a new application.",
+    "statement": "Design the data storage needs (data modeling), assess the social and ethical implications for collecting and storing the data, determine how to store a new application’s data (RDBMS vs NoSQL), and create the database, including appropriate indices.",
+    "knowledge": [
+      "DM-Data",
+      "DM-Core",
+      "DM-Modeling",
+      "DM-Relational",
+      "DM-NoSQL",
+      "DM-Internals",
+      "SEP-Context",
+      "SEP-Ethical-Analysis",
+      "SEP-Privacy",
+      "SEP-Professional-Ethics",
+      "SEP-Security",
+      "SEP-DEIA",
+      "SEC-Foundations"
+    ],
+    "levels": [
+      "Develop"
+    ],
+    "dispositions": [
+      "Inventive",
+      "Meticulous",
+      "Responsible"
+    ],
+    "page": 401
+  },
+  {
+    "id": "Systems5",
+    "task": "Evaluate the performance of a network.",
+    "statement": "Evaluate the latency, throughput, congestion, and various service levels of a network.",
+    "knowledge": [
+      "NC-Applications",
+      "NC-Routing"
+    ],
+    "levels": [
+      "Evaluate"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Proactive"
+    ],
+    "page": 402
+  },
+  {
+    "id": "Systems6",
+    "task": "Deploy an application component on an operating system/runtime/virtualized operating system/container.",
+    "statement": "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution.",
+    "knowledge": [
+      "OS-Purpose",
+      "OS-Principles",
+      "OS-Concurrency",
+      "OS-Scheduling",
+      "OS-Process",
+      "OS-Memory",
+      "OS-Protection",
+      "AR-Assembly",
+      "FPL-Scripting"
+    ],
+    "levels": [
+      "Apply"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Persistent",
+      "Proactive"
+    ],
+    "page": 402
+  },
+  {
+    "id": "Systems7",
+    "task": "Improve the performance of a sequential application or component by introducing parallelism.",
+    "statement": "Evaluate how and when parallelism can improve (or not improve) performance well enough to identify opportunities, as well as implement them and measure the results.",
+    "knowledge": [
+      "PDC-Evaluation",
+      "FPL-Parallel"
+    ],
+    "levels": [
+      "Evaluate",
+      "Develop"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Persistent",
+      "Proactive"
+    ],
+    "page": 402
+  },
+  {
+    "id": "Systems8",
+    "task": "Find the performance bottleneck of a given system.",
+    "statement": "Given a system and its target deployment environment, find its performance bottleneck (e.g., memory, CPU, networking) through analytical derivation or experimental study.",
+    "knowledge": [
+      "SF-Performance",
+      "SF-Evaluation",
+      "SF-Design",
+      "SF-Overview"
+    ],
+    "levels": [
+      "Apply",
+      "Evaluate",
+      "Develop"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Persistent"
+    ],
+    "page": 403
+  },
+  {
+    "id": "Applications1",
+    "task": "Implement an agent to make strategic decisions in a two-player adversarial game with uncertain actions (e.g., a board game, strategic stock purchasing).",
+    "statement": "Use minimax with alpha-beta pruning, and possible chance nodes (expectiminimax), and heuristic move evaluation (at a particular depth) to solve a two-player zero-sum game.",
+    "knowledge": [
+      "AI-Search",
+      "AI-KRR"
+    ],
+    "levels": [
+      "Apply",
+      "Develop"
+    ],
+    "dispositions": [
+      "Inventive",
+      "Persistent"
+    ],
+    "page": 403
+  },
+  {
+    "id": "Applications2",
+    "task": "Analyze tabular data (e.g., customer purchases) to identify trends and predict variables of interest.",
+    "statement": "Use machine learning libraries, data preprocessing, training infrastructures, and evaluation methodologies to create a basic supervised learning pipeline.",
+    "knowledge": [
+      "AI-ML",
+      "AI-SEP"
+    ],
+    "levels": [
+      "Apply",
+      "Develop"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Persistent",
+      "Responsible"
+    ],
+    "page": 404
+  },
+  {
+    "id": "Applications3",
+    "task": "Critique a deployed machine learning model in terms of potential bias and correct the issues.",
+    "statement": "Understand, recognize, and evaluate issues of data set bias in AI, the types of bias, and algorithmic strategies for mitigation.",
+    "knowledge": [
+      "AI-ML",
+      "AI-SEP"
+    ],
+    "levels": [
+      "Explain"
+    ],
+    "dispositions": [
+      "Responsible"
+    ],
+    "page": 404
+  },
+  {
+    "id": "Applications4",
+    "task": "Visualize a region’s temperature record.",
+    "statement": "Given weather data for a region, design and implement an animation depicting temperature changes over time.",
+    "knowledge": [
+      "GIT-Fundamentals",
+      "GIT-Rendering",
+      "GIT-Visualization",
+      "HCI-Design",
+      "HCI-User"
+    ],
+    "levels": [
+      "Apply",
+      "Evaluate",
+      "Develop"
+    ],
+    "dispositions": [
+      "Inventive",
+      "Persistent"
+    ],
+    "page": 404
+  },
+  {
+    "id": "Applications5",
+    "task": "Evaluate and provide recommendations to improve a user-facing system.",
+    "statement": "Apply knowledge of usability, accessibility, and inclusivity to evaluate a user-facing system.",
+    "knowledge": [
+      "HCI-User",
+      "HCI-Accessibility",
+      "HCI-Evaluation",
+      "HCI-Design",
+      "HCI-SEP"
+    ],
+    "levels": [
+      "Evaluate"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Responsible"
+    ],
+    "page": 404
+  },
+  {
+    "id": "Applications6",
+    "task": "Determine the aspects of an implementation that require revision to support internationalization.",
+    "statement": "Evaluate a system to identify culturally-relevant or language-relevant text, symbols, and patterns that may vary by locale.",
+    "knowledge": [
+      "HCI-User",
+      "HCI-Accountability",
+      "HCI-Accessibility",
+      "HCI-Evaluation"
+    ],
+    "levels": [
+      "Evaluate"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Proactive",
+      "Responsible"
+    ],
+    "page": 405
+  },
+  {
+    "id": "Applications7",
+    "task": "Document the professional implications of a service/software/product for the company that produced it.",
+    "statement": "Gather information regarding accountability, responsibility and liability assumed by a company when releasing a service/software/product and present it in a coherent and actionable manner.",
+    "knowledge": [
+      "SEP-Professional-Ethics",
+      "SEP-IP",
+      "SEP-Privacy",
+      "SEP-Communication",
+      "SEP-DEIA"
+    ],
+    "levels": [
+      "Explain"
+    ],
+    "dispositions": [
+      "Meticulous",
+      "Proactive",
+      "Responsible"
+    ],
+    "page": 405
+  },
+  {
+    "id": "Applications8",
+    "task": "Determine whether to develop an app as a native app or as a cross-platform app.",
+    "statement": "Understand performance and scalability issues, and evaluate different approaches and tools by carefully considering factors such as app requirements, target audience, time-to-market, and costs.",
+    "knowledge": [
+      "SE-Tools",
+      "SPD-Common",
+      "SPD-Mobile"
+    ],
+    "levels": [
+      "Explain"
+    ],
+    "dispositions": [
+      "Inventive",
+      "Meticulous",
+      "Responsible"
+    ],
+    "page": 405
+  },
+  {
+    "id": "Applications9",
+    "task": "Build and optimize a secure web page for evolving business needs using a variety of appropriate programming languages.",
+    "statement": "Evaluate potential security hazards and apply optimization techniques.",
+    "knowledge": [
+      "AR-Performance-Energy",
+      "NC-Security",
+      "OS-Protection",
+      "SF-Security",
+      "SE-Design",
+      "SE-Tools",
+      "SPD-Common",
+      "SPD-Mobile",
+      "SEP-Privacy"
+    ],
+    "levels": [
+      "Develop"
+    ],
+    "dispositions": [
+      "Adaptable",
+      "Meticulous",
+      "Proactive",
+      "Responsible"
+    ],
+    "page": 406
+  }
+]

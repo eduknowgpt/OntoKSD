@@ -1,0 +1,215 @@
+# CS2023 Systems6; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems6_AR_Assembly_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "AR-Assembly × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_AR_Assembly ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: AR-Assembly at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "AR-Assembly × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_FPL_Scripting_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Scripting × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Scripting ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: FPL-Scripting at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Scripting × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Concurrency_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Concurrency × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Concurrency ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Concurrency at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Concurrency × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Memory_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Memory × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Memory ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Memory at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Memory × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Principles_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Principles × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Principles ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Principles at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Principles × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Process_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Process × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Process ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Process at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Process × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Protection_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Protection × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Protection ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Protection at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Protection × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Purpose_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Purpose × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Purpose ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Purpose at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Purpose × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:KS_Systems6_OS_Scheduling_1_Apply a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "OS-Scheduling × Apply"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_OS_Scheduling ;
+    ontoksd:hasSkillLevel level:Apply ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Local knowledge–level assignment for Systems6: OS-Scheduling at Apply. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "OS-Scheduling × Apply"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:TaskActivity_Systems6_Automate a ontoksd:TaskActivity ;
+    rdfs:label "automate"@en ;
+    rdfs:comment "Task activity capturing the automation of deployment environment setup."@en ;
+    skos:prefLabel "automate"@en .
+
+cs2023c:TaskActivity_Systems6_Deploy a ontoksd:TaskActivity ;
+    rdfs:label "deploy"@en ;
+    rdfs:comment "Task activity capturing the deployment of the application component in the target execution environment."@en ;
+    skos:prefLabel "deploy"@en .
+
+cs2023c:TaskActivity_Systems6_Identify a ontoksd:TaskActivity ;
+    rdfs:label "identify"@en ;
+    rdfs:comment "Task activity capturing the identification of potential deployment problems."@en ;
+    skos:prefLabel "identify"@en .
+
+cs2023c:TaskActivity_Systems6_Mitigate a ontoksd:TaskActivity ;
+    rdfs:label "mitigate"@en ;
+    rdfs:comment "Task activity capturing the mitigation of deployment-related problems and risks."@en ;
+    skos:prefLabel "mitigate"@en .
+
+cs2023c:TaskActivity_Systems6_Monitor a ontoksd:TaskActivity ;
+    rdfs:label "monitor"@en ;
+    rdfs:comment "Task activity capturing the establishment of monitoring for component execution."@en ;
+    skos:prefLabel "monitor"@en .
+
+cs2023c:TaskActivity_Systems6_SetUp a ontoksd:TaskActivity ;
+    rdfs:label "set up"@en ;
+    rdfs:comment "Task activity capturing the setup of the deployment environment and execution monitoring."@en ;
+    skos:prefLabel "set up"@en .
+
+cs2023c:TaskComponent_Systems6_ApplicationComponent a ontoksd:TaskComponent ;
+    rdfs:label "application component"@en ;
+    rdfs:comment "Task component corresponding to the software component to be deployed and monitored."@en ;
+    skos:prefLabel "application component"@en .
+
+cs2023c:TaskComponent_Systems6_DeploymentEnvironment a ontoksd:TaskComponent ;
+    rdfs:label "deployment environment"@en ;
+    rdfs:comment "Task component corresponding to the operating system, runtime, virtualized operating system, or container in which the application component is deployed."@en ;
+    skos:prefLabel "deployment environment"@en .
+
+cs2023c:TaskConstraint_Systems6_ComponentExecutionMonitoring a ontoksd:TaskConstraint ;
+    rdfs:label "with monitoring of component execution"@en ;
+    rdfs:comment "Task constraint stating that the deployed component must have its execution monitored appropriately."@en ;
+    skos:prefLabel "with monitoring of component execution"@en .
+
+cs2023c:TaskConstraint_Systems6_ExecutionEnvironment a ontoksd:TaskConstraint ;
+    rdfs:label "on an operating system/runtime/virtualized operating system/container"@en ;
+    rdfs:comment "Task constraint stating that deployment must be performed in an execution environment such as an operating system, runtime, virtualized operating system, or container."@en ;
+    skos:prefLabel "on an operating system/runtime/virtualized operating system/container"@en .
+
+cs2023c:Task_Systems6 a ontoksd:Task ;
+    rdfs:label "Systems6 task"@en ;
+    dcterms:identifier "Task_Systems6"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems6_Automate,
+        cs2023c:TaskActivity_Systems6_Deploy,
+        cs2023c:TaskActivity_Systems6_Identify,
+        cs2023c:TaskActivity_Systems6_Mitigate,
+        cs2023c:TaskActivity_Systems6_Monitor,
+        cs2023c:TaskActivity_Systems6_SetUp ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems6_ApplicationComponent,
+        cs2023c:TaskComponent_Systems6_DeploymentEnvironment ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems6_ComponentExecutionMonitoring,
+        cs2023c:TaskConstraint_Systems6_ExecutionEnvironment ;
+    ontoksd:hasTaskStatement "Deploy an application component on an operating system/runtime/virtualized operating system/container."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems6 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems6. The task concerns deploying an application component on an operating system, runtime, virtualized operating system, or container, while identifying and mitigating deployment problems, automating environment setup, and establishing monitoring of component execution."@en ;
+    skos:prefLabel "Systems6 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems6 .
+
+cs2023c:Competence_Systems6 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution"@en ;
+    dcterms:identifier "Systems6"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:persistent,
+        ontoksd:proactive ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems6_AR_Assembly_1_Apply,
+        cs2023c:KS_Systems6_FPL_Scripting_1_Apply,
+        cs2023c:KS_Systems6_OS_Concurrency_1_Apply,
+        cs2023c:KS_Systems6_OS_Memory_1_Apply,
+        cs2023c:KS_Systems6_OS_Principles_1_Apply,
+        cs2023c:KS_Systems6_OS_Process_1_Apply,
+        cs2023c:KS_Systems6_OS_Protection_1_Apply,
+        cs2023c:KS_Systems6_OS_Purpose_1_Apply,
+        cs2023c:KS_Systems6_OS_Scheduling_1_Apply ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems6 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems6. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution."@en ;
+    skos:prefLabel "Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems6 .
+
+cs2023c:Source_Systems6 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems6, starting on printed page 402."@en ;
+    dcterms:description "Task: Deploy an application component on an operating system/runtime/virtualized operating system/container. Competency statement: Identify and mitigate potential problems with deployment; automate setup of deployment environment; set up monitoring of component execution. Required knowledge: OS-Purpose, OS-Principles, OS-Concurrency, OS-Scheduling, OS-Process, OS-Memory, OS-Protection, AR-Assembly, FPL-Scripting. Required skills: Apply. Desirable professional dispositions: Meticulous, Persistent, Proactive."@en ;
+    dcterms:identifier "Systems6" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_AR_Assembly,
+        cs2023:KU_FPL_Scripting,
+        cs2023:KU_OS_Concurrency,
+        cs2023:KU_OS_Memory,
+        cs2023:KU_OS_Principles,
+        cs2023:KU_OS_Process,
+        cs2023:KU_OS_Protection,
+        cs2023:KU_OS_Purpose,
+        cs2023:KU_OS_Scheduling,
+        level:Apply .
+}

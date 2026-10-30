@@ -1,0 +1,497 @@
+# Reviewed CSP cycle-01 Task3
+# INSERT-only cycle-01 dataset; load as a coherent snapshot (see README.md).
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:CA_Task03_C03 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task03 Competence Activation — C03"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C03_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    rdfs:comment "Competence activation linking Task03 assessment to competence C03. It indicates that testing automata using simulators is a core and mandatory target of the task."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C03_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test automata using simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C03_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C03_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C03 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C03_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Test automata using simulators through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C04 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task03 Competence Activation — C04"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C04_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    rdfs:comment "Competence activation linking Task03 assessment to competence C04. It indicates that defining regular expressions for finite automata is a core and mandatory target in this task because regular-expression formulation is part of the expected deliverables and documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C04_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Define Regular Expressions for Finite Automata through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C04_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C04_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amConstructive,
+        ontoksd:amJustificatory ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C04 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C04_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Define Regular Expressions for Finite Automata through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C05 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task03 Competence Activation — C05"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C05_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    rdfs:comment "Competence activation linking Task03 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task03."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C05_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C05_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C05_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C05 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C05_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Write a technical report through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C06 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task03 Competence Activation — C06"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C06_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    rdfs:comment "Competence activation linking Task03 assessment to competence C06. It indicates that developing problem-solving solutions using Finite State Machines is a core and mandatory target of the assessment."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C06_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Finite State Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C06_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C06_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amArtifactOriented,
+        ontoksd:amConstructive ;
+    ontoksd:hasActivationRole ontoksd:arCore ;
+    ontoksd:mediatesCompetence ontoksd:C06 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C06_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Develop Problem-Solving Solutions Using Finite State Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C11 a ontoksd:CompetenceActivation ;
+    rdfs:label "Task03 Competence Activation — C11"@en ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C11_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C11 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    rdfs:comment "Competence activation linking Task03 assessment to competence C11. It indicates that identifying patterns in Finite State Machines is a supporting but instructionally relevant target, especially for structural analysis, optimization, and budgeting interpretation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C11_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Identify Patterns in Finite State Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:CA_Task03_C11_Learning a ontoksd:CompetenceActivation ;
+    ontoksd:hasActivationConstraint ontoksd:CA_Task03_C11_Learning_Constraint ;
+    ontoksd:hasActivationFunction ontoksd:targetFunction ;
+    ontoksd:hasActivationMode ontoksd:amAnalytical,
+        ontoksd:amInterpretative ;
+    ontoksd:hasActivationRole ontoksd:arSupporting ;
+    ontoksd:mediatesCompetence ontoksd:C11 ;
+    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
+
+ontoksd:CA_Task03_C11_Learning_Constraint a ontoksd:ActivationConstraint ;
+    ontoksd:hasActivationConstraintDescription "In this task, address Identify Patterns in Finite State Machines through the stated model/report requirements and document the reasoning and verification performed."@en ;
+    ontoksd:hasActivationConstraintType ontoksd:acMandatory ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:ER_Task03_Logbook a ontoksd:EducationalResource ;
+    rdfs:label "Task03 logbook"@en ;
+    dcterms:description "Shared document used to record progress, meeting notes, decisions, and challenges encountered during the task."@en ;
+    dcterms:identifier "Task03-ER4"^^xsd:string ;
+    ontoksd:intendedUse "Traceability of collaborative work and process recording."^^xsd:string ;
+    rdfs:comment "Educational resource used to maintain traceability of the development process and collaborative work performed during Task03."@en .
+
+ontoksd:ER_Task03_PBLWhiteboard a ontoksd:EducationalResource ;
+    rdfs:label "PBL whiteboard"@en ;
+    dcterms:description "Collaborative whiteboard used to document questions, facts, ideas or hypotheses, and actions throughout the PBL process."@en ;
+    dcterms:identifier "Task03-ER3"^^xsd:string ;
+    ontoksd:intendedUse "Process documentation and collaborative reasoning support."^^xsd:string ;
+    rdfs:comment "Educational resource used to structure and document collaborative reasoning during the development of the solution."@en .
+
+ontoksd:TA_Task03_ModelAnalyzeAndValidateFSM a ontoksd:TaskActivity ;
+    rdfs:label "Model, analyze, simulate, validate, and document a herd-identification module using Finite State Machines"@en ;
+    rdfs:comment "Core task activity of Task03. It represents the central activity through which learners analyze requirements, model a herd-identification module, generate corresponding regular expressions, investigate structural patterns, validate the solution through simulation, and document the results."@en .
+
+ontoksd:TC_Task03_ComplexityAndCostAnalysis a ontoksd:TaskComponent ;
+    rdfs:label "FSM complexity and cost analysis"@en ;
+    rdfs:comment "Task component representing the analysis of state and transition complexity and its relation to prototype cost estimation."@en .
+
+ontoksd:TC_Task03_FSMArtifact a ontoksd:TaskComponent ;
+    rdfs:label "Finite State Machine artifact"@en ;
+    rdfs:comment "Task component representing the formal Finite State Machine model of the herd-identification module."@en .
+
+ontoksd:TC_Task03_HerdIdentificationModule a ontoksd:TaskComponent ;
+    rdfs:label "Herd-identification module"@en ;
+    rdfs:comment "Task component representing the computational module responsible for recognizing herd categories and supporting feed-request decisions."@en .
+
+ontoksd:TC_Task03_RegularExpressionSet a ontoksd:TaskComponent ;
+    rdfs:label "Regular expression set"@en ;
+    rdfs:comment "Task component representing the regular expressions used to document or formalize behaviors corresponding to the FSM solution."@en .
+
+ontoksd:TC_Task03_TechnicalReport a ontoksd:TaskComponent ;
+    rdfs:label "Technical report"@en ;
+    rdfs:comment "Task component representing the structured report required to explain design decisions, examples of operation, documentation rationale, and budgeting implications."@en .
+
+ontoksd:TCons_Task03_AnimalClassification a ontoksd:TaskConstraint ;
+    rdfs:label "Identify bovines, caprines, and swine"@en ;
+    rdfs:comment "Constraint stating that the solution must identify animal categories relevant to herd management."@en .
+
+ontoksd:TCons_Task03_FeedRequestTrigger a ontoksd:TaskConstraint ;
+    rdfs:label "Trigger feed requests based on herd thresholds"@en ;
+    rdfs:comment "Constraint stating that the identification module must support feed-request generation when threshold conditions are satisfied."@en .
+
+ontoksd:TCons_Task03_LowCostConstraint a ontoksd:TaskConstraint ;
+    rdfs:label "Consider low-cost prototype requirements"@en ;
+    rdfs:comment "Constraint stating that the proposed solution should support low-cost prototyping, including analysis of structural complexity for budgeting purposes."@en .
+
+ontoksd:TCons_Task03_ProcessDocumentation a ontoksd:TaskConstraint ;
+    rdfs:label "Document the process through whiteboard and logbook"@en ;
+    rdfs:comment "Constraint stating that the development process must be documented through PBL whiteboard versions and a shared logbook."@en .
+
+ontoksd:TCons_Task03_RegularExpressionDocumentation a ontoksd:TaskConstraint ;
+    rdfs:label "Provide regular expressions as part of documentation"@en ;
+    rdfs:comment "Constraint stating that the solution should include regular expressions supporting formal documentation of the FSM behavior."@en .
+
+ontoksd:TCons_Task03_SimulatorExecution a ontoksd:TaskConstraint ;
+    rdfs:label "Be executable in JFLAP or equivalent simulator"@en ;
+    rdfs:comment "Constraint stating that the FSM artifact must be representable and executable in JFLAP or an equivalent simulation environment."@en .
+
+ontoksd:TCons_Task03_StateAndTransitionAnalysis a ontoksd:TaskConstraint ;
+    rdfs:label "Analyze minimum states and transitions"@en ;
+    rdfs:comment "Constraint stating that the task includes analysis of relationships between herd thresholds and the minimum number of states and transitions required in the FSM."@en .
+
+ontoksd:TCons_Task03_ThresholdDetection a ontoksd:TaskConstraint ;
+    rdfs:label "Detect herd thresholds"@en ;
+    rdfs:comment "Constraint stating that the solution must detect when predefined minimum herd quantities are reached."@en .
+
+ontoksd:AC_Task03_FarmerRobot a ontoksd:AcquisitionContext ;
+    rdfs:label "Task03 Acquisition Context — The Farmer Robot"@en ;
+    dcterms:identifier "Task03-AC"^^xsd:string ;
+    rdfs:comment "Acquisition context associated with Task03. It represents the pedagogical setting in which learners engage in a problem-based learning activity focused on the modeling, simulation, analysis, and documentation of a herd-identification module using Finite State Machines and Regular Expressions. This context includes collaborative work, use of JFLAP, and process documentation through whiteboard and logbook artifacts."@en .
+
+ontoksd:ER_Task03_JFLAP a ontoksd:EducationalResource ;
+    rdfs:label "JFLAP simulator"@en ;
+    dcterms:description "Simulation environment used to test, inspect, and validate Finite State Machine behavior."@en ;
+    dcterms:identifier "Task03-ER2"^^xsd:string ;
+    ontoksd:intendedUse "Simulation, execution, debugging, and validation of FSM artifacts."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the simulator used for operational validation of FSM models developed in Task03."@en .
+
+ontoksd:ER_Task03_ProblemStatement a ontoksd:EducationalResource ;
+    rdfs:label "Task03 problem statement"@en ;
+    dcterms:description "Problem statement describing the Farmer Robot scenario, its requirements, and expected deliverables."@en ;
+    dcterms:identifier "Task03-ER1"^^xsd:string ;
+    ontoksd:intendedUse "Instructional framing and requirement interpretation for the learning task and the assessment."^^xsd:string ;
+    rdfs:comment "Educational resource corresponding to the formal statement of Task03. It frames the problem, constraints, and deliverables guiding both instructional execution and assessment."@en .
+
+ontoksd:ER_Task03_SBCReportTemplate a ontoksd:EducationalResource ;
+    rdfs:label "SBC article-format report template"@en ;
+    dcterms:description "Template or normative reference for preparing the technical report required as a deliverable."@en ;
+    dcterms:identifier "Task03-ER5"^^xsd:string ;
+    ontoksd:intendedUse "Support for technical writing and report standardization."^^xsd:string ;
+    rdfs:comment "Educational resource supporting the preparation and standardization of the technical report associated with Task03."@en .
+
+ontoksd:Interval_Task03_Advanced a ontoksd:ScaleInterval ;
+    rdfs:label "Task03 interval — Advanced"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task03_Advanced ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task03_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task03_0_10 ;
+    ontoksd:lowerBound 9.0 ;
+    ontoksd:upperBound 10.0 ;
+    rdfs:comment "Interval corresponding to the Advanced proficiency level in Task03."@en .
+
+ontoksd:Interval_Task03_Competent a ontoksd:ScaleInterval ;
+    rdfs:label "Task03 interval — Competent"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task03_Competent ;
+    ontoksd:includesLower false ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task03_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task03_0_10 ;
+    ontoksd:lowerBound 5.0 ;
+    ontoksd:upperBound 9.0 ;
+    rdfs:comment "Interval corresponding to the Competent proficiency level in Task03."@en .
+
+ontoksd:Interval_Task03_Novice a ontoksd:ScaleInterval ;
+    rdfs:label "Task03 interval — Novice"@en ;
+    ontoksd:correspondsToLevel ontoksd:PL_Task03_Novice ;
+    ontoksd:includesLower true ;
+    ontoksd:includesUpper true ;
+    ontoksd:intervalDefinedInScheme ontoksd:PS_Task03_ProficiencyScheme ;
+    ontoksd:isIntervalOf ontoksd:Scale_Task03_0_10 ;
+    ontoksd:lowerBound 0.0 ;
+    ontoksd:upperBound 5.0 ;
+    rdfs:comment "Interval corresponding to the Novice proficiency level in Task03."@en .
+
+ontoksd:PL_Task03_Advanced a ontoksd:ProficiencyLevel ;
+    rdfs:label "Advanced"@en ;
+    dcterms:identifier "Task03-PL3"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "3"^^xsd:int ;
+    rdfs:comment "Proficiency level representing optimized or analytically enriched performance beyond baseline expectations in Task03."@en .
+
+ontoksd:PL_Task03_Competent a ontoksd:ProficiencyLevel ;
+    rdfs:label "Competent"@en ;
+    dcterms:identifier "Task03-PL2"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "2"^^xsd:int ;
+    rdfs:comment "Proficiency level representing accurate and coherent performance in the competencies associated with Task03."@en .
+
+ontoksd:PL_Task03_Novice a ontoksd:ProficiencyLevel ;
+    rdfs:label "Novice"@en ;
+    dcterms:identifier "Task03-PL1"^^xsd:string ;
+    ontoksd:hasOrdinalPosition "1"^^xsd:int ;
+    rdfs:comment "Proficiency level representing incomplete or incorrect performance in the competencies associated with Task03."@en .
+
+ontoksd:C03 ontoksd:hasTask ontoksd:Task03_FarmerRobot .
+
+ontoksd:C04 ontoksd:hasTask ontoksd:Task03_FarmerRobot .
+
+ontoksd:C05 ontoksd:hasTask ontoksd:Task03_FarmerRobot .
+
+ontoksd:C06 ontoksd:hasTask ontoksd:Task03_FarmerRobot .
+
+ontoksd:C11 ontoksd:hasTask ontoksd:Task03_FarmerRobot .
+
+ontoksd:PS_Task03_ProficiencyScheme a ontoksd:ProficiencyScheme ;
+    rdfs:label "Task03 proficiency scheme"@en ;
+    dcterms:identifier "Task03-PS"^^xsd:string ;
+    ontoksd:definesInterval ontoksd:Interval_Task03_Advanced,
+        ontoksd:Interval_Task03_Competent,
+        ontoksd:Interval_Task03_Novice ;
+    ontoksd:definesLevel ontoksd:PL_Task03_Advanced,
+        ontoksd:PL_Task03_Competent,
+        ontoksd:PL_Task03_Novice ;
+    ontoksd:usesScale ontoksd:Scale_Task03_0_10 ;
+    rdfs:comment "Proficiency scheme associated with Task03, defining how intervals in the numeric scale are interpreted as proficiency levels."@en ;
+    skos:scopeNote "Specification-level interpretive assumption recorded in the CSP report, not an observed result or a grading rule contained in the original task statement. The assessment references this planned scheme documentarily; usesProficiencyScheme is reserved for AssessmentOccurrence."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Report.md> .
+
+ontoksd:Scale_Task03_0_10 a ontoksd:Scale ;
+    rdfs:label "Task03 proficiency scale 0–10"@en ;
+    dcterms:identifier "Task03-SCALE"^^xsd:string ;
+    ontoksd:hasInterval ontoksd:Interval_Task03_Advanced,
+        ontoksd:Interval_Task03_Competent,
+        ontoksd:Interval_Task03_Novice ;
+    ontoksd:maxValue 10.0 ;
+    ontoksd:minValue 0.0 ;
+    ontoksd:step 0.1 ;
+    rdfs:comment "Decimal scoring range from 0 to 10 with a selected granularity of 0.1. For Task04, the reported 5.1/9.1 starts are interpreted on this one-decimal domain. Numeric validation of step adherence is external to OWL."@en .
+
+ontoksd:AS_Task03_FarmerRobot a ontoksd:Assessment ;
+    rdfs:label "Assessment — Task03 Farmer Robot"@en ;
+    dcterms:description "Assessment specification based on Task03, intended to evaluate learners through the submitted FSM artifact, corresponding regular expressions, simulation-supported validation, structural analysis, and technical report."@en ;
+    dcterms:identifier "Task03-AS"^^xsd:string ;
+    dcterms:references ontoksd:PS_Task03_ProficiencyScheme ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task03_FarmerRobot ;
+    ontoksd:hasAssessmentTypeConcept ontoksd:ProjectAssessmentStrategyType,
+        ontoksd:WrittenAssessmentModalityType ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task03_C03,
+        ontoksd:CA_Task03_C04,
+        ontoksd:CA_Task03_C05,
+        ontoksd:CA_Task03_C06,
+        ontoksd:CA_Task03_C11 ;
+    ontoksd:hasInstructionalStatement "Assess the submitted model, technical report and documented PBL process against the task requirements. Individual participation is an assessment design concern; this specification does not assert an assessment occurrence or an individual result."@en ;
+    ontoksd:isBasedOnActivity ontoksd:LT_Task03_FarmerRobot ;
+    ontoksd:usesResource ontoksd:ER_Task03_JFLAP,
+        ontoksd:ER_Task03_ProblemStatement,
+        ontoksd:ER_Task03_SBCReportTemplate ;
+    rdfs:comment "Assessment specification associated with Task03. It represents the evaluative use of the learning task as a basis for judging learner performance through formal artifacts, structural analysis, and technical documentation."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:Task03_FarmerRobot a ontoksd:Task ;
+    rdfs:label "Task03 — The Farmer Robot"@en ;
+    dcterms:identifier "Task03-TASK"^^xsd:string ;
+    ontoksd:hasTaskActivity ontoksd:TA_Task03_ModelAnalyzeAndValidateFSM ;
+    ontoksd:hasTaskComponent ontoksd:TC_Task03_ComplexityAndCostAnalysis,
+        ontoksd:TC_Task03_FSMArtifact,
+        ontoksd:TC_Task03_HerdIdentificationModule,
+        ontoksd:TC_Task03_RegularExpressionSet,
+        ontoksd:TC_Task03_TechnicalReport ;
+    ontoksd:hasTaskConstraint ontoksd:TCons_Task03_AnimalClassification,
+        ontoksd:TCons_Task03_FeedRequestTrigger,
+        ontoksd:TCons_Task03_LowCostConstraint,
+        ontoksd:TCons_Task03_ProcessDocumentation,
+        ontoksd:TCons_Task03_RegularExpressionDocumentation,
+        ontoksd:TCons_Task03_SimulatorExecution,
+        ontoksd:TCons_Task03_StateAndTransitionAnalysis,
+        ontoksd:TCons_Task03_ThresholdDetection ;
+    ontoksd:hasTaskStatement "Design, simulate, validate, analyze, and document a herd-identification module using Finite State Machines and Regular Expressions, capable of identifying animal classes, detecting threshold conditions for feed requests, and supporting complexity-based cost estimation."@en ;
+    ontoksd:isTaskOf ontoksd:C03,
+        ontoksd:C04,
+        ontoksd:C05,
+        ontoksd:C06,
+        ontoksd:C11 ;
+    rdfs:comment "Specification-level task corresponding to the Farmer Robot PBL case. It represents the problem of designing a low-cost herd-identification module capable of recognizing bovines, caprines, and swine, triggering feed requests according to predefined thresholds, and supporting documentation and budgeting analysis based on FSM structure."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+
+ontoksd:LT_Task03_FarmerRobot a ontoksd:LearningTask ;
+    rdfs:label "Learning Task — The Farmer Robot"@en ;
+    dcterms:description "Concrete instructional unit in which learners analyze requirements, model a herd-identification solution using Finite State Machines, derive regular expressions, investigate structural patterns, test the solution in JFLAP, and document the result."@en ;
+    dcterms:identifier "Task03-LT"^^xsd:string ;
+    ontoksd:hasAcquisitionContext ontoksd:AC_Task03_FarmerRobot ;
+    ontoksd:hasCompetenceActivation ontoksd:CA_Task03_C03_Learning,
+        ontoksd:CA_Task03_C04_Learning,
+        ontoksd:CA_Task03_C05_Learning,
+        ontoksd:CA_Task03_C06_Learning,
+        ontoksd:CA_Task03_C11_Learning ;
+    ontoksd:hasInstructionalStatement """﻿# **Problem 3 (Task): Farmer Robot**
+ 
+Authors: Luiz Gavaza &nbsp; Lais Salvador &nbsp;  Roberta Oliveira  &nbsp; Daniel Cason
+ 
+Authors: Edeyson Gomes &nbsp;  Jéssica Santana
+
+## **Task: The Farmer Robot**
+
+### **1. Introduction**  
+The company **Farmer Robot** is developing a prototype robot to identify herds in livestock farms where animals roam freely (extensive livestock farming). This robot is equipped with a highly advanced visualization module capable of classifying animals as bovine, caprine, or swine. To improve farm management—such as selecting the appropriate feed for each herd—it is essential to identify which herds are present in the enclosures. To minimize transportation costs for delivering feed, the robot must send feed requests when it identifies a minimum number of individuals in a given herd. These minimum quantities are predefined with the farm owner. However, the Farmer Robot company has not yet developed the module responsible for performing this identification.  
+
+A technician at Farmer Robot, who is also a student in one of UFBA's Computing courses, brought this problem to their classmates so they could collaboratively develop a prototype for the robot's identification module. Due to budget constraints, Farmer Robot is seeking the most cost-effective solution for this initial prototype.  
+
+During their initial research, the students determined that a simple finite state machine could solve the problem. How they reached this conclusion is an interesting question. Additionally, the students discovered a mathematical expression frequently used in protocols, which is easy to understand and could be part of the solution's documentation. This expression can be constructed once the solution is implemented using a finite state machine. The students presented this possibility in a meeting, and the company expressed interest in learning more about this aspect.  
+
+The company is also interested in determining whether a rule can be established to calculate the minimum number of states and transitions required based on the minimum herd quantities to be identified. This would enable more accurate budgeting for the project.  
+
+The suggested tool for simulating the robot's identification module is **JFLAP**.  
+
+
+
+### **2. Process**  
+During the solution development process, the **Problem-Based Learning (PBL)** methodology will be used. This approach leverages real-world problems to stimulate the development of critical thinking, teamwork, and problem-solving skills while fostering knowledge construction around a specific topic.  
+
+The process must be documented using the **PBL whiteboard**, which consists of the columns **QUESTIONS, FACTS, IDEAS/HYPOTHESES, and ACTIONS**. During each team meeting, a version of the whiteboard should be created, thereby documenting the steps taken in constructing the solution. This documentation will be part of the group's evaluation. Additionally, a shared document will be provided to record the **Logbook**, containing meeting minutes, participant names, discussion points, and challenges encountered, as explained during a synchronous session.  
+
+
+
+### **3. Deliverables**  
+A team member must submit the following by **8:20 PM on March 31, 2021**, via UFBA's virtual learning environment (AVA):  
+
+1. A file for the **JFLAP simulator** containing the robot's identification module. 
+
+2. A **report**, written in the SBC (Brazilian Computing Society) article format, that thoroughly details the design and functionality of the robot's identification module.  
+
+The report must describe the system's operations and include at least **two examples** of how it functions. Additionally, the report should address the company's documentation and budgeting inquiries.  
+
+
+
+### **4. Knowledge/Concepts Involved**  
+
+    1. Finite State Machines
+
+    2. Regular Languages  
+
+    3. Regular Expressions  
+
+
+
+### **5. Learning Objectives**  
+
+#### **5.1 General Objective**  
+Develop a herd identification module for the farmer robot prototype using knowledge of finite state machines and regular expressions.  
+
+#### **5.2 Specific Objectives**  
+
+1. Identify the functionalities of the farmer robot's identification module.
+
+2. Apply the concept of finite state machines to solve the herd identification problem.  
+
+3. Research and use regular expressions as part of the documentation and solution.  
+
+4. Investigate the relationship between the minimum number of herds to be identified and the minimum states and transitions required in the finite state machine.  
+
+5. Use the **JFLAP** tool to simulate the robot's identification process.  
+
+6. Prepare a detailed report in the SBC article format, describing the robot's identification module's operations and providing examples of its functionality.  
+
+
+### </a> References 
+RAMOS, M. V. M.; JOSE NETO, J.; VEGA, I. S. **Linguagens Formais: Teoria, Modelagem e Implementação**. Editora Bookman, 2009.
+
+MENEZES, Paulo Blauth. **Linguagens formais e autômatos**. 6. ed. Bookman, 2011."""@en ;
+    ontoksd:isTeamBased true ;
+    ontoksd:usesResource ontoksd:ER_Task03_JFLAP,
+        ontoksd:ER_Task03_Logbook,
+        ontoksd:ER_Task03_PBLWhiteboard,
+        ontoksd:ER_Task03_ProblemStatement,
+        ontoksd:ER_Task03_SBCReportTemplate ;
+    rdfs:comment "Learning task corresponding to Task03. It captures the executable instructional dimension of the Farmer Robot case, in which learners are expected to perform a bounded and goal-directed activity oriented toward competence development and demonstration."@en ;
+    prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md>,
+        <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-FarmingRobot.md> .
+}

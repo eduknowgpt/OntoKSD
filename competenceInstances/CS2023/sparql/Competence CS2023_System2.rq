@@ -1,0 +1,180 @@
+# CS2023 Systems2; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Systems2_DM_Data_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "DM-Data × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_DM_Data ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: DM-Data at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "DM-Data × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEC_Foundations_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEC-Foundations × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEC_Foundations ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEC-Foundations at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEC-Foundations × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEP_Context_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Context × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Context ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEP-Context at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Context × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEP_DEIA_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-DEIA × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_DEIA ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEP-DEIA at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-DEIA × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEP_Ethical_Analysis_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Ethical-Analysis × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Ethical_Analysis ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEP-Ethical-Analysis at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Ethical-Analysis × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEP_Privacy_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Privacy × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Privacy ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEP-Privacy at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Privacy × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEP_Professional_Ethics_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Professional-Ethics × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Professional_Ethics ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEP-Professional-Ethics at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Professional-Ethics × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:KS_Systems2_SEP_Security_1_Evaluate a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "SEP-Security × Evaluate"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_SEP_Security ;
+    ontoksd:hasSkillLevel level:Evaluate ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Local knowledge–level assignment for Systems2: SEP-Security at Evaluate. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "SEP-Security × Evaluate"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:TaskActivity_Systems2_Evaluate a ontoksd:TaskActivity ;
+    rdfs:label "evaluate"@en ;
+    rdfs:comment "Task activity capturing the evaluation of the long-term consequences of collecting, storing, and retaining data objects."@en ;
+    skos:prefLabel "evaluate"@en .
+
+cs2023c:TaskActivity_Systems2_Explain a ontoksd:TaskActivity ;
+    rdfs:label "explain"@en ;
+    rdfs:comment "Task activity capturing the explanation of the rationale, implications, and risks associated with data collection, storage, and retention practices."@en ;
+    skos:prefLabel "explain"@en .
+
+cs2023c:TaskActivity_Systems2_Humanize a ontoksd:TaskActivity ;
+    rdfs:label "humanize"@en ;
+    rdfs:comment "Task activity capturing the human-centered consideration of stakeholders, social impact, ethical implications, and potential harms related to data practices."@en ;
+    skos:prefLabel "humanize"@en .
+
+cs2023c:TaskActivity_Systems2_Identify a ontoksd:TaskActivity ;
+    rdfs:label "identify"@en ;
+    rdfs:comment "Task activity capturing the identification of stakeholders affected by the collection and retention of data objects."@en ;
+    skos:prefLabel "identify"@en .
+
+cs2023c:TaskComponent_Systems2_Data a ontoksd:TaskComponent ;
+    rdfs:label "data"@en ;
+    rdfs:comment "Task component corresponding to the data objects whose collection, storage, and retention are assessed in relation to a new or existing application."@en ;
+    skos:prefLabel "data"@en .
+
+cs2023c:TaskConstraint_Systems2_SocialEthicalImplications a ontoksd:TaskConstraint ;
+    rdfs:label "the design of the solution vis-a-vis social and ethical implications"@en ;
+    rdfs:comment "Task constraint stating that the evaluation must be carried out in relation to the design of the solution and its social and ethical implications, including harms associated with unintended data use and data breaches."@en ;
+    skos:prefLabel "the design of the solution vis-a-vis social and ethical implications"@en .
+
+cs2023c:Task_Systems2 a ontoksd:Task ;
+    rdfs:label "Systems2 task"@en ;
+    dcterms:identifier "Task_Systems2"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Systems2_Evaluate,
+        cs2023c:TaskActivity_Systems2_Explain,
+        cs2023c:TaskActivity_Systems2_Humanize,
+        cs2023c:TaskActivity_Systems2_Identify ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Systems2_Data ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Systems2_SocialEthicalImplications ;
+    ontoksd:hasTaskStatement "Produce a white paper assessing the social and ethical implications of collecting and storing data from a new (or existing) application."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Systems2 ;
+    rdfs:comment "Specification-level task associated with Competence_Systems2. This compound task concerns producing a white paper that evaluates data-related practices and humanizes the design of the solution in light of social and ethical implications, including harms arising from unintended data use and data breaches."@en ;
+    skos:prefLabel "Systems2 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Systems2 .
+
+cs2023c:Competence_Systems2 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects"@en ;
+    dcterms:identifier "Systems2"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:meticulous,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Systems2_DM_Data_1_Evaluate,
+        cs2023c:KS_Systems2_SEC_Foundations_1_Evaluate,
+        cs2023c:KS_Systems2_SEP_Context_1_Evaluate,
+        cs2023c:KS_Systems2_SEP_DEIA_1_Evaluate,
+        cs2023c:KS_Systems2_SEP_Ethical_Analysis_1_Evaluate,
+        cs2023c:KS_Systems2_SEP_Privacy_1_Evaluate,
+        cs2023c:KS_Systems2_SEP_Professional_Ethics_1_Evaluate,
+        cs2023c:KS_Systems2_SEP_Security_1_Evaluate ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Systems2 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Systems2. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects. Consider both potential harm from unintended data use and from data breaches."@en ;
+    skos:prefLabel "Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Systems2 .
+
+cs2023c:Source_Systems2 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Systems2, starting on printed page 400."@en ;
+    dcterms:description "Task: Produce a white paper assessing the social and ethical implications of collecting and storing data from a new (or existing) application. Competency statement: Identify the stakeholders and evaluate the potential long-term consequences of the collection and retention of data objects. Consider both potential harm from unintended data use and from data breaches. Required knowledge: SEP-Context, SEP-Ethical-Analysis, SEP-Privacy, SEP-Professional-Ethics, SEP-Security, SEP-DEIA, DM-Data, SEC-Foundations. Required skills: Evaluate, Explain. Desirable professional dispositions: Meticulous, Responsible, Proactive."@en ;
+    dcterms:identifier "Systems2" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_DM_Data,
+        cs2023:KU_SEC_Foundations,
+        cs2023:KU_SEP_Context,
+        cs2023:KU_SEP_DEIA,
+        cs2023:KU_SEP_Ethical_Analysis,
+        cs2023:KU_SEP_Privacy,
+        cs2023:KU_SEP_Professional_Ethics,
+        cs2023:KU_SEP_Security,
+        level:Evaluate,
+        level:Explain .
+}

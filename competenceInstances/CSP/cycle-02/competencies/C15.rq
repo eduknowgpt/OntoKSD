@@ -1,0 +1,78 @@
+# New cycle-02 competence C15
+# INSERT-only incremental cycle-02 instance data; see README.md for dependencies.
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cc2020found: <http://purl.org/cc2020/foundational#>
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023k: <http://purl.org/cs2023/knowledge#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ontoksd:KS_C15_AnalyticalThinking_Applying a ontoksd:KnowledgeSkill ;
+    rdfs:label "Analytical and Critical Thinking x Applying"@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:argue,
+        bloom:evaluate,
+        bloom:structure ;
+    ontoksd:hasCurricularKnowledgeReference <http://purl.org/cc2020/foundational/concept#AnalyticalThinking> ;
+    ontoksd:hasKnowledgeComponent cc2020found:AnalyticalThinking ;
+    ontoksd:hasSkillLevel bloom:Applying ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:KS_C15_Computability_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Computability x Understanding"@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:classify,
+        bloom:explain,
+        bloom:recognize ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_4 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C15_Computability ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:KS_C15_HaltingProblem_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Halting Problem x Understanding"@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:describe,
+        bloom:explain,
+        bloom:justify ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_4 ;
+    ontoksd:hasKnowledgeComponent ontoksd:Knowledge_C15_HaltingProblem ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:KS_C15_TuringMachines_Understanding a ontoksd:KnowledgeSkill ;
+    rdfs:label "Turing Machines x Understanding"@en ;
+    ontoksd:hasBloomLevelJustificationVerb bloom:explain,
+        bloom:relate ;
+    ontoksd:hasCurricularKnowledgeReference cs2023:Topic_AL_Models_1_d ;
+    ontoksd:hasKnowledgeComponent cs2023k:Knowledge_AL_Models_1_d ;
+    ontoksd:hasSkillLevel bloom:Understanding ;
+    ontoksd:isKnowledgeSkillOf ontoksd:C15 ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+
+ontoksd:C15 a ontoksd:AtomicCompetence,
+        ontoksd:CC2020Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Understand the Halting Problem and its Implications"@en ;
+    dcterms:identifier "C15"^^xsd:string ;
+    ontoksd:hasCompetenceScope ontoksd:computingSpecificCompetenceScope ;
+    ontoksd:hasDisposition ontoksd:collaborative,
+        ontoksd:creative,
+        ontoksd:proactive,
+        ontoksd:responsible ;
+    ontoksd:hasKnowledgeSkill ontoksd:KS_C15_AnalyticalThinking_Applying,
+        ontoksd:KS_C15_Computability_Understanding,
+        ontoksd:KS_C15_HaltingProblem_Understanding,
+        ontoksd:KS_C15_TuringMachines_Understanding ;
+    ontoksd:hasSpecificationPattern ontoksd:CC2020SpecificationPattern ;
+    ontoksd:hasStructureType ontoksd:Atomic ;
+    skos:definition "Understand the Halting Problem and its Implications"@en ;
+    prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
+}

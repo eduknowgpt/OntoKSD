@@ -1,0 +1,94 @@
+# CS2023 Software5; source requirements and explicit OntoKSD local assignments.
+# INSERT-only instance data; load dependencies described in README.md.
+PREFIX cs2023: <http://purl.org/cs2023#>
+PREFIX cs2023c: <http://purl.org/cs2023/competency#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX level: <http://purl.org/edu/cs2023#>
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+cs2023c:KS_Software5_FPL_Types_18_Develop a ontoksd:KnowledgeSkill,
+        owl:NamedIndividual ;
+    rdfs:label "FPL-Types × Develop"@en ;
+    ontoksd:hasKnowledgeComponent cs2023c:KnowledgeUnitContent_FPL_Types ;
+    ontoksd:hasSkillLevel level:Develop ;
+    ontoksd:isKnowledgeSkillOf cs2023c:Competence_Software5 ;
+    rdfs:comment "Local knowledge–level assignment for Software5: FPL-Types at Develop. The unit and level occur in the source lists; the specific binding is a modeling decision. The source does not allocate each listed level to individual units. Multiple levels are not reduced by an assumed hierarchy."@en ;
+    skos:prefLabel "FPL-Types × Develop"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software5 .
+
+cs2023c:TaskActivity_Software5_Develop a ontoksd:TaskActivity ;
+    rdfs:label "develop"@en ;
+    rdfs:comment "Task activity capturing the development of software artifacts."@en ;
+    skos:prefLabel "develop"@en .
+
+cs2023c:TaskActivity_Software5_Ensure a ontoksd:TaskActivity ;
+    rdfs:label "ensure"@en ;
+    rdfs:comment "Task activity capturing the intention to ensure that the resulting application is safe, secure, and correct."@en ;
+    skos:prefLabel "ensure"@en .
+
+cs2023c:TaskActivity_Software5_Use a ontoksd:TaskActivity ;
+    rdfs:label "use"@en ;
+    rdfs:comment "Task activity capturing the use of a programming language's type system during software development."@en ;
+    skos:prefLabel "use"@en .
+
+cs2023c:TaskComponent_Software5_Application a ontoksd:TaskComponent ;
+    rdfs:label "application under development"@en ;
+    rdfs:comment "Task component corresponding to the software application being developed."@en ;
+    skos:prefLabel "application under development"@en .
+
+cs2023c:TaskComponent_Software5_TypeSystem a ontoksd:TaskComponent ;
+    rdfs:label "programming language type system"@en ;
+    rdfs:comment "Task component corresponding to the type system whose static type rules are used during software development."@en ;
+    skos:prefLabel "programming language type system"@en .
+
+cs2023c:TaskConstraint_Software5_SafetySecurityCorrectness a ontoksd:TaskConstraint ;
+    rdfs:label "to ensure the application is safe, secure, and correct"@en ;
+    rdfs:comment "Task constraint stating that the use of the type system is directed toward achieving software safety, security, and correctness."@en ;
+    skos:prefLabel "to ensure the application is safe, secure, and correct"@en .
+
+cs2023c:Task_Software5 a ontoksd:Task ;
+    rdfs:label "Software5 task"@en ;
+    dcterms:identifier "Task_Software5"^^xsd:string ;
+    ontoksd:hasTaskActivity cs2023c:TaskActivity_Software5_Develop,
+        cs2023c:TaskActivity_Software5_Ensure,
+        cs2023c:TaskActivity_Software5_Use ;
+    ontoksd:hasTaskComponent cs2023c:TaskComponent_Software5_Application,
+        cs2023c:TaskComponent_Software5_TypeSystem ;
+    ontoksd:hasTaskConstraint cs2023c:TaskConstraint_Software5_SafetySecurityCorrectness ;
+    ontoksd:hasTaskStatement "Effectively use a programming language’s type system to develop safe and secure software."@en ;
+    ontoksd:isTaskOf cs2023c:Competence_Software5 ;
+    rdfs:comment "Specification-level task associated with Competence_Software5. The task concerns using a programming language's type system during software development to promote safety, security, and correctness in the resulting application."@en ;
+    skos:prefLabel "Software5 task"@en ;
+    prov:wasDerivedFrom cs2023c:Source_Software5 .
+
+cs2023c:Competence_Software5 a ontoksd:CS2023Competence,
+        ontoksd:Competence,
+        owl:NamedIndividual ;
+    rdfs:label "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct"@en ;
+    dcterms:identifier "Software5"^^xsd:string ;
+    dcterms:source cs2023:CS2023Document ;
+    ontoksd:hasDisposition ontoksd:inventive,
+        ontoksd:meticulous ;
+    ontoksd:hasKnowledgeSkill cs2023c:KS_Software5_FPL_Types_18_Develop ;
+    ontoksd:hasSpecificationPattern ontoksd:CS2023SpecificationPattern ;
+    ontoksd:hasTask cs2023c:Task_Software5 ;
+    rdfs:comment "OntoKSD representation of CS2023 example Software5. The source record retains the complete, unpaired knowledge-unit and skill-level lists. KnowledgeSkill pairings are explicit local assignments and do not claim that CS2023 specifies those individual bindings. Task elements are an analytical interpretation of the reference task and competence statement."@en ;
+    skos:definition "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct."@en ;
+    skos:prefLabel "Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct"@en ;
+    prov:wasDerivedFrom cs2023:CS2023Document,
+        cs2023c:Source_Software5 .
+
+cs2023c:Source_Software5 a prov:Entity ;
+    dcterms:bibliographicCitation "Computer Science Curricula 2023, Competency Framework Examples, example Software5, starting on printed page 400."@en ;
+    dcterms:description "Task: Effectively use a programming language’s type system to develop safe and secure software. Competency statement: Apply knowledge of static type rules for a language to ensure an application is safe, secure, and correct. Required knowledge: FPL-Types. Required skills: Develop. Desirable professional dispositions: Inventive, Meticulous."@en ;
+    dcterms:identifier "Software5" ;
+    dcterms:isPartOf cs2023:CS2023Document ;
+    dcterms:requires cs2023:KU_FPL_Types,
+        level:Develop .
+}
