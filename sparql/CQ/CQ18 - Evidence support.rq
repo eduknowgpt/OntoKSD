@@ -1,50 +1,21 @@
-# This query retrieves the evidence instances that support evidenced competence records or evidenced competence constituent records. It returns each evidenced record, its type, the abstract competence or competence constituent to which it refers, and the evidence that supports its identification or recognition. Thus, the query demonstrates that OntoKSD can trace evidenced competences and evidenced competence constituents back to the concrete evidence instances that support them.
+# CQ18: Which evidence supports each whole or constituent judgment?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Shared evidence can support several records; support is not proof of validity or sufficiency.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?evidencedRecord
-  ?evidencedRecordLabel
-  ?recordType
-  ?referencedEntity
-  ?referencedEntityLabel
-  ?evidence
-  ?evidenceLabel
+SELECT DISTINCT ?evidencedRecord ?evidencedRecordLabel ?recordType ?referencedEntity ?evidence ?evidenceLabel
 WHERE {
-  {
-    ?evidencedRecord a ontoksd:EvidencedCompetence ;
-                     ontoksd:supportedByEvidence ?evidence .
-
-    BIND("EvidencedCompetence" AS ?recordType)
-
-    OPTIONAL {
-      ?evidencedRecord ontoksd:refersToCompetence ?referencedEntity .
-    }
-  }
-  UNION
-  {
-    ?evidencedRecord a ontoksd:EvidencedCompetenceConstituent ;
-                     ontoksd:supportedByEvidence ?evidence .
-
-    BIND("EvidencedCompetenceConstituent" AS ?recordType)
-
-    OPTIONAL {
-      ?evidencedRecord ontoksd:refersToCompetenceConstituent ?referencedEntity .
-    }
-  }
-
-  OPTIONAL { ?evidencedRecord rdfs:label ?evidencedRecordRdfsLabel . }
-  OPTIONAL { ?evidencedRecord skos:prefLabel ?evidencedRecordSkosLabel . }
-  BIND(COALESCE(?evidencedRecordRdfsLabel, ?evidencedRecordSkosLabel, STR(?evidencedRecord)) AS ?evidencedRecordLabel)
-
-  OPTIONAL { ?referencedEntity rdfs:label ?referencedEntityRdfsLabel . }
-  OPTIONAL { ?referencedEntity skos:prefLabel ?referencedEntitySkosLabel . }
-  BIND(COALESCE(?referencedEntityRdfsLabel, ?referencedEntitySkosLabel, STR(?referencedEntity)) AS ?referencedEntityLabel)
-
-  OPTIONAL { ?evidence rdfs:label ?evidenceRdfsLabel . }
-  OPTIONAL { ?evidence skos:prefLabel ?evidenceSkosLabel . }
-  BIND(COALESCE(?evidenceRdfsLabel, ?evidenceSkosLabel, STR(?evidence)) AS ?evidenceLabel)
+VALUES (?recordType ?referenceProperty) { (ontoksd:EvidencedCompetence ontoksd:refersToCompetence) (ontoksd:EvidencedCompetenceConstituent ontoksd:refersToCompetenceConstituent) }
+?evidencedRecord a ?recordType .
+?evidencedRecord (ontoksd:supportedByEvidence|^ontoksd:evidencesCompetence) ?evidence .
+OPTIONAL { ?evidencedRecord ?referenceProperty ?referencedEntity . }
+OPTIONAL { ?evidencedRecord (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedRecordLabel . }
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
 }
-ORDER BY ?recordType ?evidencedRecordLabel ?evidenceLabel
+ORDER BY ?evidencedRecord ?evidencedRecordLabel ?evidenceLabel

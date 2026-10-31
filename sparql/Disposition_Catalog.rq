@@ -1,0 +1,20 @@
+# Which dispositions and attitudes are available?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# Uses the class hierarchy to include Attitude without requiring materialized subclass typing; these are specification values, not learner traits.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?disposition ?dispositionLabel ?isAttitude ?category
+WHERE {
+?disposition a/rdfs:subClassOf* ontoksd:Disposition .
+BIND(EXISTS { ?disposition a/rdfs:subClassOf* ontoksd:Attitude . } AS ?isAttitude)
+OPTIONAL { ?disposition ontoksd:hasDispositionCategory ?category . }
+OPTIONAL { ?disposition (rdfs:label|skos:prefLabel|dcterms:title) ?dispositionLabel . }
+}
+ORDER BY ?disposition ?dispositionLabel

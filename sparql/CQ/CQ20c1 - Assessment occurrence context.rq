@@ -1,21 +1,18 @@
-# CQ20c1 - Assessment occurrence realizes assessment.rq
-
-# This query retrieves which assessment specification is realized by each assessment occurrence.
+# CQ20c1: Which assessment specification is realized by each occurrence?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Specification and occurrence remain distinct entities.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
-  ?assessment
-  ?assessmentLabel
+SELECT DISTINCT ?assessmentOccurrence ?assessmentOccurrenceLabel ?assessment ?assessmentLabel
 WHERE {
-  ?assessmentOccurrence ontoksd:realizes ?assessment .
-
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
-  OPTIONAL { ?assessment rdfs:label ?assessmentLabel . }
+?assessmentOccurrence (ontoksd:realizes|^ontoksd:isRealizedBy) ?assessment .
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
+OPTIONAL { ?assessment (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentLabel . }
 }
-ORDER BY ?assessmentOccurrenceLabel ?assessmentLabel
-
-
+ORDER BY ?assessmentOccurrence ?assessmentOccurrenceLabel ?assessmentLabel

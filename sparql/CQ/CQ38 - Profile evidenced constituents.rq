@@ -1,27 +1,24 @@
-# This query retrieves evidenced competence constituents associated with learner profiles. It returns each learner profile, the evidenced competence constituent records associated with that profile, the abstract competence constituent to which each evidenced record refers, and, when available, the attributed proficiency level. Thus, the query demonstrates that OntoKSD can support learner-profile-oriented views of demonstrated competence constituents such as Knowledge, Skill, or Disposition elements.
+# CQ38: Which constituent judgments can be traced to each profile?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Parent-free constituent judgments remain retrievable through participation; disagreeing paths need separate integrity checks.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?profile
-  ?profileLabel
-  ?evidencedConstituent
-  ?evidencedConstituentLabel
-  ?competenceConstituent
-  ?competenceConstituentLabel
-  ?proficiencyLevel
-  ?proficiencyLevelLabel
+SELECT DISTINCT ?profile ?profileLabel ?evidencedConstituent ?evidencedConstituentLabel ?competenceConstituent ?competenceConstituentLabel ?profileLinkSource ?proficiencyLevel ?proficiencyScheme
 WHERE {
-  ?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ;
-                        ontoksd:isEvidencedCompetenceConstituentOf ?profile ;
-                        ontoksd:refersToCompetenceConstituent ?competenceConstituent .
-
-  OPTIONAL { ?evidencedConstituent ontoksd:hasProficiencyLevel ?proficiencyLevel . }
-
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?evidencedConstituent rdfs:label ?evidencedConstituentLabel . }
-  OPTIONAL { ?competenceConstituent rdfs:label ?competenceConstituentLabel . }
-  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ; ontoksd:refersToCompetenceConstituent ?competenceConstituent .
+{ ?evidencedConstituent ontoksd:derivedFromParticipation/(ontoksd:hasLearner|^ontoksd:participatesIn)/(ontoksd:hasProfile|^ontoksd:isProfileOf) ?profile . BIND("participation learner profile" AS ?profileLinkSource) }
+UNION
+{ ?evidencedConstituent (ontoksd:isEvidencedCompetenceConstituentOf|^ontoksd:hasEvidencedConstituent)/(ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile . BIND("parent judgment profile" AS ?profileLinkSource) }
+OPTIONAL { ?evidencedConstituent ontoksd:hasProficiencyLevel ?proficiencyLevel . }
+OPTIONAL { ?evidencedConstituent ontoksd:interpretedUsingScheme ?proficiencyScheme . }
+OPTIONAL { ?profile (rdfs:label|skos:prefLabel|dcterms:title) ?profileLabel . }
+OPTIONAL { ?evidencedConstituent (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedConstituentLabel . }
+OPTIONAL { ?competenceConstituent (rdfs:label|skos:prefLabel|dcterms:title) ?competenceConstituentLabel . }
 }
-ORDER BY ?profileLabel ?competenceConstituentLabel ?proficiencyLevelLabel
+ORDER BY ?profile ?profileLabel ?evidencedConstituentLabel ?competenceConstituentLabel

@@ -1,22 +1,20 @@
-# This query retrieves overall proficiency levels directly assigned to evidenced competence records. It returns each EvidencedCompetence, the abstract competence to which it refers, and the ProficiencyLevel attributed to the demonstrated competence as a whole. Thus, the query demonstrates that OntoKSD can represent an overall proficiency attribution for contextualized competence demonstrations.
+# CQ32a: Which proficiency level and interpretive scheme are assigned to each whole-competence judgment?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: CQ32a is the whole-competence view also available in CQ26; it does not aggregate constituent levels.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?evidencedCompetence
-  ?evidencedCompetenceLabel
-  ?proficiencyLevel
-  ?proficiencyLevelLabel
+SELECT DISTINCT ?evidencedRecord ?evidencedRecordLabel ?competence ?competenceLabel ?proficiencyLevel ?proficiencyLevelLabel ?proficiencyScheme
 WHERE {
-  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
-                       ontoksd:refersToCompetence ?competence ;
-                       ontoksd:hasProficiencyLevel ?proficiencyLevel .
-
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
-  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+?evidencedRecord a ontoksd:EvidencedCompetence ; ontoksd:refersToCompetence ?competence ; ontoksd:hasProficiencyLevel ?proficiencyLevel .
+OPTIONAL { ?evidencedRecord ontoksd:interpretedUsingScheme ?proficiencyScheme . }
+OPTIONAL { ?evidencedRecord (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedRecordLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?proficiencyLevel (rdfs:label|skos:prefLabel|dcterms:title) ?proficiencyLevelLabel . }
 }
-ORDER BY ?competenceLabel ?evidencedCompetenceLabel ?proficiencyLevelLabel
+ORDER BY ?evidencedRecord ?evidencedRecordLabel ?competenceLabel ?proficiencyLevelLabel

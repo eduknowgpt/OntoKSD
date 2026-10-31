@@ -1,0 +1,25 @@
+# Which constituent judgments are linked to each whole-competence judgment, with which independent levels?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# A joint detail view of parent/child judgments; no proficiency aggregation or transfer between granularities is inferred. Standalone constituent judgments remain covered by CQ23/CQ38.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?evidencedCompetence ?competence ?competenceLabel ?overallLevel ?overallScheme ?evidencedConstituent ?constituent ?constituentLabel ?constituentLevel ?constituentScheme
+WHERE {
+?evidencedCompetence a ontoksd:EvidencedCompetence ; ontoksd:refersToCompetence ?competence ;
+ (ontoksd:hasEvidencedConstituent|^ontoksd:isEvidencedCompetenceConstituentOf) ?evidencedConstituent .
+?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ; ontoksd:refersToCompetenceConstituent ?constituent .
+OPTIONAL { ?evidencedCompetence ontoksd:hasProficiencyLevel ?overallLevel . }
+OPTIONAL { ?evidencedCompetence ontoksd:interpretedUsingScheme ?overallScheme . }
+OPTIONAL { ?evidencedConstituent ontoksd:hasProficiencyLevel ?constituentLevel . }
+OPTIONAL { ?evidencedConstituent ontoksd:interpretedUsingScheme ?constituentScheme . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?constituent (rdfs:label|skos:prefLabel|dcterms:title) ?constituentLabel . }
+}
+ORDER BY ?evidencedCompetence ?competenceLabel ?constituentLabel

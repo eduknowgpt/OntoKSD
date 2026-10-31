@@ -1,23 +1,20 @@
-# This query retrieves evidence and assessment occurrences associated with evidenced competences. It starts from EvidencedCompetence records, follows the evidence supporting them, and identifies the AssessmentOccurrence that produced the evidence. Thus, the query demonstrates that OntoKSD can trace evidenced competence records to evidence and occurrence-level assessment provenance.
+# CQ21a: What evidence and evidence-origin occurrences support whole-competence judgments?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Evidence-origin occurrence is distinct from the participation occurrence; equality is not assumed.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?evidencedCompetence
-  ?evidencedCompetenceLabel
-  ?evidence
-  ?evidenceLabel
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
+SELECT DISTINCT ?evidencedCompetence ?evidencedCompetenceLabel ?evidence ?evidenceLabel ?assessmentOccurrence ?assessmentOccurrenceLabel
 WHERE {
-  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
-                       ontoksd:supportedByEvidence ?evidence .
-
-  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
-
-  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+?evidencedCompetence a ontoksd:EvidencedCompetence ; (ontoksd:supportedByEvidence|^ontoksd:evidencesCompetence) ?evidence .
+?evidence (ontoksd:evidenceBasedOn|^ontoksd:producesEvidence) ?assessmentOccurrence .
+OPTIONAL { ?evidencedCompetence (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedCompetenceLabel . }
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
 }
-ORDER BY ?evidencedCompetenceLabel ?evidenceLabel ?assessmentOccurrenceLabel
+ORDER BY ?evidencedCompetence ?evidencedCompetenceLabel ?evidenceLabel ?assessmentOccurrenceLabel

@@ -1,31 +1,23 @@
-# This query retrieves evidenced competence records that link abstract competences to contextualized evidence of their demonstration. It returns each EvidencedCompetence, the abstract Competence to which it refers, the Evidence that supports it, and, when available, the profile and assessment occurrence in which the evidenced record is contextualized. Thus, the query demonstrates that OntoKSD can connect reusable competence specifications to learner-specific evidential manifestations.
+# CQ22: How does each whole-competence judgment connect specification, profile, evidence and participation occurrence?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Different asserted/participation occurrences are visible, not silently equated.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?evidencedCompetence
-  ?evidencedCompetenceLabel
-  ?evidence
-  ?evidenceLabel
-  ?profile
-  ?profileLabel
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
+SELECT DISTINCT ?competence ?competenceLabel ?evidencedCompetence ?evidencedCompetenceLabel ?evidence ?evidenceLabel ?profile ?assessmentParticipation ?assessmentOccurrence ?assertedOccurrence
 WHERE {
-  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
-                       ontoksd:refersToCompetence ?competence ;
-                       ontoksd:supportedByEvidence ?evidence .
-
-  OPTIONAL { ?evidencedCompetence ontoksd:isEvidencedCompetenceOf ?profile . }
-  OPTIONAL { ?evidencedCompetence ontoksd:isEvidencedInAssessmentOccurrence ?assessmentOccurrence . }
-
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+?evidencedCompetence a ontoksd:EvidencedCompetence ; ontoksd:refersToCompetence ?competence ; (ontoksd:supportedByEvidence|^ontoksd:evidencesCompetence) ?evidence .
+OPTIONAL { ?evidencedCompetence (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile . }
+OPTIONAL { ?evidencedCompetence ontoksd:derivedFromParticipation ?assessmentParticipation .
+ OPTIONAL { ?assessmentParticipation (ontoksd:occursInAssessmentOccurrence|^ontoksd:involvesAssessmentParticipation) ?assessmentOccurrence . } }
+OPTIONAL { ?evidencedCompetence ontoksd:isEvidencedInAssessmentOccurrence ?assertedOccurrence . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?evidencedCompetence (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedCompetenceLabel . }
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
 }
-ORDER BY ?competenceLabel ?evidencedCompetenceLabel ?evidenceLabel
+ORDER BY ?competence ?competenceLabel ?evidencedCompetenceLabel ?evidenceLabel

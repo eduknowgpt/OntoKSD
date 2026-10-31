@@ -1,26 +1,19 @@
-# This query retrieves the internal structure of a selected KnowledgeSkill unit. It returns the Knowledge element that serves as its knowledge component and the Bloom-aligned SkillLevel that specifies the required cognitive demand. Thus, the query demonstrates that OntoKSD can decompose a KnowledgeSkill unit into its constitutive knowledge and skill-level elements.
+# CQ3: Which knowledge and skill level constitute each KnowledgeSkill?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Add VALUES ?knowledgeSkill to select one pairing. This retrieval is not a cardinality validator.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?knowledgeSkill
-  ?knowledge
-  ?knowledgeLabel
-  ?skillLevel
-  ?skillLevelLabel
+SELECT DISTINCT ?knowledgeSkill ?knowledgeSkillLabel ?knowledge ?knowledgeLabel ?skillLevel ?skillLevelLabel
 WHERE {
-  ?knowledgeSkill a ontoksd:KnowledgeSkill ;
-                  ontoksd:hasKnowledgeComponent ?knowledge ;
-                  ontoksd:hasBloomCognitiveLevel ?skillLevel .
-
-  OPTIONAL { ?knowledge rdfs:label ?knowledgeRdfsLabel . }
-  OPTIONAL { ?knowledge skos:prefLabel ?knowledgeSkosLabel . }
-  BIND(COALESCE(?knowledgeRdfsLabel, ?knowledgeSkosLabel, STR(?knowledge)) AS ?knowledgeLabel)
-
-  OPTIONAL { ?skillLevel rdfs:label ?skillLevelRdfsLabel . }
-  OPTIONAL { ?skillLevel skos:prefLabel ?skillLevelSkosLabel . }
-  BIND(COALESCE(?skillLevelRdfsLabel, ?skillLevelSkosLabel, STR(?skillLevel)) AS ?skillLevelLabel)
+?knowledgeSkill a ontoksd:KnowledgeSkill ; ontoksd:hasKnowledgeComponent ?knowledge ; ontoksd:hasSkillLevel ?skillLevel .
+OPTIONAL { ?knowledgeSkill (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeSkillLabel . }
+OPTIONAL { ?knowledge (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeLabel . }
+OPTIONAL { ?skillLevel (rdfs:label|skos:prefLabel|dcterms:title) ?skillLevelLabel . }
 }
-ORDER BY ?knowledgeLabel ?skillLevelLabel
+ORDER BY ?knowledgeSkill ?knowledgeSkillLabel ?knowledgeLabel ?skillLevelLabel

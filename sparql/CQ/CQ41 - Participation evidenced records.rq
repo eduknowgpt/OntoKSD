@@ -1,40 +1,23 @@
-# This query retrieves evidenced competences, evidenced competence constituents, and proficiency attributions associated with assessment participations. It returns each assessment participation, the evidenced record derived from it, the type of evidenced record, the abstract competence or constituent to which the record refers, and the attributed proficiency level. Thus, the query demonstrates that OntoKSD can trace learner-specific proficiency attributions back to concrete assessment participation records.
+# CQ41: Which judgment targets and proficiency interpretations derive from each participation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Whole-competence and constituent judgments remain distinct; no automatic aggregation is inferred.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?assessmentParticipation
-  ?assessmentParticipationLabel
-  ?recordType
-  ?evidencedRecord
-  ?evidencedRecordLabel
-  ?referencedEntity
-  ?referencedEntityLabel
-  ?proficiencyLevel
-  ?proficiencyLevelLabel
+SELECT DISTINCT ?assessmentParticipation ?assessmentParticipationLabel ?evidencedRecord ?evidencedRecordLabel ?recordType ?referencedEntity ?referencedEntityLabel ?proficiencyLevel ?proficiencyScheme
 WHERE {
-  {
-    ?evidencedRecord a ontoksd:EvidencedCompetence ;
-                     ontoksd:derivedFromParticipation ?assessmentParticipation ;
-                     ontoksd:refersToCompetence ?referencedEntity .
-
-    BIND("EvidencedCompetence" AS ?recordType)
-  }
-  UNION
-  {
-    ?evidencedRecord a ontoksd:EvidencedCompetenceConstituent ;
-                     ontoksd:derivedFromParticipation ?assessmentParticipation ;
-                     ontoksd:refersToCompetenceConstituent ?referencedEntity .
-
-    BIND("EvidencedCompetenceConstituent" AS ?recordType)
-  }
-
-  OPTIONAL { ?evidencedRecord ontoksd:hasProficiencyLevel ?proficiencyLevel . }
-
-  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
-  OPTIONAL { ?evidencedRecord rdfs:label ?evidencedRecordLabel . }
-  OPTIONAL { ?referencedEntity rdfs:label ?referencedEntityLabel . }
-  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+VALUES (?recordType ?referenceProperty) { (ontoksd:EvidencedCompetence ontoksd:refersToCompetence) (ontoksd:EvidencedCompetenceConstituent ontoksd:refersToCompetenceConstituent) }
+?evidencedRecord a ?recordType .
+?evidencedRecord ontoksd:derivedFromParticipation ?assessmentParticipation ; ?referenceProperty ?referencedEntity .
+OPTIONAL { ?evidencedRecord ontoksd:hasProficiencyLevel ?proficiencyLevel . }
+OPTIONAL { ?evidencedRecord ontoksd:interpretedUsingScheme ?proficiencyScheme . }
+OPTIONAL { ?assessmentParticipation (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentParticipationLabel . }
+OPTIONAL { ?evidencedRecord (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedRecordLabel . }
+OPTIONAL { ?referencedEntity (rdfs:label|skos:prefLabel|dcterms:title) ?referencedEntityLabel . }
 }
-ORDER BY ?assessmentParticipationLabel ?recordType ?referencedEntityLabel
+ORDER BY ?assessmentParticipation ?assessmentParticipationLabel ?evidencedRecordLabel ?referencedEntityLabel

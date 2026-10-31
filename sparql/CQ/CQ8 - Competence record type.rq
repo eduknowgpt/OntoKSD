@@ -1,38 +1,27 @@
-# This query classifies competence-related records according to whether they are abstract competence specifications or evidenced competence records associated with learner-specific demonstrations. It returns Competence individuals as abstract specifications and EvidencedCompetence individuals as contextualized records linked to a learner profile, assessment participation, and referenced competence. Thus, the query demonstrates that OntoKSD can distinguish competence specifications from evidenced manifestations grounded in learner-specific assessment contexts.
+# CQ8: Which records are specifications, whole-competence judgments or constituent judgments?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Retrieves declared categories; incomplete records require separate validation.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?record
-  ?recordLabel
-  ?recordType
-  ?referencedCompetence
-  ?referencedCompetenceLabel
-  ?profile
-  ?participation
+SELECT DISTINCT ?record ?recordLabel ?recordType ?referencedEntity ?profile ?participation
 WHERE {
-  {
-    ?record a ontoksd:Competence .
-    BIND("Abstract competence specification" AS ?recordType)
-  }
-  UNION
-  {
-    ?record a ontoksd:EvidencedCompetence ;
-            ontoksd:refersToCompetence ?referencedCompetence ;
-            ontoksd:isEvidencedCompetenceOf ?profile ;
-            ontoksd:derivedFromParticipation ?participation .
-
-    BIND("Evidenced learner-specific competence" AS ?recordType)
-
-    OPTIONAL { ?referencedCompetence rdfs:label ?referencedCompetenceRdfsLabel . }
-    OPTIONAL { ?referencedCompetence skos:prefLabel ?referencedCompetenceSkosLabel . }
-    BIND(COALESCE(?referencedCompetenceRdfsLabel, ?referencedCompetenceSkosLabel, STR(?referencedCompetence)) AS ?referencedCompetenceLabel)
-  }
-
-  OPTIONAL { ?record rdfs:label ?recordRdfsLabel . }
-  OPTIONAL { ?record skos:prefLabel ?recordSkosLabel . }
-  BIND(COALESCE(?recordRdfsLabel, ?recordSkosLabel, STR(?record)) AS ?recordLabel)
+{ ?record a ontoksd:Competence . BIND("Competence specification" AS ?recordType) }
+UNION
+{ ?record a ontoksd:EvidencedCompetence . BIND("Whole-competence judgment" AS ?recordType)
+  OPTIONAL { ?record ontoksd:refersToCompetence ?referencedEntity . }
+  OPTIONAL { ?record (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile . }
+  OPTIONAL { ?record ontoksd:derivedFromParticipation ?participation . } }
+UNION
+{ ?record a ontoksd:EvidencedCompetenceConstituent . BIND("Constituent judgment" AS ?recordType)
+  OPTIONAL { ?record ontoksd:refersToCompetenceConstituent ?referencedEntity . }
+  OPTIONAL { ?record ontoksd:derivedFromParticipation ?participation .
+    OPTIONAL { ?participation (ontoksd:hasLearner|^ontoksd:participatesIn)/(ontoksd:hasProfile|^ontoksd:isProfileOf) ?profile . } } }
+OPTIONAL { ?record (rdfs:label|skos:prefLabel|dcterms:title) ?recordLabel . }
 }
-ORDER BY ?recordType ?recordLabel
+ORDER BY ?record ?recordLabel

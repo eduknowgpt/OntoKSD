@@ -1,0 +1,20 @@
+# Which knowledge individuals and curricular references are available?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# Lists available knowledge, including items not yet used in competences. Optional classification and curricular links can multiply rows.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?knowledge ?knowledgeLabel ?knowledgeType ?curricularReference
+WHERE {
+?knowledge a/rdfs:subClassOf* ontoksd:Knowledge .
+OPTIONAL { ?knowledge ontoksd:hasKnowledgeType ?knowledgeType . }
+OPTIONAL { ?knowledge (ontoksd:isCurricularlyRepresentedBy|^ontoksd:curricularlyRepresentsKnowledge) ?curricularReference . }
+OPTIONAL { ?knowledge (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeLabel . }
+}
+ORDER BY ?knowledge ?knowledgeLabel

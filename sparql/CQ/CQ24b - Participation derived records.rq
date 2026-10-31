@@ -1,17 +1,19 @@
-# This query retrieves evidenced competence and evidenced competence constituent records derived from assessment participations. Thus, the query demonstrates that OntoKSD can trace learner-specific competence records back to participant-level assessment relations.
+# CQ24b: Which judgment records derive from each assessment participation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Participation provenance does not transfer a whole judgment to its constituents.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?assessmentParticipation
-  ?assessmentParticipationLabel
-  ?derivedRecord
-  ?derivedRecordLabel
+SELECT DISTINCT ?assessmentParticipation ?assessmentParticipationLabel ?derivedRecord ?derivedRecordLabel ?recordType
 WHERE {
-  ?derivedRecord ontoksd:derivedFromParticipation ?assessmentParticipation .
-
-  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
-  OPTIONAL { ?derivedRecord rdfs:label ?derivedRecordLabel . }
+VALUES ?recordType { ontoksd:EvidencedCompetence ontoksd:EvidencedCompetenceConstituent }
+?derivedRecord a ?recordType ; ontoksd:derivedFromParticipation ?assessmentParticipation .
+OPTIONAL { ?assessmentParticipation (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentParticipationLabel . }
+OPTIONAL { ?derivedRecord (rdfs:label|skos:prefLabel|dcterms:title) ?derivedRecordLabel . }
 }
-ORDER BY ?assessmentParticipationLabel ?derivedRecordLabel
+ORDER BY ?assessmentParticipation ?assessmentParticipationLabel ?derivedRecordLabel

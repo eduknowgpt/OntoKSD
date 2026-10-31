@@ -1,38 +1,24 @@
-# This query retrieves the KnowledgeSkill units associated with a selected competence. It returns each KnowledgeSkill pairing, the knowledge component involved, the required Bloom-aligned cognitive level, and any justification verb used to support the skill-level assignment. Thus, the query demonstrates that OntoKSD can explicitly represent and retrieve the qualified Knowledge--Skill structure underlying a competence.
+# CQ2: Which knowledge-level pairings and justification verbs specify the selected competence?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: One row per pairing and verb; a verb does not infer the level.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
+# Parameter: replace ontoksd:C02 in VALUES with the intended competence IRI.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competenceLabel
-  ?knowledgeSkill
-  ?knowledgeLabel
-  ?skillLevelLabel
-  ?justificationVerbLabel
+SELECT DISTINCT ?competence ?competenceLabel ?knowledgeSkill ?knowledgeSkillLabel ?knowledge ?knowledgeLabel ?skillLevel ?skillLevelLabel ?justificationVerb
 WHERE {
-  VALUES ?competence { ontoksd:C02 }
-
-  ?competence a ontoksd:Competence ;
-              rdfs:label ?competenceLabel ;
-              ontoksd:hasKnowledgeSkill ?knowledgeSkill .
-
-  ?knowledgeSkill ontoksd:hasKnowledgeComponent ?knowledge ;
-                  ontoksd:hasBloomCognitiveLevel ?skillLevel .
-
-  OPTIONAL {
-    ?knowledgeSkill ontoksd:hasBloomLevelJustificationVerb ?justificationVerb .
-    OPTIONAL { ?justificationVerb rdfs:label ?justificationVerbRdfsLabel . }
-    OPTIONAL { ?justificationVerb skos:prefLabel ?justificationVerbSkosLabel . }
-    BIND(COALESCE(?justificationVerbRdfsLabel, ?justificationVerbSkosLabel, STR(?justificationVerb)) AS ?justificationVerbLabel)
-  }
-
-  OPTIONAL { ?knowledge rdfs:label ?knowledgeRdfsLabel . }
-  OPTIONAL { ?knowledge skos:prefLabel ?knowledgeSkosLabel . }
-  BIND(COALESCE(?knowledgeRdfsLabel, ?knowledgeSkosLabel, STR(?knowledge)) AS ?knowledgeLabel)
-
-  OPTIONAL { ?skillLevel rdfs:label ?skillLevelRdfsLabel . }
-  OPTIONAL { ?skillLevel skos:prefLabel ?skillLevelSkosLabel . }
-  BIND(COALESCE(?skillLevelRdfsLabel, ?skillLevelSkosLabel, STR(?skillLevel)) AS ?skillLevelLabel)
+VALUES ?competence { ontoksd:C02 }
+?competence (ontoksd:hasKnowledgeSkill|^ontoksd:isKnowledgeSkillOf) ?knowledgeSkill .
+?knowledgeSkill ontoksd:hasKnowledgeComponent ?knowledge ; ontoksd:hasSkillLevel ?skillLevel .
+OPTIONAL { ?knowledgeSkill ontoksd:hasBloomLevelJustificationVerb ?justificationVerb . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?knowledgeSkill (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeSkillLabel . }
+OPTIONAL { ?knowledge (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeLabel . }
+OPTIONAL { ?skillLevel (rdfs:label|skos:prefLabel|dcterms:title) ?skillLevelLabel . }
 }
-ORDER BY ?knowledgeLabel ?skillLevelLabel ?justificationVerbLabel
+ORDER BY ?competence ?competenceLabel ?knowledgeSkillLabel ?knowledgeLabel ?skillLevelLabel

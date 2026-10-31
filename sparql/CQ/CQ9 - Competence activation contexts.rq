@@ -1,38 +1,20 @@
-# This query retrieves instructional entities associated with competences through competence activation relations. It returns the CompetenceRelator that mediates the relation, the competence involved, and the instructional unit in which the competence is activated, practiced, supported, or assessed. Thus, the query demonstrates that OntoKSD can trace competence activation through reified instructional relations rather than through simple direct links.
+# CQ9: Which instructional units are associated through competence activation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Course-level expectations are queried separately by CQ33. Inference can add type rows.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?competenceRelator
-  ?instructionalUnit
-  ?instructionalUnitLabel
-  ?instructionalUnitType
+SELECT DISTINCT ?competence ?competenceLabel ?competenceActivation ?instructionalUnit ?instructionalUnitLabel ?instructionalUnitType
 WHERE {
-  ?competenceRelator a ontoksd:CompetenceRelator ;
-                     ontoksd:mediatesCompetence ?competence ;
-                     ontoksd:mediatesInstructionalUnit ?instructionalUnit .
-
-  ?competence a ontoksd:Competence .
-  ?instructionalUnit a ?instructionalUnitType .
-
-  FILTER(?instructionalUnitType IN (
-    ontoksd:InstructionalUnit,
-    ontoksd:LearningTask,
-    ontoksd:Assessment,
-    ontoksd:Course
-  ))
-
-  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
-  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
-  BIND(COALESCE(?competenceRdfsLabel, ?competenceSkosLabel, STR(?competence)) AS ?competenceLabel)
-
-  OPTIONAL { ?instructionalUnit rdfs:label ?instructionalUnitRdfsLabel . }
-  OPTIONAL { ?instructionalUnit skos:prefLabel ?instructionalUnitSkosLabel . }
-  BIND(COALESCE(?instructionalUnitRdfsLabel, ?instructionalUnitSkosLabel, STR(?instructionalUnit)) AS ?instructionalUnitLabel)
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
+ (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+OPTIONAL { ?instructionalUnit a ?instructionalUnitType . VALUES ?instructionalUnitType { ontoksd:InstructionalUnit ontoksd:LearningActivity ontoksd:LearningTask ontoksd:Assessment } }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
 }
-ORDER BY ?competence ?instructionalUnitType ?instructionalUnitLabel
+ORDER BY ?competence ?competenceLabel ?instructionalUnitLabel

@@ -1,0 +1,19 @@
+# Which knowledge-type categories are available?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# Lists controlled knowledge types independently of whether a competence currently uses them.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?knowledgeType ?knowledgeTypeLabel ?sourceConcept
+WHERE {
+?knowledgeType a/rdfs:subClassOf* ontoksd:KnowledgeType .
+OPTIONAL { ?sourceConcept ontoksd:usedAsTypeOfKnowledge ?knowledgeType . }
+OPTIONAL { ?knowledgeType (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeTypeLabel . }
+}
+ORDER BY ?knowledgeType ?knowledgeTypeLabel

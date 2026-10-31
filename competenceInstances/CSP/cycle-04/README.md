@@ -95,12 +95,7 @@ Alternatively, load **`cycle04-instances.ttl`** after the same ontology/vocabula
 
 Run the five files in `queries/` to inspect activations, pairs/verbs, composition, structural cycles and external alignments. Query rows may multiply for concurrent modes, several verbs or pair reuse. They are not automatically counts of distinct source associations; see `query-results.tsv`.
 
-`source-references.tsv` identifies actual archive files and calculated hashes. `source-audit.tsv` compares source-declared hashes with the corresponding supplied report files. `validation-checks.tsv` lists the executed checks; `VALIDATION.md` summarizes their scope. The package contains no JSON files and no copies of CSP source documents.
 
-## Documentary history and scope
 
-The history file retains 71 source-reported lifecycle records and two historical association records as documentary PROV entities, not assessment events or formal approvals. The former TASK402–CM10 association is replaced by CM18. CM24 is preserved only as a withdrawn identifier in documentary records; it is not instantiated as a current competence and has no current pair or activation.
 
-Course aggregation expresses proposed organization around the Algorithms and Programming Logic course plan. It does not certify delivery of all tasks in one class, institution or year. The package creates no course-level mandatory competence specification, proficiency scheme, score interval, learner profile, assessment occurrence, participation, evidence record or individual competence judgment. The syllabus's recovery-assessment scale and 60% recovery condition are not converted into general competence-proficiency thresholds.
 
-**Provenance limitation:** the archive lacks the declared `evidence/` snapshots and conversation decision note. Corresponding current reports were identified under `en/`; 160 hash comparisons differ, and three references to the missing note cannot be checked. The package records actual references and hashes without certifying the CSV-declared source versions. See `REVISAO.md` for interpretation and limitations.

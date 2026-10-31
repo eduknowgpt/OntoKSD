@@ -1,23 +1,20 @@
-# This query retrieves the assessment participations from which evidenced competences are derived. It also returns the assessment occurrence in which each participation took place. Thus, the query demonstrates that OntoKSD can connect learner-specific evidenced competence records to participant-level assessment relations.
+# CQ21b: From which participation and occurrence does each whole-competence judgment derive?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Does not require the redundant direct isEvidencedInAssessmentOccurrence assertion.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?evidencedCompetence
-  ?evidencedCompetenceLabel
-  ?assessmentParticipation
-  ?assessmentParticipationLabel
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
+SELECT DISTINCT ?evidencedCompetence ?evidencedCompetenceLabel ?assessmentParticipation ?assessmentParticipationLabel ?assessmentOccurrence ?assessmentOccurrenceLabel
 WHERE {
-  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
-                       ontoksd:derivedFromParticipation ?assessmentParticipation .
-
-  ?assessmentParticipation ontoksd:occursInAssessmentOccurrence ?assessmentOccurrence .
-
-  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
-  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+?evidencedCompetence a ontoksd:EvidencedCompetence ; ontoksd:derivedFromParticipation ?assessmentParticipation .
+?assessmentParticipation (ontoksd:occursInAssessmentOccurrence|^ontoksd:involvesAssessmentParticipation) ?assessmentOccurrence .
+OPTIONAL { ?evidencedCompetence (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedCompetenceLabel . }
+OPTIONAL { ?assessmentParticipation (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentParticipationLabel . }
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
 }
-ORDER BY ?evidencedCompetenceLabel ?assessmentParticipationLabel ?assessmentOccurrenceLabel
+ORDER BY ?evidencedCompetence ?evidencedCompetenceLabel ?assessmentParticipationLabel ?assessmentOccurrenceLabel

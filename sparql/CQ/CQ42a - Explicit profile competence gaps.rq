@@ -1,26 +1,24 @@
-# This query retrieves competence gaps already materialized as LearningNeed records for learner profiles.
+# CQ42a: Which explicit competence-targeted learning needs and documented comparison bases exist?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Referenced levels describe the stored basis; they need not be the latest current judgment. A candidate record is not automatically confirmed or still applicable.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?profile ?profileLabel
-  ?learningNeed ?learningNeedLabel
-  ?competence ?competenceLabel
-  ?currentLevel ?currentLevelLabel
-  ?requiredLevel ?requiredLevelLabel
+SELECT DISTINCT ?profile ?profileLabel ?learningNeed ?learningNeedLabel ?competence ?competenceLabel ?courseSpecification ?course ?evidencedCompetence ?currentLevel ?requiredLevel ?proficiencyScheme
 WHERE {
-  ?learningNeed a ontoksd:LearningNeed ;
-                ontoksd:isLearningNeedOf ?profile ;
-                ontoksd:refersToCompetence ?competence .
-
-  OPTIONAL { ?learningNeed ontoksd:hasCurrentProficiencyLevel ?currentLevel . }
-  OPTIONAL { ?learningNeed ontoksd:requiresProficiencyLevel ?requiredLevel . }
-
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?learningNeed rdfs:label ?learningNeedLabel . }
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?currentLevel rdfs:label ?currentLevelLabel . }
-  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+?learningNeed a ontoksd:LearningNeed ; (ontoksd:identifiedIn|^ontoksd:hasLearningNeed) ?profile ; ontoksd:targetsCompetence ?competence .
+OPTIONAL { ?learningNeed dcterms:references ?courseSpecification . ?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourse ?course .
+ OPTIONAL { ?courseSpecification ontoksd:requiresMinimumProficiencyLevel ?requiredLevel . } }
+OPTIONAL { ?learningNeed dcterms:references ?evidencedCompetence . ?evidencedCompetence a ontoksd:EvidencedCompetence ; ontoksd:refersToCompetence ?competence .
+ OPTIONAL { ?evidencedCompetence ontoksd:hasProficiencyLevel ?currentLevel . }
+ OPTIONAL { ?evidencedCompetence ontoksd:interpretedUsingScheme ?proficiencyScheme . } }
+OPTIONAL { ?profile (rdfs:label|skos:prefLabel|dcterms:title) ?profileLabel . }
+OPTIONAL { ?learningNeed (rdfs:label|skos:prefLabel|dcterms:title) ?learningNeedLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
 }
-ORDER BY ?profileLabel ?competenceLabel
+ORDER BY ?profile ?profileLabel ?learningNeedLabel ?competenceLabel

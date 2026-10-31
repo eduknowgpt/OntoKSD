@@ -1,26 +1,24 @@
-# This query retrieves the scale intervals associated with proficiency levels within proficiency schemes. It returns each ProficiencyScheme, the ScaleInterval defined by that scheme, the interval bounds used for score interpretation, and the ProficiencyLevel corresponding to the interval. Thus, the query demonstrates that OntoKSD can formally represent proficiency interpretation through mappings between bounded score intervals and proficiency categories.
+# CQ31: How do schemes map numeric intervals, endpoints and scales to levels?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: This is retrieval, not overlap, coverage, endpoint or score-classification validation.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?proficiencyScheme
-  ?proficiencySchemeLabel
-  ?scaleInterval
-  ?scaleIntervalLabel
-  ?lowerBound
-  ?upperBound
-  ?proficiencyLevel
-  ?proficiencyLevelLabel
+SELECT DISTINCT ?proficiencyScheme ?proficiencySchemeLabel ?scaleInterval ?scaleIntervalLabel ?scale ?lowerBound ?includesLower ?upperBound ?includesUpper ?proficiencyLevel
 WHERE {
-  ?proficiencyScheme ontoksd:definesInterval ?scaleInterval .
-
-  ?scaleInterval ontoksd:correspondsToLevel ?proficiencyLevel ;
-                 ontoksd:lowerBound ?lowerBound ;
-                 ontoksd:upperBound ?upperBound .
-
-  OPTIONAL { ?proficiencyScheme rdfs:label ?proficiencySchemeLabel . }
-  OPTIONAL { ?scaleInterval rdfs:label ?scaleIntervalLabel . }
-  OPTIONAL { ?proficiencyLevel rdfs:label ?proficiencyLevelLabel . }
+?proficiencyScheme (ontoksd:definesInterval|^ontoksd:intervalDefinedInScheme) ?scaleInterval .
+OPTIONAL { ?scaleInterval (ontoksd:isIntervalOf|^ontoksd:hasInterval) ?scale . }
+OPTIONAL { ?scaleInterval ontoksd:lowerBound ?lowerBound . }
+OPTIONAL { ?scaleInterval ontoksd:upperBound ?upperBound . }
+OPTIONAL { ?scaleInterval ontoksd:includesLower ?includesLower . }
+OPTIONAL { ?scaleInterval ontoksd:includesUpper ?includesUpper . }
+OPTIONAL { ?scaleInterval ontoksd:correspondsToLevel ?proficiencyLevel . }
+OPTIONAL { ?proficiencyScheme (rdfs:label|skos:prefLabel|dcterms:title) ?proficiencySchemeLabel . }
+OPTIONAL { ?scaleInterval (rdfs:label|skos:prefLabel|dcterms:title) ?scaleIntervalLabel . }
 }
-ORDER BY ?proficiencySchemeLabel ?lowerBound
+ORDER BY ?proficiencyScheme ?lowerBound ?upperBound ?scaleInterval

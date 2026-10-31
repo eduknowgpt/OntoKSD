@@ -1,21 +1,20 @@
-# This query retrieves evidence produced in the assessment occurrence associated with each assessment participation. Thus, the query demonstrates that OntoKSD can connect learner participation to the occurrence-level evidence produced in the same evaluative event.
+# CQ24c: What evidence originated in the occurrence associated with each participation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Co-occurring evidence is not automatically supporting evidence of this learner; CQ18/CQ41 establish record-specific links.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?assessmentParticipation
-  ?assessmentParticipationLabel
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
-  ?evidence
-  ?evidenceLabel
+SELECT DISTINCT ?assessmentParticipation ?assessmentParticipationLabel ?assessmentOccurrence ?assessmentOccurrenceLabel ?evidence ?evidenceLabel
 WHERE {
-  ?assessmentParticipation ontoksd:occursInAssessmentOccurrence ?assessmentOccurrence .
-  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
-
-  OPTIONAL { ?assessmentParticipation rdfs:label ?assessmentParticipationLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+?assessmentParticipation (ontoksd:occursInAssessmentOccurrence|^ontoksd:involvesAssessmentParticipation) ?assessmentOccurrence .
+?evidence (ontoksd:evidenceBasedOn|^ontoksd:producesEvidence) ?assessmentOccurrence .
+OPTIONAL { ?assessmentParticipation (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentParticipationLabel . }
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
 }
-ORDER BY ?assessmentParticipationLabel ?assessmentOccurrenceLabel ?evidenceLabel
+ORDER BY ?assessmentParticipation ?assessmentParticipationLabel ?assessmentOccurrenceLabel ?evidenceLabel

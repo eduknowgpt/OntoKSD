@@ -1,28 +1,25 @@
-# This query identifies competence gaps caused by curricular expectations for which no evidenced competence record exists in a learner profile.
+# CQ42c: Which curricular expectations have no judgment in the selected profile?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Returns no recorded judgment, not a causal diagnosis or assumed zero proficiency; optional inclusion is identified rather than treated as mandatory.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
+# Parameters: replace Profile_Example and Course_Example; no enrollment is inferred.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?profile ?profileLabel
-  ?course ?courseLabel
-  ?competence ?competenceLabel
-  ?requiredLevel ?requiredLevelLabel
+SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?courseSpecification ?competence ?competenceLabel ?isMandatory ?requiredLevel
 WHERE {
-  ?profile a ontoksd:LearnerProfile .
-
-  ?courseSpec ontoksd:mediatesCourse ?course ;
-              ontoksd:mediatesCourseCompetence ?competence ;
-              ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
-
-  FILTER NOT EXISTS {
-    ?evidencedCompetence ontoksd:isEvidencedCompetenceOf ?profile ;
-                         ontoksd:refersToCompetence ?competence .
-  }
-
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?course rdfs:label ?courseLabel . }
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
+?profile a ontoksd:Profile .
+?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence .
+OPTIONAL { ?courseSpecification ontoksd:isMandatory ?isMandatory . }
+OPTIONAL { ?courseSpecification ontoksd:requiresMinimumProficiencyLevel ?requiredLevel . }
+FILTER NOT EXISTS { ?judgment a ontoksd:EvidencedCompetence ; (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile ; ontoksd:refersToCompetence ?competence . }
+OPTIONAL { ?profile (rdfs:label|skos:prefLabel|dcterms:title) ?profileLabel . }
+OPTIONAL { ?course (rdfs:label|skos:prefLabel|dcterms:title) ?courseLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
 }
-ORDER BY ?profileLabel ?courseLabel ?competenceLabel
+ORDER BY ?profile ?profileLabel ?courseLabel ?competenceLabel

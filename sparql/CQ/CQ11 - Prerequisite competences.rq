@@ -1,35 +1,20 @@
-# This query retrieves competences associated with instructional structures as prerequisites. It identifies CompetenceRelator instances whose activation function is classified as prerequisiteFunction, returning the instructional unit and the competence required for meaningful engagement or successful completion. Thus, the query demonstrates that OntoKSD can represent prerequisite relations as qualified competence activation relations.
+# CQ11: Which competences are explicitly positioned as instructional prerequisites?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: A function is a planned instructional qualification, not proof of learner possession or attainment.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?instructionalUnit
-  ?instructionalUnitLabel
-  ?competence
-  ?competenceLabel
-  ?competenceRelator
-  ?activationFunction
-  ?activationFunctionLabel
+SELECT DISTINCT ?instructionalUnit ?instructionalUnitLabel ?competence ?competenceLabel ?competenceActivation
 WHERE {
-  ?competenceRelator a ontoksd:CompetenceRelator ;
-                     ontoksd:mediatesInstructionalUnit ?instructionalUnit ;
-                     ontoksd:mediatesCompetence ?competence ;
-                     ontoksd:hasActivationFunction ?activationFunction .
-
-  FILTER(?activationFunction = ontoksd:prerequisiteFunction)
-
-  OPTIONAL { ?instructionalUnit rdfs:label ?instructionalUnitRdfsLabel . }
-  OPTIONAL { ?instructionalUnit skos:prefLabel ?instructionalUnitSkosLabel . }
-  BIND(COALESCE(?instructionalUnitRdfsLabel, ?instructionalUnitSkosLabel, STR(?instructionalUnit)) AS ?instructionalUnitLabel)
-
-  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
-  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
-  BIND(COALESCE(?competenceRdfsLabel, ?competenceSkosLabel, STR(?competence)) AS ?competenceLabel)
-
-  OPTIONAL { ?activationFunction rdfs:label ?activationFunctionRdfsLabel . }
-  OPTIONAL { ?activationFunction skos:prefLabel ?activationFunctionSkosLabel . }
-  BIND(COALESCE(?activationFunctionRdfsLabel, ?activationFunctionSkosLabel, STR(?activationFunction)) AS ?activationFunctionLabel)
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
+ (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation ontoksd:hasActivationFunction ontoksd:prerequisiteFunction .
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
 }
-ORDER BY ?instructionalUnitLabel ?competenceLabel
+ORDER BY ?instructionalUnit ?instructionalUnitLabel ?competenceLabel

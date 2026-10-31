@@ -1,30 +1,21 @@
-# This query retrieves external competences aligned with OntoKSD competences. It returns the internal competence, the external competence, the qualified alignment relation, the alignment type, and the justification when available. Thus, the query demonstrates that OntoKSD can represent interoperability links with external curricular frameworks such as BNCC through both direct and qualified alignment structures.
+# CQ34: Which qualified external alignments, types and justifications are recorded?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Alignment records do not entail owl:sameAs, equivalence, compliance or inherited competence.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?externalCompetence
-  ?externalCompetenceLabel
-  ?externalNotation
-  ?alignment
-  ?alignmentType
-  ?alignmentTypeLabel
-  ?alignmentJustification
+SELECT DISTINCT ?competence ?competenceLabel ?externalCompetence ?externalCompetenceLabel ?externalIdentifier ?alignment ?alignmentType ?alignmentJustification
 WHERE {
-  ?alignment a ontoksd:ExternalCompetenceAlignment ;
-             ontoksd:mediatesInternalCompetence ?competence ;
-             ontoksd:mediatesExternalCompetence ?externalCompetence .
-
-  OPTIONAL { ?alignment ontoksd:hasAlignmentType ?alignmentType . }
-  OPTIONAL { ?alignment ontoksd:hasAlignmentJustification ?alignmentJustification . }
-
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?externalCompetence rdfs:label ?externalCompetenceLabel . }
-  OPTIONAL { ?externalCompetence skos:notation ?externalNotation . }
-  OPTIONAL { ?alignmentType rdfs:label ?alignmentTypeLabel . }
+?alignment a ontoksd:ExternalCompetenceAlignment ; ontoksd:mediatesInternalCompetence ?competence ; ontoksd:mediatesExternalCompetence ?externalCompetence .
+OPTIONAL { ?alignment ontoksd:hasAlignmentType ?alignmentType . }
+OPTIONAL { ?alignment ontoksd:hasAlignmentJustification ?alignmentJustification . }
+OPTIONAL { ?externalCompetence (skos:notation|dcterms:identifier) ?externalIdentifier . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?externalCompetence (rdfs:label|skos:prefLabel|dcterms:title) ?externalCompetenceLabel . }
 }
-ORDER BY ?competenceLabel ?externalNotation ?externalCompetenceLabel
+ORDER BY ?competence ?competenceLabel ?externalCompetenceLabel

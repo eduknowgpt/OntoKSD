@@ -1,31 +1,23 @@
-# This query retrieves evidenced competence constituent records that link abstract competence constituents to contextualized evidence of their demonstration. It returns each EvidencedCompetenceConstituent, the CompetenceConstituent to which it refers, the Evidence that supports it, and, when available, the profile and assessment occurrence in which the evidenced constituent record is contextualized. Thus, the query demonstrates that OntoKSD can connect abstract competence constituents to learner-specific evidential manifestations.
+# CQ23: How does each constituent judgment connect its constituent, learner profile, evidence and occurrence?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: A constituent judgment can exist without a whole-competence judgment.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competenceConstituent
-  ?competenceConstituentLabel
-  ?evidencedConstituent
-  ?evidencedConstituentLabel
-  ?evidence
-  ?evidenceLabel
-  ?profile
-  ?profileLabel
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
+SELECT DISTINCT ?competenceConstituent ?competenceConstituentLabel ?evidencedConstituent ?evidencedConstituentLabel ?evidence ?evidenceLabel ?profile ?assessmentParticipation ?assessmentOccurrence ?wholeCompetenceJudgment
 WHERE {
-  ?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ;
-                        ontoksd:refersToCompetenceConstituent ?competenceConstituent ;
-                        ontoksd:supportedByEvidence ?evidence .
-
-  OPTIONAL { ?evidencedConstituent ontoksd:isEvidencedCompetenceConstituentOf ?profile . }
-  OPTIONAL { ?evidencedConstituent ontoksd:isEvidencedInAssessmentOccurrence ?assessmentOccurrence . }
-
-  OPTIONAL { ?competenceConstituent rdfs:label ?competenceConstituentLabel . }
-  OPTIONAL { ?evidencedConstituent rdfs:label ?evidencedConstituentLabel . }
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+?evidencedConstituent a ontoksd:EvidencedCompetenceConstituent ; ontoksd:refersToCompetenceConstituent ?competenceConstituent ; (ontoksd:supportedByEvidence|^ontoksd:evidencesCompetence) ?evidence .
+OPTIONAL { ?evidencedConstituent ontoksd:derivedFromParticipation ?assessmentParticipation .
+ OPTIONAL { ?assessmentParticipation (ontoksd:occursInAssessmentOccurrence|^ontoksd:involvesAssessmentParticipation) ?assessmentOccurrence . }
+ OPTIONAL { ?assessmentParticipation (ontoksd:hasLearner|^ontoksd:participatesIn)/(ontoksd:hasProfile|^ontoksd:isProfileOf) ?profile . } }
+OPTIONAL { ?evidencedConstituent (ontoksd:isEvidencedCompetenceConstituentOf|^ontoksd:hasEvidencedConstituent) ?wholeCompetenceJudgment . }
+OPTIONAL { ?competenceConstituent (rdfs:label|skos:prefLabel|dcterms:title) ?competenceConstituentLabel . }
+OPTIONAL { ?evidencedConstituent (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedConstituentLabel . }
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
 }
-ORDER BY ?competenceConstituentLabel ?evidencedConstituentLabel ?evidenceLabel
+ORDER BY ?competenceConstituent ?competenceConstituentLabel ?evidencedConstituentLabel ?evidenceLabel

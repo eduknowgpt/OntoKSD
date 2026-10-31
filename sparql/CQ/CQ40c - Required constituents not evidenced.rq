@@ -1,31 +1,27 @@
-# This query retrieves constituents of course-required competences that are not evidenced in learner profiles.
+# CQ40c: Which direct constituents of mandatory competences have no judgment in the selected profile?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: A Knowledge nested inside KnowledgeSkill is not automatically a separately declared direct constituent; missing constituent evidence is not a diagnosed LearningNeed.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
+# Parameters: replace Profile_Example and Course_Example; no enrollment is inferred.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?competence ?competenceLabel ?constituent ?constituentLabel
+SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?courseSpecification ?competence ?competenceLabel ?constituent ?constituentLabel
 WHERE {
-  ?profile a ontoksd:LearnerProfile .
-
-  ?courseSpec ontoksd:mediatesCourse ?course ;
-              ontoksd:mediatesCourseCompetence ?competence .
-
-  {
-    ?competence ontoksd:hasKnowledgeSkill ?constituent .
-  }
-  UNION
-  {
-    ?competence ontoksd:hasDisposition ?constituent .
-  }
-
-  FILTER NOT EXISTS {
-    ?evidencedConstituent ontoksd:isEvidencedCompetenceConstituentOf ?profile ;
-                          ontoksd:refersToCompetenceConstituent ?constituent .
-  }
-
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?course rdfs:label ?courseLabel . }
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?constituent rdfs:label ?constituentLabel . }
+VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
+?profile a ontoksd:Profile .
+?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence ; ontoksd:isMandatory true .
+?competence (ontoksd:hasCompetenceConstituent|ontoksd:hasKnowledge|ontoksd:hasSkill|ontoksd:hasDisposition|ontoksd:hasAttitude|ontoksd:hasKnowledgeSkill|^ontoksd:isCompetenceConstituentOf|^ontoksd:isKnowledgeOf|^ontoksd:isSkillOf|^ontoksd:isDispositionOf|^ontoksd:isAttitudeOf|^ontoksd:isKnowledgeSkillOf) ?constituent .
+FILTER NOT EXISTS { ?judgment a ontoksd:EvidencedCompetenceConstituent ; ontoksd:refersToCompetenceConstituent ?constituent .
+ { ?judgment ontoksd:derivedFromParticipation/(ontoksd:hasLearner|^ontoksd:participatesIn)/(ontoksd:hasProfile|^ontoksd:isProfileOf) ?profile . } UNION { ?judgment (ontoksd:isEvidencedCompetenceConstituentOf|^ontoksd:hasEvidencedConstituent)/(ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile . }
 }
-ORDER BY ?profileLabel ?courseLabel ?competenceLabel ?constituentLabel
+OPTIONAL { ?profile (rdfs:label|skos:prefLabel|dcterms:title) ?profileLabel . }
+OPTIONAL { ?course (rdfs:label|skos:prefLabel|dcterms:title) ?courseLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?constituent (rdfs:label|skos:prefLabel|dcterms:title) ?constituentLabel . }
+}
+ORDER BY ?profile ?profileLabel ?courseLabel ?competenceLabel ?constituentLabel

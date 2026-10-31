@@ -1,13 +1,18 @@
-# Retrieves the assessment occurrence from which each evidence instance was produced.
+# CQ20a: Which occurrence produced or grounds each evidence item?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Uses producesEvidence only; with inference off, inverse-only data can return no rows.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?evidence ?evidenceLabel ?assessmentOccurrence ?assessmentOccurrenceLabel
 WHERE {
-  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
-
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+?evidence ^ontoksd:producesEvidence ?assessmentOccurrence .
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
 }
-ORDER BY ?evidenceLabel ?assessmentOccurrenceLabel
+ORDER BY ?evidence ?evidenceLabel ?assessmentOccurrenceLabel

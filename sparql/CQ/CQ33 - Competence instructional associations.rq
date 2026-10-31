@@ -1,33 +1,24 @@
-# This query retrieves courses and instructional units associated with competences. It combines course-level curricular associations represented through CourseCompetenceSpecification with instructional-unit-level activation relations represented through CompetenceRelator. Thus, the query demonstrates that OntoKSD can trace both curricular and instructional associations involving competences.
+# CQ33: Which curricular expectations and instructional activations associate each competence?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Curricular inclusion does not prove instructional coverage or delivered instruction.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?associationType
-  ?associationRelator
-  ?associatedEntity
-  ?associatedEntityLabel
+SELECT DISTINCT ?competence ?competenceLabel ?associationType ?associationRecord ?associatedEntity ?associatedEntityLabel ?isMandatory ?minimumLevel
 WHERE {
-  {
-    ?associationRelator a ontoksd:CourseCompetenceSpecification ;
-                        ontoksd:mediatesCourseCompetence ?competence ;
-                        ontoksd:mediatesCourse ?associatedEntity .
-
-    BIND("Course" AS ?associationType)
-  }
-  UNION
-  {
-    ?associationRelator a ontoksd:CompetenceRelator ;
-                        ontoksd:mediatesCompetence ?competence ;
-                        ontoksd:mediatesInstructionalUnit ?associatedEntity .
-
-    BIND("InstructionalUnit" AS ?associationType)
-  }
-
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?associatedEntity rdfs:label ?associatedEntityLabel . }
+{ ?associationRecord a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourseCompetence ?competence ; ontoksd:mediatesCourse ?associatedEntity .
+ BIND("CourseCompetenceSpecification" AS ?associationType)
+ OPTIONAL { ?associationRecord ontoksd:isMandatory ?isMandatory . }
+ OPTIONAL { ?associationRecord ontoksd:requiresMinimumProficiencyLevel ?minimumLevel . } }
+UNION
+{ ?associationRecord a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?associatedEntity .
+ BIND("CompetenceActivation" AS ?associationType) }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?associatedEntity (rdfs:label|skos:prefLabel|dcterms:title) ?associatedEntityLabel . }
 }
-ORDER BY ?competenceLabel ?associationType ?associatedEntityLabel
+ORDER BY ?competence ?competenceLabel ?associatedEntityLabel

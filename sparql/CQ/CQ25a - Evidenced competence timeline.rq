@@ -1,25 +1,20 @@
-# This query retrieves dated evidenced competence records over time. It returns each EvidencedCompetence, the abstract competence to which it refers, the evidence supporting it, and the date at which the evidenced competence record was established. Thus, the query demonstrates that OntoKSD can trace the temporal evolution of learner-specific competence demonstrations.
+# CQ25a: Which dated whole-competence judgments are recorded for profiles and competences?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: A chronological record is not proof of learning progress; undated judgments are outside this view.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?evidencedCompetence
-  ?evidencedCompetenceLabel
-  ?evidencedAt
-  ?evidence
-  ?evidenceLabel
+SELECT DISTINCT ?profile ?competence ?competenceLabel ?evidencedCompetence ?evidencedCompetenceLabel ?evidencedAt ?evidence
 WHERE {
-  ?evidencedCompetence a ontoksd:EvidencedCompetence ;
-                       ontoksd:refersToCompetence ?competence ;
-                       ontoksd:evidencedAt ?evidencedAt .
-
-  OPTIONAL { ?evidencedCompetence ontoksd:supportedByEvidence ?evidence . }
-
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?evidencedCompetence rdfs:label ?evidencedCompetenceLabel . }
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
+?evidencedCompetence a ontoksd:EvidencedCompetence ; ontoksd:refersToCompetence ?competence ; ontoksd:evidencedAt ?evidencedAt .
+OPTIONAL { ?evidencedCompetence (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile . }
+OPTIONAL { ?evidencedCompetence (ontoksd:supportedByEvidence|^ontoksd:evidencesCompetence) ?evidence . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?evidencedCompetence (rdfs:label|skos:prefLabel|dcterms:title) ?evidencedCompetenceLabel . }
 }
-ORDER BY ?competenceLabel ?evidencedAt ?evidencedCompetenceLabel
+ORDER BY ?profile ?competence ?evidencedAt ?evidencedCompetence

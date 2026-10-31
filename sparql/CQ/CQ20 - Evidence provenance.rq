@@ -1,19 +1,18 @@
-# This query retrieves the provenance of evidence instances by identifying the assessment occurrence from which each evidence instance was produced or on which it is based. Thus, the query demonstrates that OntoKSD can trace evidence back to the concrete assessment occurrence that grounds its production.
-
-# OntoKSD supports traceability queries over evidence provenance through explicit relations connecting evidence instances and assessment occurrences, enabling retrieval of the evaluative situations from which evidence was produced.
+# CQ20: Which occurrence produced or grounds each evidence item?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: General origin query, independent of inverse materialization.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?evidence
-  ?evidenceLabel
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
+SELECT DISTINCT ?evidence ?evidenceLabel ?assessmentOccurrence ?assessmentOccurrenceLabel
 WHERE {
-  ?assessmentOccurrence ontoksd:producesEvidence ?evidence .
-
-  OPTIONAL { ?evidence rdfs:label ?evidenceLabel . }
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
+?evidence (ontoksd:evidenceBasedOn|^ontoksd:producesEvidence) ?assessmentOccurrence .
+OPTIONAL { ?evidence (rdfs:label|skos:prefLabel|dcterms:title) ?evidenceLabel . }
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
 }
-ORDER BY ?evidenceLabel ?assessmentOccurrenceLabel
+ORDER BY ?evidence ?evidenceLabel ?assessmentOccurrenceLabel

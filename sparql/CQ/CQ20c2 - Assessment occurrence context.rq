@@ -1,49 +1,18 @@
-# CQ20c1 - Assessment occurrence realizes assessment.rq
-
-# This query retrieves which assessment specification is realized by each assessment occurrence.
-
-PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
-  ?assessment
-  ?assessmentLabel
-WHERE {
-  ?assessmentOccurrence ontoksd:realizes ?assessment .
-
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
-  OPTIONAL { ?assessment rdfs:label ?assessmentLabel . }
-}
-ORDER BY ?assessmentOccurrenceLabel ?assessmentLabel
-
-
-
-
-
-
-
-
-
-
-
-# CQ20c2 - Assessment occurrence acquisition context.rq
-
-# This query retrieves the acquisition context in which each assessment occurrence takes place.
+# CQ20c2: In which acquisition context does each occurrence take place?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: One SPARQL operation per file; acquisition context specializes Context, not conversely.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?assessmentOccurrence
-  ?assessmentOccurrenceLabel
-  ?acquisitionContext
-  ?acquisitionContextLabel
+SELECT DISTINCT ?assessmentOccurrence ?assessmentOccurrenceLabel ?acquisitionContext ?acquisitionContextLabel
 WHERE {
-  ?assessmentOccurrence ontoksd:occursInAcquisitionContext ?acquisitionContext .
-
-  OPTIONAL { ?assessmentOccurrence rdfs:label ?assessmentOccurrenceLabel . }
-  OPTIONAL { ?acquisitionContext rdfs:label ?acquisitionContextLabel . }
+?assessmentOccurrence (ontoksd:occursInAcquisitionContext|^ontoksd:isContextOfAssessmentOccurrence) ?acquisitionContext .
+OPTIONAL { ?assessmentOccurrence (rdfs:label|skos:prefLabel|dcterms:title) ?assessmentOccurrenceLabel . }
+OPTIONAL { ?acquisitionContext (rdfs:label|skos:prefLabel|dcterms:title) ?acquisitionContextLabel . }
 }
-ORDER BY ?assessmentOccurrenceLabel ?acquisitionContextLabel
+ORDER BY ?assessmentOccurrence ?assessmentOccurrenceLabel ?acquisitionContextLabel

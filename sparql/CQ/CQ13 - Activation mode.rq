@@ -1,31 +1,21 @@
-# This query retrieves the ActivationMode that qualifies competence activation relations. It returns each competence, the instructional structure associated with it through a CompetenceRelator, and the activation mode that specifies how the competence is operationalized in that instructional context. Thus, the query demonstrates that OntoKSD can explicitly represent the mode by which a competence is developed, mobilized, or assessed in an instructional structure.
+# CQ13: Which modes qualify each competence activation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Modes may coexist and do not redefine the competence.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?instructionalUnit
-  ?instructionalUnitLabel
-  ?competenceRelator
-  ?activationMode
-  ?activationModeLabel
+SELECT DISTINCT ?competence ?competenceLabel ?competenceActivation ?instructionalUnit ?instructionalUnitLabel ?activationMode ?activationModeLabel
 WHERE {
-  ?competenceRelator a ontoksd:CompetenceRelator ;
-                     ontoksd:mediatesCompetence ?competence ;
-                     ontoksd:mediatesInstructionalUnit ?instructionalUnit ;
-                     ontoksd:hasActivationMode ?activationMode .
-
-  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
-  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
-  BIND(COALESCE(?competenceRdfsLabel, ?competenceSkosLabel, STR(?competence)) AS ?competenceLabel)
-
-  OPTIONAL { ?instructionalUnit rdfs:label ?instructionalUnitRdfsLabel . }
-  OPTIONAL { ?instructionalUnit skos:prefLabel ?instructionalUnitSkosLabel . }
-  BIND(COALESCE(?instructionalUnitRdfsLabel, ?instructionalUnitSkosLabel, STR(?instructionalUnit)) AS ?instructionalUnitLabel)
-
-  ?activationMode rdfs:label ?activationModeLabel .
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
+ (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation ontoksd:hasActivationMode ?activationMode .
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+OPTIONAL { ?activationMode (rdfs:label|skos:prefLabel|dcterms:title) ?activationModeLabel . }
 }
-ORDER BY ?competenceLabel ?instructionalUnitLabel ?activationModeLabel
+ORDER BY ?competence ?competenceLabel ?instructionalUnitLabel ?activationModeLabel

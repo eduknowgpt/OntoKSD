@@ -1,0 +1,54 @@
+# Which numeric intervals match each participation score, and how do they relate to a recorded judgment?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# Read-only numeric matching, not automatic proficiency attribution. Explicit record schemes take precedence over occurrence defaults. All matching intervals remain visible; overlap is flagged. No row can mean an uncovered/out-of-scale score, missing data or excluded scheme ambiguity.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?participation ?participationLabel ?learner ?score ?judgment ?judgmentType ?scheme ?schemeSource ?scale ?interval ?lowerBound ?includesLower ?upperBound ?includesUpper ?intervalLevel ?assignedLevel ?multipleIntervals ?comparison
+WHERE {
+?participation a ontoksd:AssessmentParticipation ; ontoksd:hasScore ?score ;
+ (ontoksd:occursInAssessmentOccurrence|^ontoksd:involvesAssessmentParticipation) ?occurrence .
+OPTIONAL { ?participation (ontoksd:hasLearner|^ontoksd:participatesIn) ?learner . }
+OPTIONAL { ?occurrence ontoksd:usesProficiencyScheme ?occurrenceScheme . }
+OPTIONAL {
+ VALUES ?judgmentType { ontoksd:EvidencedCompetence ontoksd:EvidencedCompetenceConstituent }
+ ?judgment a ?judgmentType ; ontoksd:derivedFromParticipation ?participation .
+ OPTIONAL { ?judgment ontoksd:interpretedUsingScheme ?recordScheme . }
+ OPTIONAL { ?judgment ontoksd:hasProficiencyLevel ?assignedLevel . }
+}
+BIND(COALESCE(?recordScheme, ?occurrenceScheme) AS ?scheme)
+BIND(IF(BOUND(?recordScheme), "judgment scheme", "occurrence fallback") AS ?schemeSource)
+# Do not arbitrarily choose between conflicting interpretation schemes.
+FILTER NOT EXISTS { ?judgment ontoksd:interpretedUsingScheme ?otherRecordScheme . FILTER(BOUND(?judgment) && BOUND(?recordScheme) && ?otherRecordScheme != ?recordScheme) }
+FILTER(BOUND(?recordScheme) || NOT EXISTS { ?occurrence ontoksd:usesProficiencyScheme ?otherOccurrenceScheme . FILTER(?otherOccurrenceScheme != ?occurrenceScheme) })
+?scheme a ontoksd:ProficiencyScheme ; ontoksd:usesScale ?scale ; ontoksd:definesInterval ?interval ; ontoksd:definesLevel ?intervalLevel .
+?scale ontoksd:minValue ?minValue ; ontoksd:maxValue ?maxValue .
+?interval (ontoksd:isIntervalOf|^ontoksd:hasInterval) ?scale ; ontoksd:correspondsToLevel ?intervalLevel ;
+ ontoksd:lowerBound ?lowerBound ; ontoksd:upperBound ?upperBound ;
+ ontoksd:includesLower ?includesLower ; ontoksd:includesUpper ?includesUpper .
+FILTER(isNumeric(?score) && isNumeric(?lowerBound) && isNumeric(?upperBound))
+FILTER(?minValue <= ?maxValue && ?score >= ?minValue && ?score <= ?maxValue && ?lowerBound <= ?upperBound)
+FILTER(((?includesLower = true && ?score >= ?lowerBound) || (?includesLower = false && ?score > ?lowerBound)) &&
+((?includesUpper = true && ?score <= ?upperBound) || (?includesUpper = false && ?score < ?upperBound)))
+BIND(EXISTS {
+ ?scheme ontoksd:definesInterval ?otherInterval .
+ ?otherInterval (ontoksd:isIntervalOf|^ontoksd:hasInterval) ?scale ; ontoksd:correspondsToLevel ?otherLevel ;
+  ontoksd:lowerBound ?otherLower ; ontoksd:upperBound ?otherUpper ; ontoksd:includesLower ?otherIncludesLower ; ontoksd:includesUpper ?otherIncludesUpper .
+ ?scheme ontoksd:definesLevel ?otherLevel .
+ FILTER(?otherInterval != ?interval && ?otherLower <= ?otherUpper)
+ FILTER(((?otherIncludesLower = true && ?score >= ?otherLower) || (?otherIncludesLower = false && ?score > ?otherLower)) &&
+((?otherIncludesUpper = true && ?score <= ?otherUpper) || (?otherIncludesUpper = false && ?score < ?otherUpper)))
+} AS ?multipleIntervals)
+BIND(IF(?multipleIntervals, "ambiguous interval match",
+ IF(!BOUND(?assignedLevel), "no assigned level",
+ IF(!BOUND(?recordScheme), "assignment scheme not explicit",
+ IF(?assignedLevel = ?intervalLevel, "same category", "different categories")))) AS ?comparison)
+OPTIONAL { ?participation (rdfs:label|skos:prefLabel|dcterms:title) ?participationLabel . }
+}
+ORDER BY ?participation ?participationLabel

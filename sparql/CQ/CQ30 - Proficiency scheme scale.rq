@@ -1,17 +1,21 @@
-# This query retrieves the measurement scale used by proficiency schemes. It returns each ProficiencyScheme together with the Scale adopted for score representation, interval interpretation, or proficiency attribution. Thus, the query demonstrates that OntoKSD can explicitly separate proficiency interpretation schemes from the measurement scales on which they operate.
+# CQ30: Which numeric scales are used by proficiency schemes?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Qualitative schemes without a numeric scale are outside this numeric-scale view.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?proficiencyScheme
-  ?proficiencySchemeLabel
-  ?scale
-  ?scaleLabel
+SELECT DISTINCT ?proficiencyScheme ?proficiencySchemeLabel ?scale ?scaleLabel ?minValue ?maxValue ?step
 WHERE {
-  ?proficiencyScheme ontoksd:usesScale ?scale .
-
-  OPTIONAL { ?proficiencyScheme rdfs:label ?proficiencySchemeLabel . }
-  OPTIONAL { ?scale rdfs:label ?scaleLabel . }
+?proficiencyScheme ontoksd:usesScale ?scale .
+OPTIONAL { ?scale ontoksd:minValue ?minValue . }
+OPTIONAL { ?scale ontoksd:maxValue ?maxValue . }
+OPTIONAL { ?scale ontoksd:step ?step . }
+OPTIONAL { ?proficiencyScheme (rdfs:label|skos:prefLabel|dcterms:title) ?proficiencySchemeLabel . }
+OPTIONAL { ?scale (rdfs:label|skos:prefLabel|dcterms:title) ?scaleLabel . }
 }
-ORDER BY ?proficiencySchemeLabel ?scaleLabel
+ORDER BY ?proficiencyScheme ?proficiencySchemeLabel ?scaleLabel

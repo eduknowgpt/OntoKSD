@@ -1,0 +1,25 @@
+# Which vocabulary verbs are available for the level assigned to each knowledge-level pairing?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# Selects C02 by default; replace that competence IRI. Unlike CQ2, lists vocabulary candidates for an already assigned level. It does not assign a level or validate a justification. A recorded verb may be absent from this view if it has no vocabulary link to that level.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?competence ?competenceLabel ?knowledgeSkill ?knowledge ?knowledgeLabel ?skillLevel ?skillLevelLabel ?candidateVerb ?isRecordedJustification
+WHERE {
+# Parameter: replace C02 with the intended competence. Remove VALUES only for a full-population analysis.
+VALUES ?competence { ontoksd:C02 }
+?competence (ontoksd:hasKnowledgeSkill|^ontoksd:isKnowledgeSkillOf) ?knowledgeSkill .
+?knowledgeSkill ontoksd:hasKnowledgeComponent ?knowledge ; ontoksd:hasSkillLevel ?skillLevel .
+?skillLevel (bloom:hasActionVerb|^bloom:isActionVerbFor) ?candidateVerb .
+BIND(EXISTS { ?knowledgeSkill ontoksd:hasBloomLevelJustificationVerb ?candidateVerb . } AS ?isRecordedJustification)
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?knowledge (rdfs:label|skos:prefLabel|dcterms:title) ?knowledgeLabel . }
+OPTIONAL { ?skillLevel (rdfs:label|skos:prefLabel|dcterms:title) ?skillLevelLabel . }
+}
+ORDER BY ?competence ?competenceLabel ?knowledgeLabel ?skillLevelLabel

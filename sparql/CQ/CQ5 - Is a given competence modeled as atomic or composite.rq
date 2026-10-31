@@ -1,29 +1,21 @@
-
-# This query retrieves the structural type assigned to a selected competence. It indicates whether the competence is modeled as atomic or composite, according to the StructureType associated with the competence. Thus, the query demonstrates that OntoKSD can explicitly distinguish indivisible competence specifications from competences composed of other competence elements.
+# CQ5: Which atomic/composite structure is declared or classified?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: No atomic classification is inferred from absent component triples. Basis rows may repeat the same entity.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?structureType
-  ?structureTypeLabel
+SELECT DISTINCT ?competence ?competenceLabel ?structureType ?structureTypeLabel ?structureBasis
 WHERE {
-  ?competence a ontoksd:Competence ;
-              rdfs:label ?competenceLabel ;
-              ontoksd:hasStructureType ?structureType .
-
-  OPTIONAL { ?structureType rdfs:label ?structureTypeRdfsLabel . }
-  OPTIONAL { ?structureType skos:prefLabel ?structureTypeSkosLabel . }
-
-  BIND(
-    COALESCE(
-      ?structureTypeRdfsLabel,
-      ?structureTypeSkosLabel,
-      STR(?structureType)
-    ) AS ?structureTypeLabel
-  )
+{ ?competence ontoksd:hasStructureType ?structureType . BIND("declared value" AS ?structureBasis) }
+UNION
+{ VALUES (?structureClass ?structureType) { (ontoksd:AtomicCompetence ontoksd:Atomic) (ontoksd:CompositeCompetence ontoksd:Composite) }
+  ?competence a ?structureClass . BIND("class membership" AS ?structureBasis) }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?structureType (rdfs:label|skos:prefLabel|dcterms:title) ?structureTypeLabel . }
 }
-ORDER BY ?structureTypeLabel
+ORDER BY ?competence ?competenceLabel ?structureTypeLabel

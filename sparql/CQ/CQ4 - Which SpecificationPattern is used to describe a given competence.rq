@@ -1,29 +1,18 @@
-# This query retrieves the SpecificationPattern used to describe a selected competence. It identifies the specification structure adopted by the competence, such as CC2020-based KnowledgeSkill patterns, CS2023 task-oriented patterns, or other supported competence specification models. Thus, the query demonstrates that OntoKSD can explicitly represent the modeling pattern underlying competence specifications.
+# CQ4: Which specification-pattern value is declared for each competence?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Pattern identifiers classify the adopted representation; constituent presence alone is insufficient.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?pattern
-  ?patternLabel
+SELECT DISTINCT ?competence ?competenceLabel ?pattern ?patternLabel
 WHERE {
-   ?competence a ontoksd:Competence ;
-              rdfs:label ?competenceLabel ;
-              ontoksd:hasSpecificationPattern ?pattern .
-
-  OPTIONAL { ?pattern rdfs:label ?patternRdfsLabel . }
-  OPTIONAL { ?pattern skos:prefLabel ?patternSkosLabel . }
-
-  BIND(
-    COALESCE(
-      ?patternRdfsLabel,
-      ?patternSkosLabel,
-      STR(?pattern)
-    ) AS ?patternLabel
-  )
+?competence ontoksd:hasSpecificationPattern ?pattern .
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?pattern (rdfs:label|skos:prefLabel|dcterms:title) ?patternLabel . }
 }
-ORDER BY ?patternLabel
+ORDER BY ?competence ?competenceLabel ?patternLabel

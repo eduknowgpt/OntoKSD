@@ -1,28 +1,59 @@
-# This query retrieves required competences evidenced below the minimum proficiency level required by a course.
+# CQ40b: Which mandatory competence expectations have a latest comparable judgment below their minimum?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Explicit profile/course pair; mandatory curricular expectation; explicit scheme reference via dcterms:references; same-scheme numeric ordinals; latest dated, non-expired record as of NOW(). No cross-scheme or undated comparison. These variants share the same comparison policy; they are candidates, not independent diagnoses. Comparing individual judgments with curricular depth is an external analytical policy, not a student passing rule.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
+# Parameters: replace Profile_Example and Course_Example; no enrollment is inferred.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?competence ?competenceLabel ?evidencedLevel ?evidencedLevelLabel ?requiredLevel ?requiredLevelLabel
+SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?courseSpecification ?competence ?competenceLabel ?evidencedCompetence ?evidencedAt ?proficiencyScheme ?evidencedLevel ?evidencedOrdinal ?requiredLevel ?requiredOrdinal
 WHERE {
-  ?evidencedCompetence ontoksd:isEvidencedCompetenceOf ?profile ;
-                       ontoksd:refersToCompetence ?competence ;
-                       ontoksd:hasProficiencyLevel ?evidencedLevel .
-
-  ?courseSpec ontoksd:mediatesCourse ?course ;
-              ontoksd:mediatesCourseCompetence ?competence ;
-              ontoksd:requiresMinimumProficiencyLevel ?requiredLevel .
-
-  ?evidencedLevel ontoksd:hasOrdinalPosition ?evidencedOrdinal .
-  ?requiredLevel ontoksd:hasOrdinalPosition ?requiredOrdinal .
-
-  FILTER(xsd:integer(?evidencedOrdinal) < xsd:integer(?requiredOrdinal))
-
-  OPTIONAL { ?profile rdfs:label ?profileLabel . }
-  OPTIONAL { ?course rdfs:label ?courseLabel . }
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?evidencedLevel rdfs:label ?evidencedLevelLabel . }
-  OPTIONAL { ?requiredLevel rdfs:label ?requiredLevelLabel . }
+VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
+?profile a ontoksd:Profile .
+?courseSpecification a ontoksd:CourseCompetenceSpecification ;
+ ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence ;
+ ontoksd:isMandatory true ; ontoksd:requiresMinimumProficiencyLevel ?requiredLevel ;
+ dcterms:references ?proficiencyScheme .
+?proficiencyScheme a ontoksd:ProficiencyScheme ; ontoksd:definesLevel ?requiredLevel .
+?evidencedCompetence a ontoksd:EvidencedCompetence ; (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile ; ontoksd:refersToCompetence ?competence ;
+ ontoksd:hasProficiencyLevel ?evidencedLevel ; ontoksd:interpretedUsingScheme ?proficiencyScheme ; ontoksd:evidencedAt ?evidencedAt .
+?proficiencyScheme ontoksd:definesLevel ?evidencedLevel .
+?evidencedLevel ontoksd:hasOrdinalPosition ?evidencedOrdinal .
+?requiredLevel ontoksd:hasOrdinalPosition ?requiredOrdinal .
+BIND(NOW() AS ?asOf)
+FILTER(?evidencedAt <= ?asOf)
+FILTER NOT EXISTS { ?evidencedCompetence ontoksd:validUntil ?expired . FILTER(?expired <= ?asOf) }
+# Comparison requires a unique scheme, level, timestamp and ordinal value.
+FILTER NOT EXISTS { ?evidencedCompetence ontoksd:interpretedUsingScheme ?otherScheme . FILTER(?otherScheme != ?proficiencyScheme) }
+FILTER NOT EXISTS { ?evidencedCompetence ontoksd:hasProficiencyLevel ?otherLevel . FILTER(?otherLevel != ?evidencedLevel) }
+FILTER NOT EXISTS { ?evidencedCompetence ontoksd:evidencedAt ?otherTime . FILTER(?otherTime != ?evidencedAt) }
+FILTER NOT EXISTS { ?courseSpecification dcterms:references ?otherRequiredScheme . ?otherRequiredScheme a ontoksd:ProficiencyScheme . FILTER(?otherRequiredScheme != ?proficiencyScheme) }
+FILTER NOT EXISTS { ?courseSpecification ontoksd:requiresMinimumProficiencyLevel ?otherRequiredLevel . FILTER(?otherRequiredLevel != ?requiredLevel) }
+FILTER NOT EXISTS { ?evidencedLevel ontoksd:hasOrdinalPosition ?otherOrdinal . FILTER(?otherOrdinal != ?evidencedOrdinal) }
+FILTER NOT EXISTS { ?requiredLevel ontoksd:hasOrdinalPosition ?otherRequiredOrdinal . FILTER(?otherRequiredOrdinal != ?requiredOrdinal) }
+# A newer, non-expired record blocks an older result, even if the newer record has no level.
+FILTER NOT EXISTS {
+ ?newer a ontoksd:EvidencedCompetence ; (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile ; ontoksd:refersToCompetence ?competence ; ontoksd:interpretedUsingScheme ?proficiencyScheme ; ontoksd:evidencedAt ?newerTime .
+ FILTER(?newerTime > ?evidencedAt && ?newerTime <= ?asOf)
+ FILTER NOT EXISTS { ?newer ontoksd:validUntil ?newerExpiry . FILTER(?newerExpiry <= ?asOf) }
 }
-ORDER BY ?profileLabel ?courseLabel ?competenceLabel
+# Equal-date conflicting levels are ambiguous, not a reason to select the lower record.
+FILTER NOT EXISTS {
+ ?tied a ontoksd:EvidencedCompetence ; (ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile ; ontoksd:refersToCompetence ?competence ; ontoksd:interpretedUsingScheme ?proficiencyScheme ; ontoksd:evidencedAt ?evidencedAt ; ontoksd:hasProficiencyLevel ?tiedLevel .
+ FILTER(?tiedLevel != ?evidencedLevel)
+ FILTER NOT EXISTS { ?tied ontoksd:validUntil ?tiedExpiry . FILTER(?tiedExpiry <= ?asOf) }
+}
+FILTER(isNumeric(?evidencedOrdinal) && isNumeric(?requiredOrdinal))
+# Ordinal positions must identify distinct categories unambiguously within this scheme.
+FILTER NOT EXISTS { ?proficiencyScheme ontoksd:definesLevel ?sameCurrentRank . ?sameCurrentRank ontoksd:hasOrdinalPosition ?evidencedOrdinal . FILTER(?sameCurrentRank != ?evidencedLevel) }
+FILTER NOT EXISTS { ?proficiencyScheme ontoksd:definesLevel ?sameRequiredRank . ?sameRequiredRank ontoksd:hasOrdinalPosition ?requiredOrdinal . FILTER(?sameRequiredRank != ?requiredLevel) }
+FILTER(?evidencedOrdinal < ?requiredOrdinal)
+OPTIONAL { ?profile (rdfs:label|skos:prefLabel|dcterms:title) ?profileLabel . }
+OPTIONAL { ?course (rdfs:label|skos:prefLabel|dcterms:title) ?courseLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+}
+ORDER BY ?profile ?profileLabel ?courseLabel ?competenceLabel

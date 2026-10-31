@@ -1,41 +1,23 @@
-# This query retrieves contexts in which competences are reused across instructional units, curricular structures, or learning contexts. It returns each competence together with instructional units mediated by competence activation relations, courses mediated by course-level competence specifications, and acquisition contexts associated with instructional units. Thus, the query demonstrates that OntoKSD can trace competence reuse across different educational structures and contexts.
+# CQ35: Where is the same competence structurally reused across multiple units or courses?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Distinct planned units (including a learning task and its assessment) establish structural reuse, not necessarily independent source problems or delivered events.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?reuseContextType
-  ?reuseRelation
-  ?reuseContext
-  ?reuseContextLabel
+SELECT DISTINCT ?competence ?competenceLabel ?reuseContextType ?reuseRelation ?reuseContext ?reuseContextLabel
 WHERE {
-  {
-    ?reuseRelation ontoksd:mediatesCompetence ?competence ;
-                   ontoksd:mediatesInstructionalUnit ?reuseContext .
-
-    BIND("InstructionalUnit" AS ?reuseContextType)
-  }
-  UNION
-  {
-    ?reuseRelation ontoksd:mediatesCourseCompetence ?competence ;
-                   ontoksd:mediatesCourse ?reuseContext .
-
-    BIND("Course" AS ?reuseContextType)
-  }
-  UNION
-  {
-    ?activation ontoksd:mediatesCompetence ?competence ;
-                ontoksd:mediatesInstructionalUnit ?instructionalUnit .
-
-    ?instructionalUnit ontoksd:hasAcquisitionContext ?reuseContext .
-
-    BIND(?activation AS ?reuseRelation)
-    BIND("AcquisitionContext" AS ?reuseContextType)
-  }
-
-  OPTIONAL { ?competence rdfs:label ?competenceLabel . }
-  OPTIONAL { ?reuseContext rdfs:label ?reuseContextLabel . }
+{ { SELECT ?competence WHERE { ?a ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?unit) > 1) } } UNION { SELECT ?competence WHERE { ?spec ontoksd:mediatesCourseCompetence ?competence ; ontoksd:mediatesCourse ?course . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?course) > 1) }
+{ ?reuseRelation ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?reuseContext . BIND("InstructionalUnit" AS ?reuseContextType) }
+UNION
+{ ?reuseRelation ontoksd:mediatesCourseCompetence ?competence ; ontoksd:mediatesCourse ?reuseContext . BIND("Course" AS ?reuseContextType) }
+UNION
+{ ?reuseRelation ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . ?unit (ontoksd:hasAcquisitionContext|^ontoksd:isAcquisitionContextOf) ?reuseContext . BIND("AcquisitionContext" AS ?reuseContextType) }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?reuseContext (rdfs:label|skos:prefLabel|dcterms:title) ?reuseContextLabel . }
 }
-ORDER BY ?competenceLabel ?reuseContextType ?reuseContextLabel
+ORDER BY ?competence ?competenceLabel ?reuseContextLabel

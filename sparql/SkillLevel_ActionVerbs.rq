@@ -1,0 +1,22 @@
+# Which action verbs are associated with each framework-specific skill level?
+# Read-only SELECT; GraphDB / SPARQL 1.1.
+# Vocabulary associations are contextual and may be multiple. They neither infer a competence requirement nor establish cross-scheme equivalence.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX bloom: <http://purl.org/edu/bloom#>
+PREFIX cs2023level: <http://purl.org/edu/cs2023#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?skillLevel ?skillLevelLabel ?levelScheme ?ordinalPosition ?actionVerb ?verbType
+WHERE {
+VALUES ?levelScheme { bloom:CC2020SkillLevel cs2023level:CS2023SkillLevel }
+?skillLevel a/rdfs:subClassOf* ?levelScheme .
+OPTIONAL { ?skillLevel bloom:hasOrdinalPosition ?ordinalPosition . }
+OPTIONAL { ?skillLevel (bloom:hasActionVerb|^bloom:isActionVerbFor) ?actionVerb .
+ OPTIONAL { ?actionVerb bloom:hasActionVerbType ?verbType . } }
+OPTIONAL { ?skillLevel (rdfs:label|skos:prefLabel|dcterms:title) ?skillLevelLabel . }
+}
+ORDER BY ?skillLevel ?skillLevelLabel

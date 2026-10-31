@@ -1,65 +1,24 @@
-# This query retrieves compositional relations between competences. It identifies which competences compose a composite competence and also in which composite competences a competence is included as a component. Thus, the query demonstrates that OntoKSD can explicitly represent competence composition through direct and inverse inter-competence structural relations.
+# CQ6: What are the direct composition relationships and integration descriptions?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Both directions are normalized without inverse materialization. Composition is irreflexive (no own part), asymmetric (no reciprocal part links), and non-transitive (direct parts only); longer cycles need separate checks.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT
-  ?competence
-  ?competenceLabel
-  ?structureTypeLabel
-  ?relation
-  ?relatedCompetence
-  ?relatedCompetenceLabel
+SELECT DISTINCT ?competence ?competenceLabel ?relation ?relatedCompetence ?relatedCompetenceLabel ?integrationDescription
 WHERE {
-
-  ?competence a ontoksd:Competence .
-
-  OPTIONAL {
-    ?competence ontoksd:hasStructureType ?structureType .
-
-    OPTIONAL { ?structureType rdfs:label ?structureTypeRdfsLabel . }
-    OPTIONAL { ?structureType skos:prefLabel ?structureTypeSkosLabel . }
-
-    BIND(
-      COALESCE(
-        ?structureTypeRdfsLabel,
-        ?structureTypeSkosLabel,
-        STR(?structureType)
-      ) AS ?structureTypeLabel
-    )
-  }
-
-  {
-    ?competence ontoksd:hasComponent ?relatedCompetence .
-    BIND("hasComponent" AS ?relation)
-  }
-  UNION
-  {
-    ?competence ontoksd:isCompetenceOf ?relatedCompetence .
-    BIND("isCompetenceOf" AS ?relation)
-  }
-
-  OPTIONAL { ?competence rdfs:label ?competenceRdfsLabel . }
-  OPTIONAL { ?competence skos:prefLabel ?competenceSkosLabel . }
-
-  BIND(
-    COALESCE(
-      ?competenceRdfsLabel,
-      ?competenceSkosLabel,
-      STR(?competence)
-    ) AS ?competenceLabel
-  )
-
-  OPTIONAL { ?relatedCompetence rdfs:label ?relatedCompetenceRdfsLabel . }
-  OPTIONAL { ?relatedCompetence skos:prefLabel ?relatedCompetenceSkosLabel . }
-
-  BIND(
-    COALESCE(
-      ?relatedCompetenceRdfsLabel,
-      ?relatedCompetenceSkosLabel,
-      STR(?relatedCompetence)
-    ) AS ?relatedCompetenceLabel
-  )
+{ ?competence (ontoksd:hasComponentCompetence|^ontoksd:isComponentOfCompetence) ?relatedCompetence .
+  BIND("hasComponentCompetence" AS ?relation)
+  OPTIONAL { ?competence ontoksd:hasIntegrationDescription ?integrationDescription . } }
+UNION
+{ ?competence (ontoksd:isComponentOfCompetence|^ontoksd:hasComponentCompetence) ?relatedCompetence .
+  BIND("isComponentOfCompetence" AS ?relation)
+  OPTIONAL { ?relatedCompetence ontoksd:hasIntegrationDescription ?integrationDescription . } }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?relatedCompetence (rdfs:label|skos:prefLabel|dcterms:title) ?relatedCompetenceLabel . }
 }
-ORDER BY ?competenceLabel ?relation ?relatedCompetenceLabel
+ORDER BY ?competence ?competenceLabel ?relatedCompetenceLabel
