@@ -1,21 +1,25 @@
 # CQ30: Which numeric scales are used by proficiency schemes?
 # Operation: SELECT. Target: GraphDB / SPARQL 1.1.
-# Scope: Qualitative schemes without a numeric scale are outside this numeric-scale view.
-# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
-
+# Scope: Qualitative schemes without numeric scales are not returned.
+# Optional labels accept Portuguese or untagged literals; no English fallback or unique-label selection is implied.
+# Missing labels, bounds or step do not remove the scheme/scale association.
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-SELECT DISTINCT ?proficiencyScheme ?proficiencySchemeLabel ?scale ?scaleLabel ?minValue ?maxValue ?step
+SELECT DISTINCT ?scheme ?schemeLabel ?scale ?scaleLabel ?minimum ?maximum ?step
 WHERE {
-?proficiencyScheme ontoksd:usesScale ?scale .
-OPTIONAL { ?scale ontoksd:minValue ?minValue . }
-OPTIONAL { ?scale ontoksd:maxValue ?maxValue . }
-OPTIONAL { ?scale ontoksd:step ?step . }
-OPTIONAL { ?proficiencyScheme (rdfs:label|skos:prefLabel|dcterms:title) ?proficiencySchemeLabel . }
-OPTIONAL { ?scale (rdfs:label|skos:prefLabel|dcterms:title) ?scaleLabel . }
+ ?scheme ontoksd:usesScale ?scale .
+ OPTIONAL { ?scale ontoksd:minValue ?minimum . }
+ OPTIONAL { ?scale ontoksd:maxValue ?maximum . }
+ OPTIONAL { ?scale ontoksd:step ?step . }
+ OPTIONAL {
+  ?scheme (rdfs:label|skos:prefLabel|dcterms:title) ?schemeLabel .
+  FILTER(LANG(?schemeLabel) = "" || LANGMATCHES(LANG(?schemeLabel), "pt"))
+ }
+ OPTIONAL {
+  ?scale (rdfs:label|skos:prefLabel|dcterms:title) ?scaleLabel .
+  FILTER(LANG(?scaleLabel) = "" || LANGMATCHES(LANG(?scaleLabel), "pt"))
+ }
 }
-ORDER BY ?proficiencyScheme ?proficiencySchemeLabel ?scaleLabel
+ORDER BY ?scheme ?scale ?schemeLabel ?scaleLabel

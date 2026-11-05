@@ -214,6 +214,25 @@ A context may be shared by instructional units where its meaning and boundaries 
 The association does not demonstrate that instruction occurred, that anticipated conditions were satisfied, or that competence was acquired.""" .
 
 
+###  http://purl.org/ontoksd#hasActivationCompetence
+ontoksd:hasActivationCompetence rdf:type owl:ObjectProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain ontoksd:CompetenceActivation ;
+                                rdfs:range ontoksd:Competence ;
+                                rdfs:comment """Relates a CompetenceActivation to the Competence specification addressed by that instructional association record.
+
+In OntoKSD, each CompetenceActivation references exactly one Competence through hasActivationCompetence and exactly one InstructionalUnit through hasActivationInstructionalUnit. Its qualifications describe the pedagogical function, contribution, expected engagement modes, and conditions under which the competence is intended to be addressed.
+
+This property does not determine whether the competence is an instructional target or a prerequisite. That distinction is recorded through hasActivationFunction. When prerequisiteFunction is assigned, the activation records an expectation of prior competence; it does not establish that a learner meets that expectation.
+
+The same Competence may be referenced by multiple activation records with different instructional qualifications. Those qualifications contextualize its intended use while preserving its reusable definition and constituent requirements.
+
+The relation identifies the competence referenced by a planning record. It does not represent a dependency between competence specifications, learner-specific attainment, or an observed occurrence of competence mobilization.
+
+Ontological rationale:
+hasActivationCompetence is an endpoint relation for a qualified instructional association record. It does not specialize gufo:mediates or imply that CompetenceActivation is a gufo:Relator.""" .
+
+
 ###  http://purl.org/ontoksd#hasActivationConstraint
 ontoksd:hasActivationConstraint rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf ontoksd:hasActivationQualifier ;
@@ -259,6 +278,21 @@ Function identifies pedagogical purpose rather than the competence's contributio
 Function values are reusable classifications. The same value may qualify multiple activations without identifying those associations as the same entity. Multiple assignments require a coherent interpretation in the instructional specification.
 
 The association records an educational intention or presupposition. It does not establish that instruction occurred, that a learner satisfies a prerequisite, or that competence was attained.""" .
+
+
+###  http://purl.org/ontoksd#hasActivationInstructionalUnit
+ontoksd:hasActivationInstructionalUnit rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf ontoksd:hasCompetenceActivation ;
+                                       rdf:type owl:FunctionalProperty ;
+                                       rdfs:domain ontoksd:CompetenceActivation ;
+                                       rdfs:range ontoksd:InstructionalUnit ;
+                                       rdfs:comment """Relates an InstructionalUnit to a CompetenceActivation that specifies how a particular competence is intended to be addressed within that unit.
+
+In OntoKSD, hasCompetenceActivation links the instructional unit to its activation records. It is the inverse of hasActivationInstructionalUnit. Each activation references exactly one instructional unit and exactly one competence, while an instructional unit may have multiple activation records.
+
+An activation may specify pedagogical function, contribution, expected engagement modes, and applicable conditions. These qualifications describe the instructional association rather than intrinsic properties of either the unit or the competence.
+
+The relation complements the unit’s instructional description. It does not establish that the planned work occurred, that instructional requirements were fulfilled, or that a learner demonstrated the competence.""" .
 
 
 ###  http://purl.org/ontoksd#hasActivationMode
@@ -369,16 +403,15 @@ ontoksd:hasBloomLevelJustificationVerb rdf:type owl:ObjectProperty ;
 ###  http://purl.org/ontoksd#hasCompetenceActivation
 ontoksd:hasCompetenceActivation rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf owl:topObjectProperty ;
-                                owl:inverseOf ontoksd:mediatesInstructionalUnit ;
                                 rdfs:domain ontoksd:InstructionalUnit ;
                                 rdfs:range ontoksd:CompetenceActivation ;
-                                rdfs:comment """Associates an InstructionalUnit with a CompetenceActivation specifying how a particular competence is pedagogically addressed within that unit.
+                                rdfs:comment """Relates an InstructionalUnit to a CompetenceActivation that specifies how a particular competence is intended to be addressed within that unit.
 
-hasCompetenceActivation relates the instructional unit to the activation record; mediatesInstructionalUnit expresses the inverse direction. Each activation identifies exactly one instructional unit and exactly one competence, while an instructional unit may have multiple activation records.
+In OntoKSD, hasCompetenceActivation links the instructional unit to its activation records. It is the inverse of hasActivationInstructionalUnit. Each activation references exactly one instructional unit and exactly one competence, while an instructional unit may have multiple activation records.
 
-The activation may specify pedagogical function, contribution, engagement modes, and applicable conditions. These qualifications belong to the association rather than being intrinsic properties of the instructional unit or the competence.
+An activation may specify pedagogical function, contribution, expected engagement modes, and applicable conditions. These qualifications describe the instructional association rather than intrinsic properties of either the unit or the competence.
 
-The association does not replace the unit's complete instructional description or establish that the planned work occurred, that requirements were satisfied, or that a learner demonstrated competence."""@en .
+The relation complements the unit’s instructional description. It does not establish that the planned work occurred, that instructional requirements were fulfilled, or that a learner demonstrated the competence."""@en .
 
 
 ###  http://purl.org/ontoksd#hasCompetenceConstituent
@@ -532,6 +565,23 @@ Each record retains its own supporting evidence and applicable interpretation. L
 The association supports traceability between assessment granularities without replacing the justification of either judgment.""" .
 
 
+###  http://purl.org/ontoksd#hasExternalCompetence
+ontoksd:hasExternalCompetence rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain ontoksd:ExternalCompetenceAlignment ;
+                              rdfs:range ontoksd:ExternalCompetence ;
+                              rdfs:comment """Relates an ExternalCompetenceAlignment to the ExternalCompetence referenced by its alignment assertion.
+
+In OntoKSD, hasExternalCompetence identifies the externally defined competence statement compared with an internal Competence. Together with hasInternalCompetence, it identifies the pair to which the alignment type, justification, and source references apply.
+
+The property is functional, and each ExternalCompetenceAlignment is required to reference exactly one ExternalCompetence. The same external competence may be referenced by multiple alignment records involving different internal competences or differently qualified correspondences.
+
+This relation preserves the external specification as a reference in its own right. It does not assert semantic identity, import its requirements into the internal competence, or establish complete coverage or compliance with the external framework.
+
+Ontological rationale:
+hasExternalCompetence is an endpoint relation for a qualified alignment assertion. It does not specialize gufo:mediates or imply that ExternalCompetenceAlignment is a gufo:Relator.""" .
+
+
 ###  http://purl.org/ontoksd#hasInstructionalUnit
 ontoksd:hasInstructionalUnit rdf:type owl:ObjectProperty ;
                              rdfs:domain ontoksd:Course ;
@@ -545,6 +595,23 @@ A course may include multiple instructional units, and a unit may be associated 
 The association does not impose execution order, scheduling, or exclusive ownership. It does not automatically establish that the unit addresses every competence expected by the course or provides sufficient curricular coverage. Those correspondences require separately recorded competence associations and examination.
 
 This property has domain Course and range InstructionalUnit.""" .
+
+
+###  http://purl.org/ontoksd#hasInternalCompetence
+ontoksd:hasInternalCompetence rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain ontoksd:ExternalCompetenceAlignment ;
+                              rdfs:range ontoksd:Competence ;
+                              rdfs:comment """Relates an ExternalCompetenceAlignment to the internal Competence specification addressed by its alignment assertion.
+
+In OntoKSD, hasInternalCompetence identifies the competence defined within the internal model that is compared with an ExternalCompetence. Together with hasExternalCompetence, it identifies the pair to which the alignment type, justification, and source references apply.
+
+The property is functional, and each ExternalCompetenceAlignment is required to reference exactly one internal Competence. The same competence may be referenced by multiple alignment records concerning different external specifications or differently qualified correspondences.
+
+This relation identifies an endpoint of an alignment record. It does not establish semantic identity, transfer constituent requirements, or independently validate the asserted correspondence.
+
+Ontological rationale:
+hasInternalCompetence is an endpoint relation for a qualified alignment assertion. It does not specialize gufo:mediates or imply that ExternalCompetenceAlignment is a gufo:Relator.""" .
 
 
 ###  http://purl.org/ontoksd#hasInterval
@@ -789,6 +856,40 @@ ontoksd:hasSpecificationPattern rdf:type owl:ObjectProperty ;
 In OntoKSD, this property is used to indicate the representational pattern adopted for the competence, such as formulations based on explicit Knowledge, Skill, and Disposition elements, or formulations based on KnowledgeSkill pairings and dispositions. It classifies the semantic style of specification used for the competence.
 
 This property does not indicate whether the competence is atomic or composite. That distinction is captured separately through structural relations and structure classification.""" .
+
+
+###  http://purl.org/ontoksd#hasSpecifiedCompetence
+ontoksd:hasSpecifiedCompetence rdf:type owl:ObjectProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain ontoksd:CourseCompetenceSpecification ;
+                               rdfs:range ontoksd:Competence ;
+                               rdfs:comment """Relates a CourseCompetenceSpecification to the Competence whose inclusion and associated expectations are specified within a course.
+
+In OntoKSD, hasSpecifiedCompetence identifies the reusable competence addressed by a curricular specification record. Together with hasSpecifiedCourse, it identifies the course–competence pair to which mandatory status and any minimum expected proficiency apply.
+
+The property is functional, and each CourseCompetenceSpecification is required to reference exactly one Competence. The same competence may be referenced by specifications for different courses, with different expectations, while retaining its definition.
+
+Mandatory status and minimum expected proficiency qualify the curricular association. They do not redefine the competence, establish an admission prerequisite, or represent an individual learner’s achievement. Likewise, curricular inclusion alone does not demonstrate instructional coverage or fulfillment of the stated expectation.
+
+Ontological rationale:
+hasSpecifiedCompetence is an endpoint relation for a qualified curricular specification record. It does not specialize gufo:mediates or imply that CourseCompetenceSpecification is a gufo:Relator.""" .
+
+
+###  http://purl.org/ontoksd#hasSpecifiedCourse
+ontoksd:hasSpecifiedCourse rdf:type owl:ObjectProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain ontoksd:CourseCompetenceSpecification ;
+                           rdfs:range ontoksd:Course ;
+                           rdfs:comment """Relates a CourseCompetenceSpecification to the Course for which a competence inclusion and its curricular expectations are specified.
+
+In OntoKSD, hasSpecifiedCourse identifies the course addressed by a qualified curricular specification. Together with hasSpecifiedCompetence, it identifies the course–competence pair to which mandatory status and any minimum expected proficiency apply.
+
+The property is functional, and each CourseCompetenceSpecification is required to reference exactly one Course. A course may be referenced by multiple specifications concerning different competences.
+
+This property identifies the course referenced by the specification record. It does not assert that instruction has been delivered, that the curricular expectation has been fulfilled, or that a learner has demonstrated the competence.
+
+Ontological rationale:
+hasSpecifiedCourse is an endpoint relation for a qualified specification record. It does not specialize gufo:mediates or imply that CourseCompetenceSpecification is a gufo:Relator.""" .
 
 
 ###  http://purl.org/ontoksd#hasStructureType
@@ -1218,90 +1319,6 @@ ontoksd:isTaskOf rdf:type owl:ObjectProperty ;
 ontoksd:levelDefinedInScheme rdf:type owl:ObjectProperty ;
                              rdfs:domain ontoksd:ProficiencyLevel ;
                              rdfs:range ontoksd:ProficiencyScheme .
-
-
-###  http://purl.org/ontoksd#mediatesCompetence
-ontoksd:mediatesCompetence rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                           rdf:type owl:FunctionalProperty ;
-                           rdfs:domain ontoksd:CompetenceActivation ;
-                           rdfs:range ontoksd:Competence ;
-                           rdfs:comment """Relates a CompetenceActivation to the Competence specification addressed by its instructional association.
-
-In OntoKSD, each CompetenceActivation identifies exactly one competence through mediatesCompetence and exactly one instructional unit through mediatesInstructionalUnit. The association may be qualified by pedagogical function, contribution, expected engagement modes, and applicable conditions.
-
-The property does not itself classify the competence as a prerequisite. Where prerequisiteFunction is assigned through hasActivationFunction, the activation records that the competence is presupposed for engagement in the instructional unit; it does not establish that a learner satisfies that expectation.
-
-The same competence may participate in multiple activations with different instructional qualifications while retaining its reusable definition. Changes in qualification must not silently alter its constituent requirements or expected performance.
-
-This property has domain CompetenceActivation and range Competence. It does not express a dependency between competence specifications, identify learner-specific attainment, or establish that the planned mobilization occurred.""" .
-
-
-###  http://purl.org/ontoksd#mediatesCourse
-ontoksd:mediatesCourse rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                       rdf:type owl:FunctionalProperty ;
-                       rdfs:domain ontoksd:CourseCompetenceSpecification ;
-                       rdfs:range ontoksd:Course ;
-                       rdfs:comment """mediatesCourse
-Relates a CourseCompetenceSpecification to the Course whose curricular scope it qualifies with respect to a given competence.
-
-In OntoKSD, mediatesCourse is used to indicate that a CourseCompetenceSpecification semantically involves a particular course as one of the relata of the curricular specification. Through this relation, the ontology makes explicit that the specification is not an abstract statement about competence alone, but a qualified curricular association anchored in a specific Course.
-
-This property should be interpreted together with mediatesCourseCompetence, since both relations jointly identify the two poles connected by the same curricular specification.
-
-Ontological rationale:
-mediatesCourse is modeled as a mediation relation because CourseCompetenceSpecification reifies the qualified association between a course and a competence. The property makes explicit the participation of the course in that relator, rather than reducing the association to a direct unqualified link.""" .
-
-
-###  http://purl.org/ontoksd#mediatesCourseCompetence
-ontoksd:mediatesCourseCompetence rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                                 rdf:type owl:FunctionalProperty ;
-                                 rdfs:domain ontoksd:CourseCompetenceSpecification ;
-                                 rdfs:range ontoksd:Competence ;
-                                 rdfs:comment """mediatesCourseCompetence
-Relates a CourseCompetenceSpecification to the Competence that is curricularly specified in association with a given Course.
-
-In OntoKSD, mediatesCourseCompetence is used to indicate that a CourseCompetenceSpecification semantically involves a particular competence as one of the relata of the curricular specification. Through this relation, the ontology makes explicit which competence is included, expected, or required within the curricular scope of the course.
-
-This property should be interpreted together with mediatesCourse, since both relations jointly represent the qualified association reified by the same CourseCompetenceSpecification.
-
-Ontological rationale:
-mediatesCourseCompetence is modeled as a mediation relation because the association between a course and a competence is treated in OntoKSD as a semantically qualified curricular specification. The property identifies the competence involved in that relator while preserving the possibility of attaching additional constraints and qualifications to the association.""" .
-
-
-###  http://purl.org/ontoksd#mediatesExternalCompetence
-ontoksd:mediatesExternalCompetence rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                                   rdf:type owl:FunctionalProperty ;
-                                   rdfs:domain ontoksd:ExternalCompetenceAlignment ;
-                                   rdfs:range ontoksd:ExternalCompetence ;
-                                   rdfs:label "mediates external competence"@en .
-
-
-###  http://purl.org/ontoksd#mediatesInstructionalUnit
-ontoksd:mediatesInstructionalUnit rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                                  rdf:type owl:FunctionalProperty ;
-                                  rdfs:domain ontoksd:CompetenceActivation ;
-                                  rdfs:range ontoksd:InstructionalUnit ;
-                                  rdfs:comment """Associates an InstructionalUnit with a CompetenceActivation specifying how a particular competence is pedagogically addressed within that unit.
-
-hasCompetenceActivation relates the instructional unit to the activation record; mediatesInstructionalUnit expresses the inverse direction. Each activation identifies exactly one instructional unit and exactly one competence, while an instructional unit may have multiple activation records.
-
-The activation may specify pedagogical function, contribution, engagement modes, and applicable conditions. These qualifications belong to the association rather than being intrinsic properties of the instructional unit or the competence.
-
-The association does not replace the unit's complete instructional description or establish that the planned work occurred, that requirements were satisfied, or that a learner demonstrated competence.""" .
-
-
-###  http://purl.org/ontoksd#mediatesInternalCompetence
-ontoksd:mediatesInternalCompetence rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/nemo/gufo#mediates> ;
-                                   rdf:type owl:FunctionalProperty ;
-                                   rdfs:domain ontoksd:ExternalCompetenceAlignment ;
-                                   rdfs:range ontoksd:Competence ;
-                                   rdfs:label "mediates internal competence"@en .
 
 
 ###  http://purl.org/ontoksd#occursInAcquisitionContext
@@ -2060,8 +2077,8 @@ ex:constraintSimulador
 
 ex:ativacao1
     a owl:NamedIndividual, ontoksd:CompetenceActivation ;
-    ontoksd:mediatesCompetence ex:C01 ;
-    ontoksd:mediatesInstructionalUnit ex:tarefaAutomatos ;
+    ontoksd:hasActivationCompetence ex:C01 ;
+    ontoksd:hasActivationInstructionalUnit ex:tarefaAutomatos ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationRole ontoksd:arCore ;
     ontoksd:hasActivationMode
@@ -2446,44 +2463,39 @@ A Competence can be reused across instructional units, activation contexts, and 
 
 ###  http://purl.org/ontoksd#CompetenceActivation
 ontoksd:CompetenceActivation rdf:type owl:Class ;
-                             rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty ontoksd:mediatesCompetence ;
+                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty ontoksd:hasActivationCompetence ;
                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                owl:onClass ontoksd:Competence
                                              ] ,
                                              [ rdf:type owl:Restriction ;
-                                               owl:onProperty ontoksd:mediatesInstructionalUnit ;
+                                               owl:onProperty ontoksd:hasActivationInstructionalUnit ;
                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                owl:onClass ontoksd:InstructionalUnit
                                              ] ;
-                             rdfs:comment """A qualified instructional association that specifies how a competence is expected to be addressed within a particular instructional unit.
+                             rdfs:comment """A qualified instructional association record specifying how a competence is intended to be addressed within a particular instructional unit.
 
-In OntoKSD, CompetenceActivation associates exactly one Competence through mediatesCompetence with exactly one InstructionalUnit through mediatesInstructionalUnit. It makes the association independently identifiable so that its pedagogical qualifications can be recorded without modifying the reusable competence definition.
+In OntoKSD, each CompetenceActivation references exactly one Competence through hasActivationCompetence and exactly one InstructionalUnit through hasActivationInstructionalUnit. The record makes the association independently identifiable so that its pedagogical qualifications can be represented while preserving the reusable competence definition.
 
-An activation may be qualified through four complementary dimensions:
+Four complementary dimensions may qualify the association:
 
-• ActivationFunction identifies the pedagogical purpose of the association, such as addressing the competence as an instructional target or presupposing it as a prerequisite.
+ActivationFunction identifies its pedagogical purpose, such as addressing the competence as an instructional target or presupposing it as a prerequisite.
 
-• ActivationRole identifies the competence's contribution within the instructional unit, such as central, supporting, or transversal.
+ActivationRole identifies the competence’s contribution within the unit, such as central, supporting, or transversal.
 
-• ActivationMode identifies the expected form of engagement, such as constructive, analytical, interpretative, or justificatory.
+ActivationMode identifies the expected form of engagement, such as constructive, analytical, interpretative, or justificatory.
 
-• ActivationConstraint specifies an applicable condition, with its content recorded through hasActivationConstraintDescription and its status classified through hasActivationConstraintType.
+ActivationConstraint records an applicable condition, whose content is expressed through hasActivationConstraintDescription and whose classification is provided through hasActivationConstraintType.
 
-These dimensions are associated through hasActivationFunction, hasActivationRole, hasActivationMode, and hasActivationConstraint. Multiple qualifications may coexist where their meanings and the instructional specification support a coherent interpretation. Shared classificatory values do not identify distinct activation associations as the same entity.
+These dimensions are associated through hasActivationFunction, hasActivationRole, hasActivationMode, and hasActivationConstraint. The latter three properties specialize hasActivationQualifier; ActivationFunction is represented separately. Multiple qualifications may coexist where their meanings support a coherent instructional interpretation. Qualification values alone do not establish the identity of activation records.
 
-The same Competence may participate in separate activations across instructional units, allowing its pedagogical purpose, contribution, engagement modes, and conditions to vary while preserving its definition. One instructional unit may likewise address several competences through separate activation instances.
+The same Competence may be referenced by separate activation records across instructional units, with different purposes, contributions, modes, and conditions. An instructional unit may likewise address several competences through separate records. The endpoint restrictions do not establish a uniqueness key for the competence–unit pair.
 
-CompetenceActivation belongs to the instructional specification layer. The term activation denotes planned pedagogical mobilization rather than an event in which a learner actually exercises a competence. Its existence does not establish participation, completed performance, satisfaction of a condition, or learner attainment.
+CompetenceActivation belongs to the instructional specification layer. Activation denotes intended pedagogical mobilization rather than an observed event. The record does not establish learner participation, completed performance, fulfillment of conditions, or competence attainment.
 
-The association is distinct from CourseCompetenceSpecification, which records curricular inclusion and expectations at the course level. It is also distinct from the association between a Competence and its reference Task. Task describes the performance addressed by the competence specification, whereas InstructionalUnit describes the planned pedagogical work through which that competence is addressed.
+It is distinct from CourseCompetenceSpecification, which records course-level inclusion and expectations, and from the association between a Competence and its reference Task. Task specifies reference performance; InstructionalUnit specifies the pedagogical work intended to address it.
 
-An activation does not replace the complete instructional description. Actions, deliverables, and conditions of a LearningTask must remain recordable independently of competence associations, including requirements for which no activation has been asserted.
-
-Changes in instructional qualifications must remain consistent with the associated competence. An activation does not automatically establish competence composition or specialization, nor does it authorize a silent change to required knowledge, capabilities, dispositions, or skill levels.
-
-CompetenceActivation supports the traceability of instructional intentions while maintaining the separation between competence specifications, curricular expectations, instructional planning, and learner-specific evidence and judgments.""" .
+An activation complements the instructional description. Actions, deliverables, and conditions must remain recordable independently, including requirements without an asserted competence association. Activation qualifications do not redefine constituent requirements or automatically establish competence composition or specialization.""" .
 
 
 ###  http://purl.org/ontoksd#CompetenceConstituent
@@ -2628,16 +2640,15 @@ ontoksd:Course rdf:type owl:Class ;
 
 ###  http://purl.org/ontoksd#CourseCompetenceSpecification
 ontoksd:CourseCompetenceSpecification rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ,
-                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty ontoksd:mediatesCourse ;
-                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                               owl:onClass ontoksd:Course
-                                                                             ]
-                                                                             [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty ontoksd:mediatesCourseCompetence ;
+                                      rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ontoksd:hasSpecifiedCompetence ;
                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                owl:onClass ontoksd:Competence
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty ontoksd:hasSpecifiedCourse ;
+                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                               owl:onClass ontoksd:Course
                                                                              ]
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty ontoksd:requiresMinimumProficiencyLevel ;
@@ -2652,23 +2663,24 @@ ontoksd:CourseCompetenceSpecification rdf:type owl:Class ;
                                                                            ) ;
                                                         rdf:type owl:Class
                                                       ] ;
-                                      rdfs:comment """A qualified curricular association that records the inclusion of a competence specification within a course and the expectations attached to that inclusion.
+                                      rdfs:comment """A qualified curricular specification record identifying the inclusion of a competence within a course and the expectations attached to that inclusion.
 
-In OntoKSD, CourseCompetenceSpecification associates exactly one Course through mediatesCourse with exactly one Competence through mediatesCourseCompetence. It makes the course-specific expectation independently identifiable while preserving the reusable definition of the competence.
+In OntoKSD, each CourseCompetenceSpecification references exactly one Course through hasSpecifiedCourse and exactly one Competence through hasSpecifiedCompetence. The record makes the course-specific expectation independently identifiable while preserving the reusable competence definition.
 
-Each specification records mandatory status through isMandatory. A true value expresses a curricular commitment to address the competence within the course. A false value records its inclusion without that mandatory commitment. Neither value establishes an admission prerequisite, a course-passing criterion, or learner attainment.
+Each specification has exactly one isMandatory value. A true value states that the course is expected to address the competence as a mandatory curricular inclusion. A false value records inclusion without that obligation. These values express the curricular position recorded in the specification; they do not independently establish institutional adoption, an admission prerequisite, a course-passing criterion, or learner attainment.
 
-A CourseCompetenceSpecification may identify at most one minimum expected proficiency level through requiresMinimumProficiencyLevel. This expresses the minimum degree of performance that the course is intended to address for the associated competence. It is not a SkillLevel qualifying a knowledge–performance pairing, a numeric assessment score, or a proficiency judgment about an individual learner.
+A specification may identify at most one minimum expected proficiency level through requiresMinimumProficiencyLevel. This level qualifies the depth of performance that the course is intended to address. It is distinct from a SkillLevel used in a KnowledgeSkill pairing, a numeric assessment score, and a proficiency judgment attributed to a learner.
 
-The applicable proficiency scheme and the ordering or descriptors that give meaning to the minimum level should be identifiable. The same ProficiencyLevel category may be referenced both in curricular expectations and in learner-specific judgments; these uses remain distinct because of the associations in which the category participates.
+The applicable proficiency scheme and the ordering or descriptors that give meaning to the minimum level should be identifiable. A ProficiencyLevel category may be referenced in both curricular expectations and learner-specific judgments, but those uses remain distinct. Any comparison between them requires an explicitly adopted interpretation and compatible schemes.
 
-The same Competence may be included in different courses through separate CourseCompetenceSpecification instances. Mandatory status and expected proficiency may vary between these associations without silently changing the competence definition. Where curricular changes alter the competence specification itself, that change must be identified separately.
+The same Competence may be referenced by specifications for different courses, with different mandatory statuses or proficiency expectations. Such variation does not redefine the competence. Changes to the competence specification itself must be identified separately. The endpoint restrictions do not establish a uniqueness key for the course–competence pair.
 
-CourseCompetenceSpecification belongs to the curricular expectation layer. It is distinct from CompetenceActivation, which qualifies how a competence is addressed within a particular InstructionalUnit. Declaring curricular inclusion does not automatically establish an instructional association, sufficient instructional coverage, or fulfillment of the curricular expectation. These correspondences require explicitly recorded information and separate examination.
+CourseCompetenceSpecification belongs to the curricular expectation layer. It differs from CompetenceActivation, which records how a competence is intended to be addressed within an InstructionalUnit. Curricular inclusion does not automatically establish an instructional association, sufficient coverage, or fulfillment of the expectation; these require explicit information and separate examination.
 
-The inclusion of several competences within a course does not, by itself, establish composition or specialization between them. Likewise, this association does not represent delivered instruction, learner participation, collected evidence, or an evaluative judgment.
+Including several competences in a course does not establish composition or specialization between them. This record also does not represent delivered instruction, learner participation, collected evidence, or an evaluative judgment.
 
-Representing the association explicitly keeps its qualifications attached to the course–competence relationship rather than treating them as intrinsic properties of either participant. It supports curricular traceability and comparison while preserving the distinction between expected performance, curricular commitments, instructional planning, and learner-specific records.""" .
+Ontological rationale:
+CourseCompetenceSpecification represents a qualified statement of curricular expectation. It records the specification of an inclusion rather than a separately established institutional commitment. It is not modeled as a gufo:Relator, and its endpoint properties do not specialize gufo:mediates. This interpretation preserves the qualifications of the curricular association while distinguishing them from instructional planning and learner-specific records.""" .
 
 
 ###  http://purl.org/ontoksd#Disposition
@@ -2887,37 +2899,39 @@ The class supports reference management, curricular comparison, and traceable al
 
 ###  http://purl.org/ontoksd#ExternalCompetenceAlignment
 ontoksd:ExternalCompetenceAlignment rdf:type owl:Class ;
-                                    rdfs:subClassOf <http://purl.org/nemo/gufo#Relator> ,
-                                                    [ rdf:type owl:Restriction ;
+                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                       owl:onProperty ontoksd:hasAlignmentType ;
                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                       owl:onClass ontoksd:AlignmentType
                                                     ] ,
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty ontoksd:mediatesExternalCompetence ;
+                                                      owl:onProperty ontoksd:hasExternalCompetence ;
                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                       owl:onClass ontoksd:ExternalCompetence
                                                     ] ,
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty ontoksd:mediatesInternalCompetence ;
+                                                      owl:onProperty ontoksd:hasInternalCompetence ;
                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                       owl:onClass ontoksd:Competence
                                                     ] ;
                                     rdfs:comment """A qualified record of an asserted correspondence between an internal competence specification and an external competence reference.
 
-In OntoKSD, ExternalCompetenceAlignment associates exactly one Competence through mediatesInternalCompetence with exactly one ExternalCompetence through mediatesExternalCompetence. Each record identifies exactly one principal AlignmentType through hasAlignmentType.
+In OntoKSD, each ExternalCompetenceAlignment references exactly one Competence through hasInternalCompetence and exactly one ExternalCompetence through hasExternalCompetence. It identifies exactly one AlignmentType through hasAlignmentType, qualifying the interpretation asserted for that pair.
 
-The alignment interpretation is documented through hasAlignmentJustification. Its explanation should identify the basis of comparison, the corresponding aspects, and relevant differences or scope restrictions. Supporting sources and the versions of the compared specifications should remain identifiable.
+hasAlignmentJustification records the explanation for the correspondence. It should identify the basis of comparison, the corresponding aspects, and relevant differences or scope restrictions. Supporting sources and the applicable versions of both specifications should remain identifiable. The presence of a justification is a documentary expectation; it is not required by the current class restrictions and must be checked separately.
 
-Directional classifications are interpreted from the internal specification toward the external reference. A broader alignment asserts that the internal scope encompasses the external scope; a narrower alignment asserts that the internal scope addresses a restricted portion of the external scope. Partial correspondences must make the limits of coverage explicit.
+Directional classifications are interpreted from the internal specification toward the external reference. A broader alignment asserts that the internal scope encompasses the external scope; a narrower alignment asserts that the internal scope covers a restricted portion of the external scope. Partial correspondences require an explicit account of what is covered and what remains outside the asserted correspondence.
 
-The same internal competence may have separate alignments with multiple external references, and an external reference may be related to multiple internal competences. Each record preserves the qualifications of its particular correspondence.
+An internal competence may have separate alignment records for multiple external references, and an external competence may be referenced by alignments involving multiple internal specifications. The endpoint restrictions do not establish a uniqueness key for the pair. Each record retains its own classification and justification.
 
-ExternalCompetenceAlignment is distinct from merely identifying or citing an external statement. Its existence expresses an alignment assertion, not an automatic consequence of shared terminology, subject matter, or inclusion in the same curriculum.
+The record expresses an alignment assertion, rather than merely citing an external statement. Shared terminology, subject matter, or curricular placement does not automatically establish that assertion. Its existence also does not independently validate the correspondence claimed.
 
-The record does not automatically establish identity, logical equivalence, specialization, composition, prerequisite relationships, learner attainment, or regulatory compliance. Such conclusions require independently justified representations or evaluation.
+An alignment does not automatically establish identity, logical equivalence, specialization, composition, prerequisite relationships, learner attainment, or regulatory compliance. An equivalence-oriented AlignmentType does not generate owl:sameAs or owl:equivalentClass, and directional types do not generate specialization axioms.
 
-The class supports traceable comparison while preserving the definitions and identities of the internal and external specifications. Revisions to their meanings or to the alignment interpretation should be explicitly documented rather than silently changing the basis of existing correspondences."""@en .
+Revisions to either specification or to the asserted interpretation should preserve the identification of the basis to which the record applies. The class supports traceable comparison without redefining either specification.
+
+Ontological rationale:
+ExternalCompetenceAlignment represents a documented assertion about two specifications. It is not modeled as a gufo:Relator, and its endpoint properties do not specialize gufo:mediates. This interpretation distinguishes the existence of an alignment record from the validity of the correspondence it asserts."""@en .
 
 
 ###  http://purl.org/ontoksd#InstructionalUnit

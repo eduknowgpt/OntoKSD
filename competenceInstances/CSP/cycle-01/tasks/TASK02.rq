@@ -14,8 +14,8 @@ ontoksd:CA_Task02_C05 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative use of the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -29,8 +29,8 @@ ontoksd:CA_Task02_C05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -46,8 +46,8 @@ ontoksd:CA_Task02_C07 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C07 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C07 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C07. It indicates that the development of problem-solving solutions using Turing Machines is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -62,8 +62,8 @@ ontoksd:CA_Task02_C07_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C07 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C07 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -79,8 +79,8 @@ ontoksd:CA_Task02_C08 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C08 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C08 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C08. It indicates that identifying Turing Machine variants functions as a supporting and analytically relevant target within the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -95,8 +95,8 @@ ontoksd:CA_Task02_C08_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C08 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C08 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -112,8 +112,8 @@ ontoksd:CA_Task02_C09 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arExtension ;
-    ontoksd:mediatesCompetence ontoksd:C09 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C09 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C09. It indicates that applying Turing Machine variants is treated as a conditional or extended target, relevant when the solution employs or discusses such variants."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -128,8 +128,8 @@ ontoksd:CA_Task02_C09_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arExtension ;
-    ontoksd:mediatesCompetence ontoksd:C09 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C09 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -145,8 +145,8 @@ ontoksd:CA_Task02_C10 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C10 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C10 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C10. It indicates that testing Turing Machines using simulators is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -161,8 +161,8 @@ ontoksd:CA_Task02_C10_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C10 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
+    ontoksd:hasActivationCompetence ontoksd:C10 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 

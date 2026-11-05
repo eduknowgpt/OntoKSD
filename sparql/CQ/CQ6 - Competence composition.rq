@@ -1,6 +1,6 @@
 # CQ6: What are the direct composition relationships and integration descriptions?
 # Operation: SELECT. Target: GraphDB / SPARQL 1.1.
-# Scope: Both directions are normalized without inverse materialization. Composition is irreflexive (no own part), asymmetric (no reciprocal part links), and non-transitive (direct parts only); longer cycles need separate checks.
+# Scope: Both directions are normalized without inverse materialization. Composition is irreflexive because no competence is its own component and asymmetric because a component cannot reciprocally contain its whole. Transitivity is not declared because the property records direct parts; longer cycles need separate checks.
 # Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>

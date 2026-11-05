@@ -11,9 +11,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?competence ?competenceLabel ?instructionalUnit ?instructionalUnitLabel ?competenceActivation ?activationFunction ?activationMode ?activationRole ?activationConstraint ?constraintType ?constraintDescription
 WHERE {
-{ SELECT ?competence WHERE { ?a ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?unit) > 1) }
-?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
- (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+{ SELECT ?competence WHERE { ?a ontoksd:hasActivationCompetence ?competence ; (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?unit) > 1) }
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
 OPTIONAL { ?competenceActivation ontoksd:hasActivationFunction ?activationFunction . }
 OPTIONAL { ?competenceActivation ontoksd:hasActivationMode ?activationMode . }
 OPTIONAL { ?competenceActivation ontoksd:hasActivationRole ?activationRole . }

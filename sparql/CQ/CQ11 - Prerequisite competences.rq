@@ -11,8 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?instructionalUnit ?instructionalUnitLabel ?competence ?competenceLabel ?competenceActivation
 WHERE {
-?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
- (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
 ?competenceActivation ontoksd:hasActivationFunction ontoksd:prerequisiteFunction .
 OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
 OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }

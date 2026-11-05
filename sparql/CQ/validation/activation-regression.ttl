@@ -1,0 +1,15 @@
+@prefix o: <http://purl.org/ontoksd#> .
+@prefix t: <http://purl.org/ontoksd/test/activation-regression#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# Artificial query cases, not empirical CSP observations.
+t:competence a o:Competence .
+t:unit a o:LearningTask ; o:hasInstructionalStatement "Synthetic unit with activation"@en .
+t:unlinkedUnit a o:LearningTask ; o:hasInstructionalStatement "Independent requirement without activation"@en .
+t:activation a o:CompetenceActivation ;
+ o:hasActivationCompetence t:competence ; o:hasActivationInstructionalUnit t:unit ;
+ o:hasActivationFunction o:targetFunction ; o:hasActivationRole o:arCore ;
+ o:hasActivationMode o:amAnalytical, o:amConstructive ;
+ o:hasActivationConstraint t:constraint .
+t:constraint a o:ActivationConstraint ;
+ o:hasActivationConstraintType o:acMandatory ;
+ o:hasActivationConstraintDescription "Use the stated synthetic representation."@en .

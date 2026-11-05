@@ -1,0 +1,220 @@
+\chapter{Traceability between Functional Requirements and Competency Questions}
+\label{ap:OntoKSD-FR-CQ}
+
+This appendix presents the requirement-oriented view of the revised
+OntoKSD competency-question collection. Table~\ref{tab:traceability-fr-cq}
+complements the question-oriented mapping in
+Table~\ref{tab:traceability-cq-fr}, using the same requirement definitions,
+question families, and coverage limits.
+
+The mapping refers to the revised question formulations and their
+implemented retrieval scope. It identifies which aspects of a requirement
+can be examined through the related queries and which require additional
+checks. A mapping is not a statement of requirement satisfaction:
+preparing a query, executing it without error, and obtaining the expected
+answer provide different kinds of evidence. Requirement-level conclusions
+must also consider the dataset, parameters, inference configuration,
+expected results, and applicable representational checks.
+
+The identifiers CQ1--CQ42 denote historical question families retained
+after the qualification review. Their 58 operational files include
+complementary views, equivalent retrievals, and one optional update.
+Suffixes preserve these relationships; they do not identify additional
+functional requirements or independent successful tests. The repository
+catalog and identifier map document the corresponding files.
+
+\section{Requirement-to-Question Mapping}
+
+\begingroup
+\small
+\begin{longtable}{
+    p{0.08\linewidth}
+    p{0.31\linewidth}
+    p{0.49\linewidth}
+}
+\caption{Functional requirements, related CQ families, and complementary verification needs.}
+\label{tab:traceability-fr-cq} \\
+\toprule
+\textbf{FR} & \textbf{Related CQ families} & \textbf{Scope and complementary checks} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{FR} & \textbf{Related CQ families} & \textbf{Scope and complementary checks} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+FR1 & CQ1, CQ4, CQ5, CQ8 &
+Retrieve specification identity, constituent organization, pattern, and
+represented structure. Examine scope descriptions and completeness
+against the source specification separately. \\
+
+FR2 & CQ2, CQ3 &
+Retrieve knowledge--level pairings and recorded justification verbs.
+Verify the level's framework-specific typing and reference scheme in
+the imported vocabulary, and distinguish required skill levels from
+learner proficiency. \\
+
+FR3 & CQ1 &
+Retrieve dispositional constituents. Examine their meaning and relation
+to expected action; inclusion in a specification is not an attribution
+to a learner. \\
+
+FR4 & CQ5--CQ7 &
+Retrieve atomic/composite structure, direct composition and specialization,
+and recorded integration or scope descriptions. Check cardinalities,
+cycles, description adequacy, and the distinction from contextual
+association separately. \\
+
+FR5 & CQ9--CQ17, CQ33, CQ36 &
+Retrieve qualified instructional associations and planned conditions.
+Check the relevance of qualifications and preserve the distinction
+between specification-level tasks and instructional units. \\
+
+FR6 & CQ17 &
+Retrieve instructional statements even when no activation is asserted.
+Compare their content with the source task to assess whether the
+recorded actions and deliverables are complete. \\
+
+FR7 & CQ35, CQ36 &
+Retrieve reuse of the same competence and variation in its activation
+qualifications. Verify that the applicable specification remains
+identifiable and is not silently redefined across contexts. \\
+
+FR8 & CQ34 &
+Retrieve alignment endpoints, external identifiers, correspondence type,
+and available justification. Examine source provenance, partial scope,
+and explanatory adequacy; alignment does not establish equivalence or
+compliance by itself. \\
+
+FR9 & No dedicated primary CQ &
+Use complementary documentary and representational checks for expected
+actions, products, observations, assessment criteria, and component
+integration. Relevant instructional or integration descriptions provide
+supporting material, not sufficient verification of this requirement. \\
+
+FR10 & CQ18--CQ21, CQ24, CQ41 &
+Retrieve evidence support, assessment provenance, and participation.
+Check the distinction between specification and occurrence, and between
+shared material and each learner's evidential basis. \\
+
+FR11 & CQ8, CQ18, CQ21--CQ25, CQ28, CQ38, CQ41 &
+Retrieve individual judgments, targets, evidence, participation, and
+recorded dates. Verify applicable criteria and agreement among learner,
+profile, constituent, and assessment-occasion paths separately. \\
+
+FR12 & CQ26--CQ31, CQ37, CQ41 &
+Retrieve proficiency attributions, schemes, and numeric interpretation
+structures at the appropriate judgment granularity. Verify interval
+rules or qualitative descriptors separately. CQ32a duplicates CQ26;
+it does not provide aggregation. \\
+
+FR13 & CQ25, CQ37, CQ38, CQ41 &
+Retrieve learner-related records while preserving their assessment
+occasions. Chronological ordering does not establish progression,
+causation, or an overall learner classification. \\
+
+FR14 & All operational families within their declared scope &
+Record the executed query version, parameters, dataset, inference
+configuration, expected answer, and observed result. Equivalent views
+are not independent coverage; CQ39b is an optional update and CQ40d
+is disabled by default. \\
+
+\end{longtable}
+\endgroup
+
+The table uses family-level identifiers to remain consistent with the
+chapter. For example, CQ20 includes evidence-origin and occurrence-context
+views, while CQ24 includes participation and derived-record views. The
+associated files must be identified when reporting a particular execution.
+
+\section{Supplementary Operations and Equivalent Views}
+
+CQ32, CQ39, CQ40, and CQ42 retain supplementary scope relative to the
+mandatory functional baseline. Their interpretation follows the
+implemented operations rather than the broader ambitions of the initial
+question formulations:
+
+\begin{itemize}
+    \item \textbf{CQ32: existing overall attribution.}
+    CQ32a retrieves a level already assigned to a whole-competence
+    judgment and is equivalent to CQ26. The originally envisaged
+    synthesis procedure is not implemented. Neither query aggregates
+    constituent judgments.
+
+    \item \textbf{CQ39: comparison candidates and recorded needs.}
+    CQ39a identifies eligible judgments below a selected curricular
+    minimum; CQ39b optionally materializes candidates; CQ39c retrieves
+    explicitly recorded learning needs. Retrieving a candidate,
+    recording it, and confirming an educational diagnosis remain
+    distinct operations.
+
+    \item \textbf{CQ40: missing records and below-minimum judgments.}
+    CQ40a concerns mandatory competences without a judgment, CQ40b
+    repeats the comparison in CQ39a, and CQ40c concerns missing
+    constituent judgments. CQ40d remains disabled because applying a
+    whole-competence minimum to every constituent requires an additional
+    justified policy.
+
+    \item \textbf{CQ42: documented bases and curricular discrepancies.}
+    CQ42a retrieves competence-targeted needs and available comparison
+    references. CQ42b repeats CQ39a, whereas CQ42c retrieves curricular
+    inclusions without a judgment, preserving their mandatory or
+    non-mandatory status.
+\end{itemize}
+
+Under identical parameters, dataset, and reference time, CQ39a, CQ40b,
+and CQ42b implement the same comparison and should return equivalent
+answers. This equivalence supports a regression check; it does not
+constitute three independent demonstrations of functional coverage.
+Likewise, CQ32a does not add synthesis evidence to the retrieval already
+provided by CQ26.
+
+The supplementary comparisons use an explicitly identified common
+scheme and the documented temporal and ordinal eligibility conditions.
+A curricular coverage minimum is not automatically a learner passing
+threshold. Missing judgments, recorded proficiency below a minimum,
+and stored learning-need interpretations therefore remain distinct
+outcomes.
+
+\section{Using the Matrix in Evaluation}
+
+The mapping supports the planning and interpretation of evaluation,
+while requirement satisfaction is reported through the criteria defined
+in Section~\ref{subsec:ontoksd-requirement-verification} and the checks
+in Table~\ref{tab:ontoksd-requirement-checks}. Conclusions must distinguish
+support, partial support, lack of support, and absence of evaluation.
+An unexecuted check establishes absence of evaluation, not failure of
+the corresponding capability.
+
+An empty result must be assessed against the expected behavior of the
+selected case. For example, the absence of prerequisite activations in
+the CSP data does not refute CQ11, and an existing judgment excludes a
+competence from a query asking for missing judgments even when its level
+is below a minimum. Synthetic positive and control cases can test these
+behaviors, but must remain identifiable and cannot be reported as
+observed CSP outcomes.
+
+FR6 now has a direct retrieval path through CQ17, including instructional
+units without competence activation. Its remaining completeness check
+concerns correspondence with the original task description. FR9 still
+requires complementary examination of expectations and criteria; the
+criteria-related part of FR11 also extends beyond provenance retrieval.
+These limitations must not be replaced by a blanket claim of complete
+coverage.
+
+The same distinction applies to proficiency: numeric structure retrieval
+does not verify interval consistency or classify a score, and retrieval
+of a qualitative attribution does not validate its rubric. Similarly,
+retrieving multiple provenance paths does not enforce agreement among
+them. Such checks complement the mapped queries rather than follow
+from a non-empty result.
+
+The CQ-to-FR and FR-to-CQ views must be maintained together. A change
+in a query's scope, an added operational view, or a revised requirement
+mapping must be reflected in both tables and in the repository catalog.
+This appendix describes the evaluated mapping; it is not a reconstruction
+of the historical order in which requirements and queries were developed.

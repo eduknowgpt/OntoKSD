@@ -133,8 +133,8 @@ PREFIX ontoksd: <http://purl.org/ontoksd#>
 SELECT ?competence ?externalCompetence ?alignmentType ?justification
 WHERE {
   ?alignment a ontoksd:ExternalCompetenceAlignment ;
-      ontoksd:mediatesInternalCompetence ?competence ;
-      ontoksd:mediatesExternalCompetence ?externalCompetence ;
+      ontoksd:hasInternalCompetence ?competence ;
+      ontoksd:hasExternalCompetence ?externalCompetence ;
       ontoksd:hasAlignmentType ?alignmentType .
   OPTIONAL {
     ?alignment ontoksd:hasAlignmentJustification ?justification .

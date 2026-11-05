@@ -1,0 +1,21 @@
+# CQ14: Which instructional roles qualify each competence activation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Roles qualify instructional contribution; a supporting role does not itself establish a prerequisite.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?competence ?competenceLabel ?competenceActivation ?instructionalUnit ?instructionalUnitLabel ?activationRole ?activationRoleLabel
+WHERE {
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation ontoksd:hasActivationRole ?activationRole .
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+OPTIONAL { ?activationRole (rdfs:label|skos:prefLabel|dcterms:title) ?activationRoleLabel . }
+}
+ORDER BY ?competence ?competenceLabel ?instructionalUnitLabel ?activationRoleLabel

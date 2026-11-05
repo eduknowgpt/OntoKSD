@@ -1,0 +1,26 @@
+# CQ17: Which statements, collaboration settings and planned contexts describe instructional units?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Units remain retrievable without competence activation. Occurrence contexts are retrieved separately by CQ20c/CQ20c2.
+# Load class hierarchies or enable appropriate inference to recognize subtype instances.
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?instructionalUnit ?instructionalUnitLabel ?instructionalStatement
+ ?isTeamBased ?acquisitionContext ?acquisitionContextLabel ?competenceActivation ?competence
+WHERE {
+ ?instructionalUnit a/rdfs:subClassOf* ontoksd:InstructionalUnit .
+ OPTIONAL { ?instructionalUnit ontoksd:hasInstructionalStatement ?instructionalStatement . }
+ OPTIONAL { ?instructionalUnit ontoksd:isTeamBased ?isTeamBased . }
+ OPTIONAL {
+  ?instructionalUnit (ontoksd:hasAcquisitionContext|^ontoksd:isAcquisitionContextOf) ?acquisitionContext .
+  OPTIONAL { ?acquisitionContext (rdfs:label|skos:prefLabel|dcterms:title) ?acquisitionContextLabel . }
+ }
+ OPTIONAL {
+  ?competenceActivation a ontoksd:CompetenceActivation ;
+   (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit ;
+   ontoksd:hasActivationCompetence ?competence .
+ }
+ OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+}
+ORDER BY ?instructionalUnit ?instructionalStatement ?competence

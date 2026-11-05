@@ -126,8 +126,8 @@ ns1:CA_Task201_C02_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
-    ns1:mediatesCompetence ns1:C02 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    ns1:hasActivationCompetence ns1:C02 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C02_Learning a ns1:CompetenceActivation ;
@@ -137,8 +137,8 @@ ns1:CA_Task201_C02_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
-    ns1:mediatesCompetence ns1:C02 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    ns1:hasActivationCompetence ns1:C02 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C03_Assessment a ns1:CompetenceActivation ;
@@ -147,8 +147,8 @@ ns1:CA_Task201_C03_Assessment a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Applying> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C03_Learning a ns1:CompetenceActivation ;
@@ -157,8 +157,8 @@ ns1:CA_Task201_C03_Learning a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Applying> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C04_Assessment a ns1:CompetenceActivation ;
@@ -170,8 +170,8 @@ ns1:CA_Task201_C04_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConceptual ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C04 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    ns1:hasActivationCompetence ns1:C04 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task201 ;
     skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
@@ -184,8 +184,8 @@ ns1:CA_Task201_C04_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConceptual ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C04 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    ns1:hasActivationCompetence ns1:C04 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task201 ;
     skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
@@ -197,8 +197,8 @@ ns1:CA_Task201_C05_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C05_Learning a ns1:CompetenceActivation ;
@@ -209,8 +209,8 @@ ns1:CA_Task201_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C06_Assessment a ns1:CompetenceActivation ;
@@ -222,8 +222,8 @@ ns1:CA_Task201_C06_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C06_Learning a ns1:CompetenceActivation ;
@@ -235,8 +235,8 @@ ns1:CA_Task201_C06_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C11_Assessment a ns1:CompetenceActivation ;
@@ -245,8 +245,8 @@ ns1:CA_Task201_C11_Assessment a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical ;
-    ns1:mediatesCompetence ns1:C11 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task201 ;
+    ns1:hasActivationCompetence ns1:C11 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task201_C11_Learning a ns1:CompetenceActivation ;
@@ -255,8 +255,8 @@ ns1:CA_Task201_C11_Learning a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Analyzing> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical ;
-    ns1:mediatesCompetence ns1:C11 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task201 ;
+    ns1:hasActivationCompetence ns1:C11 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ns1:CA_Task202_C03_Assessment a ns1:CompetenceActivation ;
@@ -265,8 +265,8 @@ ns1:CA_Task202_C03_Assessment a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Applying> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task202 ;
     skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
@@ -276,8 +276,8 @@ ns1:CA_Task202_C03_Learning a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Applying> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task202 ;
     skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
@@ -287,8 +287,8 @@ ns1:CA_Task202_C05_Assessment a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Applying> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C05_Learning a ns1:CompetenceActivation ;
@@ -297,8 +297,8 @@ ns1:CA_Task202_C05_Learning a ns1:CompetenceActivation ;
     dcterms:references <http://purl.org/edu/bloom#Applying> ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C12_Assessment a ns1:CompetenceActivation ;
@@ -309,8 +309,8 @@ ns1:CA_Task202_C12_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C12 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    ns1:hasActivationCompetence ns1:C12 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C12_Learning a ns1:CompetenceActivation ;
@@ -321,8 +321,8 @@ ns1:CA_Task202_C12_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C12 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    ns1:hasActivationCompetence ns1:C12 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C13_01_Assessment a ns1:CompetenceActivation ;
@@ -333,8 +333,8 @@ ns1:CA_Task202_C13_01_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
-    ns1:mediatesCompetence ns1:C13_01 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    ns1:hasActivationCompetence ns1:C13_01 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C13_01_Learning a ns1:CompetenceActivation ;
@@ -345,8 +345,8 @@ ns1:CA_Task202_C13_01_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
-    ns1:mediatesCompetence ns1:C13_01 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    ns1:hasActivationCompetence ns1:C13_01 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C14_Assessment a ns1:CompetenceActivation ;
@@ -356,8 +356,8 @@ ns1:CA_Task202_C14_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
-    ns1:mediatesCompetence ns1:C14 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task202 ;
+    ns1:hasActivationCompetence ns1:C14 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task202_C14_Learning a ns1:CompetenceActivation ;
@@ -367,8 +367,8 @@ ns1:CA_Task202_C14_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
-    ns1:mediatesCompetence ns1:C14 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task202 ;
+    ns1:hasActivationCompetence ns1:C14 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ns1:CA_Task203_C05_Assessment a ns1:CompetenceActivation ;
@@ -378,8 +378,8 @@ ns1:CA_Task203_C05_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C05_Learning a ns1:CompetenceActivation ;
@@ -389,8 +389,8 @@ ns1:CA_Task203_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C07_Assessment a ns1:CompetenceActivation ;
@@ -401,8 +401,8 @@ ns1:CA_Task203_C07_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C07 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    ns1:hasActivationCompetence ns1:C07 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C07_Learning a ns1:CompetenceActivation ;
@@ -413,8 +413,8 @@ ns1:CA_Task203_C07_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C07 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    ns1:hasActivationCompetence ns1:C07 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C08_Assessment a ns1:CompetenceActivation ;
@@ -424,8 +424,8 @@ ns1:CA_Task203_C08_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
-    ns1:mediatesCompetence ns1:C08 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    ns1:hasActivationCompetence ns1:C08 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C08_Learning a ns1:CompetenceActivation ;
@@ -435,8 +435,8 @@ ns1:CA_Task203_C08_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
-    ns1:mediatesCompetence ns1:C08 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    ns1:hasActivationCompetence ns1:C08 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C09_Assessment_Constraint a ns1:ActivationConstraint ;
@@ -456,8 +456,8 @@ ns1:CA_Task203_C10_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C10 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    ns1:hasActivationCompetence ns1:C10 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C10_Learning a ns1:CompetenceActivation ;
@@ -467,8 +467,8 @@ ns1:CA_Task203_C10_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C10 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    ns1:hasActivationCompetence ns1:C10 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task204_C02_Assessment a ns1:CompetenceActivation ;
@@ -477,8 +477,8 @@ ns1:CA_Task204_C02_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C02 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C02 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -493,8 +493,8 @@ ns1:CA_Task204_C02_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C02 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C02 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -509,8 +509,8 @@ ns1:CA_Task204_C03_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -525,8 +525,8 @@ ns1:CA_Task204_C03_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -541,8 +541,8 @@ ns1:CA_Task204_C05_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -557,8 +557,8 @@ ns1:CA_Task204_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arTransversal ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -573,8 +573,8 @@ ns1:CA_Task204_C06_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -589,8 +589,8 @@ ns1:CA_Task204_C06_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -605,8 +605,8 @@ ns1:CA_Task204_C14_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C14 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C14 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -621,8 +621,8 @@ ns1:CA_Task204_C14_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amAnalytical ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C14 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C14 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -638,8 +638,8 @@ ns1:CA_Task204_C15_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C15 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C15 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -655,8 +655,8 @@ ns1:CA_Task204_C15_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C15 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C15 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -1016,8 +1016,8 @@ ns1:CA_Task203_C09_Assessment a ns1:CompetenceActivation ;
     ns1:hasActivationConstraint ns1:CA_Task203_C09_Assessment_Constraint ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C09 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task203 ;
+    ns1:hasActivationCompetence ns1:C09 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CA_Task203_C09_Learning a ns1:CompetenceActivation ;
@@ -1028,8 +1028,8 @@ ns1:CA_Task203_C09_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationConstraint ns1:CA_Task203_C09_Learning_Constraint ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C09 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task203 ;
+    ns1:hasActivationCompetence ns1:C09 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task203 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task203-ParkingControl/TASK203-CSP-Adjustments.md> .
 
 ns1:CSPResource_Logbook a ns1:EducationalResource ;
@@ -1095,8 +1095,8 @@ ns1:CA_Task204_C16_Assessment a ns1:CompetenceActivation ;
     dcterms:description "Source role/function: Interpretative support; no independent minimum-task evidence. Distinct identifier retained. Initial title used Apply; adjusted title uses Interpret. Future absorption into C15 is not implemented."@en ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amInterpretative ;
-    ns1:mediatesCompetence ns1:C16 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task204 ;
+    ns1:hasActivationCompetence ns1:C16 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 
@@ -1104,8 +1104,8 @@ ns1:CA_Task204_C16_Learning a ns1:CompetenceActivation ;
     dcterms:description "Source role/function: Interpretative support; no independent minimum-task evidence. Distinct identifier retained. Initial title used Apply; adjusted title uses Interpret. Future absorption into C15 is not implemented."@en ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amInterpretative ;
-    ns1:mediatesCompetence ns1:C16 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task204 ;
+    ns1:hasActivationCompetence ns1:C16 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task204 ;
     skos:scopeNote "The adjusted role/constraint metadata does not withdraw the task statement simulation or Chomsky-Hierarchy objectives. Evidence overlap among C15/C16 is not proof of independently demonstrated outcomes."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task204-OnlineJudges/TASK204-CSP-Adjustments.md> .
 

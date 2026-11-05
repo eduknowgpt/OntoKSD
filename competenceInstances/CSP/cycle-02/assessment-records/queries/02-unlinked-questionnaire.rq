@@ -1,0 +1,5 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?evidence ?submittedAt WHERE { ?evidence a ontoksd:Evidence ; ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ; ontoksd:generatedAt ?submittedAt . FILTER NOT EXISTS { ?participation a ontoksd:AssessmentParticipation ; prov:wasDerivedFrom ?evidence . } }

@@ -11,8 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 INSERT DATA {
 ontoksd:Activation_DFAWrittenExam_DFAConstruction a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
-    ontoksd:mediatesCompetence ontoksd:Competence_DFAConstruction ;
-    ontoksd:mediatesInstructionalUnit ontoksd:Assessment_DFAWrittenExam .
+    ontoksd:hasActivationCompetence ontoksd:Competence_DFAConstruction ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:Assessment_DFAWrittenExam .
 
 ontoksd:Assessor_Assessor_01 a ontoksd:Assessor ;
     rdfs:label "Prof. Assessor_01 as assessor"@en ;

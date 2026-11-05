@@ -1,8 +1,10 @@
 # CQ40b: Which mandatory competence expectations have a latest comparable judgment below their minimum?
+# Equivalent view: CQ39a is the canonical retrieval/comparison query; do not count this alias as independent validation.
 # Operation: SELECT. Target: GraphDB / SPARQL 1.1.
 # Scope: Explicit profile/course pair; mandatory curricular expectation; explicit scheme reference via dcterms:references; same-scheme numeric ordinals; latest dated, non-expired record as of NOW(). No cross-scheme or undated comparison. These variants share the same comparison policy; they are candidates, not independent diagnoses. Comparing individual judgments with curricular depth is an external analytical policy, not a student passing rule.
 # Blank labels do not imply missing entities; multiple languages may produce multiple rows.
-# Parameters: replace Profile_Example and Course_Example; no enrollment is inferred.
+# Parameters: default is the synthetic proficiency example (Profile_Learner_01, Course_FormalLanguages).
+# Replace both IRIs for another case. The selection does not assert enrollment.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -12,10 +14,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?courseSpecification ?competence ?competenceLabel ?evidencedCompetence ?evidencedAt ?proficiencyScheme ?evidencedLevel ?evidencedOrdinal ?requiredLevel ?requiredOrdinal
 WHERE {
-VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
+VALUES (?profile ?course) { (ontoksd:Profile_Learner_01 ontoksd:Course_FormalLanguages) }
 ?profile a ontoksd:Profile .
 ?courseSpecification a ontoksd:CourseCompetenceSpecification ;
- ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence ;
+ ontoksd:hasSpecifiedCourse ?course ; ontoksd:hasSpecifiedCompetence ?competence ;
  ontoksd:isMandatory true ; ontoksd:requiresMinimumProficiencyLevel ?requiredLevel ;
  dcterms:references ?proficiencyScheme .
 ?proficiencyScheme a ontoksd:ProficiencyScheme ; ontoksd:definesLevel ?requiredLevel .

@@ -13,8 +13,8 @@ ontoksd:CA_Task410_CM03_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM03_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -27,8 +27,8 @@ ontoksd:CA_Task410_CM03_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM03_Learning_Constraint a ontoksd:ActivationConstraint ;
@@ -41,8 +41,8 @@ ontoksd:CA_Task410_CM04_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM04_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -55,8 +55,8 @@ ontoksd:CA_Task410_CM04_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM04_Learning_Constraint a ontoksd:ActivationConstraint ;
@@ -69,8 +69,8 @@ ontoksd:CA_Task410_CM05_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM05_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -83,8 +83,8 @@ ontoksd:CA_Task410_CM05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM05_Learning_Constraint a ontoksd:ActivationConstraint ;
@@ -98,8 +98,8 @@ ontoksd:CA_Task410_CM08_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amEvaluative,
         ontoksd:amOperational ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:CM08 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM08 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM08_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -113,8 +113,8 @@ ontoksd:CA_Task410_CM08_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amEvaluative,
         ontoksd:amOperational ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:CM08 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM08 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM08_Learning_Constraint a ontoksd:ActivationConstraint ;
@@ -127,8 +127,8 @@ ontoksd:CA_Task410_CM20_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM20 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM20 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM20_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -141,8 +141,8 @@ ontoksd:CA_Task410_CM20_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM20 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task410 ;
+    ontoksd:hasActivationCompetence ontoksd:CM20 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task410 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK410-Football/TASK410-CSP-Record.md> .
 
 ontoksd:CA_Task410_CM20_Learning_Constraint a ontoksd:ActivationConstraint ;

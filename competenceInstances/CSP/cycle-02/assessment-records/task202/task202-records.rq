@@ -1,0 +1,2323 @@
+# Historical Task202 records
+# Execute this SPARQL Update OR import the equivalent .ttl file.
+# Prefixes, values and grouped individuals match the Turtle representation.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+
+# Historical learning task
+# -----------------------------------------------------------------
+
+ontoksd:Task202_HistoricalLearningTask
+    a ontoksd:LearningTask ;
+    rdfs:label "Task202 historical team-control learning task"@en ;
+    dcterms:relation ontoksd:LT_Task202 ;
+    ontoksd:hasAcquisitionContext ontoksd:Task202_HistoricalAcquisitionContext ;
+    prov:wasDerivedFrom ontoksd:Task202_HistoricalProblemSource ;
+    dcterms:description "Historical 2022 learning-task reference, related to the adjusted CSP planning specification without identity equivalence or automatic inheritance of its competence activations."@en,
+        "The historical problem statement requests surveillance and team-control modules, whiteboard process documentation and an explanatory report. The adjusted Task202 planning reference focuses on team control; no identity equivalence is asserted."@en .
+
+# Assessment specifications
+# -----------------------------------------------------------------
+
+ontoksd:Task202_FinalAssessment
+    a ontoksd:Assessment ;
+    rdfs:label "Task202 historical final assessment"@en ;
+    dcterms:relation ontoksd:AS_Task202 ;
+    ontoksd:isBasedOnActivity ontoksd:Task202_HistoricalLearningTask ;
+    dcterms:description "Recorded consolidation of process and product scores using their arithmetic mean; no additional performance observation is implied."@en .
+
+ontoksd:Task202_ProcessAssessment
+    a ontoksd:Assessment ;
+    rdfs:label "Task202 historical process assessment"@en ;
+    dcterms:relation ontoksd:AS_Task202 ;
+    ontoksd:isBasedOnActivity ontoksd:Task202_HistoricalLearningTask ;
+    dcterms:description "Tutor assessment of knowledge mobilization and dispositions, documented qualitatively and summarized by an official process score."@en .
+
+ontoksd:Task202_ProductAssessment
+    a ontoksd:Assessment ;
+    rdfs:label "Task202 historical product assessment"@en ;
+    dcterms:relation ontoksd:AS_Task202 ;
+    ontoksd:isBasedOnActivity ontoksd:Task202_HistoricalLearningTask ;
+    dcterms:description "Assessment of submitted artifacts, summarized by an official product score. Review views are distinct from the original artifact production."@en .
+
+ontoksd:Task202_QuestionnaireAssessment
+    a ontoksd:Assessment ;
+    rdfs:label "Task202 historical questionnaire assessment"@en ;
+    dcterms:relation ontoksd:AS_Task202 ;
+    ontoksd:isBasedOnActivity ontoksd:Task202_HistoricalLearningTask ;
+    dcterms:description "Complementary peer-assessment, self-reported learning and educational-feedback instrument; no numeric competence score is assigned."@en .
+
+# Acquisition context
+# -----------------------------------------------------------------
+
+ontoksd:Task202_HistoricalAcquisitionContext
+    a ontoksd:AcquisitionContext ;
+    dcterms:description "Historical tutoring and assessment setting for Task202 in MATC94 in 2022. No exact boundaries, attendance at planned sessions or semester-specific Course identity is inferred."@en .
+
+# Assessment occurrences
+# -----------------------------------------------------------------
+
+ontoksd:Task202_FinalAssessmentOccurrence
+    a ontoksd:AssessmentOccurrence ;
+    ontoksd:involvesAssessmentParticipation ontoksd:Task202_Task201_G01_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G01_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G01_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G02_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G02_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L04_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L06_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L04_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L04_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L06_FinalParticipation,
+        ontoksd:Task202_Task202_Participant05_FinalParticipation,
+        ontoksd:Task202_Task202_Participant06_FinalParticipation,
+        ontoksd:Task202_Task202_Participant07_FinalParticipation,
+        ontoksd:Task202_Task202_Participant11_FinalParticipation,
+        ontoksd:Task202_Task202_Participant18_FinalParticipation ;
+    ontoksd:occursInAcquisitionContext ontoksd:Task202_HistoricalAcquisitionContext ;
+    ontoksd:realizes ontoksd:Task202_FinalAssessment ;
+    dcterms:description "Historical aggregate occurrence associated with the documented task assessment. Planned schedule dates are not treated as observed attendance or evidence-generation timestamps."@en .
+
+ontoksd:Task202_ProcessAssessmentOccurrence
+    a ontoksd:AssessmentOccurrence ;
+    ontoksd:involvesAssessmentParticipation ontoksd:Task202_Task201_G01_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G02_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G02_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L06_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L06_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant05_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant06_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant07_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant11_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant18_ProcessParticipation ;
+    ontoksd:occursInAcquisitionContext ontoksd:Task202_HistoricalAcquisitionContext ;
+    ontoksd:producesEvidence ontoksd:Task202_G01_ProcessEvidence,
+        ontoksd:Task202_G02_ProcessEvidence,
+        ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G04_ProcessEvidence,
+        ontoksd:Task202_G05_ProcessEvidence,
+        ontoksd:Task202_G06_ProcessEvidence,
+        ontoksd:Task202_G07_ProcessEvidence ;
+    ontoksd:realizes ontoksd:Task202_ProcessAssessment ;
+    dcterms:description "Historical aggregate occurrence associated with the documented task assessment. Planned schedule dates are not treated as observed attendance or evidence-generation timestamps."@en .
+
+ontoksd:Task202_ProductAssessmentOccurrence
+    a ontoksd:AssessmentOccurrence ;
+    ontoksd:involvesAssessmentParticipation ontoksd:Task202_Task201_G01_L01_ProductParticipation,
+        ontoksd:Task202_Task201_G01_L02_ProductParticipation,
+        ontoksd:Task202_Task201_G01_L03_ProductParticipation,
+        ontoksd:Task202_Task201_G02_L01_ProductParticipation,
+        ontoksd:Task202_Task201_G02_L05_ProductParticipation,
+        ontoksd:Task202_Task201_G03_L01_ProductParticipation,
+        ontoksd:Task202_Task201_G03_L02_ProductParticipation,
+        ontoksd:Task202_Task201_G03_L03_ProductParticipation,
+        ontoksd:Task202_Task201_G03_L04_ProductParticipation,
+        ontoksd:Task202_Task201_G03_L06_ProductParticipation,
+        ontoksd:Task202_Task201_G04_L01_ProductParticipation,
+        ontoksd:Task202_Task201_G04_L02_ProductParticipation,
+        ontoksd:Task202_Task201_G04_L03_ProductParticipation,
+        ontoksd:Task202_Task201_G04_L05_ProductParticipation,
+        ontoksd:Task202_Task201_G05_L01_ProductParticipation,
+        ontoksd:Task202_Task201_G05_L02_ProductParticipation,
+        ontoksd:Task202_Task201_G05_L03_ProductParticipation,
+        ontoksd:Task202_Task201_G05_L04_ProductParticipation,
+        ontoksd:Task202_Task201_G06_L02_ProductParticipation,
+        ontoksd:Task202_Task201_G06_L03_ProductParticipation,
+        ontoksd:Task202_Task201_G06_L04_ProductParticipation,
+        ontoksd:Task202_Task201_G06_L05_ProductParticipation,
+        ontoksd:Task202_Task201_G07_L01_ProductParticipation,
+        ontoksd:Task202_Task201_G07_L02_ProductParticipation,
+        ontoksd:Task202_Task201_G07_L03_ProductParticipation,
+        ontoksd:Task202_Task201_G07_L05_ProductParticipation,
+        ontoksd:Task202_Task201_G07_L06_ProductParticipation,
+        ontoksd:Task202_Task202_Participant05_ProductParticipation,
+        ontoksd:Task202_Task202_Participant06_ProductParticipation,
+        ontoksd:Task202_Task202_Participant07_ProductParticipation,
+        ontoksd:Task202_Task202_Participant11_ProductParticipation,
+        ontoksd:Task202_Task202_Participant18_ProductParticipation ;
+    ontoksd:occursInAcquisitionContext ontoksd:Task202_HistoricalAcquisitionContext ;
+    ontoksd:producesEvidence ontoksd:Task202_G01_ProductEvidence,
+        ontoksd:Task202_G02_ProductEvidence,
+        ontoksd:Task202_G03_ProductEvidence,
+        ontoksd:Task202_G04_ProductEvidence,
+        ontoksd:Task202_G05_ProductEvidence,
+        ontoksd:Task202_G06_ProductEvidence,
+        ontoksd:Task202_G07_ProductEvidence ;
+    ontoksd:realizes ontoksd:Task202_ProductAssessment ;
+    dcterms:description "Historical aggregate occurrence associated with the documented task assessment. Planned schedule dates are not treated as observed attendance or evidence-generation timestamps."@en .
+
+ontoksd:Task202_QuestionnaireAssessmentOccurrence
+    a ontoksd:AssessmentOccurrence ;
+    ontoksd:involvesAssessmentParticipation ontoksd:Task202_QuestionnaireParticipation02,
+        ontoksd:Task202_QuestionnaireParticipation03,
+        ontoksd:Task202_QuestionnaireParticipation04,
+        ontoksd:Task202_QuestionnaireParticipation05,
+        ontoksd:Task202_QuestionnaireParticipation06,
+        ontoksd:Task202_QuestionnaireParticipation07,
+        ontoksd:Task202_QuestionnaireParticipation08,
+        ontoksd:Task202_QuestionnaireParticipation09,
+        ontoksd:Task202_QuestionnaireParticipation10,
+        ontoksd:Task202_QuestionnaireParticipation11,
+        ontoksd:Task202_QuestionnaireParticipation12,
+        ontoksd:Task202_QuestionnaireParticipation13,
+        ontoksd:Task202_QuestionnaireParticipation14,
+        ontoksd:Task202_QuestionnaireParticipation15,
+        ontoksd:Task202_QuestionnaireParticipation16,
+        ontoksd:Task202_QuestionnaireParticipation17,
+        ontoksd:Task202_QuestionnaireParticipation18,
+        ontoksd:Task202_QuestionnaireParticipation19,
+        ontoksd:Task202_QuestionnaireParticipation20,
+        ontoksd:Task202_QuestionnaireParticipation21,
+        ontoksd:Task202_QuestionnaireParticipation22,
+        ontoksd:Task202_QuestionnaireParticipation23,
+        ontoksd:Task202_QuestionnaireParticipation24,
+        ontoksd:Task202_QuestionnaireParticipation25 ;
+    ontoksd:occursInAcquisitionContext ontoksd:Task202_HistoricalAcquisitionContext ;
+    ontoksd:producesEvidence ontoksd:Task202_QuestionnaireEvidence01,
+        ontoksd:Task202_QuestionnaireEvidence02,
+        ontoksd:Task202_QuestionnaireEvidence03,
+        ontoksd:Task202_QuestionnaireEvidence04,
+        ontoksd:Task202_QuestionnaireEvidence05,
+        ontoksd:Task202_QuestionnaireEvidence06,
+        ontoksd:Task202_QuestionnaireEvidence07,
+        ontoksd:Task202_QuestionnaireEvidence08,
+        ontoksd:Task202_QuestionnaireEvidence09,
+        ontoksd:Task202_QuestionnaireEvidence10,
+        ontoksd:Task202_QuestionnaireEvidence11,
+        ontoksd:Task202_QuestionnaireEvidence12,
+        ontoksd:Task202_QuestionnaireEvidence13,
+        ontoksd:Task202_QuestionnaireEvidence14,
+        ontoksd:Task202_QuestionnaireEvidence15,
+        ontoksd:Task202_QuestionnaireEvidence16,
+        ontoksd:Task202_QuestionnaireEvidence17,
+        ontoksd:Task202_QuestionnaireEvidence18,
+        ontoksd:Task202_QuestionnaireEvidence19,
+        ontoksd:Task202_QuestionnaireEvidence20,
+        ontoksd:Task202_QuestionnaireEvidence21,
+        ontoksd:Task202_QuestionnaireEvidence22,
+        ontoksd:Task202_QuestionnaireEvidence23,
+        ontoksd:Task202_QuestionnaireEvidence24,
+        ontoksd:Task202_QuestionnaireEvidence25 ;
+    ontoksd:realizes ontoksd:Task202_QuestionnaireAssessment ;
+    dcterms:description "Historical aggregate occurrence associated with the documented task assessment. Planned schedule dates are not treated as observed attendance or evidence-generation timestamps."@en .
+
+# Tutors
+# -----------------------------------------------------------------
+
+ontoksd:CSP2022_Tutor01
+    a ontoksd:Assessor ;
+    rdfs:label "CSP cycle 2 tutor 01"@en ;
+    dcterms:description "Coded identity of one of the two tutors credited by the historical assessment records. Shared responsibility does not identify the author or observer of every passage."@en .
+
+ontoksd:CSP2022_Tutor02
+    a ontoksd:Assessor ;
+    rdfs:label "CSP cycle 2 tutor 02"@en ;
+    dcterms:description "Coded identity of one of the two tutors credited by the historical assessment records. Shared responsibility does not identify the author or observer of every passage."@en .
+
+# Source documents
+# -----------------------------------------------------------------
+
+ontoksd:Task201_OfficialGradeSource
+    a ontoksd:Document ;
+    rdfs:label "Notas.xlsx"@en ;
+    dcterms:identifier "sha256:0791c84e2581fc90d6fa7a3f181910a55ffacb7f896972ae7c603094bb98b013" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G01_ArtifactDocument01
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 01/P02 Artigo.docx.pdf"@en ;
+    dcterms:identifier "sha256:45e01d820cf58b0d9e6f8eee21a7075fefa2c25856359f65ad07ff635b29c9ef" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G01_ArtifactDocument02
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 01/problema2.jff"@en ;
+    dcterms:identifier "sha256:a1eb23886917cf41c889b542f4e88685d1891ef946c01a1a3ec045723408ed7b" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G01_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 1.docx"@en ;
+    dcterms:identifier "sha256:bce95052f88442d5c50d2efdeb5c364386b2f15730fc2933910b0870e839b177" ;
+    dcterms:description "Documentary scores in the review: process 5.0, product 5.0. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G02_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 2.docx"@en ;
+    dcterms:identifier "sha256:189ecce43bc40da2dd01e33359dd1610c7fc2225ac888b72fd03bc3456a8b557" ;
+    dcterms:description "Documentary scores in the review: process 7.0, product 7.0. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G03_ArtifactDocument01
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 03/PBL02_final/APanb2n_FINAL.jff"@en ;
+    dcterms:identifier "sha256:aa5fe18229c3c8ab50284e46609bc7f5d8e9837414ed627ffcc3cf161c1fb4a3" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G03_ArtifactDocument02
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 03/PBL02_final/Relatório_PBL02.pdf"@en ;
+    dcterms:identifier "sha256:93ee934cf3f8b6f1cf8fff0bf611e5ede5bbb6f4732d6f2eb3313501785f4a8a" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G03_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 3.docx"@en ;
+    dcterms:identifier "sha256:91daa0f776ab9cd3e85b888c376f0fff1fb248b6e75182ef8e7fb3b84b81da6b" ;
+    dcterms:description "Documentary scores in the review: process 9.5, product 8.5. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G04_ArtifactDocument01
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 04/AP01.jff"@en ;
+    dcterms:identifier "sha256:f4020547e74f5c737a2d6acb4a3118c0c3bb03711aedacaf7fdb29d0d675c6e1" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G04_ArtifactDocument02
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 04/AP02.jff"@en ;
+    dcterms:identifier "sha256:285500b3c3e07da937e44aafdc9e71f578f1267d30975ea9292bdce7dcc110c1" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G04_ArtifactDocument03
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 04/AP03.jff"@en ;
+    dcterms:identifier "sha256:d1e324c4d503058a50649126a7faebe90b1f2940921ee2f9e72dac84af650660" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G04_ArtifactDocument04
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 04/Controle de Equipes.pdf"@en ;
+    dcterms:identifier "sha256:b6c8d96f516bc0facc7cd5d6000f55692867e269b62b94d3c5026b4de7733e37" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G04_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 4.docx"@en ;
+    dcterms:identifier "sha256:651a680d6129ac3024073c2cdfb0e160fbe89423f5bb9582691cc4149cc0e4a8" ;
+    dcterms:description "Documentary scores in the review: process 8.0, product 8.5. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G05_ArtifactDocument01
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 05/AutomatoP2Equipe5.jff"@en ;
+    dcterms:identifier "sha256:9e21b7caddb47aefab3c9f326e27fb754b8b9e84033bb8c9268d18536a932dfd" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G05_ArtifactDocument02
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 05/DIÁRIO DE BORDO EQUIPE 5.pdf"@en ;
+    dcterms:identifier "sha256:0fa2d980a345d4c9bb9cb2034b0c9ee5fd497084cc27bcd2168eed6a08ea06d9" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G05_ArtifactDocument03
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 05/Relatório da equipe 5 do Problema 2.pdf"@en ;
+    dcterms:identifier "sha256:15e684068a86846ed1c684e7a7af5de534727144883ce35bdc98907c26728a5e" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G05_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 5.docx"@en ;
+    dcterms:identifier "sha256:fba107de8e2a0f69c4f4c460f4e7668f917e06387c6c18f3715547c4b9e29aac" ;
+    dcterms:description "Documentary scores in the review: process 8.0, product 7.0. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G06_ArtifactDocument01
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 06/automato2-v4.jff"@en ;
+    dcterms:identifier "sha256:4804bdf5fc6ec9217f9418538163b8569644d93aab036ce3c222251a31f0cea5" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G06_ArtifactDocument02
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 06/Problema 2_Equipe 6 .pdf"@en ;
+    dcterms:identifier "sha256:da56fb36b3c7ff673f8a96b6eff063f89a14341b3e9a74eb99bf2ab7d458b789" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G06_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 6.docx"@en ;
+    dcterms:identifier "sha256:89ad22d9edb280f4c2cfdb592b55e73ba7ccaad44b56117e39bc7433d308da27" ;
+    dcterms:description "Documentary scores in the review: process 9.0, product 8.5. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G07_ArtifactDocument01
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 07/Problema 2-Relatório-JFlap-Equipe 7/MATC94_Grupo7_comp.jff"@en ;
+    dcterms:identifier "sha256:6a6e9d94c1ee81738810cb0690fcd2406c8c39e83f0938cf1490deddcd299868" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G07_ArtifactDocument02
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/Grupo 07/Problema 2-Relatório-JFlap-Equipe 7/Problema2Relatório.pdf"@en ;
+    dcterms:identifier "sha256:7575015bdb6f8cbeea96cceeac9d678f2025e9d655392861482b7ec7b495cef2" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_G07_ReviewSource
+    a ontoksd:Document ;
+    rdfs:label "Problema 02/PBL 02 - Grupo 7.docx"@en ;
+    dcterms:identifier "sha256:9fcc5dfba3a789684a2e819080ed09a420658e65ce70008696916dfb3de4ab0a" ;
+    dcterms:description "Documentary scores in the review: process 9.5, product 9.5. These differ from final official results and are not used as hasScore values. No revision date, reason or ordering is inferred."@en,
+        "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+ontoksd:Task202_HistoricalProblemSource
+    a ontoksd:Document ;
+    dcterms:title "Problema 02.2022.pdf"@pt ;
+    dcterms:identifier "sha256:7c8a8b4eec6e8283d39b9a9a757ca0bdcb8815d0128f4ccd7f8c49b8c3540a47" .
+
+ontoksd:Task202_IndividualFormSource
+    a ontoksd:Document ;
+    rdfs:label "Avaliação Individual - Problema 02 - 2022.csv/Avaliação Individual - Problema 02 - 2022.csv"@en ;
+    dcterms:identifier "sha256:1679a710a1dd4dfe88cde0e0ae56d880bfb0b72fe5a14ef1dab46f1bb4b363ec" ;
+    dcterms:description "Restricted historical source, identified by relative path and SHA-256. This package distributes a reference, not the personal contents."@en .
+
+# Learners
+# -----------------------------------------------------------------
+
+ontoksd:Task201_G01_L01
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G01_L01"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G01_L01_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation22,
+        ontoksd:Task202_Task201_G01_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G01_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L01_ProductParticipation .
+
+ontoksd:Task201_G01_L02
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G01_L02"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G01_L02_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation23,
+        ontoksd:Task202_Task201_G01_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G01_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L02_ProductParticipation .
+
+ontoksd:Task201_G01_L03
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G01_L03"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G01_L03_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation24,
+        ontoksd:Task202_Task201_G01_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G01_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L03_ProductParticipation .
+
+ontoksd:Task201_G02_L01
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G02_L01"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G02_L01_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task201_G02_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G02_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G02_L01_ProductParticipation .
+
+ontoksd:Task201_G02_L05
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G02_L05"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G02_L05_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task201_G02_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G02_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G02_L05_ProductParticipation .
+
+ontoksd:Task201_G03_L01
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G03_L01"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G03_L01_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation15,
+        ontoksd:Task202_Task201_G03_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L01_ProductParticipation .
+
+ontoksd:Task201_G03_L02
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G03_L02"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G03_L02_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation07,
+        ontoksd:Task202_Task201_G03_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L02_ProductParticipation .
+
+ontoksd:Task201_G03_L03
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G03_L03"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G03_L03_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation12,
+        ontoksd:Task202_Task201_G03_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L03_ProductParticipation .
+
+ontoksd:Task201_G03_L04
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G03_L04"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G03_L04_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation09,
+        ontoksd:Task202_Task201_G03_L04_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L04_ProductParticipation .
+
+ontoksd:Task201_G03_L06
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G03_L06"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G03_L06_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation25,
+        ontoksd:Task202_Task201_G03_L06_FinalParticipation,
+        ontoksd:Task202_Task201_G03_L06_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L06_ProductParticipation .
+
+ontoksd:Task201_G04_L01
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G04_L01"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G04_L01_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation05,
+        ontoksd:Task202_Task201_G04_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L01_ProductParticipation .
+
+ontoksd:Task201_G04_L02
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G04_L02"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G04_L02_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation10,
+        ontoksd:Task202_Task201_G04_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L02_ProductParticipation .
+
+ontoksd:Task201_G04_L03
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G04_L03"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G04_L03_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation17,
+        ontoksd:Task202_Task201_G04_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L03_ProductParticipation .
+
+ontoksd:Task201_G04_L05
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G04_L05"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G04_L05_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task201_G04_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G04_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L05_ProductParticipation .
+
+ontoksd:Task201_G05_L01
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G05_L01"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G05_L01_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation14,
+        ontoksd:Task202_Task201_G05_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L01_ProductParticipation .
+
+ontoksd:Task201_G05_L02
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G05_L02"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G05_L02_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation18,
+        ontoksd:Task202_Task201_G05_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L02_ProductParticipation .
+
+ontoksd:Task201_G05_L03
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G05_L03"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G05_L03_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation11,
+        ontoksd:Task202_Task201_G05_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L03_ProductParticipation .
+
+ontoksd:Task201_G05_L04
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G05_L04"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G05_L04_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation13,
+        ontoksd:Task202_Task201_G05_L04_FinalParticipation,
+        ontoksd:Task202_Task201_G05_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L04_ProductParticipation .
+
+ontoksd:Task201_G06_L02
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G06_L02"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G06_L02_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation16,
+        ontoksd:Task202_Task201_G06_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L02_ProductParticipation .
+
+ontoksd:Task201_G06_L03
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G06_L03"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G06_L03_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation02,
+        ontoksd:Task202_Task201_G06_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L03_ProductParticipation .
+
+ontoksd:Task201_G06_L04
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G06_L04"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G06_L04_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation03,
+        ontoksd:Task202_Task201_G06_L04_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L04_ProductParticipation .
+
+ontoksd:Task201_G06_L05
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G06_L05"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G06_L05_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation06,
+        ontoksd:Task202_Task201_G06_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G06_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L05_ProductParticipation .
+
+ontoksd:Task201_G07_L01
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G07_L01"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G07_L01_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation08,
+        ontoksd:Task202_Task201_G07_L01_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L01_ProductParticipation .
+
+ontoksd:Task201_G07_L02
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G07_L02"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G07_L02_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation04,
+        ontoksd:Task202_Task201_G07_L02_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L02_ProductParticipation .
+
+ontoksd:Task201_G07_L03
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G07_L03"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G07_L03_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation20,
+        ontoksd:Task202_Task201_G07_L03_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L03_ProductParticipation .
+
+ontoksd:Task201_G07_L05
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G07_L05"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G07_L05_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation19,
+        ontoksd:Task202_Task201_G07_L05_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L05_ProductParticipation .
+
+ontoksd:Task201_G07_L06
+    a ontoksd:Learner ;
+    rdfs:label "Task201_G07_L06"@en ;
+    ontoksd:hasProfile ontoksd:Task201_G07_L06_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_QuestionnaireParticipation21,
+        ontoksd:Task202_Task201_G07_L06_FinalParticipation,
+        ontoksd:Task202_Task201_G07_L06_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L06_ProductParticipation .
+
+ontoksd:Task202_Participant05
+    a ontoksd:Learner ;
+    rdfs:label "Task202_Participant05"@en ;
+    ontoksd:hasProfile ontoksd:Task202_Participant05_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task202_Participant05_FinalParticipation,
+        ontoksd:Task202_Task202_Participant05_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant05_ProductParticipation ;
+    dcterms:description "Task202-specific participant code. No equivalence or difference from an unresolved legacy Task201 identity is asserted."@en .
+
+ontoksd:Task202_Participant06
+    a ontoksd:Learner ;
+    rdfs:label "Task202_Participant06"@en ;
+    ontoksd:hasProfile ontoksd:Task202_Participant06_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task202_Participant06_FinalParticipation,
+        ontoksd:Task202_Task202_Participant06_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant06_ProductParticipation ;
+    dcterms:description "Task202-specific participant code. No equivalence or difference from an unresolved legacy Task201 identity is asserted."@en .
+
+ontoksd:Task202_Participant07
+    a ontoksd:Learner ;
+    rdfs:label "Task202_Participant07"@en ;
+    ontoksd:hasProfile ontoksd:Task202_Participant07_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task202_Participant07_FinalParticipation,
+        ontoksd:Task202_Task202_Participant07_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant07_ProductParticipation ;
+    dcterms:description "Task202-specific participant code. No equivalence or difference from an unresolved legacy Task201 identity is asserted."@en .
+
+ontoksd:Task202_Participant11
+    a ontoksd:Learner ;
+    rdfs:label "Task202_Participant11"@en ;
+    ontoksd:hasProfile ontoksd:Task202_Participant11_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task202_Participant11_FinalParticipation,
+        ontoksd:Task202_Task202_Participant11_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant11_ProductParticipation ;
+    dcterms:description "Task202-specific participant code. No equivalence or difference from an unresolved legacy Task201 identity is asserted."@en .
+
+ontoksd:Task202_Participant18
+    a ontoksd:Learner ;
+    rdfs:label "Task202_Participant18"@en ;
+    ontoksd:hasProfile ontoksd:Task202_Participant18_Profile ;
+    ontoksd:participatesIn ontoksd:Task202_Task202_Participant18_FinalParticipation,
+        ontoksd:Task202_Task202_Participant18_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant18_ProductParticipation ;
+    dcterms:description "Task202-specific participant code. No equivalence or difference from an unresolved legacy Task201 identity is asserted."@en .
+
+# Profiles
+# -----------------------------------------------------------------
+
+ontoksd:Task201_G01_L01_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G01_ProcessEvidence,
+        ontoksd:Task202_G01_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence22 ;
+    ontoksd:isProfileOf ontoksd:Task201_G01_L01 .
+
+ontoksd:Task201_G01_L02_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G01_ProcessEvidence,
+        ontoksd:Task202_G01_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence23 ;
+    ontoksd:isProfileOf ontoksd:Task201_G01_L02 .
+
+ontoksd:Task201_G01_L03_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G01_ProcessEvidence,
+        ontoksd:Task202_G01_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence24 ;
+    ontoksd:isProfileOf ontoksd:Task201_G01_L03 .
+
+ontoksd:Task201_G02_L01_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G02_ProcessEvidence,
+        ontoksd:Task202_G02_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task201_G02_L01 .
+
+ontoksd:Task201_G02_L05_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G02_ProcessEvidence,
+        ontoksd:Task202_G02_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task201_G02_L05 .
+
+ontoksd:Task201_G03_L01_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G03_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence15 ;
+    ontoksd:isProfileOf ontoksd:Task201_G03_L01 .
+
+ontoksd:Task201_G03_L02_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G03_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence07 ;
+    ontoksd:isProfileOf ontoksd:Task201_G03_L02 .
+
+ontoksd:Task201_G03_L03_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G03_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence12 ;
+    ontoksd:isProfileOf ontoksd:Task201_G03_L03 .
+
+ontoksd:Task201_G03_L04_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G03_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence09 ;
+    ontoksd:isProfileOf ontoksd:Task201_G03_L04 .
+
+ontoksd:Task201_G03_L06_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G03_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence25 ;
+    ontoksd:isProfileOf ontoksd:Task201_G03_L06 .
+
+ontoksd:Task201_G04_L01_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G04_ProcessEvidence,
+        ontoksd:Task202_G04_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence05 ;
+    ontoksd:isProfileOf ontoksd:Task201_G04_L01 .
+
+ontoksd:Task201_G04_L02_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G04_ProcessEvidence,
+        ontoksd:Task202_G04_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence10 ;
+    ontoksd:isProfileOf ontoksd:Task201_G04_L02 .
+
+ontoksd:Task201_G04_L03_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G04_ProcessEvidence,
+        ontoksd:Task202_G04_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence17 ;
+    ontoksd:isProfileOf ontoksd:Task201_G04_L03 .
+
+ontoksd:Task201_G04_L05_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G04_ProcessEvidence,
+        ontoksd:Task202_G04_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task201_G04_L05 .
+
+ontoksd:Task201_G05_L01_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G05_ProcessEvidence,
+        ontoksd:Task202_G05_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence14 ;
+    ontoksd:isProfileOf ontoksd:Task201_G05_L01 .
+
+ontoksd:Task201_G05_L02_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G05_ProcessEvidence,
+        ontoksd:Task202_G05_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence18 ;
+    ontoksd:isProfileOf ontoksd:Task201_G05_L02 .
+
+ontoksd:Task201_G05_L03_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G05_ProcessEvidence,
+        ontoksd:Task202_G05_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence11 ;
+    ontoksd:isProfileOf ontoksd:Task201_G05_L03 .
+
+ontoksd:Task201_G05_L04_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G05_ProcessEvidence,
+        ontoksd:Task202_G05_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence13 ;
+    ontoksd:isProfileOf ontoksd:Task201_G05_L04 .
+
+ontoksd:Task201_G06_L02_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G06_ProcessEvidence,
+        ontoksd:Task202_G06_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence16 ;
+    ontoksd:isProfileOf ontoksd:Task201_G06_L02 .
+
+ontoksd:Task201_G06_L03_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G06_ProcessEvidence,
+        ontoksd:Task202_G06_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence02 ;
+    ontoksd:isProfileOf ontoksd:Task201_G06_L03 .
+
+ontoksd:Task201_G06_L04_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G06_ProcessEvidence,
+        ontoksd:Task202_G06_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence03 ;
+    ontoksd:isProfileOf ontoksd:Task201_G06_L04 .
+
+ontoksd:Task201_G06_L05_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G06_ProcessEvidence,
+        ontoksd:Task202_G06_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence06 ;
+    ontoksd:isProfileOf ontoksd:Task201_G06_L05 .
+
+ontoksd:Task201_G07_L01_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G07_ProcessEvidence,
+        ontoksd:Task202_G07_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence08 ;
+    ontoksd:isProfileOf ontoksd:Task201_G07_L01 .
+
+ontoksd:Task201_G07_L02_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G07_ProcessEvidence,
+        ontoksd:Task202_G07_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence04 ;
+    ontoksd:isProfileOf ontoksd:Task201_G07_L02 .
+
+ontoksd:Task201_G07_L03_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G07_ProcessEvidence,
+        ontoksd:Task202_G07_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence20 ;
+    ontoksd:isProfileOf ontoksd:Task201_G07_L03 .
+
+ontoksd:Task201_G07_L05_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G07_ProcessEvidence,
+        ontoksd:Task202_G07_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence19 ;
+    ontoksd:isProfileOf ontoksd:Task201_G07_L05 .
+
+ontoksd:Task201_G07_L06_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G07_ProcessEvidence,
+        ontoksd:Task202_G07_ProductEvidence,
+        ontoksd:Task202_QuestionnaireEvidence21 ;
+    ontoksd:isProfileOf ontoksd:Task201_G07_L06 .
+
+ontoksd:Task202_Participant05_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G02_ProcessEvidence,
+        ontoksd:Task202_G02_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task202_Participant05 .
+
+ontoksd:Task202_Participant06_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G02_ProcessEvidence,
+        ontoksd:Task202_G02_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task202_Participant06 .
+
+ontoksd:Task202_Participant07_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G02_ProcessEvidence,
+        ontoksd:Task202_G02_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task202_Participant07 .
+
+ontoksd:Task202_Participant11_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G03_ProcessEvidence,
+        ontoksd:Task202_G03_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task202_Participant11 .
+
+ontoksd:Task202_Participant18_Profile
+    a ontoksd:Profile ;
+    ontoksd:hasEvidence ontoksd:Task202_G04_ProcessEvidence,
+        ontoksd:Task202_G04_ProductEvidence ;
+    ontoksd:isProfileOf ontoksd:Task202_Participant18 .
+
+# Process participations
+# -----------------------------------------------------------------
+
+ontoksd:Task202_Task201_G01_L01_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L01 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G01_L02_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L02 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G01_L03_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L03 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G02_L01_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G02_L01 ;
+    ontoksd:hasScore "3.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G02_L05_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G02_L05 ;
+    ontoksd:hasScore "3.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L01_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L01 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L02_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L02 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L03_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L03 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L04_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L04 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L06_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L06 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L01_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L01 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L02_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L02 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L03_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L03 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L05_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L05 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L01_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L01 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L02_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L02 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L03_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L03 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L04_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L04 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L02_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L02 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L03_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L03 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L04_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L04 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L05_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L05 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L01_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L01 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L02_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L02 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L03_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L03 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L05_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L05 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L06_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L06 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant05_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant05 ;
+    ontoksd:hasScore "3.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant06_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant06 ;
+    ontoksd:hasScore "3.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant07_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant07 ;
+    ontoksd:hasScore "3.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant11_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant11 ;
+    ontoksd:hasScore "10.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant18_ProcessParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant18 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+# Product participations
+# -----------------------------------------------------------------
+
+ontoksd:Task202_Task201_G01_L01_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L01 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G01_L02_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L02 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G01_L03_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L03 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G02_L01_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G02_L01 ;
+    ontoksd:hasScore "0.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G02_L05_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G02_L05 ;
+    ontoksd:hasScore "0.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L01_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L01 ;
+    ontoksd:hasScore "8.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L02_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L02 ;
+    ontoksd:hasScore "8.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L03_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L03 ;
+    ontoksd:hasScore "8.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L04_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L04 ;
+    ontoksd:hasScore "8.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G03_L06_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L06 ;
+    ontoksd:hasScore "8.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L01_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L01 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L02_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L02 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L03_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L03 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G04_L05_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L05 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L01_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L01 ;
+    ontoksd:hasScore "6.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L02_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L02 ;
+    ontoksd:hasScore "6.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L03_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L03 ;
+    ontoksd:hasScore "6.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G05_L04_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L04 ;
+    ontoksd:hasScore "6.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L02_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L02 ;
+    ontoksd:hasScore "8.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L03_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L03 ;
+    ontoksd:hasScore "8.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L04_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L04 ;
+    ontoksd:hasScore "8.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G06_L05_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L05 ;
+    ontoksd:hasScore "8.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L01_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L01 ;
+    ontoksd:hasScore "9.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L02_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L02 ;
+    ontoksd:hasScore "9.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L03_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L03 ;
+    ontoksd:hasScore "9.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L05_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L05 ;
+    ontoksd:hasScore "9.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task201_G07_L06_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L06 ;
+    ontoksd:hasScore "9.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant05_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant05 ;
+    ontoksd:hasScore "0.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant06_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant06 ;
+    ontoksd:hasScore "0.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant07_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant07 ;
+    ontoksd:hasScore "0.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant11_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant11 ;
+    ontoksd:hasScore "8.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+ontoksd:Task202_Task202_Participant18_ProductParticipation
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasAssessor ontoksd:CSP2022_Tutor01,
+        ontoksd:CSP2022_Tutor02 ;
+    ontoksd:hasLearner ontoksd:Task202_Participant18 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource .
+
+# Final-result consolidations
+# -----------------------------------------------------------------
+
+ontoksd:Task202_Task201_G01_L01_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L01 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G01_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L01_ProductParticipation .
+
+ontoksd:Task202_Task201_G01_L02_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L02 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G01_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L02_ProductParticipation .
+
+ontoksd:Task202_Task201_G01_L03_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L03 ;
+    ontoksd:hasScore "4.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G01_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G01_L03_ProductParticipation .
+
+ontoksd:Task202_Task201_G02_L01_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G02_L01 ;
+    ontoksd:hasScore "1.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G02_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G02_L01_ProductParticipation .
+
+ontoksd:Task202_Task201_G02_L05_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G02_L05 ;
+    ontoksd:hasScore "1.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G02_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G02_L05_ProductParticipation .
+
+ontoksd:Task202_Task201_G03_L01_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L01 ;
+    ontoksd:hasScore "9.25"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G03_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L01_ProductParticipation .
+
+ontoksd:Task202_Task201_G03_L02_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L02 ;
+    ontoksd:hasScore "9.25"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G03_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L02_ProductParticipation .
+
+ontoksd:Task202_Task201_G03_L03_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L03 ;
+    ontoksd:hasScore "9.25"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G03_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L03_ProductParticipation .
+
+ontoksd:Task202_Task201_G03_L04_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L04 ;
+    ontoksd:hasScore "9.25"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G03_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L04_ProductParticipation .
+
+ontoksd:Task202_Task201_G03_L06_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L06 ;
+    ontoksd:hasScore "9.25"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G03_L06_ProcessParticipation,
+        ontoksd:Task202_Task201_G03_L06_ProductParticipation .
+
+ontoksd:Task202_Task201_G04_L01_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L01 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G04_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L01_ProductParticipation .
+
+ontoksd:Task202_Task201_G04_L02_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L02 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G04_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L02_ProductParticipation .
+
+ontoksd:Task202_Task201_G04_L03_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L03 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G04_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L03_ProductParticipation .
+
+ontoksd:Task202_Task201_G04_L05_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L05 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G04_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G04_L05_ProductParticipation .
+
+ontoksd:Task202_Task201_G05_L01_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L01 ;
+    ontoksd:hasScore "6.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G05_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L01_ProductParticipation .
+
+ontoksd:Task202_Task201_G05_L02_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L02 ;
+    ontoksd:hasScore "6.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G05_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L02_ProductParticipation .
+
+ontoksd:Task202_Task201_G05_L03_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L03 ;
+    ontoksd:hasScore "6.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G05_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L03_ProductParticipation .
+
+ontoksd:Task202_Task201_G05_L04_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L04 ;
+    ontoksd:hasScore "6.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G05_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G05_L04_ProductParticipation .
+
+ontoksd:Task202_Task201_G06_L02_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L02 ;
+    ontoksd:hasScore "9.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G06_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L02_ProductParticipation .
+
+ontoksd:Task202_Task201_G06_L03_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L03 ;
+    ontoksd:hasScore "9.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G06_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L03_ProductParticipation .
+
+ontoksd:Task202_Task201_G06_L04_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L04 ;
+    ontoksd:hasScore "9.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G06_L04_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L04_ProductParticipation .
+
+ontoksd:Task202_Task201_G06_L05_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L05 ;
+    ontoksd:hasScore "9.0"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G06_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G06_L05_ProductParticipation .
+
+ontoksd:Task202_Task201_G07_L01_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L01 ;
+    ontoksd:hasScore "9.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G07_L01_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L01_ProductParticipation .
+
+ontoksd:Task202_Task201_G07_L02_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L02 ;
+    ontoksd:hasScore "9.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G07_L02_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L02_ProductParticipation .
+
+ontoksd:Task202_Task201_G07_L03_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L03 ;
+    ontoksd:hasScore "9.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G07_L03_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L03_ProductParticipation .
+
+ontoksd:Task202_Task201_G07_L05_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L05 ;
+    ontoksd:hasScore "9.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G07_L05_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L05_ProductParticipation .
+
+ontoksd:Task202_Task201_G07_L06_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L06 ;
+    ontoksd:hasScore "9.75"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task201_G07_L06_ProcessParticipation,
+        ontoksd:Task202_Task201_G07_L06_ProductParticipation .
+
+ontoksd:Task202_Task202_Participant05_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task202_Participant05 ;
+    ontoksd:hasScore "1.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task202_Participant05_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant05_ProductParticipation .
+
+ontoksd:Task202_Task202_Participant06_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task202_Participant06 ;
+    ontoksd:hasScore "1.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task202_Participant06_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant06_ProductParticipation .
+
+ontoksd:Task202_Task202_Participant07_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task202_Participant07 ;
+    ontoksd:hasScore "1.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task202_Participant07_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant07_ProductParticipation .
+
+ontoksd:Task202_Task202_Participant11_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task202_Participant11 ;
+    ontoksd:hasScore "9.25"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task202_Participant11_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant11_ProductParticipation .
+
+ontoksd:Task202_Task202_Participant18_FinalParticipation
+    a ontoksd:AssessmentParticipation ;
+    dcterms:relation ontoksd:Task202_Reference ;
+    ontoksd:hasLearner ontoksd:Task202_Participant18 ;
+    ontoksd:hasScore "7.5"^^xsd:decimal ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_FinalAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task201_OfficialGradeSource,
+        ontoksd:Task202_Task202_Participant18_ProcessParticipation,
+        ontoksd:Task202_Task202_Participant18_ProductParticipation .
+
+# Questionnaire participations
+# -----------------------------------------------------------------
+
+ontoksd:Task202_QuestionnaireParticipation02
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L03 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence02 .
+
+ontoksd:Task202_QuestionnaireParticipation03
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L04 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence03 .
+
+ontoksd:Task202_QuestionnaireParticipation04
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L02 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence04 .
+
+ontoksd:Task202_QuestionnaireParticipation05
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L01 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence05 .
+
+ontoksd:Task202_QuestionnaireParticipation06
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L05 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence06 .
+
+ontoksd:Task202_QuestionnaireParticipation07
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L02 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence07 .
+
+ontoksd:Task202_QuestionnaireParticipation08
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L01 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence08 .
+
+ontoksd:Task202_QuestionnaireParticipation09
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L04 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence09 .
+
+ontoksd:Task202_QuestionnaireParticipation10
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L02 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence10 .
+
+ontoksd:Task202_QuestionnaireParticipation11
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L03 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence11 .
+
+ontoksd:Task202_QuestionnaireParticipation12
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L03 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence12 .
+
+ontoksd:Task202_QuestionnaireParticipation13
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L04 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence13 .
+
+ontoksd:Task202_QuestionnaireParticipation14
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L01 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence14 .
+
+ontoksd:Task202_QuestionnaireParticipation15
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L01 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence15 .
+
+ontoksd:Task202_QuestionnaireParticipation16
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G06_L02 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence16 .
+
+ontoksd:Task202_QuestionnaireParticipation17
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G04_L03 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence17 .
+
+ontoksd:Task202_QuestionnaireParticipation18
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G05_L02 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence18 .
+
+ontoksd:Task202_QuestionnaireParticipation19
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L05 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence19 .
+
+ontoksd:Task202_QuestionnaireParticipation20
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L03 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence20 .
+
+ontoksd:Task202_QuestionnaireParticipation21
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G07_L06 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence21 .
+
+ontoksd:Task202_QuestionnaireParticipation22
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L01 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence22 .
+
+ontoksd:Task202_QuestionnaireParticipation23
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L02 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence23 .
+
+ontoksd:Task202_QuestionnaireParticipation24
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G01_L03 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence24 .
+
+ontoksd:Task202_QuestionnaireParticipation25
+    a ontoksd:AssessmentParticipation ;
+    ontoksd:hasLearner ontoksd:Task201_G03_L06 ;
+    ontoksd:occursInAssessmentOccurrence ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    prov:wasDerivedFrom ontoksd:Task202_QuestionnaireEvidence25 .
+
+# Evidence types
+# -----------------------------------------------------------------
+
+ontoksd:InstructorProcessReview
+    a ontoksd:EvidenceType .
+
+ontoksd:InstructorProductReview
+    a ontoksd:EvidenceType .
+
+ontoksd:SelfReported
+    a ontoksd:EvidenceType .
+
+# Evidence references
+# -----------------------------------------------------------------
+
+ontoksd:Task202_G01_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G01 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G01_ReviewSource ;
+    dcterms:description "The review reports insufficient tutoring participation and limited treatment of requirements, PDA concepts and grammar. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G01_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G01 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G01_ArtifactDocument01,
+        ontoksd:Task202_G01_ArtifactDocument02,
+        ontoksd:Task202_G01_ReviewSource ;
+    dcterms:description "The review reports insufficient tutoring participation and limited treatment of requirements, PDA concepts and grammar. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G02_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G02 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G02_ReviewSource ;
+    dcterms:description "The document records scores but its qualitative assessment fields are blank. No qualitative observation is invented. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G02_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G02 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G02_ReviewSource ;
+    dcterms:description "The document records scores but its qualitative assessment fields are blank. No qualitative observation is invented. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G03_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G03 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G03_ReviewSource ;
+    dcterms:description "The review describes participation, growing collaboration and incremental documentation, alongside limitations in coverage of the three cases and grammar derivation. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G03_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G03 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G03_ArtifactDocument01,
+        ontoksd:Task202_G03_ArtifactDocument02,
+        ontoksd:Task202_G03_ReviewSource ;
+    dcterms:description "The review describes participation, growing collaboration and incremental documentation, alongside limitations in coverage of the three cases and grammar derivation. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G04_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G04 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G04_ReviewSource ;
+    dcterms:description "The review describes collaboration and a missed session; it records counterexamples to the models and confusion between grammar and PDA definition. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G04_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G04 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G04_ArtifactDocument01,
+        ontoksd:Task202_G04_ArtifactDocument02,
+        ontoksd:Task202_G04_ArtifactDocument03,
+        ontoksd:Task202_G04_ArtifactDocument04,
+        ontoksd:Task202_G04_ReviewSource ;
+    dcterms:description "The review describes collaboration and a missed session; it records counterexamples to the models and confusion between grammar and PDA definition. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G05_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G05 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G05_ArtifactDocument02,
+        ontoksd:Task202_G05_ReviewSource ;
+    dcterms:description "The review records active collaboration and one missed session, but unclear iteration documentation, incomplete handling of proportions and no grammar. The student-authored diary is a distinct documentary source. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G05_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G05 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G05_ArtifactDocument01,
+        ontoksd:Task202_G05_ArtifactDocument03,
+        ontoksd:Task202_G05_ReviewSource ;
+    dcterms:description "The review records active collaboration and one missed session, but unclear iteration documentation, incomplete handling of proportions and no grammar. The student-authored diary is a distinct documentary source. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G06_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G06 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G06_ReviewSource ;
+    dcterms:description "The review describes active collaboration and detailed documentation, while questioning conceptual treatment of stack operations and noting the missing grammar. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G06_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G06 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G06_ArtifactDocument01,
+        ontoksd:Task202_G06_ArtifactDocument02,
+        ontoksd:Task202_G06_ReviewSource ;
+    dcterms:description "The review describes active collaboration and detailed documentation, while questioning conceptual treatment of stack operations and noting the missing grammar. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G07_ProcessEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G07 process review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProcessAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProcessReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G07_ReviewSource ;
+    dcterms:description "The review describes substantial participation and models for the three situations, while requesting more grammar examples and formal precision. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_G07_ProductEvidence
+    a ontoksd:Evidence ;
+    rdfs:label "Task202 G07 product review view"@en ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_ProductAssessmentOccurrence ;
+    ontoksd:hasEvidenceType ontoksd:InstructorProductReview ;
+    ontoksd:hasSupportDocument ontoksd:Task202_G07_ArtifactDocument01,
+        ontoksd:Task202_G07_ArtifactDocument02,
+        ontoksd:Task202_G07_ReviewSource ;
+    dcterms:description "The review describes substantial participation and models for the three situations, while requesting more grammar examples and formal precision. This is a group-level documentary reference, not an independently established individual constituent judgment."@en .
+
+ontoksd:Task202_QuestionnaireEvidence01
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-01T12:19:18-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence02
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-01T18:21:38-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence03
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-01T20:32:30-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence04
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-01T20:46:17-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence05
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-01T20:52:29-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence06
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-02T08:19:59-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence07
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-02T16:42:38-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence08
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-03T22:25:46-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence09
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-03T23:09:22-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence10
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-04T14:02:17-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence11
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-04T16:31:00-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence12
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-06T11:36:34-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence13
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-06T19:19:22-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence14
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-06T19:23:05-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence15
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-06T20:33:46-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence16
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-06T20:40:55-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence17
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-07T05:35:19-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence18
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-08T14:28:37-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence19
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-08T16:30:49-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence20
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-09T19:55:33-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence21
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-09T21:44:34-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence22
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-14T21:45:19-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence23
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-14T22:20:04-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence24
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-14T22:29:49-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+ontoksd:Task202_QuestionnaireEvidence25
+    a ontoksd:Evidence ;
+    ontoksd:evidenceBasedOn ontoksd:Task202_QuestionnaireAssessmentOccurrence ;
+    ontoksd:generatedAt "2022-06-27T21:56:13-03:00"^^xsd:dateTime ;
+    ontoksd:hasEvidenceType ontoksd:SelfReported ;
+    ontoksd:hasSupportDocument ontoksd:Task202_IndividualFormSource ;
+    dcterms:description "Reference to a historical mixed questionnaire submission. Submission time is not validation time. Personal responses are not included and no competence attainment is inferred."@en .
+
+}

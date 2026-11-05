@@ -14,8 +14,8 @@ ontoksd:CourseCompetenceSpecification_DFAConstruction_FormalLanguages a ontoksd:
     dcterms:identifier "CourseCompetenceSpecification_DFAConstruction_FormalLanguages" ;
     dcterms:references ontoksd:ProficiencyScheme_0_100_FourLevels ;
     ontoksd:isMandatory true ;
-    ontoksd:mediatesCourse ontoksd:Course_FormalLanguages ;
-    ontoksd:mediatesCourseCompetence ontoksd:Competence_DFAConstruction ;
+    ontoksd:hasSpecifiedCourse ontoksd:Course_FormalLanguages ;
+    ontoksd:hasSpecifiedCompetence ontoksd:Competence_DFAConstruction ;
     ontoksd:requiresMinimumProficiencyLevel ontoksd:ProficiencyLevel_Advanced ;
     skos:prefLabel "Course competence specification for DFA construction in Formal Languages and Automata"@en,
         "Especificação curricular da competência de construção de AFD em Linguagens Formais e Autômatos"@pt .
@@ -61,8 +61,8 @@ WHERE {
      ontoksd:LearningNeed_DFAConstruction_Learner_01)
   }
   ?specification a ontoksd:CourseCompetenceSpecification ;
-      ontoksd:mediatesCourse ?course ;
-      ontoksd:mediatesCourseCompetence ?competence ;
+      ontoksd:hasSpecifiedCourse ?course ;
+      ontoksd:hasSpecifiedCompetence ?competence ;
       ontoksd:requiresMinimumProficiencyLevel ?requiredLevel ;
       dcterms:references ?scheme .
   ?scheme a ontoksd:ProficiencyScheme ;

@@ -7,14 +7,34 @@ PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?instructionalUnit ?instructionalUnitLabel ?competence ?competenceLabel ?competenceActivation
+SELECT DISTINCT
+    ?instructionalUnit
+    ?instructionalUnitLabel
+    ?competence
+    ?competenceLabel
+    ?competenceActivation
 WHERE {
-?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
- (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
-?competenceActivation ontoksd:hasActivationFunction ontoksd:targetFunction .
-OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
-OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+    ?competenceActivation
+        a ontoksd:CompetenceActivation ;
+        ontoksd:hasActivationCompetence ?competence ;
+        ontoksd:hasActivationFunction ontoksd:targetFunction ;
+        (ontoksd:hasActivationInstructionalUnit |
+         ^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+
+    OPTIONAL {
+        ?instructionalUnit
+            (rdfs:label | skos:prefLabel | dcterms:title)
+            ?instructionalUnitLabel .
+    }
+
+    OPTIONAL {
+        ?competence
+            (rdfs:label | skos:prefLabel | dcterms:title)
+            ?competenceLabel .
+    }
 }
-ORDER BY ?instructionalUnit ?instructionalUnitLabel ?competenceLabel
+ORDER BY
+    ?instructionalUnit
+    ?instructionalUnitLabel
+    ?competenceLabel

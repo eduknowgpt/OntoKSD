@@ -1,6 +1,6 @@
 PREFIX o: <http://purl.org/ontoksd#>
 SELECT ?unit ?competence ?role ?mode ?constraintType WHERE {
- ?activation a o:CompetenceActivation; o:mediatesInstructionalUnit ?unit; o:mediatesCompetence ?competence .
+ ?activation a o:CompetenceActivation; o:hasActivationInstructionalUnit ?unit; o:hasActivationCompetence ?competence .
  FILTER(STRSTARTS(STR(?activation), "http://purl.org/ontoksd#CA_Task30"))
  OPTIONAL { ?activation o:hasActivationRole ?role }
  OPTIONAL { ?activation o:hasActivationMode ?mode }

@@ -3,8 +3,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?specification ?competence ?mandatory ?minimum ?scheme
 WHERE {
  ?specification a ontoksd:CourseCompetenceSpecification ;
-  ontoksd:mediatesCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
-  ontoksd:mediatesCourseCompetence ?competence ; ontoksd:isMandatory ?mandatory ;
+  ontoksd:hasSpecifiedCourse ontoksd:Course_FormalLanguagesAndTheoryOfComputation ;
+  ontoksd:hasSpecifiedCompetence ?competence ; ontoksd:isMandatory ?mandatory ;
   ontoksd:requiresMinimumProficiencyLevel ?minimum ; dcterms:references ?scheme .
  ?scheme a ontoksd:ProficiencyScheme ; ontoksd:definesLevel ?minimum .
 } ORDER BY ?competence

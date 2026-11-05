@@ -1,0 +1,26 @@
+# All six rows must return ?passed = true.
+# Expected false means 'not returned by this query', not an OWL negative assertion.
+PREFIX o: <http://purl.org/ontoksd#>
+PREFIX t: <http://purl.org/ontoksd/test/cq11#>
+
+SELECT ?case ?instructionalUnit ?competence ?competenceActivation ?expected ?actual ?passed
+WHERE {
+ VALUES (?case ?instructionalUnit ?competence ?competenceActivation ?expected) {
+  ("P1 - direct prerequisite" t:recursionPractice t:traceIteration t:prerequisiteIterationForRecursion true)
+  ("P2 - reused prerequisite" t:algorithmComparison t:traceIteration t:prerequisiteIterationForComparison true)
+  ("P3 - inverse unit link" t:algorithmComparison t:traceRecursion t:prerequisiteRecursionForComparison true)
+  ("N1 - same competence as target" t:introductoryPractice t:traceIteration t:targetIterationForIntro false)
+  ("N2 - target alongside prerequisites" t:algorithmComparison t:compareAlgorithms t:targetComparison false)
+  ("N3 - no explicit function" t:introductoryPractice t:traceRecursion t:unqualifiedRecursion false)
+ }
+ BIND(EXISTS {
+  GRAPH <http://purl.org/ontoksd/test/cq11> {
+   ?competenceActivation a o:CompetenceActivation ;
+      o:hasActivationCompetence ?competence ;
+      (o:hasActivationInstructionalUnit|^o:hasCompetenceActivation) ?instructionalUnit ;
+      o:hasActivationFunction o:prerequisiteFunction .
+  }
+ } AS ?actual)
+ BIND((?actual = ?expected) AS ?passed)
+}
+ORDER BY ?case

@@ -16,8 +16,8 @@ ontoksd:CA_Task201_C02_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
-    ontoksd:mediatesCompetence ontoksd:C02 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C02 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C02_Learning a ontoksd:CompetenceActivation ;
@@ -27,8 +27,8 @@ ontoksd:CA_Task201_C02_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
-    ontoksd:mediatesCompetence ontoksd:C02 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C02 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C03_Assessment a ontoksd:CompetenceActivation ;
@@ -37,8 +37,8 @@ ontoksd:CA_Task201_C03_Assessment a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Applying ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C03_Learning a ontoksd:CompetenceActivation ;
@@ -47,8 +47,8 @@ ontoksd:CA_Task201_C03_Learning a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Applying ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C04_Assessment a ontoksd:CompetenceActivation ;
@@ -60,8 +60,8 @@ ontoksd:CA_Task201_C04_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConceptual ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task201 ;
     skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
@@ -74,8 +74,8 @@ ontoksd:CA_Task201_C04_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConceptual ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task201 ;
     skos:scopeNote "Analytical/conceptual reuse without a required separate regular-expression artifact. The reference competence pairings are unchanged."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
@@ -87,8 +87,8 @@ ontoksd:CA_Task201_C05_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arTransversal ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C05_Learning a ontoksd:CompetenceActivation ;
@@ -99,8 +99,8 @@ ontoksd:CA_Task201_C05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arTransversal ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C06_Assessment a ontoksd:CompetenceActivation ;
@@ -112,8 +112,8 @@ ontoksd:CA_Task201_C06_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C06 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C06 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C06_Learning a ontoksd:CompetenceActivation ;
@@ -125,8 +125,8 @@ ontoksd:CA_Task201_C06_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C06 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C06 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C11_Assessment a ontoksd:CompetenceActivation ;
@@ -135,8 +135,8 @@ ontoksd:CA_Task201_C11_Assessment a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Analyzing ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical ;
-    ontoksd:mediatesCompetence ontoksd:C11 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C11 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:CA_Task201_C11_Learning a ontoksd:CompetenceActivation ;
@@ -145,8 +145,8 @@ ontoksd:CA_Task201_C11_Learning a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Analyzing ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical ;
-    ontoksd:mediatesCompetence ontoksd:C11 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task201 ;
+    ontoksd:hasActivationCompetence ontoksd:C11 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task201 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task201-DroneMonitoring/TASK201-CSP-Adjustment.md> .
 
 ontoksd:PS_Task201 a ontoksd:ProficiencyScheme ;

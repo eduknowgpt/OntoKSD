@@ -13,8 +13,8 @@ ontoksd:CA_Task402_CM11_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amOperational ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM11 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task402 ;
+    ontoksd:hasActivationCompetence ontoksd:CM11 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task402 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
 
 ontoksd:CA_Task402_CM11_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -27,8 +27,8 @@ ontoksd:CA_Task402_CM11_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amOperational ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM11 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task402 ;
+    ontoksd:hasActivationCompetence ontoksd:CM11 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task402 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
 
 ontoksd:CA_Task402_CM11_Learning_Constraint a ontoksd:ActivationConstraint ;
@@ -41,8 +41,8 @@ ontoksd:CA_Task402_CM18_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amExplanatory ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:CM18 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task402 ;
+    ontoksd:hasActivationCompetence ontoksd:CM18 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task402 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
 
 ontoksd:CA_Task402_CM18_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -55,8 +55,8 @@ ontoksd:CA_Task402_CM18_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amExplanatory ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:CM18 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task402 ;
+    ontoksd:hasActivationCompetence ontoksd:CM18 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task402 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK402-VariablesManipulation/TASK402-CSP-Report.md> .
 
 ontoksd:CA_Task402_CM18_Learning_Constraint a ontoksd:ActivationConstraint ;

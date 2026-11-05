@@ -51,12 +51,12 @@ public class SparqlBatchInserter {
                 // Resolving owl:imports in Protege does not load these files into GraphDB.
                 // If SKOS or RCD is already loaded, comment out its respective call.
                 section("1. Ontology modules and CS2023 Body of Knowledge");
-                loadRdf(connection, "ontoKSDOntology/SKOS.rdf", RDFFormat.RDFXML);
-                loadRdf(connection, "ontoKSDOntology/gufo.ttl", RDFFormat.TURTLE);
-                loadRdf(connection, "rcd/RCD.ttl", RDFFormat.TURTLE);
-                loadRdf(connection, "bloomTaxonomy/bloom-taxonomy.ttl", RDFFormat.TURTLE);
-                loadRdf(connection, "ontoKSDOntology/OntoKSD - SKOS - v7.0.ttl", RDFFormat.TURTLE);
-                loadRdf(connection, "cs2023Vocabulary/BoKCS2023_ontoksd.ttl", RDFFormat.TURTLE);
+                //loadRdf(connection, "ontoKSDOntology/SKOS.rdf", RDFFormat.RDFXML);
+                //loadRdf(connection, "ontoKSDOntology/gufo.ttl", RDFFormat.TURTLE);
+                //loadRdf(connection, "rcd/RCD.ttl", RDFFormat.TURTLE);
+                //loadRdf(connection, "bloomTaxonomy/bloom-taxonomy.ttl", RDFFormat.TURTLE);
+                //loadRdf(connection, "ontoKSDOntology/OntoKSD - SKOS - v7.0.ttl", RDFFormat.TURTLE);
+                //loadRdf(connection, "cs2023Vocabulary/BoKCS2023_ontoksd.ttl", RDFFormat.TURTLE);
 
                 // 2. Populate shared CC2020-oriented vocabularies.
                 section("2. CC2020 vocabularies");
@@ -94,6 +94,13 @@ public class SparqlBatchInserter {
                 executeFile(connection, "competenceInstances/CSP/cycle-02/00 - Cycle02 Sources and Vocabulary.rq");
                 executeDirectory(connection, "competenceInstances/CSP/cycle-02/competencies");
                 executeDirectory(connection, "competenceInstances/CSP/cycle-02/tasks");
+                
+                // Load historical assessment records after cycle-02 planning.
+                executeFile(connection,
+                    "competenceInstances/CSP/cycle-02/assessment-records/task201/task201-records.rq");
+
+                executeFile(connection,
+                    "competenceInstances/CSP/cycle-02/assessment-records/task202/task202-records.rq");                
 
                 section("9. CSP cycle 03");
                 executeFile(connection, "competenceInstances/CSP/cycle-03/00 - Cycle03 Sources and Vocabulary.rq");
@@ -111,8 +118,24 @@ public class SparqlBatchInserter {
 
                 // Optional course/proficiency policy: uncomment BOTH calls if required.
                 // These files are not necessary for the basic CSP instance dataset.
-                // executeFile(connection, "competenceInstances/CSP/cycle-02/cycle-02-operational-layer/second_cycle_shared_proficiency_scheme.rq");
-                // executeFile(connection, "competenceInstances/CSP/cycle-02/cycle-02-operational-layer/task201_204_course_layer.rq");
+                executeFile(connection, "competenceInstances/CSP/cycle-02/cycle-02-operational-layer/second_cycle_shared_proficiency_scheme.rq");
+                executeFile(connection, "competenceInstances/CSP/cycle-02/cycle-02-operational-layer/task201_204_course_layer.rq");
+                
+                
+                executeFile(connection, "proficiency level/01 - ProficiencyLevel.rq");
+                executeFile(connection, "proficiency level/02 - Proficiency_Instances.rq");
+                executeFile(connection, "proficiency level/03 - Gap_Analisys.rq");                
+                
+             // Synthetic prerequisite fixture; not historical CSP data.
+                section("11. Optional CQ11 synthetic prerequisite test");
+                executeFile(connection,
+                    "sparql/CQ/tests/CQ11/01-load-synthetic-data.rq");
+                
+                
+                // Synthetic prerequisite fixture; not historical CSP data.
+                section("12. Optional CQ27 synthetic prerequisite test");
+                executeFile(connection,
+                    "sparql/CQ/tests/CQ27/01-load-synthetic-data.rq");                
 
                 // Do not also load cycleXX-instances.ttl: those files are alternatives
                 // to the cycle update scripts above, not additional instance datasets.

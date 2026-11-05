@@ -11,8 +11,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?competence ?competenceLabel ?competenceActivation ?instructionalUnit ?instructionalUnitLabel ?qualificationProperty ?qualifier ?qualifierLabel ?constraintType ?constraintDescription
 WHERE {
-?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ;
- (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
 { ?competenceActivation ontoksd:hasActivationFunction ?qualifier . BIND(ontoksd:hasActivationFunction AS ?qualificationProperty) }
 UNION { ?competenceActivation ontoksd:hasActivationRole ?qualifier . BIND(ontoksd:hasActivationRole AS ?qualificationProperty) }
 UNION { ?competenceActivation ontoksd:hasActivationMode ?qualifier . BIND(ontoksd:hasActivationMode AS ?qualificationProperty) }

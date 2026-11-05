@@ -15,8 +15,8 @@ ontoksd:CA_Task04_C03 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C03. It indicates that testing automata using simulators is a core and mandatory target of the task."@en ;
     skos:scopeNote "The cited Task04 adjustment explicitly reuses C03 with a PDA simulation target while preserving the C03 reference FSM knowledge pairing. This contextual use does not change C03 or prove that its reference pairing adequately covers PDA-specific simulation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
@@ -32,8 +32,8 @@ ontoksd:CA_Task04_C03_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -48,8 +48,8 @@ ontoksd:CA_Task04_C05 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task04."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -63,8 +63,8 @@ ontoksd:CA_Task04_C05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -80,8 +80,8 @@ ontoksd:CA_Task04_C12 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C12 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C12 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C12. It indicates that developing problem-solving solutions using Pushdown Automata is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -96,8 +96,8 @@ ontoksd:CA_Task04_C12_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C12 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C12 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -113,8 +113,8 @@ ontoksd:CA_Task04_C13 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amInterpretative,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C13 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C13 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C13. It indicates that interpreting rule-based notation is a core and mandatory target because formal notation is explicitly relevant to location-sequence generation and documentation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -129,8 +129,8 @@ ontoksd:CA_Task04_C13_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amInterpretative,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C13 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C13 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -146,8 +146,8 @@ ontoksd:CA_Task04_C14 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C14 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C14 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C14. It indicates that differentiating classifications of formal grammars is a supporting but instructionally relevant target, especially for conceptual comparison among formalisms associated with navigation modeling."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -162,8 +162,8 @@ ontoksd:CA_Task04_C14_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C14 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C14 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 

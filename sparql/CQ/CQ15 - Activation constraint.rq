@@ -1,0 +1,20 @@
+# CQ15: Which constraints, types and descriptions qualify each activation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Missing constraint documentation remains visible; this is retrieval, not a completeness validator.
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?competence ?competenceLabel ?competenceActivation
+ ?instructionalUnit ?instructionalUnitLabel ?constraint ?constraintType ?constraintDescription
+WHERE {
+?competenceActivation a ontoksd:CompetenceActivation ;
+ ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation ontoksd:hasActivationConstraint ?constraint .
+OPTIONAL { ?constraint ontoksd:hasActivationConstraintType ?constraintType . }
+OPTIONAL { ?constraint ontoksd:hasActivationConstraintDescription ?constraintDescription . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+}
+ORDER BY ?competence ?instructionalUnit ?competenceActivation ?constraint

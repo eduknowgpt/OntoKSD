@@ -4,7 +4,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?referenceTask ?unit ?activation ?competence ?role
 WHERE {
  ?activation a ontoksd:CompetenceActivation ;
-  ontoksd:mediatesInstructionalUnit ?unit ; ontoksd:mediatesCompetence ?competence .
+  ontoksd:hasActivationInstructionalUnit ?unit ; ontoksd:hasActivationCompetence ?competence .
  ?competence ontoksd:hasTask ?referenceTask .
  ?unit dcterms:identifier ?unitId .
  ?referenceTask dcterms:identifier ?taskId .

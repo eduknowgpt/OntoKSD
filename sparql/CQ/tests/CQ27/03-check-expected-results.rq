@@ -1,0 +1,33 @@
+# Expected: five rows, all with passed = true.
+# False denotes query non-retrieval, not an OWL negative assertion.
+PREFIX o: <http://purl.org/ontoksd#>
+PREFIX t: <http://purl.org/ontoksd/test/cq27#>
+
+SELECT ?case ?evidencedRecord ?expectedReturned ?actualReturned
+       ?expectedScheme ?actualScheme ?passed
+WHERE {
+ VALUES (?case ?evidencedRecord ?expectedReturned ?expectedScheme) {
+  ("P1 - knowledge with independent interpretation" t:knowledgeJudgment true true)
+  ("P2 - skill with a different interpreted level" t:skillJudgment true true)
+  ("P3 - level present but scheme missing" t:missingSchemeJudgment true false)
+  ("N1 - no level assigned" t:ungradedDispositionJudgment false false)
+  ("N2 - whole-competence record" t:wholeJudgment false false)
+ }
+ BIND(EXISTS {
+  GRAPH <http://purl.org/ontoksd/test/cq27> {
+   ?evidencedRecord a o:EvidencedCompetenceConstituent ;
+     o:refersToCompetenceConstituent ?constituent ;
+     o:hasProficiencyLevel ?level .
+  }
+ } AS ?actualReturned)
+ BIND(EXISTS {
+  GRAPH <http://purl.org/ontoksd/test/cq27> {
+   ?evidencedRecord a o:EvidencedCompetenceConstituent ;
+     o:refersToCompetenceConstituent ?constituent ;
+     o:hasProficiencyLevel ?level ;
+     o:interpretedUsingScheme ?scheme .
+  }
+ } AS ?actualScheme)
+ BIND((?actualReturned = ?expectedReturned && ?actualScheme = ?expectedScheme) AS ?passed)
+}
+ORDER BY ?case

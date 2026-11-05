@@ -11,12 +11,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?competence ?competenceLabel ?reuseContextType ?reuseRelation ?reuseContext ?reuseContextLabel
 WHERE {
-{ { SELECT ?competence WHERE { ?a ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?unit) > 1) } } UNION { SELECT ?competence WHERE { ?spec ontoksd:mediatesCourseCompetence ?competence ; ontoksd:mediatesCourse ?course . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?course) > 1) }
-{ ?reuseRelation ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?reuseContext . BIND("InstructionalUnit" AS ?reuseContextType) }
+{ { SELECT ?competence WHERE { ?a ontoksd:hasActivationCompetence ?competence ; (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?unit) > 1) } } UNION { SELECT ?competence WHERE { ?spec ontoksd:hasSpecifiedCompetence ?competence ; ontoksd:hasSpecifiedCourse ?course . } GROUP BY ?competence HAVING(COUNT(DISTINCT ?course) > 1) }
+{ ?reuseRelation ontoksd:hasActivationCompetence ?competence ; (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?reuseContext . BIND("InstructionalUnit" AS ?reuseContextType) }
 UNION
-{ ?reuseRelation ontoksd:mediatesCourseCompetence ?competence ; ontoksd:mediatesCourse ?reuseContext . BIND("Course" AS ?reuseContextType) }
+{ ?reuseRelation ontoksd:hasSpecifiedCompetence ?competence ; ontoksd:hasSpecifiedCourse ?reuseContext . BIND("Course" AS ?reuseContextType) }
 UNION
-{ ?reuseRelation ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . ?unit (ontoksd:hasAcquisitionContext|^ontoksd:isAcquisitionContextOf) ?reuseContext . BIND("AcquisitionContext" AS ?reuseContextType) }
+{ ?reuseRelation ontoksd:hasActivationCompetence ?competence ; (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?unit . ?unit (ontoksd:hasAcquisitionContext|^ontoksd:isAcquisitionContextOf) ?reuseContext . BIND("AcquisitionContext" AS ?reuseContextType) }
 OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
 OPTIONAL { ?reuseContext (rdfs:label|skos:prefLabel|dcterms:title) ?reuseContextLabel . }
 }

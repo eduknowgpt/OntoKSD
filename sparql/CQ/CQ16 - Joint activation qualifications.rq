@@ -1,0 +1,26 @@
+# CQ16: Which function, roles, modes and constraints qualify the same activation?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: Optional qualifiers preserve incomplete activations; multi-valued qualifiers produce combinations, not independent activation counts.
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?competence ?competenceLabel ?competenceActivation
+ ?instructionalUnit ?instructionalUnitLabel ?function ?role ?mode
+ ?constraint ?constraintType ?constraintDescription
+WHERE {
+?competenceActivation a ontoksd:CompetenceActivation ;
+ ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+OPTIONAL { ?competenceActivation ontoksd:hasActivationFunction ?function . }
+OPTIONAL { ?competenceActivation ontoksd:hasActivationRole ?role . }
+OPTIONAL { ?competenceActivation ontoksd:hasActivationMode ?mode . }
+OPTIONAL {
+ ?competenceActivation ontoksd:hasActivationConstraint ?constraint .
+ OPTIONAL { ?constraint ontoksd:hasActivationConstraintType ?constraintType . }
+ OPTIONAL { ?constraint ontoksd:hasActivationConstraintDescription ?constraintDescription . }
+}
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+}
+ORDER BY ?competence ?instructionalUnit ?competenceActivation ?role ?mode ?constraint

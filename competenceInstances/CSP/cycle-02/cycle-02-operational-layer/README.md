@@ -12,7 +12,7 @@ They are optional additions. In a dataset where they are loaded, the curricular 
 | `second_cycle_shared_proficiency_scheme.rq` | Defines the operational 0–10 Scale, three ProficiencyLevels and three ScaleIntervals, and identifies the planned shared scheme for the four Assessments. |
 | `cycle02-operational-layer.ttl` | The same optional instance layer in Turtle, for loading with the corrected datasets and schema. |
 
-`policy.json` summarizes the assumptions and fingerprints the supplied input files. `validation.json` records the checks. The `queries/` directory contains four usage queries; no learner data or CSP source documents are bundled.
+`POLICY.md` summarizes the assumptions and fingerprints the supplied input files. `VALIDATION.md` records the checks. The `queries/` directory contains four usage queries; no learner data or CSP source documents are bundled.
 
 ## Curricular expectations
 
@@ -26,8 +26,8 @@ Its eight selected instructional units are `LT_Task201` through `LT_Task204` and
 
 The 15 CourseCompetenceSpecification IRIs from the supplied course-layer file are retained. Each record identifies:
 
-- exactly one course through `mediatesCourse`;
-- exactly one of the current cycle-02 competences through `mediatesCourseCompetence`;
+- exactly one course through `hasSpecifiedCourse`;
+- exactly one of the current cycle-02 competences through `hasSpecifiedCompetence`;
 - `isMandatory true`;
 - `requiresMinimumProficiencyLevel SecondCycle_CompetentLevel`;
 - the applicable `SecondCycle_ProficiencyScheme` through `dcterms:references`.

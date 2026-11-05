@@ -1,0 +1,119 @@
+# Synthetic CQ27 fixture. No CSP-derived or real learner observations.
+# Load the current OntoKSD separately. No other example files are required.
+PREFIX o: <http://purl.org/ontoksd#>
+PREFIX t: <http://purl.org/ontoksd/test/cq27#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+ GRAPH <http://purl.org/ontoksd/test/cq27> {
+  <http://purl.org/ontoksd/test/cq27>
+    dcterms:title "CQ27 — proficiência de constituintes: cenário sintético"@pt ;
+    dcterms:description "Exemplo artificial com critérios específicos, dois julgamentos interpretados e controles de informação ausente. Não representa avaliações reais ou resultados do CSP."@pt .
+
+  # A qualitative scheme: no score, scale or numeric interval is needed.
+  t:scheme a o:ProficiencyScheme ;
+    rdfs:label "Esquema qualitativo sintético de desempenho em AFD"@pt ;
+    o:definesLevel t:emerging, t:developing, t:consolidated ;
+    dcterms:references t:knowledgeRubric, t:skillRubric ;
+    dcterms:description "Categorias locais interpretadas pelos descritores específicos de cada constituinte. As posições expressam ordem, não distância nem equivalência com outros esquemas."@pt .
+  t:emerging a o:ProficiencyLevel ;
+    rdfs:label "Inicial"@pt ; o:hasOrdinalPosition "1"^^xsd:int ;
+    o:levelDefinedInScheme t:scheme .
+  t:developing a o:ProficiencyLevel ;
+    rdfs:label "Em desenvolvimento"@pt ; o:hasOrdinalPosition "2"^^xsd:int ;
+    o:levelDefinedInScheme t:scheme .
+  t:consolidated a o:ProficiencyLevel ;
+    rdfs:label "Consolidado"@pt ; o:hasOrdinalPosition "3"^^xsd:int ;
+    o:levelDefinedInScheme t:scheme .
+
+  # Criteria are documents, not newly introduced ontology properties/classes.
+  t:knowledgeRubric a o:Document ;
+    rdfs:label "Rubrica sintética — conceitos de AFD"@pt ;
+    dcterms:description "Inicial: confunde elementos essenciais do AFD. Em desenvolvimento: identifica estados, alfabeto, transições e estados inicial e finais, mas explica parcialmente o reconhecimento. Consolidado: identifica corretamente esses elementos e explica o reconhecimento, incluindo um exemplo de aceitação e outro de rejeição. Aplicar apenas à resposta conceitual deste cenário."@pt .
+  t:skillRubric a o:Document ;
+    rdfs:label "Rubrica sintética — construção de AFD"@pt ;
+    dcterms:description "Inicial: a solução não define adequadamente estados e transições. Em desenvolvimento: constrói um AFD funcional para casos usuais, mas falha em pelo menos um caso-limite solicitado. Consolidado: constrói uma solução correta para a especificação e justifica os testes, incluindo cadeia vazia e entradas rejeitadas. Aplicar apenas ao exercício de construção deste cenário."@pt .
+
+  t:competence a o:Competence ;
+    rdfs:label "Especificar e construir AFD — exemplo sintético"@pt ;
+    o:hasKnowledge t:knowledge ; o:hasSkill t:skill ; o:hasDisposition t:disposition .
+  t:knowledge a o:Knowledge ; rdfs:label "Conceitos de autômatos finitos determinísticos"@pt .
+  t:skill a o:Skill ; rdfs:label "Construir autômatos finitos determinísticos"@pt .
+  t:disposition a o:Disposition ; rdfs:label "Revisar cuidadosamente a solução produzida"@pt .
+
+  t:assessment a o:Assessment ;
+    rdfs:label "Avaliação sintética de conceitos e construção de AFD"@pt ;
+    o:hasInstructionalStatement "Explicar os elementos de um AFD e construir um autômato para a linguagem indicada, testando casos usuais e casos-limite."@pt ;
+    o:hasAcquisitionContext t:context ; o:usesResource t:rubricResource .
+  t:rubricResource a o:EducationalResource ;
+    rdfs:label "Orientações e rubricas do exercício sintético"@pt ;
+    dcterms:references t:knowledgeRubric, t:skillRubric .
+  t:context a o:AcquisitionContext ; rdfs:label "Situação avaliativa fictícia de AFD"@pt .
+  t:occurrence a o:AssessmentOccurrence ;
+    rdfs:label "Ocorrência fictícia da avaliação de AFD"@pt ;
+    o:realizes t:assessment ; o:occursInAcquisitionContext t:context ;
+    o:involvesAssessmentParticipation t:participation ; o:producesEvidence t:evidence .
+  t:learner a o:Learner ; rdfs:label "Aprendiz fictício CQ27"@pt ; o:hasProfile t:profile .
+  t:assessor a o:Assessor ; rdfs:label "Avaliador fictício CQ27"@pt .
+  t:profile a o:Profile ; o:isProfileOf t:learner ; o:hasEvidencedCompetence t:wholeJudgment .
+  t:participation a o:AssessmentParticipation ;
+    o:hasLearner t:learner ; o:hasAssessor t:assessor ;
+    o:occursInAssessmentOccurrence t:occurrence .
+  t:response a o:Document ;
+    rdfs:label "Resposta artificial ao exercício de AFD"@pt ;
+    dcterms:description "Resposta fabricada: identifica os cinco elementos e explica aceitação e rejeição corretamente; o autômato construído resolve casos usuais, mas trata incorretamente a cadeia vazia. Não há observação suficiente para interpretar a disposição de revisão cuidadosa."@pt .
+  t:evidence a o:Evidence ;
+    rdfs:label "Material de resposta sintético CQ27"@pt ;
+    o:evidenceBasedOn t:occurrence ; o:hasSupportDocument t:response ;
+    o:hasContext t:context ;
+    o:generatedAt "2026-01-20T10:00:00Z"^^xsd:dateTime .
+
+  # P1: constituent-specific interpretation; not copied from an overall score.
+  t:knowledgeJudgment a o:EvidencedCompetenceConstituent ;
+    rdfs:label "Julgamento conceitual — consolidado"@pt ;
+    o:refersToCompetenceConstituent t:knowledge ;
+    o:derivedFromParticipation t:participation ; o:supportedByEvidence t:evidence ;
+    o:hasContext t:context ; o:hasProficiencyLevel t:consolidated ;
+    o:interpretedUsingScheme t:scheme ;
+    o:evidencedAt "2026-01-20T12:00:00Z"^^xsd:dateTime ;
+    dcterms:references t:knowledgeRubric ;
+    dcterms:description "Interpretação sintética: identifica os cinco elementos e explica exemplos de aceitação e rejeição, atendendo ao descritor Consolidado da rubrica conceitual."@pt .
+  # P2: the same evidence supports a DIFFERENT level for a different constituent.
+  t:skillJudgment a o:EvidencedCompetenceConstituent ;
+    rdfs:label "Julgamento da construção — em desenvolvimento"@pt ;
+    o:refersToCompetenceConstituent t:skill ;
+    o:derivedFromParticipation t:participation ; o:supportedByEvidence t:evidence ;
+    o:hasContext t:context ; o:hasProficiencyLevel t:developing ;
+    o:interpretedUsingScheme t:scheme ;
+    o:evidencedAt "2026-01-20T12:00:00Z"^^xsd:dateTime ;
+    dcterms:references t:skillRubric ;
+    dcterms:description "Interpretação sintética: solução funcional para casos usuais, mas incorreta para a cadeia vazia, correspondendo a Em desenvolvimento na rubrica de construção."@pt .
+
+  # P3: intentionally incomplete control. CQ27 must return it with scheme unbound.
+  # Its level must not be treated as a justified, comparable interpretation.
+  t:missingSchemeJudgment a o:EvidencedCompetenceConstituent ;
+    rdfs:label "Controle incompleto — nível sem esquema no registro"@pt ;
+    o:refersToCompetenceConstituent t:knowledge ;
+    o:derivedFromParticipation t:participation ; o:supportedByEvidence t:evidence ;
+    o:hasProficiencyLevel t:emerging ;
+    dcterms:description "Registro de controle propositalmente incompleto, independente do julgamento conceitual principal. O nível foi incluído somente para testar a coluna opcional de esquema. Não é uma segunda conclusão avaliativa justificada."@pt .
+
+  # N1: no level. This record must not be returned or assigned zero proficiency.
+  t:ungradedDispositionJudgment a o:EvidencedCompetenceConstituent ;
+    rdfs:label "Registro de disposição sem atribuição de nível"@pt ;
+    o:refersToCompetenceConstituent t:disposition ;
+    o:derivedFromParticipation t:participation ; o:supportedByEvidence t:evidence ;
+    dcterms:description "Registro mantido para controle de completude: o material não sustenta uma interpretação do grau da disposição. Nenhum nível nem demonstração conclusiva é atribuído."@pt .
+
+  # N2: whole-competence control. It must not be returned by CQ27.
+  # Its isolated level is NOT a holistic assessment conclusion or aggregation rule.
+  t:wholeJudgment a o:EvidencedCompetence ;
+    rdfs:label "Controle de tipagem — registro de competência completa"@pt ;
+    o:refersToCompetence t:competence ; o:isEvidencedCompetenceOf t:profile ;
+    o:derivedFromParticipation t:participation ; o:supportedByEvidence t:evidence ;
+    o:hasProficiencyLevel t:consolidated ; o:interpretedUsingScheme t:scheme ;
+    dcterms:description "Registro artificial de controle, com nível arbitrado apenas para testar a exclusão de EvidencedCompetence. Não representa síntese dos constituintes nem conclusão holística validada. Não usar em análises de aprendizagem."@pt .
+ }
+}

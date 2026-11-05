@@ -15,8 +15,8 @@ ontoksd:CA_Task03_C03 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C03. It indicates that testing automata using simulators is a core and mandatory target of the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -31,8 +31,8 @@ ontoksd:CA_Task03_C03_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -48,8 +48,8 @@ ontoksd:CA_Task03_C04 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amConstructive,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C04. It indicates that defining regular expressions for finite automata is a core and mandatory target in this task because regular-expression formulation is part of the expected deliverables and documentation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -64,8 +64,8 @@ ontoksd:CA_Task03_C04_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amConstructive,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -80,8 +80,8 @@ ontoksd:CA_Task03_C05 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task03."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -95,8 +95,8 @@ ontoksd:CA_Task03_C05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -112,8 +112,8 @@ ontoksd:CA_Task03_C06 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C06 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C06 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C06. It indicates that developing problem-solving solutions using Finite State Machines is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -128,8 +128,8 @@ ontoksd:CA_Task03_C06_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C06 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C06 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -145,8 +145,8 @@ ontoksd:CA_Task03_C11 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C11 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C11 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C11. It indicates that identifying patterns in Finite State Machines is a supporting but instructionally relevant target, especially for structural analysis, optimization, and budgeting interpretation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -161,8 +161,8 @@ ontoksd:CA_Task03_C11_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C11 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C11 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 

@@ -1,0 +1,5 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?participation ?learner ?score ?source ?sourceIdentifier WHERE { ?participation a ontoksd:AssessmentParticipation ; ontoksd:hasLearner ?learner ; ontoksd:hasScore ?score ; prov:wasDerivedFrom ?source . ?source a ontoksd:Document ; dcterms:identifier ?sourceIdentifier . } ORDER BY ?learner ?participation

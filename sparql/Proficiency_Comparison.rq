@@ -13,7 +13,7 @@ WHERE {
 VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
 ?profile a ontoksd:Profile .
 ?courseSpecification a ontoksd:CourseCompetenceSpecification ;
- ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence ;
+ ontoksd:hasSpecifiedCourse ?course ; ontoksd:hasSpecifiedCompetence ?competence ;
  ontoksd:isMandatory true ; ontoksd:requiresMinimumProficiencyLevel ?requiredLevel ;
  dcterms:references ?proficiencyScheme .
 ?proficiencyScheme a ontoksd:ProficiencyScheme ; ontoksd:definesLevel ?requiredLevel .

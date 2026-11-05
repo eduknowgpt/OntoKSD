@@ -2,7 +2,7 @@
 
 This package represents the reviewed results of [CSP cycle 02](https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02) in OntoKSD. The source problems, specification reports, expert reviews and adjustments remain in the CSP repository; they are **not bundled** in this package.
 
-The dataset is incremental: it introduces **C13.01, C15 and C16**, reuses the cycle-01 competence identities, and represents Task201–Task204 and their adjusted associations. It records expected instruction and assessment, not observed learner performance.
+The dataset is incremental: it introduces **C13.01, C15 and C16**, reuses the cycle-01 competence identities, and represents Task201–Task204 and their adjusted associations. The base dataset records expected instruction and assessment. The optional historical Task201/Task202 assessment layer is described separately below.
 
 ## Coverage
 
@@ -13,7 +13,7 @@ The dataset is incremental: it introduces **C13.01, C15 and C16**, reuses the cy
 | Task203 | Parking Control | C07, C08, C09, C10, C05 |
 | Task204 | Online Judges at Logistic Solutions | C06, C02, C03, C14, C05, C15, C16 |
 
-There are 23 current task–competence associations: three creations and 20 reuses. They involve 15 active competence identities. C13 is retained as the historical base of C13.01, without becoming an additional current Task202 target. The package contains four reference Tasks, four LearningTasks, four Assessments and 46 activation records: one instructional and one assessment association for every current task–competence pair.
+There are 23 current task–competence associations: three creations and 20 reuses. They involve 15 active competence identities. C13 is retained as the historical base of C13.01, without becoming an additional current Task202 target. The base planning graph contains four reference Tasks, four LearningTasks, four Assessments and 46 activation records: one instructional and one assessment association for every current task–competence pair.
 
 ## Files
 
@@ -21,7 +21,7 @@ There are 23 current task–competence associations: three creations and 20 reus
 - `competencies/C13.01.rq`, `C15.rq`, `C16.rq`: the three new specifications and their ten knowledge–level pairings.
 - `tasks/TASK201.rq` through `TASK204.rq`: reference tasks, instructional requirements, assessment plans, acquisition contexts, activations and qualifications.
 - `cycle02-instances.ttl`: the same incremental instance graph, ready for loading with the schema and dependencies.
-- `REVISAO.md`: modeling decisions and source limitations requiring attention.
+- `assessment-records/`: historical Task201 and Task202 records, source limitations, queries and validation results.
 
 ## New competence specifications
 
@@ -106,9 +106,9 @@ The initial C13–Task202 association is retained as documentary provenance. It 
 
 ## Proficiency and assessment scope
 
-Only Task201 has an explicitly documented proficiency scheme: Novice `[0,5]`, Competent `(5,9]`, and Advanced `(9,10]`. Scale bounds use `xsd:decimal`. No numeric step is invented, and the scheme is not copied to the other three tasks.
+The CSP planning report documents a Task201 proficiency scheme: Novice `[0,5]`, Competent `(5,9]`, and Advanced `(9,10]`. Scale bounds use `xsd:decimal`. No numeric step is invented, and the scheme is not copied to the other three tasks.
 
-The Assessment refers documentarily to this planned scheme. `usesProficiencyScheme` is not applied to Assessment because its domain is AssessmentOccurrence. No assessment occurrence, participation, learner score, produced Evidence or individual competence judgment is created.
+The Assessment refers documentarily to this planned scheme. `usesProficiencyScheme` is not applied to Assessment because its domain is AssessmentOccurrence. The base planning dataset creates no assessment occurrence, participation, learner score, produced Evidence or individual competence judgment. The optional historical Task201/Task202 layer adds sourced assessment records without automatic competence judgments.
 
 ## Loading
 
@@ -118,7 +118,7 @@ The Assessment refers documentarily to this planned scheme. `usesProficiencySche
 
 The `.rq` files are SPARQL Update operations, not Turtle ontologies. All use `INSERT DATA`; re-execution is idempotent and final content is independent of insertion order. The combined Turtle contains only the cycle-02 increment, so it does not replace the schema, cycle-01 instances or vocabulary dependencies.
 
-## Validation
+## Planning-dataset validation
 
 The dataset passed **1,521 automated checks**. All six supplied queries were executed, including 23 current associations, 26 pairing–verb links, six admissible qualifier values and no specialization cycles.
 
@@ -129,3 +129,9 @@ OWL RL inference is checked together with the corrected cycle-01 dependency. It 
 ## CSP reference
 
 The authoritative process documentation is maintained in [CSP cycle 02](https://github.com/eduknowgpt/OCSP/tree/main/CSP/cycles/cycle-02). File references use the actual names present in the supplied archive, including `TASK202-CSP-Adustments.md` and `TASK204-CSRP-Report.md`; shorter path aliases found in the source CSVs are not blindly used as file URLs.
+
+## Historical assessment records
+
+The [historical layer](assessment-records/README.md) complements planning with Task201 and Task202 records from the revised MATC94 source collection. Task202 is the principal documentary example. Process, product and final-result consolidation use separate participation records and official decimal scores. The Task201 questionnaire references cover all 27 located submissions; Task202 has 25 references, of which 24 are linked to learners. Two unmatched administrative zero results and one questionnaire identity linkage remain explicit pending items.
+
+After the base graph, load `assessment-records/cycle02-historical-assessments.ttl`, or use the individual task files as described in the historical README. This layer does not automatically create competence judgments or apply proficiency categories. The earlier base-validation counts above concern planning; the historical layer has its own executed checks and query expectations in `assessment-records/VALIDATION.md`.

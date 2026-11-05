@@ -1,0 +1,5 @@
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?occurrence ?participation ?assessor WHERE { ?participation ontoksd:occursInAssessmentOccurrence ?occurrence ; ontoksd:hasAssessor ?assessor . VALUES ?occurrence { ontoksd:Task201_ProcessAssessmentOccurrence ontoksd:Task201_ProductAssessmentOccurrence ontoksd:Task202_ProcessAssessmentOccurrence ontoksd:Task202_ProductAssessmentOccurrence } } ORDER BY ?occurrence ?participation ?assessor

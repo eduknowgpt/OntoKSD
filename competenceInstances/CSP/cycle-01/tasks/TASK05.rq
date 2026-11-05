@@ -14,8 +14,8 @@ ontoksd:CA_Task05_C05 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task05."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -29,8 +29,8 @@ ontoksd:CA_Task05_C05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -46,8 +46,8 @@ ontoksd:CA_Task05_C07_01 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C07_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C07_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C07.01. It indicates that developing integrated multi-agent solutions using Turing Machines is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -62,8 +62,8 @@ ontoksd:CA_Task05_C07_01_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C07_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C07_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -79,8 +79,8 @@ ontoksd:CA_Task05_C08_01 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C08_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C08_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C08.01. It indicates that analyzing the system-level adequacy of Turing Machine variants is a supporting but mandatory target for informed design decisions in the integrated architecture."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -95,8 +95,8 @@ ontoksd:CA_Task05_C08_01_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C08_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C08_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -112,8 +112,8 @@ ontoksd:CA_Task05_C09_01 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C09_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C09_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C09.01. It indicates that applying and coordinating Turing Machine variants in integrated architectures is a core and mandatory target in the architectural configuration of the system."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -128,8 +128,8 @@ ontoksd:CA_Task05_C09_01_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C09_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C09_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -145,8 +145,8 @@ ontoksd:CA_Task05_C10 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C10 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C10 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C10. It indicates that testing Turing Machines using simulators is a core and mandatory target of the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -161,8 +161,8 @@ ontoksd:CA_Task05_C10_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C10 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
+    ontoksd:hasActivationCompetence ontoksd:C10 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 

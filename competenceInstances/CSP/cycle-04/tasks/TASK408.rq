@@ -23,8 +23,8 @@ ontoksd:CA_Task408_CM14_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amExplanatory ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM14 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task408 ;
+    ontoksd:hasActivationCompetence ontoksd:CM14 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task408 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md> .
 
 ontoksd:CA_Task408_CM14_Assessment_Constraint a ontoksd:ActivationConstraint ;
@@ -37,8 +37,8 @@ ontoksd:CA_Task408_CM14_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amExplanatory ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:CM14 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task408 ;
+    ontoksd:hasActivationCompetence ontoksd:CM14 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task408 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-04/en/TASK408-IF-ELSE/TASK408-CSP-Report.md> .
 
 ontoksd:CA_Task408_CM14_Learning_Constraint a ontoksd:ActivationConstraint ;

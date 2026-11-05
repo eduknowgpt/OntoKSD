@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?profile ?profileLabel ?learningNeed ?learningNeedLabel ?competence ?competenceLabel ?courseSpecification ?course ?evidencedCompetence ?currentLevel ?requiredLevel ?proficiencyScheme
 WHERE {
 ?learningNeed a ontoksd:LearningNeed ; (ontoksd:identifiedIn|^ontoksd:hasLearningNeed) ?profile ; ontoksd:targetsCompetence ?competence .
-OPTIONAL { ?learningNeed dcterms:references ?courseSpecification . ?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourse ?course .
+OPTIONAL { ?learningNeed dcterms:references ?courseSpecification . ?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:hasSpecifiedCourse ?course .
  OPTIONAL { ?courseSpecification ontoksd:requiresMinimumProficiencyLevel ?requiredLevel . } }
 OPTIONAL { ?learningNeed dcterms:references ?evidencedCompetence . ?evidencedCompetence a ontoksd:EvidencedCompetence ; ontoksd:refersToCompetence ?competence .
  OPTIONAL { ?evidencedCompetence ontoksd:hasProficiencyLevel ?currentLevel . }

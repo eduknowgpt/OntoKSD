@@ -21,8 +21,8 @@ ontoksd:CA_Task202_C03_Assessment a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Applying ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task202 ;
     skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
@@ -32,8 +32,8 @@ ontoksd:CA_Task202_C03_Learning a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Applying ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task202 ;
     skos:scopeNote "The source reuses C03 with a PDA simulation target while the inherited reference pairing remains FSM-based. This contextual decision does not establish complete PDA-specific coverage by that pairing."@en ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
@@ -43,8 +43,8 @@ ontoksd:CA_Task202_C05_Assessment a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Applying ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationRole ontoksd:arTransversal ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C05_Learning a ontoksd:CompetenceActivation ;
@@ -53,8 +53,8 @@ ontoksd:CA_Task202_C05_Learning a ontoksd:CompetenceActivation ;
     dcterms:references bloom:Applying ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationRole ontoksd:arTransversal ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C12_Assessment a ontoksd:CompetenceActivation ;
@@ -65,8 +65,8 @@ ontoksd:CA_Task202_C12_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C12 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C12 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C12_Learning a ontoksd:CompetenceActivation ;
@@ -77,8 +77,8 @@ ontoksd:CA_Task202_C12_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C12 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C12 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C13_01_Assessment a ontoksd:CompetenceActivation ;
@@ -89,8 +89,8 @@ ontoksd:CA_Task202_C13_01_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
-    ontoksd:mediatesCompetence ontoksd:C13_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C13_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C13_01_Learning a ontoksd:CompetenceActivation ;
@@ -101,8 +101,8 @@ ontoksd:CA_Task202_C13_01_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amInterpretative ;
-    ontoksd:mediatesCompetence ontoksd:C13_01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C13_01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C14_Assessment a ontoksd:CompetenceActivation ;
@@ -112,8 +112,8 @@ ontoksd:CA_Task202_C14_Assessment a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
-    ontoksd:mediatesCompetence ontoksd:C14 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C14 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:CA_Task202_C14_Learning a ontoksd:CompetenceActivation ;
@@ -123,8 +123,8 @@ ontoksd:CA_Task202_C14_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
-    ontoksd:mediatesCompetence ontoksd:C14 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task202 ;
+    ontoksd:hasActivationCompetence ontoksd:C14 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task202 ;
     prov:wasDerivedFrom <https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-CSP-Adustments.md> .
 
 ontoksd:TA_Task202_document a ontoksd:TaskActivity ;

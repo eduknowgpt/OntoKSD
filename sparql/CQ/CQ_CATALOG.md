@@ -1,6 +1,6 @@
 # OntoKSD competency questions
 
-This catalog helps readers select a competency question, understand its answer and identify the data needed to run it. Queries are grouped by educational purpose rather than by implementation details.
+This catalog helps readers select a competency question, understand its answer and identify the data needed to run it. Queries are grouped by educational purpose. The collection has 42 historical families and 58 files (57 SELECTs and one optional UPDATE). IDs are stable family/view identifiers, not a count of independent tests. See [identifier map](CQ_NUMBERING.md).
 
 ## Using the catalog
 
@@ -16,7 +16,7 @@ A row is not necessarily an entity count: multiple labels, verbs, modes, evidenc
 
 CQ1 and CQ2 use `ontoksd:C02` as the example competence. Change that IRI to select another competence. CQ3 lists all pairings by default; add `VALUES ?knowledgeSkill` to select one.
 
-CQ39a, CQ39b, CQ40a–CQ40d, CQ42b and CQ42c require an explicit profile/course pair. Replace `ontoksd:Profile_Example` and `ontoksd:Course_Example` with the intended identifiers. The selection does not assert enrollment or the applicability of every course to every profile.
+CQ39a, CQ39b, CQ40a–CQ40d, CQ42b and CQ42c require an explicit profile/course pair. Their executable default is `ontoksd:Profile_Learner_01` and `ontoksd:Course_FormalLanguages`, from the synthetic proficiency example. Replace both IRIs for another case. The selection does not assert enrollment or the applicability of every course to every profile.
 
 ### Interpreting a proficiency comparison
 
@@ -86,7 +86,7 @@ The expected scheme is identified through `dcterms:references` on the course spe
 
 **Returns:** Direct whole/component relationships in both directions and the available integration description.
 
-**Interpretation:** Both directions are normalized without inverse materialization. Composition is irreflexive (no own part), asymmetric (no reciprocal part links), and non-transitive (direct parts only); longer cycles need separate checks.
+**Interpretation:** Both directions are normalized without inverse materialization. Composition is irreflexive because no competence is its own component, and asymmetric because a direct component cannot reciprocally contain its whole. Transitivity is not declared because the relation identifies direct components; longer cycles need separate checks.
 
 [Open CQ6](CQ6%20-%20Competence%20composition.rq)
 
@@ -96,7 +96,7 @@ The expected scheme is identified through `dcterms:references` on the course spe
 
 **Returns:** Direct narrower/base relationships in both directions and the available scope description.
 
-**Interpretation:** Irreflexive means no self-specialization; asymmetric means the base is not reciprocally narrower. Non-transitivity preserves direct bases. No prerequisite, subclass inheritance or composition is implied.
+**Interpretation:** Irreflexive means no self-specialization; asymmetric means the base is not reciprocally narrower. Transitivity is not declared because the property records direct bases. No prerequisite, subclass inheritance or composition is implied.
 
 [Open CQ7](CQ7%20-%20Competence%20semantic%20relations.rq)
 
@@ -161,6 +161,46 @@ The expected scheme is identified through `dcterms:references` on the course spe
 **Interpretation:** Modes may coexist and do not redefine the competence.
 
 [Open CQ13](CQ13%20-%20Activation%20mode.rq)
+
+### CQ14 — Activation role
+
+**Question:** Which roles qualify each competence activation?
+
+**Returns:** Competence, instructional unit, activation and role, with available labels.
+
+**Interpretation:** A supporting role does not imply prerequisiteFunction.
+
+[Open CQ14](CQ14%20-%20Activation%20role.rq)
+
+### CQ15 — Activation constraint
+
+**Question:** Which constraint types and descriptions qualify each activation?
+
+**Returns:** The activation, constraint, type and language-tagged description when recorded.
+
+**Interpretation:** Missing fields remain visible; this is not a cardinality validation.
+
+[Open CQ15](CQ15%20-%20Activation%20constraint.rq)
+
+### CQ16 — Joint activation qualifications
+
+**Question:** Which function, roles, modes and constraints qualify the same activation?
+
+**Returns:** A joint view retaining the activation identifier, including incomplete qualification.
+
+**Interpretation:** Multi-valued qualifiers can produce combinations; count distinct activations rather than rows.
+
+[Open CQ16](CQ16%20-%20Joint%20activation%20qualifications.rq)
+
+### CQ17 — Instructional conditions and statements
+
+**Question:** Which statements, collaboration settings and planned acquisition contexts describe instructional units?
+
+**Returns:** Units, independent statements, team setting, context and any competence activation.
+
+**Interpretation:** Units remain retrievable without activation. Actual occurrence contexts are handled by CQ20c/CQ20c2; subclass recognition requires the class hierarchy or appropriate inference.
+
+[Open CQ17](CQ17%20-%20Instructional%20conditions%20and%20statements.rq)
 
 ### CQ33 — Competence instructional associations
 
@@ -598,3 +638,15 @@ The expected scheme is identified through `dcterms:references` on the course spe
 | Find any curricular inclusion with no judgment | CQ42c |
 
 Equivalent or complementary views support different reading tasks; they do not constitute independent proof that additional functional requirements have been satisfied. For reproducible experiments, retain the query parameters, dataset and inference configuration together with the result.
+
+## Data for reproducible examples
+
+- Load the current ontology and the three scripts in `../../proficiency level` in order: vocabulary, example judgments, then the example gap policy. They modify the demonstration dataset; the CQs remain read-only except CQ39b.
+- [CQ11 synthetic test](tests/CQ11/README.md): prerequisite activation, not observed in the CSP cycles. Expected three associations.
+- [CQ27 synthetic test](tests/CQ27/README.md): constituent-specific rubric interpretations. Expected three records, including one intentionally missing a scheme.
+- The proficiency example has no constituent levels: CQ27 is empty there by design. CQ40a/CQ42c are empty when every included competence already has a judgment. Such absence checks need an appropriate missing-record case for a positive test.
+- CQ40d stays disabled: a whole-competence minimum is not automatically a minimum for each constituent.
+
+For the parameterized proficiency example, CQ39a/CQ40b/CQ42b describe the same comparison: Proficient (3) below Advanced (4), subject to the temporal and ambiguity checks. The example's KnowledgeSkill pairing has no separate constituent judgment, so CQ40c can expose that missing record. This does not mean that its nested knowledge element lacks evidence.
+
+See [usage](README.md) for dataset selection and [local validation](validation/README.md) for the precise limits of testing. Reader-facing questions remain separate from [revision decisions](DECISIONS.pt.md).

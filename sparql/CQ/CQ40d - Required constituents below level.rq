@@ -2,7 +2,8 @@
 # Operation: SELECT. Target: GraphDB / SPARQL 1.1.
 # Scope: Default result is empty by design. Setting the policy flag to true is an external analytical assumption, not an OntoKSD axiom; no constituent-specific curricular minimum exists in the current model.
 # Blank labels do not imply missing entities; multiple languages may produce multiple rows.
-# Parameters: replace Profile_Example and Course_Example; no enrollment is inferred.
+# Parameters: default is the synthetic proficiency example (Profile_Learner_01, Course_FormalLanguages).
+# Replace both IRIs for another case. The selection does not assert enrollment.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -15,10 +16,10 @@ WHERE {
 # Disabled by default: the ontology does not assign the competence threshold to every constituent.
 VALUES ?applyWholeCompetenceThresholdToConstituents { false }
 FILTER(?applyWholeCompetenceThresholdToConstituents = true)
-VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
+VALUES (?profile ?course) { (ontoksd:Profile_Learner_01 ontoksd:Course_FormalLanguages) }
 ?profile a ontoksd:Profile .
 ?courseSpecification a ontoksd:CourseCompetenceSpecification ;
- ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence ;
+ ontoksd:hasSpecifiedCourse ?course ; ontoksd:hasSpecifiedCompetence ?competence ;
  ontoksd:isMandatory true ; ontoksd:requiresMinimumProficiencyLevel ?requiredLevel ;
  dcterms:references ?proficiencyScheme .
 ?proficiencyScheme a ontoksd:ProficiencyScheme ; ontoksd:definesLevel ?requiredLevel .

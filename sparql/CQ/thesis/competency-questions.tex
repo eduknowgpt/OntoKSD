@@ -1,0 +1,344 @@
+\section{Competency Questions and Query-Based Evaluation}
+\label{sec:ontoksd-competency-questions}
+
+OntoKSD is examined through competency questions concerning competence
+specifications, instructional use, assessment provenance, evidence,
+proficiency interpretation, and learner-related records. The questions
+make these information needs testable through identified SPARQL
+operations. Their execution examines whether the represented information
+can be retrieved under specified conditions; it does not, by itself,
+establish the educational validity of a competence or an assessment
+judgment.
+
+The revised collection distinguishes \emph{conceptual question families}
+from \emph{executable query views}. It retains 42 historical families,
+identified as CQ1--CQ42, implemented by 58 root-level query files:
+57 read-only \texttt{SELECT} queries and one optional update, CQ39b.
+These counts exclude fixture-loading scripts and verification queries
+in the test subdirectories. Some views are complementary, while others
+are equivalent retrievals retained for traceability. The number of
+files is therefore not a count of independent capabilities or satisfied
+requirements.
+
+\subsection{Identifier Stability after the Qualification Review}
+
+The original family identifiers are retained following the
+post-qualification revision. Renumbering the executable files as a
+single consecutive sequence would obscure their correspondence with
+the earlier question set, the thesis tables, and the repository
+artifacts. Alphabetic suffixes identify operational views within a
+family: CQ21a and CQ21b, for example, distinguish evidence-origin
+provenance from participation provenance. The nested suffixes CQ20c1
+and CQ20c2 retain the existing identifiers of focused realization and
+context views under CQ20. A suffix does not introduce an additional
+functional requirement.
+
+The revision also supplies explicit implementations for CQ14--CQ17,
+which were listed in the question set but absent as individual files
+from the inspected directory. Their addition closes that implementation
+omission; it is not evidence that those files had already been executed
+in GraphDB. The repository identifier map records every file, family,
+operation, and equivalent view so that historical references remain
+resolvable without imposing a misleading consecutive file count.
+
+\subsection{Competency Questions and Requirement Mapping}
+
+Table~\ref{tab:traceability-cq-fr} states the information need of each
+family and its principal requirement mapping. FR14 applies across the
+collection. The mapping identifies intended examination, rather than
+asserting complete requirement satisfaction from the existence of a
+query. The operational files and their result semantics are documented
+in the repository catalog.
+
+\begingroup
+\small
+\begin{longtable}{p{0.08\linewidth} p{0.70\linewidth} p{0.12\linewidth}}
+\caption{Historical competency-question families and principal functional requirement mappings.}
+\label{tab:traceability-cq-fr} \\
+\toprule
+\textbf{CQ} & \textbf{Information need in the revised implementation} & \textbf{FRs} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{CQ} & \textbf{Information need in the revised implementation} & \textbf{FRs} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{3}{l}{\textbf{A. Competence Specifications and Structure}} \\
+\midrule
+CQ1 & Which direct constituents specify a selected competence, including knowledge, skills, dispositions, attitudes, and knowledge--level pairings? & FR1, FR3 \\
+CQ2 & Which \textit{KnowledgeSkill} pairings and recorded justification verbs are associated with a selected competence? & FR2 \\
+CQ3 & Which knowledge element and required skill level constitute each populated \textit{KnowledgeSkill} pairing? & FR2 \\
+CQ4 & Which specification-pattern value is associated with a competence? & FR1 \\
+CQ5 & Which atomic or composite structure is declared by a structure value or represented through class membership? & FR1, FR4 \\
+CQ6 & Which direct component relationships and integration descriptions are recorded? & FR4 \\
+CQ7 & Which direct specialization relationships and narrower-scope descriptions are recorded? & FR4 \\
+CQ8 & Which records are represented as reusable competence specifications, whole-competence judgments, or constituent judgments? & FR1, FR11 \\
+\midrule
+\multicolumn{3}{l}{\textbf{B. Instructional Associations and Conditions}} \\
+\midrule
+CQ9 & Which instructional units are associated with a competence through activation? & FR5 \\
+CQ10 & Which functions, roles, modes, constraints, or generic qualifiers characterize an activation? & FR5 \\
+CQ11 & Which competences are explicitly positioned as prerequisites of instructional units? & FR5 \\
+CQ12 & Which competences are explicitly positioned as instructional targets? & FR5 \\
+CQ13 & Which modes qualify an activation? & FR5 \\
+CQ14 & Which instructional contribution roles qualify an activation? & FR5 \\
+CQ15 & Which constraints, classification types, and descriptions qualify an activation? & FR5 \\
+CQ16 & Which function, roles, modes, and constraints are jointly associated with the same activation? & FR5 \\
+CQ17 & Which independent instructional statements, collaboration settings, and planned acquisition contexts describe instructional units, including units without activation records? & FR5, FR6 \\
+\midrule
+\multicolumn{3}{l}{\textbf{C. Evidence and Assessment Records}} \\
+\midrule
+CQ18 & Which evidence supports whole-competence or constituent judgments? & FR10, FR11 \\
+CQ19 & Which evidence types classify the collected material? & FR10 \\
+CQ20 & Which occurrences ground evidence, which assessment specifications do they realize, and in which acquisition contexts do they occur? & FR10 \\
+CQ21 & How do whole-competence judgments connect to evidence-origin occurrences and to the occurrences of their assessment participations? & FR10, FR11 \\
+CQ22 & How does a whole-competence judgment connect its competence, profile, supporting evidence, participation, and occurrence? & FR11 \\
+CQ23 & How does a constituent judgment connect its specification target, evidence, participation, profile, and optional parent judgment? & FR11 \\
+CQ24 & Which learners, assessors, optional scores, derived judgments, and occurrence-origin evidence are associated with assessment participations? & FR10, FR11 \\
+CQ25 & Which judgment dates and evidence-generation or validation dates are available across assessment occasions? & FR11, FR13 \\
+\midrule
+\multicolumn{3}{l}{\textbf{D. Proficiency Interpretation}} \\
+\midrule
+CQ26 & Which proficiency level and interpretation scheme are assigned to a whole-competence judgment? & FR12 \\
+CQ27 & Which proficiency level and interpretation scheme are assigned to a constituent judgment? & FR12 \\
+CQ28 & In which participation occurrence is each proficiency judgment grounded? & FR11, FR12 \\
+CQ29 & Which proficiency schemes are explicitly associated with assessment occurrences? & FR12 \\
+CQ30 & Which numeric scales are used by proficiency schemes, with which available bounds and increment? & FR12 \\
+CQ31 & Which intervals, endpoint policies, scales, and corresponding levels form a numeric interpretation scheme? & FR12 \\
+CQ32 & Which overall proficiency is already assigned to a whole-competence judgment? The implemented view CQ32a repeats CQ26; the originally envisaged synthesis procedure is not implemented. & Supplementary \\
+\midrule
+\multicolumn{3}{l}{\textbf{E. Curricular Relationships and Learner-Oriented Retrieval}} \\
+\midrule
+CQ33 & Which course specifications and instructional activations associate a competence with curricular or instructional units? & FR5 \\
+CQ34 & Which external alignments identify internal and external endpoints, correspondence types, identifiers, and available justifications? & FR8 \\
+CQ35 & In which distinct curricular or instructional contexts is the same competence reused? & FR7 \\
+CQ36 & How do activation qualifications differ across uses of that competence? & FR5, FR7 \\
+CQ37 & Which whole-competence judgments, levels, and schemes are associated with a profile? & FR12, FR13 \\
+CQ38 & Which constituent judgments can be traced to a profile through participation or a parent judgment? & FR11, FR13 \\
+CQ39 & Which eligible judgments fall below a selected curricular minimum, which candidates can optionally be materialized, and which learning needs are explicitly recorded? & Supplementary \\
+CQ40 & Which mandatory expectations lack judgments or have comparable below-minimum judgments, and which direct constituents lack records? Constituent threshold propagation remains disabled by default. & Supplementary \\
+CQ41 & Which whole-competence and constituent judgments, specification targets, levels, and schemes derive from a participation? & FR10--FR13 \\
+CQ42 & Which competence-targeted learning needs retain documented comparison bases, which comparisons repeat CQ39a, and which curricular inclusions have no judgment in a profile? & Supplementary \\
+\end{longtable}
+\endgroup
+
+The revised wording follows the implemented operations. In particular,
+CQ7 concerns direct specialization rather than unspecified semantic
+relations; CQ17 retrieves instructional statements independently of
+activation; and CQ32a retrieves an existing attribution rather than
+calculating a synthesis. These distinctions prevent broader ambitions
+of the initial question set from being reported as implemented results.
+
+Several views deliberately overlap. CQ13--CQ15 inspect individual
+qualifiers, whereas CQ16 retains their common activation identifier in
+a joint view. Multiple modes or constraints can produce combinations
+of values, so rows must not be counted as distinct activations. CQ26
+and CQ32a are equivalent whole-competence proficiency retrievals.
+CQ39a, CQ40b, and CQ42b apply the same below-minimum comparison and
+must yield equivalent results under the same parameters, reference
+time, and dataset. Such equivalence is a regression condition, not
+three independent demonstrations of requirement coverage.
+
+\subsection{Datasets, Parameters, and Reproducible Execution}
+
+The evaluation distinguishes three sources of instance data:
+competence and instructional specifications derived from the CSP and
+curricular examples; an explicitly fictional assessment and proficiency
+example; and dedicated synthetic fixtures for query behavior absent
+from those sources. Planning records do not, by themselves, provide
+learner evidence, assessment participations, or proficiency judgments.
+Synthetic records must therefore remain identifiable and excluded
+from empirical counts of CSP outcomes.
+
+Each execution must record the query version, repository, selected
+dataset or graphs, ontology and vocabulary versions, inference
+configuration, parameters, and exported result. Ordinary query files
+do not impose a dataset through \texttt{FROM}; endpoint configuration
+determines which graphs are visible. The dedicated test views specify
+their synthetic graph explicitly. Graph separation identifies the test
+source but does not ensure exclusion from a default dataset configured
+to include named graphs.
+
+The profile/course queries now provide executable defaults referring
+to \texttt{Profile\_Learner\_01} and \texttt{Course\_FormalLanguages}
+in the fictional proficiency example. Both IRIs must be replaced for
+a different case. This explicit selection avoids assuming enrollment
+or applying every course expectation to every profile. CQ1 and CQ2
+retain \texttt{C02} as their selected competence example.
+
+The three proficiency scripts supply, in order, the interpretation
+vocabulary, assessment-related instances and example score
+classification, and a curricular expectation with a local comparison
+policy. Their updates are separate from read-only CQ execution.
+CQ39b is likewise an update and is not included in a batch of
+retrieval operations. It materializes comparison candidates only when
+intentionally executed; previously stored candidates are not
+invalidated automatically by later evidence.
+
+For temporal comparison, the distributed files use \texttt{NOW()}.
+A reproducible experiment fixes a typed reference instant and retains
+the resulting query. The local regression run uses
+\texttt{2026-11-01T12:00:00Z} as that analytical instant, not as a claim
+about when an assessment occurred or a GraphDB execution was performed.
+
+\subsection{Empty Results and Synthetic Test Cases}
+
+An empty answer is evaluated against a stated expectation. It can
+indicate an unmatched example parameter, an absent relation, an
+unavailable dataset, a deliberately excluded record, or a policy that
+has not been enabled. It does not alone demonstrate a query defect,
+zero proficiency, or lack of learner competence. Optional labels,
+contexts, and descriptors must be distinguished from mandatory joins.
+Where a field is optional, its absence should remain visible rather
+than remove an otherwise matching record.
+
+CQ11 has no prerequisite activations in the examined CSP cycles. A
+dedicated synthetic fixture therefore tests three explicit prerequisite
+associations and control activations representing targets or having
+no declared function. It includes the same competence as a target in
+one unit and a prerequisite in another, and an association expressed
+through the inverse unit link. This tests contextual classification
+and retrieval without asserting that the proposed prerequisites are
+pedagogically necessary. Course-to-course prerequisites remain outside
+this question.
+
+CQ27 is empty in the original proficiency example because that example
+does not assign levels to its constituent judgments. A separate fixture
+provides two constituent-specific interpretations under textual rubrics:
+conceptual knowledge is classified as consolidated, while construction
+skill is classified as developing. Both use the same response material,
+but their criteria and justifications differ; no overall score is copied
+to the constituents. A deliberately incomplete third record has a level
+but no recorded scheme and must remain visible with that column unbound.
+Controls without a level and of the whole-competence judgment class are
+excluded. These controls test retrieval and missing information; they
+are not additional validated educational conclusions.
+
+CQ20c requires an occurrence type, while realization and context are
+optional. CQ30 requires only the scheme--scale association; its optional
+bounds, increment, and labels cannot establish the existence of that
+association. Its revised label filters accept Portuguese and untagged
+literals within the optional blocks. English-only entities consequently
+remain retrievable with blank label fields. This is neither ranked
+language fallback nor a guarantee of one row per scale. The earlier
+empty result is not attributed to missing data or a query defect solely
+from its subsequent successful execution: the recorded diagnostic
+established that the associations were present in the default dataset,
+but did not establish the cause of the earlier execution outcome.
+
+In the fictional proficiency example, the competence has a recorded
+judgment at ordinal position~3 and a selected curricular expectation
+at position~4. The comparison views can therefore return a below-minimum
+candidate when their remaining eligibility conditions hold. By contrast,
+CQ40a and CQ42c are expected to be empty for that competence because a
+judgment exists. A low recorded result and an absent judgment are
+different cases. CQ40c can still identify an unrecorded direct
+\textit{KnowledgeSkill} judgment without treating its nested knowledge
+component as automatically lacking evidence.
+
+\subsection{Comparison Policy and Supplementary Scope}
+
+The comparison views require a mandatory curricular specification, an
+explicitly identified common proficiency scheme, dated judgments, and
+unambiguous ordinal category positions. The course specification uses
+\texttt{dcterms:references} to identify its expected scheme, while the
+judgment uses \textit{interpretedUsingScheme}. This is a documentary
+convention of the analytical example, not an additional OWL inference.
+Both compared levels must belong to that scheme. Equal ordinals across
+different schemes do not establish semantic equivalence.
+
+Within the selected scheme, the policy considers the latest dated,
+non-expired record at the reference instant. Future or expired records,
+conflicting same-date levels, and multiple incompatible assignments
+cannot justify choosing a convenient lower value. A newer unclassified
+record blocks use of an older classified result within the implemented
+selection conditions. Ordinal comparison establishes an ordering of
+categories, not a measured distance between them.
+
+The curricular minimum describes expected depth of coverage. Its
+comparison with individual performance is an explicitly adopted
+analytical policy, rather than a learner passing threshold or an
+ontology-level diagnosis. CQ39a identifies candidates without requiring
+stored \textit{LearningNeed} instances. CQ39c and CQ42a instead retrieve
+recorded needs and their documented basis, which need not describe the
+latest current judgment. CQ40a concerns mandatory inclusions without a
+judgment; CQ42c also includes non-mandatory curricular inclusions and
+reports their status.
+
+CQ40d remains disabled. The ontology does not assign a whole-competence
+minimum to every constituent, and the available examples do not justify
+that propagation. Enabling its flag would introduce an external policy
+assumption, not activate an established constituent requirement. The
+synthetic CQ27 levels do not remove this limitation. Constituent-specific
+gap analysis would require justified expectations at that granularity
+or a separately defended comparison policy. Likewise, CQ32a provides
+no synthesis or automatic aggregation procedure; that original
+supplementary ambition remains unimplemented.
+
+\subsection{Verification Evidence and Coverage Limits}
+
+The local revision checks parsed all 58 root-level files and executed
+the 57 SELECT queries on the local ontology and fictional proficiency
+example. Additional artificial data exercised the new CQ14--CQ17 views
+and the independent-statement case. The dedicated CQ11 and CQ27
+fixtures returned their three expected associations or records. The
+local checks also confirmed equivalent views, expected empty results,
+and idempotent materialization on a disposable graph. They used
+RDFLib/SPARQL~1.1 without fetching ontology imports or performing OWL
+reasoning. The repository validation report records input and query
+hashes and the fixed analytical instant.
+
+These are local regression results, not a claim that every revised file
+has been executed successfully in GraphDB. Interactive GraphDB checks
+reported during revision are not a complete execution log for the final
+collection. In particular, newly supplied views and revised query hashes
+require corresponding runs and exports before a final GraphDB success
+claim can be made. Logical consistency with imported modules requires
+separate reasoner checks. The assessment criteria defined in
+Section~\ref{subsec:ontoksd-requirement-verification} remain applicable.
+
+The question set provides evidence toward the functional baseline with
+the following limits:
+\begin{itemize}
+ \item CQ17 now retrieves independent instructional statements even
+ without activation, addressing a retrieval aspect of FR6. It does not
+ establish that the recorded statement captures every action or
+ deliverable of the source task.
+ \item CQ3 retrieves the required skill level but does not explicitly
+ project its framework-specific reference scheme. FR2 therefore also
+ requires examination of level typing and the imported vocabulary.
+ \item CQ6 and CQ7 already retrieve integration and specialization
+ descriptions; CQ34 already retrieves correspondence type and
+ justification. The remaining checks concern presence, scope, and
+ adequacy of those descriptions, rather than an assumed absence of
+ these fields from the query projections.
+ \item FR9 and the criteria-related part of FR11 require examination
+ of expected products, observations, and applicable assessment criteria.
+ Recovering evidence or a rubric reference does not establish criterion
+ adequacy or that the evidence supports the recorded conclusion.
+ \item CQ30 and CQ31 concern numeric structures. CQ27's synthetic
+ rubric example demonstrates retrieval of qualitative interpretations,
+ but not exhaustive validation of qualitative schemes or their use in
+ the empirical CSP data.
+ \item Provenance and profile paths require separate integrity checks
+ for agreement about learner, assessment occasion, constituent
+ membership, and evidence origin. Retrieval alone does not enforce
+ those path constraints.
+\end{itemize}
+
+FR14 is examined through explicit query artifacts and recorded execution
+conditions. It is not satisfied merely by counting files or non-empty
+answers. Requirement-level conclusions must distinguish support,
+partial support, lack of support, and absence of evaluation according
+to the relevant checks in
+Table~\ref{tab:ontoksd-requirement-checks}.
+
+The FR-to-CQ view in Appendix~\ref{ap:OntoKSD-FR-CQ} must retain these
+family identifiers, the revised CQ17 mapping, and the same coverage
+limits. Terminology is consolidated in
+Appendix~\ref{ap:glossary-ontoksd}. Together, the family table, executable
+catalog, parameterized tests, and execution records provide the basis
+for examining the implemented architecture without conflating
+representational capability, query behavior, and educational validity.

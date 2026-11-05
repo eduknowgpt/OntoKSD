@@ -1,6 +1,6 @@
 # CQ7: What direct specialization relationships and narrower-scope descriptions exist?
 # Operation: SELECT. Target: GraphDB / SPARQL 1.1.
-# Scope: Irreflexive means no self-specialization; asymmetric means the base is not reciprocally narrower. Non-transitivity preserves direct bases. No prerequisite, subclass inheritance or composition is implied.
+# Scope: Irreflexive means no self-specialization; asymmetric means the base is not reciprocally narrower. Transitivity is not declared because this property records direct bases. No prerequisite, subclass inheritance or composition is implied.
 # Blank labels do not imply missing entities; multiple languages may produce multiple rows.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>

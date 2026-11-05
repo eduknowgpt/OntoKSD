@@ -1,0 +1,69 @@
+# CQ11 synthetic test data. Not derived from CSP or a real curriculum.
+# Load into the same GraphDB repository as OntoKSD.
+# The dedicated named graph keeps the test data identifiable.
+PREFIX o: <http://purl.org/ontoksd#>
+PREFIX t: <http://purl.org/ontoksd/test/cq11#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+INSERT DATA {
+ GRAPH <http://purl.org/ontoksd/test/cq11> {
+  <http://purl.org/ontoksd/test/cq11>
+    dcterms:title "CQ11 — cenário sintético de pré-requisitos instrucionais"@pt ;
+    dcterms:description "Dados artificiais para avaliar a recuperação de pré-requisitos explícitos. Não representam resultados do CSP, avaliações reais ou um currículo institucional."@pt .
+
+  # Minimal competence specifications: the test concerns activation functions,
+  # not the completeness of a particular constituent specification pattern.
+  t:traceIteration a o:Competence ;
+    rdfs:label "Rastrear a execução de algoritmos iterativos"@pt .
+  t:traceRecursion a o:Competence ;
+    rdfs:label "Rastrear a execução de algoritmos recursivos"@pt .
+  t:compareAlgorithms a o:Competence ;
+    rdfs:label "Comparar soluções algorítmicas"@pt .
+
+  t:introductoryPractice a o:LearningTask ;
+    rdfs:label "Prática introdutória de rastreamento"@pt ;
+    o:hasInstructionalStatement "Rastrear algoritmos iterativos com exemplos orientados."@pt .
+  t:recursionPractice a o:LearningTask ;
+    rdfs:label "Prática de rastreamento recursivo"@pt ;
+    o:hasInstructionalStatement "Rastrear chamadas recursivas, pressupondo familiaridade com rastreamento iterativo."@pt .
+  t:algorithmComparison a o:LearningTask ;
+    rdfs:label "Comparação de algoritmos iterativos e recursivos"@pt ;
+    o:hasInstructionalStatement "Comparar soluções iterativas e recursivas, pressupondo capacidade de rastrear ambas."@pt ;
+    # Deliberately use the inverse link for this activation to exercise CQ11's path.
+    o:hasCompetenceActivation t:prerequisiteRecursionForComparison .
+
+  # Positive case 1: one prerequisite for recursionPractice.
+  t:prerequisiteIterationForRecursion a o:CompetenceActivation ;
+    o:hasActivationInstructionalUnit t:recursionPractice ;
+    o:hasActivationCompetence t:traceIteration ;
+    o:hasActivationFunction o:prerequisiteFunction .
+
+  # Positive cases 2 and 3: two prerequisites for algorithmComparison.
+  t:prerequisiteIterationForComparison a o:CompetenceActivation ;
+    o:hasActivationInstructionalUnit t:algorithmComparison ;
+    o:hasActivationCompetence t:traceIteration ;
+    o:hasActivationFunction o:prerequisiteFunction .
+  t:prerequisiteRecursionForComparison a o:CompetenceActivation ;
+    o:hasActivationCompetence t:traceRecursion ;
+    o:hasActivationFunction o:prerequisiteFunction .
+
+  # Control: the SAME competence is a target here, not a prerequisite.
+  t:targetIterationForIntro a o:CompetenceActivation ;
+    o:hasActivationInstructionalUnit t:introductoryPractice ;
+    o:hasActivationCompetence t:traceIteration ;
+    o:hasActivationFunction o:targetFunction .
+
+  # Control: a target alongside prerequisites must not appear in CQ11.
+  t:targetComparison a o:CompetenceActivation ;
+    o:hasActivationInstructionalUnit t:algorithmComparison ;
+    o:hasActivationCompetence t:compareAlgorithms ;
+    o:hasActivationFunction o:targetFunction .
+
+  # Control: absence of an explicit function does not assert a prerequisite.
+  # Under OWL's open-world semantics it also does not assert its negation.
+  t:unqualifiedRecursion a o:CompetenceActivation ;
+    o:hasActivationInstructionalUnit t:introductoryPractice ;
+    o:hasActivationCompetence t:traceRecursion .
+ }
+}

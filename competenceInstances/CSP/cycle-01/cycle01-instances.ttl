@@ -95,8 +95,8 @@ ns1:CA_Task01_C01 a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C01 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
+    ns1:hasActivationCompetence ns1:C01 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ns1:CA_Task01_C01_Constraint a ns1:ActivationConstraint ;
@@ -109,8 +109,8 @@ ns1:CA_Task01_C01_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amConstructive ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C01 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task01_VendingMachine ;
+    ns1:hasActivationCompetence ns1:C01 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -126,8 +126,8 @@ ns1:CA_Task01_C02 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C02 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
+    ns1:hasActivationCompetence ns1:C02 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ns1:CA_Task01_C02_Constraint a ns1:ActivationConstraint ;
@@ -141,8 +141,8 @@ ns1:CA_Task01_C02_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C02 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task01_VendingMachine ;
+    ns1:hasActivationCompetence ns1:C02 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -158,8 +158,8 @@ ns1:CA_Task01_C03 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ns1:CA_Task01_C03_Constraint a ns1:ActivationConstraint ;
@@ -173,8 +173,8 @@ ns1:CA_Task01_C03_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task01_VendingMachine ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -190,8 +190,8 @@ ns1:CA_Task01_C04 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amInterpretative,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C04 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
+    ns1:hasActivationCompetence ns1:C04 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ns1:CA_Task01_C04_Constraint a ns1:ActivationConstraint ;
@@ -205,8 +205,8 @@ ns1:CA_Task01_C04_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amInterpretative,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C04 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task01_VendingMachine ;
+    ns1:hasActivationCompetence ns1:C04 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -221,8 +221,8 @@ ns1:CA_Task01_C05 a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ns1:CA_Task01_C05_Constraint a ns1:ActivationConstraint ;
@@ -235,8 +235,8 @@ ns1:CA_Task01_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task01_VendingMachine ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -252,8 +252,8 @@ ns1:CA_Task01_C06 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ns1:CA_Task01_C06_Constraint a ns1:ActivationConstraint ;
@@ -267,8 +267,8 @@ ns1:CA_Task01_C06_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task01_VendingMachine ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -283,8 +283,8 @@ ns1:CA_Task02_C05 a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative use of the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -298,8 +298,8 @@ ns1:CA_Task02_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -315,8 +315,8 @@ ns1:CA_Task02_C07 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C07 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C07 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C07. It indicates that the development of problem-solving solutions using Turing Machines is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -331,8 +331,8 @@ ns1:CA_Task02_C07_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C07 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C07 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -348,8 +348,8 @@ ns1:CA_Task02_C08 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C08 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C08 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C08. It indicates that identifying Turing Machine variants functions as a supporting and analytically relevant target within the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -364,8 +364,8 @@ ns1:CA_Task02_C08_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C08 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C08 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -381,8 +381,8 @@ ns1:CA_Task02_C09 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C09 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C09 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C09. It indicates that applying Turing Machine variants is treated as a conditional or extended target, relevant when the solution employs or discusses such variants."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -397,8 +397,8 @@ ns1:CA_Task02_C09_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arExtension ;
-    ns1:mediatesCompetence ns1:C09 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C09 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -414,8 +414,8 @@ ns1:CA_Task02_C10 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C10 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C10 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task02_TrafficControl ;
     rdfs:comment "Competence activation linking Task02 assessment to competence C10. It indicates that testing Turing Machines using simulators is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -430,8 +430,8 @@ ns1:CA_Task02_C10_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C10 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task02_TrafficControl ;
+    ns1:hasActivationCompetence ns1:C10 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task02_TrafficControl ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task02-TrafficControl/Task02-CSP-Adjustments.md> .
 
@@ -447,8 +447,8 @@ ns1:CA_Task03_C03 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C03. It indicates that testing automata using simulators is a core and mandatory target of the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -463,8 +463,8 @@ ns1:CA_Task03_C03_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -480,8 +480,8 @@ ns1:CA_Task03_C04 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amConstructive,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C04 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C04 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C04. It indicates that defining regular expressions for finite automata is a core and mandatory target in this task because regular-expression formulation is part of the expected deliverables and documentation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -496,8 +496,8 @@ ns1:CA_Task03_C04_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amConstructive,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C04 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C04 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -512,8 +512,8 @@ ns1:CA_Task03_C05 a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task03."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -527,8 +527,8 @@ ns1:CA_Task03_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -544,8 +544,8 @@ ns1:CA_Task03_C06 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C06. It indicates that developing problem-solving solutions using Finite State Machines is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -560,8 +560,8 @@ ns1:CA_Task03_C06_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C06 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C06 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -577,8 +577,8 @@ ns1:CA_Task03_C11 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C11 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C11 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task03_FarmerRobot ;
     rdfs:comment "Competence activation linking Task03 assessment to competence C11. It indicates that identifying patterns in Finite State Machines is a supporting but instructionally relevant target, especially for structural analysis, optimization, and budgeting interpretation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -593,8 +593,8 @@ ns1:CA_Task03_C11_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C11 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task03_FarmerRobot ;
+    ns1:hasActivationCompetence ns1:C11 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task03_FarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task03-FarmingRobot/Task03-CSP-Adjustments.md> .
 
@@ -610,8 +610,8 @@ ns1:CA_Task04_C03 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C03. It indicates that testing automata using simulators is a core and mandatory target of the task."@en ;
     skos:scopeNote "The cited Task04 adjustment explicitly reuses C03 with a PDA simulation target while preserving the C03 reference FSM knowledge pairing. This contextual use does not change C03 or prove that its reference pairing adequately covers PDA-specific simulation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
@@ -627,8 +627,8 @@ ns1:CA_Task04_C03_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C03 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C03 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -643,8 +643,8 @@ ns1:CA_Task04_C05 a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task04."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -658,8 +658,8 @@ ns1:CA_Task04_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -675,8 +675,8 @@ ns1:CA_Task04_C12 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C12 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C12 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C12. It indicates that developing problem-solving solutions using Pushdown Automata is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -691,8 +691,8 @@ ns1:CA_Task04_C12_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C12 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C12 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -708,8 +708,8 @@ ns1:CA_Task04_C13 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amInterpretative,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C13 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C13 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C13. It indicates that interpreting rule-based notation is a core and mandatory target because formal notation is explicitly relevant to location-sequence generation and documentation."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -724,8 +724,8 @@ ns1:CA_Task04_C13_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amInterpretative,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C13 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C13 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -741,8 +741,8 @@ ns1:CA_Task04_C14 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C14 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C14 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task04_ReturnFarmerRobot ;
     rdfs:comment "Competence activation linking Task04 assessment to competence C14. It indicates that differentiating classifications of formal grammars is a supporting but instructionally relevant target, especially for conceptual comparison among formalisms associated with navigation modeling."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -757,8 +757,8 @@ ns1:CA_Task04_C14_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amInterpretative ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C14 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
+    ns1:hasActivationCompetence ns1:C14 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task04_ReturnFarmerRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task04-TheReturnFarmingRobot/Task04-CSP-Adjustments.md> .
 
@@ -773,8 +773,8 @@ ns1:CA_Task05_C05 a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C05. It indicates that writing a technical report is a core and mandatory target in the evaluative structure of Task05."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -788,8 +788,8 @@ ns1:CA_Task05_C05_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationFunction ns1:targetFunction ;
     ns1:hasActivationMode ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C05 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C05 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -805,8 +805,8 @@ ns1:CA_Task05_C07_01 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C07_01 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C07_01 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C07.01. It indicates that developing integrated multi-agent solutions using Turing Machines is a core and mandatory target of the assessment."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -821,8 +821,8 @@ ns1:CA_Task05_C07_01_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amArtifactOriented,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C07_01 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C07_01 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -838,8 +838,8 @@ ns1:CA_Task05_C08_01 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C08_01 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C08_01 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C08.01. It indicates that analyzing the system-level adequacy of Turing Machine variants is a supporting but mandatory target for informed design decisions in the integrated architecture."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -854,8 +854,8 @@ ns1:CA_Task05_C08_01_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amJustificatory ;
     ns1:hasActivationRole ns1:arSupporting ;
-    ns1:mediatesCompetence ns1:C08_01 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C08_01 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -871,8 +871,8 @@ ns1:CA_Task05_C09_01 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C09_01 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C09_01 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C09.01. It indicates that applying and coordinating Turing Machine variants in integrated architectures is a core and mandatory target in the architectural configuration of the system."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -887,8 +887,8 @@ ns1:CA_Task05_C09_01_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amConstructive ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C09_01 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C09_01 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -904,8 +904,8 @@ ns1:CA_Task05_C10 a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C10 ;
-    ns1:mediatesInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C10 ;
+    ns1:hasActivationInstructionalUnit ns1:AS_Task05_FarmerRobotAndFeederRobot ;
     rdfs:comment "Competence activation linking Task05 assessment to competence C10. It indicates that testing Turing Machines using simulators is a core and mandatory target of the task."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 
@@ -920,8 +920,8 @@ ns1:CA_Task05_C10_Learning a ns1:CompetenceActivation ;
     ns1:hasActivationMode ns1:amAnalytical,
         ns1:amArtifactOriented ;
     ns1:hasActivationRole ns1:arCore ;
-    ns1:mediatesCompetence ns1:C10 ;
-    ns1:mediatesInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
+    ns1:hasActivationCompetence ns1:C10 ;
+    ns1:hasActivationInstructionalUnit ns1:LT_Task05_FarmerRobotAndFeederRobot ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task05-TheFarmingRobotAndFeedingRobot/TASK05-CSP-Adjustments.md> .
 

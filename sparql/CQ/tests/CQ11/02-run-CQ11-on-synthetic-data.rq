@@ -1,0 +1,23 @@
+# Test execution of the existing CQ11, restricted to its synthetic named graph.
+# Expected: exactly three rows.
+# CQ11: Which competences are explicitly positioned as instructional prerequisites?
+# Operation: SELECT. Target: GraphDB / SPARQL 1.1.
+# Scope: A function is a planned instructional qualification, not proof of learner possession or attainment.
+# Blank labels do not imply missing entities; multiple languages may produce multiple rows.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?instructionalUnit ?instructionalUnitLabel ?competence ?competenceLabel ?competenceActivation
+FROM <http://purl.org/ontoksd/test/cq11>
+WHERE {
+?competenceActivation a ontoksd:CompetenceActivation ; ontoksd:hasActivationCompetence ?competence ;
+ (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?instructionalUnit .
+?competenceActivation ontoksd:hasActivationFunction ontoksd:prerequisiteFunction .
+OPTIONAL { ?instructionalUnit (rdfs:label|skos:prefLabel|dcterms:title) ?instructionalUnitLabel . }
+OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
+}
+ORDER BY ?instructionalUnit ?instructionalUnitLabel ?competenceLabel

@@ -13,8 +13,8 @@ ontoksd:CA_Task01_C01 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    ontoksd:hasActivationCompetence ontoksd:C01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ontoksd:CA_Task01_C01_Constraint a ontoksd:ActivationConstraint ;
@@ -27,8 +27,8 @@ ontoksd:CA_Task01_C01_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C01 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:hasActivationCompetence ontoksd:C01 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -44,8 +44,8 @@ ontoksd:CA_Task01_C02 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C02 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    ontoksd:hasActivationCompetence ontoksd:C02 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ontoksd:CA_Task01_C02_Constraint a ontoksd:ActivationConstraint ;
@@ -59,8 +59,8 @@ ontoksd:CA_Task01_C02_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arSupporting ;
-    ontoksd:mediatesCompetence ontoksd:C02 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:hasActivationCompetence ontoksd:C02 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -76,8 +76,8 @@ ontoksd:CA_Task01_C03 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ontoksd:CA_Task01_C03_Constraint a ontoksd:ActivationConstraint ;
@@ -91,8 +91,8 @@ ontoksd:CA_Task01_C03_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amAnalytical,
         ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C03 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:hasActivationCompetence ontoksd:C03 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -108,8 +108,8 @@ ontoksd:CA_Task01_C04 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amInterpretative,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arExtension ;
-    ontoksd:mediatesCompetence ontoksd:C04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    ontoksd:hasActivationCompetence ontoksd:C04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ontoksd:CA_Task01_C04_Constraint a ontoksd:ActivationConstraint ;
@@ -123,8 +123,8 @@ ontoksd:CA_Task01_C04_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amInterpretative,
         ontoksd:amJustificatory ;
     ontoksd:hasActivationRole ontoksd:arExtension ;
-    ontoksd:mediatesCompetence ontoksd:C04 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:hasActivationCompetence ontoksd:C04 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -139,8 +139,8 @@ ontoksd:CA_Task01_C05 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ontoksd:CA_Task01_C05_Constraint a ontoksd:ActivationConstraint ;
@@ -153,8 +153,8 @@ ontoksd:CA_Task01_C05_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationFunction ontoksd:targetFunction ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C05 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:hasActivationCompetence ontoksd:C05 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
@@ -170,8 +170,8 @@ ontoksd:CA_Task01_C06 a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C06 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
+    ontoksd:hasActivationCompetence ontoksd:C06 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:AS_Task01_VendingMachineAssessment ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 
 ontoksd:CA_Task01_C06_Constraint a ontoksd:ActivationConstraint ;
@@ -185,8 +185,8 @@ ontoksd:CA_Task01_C06_Learning a ontoksd:CompetenceActivation ;
     ontoksd:hasActivationMode ontoksd:amArtifactOriented,
         ontoksd:amConstructive ;
     ontoksd:hasActivationRole ontoksd:arCore ;
-    ontoksd:mediatesCompetence ontoksd:C06 ;
-    ontoksd:mediatesInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
+    ontoksd:hasActivationCompetence ontoksd:C06 ;
+    ontoksd:hasActivationInstructionalUnit ontoksd:LT_Task01_VendingMachine ;
     skos:scopeNote "Explicit instructional-planning association curated from the reviewed task competency set; distinct from the assessment association."@en ;
     prov:wasDerivedFrom <http://purl.org/ontoksd/source/csp/cycle-01/Task01-TheVendingMachine/Review2/Task01-CSP-Report-v2.md> .
 

@@ -11,12 +11,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?competence ?competenceLabel ?associationType ?associationRecord ?associatedEntity ?associatedEntityLabel ?isMandatory ?minimumLevel
 WHERE {
-{ ?associationRecord a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourseCompetence ?competence ; ontoksd:mediatesCourse ?associatedEntity .
+{ ?associationRecord a ontoksd:CourseCompetenceSpecification ; ontoksd:hasSpecifiedCompetence ?competence ; ontoksd:hasSpecifiedCourse ?associatedEntity .
  BIND("CourseCompetenceSpecification" AS ?associationType)
  OPTIONAL { ?associationRecord ontoksd:isMandatory ?isMandatory . }
  OPTIONAL { ?associationRecord ontoksd:requiresMinimumProficiencyLevel ?minimumLevel . } }
 UNION
-{ ?associationRecord a ontoksd:CompetenceActivation ; ontoksd:mediatesCompetence ?competence ; (ontoksd:mediatesInstructionalUnit|^ontoksd:hasCompetenceActivation) ?associatedEntity .
+{ ?associationRecord a ontoksd:CompetenceActivation ; ontoksd:hasActivationCompetence ?competence ; (ontoksd:hasActivationInstructionalUnit|^ontoksd:hasCompetenceActivation) ?associatedEntity .
  BIND("CompetenceActivation" AS ?associationType) }
 OPTIONAL { ?competence (rdfs:label|skos:prefLabel|dcterms:title) ?competenceLabel . }
 OPTIONAL { ?associatedEntity (rdfs:label|skos:prefLabel|dcterms:title) ?associatedEntityLabel . }

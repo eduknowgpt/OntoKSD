@@ -2,7 +2,8 @@
 # Operation: SELECT. Target: GraphDB / SPARQL 1.1.
 # Scope: A Knowledge nested inside KnowledgeSkill is not automatically a separately declared direct constituent; missing constituent evidence is not a diagnosed LearningNeed.
 # Blank labels do not imply missing entities; multiple languages may produce multiple rows.
-# Parameters: replace Profile_Example and Course_Example; no enrollment is inferred.
+# Parameters: default is the synthetic proficiency example (Profile_Learner_01, Course_FormalLanguages).
+# Replace both IRIs for another case. The selection does not assert enrollment.
 
 PREFIX ontoksd: <http://purl.org/ontoksd#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -12,9 +13,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT DISTINCT ?profile ?profileLabel ?course ?courseLabel ?courseSpecification ?competence ?competenceLabel ?constituent ?constituentLabel
 WHERE {
-VALUES (?profile ?course) { (ontoksd:Profile_Example ontoksd:Course_Example) }
+VALUES (?profile ?course) { (ontoksd:Profile_Learner_01 ontoksd:Course_FormalLanguages) }
 ?profile a ontoksd:Profile .
-?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:mediatesCourse ?course ; ontoksd:mediatesCourseCompetence ?competence ; ontoksd:isMandatory true .
+?courseSpecification a ontoksd:CourseCompetenceSpecification ; ontoksd:hasSpecifiedCourse ?course ; ontoksd:hasSpecifiedCompetence ?competence ; ontoksd:isMandatory true .
 ?competence (ontoksd:hasCompetenceConstituent|ontoksd:hasKnowledge|ontoksd:hasSkill|ontoksd:hasDisposition|ontoksd:hasAttitude|ontoksd:hasKnowledgeSkill|^ontoksd:isCompetenceConstituentOf|^ontoksd:isKnowledgeOf|^ontoksd:isSkillOf|^ontoksd:isDispositionOf|^ontoksd:isAttitudeOf|^ontoksd:isKnowledgeSkillOf) ?constituent .
 FILTER NOT EXISTS { ?judgment a ontoksd:EvidencedCompetenceConstituent ; ontoksd:refersToCompetenceConstituent ?constituent .
  { ?judgment ontoksd:derivedFromParticipation/(ontoksd:hasLearner|^ontoksd:participatesIn)/(ontoksd:hasProfile|^ontoksd:isProfileOf) ?profile . } UNION { ?judgment (ontoksd:isEvidencedCompetenceConstituentOf|^ontoksd:hasEvidencedConstituent)/(ontoksd:isEvidencedCompetenceOf|^ontoksd:hasEvidencedCompetence) ?profile . }

@@ -1,0 +1,8 @@
+# Read-only historical assessment check. Task-level scores do not establish competence attainment.
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?learner ?processScore ?productScore ?finalScore WHERE { ?final ontoksd:occursInAssessmentOccurrence ontoksd:Task201_GroupAssessmentOccurrence ; ontoksd:hasLearner ?learner ; ontoksd:hasScore ?finalScore ; prov:wasDerivedFrom ?process, ?product .
+ ?process ontoksd:occursInAssessmentOccurrence ontoksd:Task201_ProcessAssessmentOccurrence ; ontoksd:hasLearner ?learner ; ontoksd:hasScore ?processScore .
+ ?product ontoksd:occursInAssessmentOccurrence ontoksd:Task201_ProductAssessmentOccurrence ; ontoksd:hasLearner ?learner ; ontoksd:hasScore ?productScore . } ORDER BY ?learner
