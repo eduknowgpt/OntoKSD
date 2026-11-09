@@ -1,0 +1,61 @@
+# Synthetic FR13 extension. Load OntoKSD and example scripts 01-03 first.
+# Adds an earlier assessment occasion for the existing fictional learner.
+# New records reuse the assessment specification, competence and scheme.
+# Run in an isolated test repository. This update contains only INSERT DATA.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT DATA {
+    ontoksd:Learner_Learner_01
+        ontoksd:participatesIn ontoksd:AssessmentParticipation_Learner_01_DFAExam_FR13_2026_01_13 .
+
+    ontoksd:Profile_Learner_01
+        ontoksd:hasEvidence ontoksd:Evidence_DFAExam_Learner_01_FR13_2026_01_13 ;
+        ontoksd:hasEvidencedCompetence ontoksd:EvidencedCompetence_DFAConstruction_Learner_01_FR13_2026_01_13 .
+
+    ontoksd:AssessmentOccurrence_DFAWrittenExam_FR13_2026_01_13 a ontoksd:AssessmentOccurrence ;
+        rdfs:label "Fictional DFA written assessment on 13 January 2026"@en ;
+        dcterms:identifier "AssessmentOccurrence_DFAWrittenExam_FR13_2026_01_13" ;
+        ontoksd:realizes ontoksd:Assessment_DFAWrittenExam ;
+        ontoksd:occursInAcquisitionContext ontoksd:AcquisitionContext_DFAExam_2026_01 ;
+        ontoksd:usesProficiencyScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+        ontoksd:involvesAssessmentParticipation ontoksd:AssessmentParticipation_Learner_01_DFAExam_FR13_2026_01_13 ;
+        ontoksd:producesEvidence ontoksd:Evidence_DFAExam_Learner_01_FR13_2026_01_13 .
+
+    ontoksd:AssessmentParticipation_Learner_01_DFAExam_FR13_2026_01_13 a ontoksd:AssessmentParticipation ;
+        rdfs:label "Learner_01 participation in the fictional DFA assessment on 13 January 2026"@en ;
+        dcterms:identifier "AssessmentParticipation_Learner_01_DFAExam_FR13_2026_01_13" ;
+        ontoksd:hasLearner ontoksd:Learner_Learner_01 ;
+        ontoksd:hasAssessor ontoksd:Assessor_Assessor_01 ;
+        ontoksd:occursInAssessmentOccurrence ontoksd:AssessmentOccurrence_DFAWrittenExam_FR13_2026_01_13 ;
+        ontoksd:hasScore 82.00 .
+
+    ontoksd:Evidence_DFAExam_Learner_01_FR13_2026_01_13 a ontoksd:Evidence ;
+        rdfs:label "Fictional written response from the 13 January DFA assessment"@en ;
+        dcterms:identifier "Evidence_DFAExam_Learner_01_FR13_2026_01_13" ;
+        ontoksd:evidenceBasedOn ontoksd:AssessmentOccurrence_DFAWrittenExam_FR13_2026_01_13 ;
+        ontoksd:evidencesCompetence ontoksd:EvidencedCompetence_DFAConstruction_Learner_01_FR13_2026_01_13 ;
+        ontoksd:generatedAt "2026-01-13T10:00:00Z"^^xsd:dateTime ;
+        ontoksd:hasContext ontoksd:AcquisitionContext_DFAExam_2026_01 ;
+        ontoksd:hasEvidenceType ontoksd:WrittenExam ;
+        ontoksd:hasSupportDocument ontoksd:Document_DFAExam_Learner_01_FR13_2026_01_13 .
+
+    ontoksd:Document_DFAExam_Learner_01_FR13_2026_01_13 a ontoksd:Document ;
+        rdfs:label "Reference to the fictional written response of 13 January 2026"@en ;
+        dcterms:description "Synthetic document reference for the FR13 retrieval example."@en .
+
+    ontoksd:EvidencedCompetence_DFAConstruction_Learner_01_FR13_2026_01_13 a ontoksd:EvidencedCompetence ;
+        rdfs:label "Fictional judgment of DFA construction on 13 January 2026"@en ;
+        dcterms:identifier "EvidencedCompetence_DFAConstruction_Learner_01_FR13_2026_01_13" ;
+        ontoksd:refersToCompetence ontoksd:Competence_DFAConstruction ;
+        ontoksd:isEvidencedCompetenceOf ontoksd:Profile_Learner_01 ;
+        ontoksd:derivedFromParticipation ontoksd:AssessmentParticipation_Learner_01_DFAExam_FR13_2026_01_13 ;
+        ontoksd:supportedByEvidence ontoksd:Evidence_DFAExam_Learner_01_FR13_2026_01_13 ;
+        ontoksd:evidencedAt "2026-01-13T12:00:00Z"^^xsd:dateTime ;
+        ontoksd:hasContext ontoksd:AcquisitionContext_DFAExam_2026_01 ;
+        ontoksd:interpretedUsingScheme ontoksd:ProficiencyScheme_0_100_FourLevels ;
+        ontoksd:hasProficiencyLevel ontoksd:ProficiencyLevel_Advanced .
+}

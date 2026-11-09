@@ -1,0 +1,87 @@
+{
+  "head" : {
+    "vars" : [
+      "instructionalUnit",
+      "instructionalUnitLabel",
+      "competence",
+      "competenceLabel",
+      "competenceActivation"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "instructionalUnit" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#algorithmComparison"
+        },
+        "instructionalUnitLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Comparação de algoritmos iterativos e recursivos"
+        },
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#traceIteration"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Rastrear a execução de algoritmos iterativos"
+        },
+        "competenceActivation" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#prerequisiteIterationForComparison"
+        }
+      },
+      {
+        "instructionalUnit" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#algorithmComparison"
+        },
+        "instructionalUnitLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Comparação de algoritmos iterativos e recursivos"
+        },
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#traceRecursion"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Rastrear a execução de algoritmos recursivos"
+        },
+        "competenceActivation" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#prerequisiteRecursionForComparison"
+        }
+      },
+      {
+        "instructionalUnit" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#recursionPractice"
+        },
+        "instructionalUnitLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Prática de rastreamento recursivo"
+        },
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#traceIteration"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Rastrear a execução de algoritmos iterativos"
+        },
+        "competenceActivation" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq11#prerequisiteIterationForRecursion"
+        }
+      }
+    ]
+  }
+}

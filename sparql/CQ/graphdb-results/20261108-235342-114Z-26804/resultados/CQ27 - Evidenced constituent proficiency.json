@@ -1,0 +1,112 @@
+{
+  "head" : {
+    "vars" : [
+      "evidencedRecord",
+      "evidencedRecordLabel",
+      "competenceConstituent",
+      "competenceConstituentLabel",
+      "proficiencyLevel",
+      "proficiencyLevelLabel",
+      "proficiencyScheme"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "evidencedRecord" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#knowledgeJudgment"
+        },
+        "evidencedRecordLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Julgamento conceitual — consolidado"
+        },
+        "competenceConstituent" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#knowledge"
+        },
+        "competenceConstituentLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Conceitos de autômatos finitos determinísticos"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#consolidated"
+        },
+        "proficiencyLevelLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Consolidado"
+        },
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#scheme"
+        }
+      },
+      {
+        "evidencedRecord" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#missingSchemeJudgment"
+        },
+        "evidencedRecordLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Controle incompleto — nível sem esquema no registro"
+        },
+        "competenceConstituent" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#knowledge"
+        },
+        "competenceConstituentLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Conceitos de autômatos finitos determinísticos"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#emerging"
+        },
+        "proficiencyLevelLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Inicial"
+        }
+      },
+      {
+        "evidencedRecord" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#skillJudgment"
+        },
+        "evidencedRecordLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Julgamento da construção — em desenvolvimento"
+        },
+        "competenceConstituent" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#skill"
+        },
+        "competenceConstituentLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Construir autômatos finitos determinísticos"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#developing"
+        },
+        "proficiencyLevelLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Em desenvolvimento"
+        },
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd/test/cq27#scheme"
+        }
+      }
+    ]
+  }
+}

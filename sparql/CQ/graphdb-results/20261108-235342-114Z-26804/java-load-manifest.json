@@ -1,0 +1,1040 @@
+{
+  "captured_utc": "2026-11-09T03:08:29.8645754+00:00",
+  "repository": "OntoKSD2",
+  "loader": "loadInGraphDB/ontoKSD/SparqlBatchInserter.java",
+  "loader_sha256": "43e914d2acb2fd2b87ccf8da3f4ebbee79338cacd79cacb67e7f9386b83b29df",
+  "scope": "Static inventory of the inspected loader and files at capture time. It is not a historical execution log. RDF modules with disabled calls are recorded separately.",
+  "enabled_input_count": 146,
+  "disabled_rdf_calls": [
+    "ontoKSDOntology/SKOS.rdf",
+    "ontoKSDOntology/gufo.ttl",
+    "rcd/RCD.ttl",
+    "bloomTaxonomy/bloom-taxonomy.ttl",
+    "ontoKSDOntology/OntoKSD - SKOS - v7.0.ttl",
+    "cs2023Vocabulary/BoKCS2023_ontoksd.ttl"
+  ],
+  "enabled_inputs": [
+    {
+      "order": 1,
+      "method": "executeFile",
+      "file": "cc2020Vocabulary/ontoKSD-disposition-insert.rq",
+      "bytes": 26628,
+      "sha256": "b900aef3af0b7cb8349361cbe45f3520c5391e321e4a33330812a6ed37bd6473"
+    },
+    {
+      "order": 2,
+      "method": "executeFile",
+      "file": "cc2020Vocabulary/cc2020-knowledge-insert.rq",
+      "bytes": 53593,
+      "sha256": "9632232f11dea5eb0740c7eb9cf319ac80b8269f8e43bae6c9f636f2126ad26f"
+    },
+    {
+      "order": 3,
+      "method": "executeFile",
+      "file": "cc2020Vocabulary/cc2020-foundational-knowledge-insert.rq",
+      "bytes": 22889,
+      "sha256": "7adab37e32ca6bc019fefc72b790c9b038b88f3377507668ef4524c3182132e1"
+    },
+    {
+      "order": 4,
+      "method": "executeFile",
+      "file": "bloomTaxonomy/verbs/bloom-taxonomy-actionVerbType-insert.rq",
+      "bytes": 2322,
+      "sha256": "16cf9e843c1051f77ef9bfb187c41c364d93d1383ce30b7e55814ec522ed330d"
+    },
+    {
+      "order": 5,
+      "method": "executeFile",
+      "file": "bloomTaxonomy/verbs/bloom-taxonomy-verbs-insert.rq",
+      "bytes": 88850,
+      "sha256": "f97b49137e5714de8680c929ad32f873c2041f8825ccca4c0496050659da6706"
+    },
+    {
+      "order": 6,
+      "method": "executeFile",
+      "file": "bloomTaxonomy/verbs/bloom-taxonomy-dbpedia-insert.rq",
+      "bytes": 3985,
+      "sha256": "79651be780b16a0fb8e8e8e0e84a390ca26036954693d062a5660fe777e08e50"
+    },
+    {
+      "order": 7,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CC2020/sparql/InsertCompetence_A.rq",
+      "bytes": 11975,
+      "sha256": "af30e2e8d138c214d0c7acc8695c4c658e155f6e770a5fe2786db67c76f87f5f"
+    },
+    {
+      "order": 8,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CC2020/sparql/InsertCompetence_B.rq",
+      "bytes": 9927,
+      "sha256": "0a59bd29bf8ee92fe1b48a3e0297002a572ea634c870cb9e112791bc2caedf22"
+    },
+    {
+      "order": 9,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CC2020/sparql/InsertCompetence_C.rq",
+      "bytes": 9874,
+      "sha256": "be767437b758c7dec7cc9476c1a8919c13f284f4fe7ac3c2e21d77147d886b55"
+    },
+    {
+      "order": 10,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/00 - KnowledgeUnitContent.rq",
+      "bytes": 55114,
+      "sha256": "3e828886214eb9302adefa6a32144df7a3c18c50ea66342ad2880c6520f37fd4"
+    },
+    {
+      "order": 11,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications1.rq",
+      "bytes": 7287,
+      "sha256": "a7bdbf803a7b0ceded10a901d526ee29b2f2adabcc8940ef1a22ebdeadfdc744"
+    },
+    {
+      "order": 12,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications2.rq",
+      "bytes": 8843,
+      "sha256": "5397bd8289e81125206025acc13700fbac769a2b609ababa24635a96ce828af8"
+    },
+    {
+      "order": 13,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications3.rq",
+      "bytes": 8109,
+      "sha256": "5dfe2cf8192d9068341e306360c0baa11fdd5f78d387ebc0048ee06d8da1f4f2"
+    },
+    {
+      "order": 14,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications4.rq",
+      "bytes": 10805,
+      "sha256": "73a5ee7bce569596c70992e23748079d219d366853aca70e4c33780a7f04b852"
+    },
+    {
+      "order": 15,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications5.rq",
+      "bytes": 9791,
+      "sha256": "95ff4a011cba1f2e98075284a36c217f6778f7e0406f53687312eb58dabf0c00"
+    },
+    {
+      "order": 16,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications6.rq",
+      "bytes": 10263,
+      "sha256": "113501c74515b2454c7cc0e6309b5b4b0df0b7498be9515699464637a9613964"
+    },
+    {
+      "order": 17,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications7.rq",
+      "bytes": 11504,
+      "sha256": "7c25b3f91f9220d385d1fa0ede2f6f25e7a2a543977761ad48b049eb48dee3c3"
+    },
+    {
+      "order": 18,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications8.rq",
+      "bytes": 9706,
+      "sha256": "5dbf23d0a3dd79d81c01b5240e74f3c82feb01b2a1ff48eeb69d5103fb5b0aff"
+    },
+    {
+      "order": 19,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Applications9.rq",
+      "bytes": 14455,
+      "sha256": "1962d95ed8b97a38e6b9b26104719902a60c50da940a4638b28361069a96dada"
+    },
+    {
+      "order": 20,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Software1.rq",
+      "bytes": 5712,
+      "sha256": "656b3c2dae2ef6d2deda25e8dc4f2180a339a16e467c061cba037b10509932a8"
+    },
+    {
+      "order": 21,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Software2.rq",
+      "bytes": 7602,
+      "sha256": "b9064084d8f82144b04451feb84059d668db3766b7be6c682edf01b353de935e"
+    },
+    {
+      "order": 22,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Software3.rq",
+      "bytes": 6614,
+      "sha256": "fa6aac7fbbaf3164ff942ae95671178ebc88e754d6a69e9c81e08d052f1802d6"
+    },
+    {
+      "order": 23,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Software4.rq",
+      "bytes": 14198,
+      "sha256": "87935bdfd8d2fcd67d64f64bd9841ceb9aac3c3f3b0f5bf6a0b56f3d7cf45039"
+    },
+    {
+      "order": 24,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_Software5.rq",
+      "bytes": 6249,
+      "sha256": "100263bc3a79614a10b5d5d2c4c6a656ae70feda6787d64d48c888460fe334a6"
+    },
+    {
+      "order": 25,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System1.rq",
+      "bytes": 8756,
+      "sha256": "95eae15136f0666653dc69f1621229f9142765ddf7688b74502eb33e1ec6fbf7"
+    },
+    {
+      "order": 26,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System2.rq",
+      "bytes": 13070,
+      "sha256": "0397b796150cd3cbe54cc72714e4541500c96f0df32935a0b2ff0016adbce1b8"
+    },
+    {
+      "order": 27,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System3.rq",
+      "bytes": 11516,
+      "sha256": "126d8a32bbf32223252ea96c42cb8ac3299b3932b2fc1c05184dcfd585d038a9"
+    },
+    {
+      "order": 28,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System4.rq",
+      "bytes": 18319,
+      "sha256": "7f369bcda8fce207a6d5312c657a46873d1b5e5c3f7f6b6e07cf0722ea6251ca"
+    },
+    {
+      "order": 29,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System5.rq",
+      "bytes": 6508,
+      "sha256": "60f8402f0ade5dbdac680982b5c33f90f722875381509fb33b95abac9e4e1bd4"
+    },
+    {
+      "order": 30,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System6.rq",
+      "bytes": 14627,
+      "sha256": "7734d2d9972997c22404dfe4212ca8bf51c8740cdd061ea59ee77394e4f083ef"
+    },
+    {
+      "order": 31,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System7.rq",
+      "bytes": 8494,
+      "sha256": "62fb243aee1ceacfe826dba8795c0c4fd05673f360ccac287ca0eed898584361"
+    },
+    {
+      "order": 32,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CS2023/sparql/Competence CS2023_System8.rq",
+      "bytes": 10813,
+      "sha256": "82fbd148fa4e1ad02c3aeab3c065895c4dd66fe42b1f06a4a0a611d7d833d289"
+    },
+    {
+      "order": 33,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/00 - IS2020 Source and Pattern.rq",
+      "bytes": 1493,
+      "sha256": "3166913b43112a30d620b215c2eb468f80508a39f1050df537659861fc7d2dff"
+    },
+    {
+      "order": 34,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_app_dev_programming_competencies_insert.rq",
+      "bytes": 113133,
+      "sha256": "3bf6d00b30d57ca3f775fc17afe0a86153069b531448c77890a420f839e5845b"
+    },
+    {
+      "order": 35,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_business_process_management_competencies_insert.rq",
+      "bytes": 39400,
+      "sha256": "acb99b5bd71078a19bf6ee260472ea71d8b82150b2832301dc99532d38b1ce01"
+    },
+    {
+      "order": 36,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_data_business_analytics_competencies_insert.rq",
+      "bytes": 33728,
+      "sha256": "e398addd4f1c68cc04307f8152bcc7ade9e3cd27fa197fd4df00c6be95bc27e1"
+    },
+    {
+      "order": 37,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_data_information_management_competencies_insert.rq",
+      "bytes": 32062,
+      "sha256": "394549b120ef54d835b76a21e20ff0716e95b87b908ca54735682d4d3f92c54b"
+    },
+    {
+      "order": 38,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_data_information_visualization_competencies_insert.rq",
+      "bytes": 30563,
+      "sha256": "3877451cfa242f137c048e987ab6a6fe0e4910d9132e7410df31a35b1f38c518"
+    },
+    {
+      "order": 39,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_digital_innovation_competencies_insert.rq",
+      "bytes": 42011,
+      "sha256": "dc95c6201f4824fe98aa95c505da3d12650b0b2ad78e088aa227dae8d5c9ac08"
+    },
+    {
+      "order": 40,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_emerging_technologies_competencies_insert.rq",
+      "bytes": 44764,
+      "sha256": "442a86eeca7da1b5779e1a5aa2ae5fa9be2cb86275b18f470fea26e77ce671f3"
+    },
+    {
+      "order": 41,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_foundations_competencies_insert.rq",
+      "bytes": 73210,
+      "sha256": "3b2a94675b8059c20ccbe8dcd782c069ba6686c7e4f32436f249a92a586d2bca"
+    },
+    {
+      "order": 42,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_is_ethics_sustainability_society_competencies_insert.rq",
+      "bytes": 64964,
+      "sha256": "fd48f7cdf18fcdd496953aca053666ed2cdcefc5a2bf60474d26ea14df033854"
+    },
+    {
+      "order": 43,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_is_management_and_strategy_competencies_insert.rq",
+      "bytes": 63044,
+      "sha256": "4df4af7f26483cfde041bf75948b5b9e7349aedb9c3d3081a46aeaf46baeda51"
+    },
+    {
+      "order": 44,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_is_practicum_competencies_insert.rq",
+      "bytes": 84105,
+      "sha256": "b38496bfaace88e20ccb9161accc676384a6f5e6881ba0b1b7a7a735e0ea4682"
+    },
+    {
+      "order": 45,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_is_project_management_competencies_insert.rq",
+      "bytes": 100677,
+      "sha256": "3e494c26f9b63a64220a76e4741ee767bbd63dee6fbab9c565acf090c7ad9888"
+    },
+    {
+      "order": 46,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_it_infrastructure_competencies_insert.rq",
+      "bytes": 57340,
+      "sha256": "5d3823e771c458946233d39c224c72cfc8f962b273fe5519bdbee64c7ad0383b"
+    },
+    {
+      "order": 47,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_mobile_development_competencies_insert.rq",
+      "bytes": 84446,
+      "sha256": "2b3172e94ca4775bd11c3d84e2506601143eb789ef2b9f84a0dd7a4ad846dd25"
+    },
+    {
+      "order": 48,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_object_oriented_paradigm_competencies_insert.rq",
+      "bytes": 67233,
+      "sha256": "e1c07774251d88b2b11bdc47889d64665fbdea5f1174bc93d63c8199d710609c"
+    },
+    {
+      "order": 49,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_secure_computing_competencies_insert.rq",
+      "bytes": 40348,
+      "sha256": "aa180d05ea0cdd06ca522d344685e4f8ded0b4053fb637f9557005473e3ec4f0"
+    },
+    {
+      "order": 50,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_systems_analysis_and_design_competencies_insert.rq",
+      "bytes": 75268,
+      "sha256": "31ea73ddd8e539032285eeabe62967cfa4f67bf75bcf1f7479ec842849401209"
+    },
+    {
+      "order": 51,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_user_interface_design_competencies_insert.rq",
+      "bytes": 44261,
+      "sha256": "f91b06ff5ce69b5804f936f937b3014a35736c84c5918c039159cd70201cda3f"
+    },
+    {
+      "order": 52,
+      "method": "executeDirectory",
+      "file": "competenceInstances/IS2020/sparql/is2020_web_development_competencies_insert.rq",
+      "bytes": 96028,
+      "sha256": "fa5ee2df3c278465a7ed1d50e79cc05e839c1d4bb5dfcfdacef49eaedc34f815"
+    },
+    {
+      "order": 53,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-01/00 - Cycle01 Sources and Knowledge.rq",
+      "bytes": 12279,
+      "sha256": "158f0dadf3ad188f2c1748007789eb4464675e82a86fcc352f4cb5ad3bb90967"
+    },
+    {
+      "order": 54,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-01/01 - Cycle01 Justification Verbs.rq",
+      "bytes": 7496,
+      "sha256": "daf66b6ef34075cdc73ab73dc2c8e01c2f0e8bf0504513fa2e35fa9dce0d84ed"
+    },
+    {
+      "order": 55,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C01.rq",
+      "bytes": 4231,
+      "sha256": "c2e13a49dcb6574ad6e74a6b07b67f4d64e36fa4fe7e718721c166d73b6bd588"
+    },
+    {
+      "order": 56,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C02.rq",
+      "bytes": 3807,
+      "sha256": "7313e040757a6757e21e720f612702d0f02c910dee624eb191720e29a9f06cdc"
+    },
+    {
+      "order": 57,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C03.rq",
+      "bytes": 3745,
+      "sha256": "549a64503e61292a3eb8f1f5e8bbb62340ffc3e750aceb6486a356501dbe1287"
+    },
+    {
+      "order": 58,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C04.rq",
+      "bytes": 3725,
+      "sha256": "053e293f4652bc78093b08a0c7d6b8a3ccc1ae4052edcf011f56a5d0037fd671"
+    },
+    {
+      "order": 59,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C05.rq",
+      "bytes": 2333,
+      "sha256": "7bc5d26c6f28f98968fa97f164e34c9977062e132ee8c58c1a264df4eb401f47"
+    },
+    {
+      "order": 60,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C06.rq",
+      "bytes": 4049,
+      "sha256": "5ca0ff4e38378d2f3e632eaf388c44d12e2e8f3d6f692a64b88e729e72d4695d"
+    },
+    {
+      "order": 61,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C07.01.rq",
+      "bytes": 4662,
+      "sha256": "f62ec288ae35f892182df43b5d4d5e8c9c60c524006c615562f2b3b615f3a681"
+    },
+    {
+      "order": 62,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C07.rq",
+      "bytes": 3970,
+      "sha256": "501e1bec724f1e83c9e70e405881cf55f68421c83f32991ce109f53a2fb59dd6"
+    },
+    {
+      "order": 63,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C08.01.rq",
+      "bytes": 3880,
+      "sha256": "b981c10af4b3186f29129f3317df8c8be2231e9ef3932765316a3d7adeb132aa"
+    },
+    {
+      "order": 64,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C08.rq",
+      "bytes": 3131,
+      "sha256": "2a251b36ddc4ea7ad2c2441c1d77b3cfef668db157d85fb1ea00eaaebac5d105"
+    },
+    {
+      "order": 65,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C09.01.rq",
+      "bytes": 4712,
+      "sha256": "16cb26a33909fc35b8d860881d817799b354792f36632f44f0647ea247f8233d"
+    },
+    {
+      "order": 66,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C09.rq",
+      "bytes": 3111,
+      "sha256": "76e2d529eeb3777502fbb67834ac1b312777c1aff4b1b33aa5d2678eeba5d65f"
+    },
+    {
+      "order": 67,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C10.rq",
+      "bytes": 3823,
+      "sha256": "74aebffb703cbec3931faac4c838fb04ffa2cfd0968455ce87845d207fba1942"
+    },
+    {
+      "order": 68,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C11.rq",
+      "bytes": 3184,
+      "sha256": "13fb90250ffb81cfe8e573859138b4360ed05c7ee68ca19c356b390a94849fe8"
+    },
+    {
+      "order": 69,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C12.rq",
+      "bytes": 4059,
+      "sha256": "c4924a0b4be45e590393ca1cfb408ce7c6d9cea868c84942f7a8d8a8d7ace767"
+    },
+    {
+      "order": 70,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C13.rq",
+      "bytes": 4267,
+      "sha256": "888487e9f160aa89e0a320d0f8bc0c67f844d3f16fef1c2021974bbb9be63dd9"
+    },
+    {
+      "order": 71,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/competencies/C14.rq",
+      "bytes": 4045,
+      "sha256": "6ec6040682ed122da7dc0e3ac32fc7a95b34ccd6870713bd1b01794515760d62"
+    },
+    {
+      "order": 72,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/tasks/TASK01.rq",
+      "bytes": 33909,
+      "sha256": "14098e9ffefeaaf1d97199739667e08ee2c7a45dee96a74fd6a0485ac7910287"
+    },
+    {
+      "order": 73,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/tasks/TASK02.rq",
+      "bytes": 34538,
+      "sha256": "bc975c76c937f3aa4e62a9f40defc8ebb9bf84657e9644031271ce5a94b5b589"
+    },
+    {
+      "order": 74,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/tasks/TASK03.rq",
+      "bytes": 35800,
+      "sha256": "8cc12c28780a1856086a30b946b14d4ce9decd7bd112ebec415786065e9011bb"
+    },
+    {
+      "order": 75,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/tasks/TASK04.rq",
+      "bytes": 36125,
+      "sha256": "8c392faeb79600dd841ca8a40be6b6a18f487002aea99e299636ddb1a14c7318"
+    },
+    {
+      "order": 76,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-01/tasks/TASK05.rq",
+      "bytes": 37170,
+      "sha256": "a0a41e4660f449564148b88e51bb89dbcd66db82dce24de1fd345e9260a5998e"
+    },
+    {
+      "order": 77,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-02/00 - Cycle02 Sources and Vocabulary.rq",
+      "bytes": 14153,
+      "sha256": "177fa9150b6d47d94c12d6a539b8e0d5c558f701aca9fe1e0aa90d72c0890683"
+    },
+    {
+      "order": 78,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/competencies/C13.01.rq",
+      "bytes": 4242,
+      "sha256": "f3601746577e5d51e5f884600feecc173132b9ee40af9acb47d20af5634a1e55"
+    },
+    {
+      "order": 79,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/competencies/C15.rq",
+      "bytes": 4222,
+      "sha256": "baef46405c9a44b33ce304790830143003ff3c68fdd3b3acac8832e855855d45"
+    },
+    {
+      "order": 80,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/competencies/C16.rq",
+      "bytes": 4154,
+      "sha256": "4e2854f75b431e656ba45c5644951f24dfcfe0e0343a6296e66591db32a78093"
+    },
+    {
+      "order": 81,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/tasks/TASK201.rq",
+      "bytes": 19756,
+      "sha256": "052ac8b6db7c576b6949edce6f7f334636d7c2bebffbcf7669e017d169eccb8d"
+    },
+    {
+      "order": 82,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/tasks/TASK202.rq",
+      "bytes": 15947,
+      "sha256": "ff38846a9a86e87077a304307df9320e933dca6688994c953dbfb9d0ba85fcc5"
+    },
+    {
+      "order": 83,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/tasks/TASK203.rq",
+      "bytes": 16710,
+      "sha256": "c16c413ea366e605d63c6bb1629f7f64cac4549071ab507aed346a7de6a0fc94"
+    },
+    {
+      "order": 84,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-02/tasks/TASK204.rq",
+      "bytes": 27865,
+      "sha256": "5bef6851502d6b60af42662ae3b16fc53aff8cfa6c32934677dbe712b12bf5fc"
+    },
+    {
+      "order": 85,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-02/assessment-records/task201/task201-records.rq",
+      "bytes": 143127,
+      "sha256": "0fe1e217c0d88c2fb728d37d203e8e449524f26e6b8a4f1676670c87805cc779"
+    },
+    {
+      "order": 86,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-02/assessment-records/task202/task202-records.rq",
+      "bytes": 124122,
+      "sha256": "2c772697d511c6a51181974f1b53cb89fa3bd2e0dab466f087ab318bba1c1ff7"
+    },
+    {
+      "order": 87,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-03/00 - Cycle03 Sources and Vocabulary.rq",
+      "bytes": 14895,
+      "sha256": "123d5ce9ce91461a01721841a015e9fef0138a2bf25126f3c86bd98100babddd"
+    },
+    {
+      "order": 88,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-03/01 - Cycle03 Justification Verbs.rq",
+      "bytes": 2578,
+      "sha256": "6785e60760fcbdbf693a4401b26704cd6af17df01b22a68368d1a4c9d990e44a"
+    },
+    {
+      "order": 89,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C05.01.rq",
+      "bytes": 5662,
+      "sha256": "bb7f5d2ec7c7f11f7865210869116ad263e211a44740fe5abb15713ab3b745a6"
+    },
+    {
+      "order": 90,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C17.rq",
+      "bytes": 6671,
+      "sha256": "2ccbf525f11eec233301bd97bd549b13563cab0ae7bf89111c0019fe9307f21c"
+    },
+    {
+      "order": 91,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C18.rq",
+      "bytes": 5282,
+      "sha256": "3517350a5c6f16f4848426533511f751a95bf09e328cac92e48ccb836e415efd"
+    },
+    {
+      "order": 92,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C19.rq",
+      "bytes": 5147,
+      "sha256": "b49c7ed138059f89ea2628008fbf2670dda87657dd7b8c0ae3994e8d946b378d"
+    },
+    {
+      "order": 93,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C20.rq",
+      "bytes": 8341,
+      "sha256": "2d865794bf3f898ce95304ecb13afd84af5bfd12c0ec2195bf63d2b618579663"
+    },
+    {
+      "order": 94,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C21.rq",
+      "bytes": 5201,
+      "sha256": "da8052ec1a0975b6e63cf444ed68608ed5d9fbcd3625615e49a943997bb4c1b8"
+    },
+    {
+      "order": 95,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C22.rq",
+      "bytes": 4116,
+      "sha256": "910f4cd2de2b9239d18e04df399cc328f0ee456f575bad2d23fce496dd6b7cbe"
+    },
+    {
+      "order": 96,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/competencies/C23.rq",
+      "bytes": 5535,
+      "sha256": "025852c022cbda8e625c8f50220cc1f753f905bd71d213d5273abf2ff4c86b18"
+    },
+    {
+      "order": 97,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/tasks/TASK301.rq",
+      "bytes": 28961,
+      "sha256": "69ca67cd9572c8eada2d5a689b1787d93d8dd1f453b3c40056da34b7e3139914"
+    },
+    {
+      "order": 98,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/tasks/TASK302.rq",
+      "bytes": 29205,
+      "sha256": "23387451494f920b77785f6e14d7adad7f435f3135bf83221e307326588d0cf3"
+    },
+    {
+      "order": 99,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/tasks/TASK303.rq",
+      "bytes": 36759,
+      "sha256": "e110cbe60e70ccce60165328e2d2d8a3ee91833f3826cd17f2ca075c3b2e0c81"
+    },
+    {
+      "order": 100,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/tasks/TASK304.rq",
+      "bytes": 28149,
+      "sha256": "d4074475fc2d08b94ba32aad9ddfa2a7135ae0e27264289a9db2039298ff6f29"
+    },
+    {
+      "order": 101,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-03/tasks/TASK305.rq",
+      "bytes": 27957,
+      "sha256": "8295bcd39d36b9524ee2be7053f1124c517f8cb1c7066f2e50f917ca19e0b830"
+    },
+    {
+      "order": 102,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-04/00 - Cycle04 Sources and Vocabulary.rq",
+      "bytes": 24309,
+      "sha256": "d6d07a2a9d87ce1ede6eaf31804239f03d645e49c978565e97510f6265ad3cdd"
+    },
+    {
+      "order": 103,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-04/01 - Cycle04 Justification Verbs.rq",
+      "bytes": 8751,
+      "sha256": "39ee4a97f8fa8b04841f29000e31df1ef43950edb3a2d11181cd90ae51fd8146"
+    },
+    {
+      "order": 104,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM01.rq",
+      "bytes": 2110,
+      "sha256": "21791421af95603ee0b59395c848cd85b41bb785331c47d5c65e08e1e654b809"
+    },
+    {
+      "order": 105,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM02.rq",
+      "bytes": 4266,
+      "sha256": "fc02642223b480d1b81b5645d0735ab18bca8df0501f4e1e641ca3c724c09900"
+    },
+    {
+      "order": 106,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM03.rq",
+      "bytes": 2682,
+      "sha256": "7e28090cef6a5f44f7bc15b1a7d6eb2c07b96f0e1b4a70deadb6271df944eded"
+    },
+    {
+      "order": 107,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM04.rq",
+      "bytes": 2997,
+      "sha256": "306773fe1862c30cb1363f7872b2f8b86ed702d9c42da28b800246ebf78bb12b"
+    },
+    {
+      "order": 108,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM05.rq",
+      "bytes": 2670,
+      "sha256": "b8e4a513fade874875b43f9a13087cde1b968c75c49c485d53af2e4944d71000"
+    },
+    {
+      "order": 109,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM06.rq",
+      "bytes": 4255,
+      "sha256": "8fe2a06e6ab187ed6ac47eba5c42eaca2fb8cf9a6fc16f8d54a858e4510525e8"
+    },
+    {
+      "order": 110,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM07.rq",
+      "bytes": 3441,
+      "sha256": "a8ac1600be83d2f47d780319f74b56d38965430c9a74453e7a150412011cd97f"
+    },
+    {
+      "order": 111,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM08.rq",
+      "bytes": 2694,
+      "sha256": "aa8fd4af586a65eeb25cea08a35a11f9fc1a4ba09c58417355711f563bd877b8"
+    },
+    {
+      "order": 112,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM09.rq",
+      "bytes": 2973,
+      "sha256": "3b294a3639be1c8078439bab81e0ae5e7f51977904536936a503510a622d86cf"
+    },
+    {
+      "order": 113,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM10.rq",
+      "bytes": 2847,
+      "sha256": "a6e7882f167f6515e77c229d89310cb6fa845bab1316fbfa1dcefa46ea7930c0"
+    },
+    {
+      "order": 114,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM11.rq",
+      "bytes": 4607,
+      "sha256": "7014f196405a485757ba9b45d408b4f1fb3c90e747ad850bd325fe96b064d0ca"
+    },
+    {
+      "order": 115,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM12.rq",
+      "bytes": 2108,
+      "sha256": "97a659bddf3c8fb376a19c661ebe1479fb091435584a0a005feda50e4fdc5570"
+    },
+    {
+      "order": 116,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM13.rq",
+      "bytes": 2080,
+      "sha256": "3abffb05b7f12606554f4805365a6b654d89969813cf2e5bf65c9586ffa96576"
+    },
+    {
+      "order": 117,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM14.rq",
+      "bytes": 2695,
+      "sha256": "eda3f134ccb4d99cf1bb197df3f7c6440f1d5315e07d779e74efdb6a835451e9"
+    },
+    {
+      "order": 118,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM15.rq",
+      "bytes": 2090,
+      "sha256": "c8cb63597db642537b864920156fc4499eb3c497dc0ce7b292786774c18b97ac"
+    },
+    {
+      "order": 119,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM16.rq",
+      "bytes": 2130,
+      "sha256": "4f6b40708d13a5a38996ca9747fb18b00e8f2f1ae77d28f786d836c316501d0c"
+    },
+    {
+      "order": 120,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM17.rq",
+      "bytes": 2717,
+      "sha256": "263a5027b90de77e31bbf7ce2f9118b4021b9bed27ff8c16633e0ecf1d63af80"
+    },
+    {
+      "order": 121,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM18.rq",
+      "bytes": 2144,
+      "sha256": "be503091c9b7e57b3c65f5d43fecdd38819cedde0d792f299c893dbbf5ce0078"
+    },
+    {
+      "order": 122,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM19.rq",
+      "bytes": 1993,
+      "sha256": "fc8cc99d14b43346f4bdf1d1edc340cd240b602c775ca9c8306e25768820100f"
+    },
+    {
+      "order": 123,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM20.rq",
+      "bytes": 3274,
+      "sha256": "d3c907d0d07b0cd311e4c7a57ffd4e05294802de5e45dc73da0aedd93d88d7ef"
+    },
+    {
+      "order": 124,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM21.rq",
+      "bytes": 3328,
+      "sha256": "085a90861ee7d44101869ceebe27a11d8488f717d6f6545d0974a98151a3fd16"
+    },
+    {
+      "order": 125,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM22.rq",
+      "bytes": 2071,
+      "sha256": "85a00c23c8394528867d943e2da345585b266ec924acb455197a5affc9981684"
+    },
+    {
+      "order": 126,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/competencies/CM23.rq",
+      "bytes": 2197,
+      "sha256": "136f638c47355dd3dbeeee004b9c6c302324bac56ae9597f0b199ccfc7f98e03"
+    },
+    {
+      "order": 127,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK401.rq",
+      "bytes": 31558,
+      "sha256": "ffb776dc6d853b0beaf28f66cc43c521e9bb7468ae9554fe04862ba3eb8b021a"
+    },
+    {
+      "order": 128,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK402.rq",
+      "bytes": 10136,
+      "sha256": "b79fe644e09a2135b4527308898f9c5831051366f16fdaf40d975e0c427b9adb"
+    },
+    {
+      "order": 129,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK403.rq",
+      "bytes": 25532,
+      "sha256": "6704dcb954bd3596cab88a6390b88f0ab4f273d6cd742155b9fa1038d4d30699"
+    },
+    {
+      "order": 130,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK404.rq",
+      "bytes": 13339,
+      "sha256": "f2ab30c2315366e04d5527439059ad4545b0511d8c7ecaeaa08621ab9cee2db5"
+    },
+    {
+      "order": 131,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK405.rq",
+      "bytes": 18686,
+      "sha256": "15f59bc13604642a95c498bcc8db92648a3415d93da611ef2de92d883e1c6d53"
+    },
+    {
+      "order": 132,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK406.rq",
+      "bytes": 16140,
+      "sha256": "2544c8a58339ef4091f09717ad68e67b0c4fc69583a46156398020971c75ca1c"
+    },
+    {
+      "order": 133,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK407.rq",
+      "bytes": 20606,
+      "sha256": "1e09b3b206dcc228be2b8a36edf332ba918bd544880676949efcf59e81652f21"
+    },
+    {
+      "order": 134,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK408.rq",
+      "bytes": 7350,
+      "sha256": "9fe65098f7bb6c4b04aa1dcc6c373f41c259f3cd534efdc64508e9c61e9b29ee"
+    },
+    {
+      "order": 135,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK409.rq",
+      "bytes": 13990,
+      "sha256": "e8ca5d1912f6ac73e025f3b770acbdf2ab27d3a6d34ddb8f7be9392a790cbb9f"
+    },
+    {
+      "order": 136,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK410.rq",
+      "bytes": 16343,
+      "sha256": "f60615d7161ed52f3b5011c554668919642eb780cef5b6983abd7b89c22dea02"
+    },
+    {
+      "order": 137,
+      "method": "executeDirectory",
+      "file": "competenceInstances/CSP/cycle-04/tasks/TASK411.rq",
+      "bytes": 18871,
+      "sha256": "7ded7a9f2aca28b2cd36d6d4cf63c934997ef18d39a5ad2047d6a8f45fb962cb"
+    },
+    {
+      "order": 138,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-04/02 - Cycle04 External Alignments.rq",
+      "bytes": 58019,
+      "sha256": "5140ac251c15c800c8d1b9d76077343d046c85ebe7d647e49f1e1fc516972a56"
+    },
+    {
+      "order": 139,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-04/03 - Cycle04 Documentary History.rq",
+      "bytes": 47415,
+      "sha256": "65b1d88d629efd390571ba0bc1110645c981563ad21efcf1c4a83bff04bd811d"
+    },
+    {
+      "order": 140,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-02/cycle-02-operational-layer/second_cycle_shared_proficiency_scheme.rq",
+      "bytes": 4641,
+      "sha256": "4a64aa4955e690318eb249f11fa992d320156b39db9b5df4509787e6143a0fa5"
+    },
+    {
+      "order": 141,
+      "method": "executeFile",
+      "file": "competenceInstances/CSP/cycle-02/cycle-02-operational-layer/task201_204_course_layer.rq",
+      "bytes": 16420,
+      "sha256": "ec5d0d94b5061d0eec8f808e00fbb92feb46dbea81165bb0ee301d1c02a0e1ee"
+    },
+    {
+      "order": 142,
+      "method": "executeFile",
+      "file": "proficiency level/01 - ProficiencyLevel.rq",
+      "bytes": 7957,
+      "sha256": "554e385edfea9d7141886d795e08b68958db44b968235ccc02a04cd340d293fd"
+    },
+    {
+      "order": 143,
+      "method": "executeFile",
+      "file": "proficiency level/02 - Proficiency_Instances.rq",
+      "bytes": 15788,
+      "sha256": "4094c1c8a3a61637a5a474b474b5e141a1a65034d8861348941b913fc1cbdc3b"
+    },
+    {
+      "order": 144,
+      "method": "executeFile",
+      "file": "proficiency level/03 - Gap_Analisys.rq",
+      "bytes": 6309,
+      "sha256": "b7fa8a2ac360227c9d2d1269b4386e35d6bda86996f00fb2dc9b909285204bf5"
+    },
+    {
+      "order": 145,
+      "method": "executeFile",
+      "file": "sparql/CQ/tests/CQ11/01-load-synthetic-data.rq",
+      "bytes": 3739,
+      "sha256": "81a05c9f64aa09b02565044773bbddc3867055cad5ed2054550ce2902148b992"
+    },
+    {
+      "order": 146,
+      "method": "executeFile",
+      "file": "sparql/CQ/tests/CQ27/01-load-synthetic-data.rq",
+      "bytes": 8887,
+      "sha256": "21b40601964c151b06088baf2f9e0e738b5618f1365301fb12907df03e48afb7"
+    }
+  ]
+}

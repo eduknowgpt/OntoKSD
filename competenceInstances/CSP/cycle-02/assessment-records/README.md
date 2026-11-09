@@ -70,6 +70,4 @@ Each task folder contains queries for final results, evidence documents, questio
 
 The task directory contains one INSERT script; its read-only SELECT files are in `queries/`. A non-recursive batch updater may execute the task directory, but SELECT queries must be run in the query interface. Choose the RDF-loading or INSERT method rather than treating their equivalent files as different layers.
 
-## Turtle and SPARQL formats
 
-The `.ttl` file is valid Turtle for RDF import. The `.rq` file contains the same grouped individuals inside `INSERT DATA`, using SPARQL `PREFIX` declarations. `INSERT DATA` is not Turtle syntax and therefore is not placed inside a `.ttl` file. Choose the format appropriate to the loading method.

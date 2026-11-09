@@ -1,0 +1,47 @@
+# Compares the assessment occurrence identified through participation with any occurrence stated directly 
+# on the record and with the recorded origin of each supporting evidence item. 
+# A discrepancy between the record's two occurrence links flags a consistency issue. 
+# Evidence produced in a different occurrence is flagged for review, since an earlier artifact may legitimately support a later assessment.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT DISTINCT ?record ?recordType ?evidence
+                ?assessmentOccurrence ?statedOccurrence ?evidenceOrigin
+                ?occurrenceMismatch ?provenanceStatus
+WHERE {
+  VALUES ?recordType {
+    ontoksd:EvidencedCompetence
+    ontoksd:EvidencedCompetenceConstituent
+  }
+
+  ?record a ?recordType ;
+          ontoksd:supportedByEvidence ?evidence .
+
+  OPTIONAL {
+    ?record ontoksd:derivedFromParticipation ?participation .
+    ?participation (ontoksd:occursInAssessmentOccurrence |
+                    ^ontoksd:involvesAssessmentParticipation)
+                   ?assessmentOccurrence .
+  }
+  OPTIONAL {
+    ?record ontoksd:isEvidencedInAssessmentOccurrence ?statedOccurrence .
+  }
+  OPTIONAL {
+    ?evidence (ontoksd:evidenceBasedOn | ^ontoksd:producesEvidence)
+              ?evidenceOrigin .
+  }
+
+  BIND(
+    IF(BOUND(?assessmentOccurrence) && BOUND(?statedOccurrence),
+       !sameTerm(?assessmentOccurrence, ?statedOccurrence), false)
+    AS ?occurrenceMismatch
+  )
+  BIND(
+    IF(!BOUND(?assessmentOccurrence), "assessment-occurrence-missing",
+       IF(!BOUND(?evidenceOrigin), "evidence-origin-not-recorded",
+          IF(sameTerm(?assessmentOccurrence, ?evidenceOrigin),
+             "same-occurrence", "review-cross-occurrence-evidence")))
+    AS ?provenanceStatus
+  )
+  FILTER(?occurrenceMismatch || ?provenanceStatus != "same-occurrence")
+}

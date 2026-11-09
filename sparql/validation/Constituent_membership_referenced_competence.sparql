@@ -1,0 +1,33 @@
+
+# For each linked pair of EvidencedCompetenceConstituent and EvidencedCompetence records, 
+# checks whether the constituent specification belongs to the competence specification referenced by the second record. 
+# The query distinguishes missing specification references from a membership link that was not found in the queried graph.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT DISTINCT ?constituentRecord ?competenceRecord
+                ?constituent ?competence ?issue
+WHERE {
+  ?constituentRecord
+      (ontoksd:isEvidencedCompetenceConstituentOf |
+       ^ontoksd:hasEvidencedConstituent) ?competenceRecord .
+
+  OPTIONAL {
+    ?constituentRecord ontoksd:refersToCompetenceConstituent ?constituent .
+  }
+  OPTIONAL {
+    ?competenceRecord ontoksd:refersToCompetence ?competence .
+  }
+
+  BIND(
+    IF(!BOUND(?constituent) || !BOUND(?competence),
+       "specification-reference-missing",
+       IF(EXISTS {
+            ?competence (ontoksd:hasCompetenceConstituent |
+                         ^ontoksd:isCompetenceConstituentOf) ?constituent .
+          },
+          "ok", "constituent-membership-not-found"))
+    AS ?issue
+  )
+  FILTER(?issue != "ok")
+}

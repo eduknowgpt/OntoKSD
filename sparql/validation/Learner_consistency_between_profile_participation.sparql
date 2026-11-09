@@ -1,0 +1,35 @@
+# Checks whether the profile and assessment participation linked to an `EvidencedCompetence` record identify the same learner. 
+# The query reports an incomplete path if either learner identifier is missing and a mismatch if the two paths identify different learners.
+
+PREFIX ontoksd: <http://purl.org/ontoksd#>
+
+SELECT DISTINCT ?record ?profile ?participation
+                ?profileLearner ?participationLearner ?issue
+WHERE {
+  ?record a ontoksd:EvidencedCompetence .
+
+  OPTIONAL {
+    ?record (ontoksd:isEvidencedCompetenceOf |
+             ^ontoksd:hasEvidencedCompetence) ?profile .
+    OPTIONAL {
+      ?profile (ontoksd:isProfileOf | ^ontoksd:hasProfile) ?profileLearner .
+    }
+  }
+
+  OPTIONAL {
+    ?record ontoksd:derivedFromParticipation ?participation .
+    OPTIONAL {
+      ?participation (ontoksd:hasLearner |
+                      ^ontoksd:participatesIn) ?participationLearner .
+    }
+  }
+
+  BIND(
+    IF(!BOUND(?profileLearner) || !BOUND(?participationLearner),
+       "learner-path-incomplete",
+       IF(sameTerm(?profileLearner, ?participationLearner),
+          "ok", "learner-mismatch"))
+    AS ?issue
+  )
+  FILTER(?issue != "ok")
+}

@@ -22,6 +22,13 @@ There are 120 participation records and 39 evidence references in this case. The
 
 No EvidencedCompetence, EvidencedCompetenceConstituent or proficiency assignment is fabricated from these task-level scores. Any future constituent-level interpretation must identify its textual basis, scope, learner and retrospective interpretation status.
 
+The Cycle 2 CSP documentation records the
+[Task202 documentary correspondence for FR9](https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-FR9-Documentary-Traceability.md)
+and describes the
+[historical assessment sources relevant to FR11](https://github.com/eduknowgpt/OCSP/blob/main/CSP/cycles/cycle-02/en/Task202-TeamControl/TASK202-FR11-Assessment-Source-Description.md).
+These documents provide the source context for the evaluated historical
+encoding.
+
 ## Checks
 
 The five supplied queries return 32 final results, 29 evidence-to-document links, 25 questionnaire references, 32 dimensional comparisons and zero mean violations. Shared queries identify the one unresolved questionnaire linkage and source provenance. See the shared and local validation reports for scope and actual results. These checks do not establish full OWL DL consistency with all imports, pedagogical effectiveness or independent human validation.
@@ -30,6 +37,3 @@ The five supplied queries return 32 final results, 29 evidence-to-document links
 
 The task directory contains one INSERT script; its read-only SELECT files are in `queries/`. A non-recursive batch updater may execute the task directory, but SELECT queries must be run in the query interface. Choose the RDF-loading or INSERT method rather than treating their equivalent files as different layers.
 
-## Turtle and SPARQL formats
-
-The `.ttl` file is valid Turtle for RDF import. The `.rq` file contains the same grouped individuals inside `INSERT DATA`, using SPARQL `PREFIX` declarations. `INSERT DATA` is not Turtle syntax and therefore is not placed inside a `.ttl` file. Choose the format appropriate to the loading method.

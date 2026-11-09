@@ -1,0 +1,306 @@
+{
+  "head" : {
+    "vars" : [
+      "competence",
+      "competenceLabel",
+      "relation",
+      "relatedCompetence",
+      "relatedCompetenceLabel",
+      "specializationDescription"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C05"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Write a technical report"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "hasSpecialization"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C05_01"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Write mathematically rigorous answers"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C05.01 directly specializes C05 by requiring mathematically rigorous answers with explicit definitions, precise notation, structured argumentation, examples and counterexamples where appropriate. The relationship does not copy base values automatically or establish learner attainment."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C05_01"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Write mathematically rigorous answers"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "isSpecializationOf"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C05"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Write a technical report"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C05.01 directly specializes C05 by requiring mathematically rigorous answers with explicit definitions, precise notation, structured argumentation, examples and counterexamples where appropriate. The relationship does not copy base values automatically or establish learner attainment."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C07"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Develop Problem-Solving Solutions Using Turing Machines"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "hasSpecialization"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C07_01"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Develop Integrated Multi-Agent Solutions Using Turing Machines"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C07.01 specializes C07 by restricting the expected performance to integrated, interacting Farmer Robot and Feeder Robot modules. It preserves the base purpose while adding system-level adequacy, coordination or realization requirements documented in Task05. Specialization is direct and does not assert component composition or automatic inheritance of RDF property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C07_01"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Develop Integrated Multi-Agent Solutions Using Turing Machines"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "isSpecializationOf"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C07"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Develop Problem-Solving Solutions Using Turing Machines"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C07.01 specializes C07 by restricting the expected performance to integrated, interacting Farmer Robot and Feeder Robot modules. It preserves the base purpose while adding system-level adequacy, coordination or realization requirements documented in Task05. Specialization is direct and does not assert component composition or automatic inheritance of RDF property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C08"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Identify Turing Machine Variants"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "hasSpecialization"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C08_01"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Analyze the System-Level Adequacy of Turing Machine Variants"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C08.01 specializes C08 by restricting the expected performance to integrated, interacting Farmer Robot and Feeder Robot modules. It preserves the base purpose while adding system-level adequacy, coordination or realization requirements documented in Task05. Specialization is direct and does not assert component composition or automatic inheritance of RDF property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C08_01"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Analyze the System-Level Adequacy of Turing Machine Variants"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "isSpecializationOf"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C08"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Identify Turing Machine Variants"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C08.01 specializes C08 by restricting the expected performance to integrated, interacting Farmer Robot and Feeder Robot modules. It preserves the base purpose while adding system-level adequacy, coordination or realization requirements documented in Task05. Specialization is direct and does not assert component composition or automatic inheritance of RDF property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C09"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Apply Turing Machine Variants"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "hasSpecialization"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C09_01"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Apply and Coordinate Turing Machine Variants in Integrated Architectures"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C09.01 specializes C09 by restricting the expected performance to integrated, interacting Farmer Robot and Feeder Robot modules. It preserves the base purpose while adding system-level adequacy, coordination or realization requirements documented in Task05. Specialization is direct and does not assert component composition or automatic inheritance of RDF property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C09_01"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Apply and Coordinate Turing Machine Variants in Integrated Architectures"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "isSpecializationOf"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C09"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Apply Turing Machine Variants"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C09.01 specializes C09 by restricting the expected performance to integrated, interacting Farmer Robot and Feeder Robot modules. It preserves the base purpose while adding system-level adequacy, coordination or realization requirements documented in Task05. Specialization is direct and does not assert component composition or automatic inheritance of RDF property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C13"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Interpret Rule-Based Notation"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "hasSpecialization"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C13_01"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Interpret Formal Grammar-Based Rules"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C13.01 directly specializes the preserved C13 identity by restricting rule interpretation to formal grammatical systems and their correspondence with memory-based automata. This records the Task202 adjustment; it does not redefine the inherited C13 specification or automatically inherit its property values."
+        }
+      },
+      {
+        "competence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C13_01"
+        },
+        "competenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Interpret Formal Grammar-Based Rules"
+        },
+        "relation" : {
+          "type" : "literal",
+          "value" : "isSpecializationOf"
+        },
+        "relatedCompetence" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#C13"
+        },
+        "relatedCompetenceLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Interpret Rule-Based Notation"
+        },
+        "specializationDescription" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "C13.01 directly specializes the preserved C13 identity by restricting rule interpretation to formal grammatical systems and their correspondence with memory-based automata. This records the Task202 adjustment; it does not redefine the inherited C13 specification or automatically inherit its property values."
+        }
+      }
+    ]
+  }
+}

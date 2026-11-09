@@ -1,0 +1,39 @@
+{
+  "repository": "OntoKSD2",
+  "endpoint": "http://localhost:7200/repositories/OntoKSD2",
+  "server": "GraphDB/11.0.2 RDF4J/5.1.2-jakarta",
+  "ruleset": "owl2-rl",
+  "started_utc": "2026-11-09T02:49:54.9715365+00:00",
+  "query_file": "CQ9 - Competence activation contexts.rq",
+  "query_sha256": "2c7bbb6860f64b455d9519c99f0811d558feea450048286e28776f539cef4ff9",
+  "selected_case": {
+    "competence": "C05",
+    "activation": "CA_Task202_C05_Learning",
+    "instructionalUnit": "LT_Task202"
+  },
+  "expected_types_without_inference": [
+    "LearningTask"
+  ],
+  "expected_types_with_inference": [
+    "InstructionalUnit",
+    "LearningActivity",
+    "LearningTask"
+  ],
+  "observed_types_without_inference": [
+    "LearningTask"
+  ],
+  "observed_types_with_inference": [
+    "InstructionalUnit",
+    "LearningActivity",
+    "LearningTask"
+  ],
+  "inference_only_types": [
+    "InstructionalUnit",
+    "LearningActivity"
+  ],
+  "asserted_premises": {
+    "verified_with_inference_disabled": true,
+    "query": "PREFIX o: <http://purl.org/ontoksd#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nASK {\n    o:LT_Task202 a o:LearningTask .\n    o:LearningTask rdfs:subClassOf o:LearningActivity .\n    o:LearningActivity rdfs:subClassOf o:InstructionalUnit .\n}"
+  },
+  "checks_passed": true
+}

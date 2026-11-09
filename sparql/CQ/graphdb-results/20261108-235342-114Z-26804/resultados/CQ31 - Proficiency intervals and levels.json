@@ -1,0 +1,1766 @@
+{
+  "head" : {
+    "vars" : [
+      "proficiencyScheme",
+      "proficiencySchemeLabel",
+      "scaleInterval",
+      "scaleIntervalLabel",
+      "scale",
+      "lowerBound",
+      "includesLower",
+      "upperBound",
+      "includesUpper",
+      "proficiencyLevel"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task01_0_10"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task01 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task01_Novice"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task01 interval — Novice"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task01_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task01_Novice"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task01_0_10"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task01 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task01_Competent"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task01 interval — Competent"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task01_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task01_Competent"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task01_0_10"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task01 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task01_Advanced"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task01 interval — Advanced"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task01_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task01_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task02_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task02 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task02_Novice"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task02 interval — Novice"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task02_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task02_Novice"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task02_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task02 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task02_Competent"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task02 interval — Competent"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task02_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task02_Competent"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task02_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task02 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task02_Advanced"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task02 interval — Advanced"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task02_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task02_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task03_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task03 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task03_Novice"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task03 interval — Novice"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task03_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task03_Novice"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task03_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task03 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task03_Competent"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task03 interval — Competent"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task03_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task03_Competent"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task03_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task03 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task03_Advanced"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task03 interval — Advanced"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task03_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task03_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task04_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task04 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task04_Novice"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task04 interval — Novice"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task04_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task04_Novice"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task04_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task04 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task04_Competent"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task04 interval — Competent"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task04_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task04_Competent"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task04_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task04 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task04_Advanced"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task04 interval — Advanced"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task04_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task04_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task05_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task05 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task05_Novice"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task05 interval — Novice"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task05_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task05_Novice"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task05_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task05 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task05_Competent"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task05 interval — Competent"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task05_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task05_Competent"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task05_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task05 proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task05_Advanced"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Task05 interval — Advanced"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task05_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task05_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task201"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task201_Novice"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task201_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task201_Novice"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task201"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task201_Competent"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task201_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "5.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task201_Competent"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PS_Task201"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Interval_Task201_Advanced"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_Task201_0_10"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#PL_Task201_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_0_35"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[0,36)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Insufficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_0_35"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[0,36)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Insufficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_0_35"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[0,36)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Insufficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_0_35"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[0,36)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Insufficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_36_60"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[36,61)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Basic"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_36_60"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[36,61)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Basic"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_36_60"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[36,61)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Basic"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_36_60"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[36,61)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "36.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Basic"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_61_79"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[61,80)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Proficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_61_79"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[61,80)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Proficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_61_79"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[61,80)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Proficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_61_79"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[61,80)"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "61.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Proficient"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_80_100"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[80,100]"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "100.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Four-level proficiency scheme for the 0–100 scale"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_80_100"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[80,100]"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "100.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_80_100"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "[80,100]"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "100.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyScheme_0_100_FourLevels"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "Esquema de proficiência em quatro níveis para a escala de 0 a 100"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ScaleInterval_80_100"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "pt",
+          "type" : "literal",
+          "value" : "[80,100]"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#Scale_0_100"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "80.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "100.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#ProficiencyLevel_Advanced"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Second CSP cycle shared operational proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_Interval_Novice"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Operational Novice score interval"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_TenPointScale"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "0.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "7.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_NoviceLevel"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Second CSP cycle shared operational proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_Interval_Competent"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Operational Competent score interval"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_TenPointScale"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "7.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "false"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_CompetentLevel"
+        }
+      },
+      {
+        "proficiencyScheme" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_ProficiencyScheme"
+        },
+        "proficiencySchemeLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Second CSP cycle shared operational proficiency scheme"
+        },
+        "scaleInterval" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_Interval_Advanced"
+        },
+        "scaleIntervalLabel" : {
+          "xml:lang" : "en",
+          "type" : "literal",
+          "value" : "Operational Advanced score interval"
+        },
+        "scale" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_TenPointScale"
+        },
+        "lowerBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "9.0"
+        },
+        "includesLower" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "upperBound" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "10.0"
+        },
+        "includesUpper" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#boolean",
+          "type" : "literal",
+          "value" : "true"
+        },
+        "proficiencyLevel" : {
+          "type" : "uri",
+          "value" : "http://purl.org/ontoksd#SecondCycle_AdvancedLevel"
+        }
+      }
+    ]
+  }
+}
