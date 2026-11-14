@@ -4667,3 +4667,10 @@ Person identifies a human individual rather than an organization, software agent
 <http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/ontology/bibo/doi> <http://www.w3.org/2000/01/rdf-schema#label> "doi" .
 <http://purl.org/ontology/bibo/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the Digital Object Identifier for the resource."@en .
+
+
+# Public catalog containing the OntoKSD deposit
+<http://purl.org/ontoksd#> <https://schema.org/includedInDataCatalog> <https://zenodo.org/> .
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/2000/01/rdf-schema#label> "includedInDataCatalog" .
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies a catalog that includes the resource."@en .
