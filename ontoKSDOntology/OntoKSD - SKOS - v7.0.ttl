@@ -14,6 +14,9 @@
 
 <http://purl.org/ontoksd#> rdf:type owl:Ontology ;
                             vann:preferredNamespacePrefix "ontoksd" ;
+                            <http://purl.org/dc/elements/1.1/publisher> "Edeyson A. Gomes" ;
+                            <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.24210697" ;
+                            <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/eduknowgpt/OntoKSD/bf08854553ecce276a1195acae7abe9fb1bbc551/assets/ontoksd-logo.png> ;
                             owl:versionIRI <http://purl.org/ontoksd#7.0.0> ;
                             owl:imports <http://purl.org/edu/bloom/2.0.0> ,
                                         <http://purl.org/nemo/gufo#/1.0.0> ,
@@ -4660,3 +4663,7 @@ Person identifies a human individual rather than an organization, software agent
 <http://xmlns.com/foaf/0.1/logo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource to an image used as its logo."@en .
 <https://w3id.org/mod#status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
 <https://w3id.org/mod#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the status associated with an ontology or other resource."@en .
+
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/2000/01/rdf-schema#label> "doi" .
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the Digital Object Identifier for the resource."@en .
