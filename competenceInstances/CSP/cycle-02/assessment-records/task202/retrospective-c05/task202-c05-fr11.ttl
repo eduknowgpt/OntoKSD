@@ -1,0 +1,35 @@
+# Optional retrospective FR11 layer. Load after Cycle 01 C05 and Cycle 02 historical assessment records.
+@prefix : <urn:csp:cycle2:task202:c05:> .
+@prefix k: <http://purl.org/ontoksd#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:learner a k:Learner ; dct:identifier "T202-G01-B" .
+:profile a k:Profile ; k:isProfileOf :learner .
+:kReviewer a k:Assessor ; dct:title "Edeyson Andrade Gomes" .
+:writingParticipation a k:AssessmentParticipation ; k:hasLearner :learner ;
+    k:occursInAssessmentOccurrence k:Task202_ProductAssessmentOccurrence ;
+    dct:temporal "2022"^^xsd:gYear ; dct:references :attribution .
+:retrospectiveAssessment a k:Assessment ; dct:references :understanding, :development .
+:retrospectiveOccasion a k:AssessmentOccurrence ; k:realizes :retrospectiveAssessment ;
+    dct:date "2026-10-05"^^xsd:date ; prov:wasDerivedFrom k:Task202_ProductAssessmentOccurrence .
+:retrospectiveParticipation a k:AssessmentParticipation ; k:hasLearner :learner ;
+    k:hasAssessor :kReviewer ; k:occursInAssessmentOccurrence :retrospectiveOccasion ;
+    prov:wasDerivedFrom :writingParticipation .
+:understanding a k:Document ; dct:description "Understanding the problem and automata concepts" ;
+    dct:references :tutorReview .
+:development a k:Document ; dct:description "Detailing the development process" ;
+    dct:references :tutorReview .
+:tutorReview a k:Document ; dct:title "PBL 02 - Grupos.txt, lines 29–36 and 44–45" ;
+    dct:identifier "sha256:0228f51a3482cd11549658947f4f8008bbee23dfbda94b354aa1e9b2364a928a" .
+:attribution a k:Document ; dct:title "Grupo 01/P02 Desenvolvimento.docx, paragraphs 9–11" ;
+    dct:identifier "sha256:b5466b21c0caaebd2d44767d552c2f7a779751f931981eb5095bdb7221369193" .
+:documentaryEvidence a k:Evidence ; k:evidenceBasedOn :retrospectiveOccasion ;
+    k:hasSupportDocument k:Task202_G01_ArtifactDocument01, :attribution, :tutorReview ;
+    dct:description "Documentary evidence assembled for the retrospective review of the learner's writing contribution to the joint report." .
+:judgment a k:EvidencedCompetence ; k:refersToCompetence k:C05 ;
+    k:isEvidencedCompetenceOf :profile ; k:derivedFromParticipation :retrospectiveParticipation ;
+    k:supportedByEvidence :documentaryEvidence ; dct:references :understanding, :development ;
+    dct:date "2026-10-05"^^xsd:date ;
+    dct:description "The documented writing contribution provides evidence of C05 in this task. The report presents a clear structure and some technical explanation, with limitations in conceptual coverage and detail about development. The judgment concerns the documented writing contribution to a coauthored report." .

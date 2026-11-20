@@ -1,0 +1,31 @@
+PREFIX k: <http://purl.org/ontoksd#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT DISTINCT ?judgment ?learnerCode ?target ?reviewer ?date ?participation
+                ?occasion ?historicalParticipation ?historicalOccasion ?historicalYear
+                ?evidence ?document ?criterion ?criterionSource
+WHERE {
+  VALUES ?judgment { <urn:csp:cycle2:task202:c05:judgment> }
+  ?judgment a k:EvidencedCompetence ; k:refersToCompetence ?target ;
+    k:isEvidencedCompetenceOf/k:isProfileOf ?learner ;
+    k:derivedFromParticipation ?participation ; k:supportedByEvidence ?evidence ;
+    dct:date ?date ; dct:references ?criterion .
+  ?learner dct:identifier ?learnerCode .
+  ?participation k:hasLearner ?learner ; k:hasAssessor/dct:title ?reviewer ;
+    k:occursInAssessmentOccurrence ?occasion ; prov:wasDerivedFrom ?historicalParticipation .
+  ?occasion dct:date ?date ; k:realizes/dct:references ?criterion ;
+    prov:wasDerivedFrom ?historicalOccasion .
+  ?historicalParticipation k:hasLearner ?learner ;
+    k:occursInAssessmentOccurrence ?historicalOccasion .
+  ?historicalOccasion a k:AssessmentOccurrence .
+  ?historicalParticipation dct:temporal ?historicalYear .
+  ?target a k:Competence .
+  ?document a k:Document .
+  ?evidence k:evidenceBasedOn ?occasion ; k:hasSupportDocument ?document .
+  ?criterion dct:references ?criterionSource .
+  FILTER NOT EXISTS {
+    ?judgment k:supportedByEvidence/k:evidenceBasedOn ?otherOccasion .
+    FILTER (?otherOccasion != ?occasion)
+  }
+}
+ORDER BY ?criterion ?document

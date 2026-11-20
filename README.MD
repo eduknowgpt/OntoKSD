@@ -1,5 +1,7 @@
 # OntoKSD
 
+![Logotipo da OntoKSD](assets/ontoksd-logo.png)
+
 **An ontology for competence specifications and evidence in Computing Education.**
 
 OntoKSD is a domain ontology expressed in OWL and serialized in RDF/Turtle. It represents reusable competence specifications and connects them to curricular expectations, instructional units, assessment participation, evidence, and proficiency interpretations.

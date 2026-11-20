@@ -24,6 +24,8 @@ public class SparqlBatchInserter {
     private static final String GRAPHDB_SERVER = "http://localhost:7200";
     private static final String REPOSITORY_ID = "OntoKSD2";
 
+    private static final boolean LOAD_TASK202_RETROSPECTIVE_C05 = false;
+
     private static int rdfFilesLoaded = 0;
     private static int updatesExecuted = 0;
     private static String currentFile = "(no file selected)";
@@ -101,6 +103,12 @@ public class SparqlBatchInserter {
 
                 executeFile(connection,
                     "competenceInstances/CSP/cycle-02/assessment-records/task202/task202-records.rq");                
+
+                if (LOAD_TASK202_RETROSPECTIVE_C05) {
+                    executeFile(connection,
+                        "competenceInstances/CSP/cycle-02/assessment-records/task202/"
+                        + "retrospective-c05/task202-c05-fr11.rq");
+                }
 
                 section("9. CSP cycle 03");
                 executeFile(connection, "competenceInstances/CSP/cycle-03/00 - Cycle03 Sources and Vocabulary.rq");

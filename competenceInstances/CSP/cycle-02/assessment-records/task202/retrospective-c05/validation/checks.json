@@ -1,0 +1,81 @@
+{
+  "engine": "RDFLib 7.6.0",
+  "dataset": "combined Cycle 2 historical assessment Turtle, Cycle 1 C05 INSERT, and optional Task202 C05 overlay",
+  "distinct_judgments": 1,
+  "criteria": 2,
+  "source_documents": 3,
+  "rows": 6,
+  "turtle_update_equivalent": true,
+  "update_idempotent": true,
+  "cq22_retrieves_adopted_judgment": true,
+  "negative_checks_zero_rows": [
+    "overlay without dependencies",
+    "missing criteria",
+    "cross-occasion origin",
+    "incompatible learner",
+    "missing historical occurrence type"
+  ],
+  "historical_query_counts": {
+    "task201/queries/01-official-scores.rq": [
+      34,
+      34
+    ],
+    "task201/queries/02-shared-reviews.rq": [
+      14,
+      14
+    ],
+    "task201/queries/03-questionnaire-references.rq": [
+      27,
+      27
+    ],
+    "task201/queries/04-process-product-final.rq": [
+      34,
+      34
+    ],
+    "task201/queries/05-mean-violations.rq": [
+      0,
+      0
+    ],
+    "queries/01-score-provenance.rq": [
+      198,
+      198
+    ],
+    "queries/02-unlinked-questionnaire.rq": [
+      1,
+      1
+    ],
+    "queries/03-assessor-involvement.rq": [
+      264,
+      264
+    ],
+    "queries/04-no-proxy-judgments.rq": [
+      0,
+      1
+    ],
+    "task202/queries/01-official-scores.rq": [
+      32,
+      32
+    ],
+    "task202/queries/02-shared-reviews.rq": [
+      29,
+      29
+    ],
+    "task202/queries/03-questionnaire-references.rq": [
+      25,
+      25
+    ],
+    "task202/queries/04-process-product-final.rq": [
+      32,
+      32
+    ],
+    "task202/queries/05-mean-violations.rq": [
+      0,
+      0
+    ]
+  },
+  "historical_query_counts_order": [
+    "before overlay",
+    "with overlay"
+  ],
+  "graphdb_execution": false
+}
