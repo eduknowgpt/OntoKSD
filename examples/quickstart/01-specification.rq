@@ -1,0 +1,7 @@
+PREFIX ex: <https://example.org/ontoksd-demo/>
+PREFIX k: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?constituent ?label WHERE {
+  ex:ExplainAlgorithm (k:hasKnowledge|k:hasSkill) ?constituent .
+  ?constituent rdfs:label ?label .
+} ORDER BY ?label

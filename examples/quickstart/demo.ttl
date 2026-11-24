@@ -1,0 +1,43 @@
+@prefix ex: <https://example.org/ontoksd-demo/> .
+@prefix k: <http://purl.org/ontoksd#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Fictional demonstration: these are not historical CSP or learner records.
+ex:ExplainAlgorithm a k:Competence, k:KSCompetence ;
+    rdfs:label "Explain an algorithm"@en ;
+    k:hasSpecificationPattern k:KSSpecificationPattern ;
+    k:hasKnowledge ex:AlgorithmKnowledge ; k:hasSkill ex:ExplanationSkill .
+ex:AlgorithmKnowledge a k:Knowledge ; rdfs:label "Algorithm steps and outputs"@en .
+ex:ExplanationSkill a k:Skill ; rdfs:label "Explain steps and justify outputs for stated inputs"@en .
+
+ex:Lab a k:LearningTask ; rdfs:label "Laboratory exercise"@en .
+ex:Project a k:LearningTask ; rdfs:label "Project discussion"@en .
+ex:LabUse a k:CompetenceActivation ;
+    k:hasActivationCompetence ex:ExplainAlgorithm ;
+    k:hasActivationInstructionalUnit ex:Lab ;
+    k:hasActivationMode ex:WrittenExplanation .
+ex:ProjectUse a k:CompetenceActivation ;
+    k:hasActivationCompetence ex:ExplainAlgorithm ;
+    k:hasActivationInstructionalUnit ex:Project ;
+    k:hasActivationMode ex:OralExplanation .
+ex:WrittenExplanation a k:ActivationMode ; rdfs:label "Written explanation"@en .
+ex:OralExplanation a k:ActivationMode ; rdfs:label "Oral explanation"@en .
+
+ex:Learner a k:Learner ; rdfs:label "Fictional learner"@en .
+ex:Profile a k:Profile ; k:isProfileOf ex:Learner .
+ex:Assessment a k:Assessment ; dct:references ex:Criterion .
+ex:Occasion a k:AssessmentOccurrence ; k:realizes ex:Assessment .
+ex:Participation a k:AssessmentParticipation ; k:hasLearner ex:Learner ;
+    k:occursInAssessmentOccurrence ex:Occasion .
+ex:WrittenEvidence a k:Evidence ; k:evidenceBasedOn ex:Occasion ; k:hasSupportDocument ex:WrittenRecord .
+ex:OralEvidence a k:Evidence ; k:evidenceBasedOn ex:Occasion ; k:hasSupportDocument ex:OralRecord .
+ex:WrittenRecord a k:Document ; rdfs:label "Written explanation record"@en .
+ex:OralRecord a k:Document ; rdfs:label "Oral explanation observation record"@en .
+ex:Criterion a k:Document ;
+    rdfs:label "Explains relevant steps and justifies the stated outputs"@en ;
+    dct:references ex:Rubric .
+ex:Rubric a k:Document ; rdfs:label "Fictional assessment rubric"@en .
+ex:Judgment a k:EvidencedCompetence ; k:refersToCompetence ex:ExplainAlgorithm ;
+    k:isEvidencedCompetenceOf ex:Profile ; k:derivedFromParticipation ex:Participation ;
+    k:supportedByEvidence ex:WrittenEvidence, ex:OralEvidence ; dct:references ex:Criterion .

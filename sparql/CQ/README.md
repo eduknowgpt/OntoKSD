@@ -2,7 +2,7 @@
 
 [Português](README.pt.md) · [Question catalog](CQ_CATALOG.md) · [Identifier map](CQ_NUMBERING.md)
 
-The post-qualification collection retains **42 historical question families** and contains **58 root-level `.rq` files: 57 SELECT queries and one optional UPDATE**. Suffixes identify views or operations within a family. Files are not independent requirements or independent successful tests.
+The collection retains **42 historical question families** and contains **58 root-level `.rq` files: 57 SELECT queries and one optional UPDATE**. Suffixes identify views or operations within a family. Files are not independent requirements or independent successful tests.
 
 ## Run a query
 
@@ -19,7 +19,7 @@ VALUES (?profile ?course) {
 }
 ```
 
-Replace both IRIs for a different case. This selection does not establish enrollment. To reproduce that example, load the scripts in `../../proficiency level` in order: 01 vocabulary; 02 assessment/evidential instances and the example score interpretation; 03 curricular specification and the local gap policy. These are updates, separate from the read-only queries.
+Replace both IRIs for a different case. This selection does not establish enrollment. To reproduce that example, load the scripts in the repository-root `proficiency level/` directory in order: 01 vocabulary; 02 assessment/evidential instances and the example score interpretation; 03 curricular specification and the local gap policy. These are updates, separate from the read-only queries.
 
 ## Interpret results
 
@@ -50,4 +50,6 @@ For reproducibility, replace `BIND(NOW() AS ?asOf)` with a fixed typed `VALUES ?
 
 [Local validation](validation/README.md) separates parser/execution checks from live GraphDB evidence. [Revision decisions](DECISIONS.pt.md) explain changes, unchanged conditions and limits. Use [CQ_NUMBERING.md](CQ_NUMBERING.md) when citing a family and its operational files.
 
-The thesis table and the FR-to-CQ appendix must use the same family mapping. New files CQ14–CQ17 implement the previously listed role, constraint, joint-qualification and instructional-condition questions; they require fresh GraphDB runs. Query execution does not establish full OWL consistency, criterion adequacy or educational validity.
+The thesis table and the FR-to-CQ appendix must use the same family mapping. CQ14–CQ17 implement role, constraint, joint-qualification, and instructional-condition questions. The [archived GraphDB batch](graphdb-results/README.md) includes these files; check fingerprints before treating it as evidence for a later revision. Query execution does not establish full OWL consistency, criterion adequacy or educational validity.
+
+[Start with the local example](../../docs/quickstart.md).

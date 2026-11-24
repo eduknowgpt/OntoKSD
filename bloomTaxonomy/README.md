@@ -117,10 +117,10 @@ Start from a clean population when replacing an older version. `INSERT DATA` add
 
 OntoKSD uses `hasSkillLevel` to associate a `KnowledgeSkill` constituent with a required level. An optional `hasBloomLevelJustificationVerb` association records wording supporting the assignment.
 
-The following fragment is illustrative application data. Replace `https://example.org/ontoksd#` with the namespace used by your OntoKSD deployment; the example namespace is not an identifier declared by this module.
+The following fragment is illustrative application data. The `onto:` prefix below identifies the host OntoKSD vocabulary; `ex:` identifies fictional application data.
 
 ```turtle
-@prefix onto:  <https://example.org/ontoksd#> .
+@prefix onto:  <http://purl.org/ontoksd#> .
 @prefix ex:    <https://example.org/data/> .
 @prefix bloom: <http://purl.org/edu/bloom#> .
 

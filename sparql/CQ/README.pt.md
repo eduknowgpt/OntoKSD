@@ -19,7 +19,7 @@ VALUES (?profile ?course) {
 }
 ```
 
-Troque ambas as IRIs para outro caso. A seleção não declara matrícula. Para reproduzir o exemplo, execute os arquivos de `../../proficiency level` em ordem: 01 vocabulário; 02 instâncias e interpretação ilustrativa da nota; 03 expectativa curricular e política local de lacuna. São atualizações de dados, não CQs somente de leitura.
+Troque ambas as IRIs para outro caso. A seleção não declara matrícula. Para reproduzir o exemplo, execute os arquivos do diretório `proficiency level/`, na raiz do repositório, em ordem: 01 vocabulário; 02 instâncias e interpretação ilustrativa da nota; 03 expectativa curricular e política local de lacuna. São atualizações de dados, não CQs somente de leitura.
 
 ## Interpretar
 
@@ -49,4 +49,8 @@ Para congelar o tempo, substitua `BIND(NOW() AS ?asOf)` por `VALUES ?asOf` com d
 
 O [mapa de identificadores](CQ_NUMBERING.md) preserva a numeração após a qualificação. As [decisões detalhadas](DECISIONS.pt.md) justificam os ajustes. A [validação local](validation/README.md) não substitui o registro das execuções no GraphDB.
 
-CQ14–CQ17 receberam implementações explícitas nesta revisão e precisam de execução no GraphDB. A tabela da tese e o apêndice FR–CQ devem compartilhar os mesmos mapeamentos. Execução de consulta não prova consistência OWL completa, adequação de critérios ou validade educacional.
+CQ14–CQ17 possuem implementações explícitas e constam no lote GraphDB arquivado; confira os hashes para relacionar os resultados à revisão consultada. A tabela da tese e o apêndice FR–CQ devem compartilhar os mesmos mapeamentos. Execução de consulta não prova consistência OWL completa, adequação de critérios ou validade educacional.
+
+## Registros de execução e primeiro uso
+
+O [lote GraphDB arquivado](graphdb-results/README.md) inclui CQ14–CQ17. Menções à necessidade de executar essas consultas descrevem o estado anterior ao lote; confira os hashes para relacionar uma revisão específica aos resultados. Para começar sem servidor, use o [exemplo local](../../docs/quickstart.md).

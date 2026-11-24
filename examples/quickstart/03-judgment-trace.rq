@@ -1,0 +1,15 @@
+PREFIX ex: <https://example.org/ontoksd-demo/>
+PREFIX k: <http://purl.org/ontoksd#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?learner ?occasion ?evidence ?document ?criterion ?source WHERE {
+  ex:Judgment k:refersToCompetence ex:ExplainAlgorithm ;
+      k:isEvidencedCompetenceOf/k:isProfileOf ?learner ;
+      k:derivedFromParticipation ?participation ; k:supportedByEvidence ?evidence ;
+      dct:references/rdfs:label ?criterion .
+  ?participation k:hasLearner ?learner ; k:occursInAssessmentOccurrence ?occasion .
+  ?occasion k:realizes/dct:references ?criterionRecord .
+  ex:Judgment dct:references ?criterionRecord .
+  ?criterionRecord dct:references/rdfs:label ?source .
+  ?evidence k:evidenceBasedOn ?occasion ; k:hasSupportDocument/rdfs:label ?document .
+} ORDER BY ?document

@@ -10,36 +10,36 @@ There is one insertion file per area. Each row links to that area's file. The pr
 
 | Area | Competences | Pairings | Insertion file |
 | --- | ---: | ---: | --- |
-| Foundations of Information Systems | 8 | 44 | [foundations](is2020_foundations_competencies_insert.rq) |
-| Data / Information Management | 6 | 16 | [data_information_management](is2020_data_information_management_competencies_insert.rq) |
-| Data / Business Analytics | 7 | 18 | [data_business_analytics](is2020_data_business_analytics_competencies_insert.rq) |
-| Data / Information Visualization | 7 | 14 | [data_information_visualization](is2020_data_information_visualization_competencies_insert.rq) |
-| IT Infrastructure | 9 | 33 | [it_infrastructure](is2020_it_infrastructure_competencies_insert.rq) |
-| Secure Computing | 8 | 22 | [secure_computing](is2020_secure_computing_competencies_insert.rq) |
-| Emerging Technologies | 8 | 26 | [emerging_technologies](is2020_emerging_technologies_competencies_insert.rq) |
-| Systems Analysis and Design | 8 | 49 | [systems_analysis_and_design](is2020_systems_analysis_and_design_competencies_insert.rq) |
-| Application Development and Programming | 16 | 59 | [app_dev_programming](is2020_app_dev_programming_competencies_insert.rq) |
-| Object-Oriented Paradigm | 9 | 40 | [object_oriented_paradigm](is2020_object_oriented_paradigm_competencies_insert.rq) |
-| Web Development | 13 | 63 | [web_development](is2020_web_development_competencies_insert.rq) |
-| Mobile Development | 13 | 52 | [mobile_development](is2020_mobile_development_competencies_insert.rq) |
-| User Interface Design | 5 | 25 | [user_interface_design](is2020_user_interface_design_competencies_insert.rq) |
-| IS Ethics, Sustainability, Use and Implications for Society | 9 | 38 | [is_ethics_sustainability_society](is2020_is_ethics_sustainability_society_competencies_insert.rq) |
-| IS Management and Strategy | 11 | 32 | [is_management_and_strategy](is2020_is_management_and_strategy_competencies_insert.rq) |
-| Digital Innovation | 7 | 24 | [digital_innovation](is2020_digital_innovation_competencies_insert.rq) |
-| Business Process Management | 7 | 20 | [business_process_management](is2020_business_process_management_competencies_insert.rq) |
-| IS Project Management | 15 | 66 | [is_project_management](is2020_is_project_management_competencies_insert.rq) |
-| IS Practicum | 12 | 47 | [is_practicum](is2020_is_practicum_competencies_insert.rq) |
+| Foundations of Information Systems | 8 | 44 | [foundations](sparql/is2020_foundations_competencies_insert.rq) |
+| Data / Information Management | 6 | 16 | [data_information_management](sparql/is2020_data_information_management_competencies_insert.rq) |
+| Data / Business Analytics | 7 | 18 | [data_business_analytics](sparql/is2020_data_business_analytics_competencies_insert.rq) |
+| Data / Information Visualization | 7 | 14 | [data_information_visualization](sparql/is2020_data_information_visualization_competencies_insert.rq) |
+| IT Infrastructure | 9 | 33 | [it_infrastructure](sparql/is2020_it_infrastructure_competencies_insert.rq) |
+| Secure Computing | 8 | 22 | [secure_computing](sparql/is2020_secure_computing_competencies_insert.rq) |
+| Emerging Technologies | 8 | 26 | [emerging_technologies](sparql/is2020_emerging_technologies_competencies_insert.rq) |
+| Systems Analysis and Design | 8 | 49 | [systems_analysis_and_design](sparql/is2020_systems_analysis_and_design_competencies_insert.rq) |
+| Application Development and Programming | 16 | 59 | [app_dev_programming](sparql/is2020_app_dev_programming_competencies_insert.rq) |
+| Object-Oriented Paradigm | 9 | 40 | [object_oriented_paradigm](sparql/is2020_object_oriented_paradigm_competencies_insert.rq) |
+| Web Development | 13 | 63 | [web_development](sparql/is2020_web_development_competencies_insert.rq) |
+| Mobile Development | 13 | 52 | [mobile_development](sparql/is2020_mobile_development_competencies_insert.rq) |
+| User Interface Design | 5 | 25 | [user_interface_design](sparql/is2020_user_interface_design_competencies_insert.rq) |
+| IS Ethics, Sustainability, Use and Implications for Society | 9 | 38 | [is_ethics_sustainability_society](sparql/is2020_is_ethics_sustainability_society_competencies_insert.rq) |
+| IS Management and Strategy | 11 | 32 | [is_management_and_strategy](sparql/is2020_is_management_and_strategy_competencies_insert.rq) |
+| Digital Innovation | 7 | 24 | [digital_innovation](sparql/is2020_digital_innovation_competencies_insert.rq) |
+| Business Process Management | 7 | 20 | [business_process_management](sparql/is2020_business_process_management_competencies_insert.rq) |
+| IS Project Management | 15 | 66 | [is_project_management](sparql/is2020_is_project_management_competencies_insert.rq) |
+| IS Practicum | 12 | 47 | [is_practicum](sparql/is2020_is_practicum_competencies_insert.rq) |
 
 ## Files
 
 - `00 - IS2020 Source and Pattern.rq`: shared source documentation and the controlled `IS2020SpecificationPattern` individual.
 - `is2020_*_competencies_insert.rq`: knowledge descriptions, competence specifications, and knowledge–level pairings for each area.
-- [competency-examples.md](competency-examples.md): readable competence statements, key dispositions, and source pairing tables, including source anomalies.
-- [source-requirements.json](source-requirements.json): structured source requirements for all competencies.
-- [source-pair-mapping.tsv](source-pair-mapping.tsv): correspondence between source table rows, pair IRIs, knowledge instances, and level individuals, with interpretation notes.
-- [source-issues.json](source-issues.json): the identified source ambiguities, duplication, and omission.
+- [competency-examples.md](sparql/competency-examples.md): readable competence statements, key dispositions, and source pairing tables, including source anomalies.
+- [source-requirements.json](sparql/source-requirements.json): structured source requirements for all competencies.
+- [source-pair-mapping.tsv](sparql/source-pair-mapping.tsv): correspondence between source table rows, pair IRIs, knowledge instances, and level individuals, with interpretation notes.
+- [source-issues.json](sparql/source-issues.json): the identified source ambiguities, duplication, and omission.
 - `queries/`: queries for requirements, area counts, and source interpretation notes.
-- [validation.json](validation.json): validation results, limitations, and fingerprints of the reference files.
+- [validation.json](sparql/validation.json): validation results, limitations, and fingerprints of the reference files.
 
 ## Representation process
 

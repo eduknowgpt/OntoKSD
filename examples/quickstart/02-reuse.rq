@@ -1,0 +1,8 @@
+PREFIX ex: <https://example.org/ontoksd-demo/>
+PREFIX k: <http://purl.org/ontoksd#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?activation ?unit ?mode WHERE {
+  ?activation a k:CompetenceActivation ; k:hasActivationCompetence ex:ExplainAlgorithm ;
+      k:hasActivationInstructionalUnit/rdfs:label ?unit ;
+      k:hasActivationMode/rdfs:label ?mode .
+} ORDER BY ?unit

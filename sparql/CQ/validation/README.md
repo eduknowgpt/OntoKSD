@@ -1,13 +1,14 @@
 # Local regression and GraphDB evidence
 
-This directory contains offline validation artifacts. They do not claim that every final query was executed in GraphDB or that the ontology is OWL-consistent.
+This directory contains offline validation artifacts. Live GraphDB evidence is in the separate [archived batch](../graphdb-results/README.md). They have distinct data, configurations, and fingerprints.
 
 `validate_local.py` requires Python and RDFLib (the recorded run used the version in `local-validation.json`). It reads the project ontology and the three proficiency scripts, performs updates only on disposable in-memory graphs, and never contacts GraphDB or fetches imports.
 
-Run after placing this directory under `OntoKSD/sparql/CQ`:
+From the repository root, install the dependency and run:
 
 ```text
-python validate_local.py --project-root "I:\Meu Drive\OntoKSD"
+python -m pip install -r examples/quickstart/requirements.txt
+python sparql/CQ/validation/validate_local.py --project-root .
 ```
 
 An optional `--output` selects the report directory; otherwise a temporary directory is used. `--as-of` changes the fixed analytical reference instant. The fixture uses 2026-11-01T12:00:00Z; this is not an assessment date or claimed live execution time.
